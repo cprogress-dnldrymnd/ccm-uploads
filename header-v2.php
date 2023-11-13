@@ -353,35 +353,7 @@ s0.parentNode.insertBefore(s1,s0);
     <script data-ad-client="ca-pub-2753165670517691" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!--End of YouTube AdSense Script-->
-    <style>
-        header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default:before,
-        header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default:after {
-            display: none;
-        }
 
-        header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default {
-            width: 100%;
-            border-radius: 0;
-            padding-left: 3vw;
-            padding-right: 3vw;
-        }
-
-        header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default li {
-            margin-bottom: 0;
-        }
-
-        header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default li a {
-            font-weight: 300;
-        }
-
-        section.bike-lists .bikes>.row {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-        }
-        section.bike-lists .bike-category {
-            margin-bottom: 0;
-        }
-    </style>
 </head>
 
 <?php
