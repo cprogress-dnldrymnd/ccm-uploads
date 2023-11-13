@@ -3818,9 +3818,9 @@ section.accessories {
 	}
 }
 
-#ccm-header {
+header#ccm-header.header-revamp.header-revamp {
 	padding: 0;
-	background-color: var(--black-color);
+	background-color: var(--black-color) !important;
 	.navbar {
 		background-color: transparent;
 		@include box-shadow(none);

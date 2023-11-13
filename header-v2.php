@@ -504,7 +504,7 @@ $template = get_page_template_slug();
         <?php }
         else { ?>
 
-                <header id="ccm-header" class="header-v2 header-v3 header-page-components">
+                <header id="ccm-header" class="header-v2 header-v3 header-page-components header-revamp">
                     <nav class="navbar navbar-static-top">
 
                         <div class="container-fluid">
