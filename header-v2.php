@@ -528,7 +528,7 @@ $template = get_page_template_slug();
 
                                     <div class="col-md-7 mega-menu-col">
                                         <a class="navbar-brand hidden-xs hidden-sm" href="http://www.ccm-motorcycles.com"><img
-                                                src="http://www.ccm-motorcycles.com/wp-content/uploads/2018/02/logo.png"
+                                                src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg"
                                                 class="img-responsive"></a>
 
                                         <?php
