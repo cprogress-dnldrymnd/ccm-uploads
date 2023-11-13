@@ -513,7 +513,7 @@ if ($post_type == 'product') {
                     <div class="row">
 
                         <div class="col-md-7 mega-menu-col">
-                            <a class="navbar-brand hidden-xs hidden-sm" href="http://www.ccm-motorcycles.com">
+                            <a class="navbar-brand hidden-xs hidden-sm" href="<?= get_site_url() ?>">
                                 <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" class="img-responsive">
                             </a>
 
