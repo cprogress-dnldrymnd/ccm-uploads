@@ -401,11 +401,11 @@ $template = get_page_template_slug();
             <header id="ccm-motors-header" class="bt-5">
                 <div class="row">
                     <div class="col-auto">
-                        <div class="column-holder">
-                            <div class="logo-box">
+                        <div class="row column-holder">
+                            <div class="col-auto logo-box">
                                 <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="">
                             </div>
-                            <div class="nav-box">
+                            <div class="col-auto nav-box">
                                 <?php
                                 wp_nav_menu(
                                     array(
