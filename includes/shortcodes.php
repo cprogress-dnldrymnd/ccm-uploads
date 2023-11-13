@@ -493,8 +493,7 @@ function bike_lists()
 	$bikes_categ = carbon_get_post_meta(14442, 'motorcycles');
 	?>
 	<section class="bike-lists bt-5">
-		<div class="container wide witdh1700">
-
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-9">
 					<?php foreach ($bikes_categ as $categ) { ?>
@@ -537,7 +536,6 @@ function bike_lists()
 																	CONFIGURE
 																</a>
 															<?php } ?>
-
 														</div>
 													</div>
 												</div>
