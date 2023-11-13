@@ -406,6 +406,9 @@ li.has-dropdown:active:after,
 						color: var(--white-color);
 					}
 				}
+				&:after {
+					content: none !important;
+				}
 			}
 		}
 	}
