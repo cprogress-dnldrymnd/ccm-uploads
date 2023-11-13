@@ -401,7 +401,7 @@ $template = get_page_template_slug();
             <header id="ccm-motors-header" class="bt-5">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
-                        <div class="row column-holder">
+                        <div class="row column-holder align-items-center">
                             <div class="col-auto logo-box">
                                 <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="">
                             </div>
