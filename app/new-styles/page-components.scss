@@ -1,4 +1,8 @@
-$main-color: #ed181f;
+:root {
+	--main-color: #ed181f;
+	--black-color: #000;
+	--white-color: #fff;
+}
 
 .page-template-page-blackout {
 	.Enquiry-Form-mn {
@@ -225,29 +229,32 @@ header.header-page-components {
 	button,
 	input,
 	textarea,
-	ul li, ol li {
+	ul li,
+	ol li {
 		font-family: "Fira Sans Condensed";
 	}
 
 	p,
 	span,
 	a,
-	ul li, ol li {
+	ul li,
+	ol li {
 		font-size: 16px;
 		font-weight: 300;
 	}
 
-	ul, ol {
+	ul,
+	ol {
 		li {
 			margin-bottom: 5px;
 		}
 	}
 
 	select {
-		border: 1px solid #000000 !important;
+		border: 1px solid var(--black-color)000 !important;
 		margin-top: 0;
 		margin-bottom: 10px;
-		background-color: #ffffff !important;
+		background-color: var(--white-color)fff !important;
 		font-size: 16px;
 		height: 45px;
 		padding: 12px;
@@ -257,22 +264,21 @@ header.header-page-components {
 	}
 
 	.heading {
-
 		h1,
 		h2,
 		h3,
 		h4,
 		h5 {
-			color: #fff;
+			color: var(--white-color);
 			text-transform: uppercase;
 			letter-spacing: 10px;
 			display: inline-block;
 			font-weight: 300;
 		}
 
-		>span {
+		> span {
 			font-size: 20px;
-			color: #fff;
+			color: var(--white-color);
 			text-transform: uppercase;
 			letter-spacing: 10px;
 			display: inline-block;
@@ -280,8 +286,7 @@ header.header-page-components {
 		}
 
 		&.big {
-
-			>span,
+			> span,
 			h1 {
 				font-size: 40px;
 				line-height: 1.2;
@@ -299,8 +304,7 @@ header.header-page-components {
 		}
 
 		&.medium {
-
-			>span,
+			> span,
 			h2 {
 				font-size: 35px;
 				line-height: 1.2;
@@ -338,8 +342,7 @@ header.header-page-components {
 		}
 
 		&.semibold {
-
-			>span,
+			> span,
 			h1,
 			h2,
 			h3,
@@ -350,14 +353,13 @@ header.header-page-components {
 		}
 
 		&.black {
-
-			>span,
+			> span,
 			h1,
 			h2,
 			h3,
 			h4,
 			h5 {
-				color: #000;
+				color: var(--black-color);
 			}
 		}
 
@@ -366,7 +368,7 @@ header.header-page-components {
 				content: "";
 				width: 1px;
 				height: 66px;
-				background-color: #ffffff;
+				background-color: var(--white-color)fff;
 				display: block;
 				margin: 20px auto auto auto;
 			}
@@ -381,15 +383,14 @@ header.header-page-components {
 	} */
 	.paragraph {
 		&.white {
-
 			p,
-			ul, ol {
-				color: #fff;
+			ul,
+			ol {
+				color: var(--white-color);
 			}
 		}
 
 		&.light {
-
 			p,
 			ul {
 				color: #d8d8d8;
@@ -397,7 +398,6 @@ header.header-page-components {
 		}
 
 		&.normal {
-
 			p,
 			ul {
 				font-size: 20px;
@@ -408,7 +408,6 @@ header.header-page-components {
 			}
 
 			&.xs-fs-16 {
-
 				p,
 				ul {
 					@media (max-width: 767px) {
@@ -419,7 +418,6 @@ header.header-page-components {
 		}
 
 		&.big {
-
 			p,
 			ul {
 				font-size: 24px;
@@ -460,7 +458,7 @@ header.header-page-components {
 	.btn-box {
 		a {
 			font-size: 17px;
-			color: #fff;
+			color: var(--white-color);
 			text-decoration: none;
 			letter-spacing: 3.5px;
 			display: inline-block;
@@ -483,8 +481,8 @@ header.header-page-components {
 					width: 10px;
 					height: 10px;
 					display: block;
-					border-right: 2px solid #fff;
-					border-top: 2px solid #fff;
+					border-right: 2px solid var(--white-color);
+					border-top: 2px solid var(--white-color);
 					position: absolute;
 					top: 50%;
 					left: 46%;
@@ -512,7 +510,7 @@ header.header-page-components {
 
 				#how-did-you {
 					background-color: transparent;
-					border: 1px solid #000 !important;
+					border: 1px solid var(--black-color) !important;
 				}
 
 				.wpcf7-form-control-wrap {
@@ -524,7 +522,7 @@ header.header-page-components {
 					textarea {
 						margin-bottom: 10px;
 						background-color: transparent;
-						border: 1px solid #000;
+						border: 1px solid var(--black-color);
 						font-family: "Fira Sans Condensed", sans-serif;
 						font-weight: 400;
 						color: #222222;
@@ -567,7 +565,7 @@ header.header-page-components {
 					input {
 						outline: none;
 						font-size: 17px;
-						color: #000;
+						color: var(--black-color);
 						position: relative;
 						text-decoration: none;
 						letter-spacing: 3.5px;
@@ -599,8 +597,8 @@ header.header-page-components {
 							width: 10px;
 							height: 10px;
 							display: block;
-							border-right: 2px solid #000;
-							border-top: 2px solid #000;
+							border-right: 2px solid var(--black-color);
+							border-top: 2px solid var(--black-color);
 							position: absolute;
 							top: 50%;
 							left: 46%;
@@ -633,7 +631,7 @@ header.header-page-components {
 					text-transform: uppercase;
 					text-align: center;
 					border-radius: 0;
-					color: #fff;
+					color: var(--white-color);
 					border: none;
 				} */
 			}
@@ -667,7 +665,7 @@ header.header-page-components {
 	height: 20px;
 	border-radius: 50%;
 	animation: pulsingcircle 2s infinite;
-	border: 2px solid #fff;
+	border: 2px solid var(--white-color);
 	transform: translateY(-50%);
 	cursor: pointer;
 }
@@ -687,7 +685,7 @@ header.header-page-components {
 		height: 20px;
 		border-radius: 50%;
 		animation: pulsingcircle 2s infinite;
-		border: 2px solid #fff;
+		border: 2px solid var(--white-color);
 		transform: translateY(-50%);
 		cursor: pointer;
 	}
@@ -700,8 +698,8 @@ header.header-page-components {
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
-		border: 2px solid #fff;
-		background-color: #fff;
+		border: 2px solid var(--white-color);
+		background-color: var(--white-color);
 		transform: translateY(-50%);
 		cursor: pointer;
 	}
@@ -742,7 +740,7 @@ section.page-banner {
 	padding-top: 100px;
 	padding-bottom: 145px;
 	overflow: hidden;
-	background-color: #000;
+	background-color: var(--black-color);
 
 	&.v2 {
 		&:before {
@@ -873,7 +871,7 @@ section.bike-parts {
 
 			p {
 				font-size: 20px;
-				color: #fff;
+				color: var(--white-color);
 
 				@media (max-width: 767px) {
 					font-size: 16px;
@@ -899,7 +897,7 @@ section.bike-parts {
 				.the-bike {
 					position: relative;
 
-					>img {
+					> img {
 						max-width: 1024px;
 						margin: auto;
 						display: block;
@@ -911,7 +909,7 @@ section.bike-parts {
 						height: 52px;
 
 						span {
-							color: #fff;
+							color: var(--white-color);
 							display: block;
 							text-align: center;
 							display: none;
@@ -944,7 +942,7 @@ section.bike-parts {
 											content: "";
 											width: 1px;
 											height: 15px;
-											background-color: #ffffff;
+											background-color: var(--white-color)fff;
 											display: block;
 											margin: 5px auto;
 										}
@@ -975,7 +973,7 @@ section.bike-parts {
 											content: "";
 											width: 1px;
 											height: 15px;
-											background-color: #ffffff;
+											background-color: var(--white-color)fff;
 											display: block;
 											margin: 5px auto;
 										}
@@ -994,7 +992,7 @@ section.bike-parts {
 						position: absolute;
 
 						span.text {
-							color: #fff;
+							color: var(--white-color);
 							font-size: 18px;
 							margin-top: -6px;
 							font-weight: 300;
@@ -1024,7 +1022,7 @@ section.bike-parts {
 							opacity: 0;
 							height: 1px;
 							display: inline-block;
-							background-color: #fff;
+							background-color: var(--white-color);
 							position: absolute;
 
 							@media (max-width: 991px) {
@@ -1076,7 +1074,8 @@ section.bike-parts {
 								top: 14px;
 							}
 
-							@media (max-width: 480px) {}
+							@media (max-width: 480px) {
+							}
 						}
 
 						&.circle-two {
@@ -1123,7 +1122,8 @@ section.bike-parts {
 								top: 57px;
 							}
 
-							@media (max-width: 480px) {}
+							@media (max-width: 480px) {
+							}
 						}
 
 						&.circle-three {
@@ -1177,7 +1177,8 @@ section.bike-parts {
 								bottom: 72px;
 							}
 
-							@media (max-width: 480px) {}
+							@media (max-width: 480px) {
+							}
 						}
 
 						&.circle-four {
@@ -1236,7 +1237,8 @@ section.bike-parts {
 								bottom: 72px;
 							}
 
-							@media (max-width: 480px) {}
+							@media (max-width: 480px) {
+							}
 						}
 
 						&.circle-five {
@@ -1288,7 +1290,8 @@ section.bike-parts {
 								top: 60px;
 							}
 
-							@media (max-width: 480px) {}
+							@media (max-width: 480px) {
+							}
 						}
 
 						&.circle-six {
@@ -1432,7 +1435,7 @@ section.bike-parts {
 }
 
 section.fading-owl-carousel {
-	background-color: #000;
+	background-color: var(--black-color);
 	padding-bottom: 100px;
 	position: relative;
 
@@ -1583,7 +1586,7 @@ section.technical-specifications {
 
 					span.active {
 						font-weight: 500;
-						color: #000;
+						color: var(--black-color);
 						pointer-events: none;
 
 						&:not(:last-child) {
@@ -1652,7 +1655,7 @@ section.technical-specifications {
 						max-height: 406px;
 					}
 
-					&.open+.expand-collapse-btn {
+					&.open + .expand-collapse-btn {
 						display: block;
 					}
 
@@ -1669,7 +1672,7 @@ section.technical-specifications {
 				.expand-specs-button {
 					margin-top: 40px;
 
-					>span {
+					> span {
 						cursor: pointer;
 
 						.plus {
@@ -1767,7 +1770,8 @@ section.two-column {
 						height: 230px;
 					}
 
-					@media (max-width: 480px) {}
+					@media (max-width: 480px) {
+					}
 				}
 			}
 
@@ -1853,7 +1857,6 @@ footer.footer-page-components {
 	padding-bottom: 35px;
 
 	.container {
-
 		span,
 		a {
 			font-size: 12px;
@@ -1885,7 +1888,7 @@ footer.footer-page-components {
 
 		.links {
 			a {
-				color: #fff;
+				color: var(--white-color);
 
 				&:not(:last-child) {
 					margin-right: 15px;
@@ -1893,14 +1896,15 @@ footer.footer-page-components {
 			}
 		}
 
-		.logo {}
+		.logo {
+		}
 
 		img {
 			position: static !important;
 			transform: none !important;
 		}
 
-		>div {
+		> div {
 			&:not(:first-child) {
 				margin-top: 20px;
 			}
@@ -1973,7 +1977,7 @@ section.enquire-now-modal {
 				&.contact-form {
 					overflow: auto;
 					padding: 50px;
-					background-color: #fff;
+					background-color: var(--white-color);
 
 					.wpcf7-spinner {
 						position: absolute !important;
@@ -2151,7 +2155,7 @@ section.columns {
 			h1 {
 				font-weight: 600 !important;
 				margin-bottom: 40px;
-				color: #000;
+				color: var(--black-color);
 			}
 
 			[class*="col-"] {
@@ -2195,12 +2199,12 @@ section.columns {
 						padding: 20px 30px !important;
 
 						&.btn-outline-black {
-							border-color: #000;
-							color: #000;
+							border-color: var(--black-color);
+							color: var(--black-color);
 
 							&:hover {
-								background-color: #000;
-								color: #fff;
+								background-color: var(--black-color);
+								color: var(--white-color);
 							}
 						}
 
@@ -2234,7 +2238,7 @@ section.columns {
 }
 
 .cta-bar {
-	background-color: #000;
+	background-color: var(--black-color);
 	padding-top: 30px;
 	padding-bottom: 30px;
 
@@ -2248,8 +2252,8 @@ section.columns {
 
 					.inner {
 						.btn-outline-red {
-							background-color: $main-color;
-							color: #fff;
+							background-color: var(--main-color);
+							color: var(--white-color);
 							font-weight: bold;
 							letter-spacing: 1px;
 							font-size: 16px;
@@ -2263,7 +2267,7 @@ section.columns {
 
 						h2 {
 							text-align: center;
-							color: #fff;
+							color: var(--white-color);
 							text-transform: uppercase;
 
 							@media (max-width: 767px) {
@@ -2278,15 +2282,15 @@ section.columns {
 }
 
 .pc-btn {
-	background-color: $main-color !important;
-	color: #fff !important;
+	background-color: var(--main-color) !important;
+	color: var(--white-color) !important;
 	padding: 10px 35px;
 	border-radius: 0;
 	font-weight: 400 !important;
 	font-size: 16px !important;
 	letter-spacing: 0.8px !important;
 	display: inline-block !important;
-	border: 1px solid $main-color;
+	border: 1px solid var(--main-color);
 	transition: 300ms;
 	text-decoration: none !important;
 
@@ -2295,47 +2299,47 @@ section.columns {
 		border: 2px solid transparent;
 
 		&:hover {
-			background-color: #000 !important;
+			background-color: var(--black-color) !important;
 			border: 2px solid #ca9e67;
 		}
 	}
 
 	&.white {
-		background-color: #fff !important;
-		color: #000 !important;
-		border: 1px solid #fff;
+		background-color: var(--white-color) !important;
+		color: var(--black-color) !important;
+		border: 1px solid var(--white-color);
 
 		svg {
 			path {
-				color: #000 !important;
+				color: var(--black-color) !important;
 			}
 		}
 
 		&.border {
-			border: 1px solid #000;
+			border: 1px solid var(--black-color);
 
 			&:hover {
-				background-color: #000 !important;
-				color: #fff !important;
+				background-color: var(--black-color) !important;
+				color: var(--white-color) !important;
 			}
 		}
 
 		&.bordered {
 			background-color: transparent !important;
-			color: #fff !important;
-			border: 1px solid #fff;
+			color: var(--white-color) !important;
+			border: 1px solid var(--white-color);
 
 			&:hover {
-				background-color: #fff !important;
-				color: #000 !important;
-				border: 1px solid #fff;
+				background-color: var(--white-color) !important;
+				color: var(--black-color) !important;
+				border: 1px solid var(--white-color);
 			}
 
 			&.with-icon {
 				&:hover {
 					svg {
 						path {
-							stroke: #000;
+							stroke: var(--black-color);
 						}
 					}
 				}
@@ -2344,44 +2348,44 @@ section.columns {
 
 		&:hover {
 			background-color: transparent !important;
-			color: #fff !important;
+			color: var(--white-color) !important;
 			text-decoration: none;
-			border-color: #fff;
+			border-color: var(--white-color);
 		}
 	}
 
 	&.black {
-		border: 1px solid #000;
-		background-color: #000 !important;
-		color: #fff !important;
+		border: 1px solid var(--black-color);
+		background-color: var(--black-color) !important;
+		color: var(--white-color) !important;
 
 		&:hover {
-			background-color: $main-color !important;
-			border-color: $main-color;
+			background-color: var(--main-color) !important;
+			border-color: var(--main-color);
 		}
 
 		&.bordered {
 			background-color: transparent !important;
-			color: #000 !important;
-			border: 1px solid #000;
+			color: var(--black-color) !important;
+			border: 1px solid var(--black-color);
 
 			&:hover {
-				background-color: #000 !important;
-				color: #fff !important;
-				border: 1px solid #000;
+				background-color: var(--black-color) !important;
+				color: var(--white-color) !important;
+				border: 1px solid var(--black-color);
 			}
 
 			&.with-icon {
 				svg {
 					path {
-						stroke: #000;
+						stroke: var(--black-color);
 					}
 				}
 
 				&:hover {
 					svg {
 						path {
-							stroke: #fff;
+							stroke: var(--white-color);
 						}
 					}
 				}
@@ -2390,9 +2394,9 @@ section.columns {
 	}
 
 	&:hover {
-		background-color: #000 !important;
-		color: #fff !important;
-		border-color: #000;
+		background-color: var(--black-color) !important;
+		color: var(--white-color) !important;
+		border-color: var(--black-color);
 	}
 
 	&.with-arrow {
@@ -2425,7 +2429,7 @@ section.columns {
 
 .btn-box {
 	&.with-margin {
-		>* {
+		> * {
 			&:not(:last-child) {
 				margin-right: 20px;
 			}
@@ -2433,7 +2437,7 @@ section.columns {
 	}
 
 	&.d-block {
-		>* {
+		> * {
 			display: block !important;
 		}
 	}
@@ -2456,7 +2460,7 @@ section.columns {
 
 	h2 {
 		font-size: 56px;
-		color: #fff;
+		color: var(--white-color);
 		letter-spacing: -1.4px;
 		font-weight: 300 !important;
 
@@ -2484,7 +2488,7 @@ section.columns {
 
 .heading-box {
 	h2 {
-		color: #000;
+		color: var(--black-color);
 		font-size: 56px;
 		margin-bottom: 30px;
 
@@ -2509,7 +2513,7 @@ section.columns {
 
 	&.white-text {
 		h2 {
-			color: #fff;
+			color: var(--white-color);
 			letter-spacing: -1.4px;
 			font-weight: 300 !important;
 			margin-bottom: 40px;
@@ -2522,15 +2526,14 @@ section.columns {
 		.container {
 			.outer {
 				.inner {
-
 					h1,
 					h2 {
-						color: #000;
-						border-color: #000;
+						color: var(--black-color);
+						border-color: var(--black-color);
 					}
 
 					span {
-						color: #000;
+						color: var(--black-color);
 					}
 				}
 			}
@@ -2560,13 +2563,13 @@ section.columns {
 
 				h1,
 				h2 {
-					color: #fff;
+					color: var(--white-color);
 					font-size: 82px;
 					padding-top: 40px;
 					padding-bottom: 40px;
 					padding-right: 45px;
 					margin-right: 45px;
-					border-right: 1px solid #fff;
+					border-right: 1px solid var(--white-color);
 					font-weight: 300 !important;
 
 					@media (max-width: 991px) {
@@ -2598,7 +2601,7 @@ section.columns {
 
 				span {
 					font-size: 32px;
-					color: #fff;
+					color: var(--white-color);
 					letter-spacing: -0.82px;
 					font-weight: lighter;
 
@@ -2647,7 +2650,7 @@ section.columns {
 			right: 0;
 			height: 382px;
 			z-index: -1;
-			background: transparent linear-gradient(180deg, #00000000 0%, #000000cf 100%) 0% 0% no-repeat padding-box;
+			background: transparent linear-gradient(180deg, var(--black-color)00000 0%, var(--black-color)000cf 100%) 0% 0% no-repeat padding-box;
 
 			@media (max-width: 767px) {
 				height: 501px;
@@ -2661,7 +2664,6 @@ section.cta-modal {
 }
 
 section.hero-carousel-section {
-
 	.owl-stage {
 		@include display-flex;
 	}
@@ -2753,7 +2755,7 @@ section.hero-carousel-section {
 								flex: 0 0 50%;
 
 								span {
-									color: #fff;
+									color: var(--white-color);
 									font-size: 20px;
 
 									@media (max-width: 480px) {
@@ -2765,7 +2767,7 @@ section.hero-carousel-section {
 									max-width: 30px;
 								}
 
-								>* {
+								> * {
 									&:first-child {
 										margin-right: 20px;
 									}
@@ -2814,7 +2816,8 @@ section.hero-carousel-section {
 					left: 0;
 					right: 0;
 					height: 270px;
-					background: transparent linear-gradient(180deg, #a2a2a2cf 0%, #00000000 100%) 0% 0% no-repeat padding-box;
+					background: transparent linear-gradient(180deg, #a2a2a2cf 0%, var(--black-color)00000 100%) 0% 0% no-repeat
+						padding-box;
 				}
 			}
 
@@ -2856,13 +2859,13 @@ section.hero-carousel-section {
 						}
 
 						&.owl-nav-next {
-							background-color: $main-color;
+							background-color: var(--main-color);
 						}
 					}
 
 					&:first-child {
 						span {
-							color: #fff;
+							color: var(--white-color);
 						}
 					}
 				}
@@ -2874,7 +2877,8 @@ section.hero-carousel-section {
 		}
 
 		&.active {
-			.right-side {}
+			.right-side {
+			}
 		}
 	}
 
@@ -2886,7 +2890,7 @@ section.hero-carousel-section {
 		@include display-flex;
 		display: none;
 
-		>div {
+		> div {
 			width: 50%;
 			height: 78px;
 			@include display-flex;
@@ -2898,16 +2902,14 @@ section.hero-carousel-section {
 			}
 
 			&:last-child {
-				background-color: $main-color;
+				background-color: var(--main-color);
 			}
 		}
 	}
-
-
 }
 
 .hero-banner {
-	>img {
+	> img {
 		object-fit: cover;
 		width: 100vw;
 		height: 100vh;
@@ -2932,9 +2934,8 @@ section.hero-carousel-section {
 	}
 
 	&.hero-banner-carousel {
-
-		>img,
-		>video {
+		> img,
+		> video {
 			object-fit: cover;
 			width: 100% !important;
 			height: 700px;
@@ -2942,12 +2943,11 @@ section.hero-carousel-section {
 			@media (max-height: 1080px) {
 				height: 100vh;
 			}
-
 		}
 	}
 
 	&.hero-banner-video {
-		background-color: #000;
+		background-color: var(--black-color);
 		font-size: 0;
 
 		video {
@@ -2981,7 +2981,7 @@ section.hero-carousel-section {
 		.owl-nav {
 			z-index: 1;
 
-			>div {
+			> div {
 				background-color: transparent;
 				position: absolute;
 				top: 50%;
@@ -2989,8 +2989,8 @@ section.hero-carousel-section {
 				width: 25px;
 				height: 25px;
 				display: block;
-				border-bottom: 4px solid #fff;
-				border-right: 4px solid #fff;
+				border-bottom: 4px solid var(--white-color);
+				border-right: 4px solid var(--white-color);
 				position: absolute;
 
 				&.owl-next {
@@ -3017,7 +3017,7 @@ section.info-section {
 		.container {
 			.inner {
 				h2 {
-					color: #fff;
+					color: var(--white-color);
 					letter-spacing: -1.4px;
 					font-weight: 300 !important;
 					text-transform: initial;
@@ -3074,7 +3074,7 @@ section.info-section {
 		right: 0;
 		bottom: 0;
 		top: 0;
-		background: transparent linear-gradient(90deg, #000000bf 0%, #00000026 100%) 0% 0% no-repeat padding-box;
+		background: transparent linear-gradient(90deg, var(--black-color)000bf 0%, var(--black-color)00026 100%) 0% 0% no-repeat padding-box;
 	}
 
 	@media (max-width: 767px) {
@@ -3083,7 +3083,7 @@ section.info-section {
 
 	&.lighter-overlay {
 		&:before {
-			background: transparent linear-gradient(90deg, #0000003b 0%, #00000026 100%) 0% 0% no-repeat padding-box;
+			background: transparent linear-gradient(90deg, var(--black-color)0003b 0%, var(--black-color)00026 100%) 0% 0% no-repeat padding-box;
 		}
 	}
 }
@@ -3094,7 +3094,7 @@ section.info-section {
 	background-color: #efefef;
 
 	h2 {
-		color: #000 !important;
+		color: var(--black-color) !important;
 		font-size: 56px;
 		margin-bottom: 0;
 		text-transform: initial !important;
@@ -3140,7 +3140,7 @@ section.colourways {
 				.label {
 					font-size: 14px;
 					display: block;
-					color: #000;
+					color: var(--black-color);
 					padding: 0;
 				}
 
@@ -3187,7 +3187,8 @@ section.colourways {
 					}
 				}
 
-				@media (max-width: 991px) {}
+				@media (max-width: 991px) {
+				}
 			}
 
 			.row {
@@ -3221,7 +3222,7 @@ section.colourways {
 							.label {
 								font-size: 14px;
 								display: block;
-								color: #000;
+								color: var(--black-color);
 								padding: 0;
 							}
 
@@ -3253,10 +3254,12 @@ section.colourways {
 					&:not(:last-child):not(:first-child) {
 						&:before {
 							content: "";
-							background: linear-gradient(to bottom,
-									rgba(0, 0, 0, 0) 0%,
-									rgba(244, 244, 244, 1) 50%,
-									rgba(0, 0, 0, 0) 100%);
+							background: linear-gradient(
+								to bottom,
+								rgba(0, 0, 0, 0) 0%,
+								rgba(244, 244, 244, 1) 50%,
+								rgba(0, 0, 0, 0) 100%
+							);
 							display: block;
 							position: absolute;
 							top: 0;
@@ -3265,10 +3268,12 @@ section.colourways {
 							width: 2px;
 
 							@media (max-width: 767px) {
-								background: linear-gradient(to right,
-										rgba(0, 0, 0, 0) 0%,
-										rgba(244, 244, 244, 1) 50%,
-										rgba(0, 0, 0, 0) 100%);
+								background: linear-gradient(
+									to right,
+									rgba(0, 0, 0, 0) 0%,
+									rgba(244, 244, 244, 1) 50%,
+									rgba(0, 0, 0, 0) 100%
+								);
 								width: 100%;
 								top: auto;
 								bottom: 0;
@@ -3452,7 +3457,7 @@ section.colourways {
 
 							.heading-box {
 								h3 {
-									color: #fff;
+									color: var(--white-color);
 									margin-bottom: 30px;
 									font-size: 34px;
 
@@ -3583,13 +3588,13 @@ section.colourways {
 				background-color: #d6d6d6;
 
 				&.swiper-pagination-bullet-active {
-					background-color: $main-color;
+					background-color: var(--main-color);
 				}
 			}
 		}
 
 		[class*="swiper-button-"] {
-			color: #fff;
+			color: var(--white-color);
 			top: 0;
 			bottom: auto;
 			height: 460px;
@@ -3660,7 +3665,7 @@ section.latest-news {
 							bottom: 0;
 							left: 0;
 							right: 30px;
-							background-color: #fff;
+							background-color: var(--white-color);
 							@include display-flex;
 
 							.inner {
@@ -3670,14 +3675,14 @@ section.latest-news {
 								&.post-date {
 									@include justify-content(center);
 									padding: 15px;
-									background-color: $main-color;
+									background-color: var(--main-color);
 									flex: 0 0 27%;
 
 									.month-day-year {
 										text-align: center;
 
 										span {
-											color: #fff;
+											color: var(--white-color);
 											display: block;
 											font-weight: 400;
 											line-height: 1;
@@ -3712,7 +3717,7 @@ section.latest-news {
 
 									h3 {
 										font-size: 24px;
-										color: #000;
+										color: var(--black-color);
 										text-transform: uppercase;
 										letter-spacing: 0.5px;
 
@@ -3776,15 +3781,14 @@ section.accessories {
 }
 
 @mixin menu-hover {
-
 	&:hover,
 	&:focus,
 	&:active {
-		color: $main-color !important;
+		color: var(--main-color) !important;
 	}
 
 	@media (max-width: 991px) {
-		color: #000;
+		color: var(--black-color);
 	}
 }
 
@@ -3804,7 +3808,7 @@ section.accessories {
 	}
 
 	&::-webkit-scrollbar-track {
-		background: #ffffff;
+		background: var(--white-color)fff;
 		border-radius: 10px;
 		box-shadow: inset 7px 10px 12px 0px #f0f0f0;
 		height: 400px;
@@ -3821,10 +3825,10 @@ section.accessories {
 
 		.container-fluid {
 			.navbar-toggle {
-				border-color: #fff;
+				border-color: var(--white-color);
 
 				span {
-					background: #fff;
+					background: var(--white-color);
 				}
 			}
 
@@ -3835,7 +3839,7 @@ section.accessories {
 			#navbar {
 				@media (max-width: 991px) {
 					@include scroll-style;
-					background-color: #fff;
+					background-color: var(--white-color);
 					position: fixed;
 					top: 0;
 					bottom: 0;
@@ -3858,7 +3862,7 @@ section.accessories {
 
 				.menu-parent,
 				.menu-parents {
-					color: #fff;
+					color: var(--white-color);
 					@include menu-hover;
 				}
 
@@ -3867,9 +3871,9 @@ section.accessories {
 				}
 
 				#menu-right {
-					>li {
-						>a {
-							color: #fff;
+					> li {
+						> a {
+							color: var(--white-color);
 							@include menu-hover;
 						}
 					}
@@ -4033,7 +4037,9 @@ section.accessories {
 												right: 0;
 												height: 60px;
 												z-index: 1;
-												background: transparent linear-gradient(180deg, #00000000 0%, #ffffffcf 100%) 0% 0% no-repeat padding-box;
+												background: transparent
+													linear-gradient(180deg, var(--black-color)00000 0%, var(--white-color)fffcf 100%) 0% 0%
+													no-repeat padding-box;
 												display: block;
 
 												@media (max-width: 991px) {
@@ -4133,29 +4139,28 @@ section.accessories {
 	}
 
 	&.fixed {
-		background-color: #fff;
+		background-color: var(--white-color);
 
 		.navbar {
 			.container-fluid {
 				.navbar-toggle {
-					border-color: #000;
+					border-color: var(--black-color);
 
 					span {
-						background: #000;
+						background: var(--black-color);
 					}
 				}
 
 				#navbar {
-
 					.menu-parent,
 					.menu-parents {
-						color: #000;
+						color: var(--black-color);
 					}
 
 					#menu-right {
-						>li {
-							>a {
-								color: #000;
+						> li {
+							> a {
+								color: var(--black-color);
 							}
 						}
 					}
@@ -4176,19 +4181,17 @@ html {
 }
 
 body {
-	&:not(.home) {
-		#ccm-header {
-			background-color: #efefef;
-		}
+	#ccm-header {
+		background-color: var(--black-color);
+	}
 
-		#ccm-header.header-v2 .navbar .container-fluid #navbar .menu-parent,
-		#ccm-header.header-v2 .navbar .container-fluid #navbar .menu-parents {
-			color: #000;
-		}
+	#ccm-header.header-v2 .navbar .container-fluid #navbar .menu-parent,
+	#ccm-header.header-v2 .navbar .container-fluid #navbar .menu-parents {
+		color: var(--white-color);
+	}
 
-		#ccm-header.header-v2 .navbar .container-fluid #navbar #menu-right>li>a {
-			color: #000;
-		}
+	#ccm-header.header-v2 .navbar .container-fluid #navbar #menu-right > li > a {
+		color: var(--white-color);
 	}
 
 	&.overlay {
@@ -4196,16 +4199,15 @@ body {
 			.navbar {
 				.container-fluid {
 					#navbar {
-
 						.menu-parent,
 						.menu-parents {
-							color: #000;
+							color: var(--white-color);
 						}
 
 						#menu-right {
-							>li {
-								>a {
-									color: #000;
+							> li {
+								> a {
+									color: var(--white-color);
 								}
 							}
 						}
@@ -4220,10 +4222,10 @@ body {
 			.navbar {
 				.container-fluid {
 					.navbar-toggle {
-						border-color: #000;
+						border-color: var(--white-color);
 
 						span {
-							background: #000;
+							background: var(--white-color);
 						}
 					}
 				}
@@ -4233,11 +4235,11 @@ body {
 }
 
 .bg-black {
-	background-color: #000;
+	background-color: var(--black-color);
 }
 
 .bg-white {
-	background-color: #fff;
+	background-color: var(--white-color);
 }
 
 @mixin heading-two-gold {
@@ -4595,7 +4597,7 @@ section.bike-section {
 .separator {
 	width: 2px;
 	height: 35px;
-	background-color: #fff;
+	background-color: var(--white-color);
 	margin: 50px auto 50px auto;
 	display: none;
 
@@ -4782,7 +4784,7 @@ section.image-gallery {
 			left: 0;
 			right: 0;
 			top: 0;
-			background-color: #000;
+			background-color: var(--black-color);
 			opacity: 0;
 		}
 
@@ -4805,7 +4807,7 @@ section.image-gallery {
 	background-color: #ed171f;
 
 	p {
-		color: #fff;
+		color: var(--white-color);
 		font-family: "Fira Sans Condensed";
 		font-weight: 500;
 		letter-spacing: 0.5px;
@@ -4841,7 +4843,7 @@ section.image-gallery {
 			height: 20px;
 			border-radius: 50%;
 			animation: pulsingcircle 2s infinite;
-			border: 2px solid #fff;
+			border: 2px solid var(--white-color);
 			cursor: pointer;
 			left: -10px;
 		}
@@ -4860,7 +4862,7 @@ section.image-gallery {
 		padding: 10px 25px !important;
 	}
 
-	>* {
+	> * {
 		&:not(:last-child) {
 			margin-right: 10px !important;
 		}
@@ -4879,7 +4881,7 @@ section.image-gallery {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: #fff;
+	background-color: var(--white-color);
 	z-index: 9;
 
 	.btn-box {
@@ -4905,7 +4907,7 @@ section.image-gallery {
 	}
 }
 
-.sticky-mobile-button-main+footer {
+.sticky-mobile-button-main + footer {
 	padding-bottom: 85px;
 }
 
@@ -4921,7 +4923,7 @@ section.image-gallery {
 
 body {
 	&.bikes-template-page-tablet {
-		background-color: #000000;
+		background-color: var(--black-color)000;
 	}
 }
 
@@ -4944,7 +4946,7 @@ body {
 }
 
 section.main-bike-section {
-	color: #fff;
+	color: var(--white-color);
 
 	h1,
 	h2 {
@@ -4996,12 +4998,11 @@ section.main-bike-section {
 	.col-bike-details {
 		padding: 2.5vh 6vh;
 
-		>.column-holder {
+		> .column-holder {
 			height: 100%;
 			@include display-flex;
 			@include justify-content(space-between);
 			flex-direction: column;
-
 		}
 	}
 
@@ -5084,12 +5085,12 @@ section.main-bike-section {
 						background-color: transparent;
 						padding: 1.25vh 0;
 						border: none;
-						border-bottom: 1px solid #fff;
+						border-bottom: 1px solid var(--white-color);
 						border-radius: 0;
 						font-weight: 300;
 
 						&::placeholder {
-							color: #fff;
+							color: var(--white-color);
 						}
 					}
 				}
@@ -5117,7 +5118,7 @@ section.main-bike-section {
 		@include align-items(center);
 
 		.title {
-			border-right: 1px solid #fff;
+			border-right: 1px solid var(--white-color);
 			padding-right: 35px;
 			margin-right: 35px;
 			padding-top: 1.65vh;
@@ -5155,7 +5156,7 @@ section.main-bike-section {
 				margin-bottom: 10px;
 				font-weight: 500;
 
-				>span {
+				> span {
 					white-space: nowrap;
 				}
 			}
@@ -5170,7 +5171,7 @@ section.main-bike-section {
 			}
 
 			&:not(:last-child) {
-				border-right: 1px solid #fff;
+				border-right: 1px solid var(--white-color);
 			}
 		}
 	}
@@ -5190,7 +5191,7 @@ section.main-bike-section {
 					padding: 10px;
 
 					&.td-label {
-						border-bottom: 1px solid #fff;
+						border-bottom: 1px solid var(--white-color);
 						font-size: 16px;
 						font-weight: 500;
 						letter-spacing: 3.2px;
@@ -5222,10 +5223,10 @@ section.tablet-thank-you {
 	@include display-flex;
 	@include align-items(flex-end);
 	padding: 105px;
-	color: #fff;
+	color: var(--white-color);
 
 	h1 {
-		color: #fff;
+		color: var(--white-color);
 		font-size: 73px;
 		letter-spacing: 14.6px;
 		margin-bottom: 45px;
@@ -5248,7 +5249,7 @@ section.tablet-thank-you {
 			font-weight: 500;
 
 			span {
-				color: $main-color;
+				color: var(--main-color);
 				font-size: 53px;
 				font-weight: 500;
 			}
@@ -5256,7 +5257,7 @@ section.tablet-thank-you {
 	}
 }
 
-.buy-order-bike-page .acc-option input[type="checkbox"]+label {
+.buy-order-bike-page .acc-option input[type="checkbox"] + label {
 	height: 100%;
 	padding: 15px;
 
@@ -5276,7 +5277,7 @@ section.tablet-thank-you {
 	}
 
 	p {
-		color: #000 !important;
+		color: var(--black-color) !important;
 	}
 
 	.sku {
@@ -5314,7 +5315,7 @@ div.configure-bike-banner {
 		margin-top: 2rem;
 		position: static;
 		margin-bottom: 3rem;
-		font-family: 'Fira Sans Condensed';
+		font-family: "Fira Sans Condensed";
 		font-size: 1.5rem;
 	}
 }
@@ -5331,21 +5332,21 @@ section.bike-lists {
 		@include align-items(center);
 
 		&:after {
-			content: '';
+			content: "";
 			height: 1px;
 			margin-left: 30px;
 			display: block;
-			background-color: #DDDDDD;
+			background-color: #dddddd;
 			flex: 1 0 0%;
 		}
 	}
 
 	.bikes {
-		>.row {
+		> .row {
 			margin-left: -35px;
 			margin-right: -35px;
 
-			>[class*='col-'] {
+			> [class*="col-"] {
 				padding-left: 35px;
 				padding-right: 35px;
 				margin-bottom: 70px;
@@ -5366,7 +5367,7 @@ section.bike-lists {
 
 		.column-holder {
 			.row {
-				>[class*='col-'] {
+				> [class*="col-"] {
 					width: 100%;
 
 					@media (max-width: 575px) {
@@ -5376,7 +5377,6 @@ section.bike-lists {
 					}
 				}
 			}
-
 		}
 
 		.image-box {
@@ -5410,7 +5410,7 @@ section.bike-lists {
 			.bike-price {
 				font-size: 17px;
 
-				@media(min-width: 576px) {
+				@media (min-width: 576px) {
 					margin-left: 20px;
 				}
 
@@ -5454,7 +5454,7 @@ section.three-column-image {
 	}
 
 	.col-md-4 {
-		@media(max-width: 991px) {
+		@media (max-width: 991px) {
 			width: 33.3333333% !important;
 		}
 	}
@@ -5469,7 +5469,7 @@ section.logo-slider {
 		margin-bottom: 30px;
 
 		h2 {
-			color: #000;
+			color: var(--black-color);
 		}
 	}
 
@@ -5489,12 +5489,11 @@ section.logo-slider {
 				width: 100%;
 			}
 		}
-
 	}
 }
 
 section.wysiwyg {
 	padding-top: 70px;
 	padding-bottom: 70px;
-	font-family: 'Fira Sans Condensed';
+	font-family: "Fira Sans Condensed";
 }
