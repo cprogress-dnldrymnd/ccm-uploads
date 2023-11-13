@@ -404,83 +404,9 @@ $template = get_page_template_slug();
                 </style>
         <?php }
         else { ?>
-
-                <header id="ccm-header" class="header-v2 header-v3 header-page-components header-revamp">
-                    <nav class="navbar navbar-static-top">
-
-                        <div class="container-fluid">
-                            <div class="navbar-header visible-xs visible-sm">
-                                <!--  <div class="flag-holder">
-
-                                    <?php //echo do_shortcode('[gtranslate]'); ?>
-                                        </div>-->
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                                    aria-expanded="false" aria-controls="navbar">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>"
-                                        class="img-responsive" /></a>
-                            </div>
-                            <div id="navbar" class="collapse navbar-collapse">
-                                <div class="row">
-
-                                    <div class="col-md-7 mega-menu-col">
-                                        <a class="navbar-brand hidden-xs hidden-sm" href="http://www.ccm-motorcycles.com"><img
-                                                src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg"
-                                                class="img-responsive"></a>
-
-                                        <?php
-			  							if(current_user_can('administrator')) {
-											$depth = 3;
-										} else {
-											$depth = 2;
-										}
-                                        wp_nav_menu(
-                                            array(
-                                                'menu'        => 'Left Menu - New',
-                                                'depth'       => $depth,
-                                                'container'   => false,
-                                                'menu_class'  => 'nav navbar-nav nav-menu-handler',
-                                                'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                                                'walker'      => new WP_Bootstrap_Navwalker()
-                                            )
-                                        );
-											
-											
-                                        ?>
-                                    </div>
-                                    <div class="widget_shopping_cart_content display-none"><?php woocommerce_mini_cart(); ?></div>
-                                    <div class="col-md-5 f-d">
-                                        <?php
-                                        wp_nav_menu(
-                                            array(
-                                                'menu'        => 'Right Menu - New',
-                                                'depth'       => 2,
-                                                'container'   => false,
-                                                'menu_class'  => 'nav navbar-nav nav-menu-handler',
-                                                'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                                                'walker'      => new WP_Bootstrap_Navwalker()
-                                            )
-                                        );
-                                        ?>
-                                        <!-- <div class="flags-desktop">
-                                            <div class="op1">
-
-                                      <?php echo do_shortcode('[gtranslate]'); ?>
-                                            </div>
-                                        </div>-->
-                                        <div class="club-ccm-menu">
-                                            <a href="https://www.ccm-motorcycles.com/club-ccm/">CLUB CCM</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!--/.nav-collapse -->
-                        </div>
-                    </nav>
-                </header>
+              <header>
+                
+              </header> 
         <?php } ?>
     <?php } ?>
 	
