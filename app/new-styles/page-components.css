@@ -2052,7 +2052,7 @@ section.hero-carousel-section .owl-item {
               align-items: center;
               flex: 0 0 50%; }
               section.hero-carousel-section .owl-item .item .hero-banner-carousel .contents .container .bottom .inner span {
-                color: var(--white-color);
+                color: #fff;
                 font-size: 20px; }
                 @media (max-width: 480px) {
                   section.hero-carousel-section .owl-item .item .hero-banner-carousel .contents .container .bottom .inner span {
@@ -2097,7 +2097,7 @@ section.hero-carousel-section .owl-item {
         left: 0;
         right: 0;
         height: 270px;
-        background: transparent linear-gradient(180deg, #a2a2a2cf 0%, #000 0 100%) 0% 0% no-repeat padding-box; }
+        background: transparent linear-gradient(180deg, #a2a2a2cf 0%, #00000000 100%) 0% 0% no-repeat padding-box; }
     section.hero-carousel-section .owl-item .item .right-side {
       flex: 0 0 210px;
       display: -webkit-box;
@@ -2161,7 +2161,7 @@ section.hero-carousel-section .owl-item {
           section.hero-carousel-section .owl-item .item .right-side .inner .fake-owl-navs.owl-nav-next {
             background-color: var(--main-color); }
         section.hero-carousel-section .owl-item .item .right-side .inner:first-child span {
-          color: var(--white-color); }
+          color: #fff; }
       @media (max-width: 991px) {
         section.hero-carousel-section .owl-item .item .right-side {
           display: none; } }
