@@ -10,8 +10,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="facebook-domain-verification" content="x7s2nf6ay160td6uq7desxzfv9zz2t" />
 
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,300,400,500,600,700,800,900"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,300,400,500,600,700,800,900" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6cae1a8f6.js" crossorigin="anonymous"></script>
     <title>
         <?php bloginfo('name'); // show the blog name, from settings 
@@ -28,9 +27,9 @@
     <meta name="p:domain_verify" content="86cca4d34bdeaa262ef2ab86ce24dee9" />
     <!-- Facebook Pixel Code -->
     <script>
-        ! function (f, b, e, v, n, t, s) {
+        ! function(f, b, e, v, n, t, s) {
             if (f.fbq) return;
-            n = f.fbq = function () {
+            n = f.fbq = function() {
                 n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
@@ -52,7 +51,7 @@
     <!-- start webpush tracking code -->
     <script type='text/javascript'>
         var _at = {};
-        window._at.track = window._at.track || function () {
+        window._at.track = window._at.track || function() {
             (window._at.track.q = window._at.track.q || []).push(arguments);
         };
         _at.domain = 'www.ccm-motorcycles.com/';
@@ -60,7 +59,7 @@
         _at.idSite = '25586';
         _at.attributes = {};
         _at.webpushid = 'web.2.aimtell.com';
-        (function () {
+        (function() {
             var u = '//s3.amazonaws.com/cdn.aimtell.com/trackpush/';
             var d = document,
                 g = d.createElement('script'),
@@ -73,13 +72,12 @@
         })();
     </script>
     <!-- end webpush tracking code -->
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=265318043901425&ev=PageView&noscript=1" /></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=265318043901425&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
     <!-- Google Tag Manager -->
 
     <script>
-        (function (w, d, s, l, i) {
+        (function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start':
@@ -347,11 +345,10 @@ s0.parentNode.insertBefore(s1,s0);
 
         gtag('config', 'UA-151976546-1');
     </script> -->
-    
+
     <meta name="p:domain_verify" content="e81daae2849082514801125ab6971650" />
     <!--YouTube AdSense Script-->
-    <script data-ad-client="ca-pub-2753165670517691" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-2753165670517691" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!--End of YouTube AdSense Script-->
 
 </head>
@@ -376,48 +373,55 @@ $template = get_page_template_slug();
     <?php
     $logo = carbon_get_theme_option('cv_logo');
     if ($template != 'templates/page-tablet.php') {
-        ?>
+    ?>
         <div id="sticky-anchor" style="height: 0px;"></div>
         <?php if ($header_type == 'logo-only') { ?>
             <header class="header-page-components clear">
-                <a class="logo-page-components" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>"
-                        class="img-responsive"></a>
+                <a class="logo-page-components" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" class="img-responsive"></a>
             </header>
-        <?php }
-        else if ($header_type == 'logo-only-with-buttons') { ?>
-                <header class="header-page-components clear">
-                    <a class="logo-page-components" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>"
-                            class="img-responsive"></a>
-                    <div class="btn-box">
+        <?php } else if ($header_type == 'logo-only-with-buttons') { ?>
+            <header class="header-page-components clear">
+                <a class="logo-page-components" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" class="img-responsive"></a>
+                <div class="btn-box">
                     <?php foreach ($header_buttons as $button) { ?>
                         <?= get_button($button['button_text'], $button['button_link'], false) ?>
                     <?php } ?>
+                </div>
+
+
+
+            </header>
+            <style>
+                #page-components {
+                    margin-top: 0;
+                }
+            </style>
+        <?php } else { ?>
+            <header id="ccm-motors-header">
+                <div class="row row-v5">
+                    <div class="col-auto">
+                        <div class="column-holder">
+                            <div class="logo-box">
+                                <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="">
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-auto">
 
-
-
-                </header>
-                <style>
-                    #page-components {
-                        margin-top: 0;
-                    }
-                </style>
-        <?php }
-        else { ?>
-              <header>
-                
-              </header> 
+                    </div>
+                </div>
+            </header>
         <?php } ?>
     <?php } ?>
-	
-	<div class=" default dropdown-menu  dropdown-menu-bike-list d-none">
-		<?= do_shortcode('[bike_lists]') ?>
-	</div>
-	<script>
-		jQuery(document).ready(function () {
-			if (window.innerWidth > 992) {
-				jQuery('.model-range-menu').addClass('dropdown');
-				jQuery('.dropdown-menu-bike-list').appendTo('.model-range-menu');
-			}
-		});
-	</script>
+
+    <div class=" default dropdown-menu  dropdown-menu-bike-list d-none">
+        <?= do_shortcode('[bike_lists]') ?>
+    </div>
+    <script>
+        jQuery(document).ready(function() {
+            if (window.innerWidth > 992) {
+                jQuery('.model-range-menu').addClass('dropdown');
+                jQuery('.dropdown-menu-bike-list').appendTo('.model-range-menu');
+            }
+        });
+    </script>
