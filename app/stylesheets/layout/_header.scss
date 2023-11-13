@@ -395,6 +395,12 @@ li.has-dropdown:active:after,
 	font-family: $font-fira;
 	background-color: var(--black-color);
 	position: fixed;
+	left: 0;
+    right: 0;
+    top: 0;
+	section.bike-lists {
+		padding-top: 0;
+	}
 	.nav-box {
 		ul {
 			li {

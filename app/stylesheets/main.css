@@ -7289,7 +7289,12 @@ li.has-dropdown:active:after,
 #ccm-motors-header {
   font-family: "Fira Sans Condensed", sans-serif;
   background-color: var(--black-color);
-  position: fixed; }
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0; }
+  #ccm-motors-header section.bike-lists {
+    padding-top: 0; }
   #ccm-motors-header .nav-box ul li a {
     color: var(--white-color);
     text-transform: uppercase;
