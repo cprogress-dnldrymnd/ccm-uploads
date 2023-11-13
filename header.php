@@ -10,12 +10,13 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="facebook-domain-verification" content="x7s2nf6ay160td6uq7desxzfv9zz2t" />
 
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,300,400,500,600,700,800,900"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,300,400,500,600,700,800,900" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6cae1a8f6.js" crossorigin="anonymous"></script>
     <title>
-        <?php bloginfo('name'); // show the blog name, from settings ?> |
-        <?php is_front_page() ? bloginfo('description') : wp_title(''); // if we're on the home page, show the description, from the site's settings - otherwise, show the title of the post or page ?>
+        <?php bloginfo('name'); // show the blog name, from settings 
+        ?> |
+        <?php is_front_page() ? bloginfo('description') : wp_title(''); // if we're on the home page, show the description, from the site's settings - otherwise, show the title of the post or page 
+        ?>
     </title>
 
     <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -27,14 +28,21 @@
 
     <!-- Facebook Pixel Code -->
     <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
                 n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
@@ -42,26 +50,54 @@
         fbq('track', 'PageView');
     </script>
     <!-- start webpush tracking code -->
-    <script
-        type='text/javascript'> var _at = {}; window._at.track = window._at.track || function () { (window._at.track.q = window._at.track.q || []).push(arguments); }; _at.domain = 'www.ccm-motorcycles.com/'; _at.owner = 'be2712d5eff8'; _at.idSite = '25586'; _at.attributes = {}; _at.webpushid = 'web.2.aimtell.com'; (function () { var u = '//s3.amazonaws.com/cdn.aimtell.com/trackpush/'; var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0]; g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'trackpush.min.js'; s.parentNode.insertBefore(g, s); })();</script>
+    <script type='text/javascript'>
+        var _at = {};
+        window._at.track = window._at.track || function() {
+            (window._at.track.q = window._at.track.q || []).push(arguments);
+        };
+        _at.domain = 'www.ccm-motorcycles.com/';
+        _at.owner = 'be2712d5eff8';
+        _at.idSite = '25586';
+        _at.attributes = {};
+        _at.webpushid = 'web.2.aimtell.com';
+        (function() {
+            var u = '//s3.amazonaws.com/cdn.aimtell.com/trackpush/';
+            var d = document,
+                g = d.createElement('script'),
+                s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'trackpush.min.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
     <!-- end webpush tracking code -->
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=265318043901425&ev=PageView&noscript=1" /></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=265318043901425&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
     <!-- Google Tag Manager -->
 
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
                 'gtm.start':
 
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
+                    new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
 
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
 
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
 
-        })(window, document, 'script', 'dataLayer', 'GTM-MGZQQRX');</script>
+        })(window, document, 'script', 'dataLayer', 'GTM-MGZQQRX');
+    </script>
 
     <!-- End Google Tag Manager -->
     <!--Start of Tawk.to Script-->
@@ -269,8 +305,6 @@ s0.parentNode.insertBefore(s1,s0);
             color: #dc3524;
         }
     </style>
-
-
     <!--[if lte IE 9]>
         <link href="stylesheets/non-responsive.css" rel="stylesheet" />
     <![endif]-->
@@ -285,7 +319,10 @@ s0.parentNode.insertBefore(s1,s0);
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41122759-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-41122759-1');
@@ -294,35 +331,44 @@ s0.parentNode.insertBefore(s1,s0);
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151976546-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-151976546-1');
     </script>
     <!-- Google Tag Manager -->
 
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
                 'gtm.start':
 
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
+                    new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
 
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
 
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
 
-        })(window, document, 'script', 'dataLayer', 'GTM-MGZQQRX');</script>
+        })(window, document, 'script', 'dataLayer', 'GTM-MGZQQRX');
+    </script>
 
     <!-- End Google Tag Manager -->
     <meta name="p:domain_verify" content="e81daae2849082514801125ab6971650" />
     <!--YouTube AdSense Script-->
-    <script data-ad-client="ca-pub-2753165670517691" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-2753165670517691" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!--End of YouTube AdSense Script-->
 </head>
-
-
 
 
 <style type="text/css">
@@ -452,25 +498,24 @@ if ($post_type == 'product') {
                 <div class="navbar-header visible-xs visible-sm">
                     <!--  <div class="flag-holder">
 
-                    <?php //echo do_shortcode('[gtranslate]'); ?>
+                    <?php //echo do_shortcode('[gtranslate]'); 
+                    ?>
                 </div>-->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>"
-                            class="img-responsive" /></a>
+                    <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" class="img-responsive" /></a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <div class="row">
 
                         <div class="col-md-7 mega-menu-col">
-                            <a class="navbar-brand hidden-xs hidden-sm" href="http://www.ccm-motorcycles.com"><img
-                                    src="http://www.ccm-motorcycles.com/wp-content/uploads/2018/02/logo.png"
-                                    class="img-responsive"></a>
+                            <a class="navbar-brand hidden-xs hidden-sm" href="http://www.ccm-motorcycles.com">
+                                <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" class="img-responsive">
+                            </a>
 
                             <?php
                             wp_nav_menu(
@@ -521,18 +566,16 @@ if ($post_type == 'product') {
             $term = get_queried_object();
             $banner_array = get_field('ccm_category_banner_image', $term);
             $banner = $banner_array['url'];
-
         }
         $banner_src = !empty($banner) ? $banner : get_template_directory_uri() . '/app/assets/images/accessories_banner.png';
-        ?>
+    ?>
         <main class="news careers fourm_header accessories-banner">
             <section class="sp-banner" style="background-image: url('<?php echo $banner_src; ?>')">
                 <div class="container">
                     <h2>
                         <?php if (is_shop()) {
                             echo 'Accessories';
-                        }
-                        else {
+                        } else {
                             the_title();
                         }
                         ?></h2>
@@ -568,14 +611,13 @@ if ($post_type == 'product') {
         if (is_user_logged_in()) {
             $content_user = $user_content;
             $bannerContent = 'bannerContenttext';
-        }
-        else {
+        } else {
             $content_user = 'test';
             $bannerContent = '';
         }
 
 
-        ?>
+    ?>
 
 
         <main class="news careers page-template-page-owners club-main">
@@ -601,7 +643,7 @@ if ($post_type == 'product') {
              </div>
              </div>
              </div>
-             <?php	} */?>
+             <?php	} */ ?>
         </main>
     <?php } ?>
 
@@ -618,8 +660,7 @@ if ($post_type == 'product') {
                 $user->add_role('ccm_owner');
             }
             $user->remove_role('subscriber');
-        }
-        else {
+        } else {
             if (!current_user_can('subscriber')) {
                 $user->add_role('subscriber');
             }
