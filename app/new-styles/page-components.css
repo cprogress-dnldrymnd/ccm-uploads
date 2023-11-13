@@ -2097,7 +2097,7 @@ section.hero-carousel-section .owl-item {
         left: 0;
         right: 0;
         height: 270px;
-        background: transparent linear-gradient(180deg, #a2a2a2cf 0%, var(--black-color) 0 100%) 0% 0% no-repeat padding-box; }
+        background: transparent linear-gradient(180deg, #a2a2a2cf 0%, #000 0 100%) 0% 0% no-repeat padding-box; }
     section.hero-carousel-section .owl-item .item .right-side {
       flex: 0 0 210px;
       display: -webkit-box;
