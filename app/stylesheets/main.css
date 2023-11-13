@@ -7223,8 +7223,10 @@ li.has-dropdown:active:after,
   margin-left: -42% !important;
   margin-top: 18px !important; }
 
-#ccm-motors-header .row {
-  justify-content: space-between; }
+#ccm-motors-header {
+  font-family: "Fira Sans Condensed", sans-serif; }
+  #ccm-motors-header .row {
+    justify-content: space-between; }
 
 footer {
   position: relative;
