@@ -7294,7 +7294,8 @@ li.has-dropdown:active:after,
     text-transform: uppercase;
     font-size: 15px; }
     #ccm-motors-header .nav-box ul li a:hover {
-      background-color: #4A4B51; }
+      background-color: #4A4B51;
+      color: var(--white-color); }
 
 footer {
   position: relative;

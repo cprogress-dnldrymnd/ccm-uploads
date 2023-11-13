@@ -429,7 +429,7 @@ $template = get_page_template_slug();
                                     wp_nav_menu(
                                         array(
                                             'menu'        => 'Right Menu - New',
-                                            'depth'       => 2,
+                                            'depth'       => 3,
                                             'container'   => false,
                                             'menu_class'  => 'nav navbar-nav nav-menu-handler',
                                             'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
