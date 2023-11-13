@@ -1,0 +1,107 @@
+.landing-handler {
+
+    .row:first-of-type {
+        background: rgba(0, 0, 0, 0.7) !important;
+    }
+    .form-control {
+        background: #ffffffc7;
+        margin-bottom: 30px;
+        padding: 20px;
+        border: solid 2px #000;
+        border-radius: 0;
+        height: 45px;
+        font-family: "Barlow Semi Condensed Medium", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        color: #000;
+        font-size: 16px;
+        box-shadow: none!important;
+        outline: none!important;
+    }
+
+    input[type="checkbox"] {
+        display: block;
+        border: solid 2px black;
+        height: 35px;
+        margin-bottom: 0px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .no-padding {
+        height: 100vh;
+        display: table;
+
+        &:nth-child(1) {
+            background: transparent!important;
+        }
+
+        &:nth-child(2) {
+            background: transparent!important;
+        }
+    }
+
+
+    .content-container {
+        a.secondary_logo img {
+            height: 120px;
+            margin: 10px auto;
+        }
+        padding: 25px 50px 30px!important;
+        @include respond-to(screen-xs) {
+            padding: 0 25px 15px!important;
+        }
+    }
+    .d-cell.v-middle form {
+        background: rgba(255, 255, 255, .8);
+        padding: 35px 50px 20px;
+        color: #333;
+        @include respond-to(screen-xs) {
+            padding: 35px 25px 20px;
+            margin-bottom: 30px;
+        }
+        textarea {
+            height: 120px;
+        }
+        .landing-form {
+            text-align: center;
+            color: #222 !important;
+            margin-top: 0!important;
+            margin-bottom: 40px!important;
+        }
+    }
+    .send-btn {
+        background: #DA1927;
+        border: 1px solid #fff;
+        padding: 13px 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 15px;
+        text-transform: uppercase;
+        display: block;
+        margin: auto;
+        width: 150px;
+        margin-top: 30px;
+        transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        &:hover {
+            border: 1px solid #DA1927;
+            color: #DA1927;
+            background: #fff;
+            transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .landing-handler .container-fluid .col-md-6:last-child.no-padding {
+        padding-top: 100px!important;
+    }
+}

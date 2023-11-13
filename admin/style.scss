@@ -1,0 +1,27 @@
+#carbon_fields_container_resource_hub {
+	h2.hndle {
+		font-size: 20px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+}
+
+.crb-title {
+	padding: 0 !important;
+	border: none !important;
+	.field-holder {
+		height: 100%;
+		display: table;
+		background-color: #23282d;
+		width: 100%;
+		> * {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		h2 {
+			padding: 10px 30px !important;
+			color: #fff;
+			font-weight: bold;
+		}
+	}
+}
