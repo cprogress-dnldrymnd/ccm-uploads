@@ -359,7 +359,8 @@ $header_buttons = carbon_get_the_post_meta('header_buttons');
 $template = get_page_template_slug();
 ?>
 
-<body <?php body_class($cat_class . $product_cat_class); ?> ownership="<?php _e($ownership) ?>" <?= $product_term ?>>
+<body <?php body_class($cat_class . $product_cat_class); ?> ownership="
+    <?php _e($ownership) ?>" <?= $product_term ?>>
 
 
     <!--[if lt IE 9]>
@@ -397,17 +398,46 @@ $template = get_page_template_slug();
                 }
             </style>
         <?php } else { ?>
-            <header id="ccm-motors-header">
-                <div class="row row-v5">
+            <header id="ccm-motors-header" class="bt-5">
+                <div class="row">
                     <div class="col-auto">
                         <div class="column-holder">
                             <div class="logo-box">
                                 <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="">
                             </div>
+                            <div class="nav-box">
+                                <?php
+                                wp_nav_menu(
+                                    array(
+                                        'menu'        => 'Left Menu - New',
+                                        'depth'       => 3,
+                                        'container'   => false,
+                                        'menu_class'  => 'nav navbar-nav nav-menu-handler',
+                                        'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                                        'walker'      => new WP_Bootstrap_Navwalker()
+                                    )
+                                );
+                                ?>
+                            </div>
                         </div>
                     </div>
                     <div class="col-auto">
-
+                        <div class="column-holder">
+                            <div class="nav-box">
+                                <?php
+                                wp_nav_menu(
+                                    array(
+                                        'menu'        => 'Right Menu - New',
+                                        'depth'       => 2,
+                                        'container'   => false,
+                                        'menu_class'  => 'nav navbar-nav nav-menu-handler',
+                                        'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                                        'walker'      => new WP_Bootstrap_Navwalker()
+                                    )
+                                );
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
