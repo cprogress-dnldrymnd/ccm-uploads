@@ -7301,7 +7301,7 @@ li.has-dropdown:active:after,
     content: none !important; }
   #ccm-motors-header .nav-box ul li.dropdown {
     position: static; }
-    #ccm-motors-header .nav-box ul li.dropdown.dropdown-menu {
+    #ccm-motors-header .nav-box ul li.dropdown .dropdown-menu {
       left: 0px;
       right: 0px;
       height: 70vw;
