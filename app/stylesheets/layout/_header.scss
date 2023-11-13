@@ -394,6 +394,7 @@ li.has-dropdown:active:after,
 #ccm-motors-header {
 	font-family: $font-fira;
 	background-color: var(--black-color);
+	position: fixed;
 	.nav-box {
 		ul {
 			li {
@@ -415,12 +416,13 @@ li.has-dropdown:active:after,
 					.dropdown-menu {
 						left: 0px;
 						right: 0px;
-						height: 70vw;
+						height: calc(100vh - 100px);
 						float: none;
 						top: auto;
 						bottom: auto;
 						overflow: hidden;
 						padding: 0;
+						
 					}
 				}
 			}
