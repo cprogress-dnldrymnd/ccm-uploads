@@ -612,10 +612,9 @@ if ($post_type == 'product') {
             $content_user = $user_content;
             $bannerContent = 'bannerContenttext';
         } else {
-            $content_user = 'test';
+            $content_user = '';
             $bannerContent = '';
         }
-
 
     ?>
 
@@ -672,9 +671,5 @@ if ($post_type == 'product') {
     if (is_page(305)) {
         update_user_role();
     }
-
-    /*if(current_user_can( 'administrator' )) {
-    echo '<div style="position: fixed; top: 0; left: 0; right: 0; padding: 20px; background-color: #000;color: #fff; font-size: 20px; z-index: 999999;"> New Server Active (Visible only to admin) </div>';
-    }*/
 
     ?>
