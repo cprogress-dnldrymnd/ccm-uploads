@@ -412,7 +412,7 @@ li.has-dropdown:active:after,
 				}
 				&.dropdown {
 					position: static;
-					&.dropdown-menu {
+					.dropdown-menu {
 						left: 0px;
 						right: 0px;
 						height: 70vw;
