@@ -251,10 +251,10 @@ header.header-page-components {
 	}
 
 	select {
-		border: 1px solid var(--black-color)000 !important;
+		border: 1px solid var(--black-color) 000 !important;
 		margin-top: 0;
 		margin-bottom: 10px;
-		background-color: var(--white-color)fff !important;
+		background-color: var(--white-color) fff !important;
 		font-size: 16px;
 		height: 45px;
 		padding: 12px;
@@ -368,7 +368,7 @@ header.header-page-components {
 				content: "";
 				width: 1px;
 				height: 66px;
-				background-color: var(--white-color)fff;
+				background-color: var(--white-color) fff;
 				display: block;
 				margin: 20px auto auto auto;
 			}
@@ -942,7 +942,7 @@ section.bike-parts {
 											content: "";
 											width: 1px;
 											height: 15px;
-											background-color: var(--white-color)fff;
+											background-color: var(--white-color) fff;
 											display: block;
 											margin: 5px auto;
 										}
@@ -973,7 +973,7 @@ section.bike-parts {
 											content: "";
 											width: 1px;
 											height: 15px;
-											background-color: var(--white-color)fff;
+											background-color: var(--white-color) fff;
 											display: block;
 											margin: 5px auto;
 										}
@@ -2650,7 +2650,8 @@ section.columns {
 			right: 0;
 			height: 382px;
 			z-index: -1;
-			background: transparent linear-gradient(180deg, var(--black-color)00000 0%, var(--black-color)000cf 100%) 0% 0% no-repeat padding-box;
+			background: transparent linear-gradient(180deg, var(--black-color) 00000 0%, var(--black-color) 000cf 100%)
+				0% 0% no-repeat padding-box;
 
 			@media (max-width: 767px) {
 				height: 501px;
@@ -2816,8 +2817,8 @@ section.hero-carousel-section {
 					left: 0;
 					right: 0;
 					height: 270px;
-					background: transparent linear-gradient(180deg, #a2a2a2cf 0%, var(--black-color)00000 100%) 0% 0% no-repeat
-						padding-box;
+					background: transparent linear-gradient(180deg, #a2a2a2cf 0%, var(--black-color) 00000 100%) 0% 0%
+						no-repeat padding-box;
 				}
 			}
 
@@ -3074,7 +3075,8 @@ section.info-section {
 		right: 0;
 		bottom: 0;
 		top: 0;
-		background: transparent linear-gradient(90deg, var(--black-color)000bf 0%, var(--black-color)00026 100%) 0% 0% no-repeat padding-box;
+		background: transparent linear-gradient(90deg, var(--black-color) 000bf 0%, var(--black-color) 00026 100%) 0% 0%
+			no-repeat padding-box;
 	}
 
 	@media (max-width: 767px) {
@@ -3083,7 +3085,8 @@ section.info-section {
 
 	&.lighter-overlay {
 		&:before {
-			background: transparent linear-gradient(90deg, var(--black-color)0003b 0%, var(--black-color)00026 100%) 0% 0% no-repeat padding-box;
+			background: transparent linear-gradient(90deg, var(--black-color) 0003b 0%, var(--black-color) 00026 100%)
+				0% 0% no-repeat padding-box;
 		}
 	}
 }
@@ -3808,17 +3811,16 @@ section.accessories {
 	}
 
 	&::-webkit-scrollbar-track {
-		background: var(--white-color)fff;
+		background: var(--white-color) fff;
 		border-radius: 10px;
 		box-shadow: inset 7px 10px 12px 0px #f0f0f0;
 		height: 400px;
 	}
 }
 
-#ccm-header.header-v2 {
+#ccm-header {
 	padding: 0;
-	background-color: transparent;
-
+	background-color: var(--black-color);
 	.navbar {
 		background-color: transparent;
 		@include box-shadow(none);
@@ -4038,8 +4040,12 @@ section.accessories {
 												height: 60px;
 												z-index: 1;
 												background: transparent
-													linear-gradient(180deg, var(--black-color)00000 0%, var(--white-color)fffcf 100%) 0% 0%
-													no-repeat padding-box;
+													linear-gradient(
+														180deg,
+														var(--black-color) 00000 0%,
+														var(--white-color) fffcf 100%
+													)
+													0% 0% no-repeat padding-box;
 												display: block;
 
 												@media (max-width: 991px) {
@@ -4176,60 +4182,6 @@ html {
 
 		#page-components {
 			margin-right: 17px;
-		}
-	}
-}
-
-body {
-	#ccm-header {
-		background-color: var(--black-color);
-	}
-
-	#ccm-header.header-v2 .navbar .container-fluid #navbar .menu-parent,
-	#ccm-header.header-v2 .navbar .container-fluid #navbar .menu-parents {
-		color: var(--white-color);
-	}
-
-	#ccm-header.header-v2 .navbar .container-fluid #navbar #menu-right > li > a {
-		color: var(--white-color);
-	}
-
-	&.overlay {
-		#ccm-header.header-v2 {
-			.navbar {
-				.container-fluid {
-					#navbar {
-						.menu-parent,
-						.menu-parents {
-							color: var(--white-color);
-						}
-
-						#menu-right {
-							> li {
-								> a {
-									color: var(--white-color);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	&.navbar-active {
-		#ccm-header.header-v2 {
-			.navbar {
-				.container-fluid {
-					.navbar-toggle {
-						border-color: var(--white-color);
-
-						span {
-							background: var(--white-color);
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -4923,7 +4875,7 @@ section.image-gallery {
 
 body {
 	&.bikes-template-page-tablet {
-		background-color: var(--black-color)000;
+		background-color: var(--black-color) 000;
 	}
 }
 
