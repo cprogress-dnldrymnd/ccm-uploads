@@ -7052,7 +7052,8 @@ button.navbar-toggle {
   .navbar-header {
     float: none; }
 
-  .navbar-left, .navbar-right {
+  .navbar-left,
+  .navbar-right {
     float: none !important; }
 
   .navbar-toggle {
@@ -7113,7 +7114,8 @@ button.navbar-toggle {
         background: #f7f7f7;
         padding: 20px 0;
         text-align: left !important; }
-        .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb p, .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb a {
+        .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb p,
+        .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb a {
           padding-bottom: 0;
           font-family: "Barlow Semi Condensed Medium", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
           color: #dc3524;
@@ -7250,14 +7252,14 @@ li.has-dropdown:after,
 .mega-menu-column .megamenu-breadcrumb a.taxonomy-button:after {
   content: "\f078";
   font-family: FontAwesome;
-  color: #DA1927;
+  color: #da1927;
   position: absolute;
   margin-left: -8px;
   margin-top: -18px;
   opacity: 0;
-  -webkit-transition: transform .5s ease-out,opacity .5s linear;
-  -o-transition: transform .5s ease-out,opacity .5s linear;
-  transition: transform .5s ease-out,opacity .5s linear;
+  -webkit-transition: transform 0.5s ease-out, opacity 0.5s linear;
+  -o-transition: transform 0.5s ease-out, opacity 0.5s linear;
+  transition: transform 0.5s ease-out, opacity 0.5s linear;
   -webkit-transform: translateY(1px);
   -moz-transform: translateY(1px);
   -ms-transform: translateY(1px);
@@ -7271,9 +7273,9 @@ li.has-dropdown:focus:after,
 li.has-dropdown:active:after,
 .mega-menu-column .megamenu-breadcrumb a.taxonomy-button:active:after {
   opacity: 1;
-  -webkit-transition: transform .5s ease-out,opacity .5s linear;
-  -o-transition: transform .5s ease-out,opacity .5s linear;
-  transition: transform .5s ease-out,opacity .5s linear;
+  -webkit-transition: transform 0.5s ease-out, opacity 0.5s linear;
+  -o-transition: transform 0.5s ease-out, opacity 0.5s linear;
+  transition: transform 0.5s ease-out, opacity 0.5s linear;
   -webkit-transform: translateY(-1px);
   -moz-transform: translateY(-1px);
   -ms-transform: translateY(-1px);
@@ -7287,6 +7289,8 @@ li.has-dropdown:active:after,
 #ccm-motors-header {
   font-family: "Fira Sans Condensed", sans-serif;
   background-color: var(--black-color); }
+  #ccm-motors-header .nav-box ul li a {
+    color: var(--white-color); }
 
 footer {
   position: relative;
