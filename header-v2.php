@@ -374,83 +374,12 @@ s0.parentNode.insertBefore(s1,s0);
             font-weight: 300;
         }
 
-
-
         section.bike-lists .bikes>.row {
             margin-top: 0 !important;
             margin-bottom: 0 !important;
         }
-
         section.bike-lists .bike-category {
             margin-bottom: 0;
-        }
-
-        @media(min-width: 992px) {
-            header.header-v3 nav .navbar-nav {
-                height: 100%;
-            }
-
-            header.header-v3 nav .navbar-nav li {
-                margin-bottom: 0;
-                height: 100%;
-            }
-
-            header.header-v3 nav .navbar-nav li a {
-                height: 100%;
-            }
-
-            #ccm-header.header-v3 {
-                transition: none !important;
-            }
-
-            header nav .navbar-nav {
-                height: 100%;
-            }
-
-            header.header-v3 nav .navbar-nav li.dropdown:hover .dropdown-menu {
-                display: block !important;
-            }
-			
-			 header.header-v3 nav .navbar-nav li.dropdown:hover .dropdown-menu .dropdown-menu {
-				display: none !important;
-			}
-			
-			header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default li a {
-				padding-top: 20px;
-				padding-bottom: 20px;
-			}
-			 header.header-v3 nav .navbar-nav li.dropdown:hover .dropdown-menu li.dropdown:hover .dropdown-menu {
-				display: block !important;
-			}
-			header nav .navbar-nav li.dropdown .dropdown-menu.default {
-				padding-top: 0;
-				padding-bottom: 0;
-			}
-            .home:not(.overlay) header:not(.fixed) nav .navbar-nav li a:not(:hover) {
-                color: #fff;
-            }
-
-            body.overlay #ccm-header.header-v2 .navbar .container-fluid #navbar .menu-parent,
-            body.overlay #ccm-header.header-v2 .navbar .container-fluid #navbar .menu-parents {
-                color: #000 !important;
-            }
-
-        }
-
-        @media(max-width: 991px) {
-            header.header-v3#ccm-header nav .navbar-nav>li>a {
-                padding-top: 14px !important;
-                padding-bottom: 14px !important;
-            }
-
-            header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default>li {
-                margin-bottom: 15px;
-            }
-
-            header.header-v3 nav .navbar-nav li.open .dropdown-menu {
-                display: block !important;
-            }
-
         }
     </style>
 </head>
