@@ -7296,6 +7296,8 @@ li.has-dropdown:active:after,
     #ccm-motors-header .nav-box ul li a:hover {
       background-color: #4A4B51;
       color: var(--white-color); }
+  #ccm-motors-header .nav-box ul li:after {
+    content: none !important; }
 
 footer {
   position: relative;
