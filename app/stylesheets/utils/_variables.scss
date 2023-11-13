@@ -1,6 +1,11 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
+:root {
+	--main-color: #ed181f;
+	--black-color: #000;
+	--white-color: #fff;
+}
 
 /// Regular font family
 $font-opensans: 'Open Sans';

@@ -1797,12 +1797,17 @@ section.columns {
   flex: 1 0 100%;
   flex-wrap: wrap; }
 
-row-v5
+.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
 .page-id-8075 .header-page-components .btn-box,
 .page-id-9391 .header-page-components .btn-box,
 .page-id-9397 .header-page-components .btn-box {
   display: none; }
-row-v5
 .page-id-8075 h2,
 .page-id-9391 h2,
 .page-id-9397 h2 {
@@ -1811,29 +1816,24 @@ row-v5
   letter-spacing: -1.4px;
   font-weight: 300 !important; }
   @media (max-width: 767px) {
-    row-v5
     .page-id-8075 h2,
     .page-id-9391 h2,
     .page-id-9397 h2 {
       font-size: 40px; } }
   @media (max-width: 480px) {
-    row-v5
     .page-id-8075 h2,
     .page-id-9391 h2,
     .page-id-9397 h2 {
       font-size: 35px; } }
-row-v5
 .page-id-8075 section.technical-specifications,
 .page-id-9391 section.technical-specifications,
 .page-id-9397 section.technical-specifications {
   padding-top: 0; }
-  row-v5
   .page-id-8075 section.technical-specifications .tabs,
   .page-id-9391 section.technical-specifications .tabs,
   .page-id-9397 section.technical-specifications .tabs {
     padding-top: 118px; }
     @media (max-width: 991px) {
-      row-v5
       .page-id-8075 section.technical-specifications .tabs,
       .page-id-9391 section.technical-specifications .tabs,
       .page-id-9397 section.technical-specifications .tabs {

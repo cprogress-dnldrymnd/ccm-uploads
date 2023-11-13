@@ -1,4 +1,9 @@
 @charset "UTF-8";
+:root {
+  --main-color: #ed181f;
+  --black-color: #000;
+  --white-color: #fff; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -7224,7 +7229,8 @@ li.has-dropdown:active:after,
   margin-top: 18px !important; }
 
 #ccm-motors-header {
-  font-family: "Fira Sans Condensed", sans-serif; }
+  font-family: "Fira Sans Condensed", sans-serif;
+  background-color: var(--black-color); }
   #ccm-motors-header .row {
     justify-content: space-between; }
 
