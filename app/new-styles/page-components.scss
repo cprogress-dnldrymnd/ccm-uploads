@@ -4962,8 +4962,6 @@ section.bike-lists {
 		.column-holder {
 			.row {
 				> [class*="col-"] {
-					width: 100%;
-
 					@media (max-width: 575px) {
 						&.col-half-mobile {
 							width: 50%;

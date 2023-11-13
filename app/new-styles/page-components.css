@@ -1797,13 +1797,6 @@ section.columns {
   flex: 1 0 100%;
   flex-wrap: wrap; }
 
-.flex-row {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
-
 .page-id-8075 .header-page-components .btn-box,
 .page-id-9391 .header-page-components .btn-box,
 .page-id-9397 .header-page-components .btn-box {
@@ -3595,11 +3588,9 @@ section.bike-lists {
       @media (max-width: 575px) {
         section.bike-lists .bikes > .row > [class*="col-"] {
           width: 100%; } }
-  section.bike-lists .bikes .column-holder .row > [class*="col-"] {
-    width: 100%; }
-    @media (max-width: 575px) {
-      section.bike-lists .bikes .column-holder .row > [class*="col-"].col-half-mobile {
-        width: 50%; } }
+  @media (max-width: 575px) {
+    section.bike-lists .bikes .column-holder .row > [class*="col-"].col-half-mobile {
+      width: 50%; } }
   section.bike-lists .bikes .image-box {
     padding: 25%;
     position: relative;
