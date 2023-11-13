@@ -403,12 +403,25 @@ li.has-dropdown:active:after,
 					font-size: 15px;
 					padding: 25px 15px;
 					&:hover {
-						background-color: #4A4B51;
+						background-color: #4a4b51;
 						color: var(--white-color);
 					}
 				}
 				&:after {
 					content: none !important;
+				}
+				&.dropdown {
+					position: static;
+					&.dropdown-menu {
+						left: 0px;
+						right: 0px;
+						height: 70vw;
+						float: none;
+						top: auto;
+						bottom: auto;
+						overflow: hidden;
+						padding: 0;
+					}
 				}
 			}
 		}

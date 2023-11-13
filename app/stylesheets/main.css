@@ -7295,10 +7295,21 @@ li.has-dropdown:active:after,
     font-size: 15px;
     padding: 25px 15px; }
     #ccm-motors-header .nav-box ul li a:hover {
-      background-color: #4A4B51;
+      background-color: #4a4b51;
       color: var(--white-color); }
   #ccm-motors-header .nav-box ul li:after {
     content: none !important; }
+  #ccm-motors-header .nav-box ul li.dropdown {
+    position: static; }
+    #ccm-motors-header .nav-box ul li.dropdown.dropdown-menu {
+      left: 0px;
+      right: 0px;
+      height: 80vw;
+      float: none;
+      top: auto;
+      bottom: auto;
+      overflow: hidden;
+      padding: 0; }
 
 footer {
   position: relative;
