@@ -489,76 +489,78 @@ if ($post_type == 'product') {
 
     <?php
     $logo = carbon_get_theme_option('cv_logo');
+    if ($template != 'templates/page-tablet.php') {
     ?>
-
-    <header id="ccm-header" class="header-v2 header-v3 header-page-components">
-        <nav class="navbar navbar-static-top">
-
-            <div class="container-fluid">
-                <div class="navbar-header visible-xs visible-sm">
-                    <!--  <div class="flag-holder">
-
-                    <?php //echo do_shortcode('[gtranslate]'); 
-                    ?>
-                </div>-->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" class="img-responsive" /></a>
+        <div id="sticky-anchor" style="height: 0px;"></div>
+        <?php if ($header_type == 'logo-only') { ?>
+            <header class="header-page-components clear">
+                <a class="logo-page-components" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" class="img-responsive"></a>
+            </header>
+        <?php } else if ($header_type == 'logo-only-with-buttons') { ?>
+            <header class="header-page-components clear">
+                <a class="logo-page-components" href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" class="img-responsive"></a>
+                <div class="btn-box">
+                    <?php foreach ($header_buttons as $button) { ?>
+                        <?= get_button($button['button_text'], $button['button_link'], false) ?>
+                    <?php } ?>
                 </div>
-                <div id="navbar" class="collapse navbar-collapse">
-                    <div class="row">
 
-                        <div class="col-md-7 mega-menu-col">
-                            <a class="navbar-brand hidden-xs hidden-sm" href="<?= get_site_url() ?>">
-                                <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" class="img-responsive">
-                            </a>
 
-                            <?php
-                            wp_nav_menu(
-                                array(
-                                    'menu'        => 'Left Menu - New',
-                                    'depth'       => 2,
-                                    'container'   => false,
-                                    'menu_class'  => 'nav navbar-nav nav-menu-handler',
-                                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                                    'walker'      => new WP_Bootstrap_Navwalker()
-                                )
-                            );
-                            ?>
+
+            </header>
+            <style>
+                #page-components {
+                    margin-top: 0;
+                }
+            </style>
+        <?php } else { ?>
+            <header id="ccm-motors-header" class="bt-5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="row column-holder align-items-center">
+                                <div class="col-auto logo-box">
+                                    <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="">
+                                </div>
+                                <div class="col-auto nav-box">
+                                    <?php
+                                    wp_nav_menu(
+                                        array(
+                                            'menu'        => 'Left Menu - New',
+                                            'depth'       => 3,
+                                            'container'   => false,
+                                            'menu_class'  => 'nav navbar-nav nav-menu-handler',
+                                            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                                            'walker'      => new WP_Bootstrap_Navwalker()
+                                        )
+                                    );
+                                    ?>
+                                </div>
+                            </div>
                         </div>
-                        <div class="widget_shopping_cart_content display-none"><?php woocommerce_mini_cart(); ?></div>
-                        <div class="col-md-5 f-d">
-                            <?php
-                            wp_nav_menu(
-                                array(
-                                    'menu'        => 'Right Menu - New',
-                                    'depth'       => 2,
-                                    'container'   => false,
-                                    'menu_class'  => 'nav navbar-nav nav-menu-handler',
-                                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                                    'walker'      => new WP_Bootstrap_Navwalker()
-                                )
-                            );
-                            ?>
-                            <!-- <div class="flags-desktop">
-                    <div class="op1">
-
-                      <?php echo do_shortcode('[gtranslate]'); ?>
-                    </div>
-                </div>-->
-                            <div class="club-ccm-menu">
-                                <a href="https://www.ccm-motorcycles.com/club-ccm/">CLUB CCM</a>
+                        <div class="col-auto">
+                            <div class="column-holder">
+                                <div class="nav-box">
+                                    <?php
+                                    wp_nav_menu(
+                                        array(
+                                            'menu'        => 'Right Menu - New',
+                                            'depth'       => 3,
+                                            'container'   => false,
+                                            'menu_class'  => 'nav navbar-nav nav-menu-handler',
+                                            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                                            'walker'      => new WP_Bootstrap_Navwalker()
+                                        )
+                                    );
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> <!--/.nav-collapse -->
-            </div>
-        </nav>
-    </header>
+                </div>
+            </header>
+        <?php } ?>
+    <?php } ?>
 
     <?php if (is_shop() || is_product_category()) {
         $banner = carbon_get_the_post_meta('sp_banner');
