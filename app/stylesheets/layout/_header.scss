@@ -400,6 +400,11 @@ li.has-dropdown:active:after,
 				a {
 					color: var(--white-color);
 					text-transform: uppercase;
+					font-size: 15px;
+					&:hover {
+						background-color: #4A4B51;
+						color: var(--white-color);
+					}
 				}
 			}
 		}

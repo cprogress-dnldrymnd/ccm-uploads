@@ -7290,7 +7290,11 @@ li.has-dropdown:active:after,
   font-family: "Fira Sans Condensed", sans-serif;
   background-color: var(--black-color); }
   #ccm-motors-header .nav-box ul li a {
-    color: var(--white-color); }
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 15px; }
+    #ccm-motors-header .nav-box ul li a:hover {
+      background-color: #4A4B51; }
 
 footer {
   position: relative;
