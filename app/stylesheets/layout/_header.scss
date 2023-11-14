@@ -390,7 +390,6 @@ li.has-dropdown:active:after,
 	margin-left: -42% !important;
 	margin-top: 18px !important;
 }
-
 #ccm-motors-header {
 	font-family: $font-fira;
 	background-color: var(--black-color);
@@ -531,7 +530,36 @@ li.has-dropdown:active:after,
 				}
 				&.dropdown {
 					position: static;
-
+					.dropdown-toggle {
+						@include on-event {
+							.dropdown-menu {
+								visibility: visible;
+								opacity: 1;
+								section.bike-lists-menu {
+									.bike-lists-holder {
+										> .row {
+											> [class*="col-"] {
+												a {
+													transform: translateY(0);
+													opacity: 1;
+												}
+											}
+										}
+									}
+									.col-lg-3 {
+										background-color: #f2f2f3;
+										.menu-right {
+											li {
+												a {
+													transform: translateX(0);
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 					.dropdown-menu {
 						left: 0px;
 						right: 0px;
@@ -547,32 +575,6 @@ li.has-dropdown:active:after,
 						visibility: hidden;
 						opacity: 0;
 						border-radius: 0 !important;
-						&.show-dropdown {
-							visibility: visible;
-							opacity: 1;
-							section.bike-lists-menu {
-								.bike-lists-holder {
-									> .row {
-										> [class*="col-"] {
-											a {
-												transform: translateY(0);
-												opacity: 1;
-											}
-										}
-									}
-								}
-								.col-lg-3 {
-									background-color: #f2f2f3;
-									.menu-right {
-										li {
-											a {
-												transform: translateX(0);
-											}
-										}
-									}
-								}
-							}
-						}
 						li.menu-item {
 							> a {
 								color: var(--black-color);
