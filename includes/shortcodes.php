@@ -585,8 +585,7 @@ function bike_lists_menu()
 									foreach ($categ['bikes'] as $bike) {
 									?>
 										<div class="col-lg-4 <?= $bike['bike_name'] ?>">
-											<div class="column-holder">
-
+											<div class="column-holder text-center">
 												<a href="<?= $bike['configure_link'] ? $bike['configure_link'] : '#'  ?>">
 													<div class="bike-name">
 														<h4><?= $bike['bike_name'] ?></h4>
