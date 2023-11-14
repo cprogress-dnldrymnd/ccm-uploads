@@ -415,13 +415,22 @@ li.has-dropdown:active:after,
 			}
 		}
 		.mobile-menu-toggle {
+			display: inline-block;
+			height: 16px;
 			span {
 				width: 24px;
 				display: block;
 				height: 2px;
 				background-color: var(--white-color);
-				&:not(:last-child) {
-					margin-bottom: 8px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				&:nth-child(2) {
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&:last-child {
+					bottom: 0;
 				}
 			}
 		}

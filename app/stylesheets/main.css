@@ -7311,13 +7311,22 @@ li.has-dropdown:active:after,
         padding-bottom: 18px; }
         #ccm-motors-header .mobile-header .row .col-side {
           flex: 0 0 57px; } }
-    #ccm-motors-header .mobile-header .mobile-menu-toggle span {
-      width: 24px;
-      display: block;
-      height: 2px;
-      background-color: var(--white-color); }
-      #ccm-motors-header .mobile-header .mobile-menu-toggle span:not(:last-child) {
-        margin-bottom: 8px; }
+    #ccm-motors-header .mobile-header .mobile-menu-toggle {
+      display: inline-block;
+      height: 16px; }
+      #ccm-motors-header .mobile-header .mobile-menu-toggle span {
+        width: 24px;
+        display: block;
+        height: 2px;
+        background-color: var(--white-color);
+        position: absolute;
+        left: 0;
+        right: 0; }
+        #ccm-motors-header .mobile-header .mobile-menu-toggle span:nth-child(2) {
+          top: 50%;
+          transform: translateY(-50%); }
+        #ccm-motors-header .mobile-header .mobile-menu-toggle span:last-child {
+          bottom: 0; }
   #ccm-motors-header section.bike-lists-menu {
     padding-top: 0; }
     #ccm-motors-header section.bike-lists-menu .col-lg-3 {
