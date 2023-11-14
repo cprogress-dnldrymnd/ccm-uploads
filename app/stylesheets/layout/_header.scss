@@ -449,8 +449,6 @@ li.has-dropdown:active:after,
 	section.bike-lists-menu {
 		padding-top: 0;
 		.col-lg-3 {
-			background-color: #f2f2f3;
-			padding: 2vw;
 			.menu-right {
 				list-style: none;
 				padding: 0;
@@ -469,6 +467,10 @@ li.has-dropdown:active:after,
 						margin-bottom: 20px;
 					}
 				}
+			}
+			@media (min-width: 992px) {
+				background-color: #f2f2f3;
+				padding: 2vw;
 			}
 		}
 
@@ -518,6 +520,7 @@ li.has-dropdown:active:after,
 							align-items: center;
 							justify-content: flex-end;
 							border-bottom: 1px solid #e2e2e2;
+							padding: 5px 15px;
 						}
 					}
 
@@ -665,7 +668,6 @@ li.has-dropdown:active:after,
 									}
 								}
 								.col-lg-3 {
-									background-color: #f2f2f3;
 									.menu-right {
 										li {
 											a {
