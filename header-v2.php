@@ -478,8 +478,10 @@ $template = get_page_template_slug();
             <div class="mobile-header-canvas" id="mobile-header-canvas">
 
             </div>
-            <div class="widget_shopping_cart_content display-none">
-                <?php woocommerce_mini_cart(); ?>
+            <div class="mini-cart">
+                <div class="widget_shopping_cart_content display-none">
+                    <?php woocommerce_mini_cart(); ?>
+                </div>
             </div>
         <?php } ?>
     <?php } ?>
