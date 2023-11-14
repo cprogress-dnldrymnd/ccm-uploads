@@ -419,6 +419,7 @@ li.has-dropdown:active:after,
 				width: 24px;
 				display: block;
 				height: 2px;
+				background-color: var(--white-color);
 				&:not(:last-child) {
 					margin-bottom: 8px;
 				}
