@@ -445,15 +445,3 @@ $template = get_page_template_slug();
             </header>
         <?php } ?>
     <?php } ?>
-
-    <div class=" default dropdown-menu  dropdown-menu-bike-list d-none">
-        <?= do_shortcode('[bike_lists]') ?>
-    </div>
-    <script>
-        jQuery(document).ready(function() {
-            if (window.innerWidth > 992) {
-                jQuery('.model-range-menu').addClass('dropdown');
-                jQuery('.dropdown-menu-bike-list').appendTo('.model-range-menu');
-            }
-        });
-    </script>
