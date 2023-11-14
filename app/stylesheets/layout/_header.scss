@@ -530,29 +530,27 @@ li.has-dropdown:active:after,
 				}
 				&.dropdown {
 					position: static;
-					.dropdown-toggle {
-						@include on-event {
-							.dropdown-menu {
-								visibility: visible;
-								opacity: 1;
-								section.bike-lists-menu {
-									.bike-lists-holder {
-										> .row {
-											> [class*="col-"] {
-												a {
-													transform: translateY(0);
-													opacity: 1;
-												}
+					@include on-event {
+						.dropdown-menu {
+							visibility: visible;
+							opacity: 1;
+							section.bike-lists-menu {
+								.bike-lists-holder {
+									> .row {
+										> [class*="col-"] {
+											a {
+												transform: translateY(0);
+												opacity: 1;
 											}
 										}
 									}
-									.col-lg-3 {
-										background-color: #f2f2f3;
-										.menu-right {
-											li {
-												a {
-													transform: translateX(0);
-												}
+								}
+								.col-lg-3 {
+									background-color: #f2f2f3;
+									.menu-right {
+										li {
+											a {
+												transform: translateX(0);
 											}
 										}
 									}
