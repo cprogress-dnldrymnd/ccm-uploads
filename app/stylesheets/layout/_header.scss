@@ -616,6 +616,9 @@ li.has-dropdown:active:after,
 				justify-content: space-between;
 				text-transform: uppercase;
 				font-size: 16px;
+				span:last-child {
+					padding-left: 20px;
+				}
 			}
 		}
 		.qty {
