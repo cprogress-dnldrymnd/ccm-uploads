@@ -700,7 +700,7 @@ body {
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 84px;
+		bottom: 88px;
 		display: flex;
 		justify-content: space-between;
 		padding: 20px;
@@ -730,6 +730,7 @@ body {
 			text-decoration: none;
 			font-weight: 400;
 			padding: 15px;
+			line-height: 1;
 			&:first-child {
 				background-color: transparent;
 				color: var(--black-color);

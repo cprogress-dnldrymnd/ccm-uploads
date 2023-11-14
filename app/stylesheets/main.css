@@ -7488,7 +7488,7 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 84px;
+    bottom: 88px;
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -7514,7 +7514,8 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
       text-align: center;
       text-decoration: none;
       font-weight: 400;
-      padding: 15px; }
+      padding: 15px;
+      line-height: 1; }
       .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__buttons .button:first-child {
         background-color: transparent;
         color: var(--black-color);
