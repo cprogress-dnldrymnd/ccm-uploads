@@ -417,6 +417,9 @@ li.has-dropdown:active:after,
 							h4 {
 								color: #E22228;
 							}
+							img {
+								transform: translateY(-10px);
+							}
 						}
 					}
 
@@ -430,6 +433,7 @@ li.has-dropdown:active:after,
 							width: 100%;
 							height: 100%;
 							object-fit: cover;
+							transition: 300ms;
 						}
 					}
 					.bike-name {
