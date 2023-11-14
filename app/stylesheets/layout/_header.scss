@@ -410,10 +410,13 @@ li.has-dropdown:active:after,
 				> [class*="col-"] {
 					a {
 						text-decoration: none !important;
-					}
-					.column-holder {
 						padding: 3vw;
+						display: block;
+						@include on-event {
+							background-color: rgba(0, 0, 0, 0.5);
+						}
 					}
+
 					.image-box {
 						position: relative;
 						padding: 30%;
@@ -445,9 +448,7 @@ li.has-dropdown:active:after,
 					text-transform: uppercase;
 					font-size: 15px;
 					padding: 25px 15px;
-					&:hover,
-					&:active,
-					&:focus {
+					@include on-event {
 						background-color: #4a4b51;
 						color: var(--white-color);
 					}
