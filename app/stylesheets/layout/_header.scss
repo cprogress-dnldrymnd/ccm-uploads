@@ -407,11 +407,12 @@ li.has-dropdown:active:after,
 
 		.bike-lists-holder {
 			> .row {
-				--bs-gutter-x: 4rem;
-				--bs-gutter-y: 4rem;
 				> [class*="col-"] {
 					a {
 						text-decoration: none !important;
+					}
+					.column-holder {
+						padding: 3vw;
 					}
 					.image-box {
 						position: relative;
