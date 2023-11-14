@@ -399,12 +399,14 @@ $template = get_page_template_slug();
             </style>
         <?php } else { ?>
             <header id="ccm-motors-header" class="bt-5">
-                <div class="container-fluid container-fluid-wide">
+                <div class="container-fluid container-fluid-wide desktop-header">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="row column-holder align-items-center">
                                 <div class="col-auto logo-box">
-                                    <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="">
+                                    <a href="<?= get_site_url() ?>">
+                                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="CCM-Logo">
+                                    </a>
                                 </div>
                                 <div class="col-auto nav-box">
                                     <?php
@@ -440,6 +442,11 @@ $template = get_page_template_slug();
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="mobile-header">
+                    <div class="row">
+
                     </div>
                 </div>
                 <div class="widget_shopping_cart_content display-none">

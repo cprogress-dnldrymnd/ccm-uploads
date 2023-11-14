@@ -397,7 +397,17 @@ li.has-dropdown:active:after,
 	left: 0;
 	right: 0;
 	top: 0;
-
+	.desktop-header {
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	.mobile-header {
+		display: none;
+		@media (max-width: 991px) {
+			display: block;
+		}
+	}
 	section.bike-lists-menu {
 		padding-top: 0;
 		.col-lg-3 {
