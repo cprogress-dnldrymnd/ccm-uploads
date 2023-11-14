@@ -483,13 +483,15 @@ li.has-dropdown:active:after,
 		.mini-cart {
 			position: static;
 			a {
-				padding: 20px 15px;
+				padding: 20px 15px !important;
 			}
 		}
-		ul {
+		.navbar-nav {
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
+		}
+		ul {
 			li.menu-item {
 				> a {
 					color: var(--white-color);
