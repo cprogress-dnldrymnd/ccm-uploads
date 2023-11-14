@@ -500,14 +500,6 @@ li.has-dropdown:active:after,
 	.nav-box {
 		.mini-cart {
 			position: static;
-			@include on-event {
-				.widget_shopping_cart_content {
-					&:not(.show-minicart) {
-						visibility: hidden;
-						opacity: 0;
-					}
-				}
-			}
 			a {
 				padding: 23px 15px !important;
 			}
@@ -642,6 +634,12 @@ body {
 		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
 			visibility: visible;
 			opacity: 1;
+		}
+	}
+	&:not(.show-minicart) {
+		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
+			visibility: hidden;
+			opacity: 0;
 		}
 	}
 }
