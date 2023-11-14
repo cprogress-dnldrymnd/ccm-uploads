@@ -477,7 +477,7 @@ $template = get_page_template_slug();
                     <?php woocommerce_mini_cart(); ?>
                 </div>
             </header>
-            <div class="mobile-header-canvas">
+            <div class="mobile-header-canvas" id="mobile-header-canvas">
                 
             </div>
         <?php } ?>

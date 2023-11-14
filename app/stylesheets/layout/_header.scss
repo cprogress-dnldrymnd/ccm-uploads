@@ -390,7 +390,7 @@ li.has-dropdown:active:after,
 	margin-left: -42% !important;
 	margin-top: 18px !important;
 }
-#ccm-motors-header {
+#ccm-motors-header, #mobile-header-canvas {
 	font-family: $font-fira;
 	background-color: var(--black-color);
 	position: fixed;
