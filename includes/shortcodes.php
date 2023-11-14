@@ -574,7 +574,7 @@ function bike_lists_menu()
 	$bikes_categ = carbon_get_post_meta(14442, 'motorcycles');
 ?>
 	<section class="bike-lists-menu bt-5">
-		<div class="container-fluid container-fluid-wide">
+		<div class="container-fluid g-0">
 			<div class="row">
 				<div class="col-lg-9">
 					<div class="bike-lists-holder">
