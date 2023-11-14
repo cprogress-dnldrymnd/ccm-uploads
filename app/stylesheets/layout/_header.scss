@@ -541,7 +541,7 @@ li.has-dropdown:active:after,
 			> a {
 				padding: 23px 15px !important;
 			}
-			@media(max-width: 991px) {
+			@media (max-width: 991px) {
 				display: none;
 			}
 		}
@@ -828,18 +828,25 @@ body {
 		}
 	}
 }
+@mixin offcanvas-style {
+	display: block;
+	position: fixed;
+	top: 57px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: var(--white-color);
+	z-index: 9999;
+	transition: 500ms;
+	transform: translateX(-100%);
+}
 #mobile-header-canvas {
 	display: none;
 	@media (max-width: 991px) {
-		display: block;
-		position: fixed;
-		top: 57px;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		background-color: var(--white-color);
-		z-index: 9999;
-		transition: 500ms;
-		transform: translateX(-100%);
+		@include offcanvas-style;
 	}
+}
+
+.widget_shopping_cart_content {
+	@include offcanvas-style;
 }
