@@ -448,7 +448,11 @@ li.has-dropdown:active:after,
 				.col-side {
 					flex: 0 0 57px;
 				}
-
+				.col-side-toggle {
+					@include on-event {
+						background-color: #4A4B51;
+					}
+				}
 				.logo-box {
 					padding-top: 18px;
 					padding-bottom: 18px;
