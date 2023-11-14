@@ -7439,7 +7439,8 @@ li.has-dropdown:active:after,
       #ccm-motors-header .nav-box .navbar-nav,
       #mobile-header-canvas .nav-box .navbar-nav {
         flex-direction: column;
-        align-items: flex-start; } }
+        align-items: flex-start;
+        margin: 0; } }
   @media (max-width: 991px) {
     #ccm-motors-header .nav-box ul li.menu-item,
     #mobile-header-canvas .nav-box ul li.menu-item {
