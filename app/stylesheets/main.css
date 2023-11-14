@@ -6983,6 +6983,9 @@ body {
 .container-fluid.container-fluid-wide {
   max-width: 1870px; }
 
+.w-100 {
+  width: 100% !important; }
+
 @media screen and (max-width: 991px) {
   #navbar {
     overflow-x: hidden !important; } }
