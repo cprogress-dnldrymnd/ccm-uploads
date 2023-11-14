@@ -9,6 +9,33 @@ jQuery(document).ready(function () {
 		jQuery('.overlay').addClass('show-overlay');
 		e.preventDefault();
 	});
+	jQuery(document).on("click", '.close-mini-cart', function (event) {
+		jQuery('body').removeClass('show-minicart');
+		jQuery('.overlay').removeClass('show-overlay');
+		jQuery('.dropdown-menu').removeClass('show-dropdown');
+	});
+
+	jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
+
+	jQuery(".overlay").hover(
+		function () {
+			jQuery('.overlay').removeClass('show-overlay');
+			jQuery('.dropdown-menu').removeClass('show-dropdown');
+			jQuery('body').removeClass('show-minicart');
+		}, function () {
+		}
+	);
+
+
+	jQuery('.dropdown-toggle').click(function (e) {
+		jQuery('.dropdown-toggle').not(this).each(function () {
+			jQuery(this).next().removeClass('show-dropdown');
+		});
+		jQuery('.overlay').removeClass('show-minicart');
+		jQuery(this).next().toggleClass('show-dropdown');
+		jQuery('.overlay').toggleClass('show-overlay');
+		e.preventDefault();
+	});
 
 	if (window.innerWidth < 992) {
 		jQuery('body').addClass('mini-cart')
@@ -18,41 +45,6 @@ jQuery(document).ready(function () {
 			jQuery('body').toggleClass('mobile-header-active');
 			e.preventDefault();
 		});
-	}
-
-	if (window.innerWidth > 991) {
-
-		jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
-
-		jQuery(".overlay").hover(
-			function () {
-				jQuery('.overlay').removeClass('show-overlay');
-				jQuery('.dropdown-menu').removeClass('show-dropdown');
-				jQuery('body').removeClass('show-minicart');
-			}, function () {
-			}
-		);
-
-
-		jQuery('.dropdown-toggle').click(function (e) {
-			jQuery('.dropdown-toggle').not(this).each(function () {
-				jQuery(this).next().removeClass('show-dropdown');
-			});
-			jQuery('.overlay').removeClass('show-minicart');
-			jQuery(this).next().toggleClass('show-dropdown');
-			jQuery('.overlay').toggleClass('show-overlay');
-			e.preventDefault();
-		});
-
-
-		jQuery(document).on("click", '.close-mini-cart', function (event) {
-			jQuery('body').removeClass('show-minicart');
-			jQuery('.overlay').removeClass('show-overlay');
-			jQuery('.dropdown-menu').removeClass('show-dropdown');
-		});
-
-
-
 	}
 
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
