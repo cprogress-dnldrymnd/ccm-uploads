@@ -502,8 +502,10 @@ li.has-dropdown:active:after,
 			position: static;
 			@include on-event {
 				.widget_shopping_cart_content {
-					visibility: hidden;
-					opacity: 0;
+					&:not(.show-minicart) {
+						visibility: hidden;
+						opacity: 0;
+					}
 				}
 			}
 			a {
@@ -641,7 +643,6 @@ li.has-dropdown:active:after,
 	width: 100%;
 	height: calc(100vh - 70px);
 	background-color: var(--white-color);
-	top: 70px;
 	&.show-minicart {
 		visibility: visible;
 		opacity: 1;

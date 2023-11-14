@@ -7369,7 +7369,7 @@ li.has-dropdown:active:after,
       margin-top: 0 !important; }
   #ccm-motors-header .nav-box .mini-cart {
     position: static; }
-    #ccm-motors-header .nav-box .mini-cart:hover .widget_shopping_cart_content, #ccm-motors-header .nav-box .mini-cart:active .widget_shopping_cart_content, #ccm-motors-header .nav-box .mini-cart:focus .widget_shopping_cart_content {
+    #ccm-motors-header .nav-box .mini-cart:hover .widget_shopping_cart_content:not(.show-minicart), #ccm-motors-header .nav-box .mini-cart:active .widget_shopping_cart_content:not(.show-minicart), #ccm-motors-header .nav-box .mini-cart:focus .widget_shopping_cart_content:not(.show-minicart) {
       visibility: hidden;
       opacity: 0; }
     #ccm-motors-header .nav-box .mini-cart a {
@@ -7444,8 +7444,7 @@ li.has-dropdown:active:after,
   max-width: 525px;
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: var(--white-color);
-  top: 70px; }
+  background-color: var(--white-color); }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content.show-minicart {
     visibility: visible;
     opacity: 1; }

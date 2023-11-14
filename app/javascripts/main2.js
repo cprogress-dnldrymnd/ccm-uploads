@@ -946,6 +946,11 @@ function matchheight() {
 	jQuery('.mh').matchHeight();
 }
 
+function wooccommerce_mini_cart() {
+	jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
+}
+
+
 
 function shopmenu() {
 	$innerWidth = window.innerWidth;
