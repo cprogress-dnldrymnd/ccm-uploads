@@ -11,13 +11,13 @@ jQuery(document).ready(function () {
 	});
 
 	if (window.innerWidth < 992) {
+		jQuery('body').addClass('mini-cart')
 		jQuery('.nav-box').removeClass('col-auto').appendTo('.mobile-header-canvas');
 
 		jQuery('.col-side-toggle').click(function (e) {
 			jQuery('body').toggleClass('mobile-header-active');
 			e.preventDefault();
 		});
-		jQuery('.widget_shopping_cart_content').insertAfter('#mobile-header-canvas');
 	}
 
 	if (window.innerWidth > 991) {
