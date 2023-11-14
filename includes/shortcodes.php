@@ -575,8 +575,8 @@ function bike_lists_menu()
 ?>
 	<section class="bike-lists-menu bt-5">
 		<div class="container-fluid g-0">
-			<div class="row">
-				<div class="col-lg-9 g-0 bike-lists-holder">
+			<div class="row g-0">
+				<div class="col-lg-9 bike-lists-holder">
 					<div class="row g-0 bikes">
 						<?php foreach ($bikes_categ as $categ) { ?>
 							<?php
@@ -603,7 +603,7 @@ function bike_lists_menu()
 				</div>
 				<div class="col-lg-3">
 					<div class="column-holder">
-						<ul>
+						<ul class="menu-right">
 							<li><a href="#">VIEW ALL BIKES</a></li>
 							<li><a href="#">CONFIGURE A BIKE</a></li>
 							<li><a href="#">ENQUIRE</a></li>
