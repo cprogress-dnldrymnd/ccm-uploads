@@ -577,13 +577,10 @@ function bike_lists_menu()
 		<div class="container-fluid container-fluid-wide">
 			<div class="row">
 				<div class="col-lg-9">
-					<?php foreach ($bikes_categ as $categ) { ?>
-						<div class="bike-lists-holder">
-							<div class="bike-category d-flex">
-								<?= $categ['category_name'] ?>
-							</div>
-							<div class="bikes">
-								<div class="row">
+					<div class="bike-lists-holder">
+						<div class="bikes">
+							<div class="row">
+								<?php foreach ($bikes_categ as $categ) { ?>
 									<?php
 									foreach ($categ['bikes'] as $bike) {
 									?>
@@ -601,10 +598,11 @@ function bike_lists_menu()
 											</div>
 										</div>
 									<?php } ?>
-								</div>
+								<?php } ?>
+
 							</div>
 						</div>
-					<?php } ?>
+					</div>
 				</div>
 				<div class="col-lg-3">
 					<div class="column-holder">
