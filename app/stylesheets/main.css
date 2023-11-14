@@ -7386,7 +7386,8 @@ li.has-dropdown:active:after,
       box-shadow: none;
       display: flex !important;
       visibility: hidden;
-      opacity: 0; }
+      opacity: 0;
+      border-radius: 0 !important; }
       #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown {
         visibility: visible;
         opacity: 1; }
