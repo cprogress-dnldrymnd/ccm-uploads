@@ -7548,15 +7548,16 @@ li.has-dropdown:active:after,
       #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li a {
         transform: translateX(0);
         opacity: 1; }
-      #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a,
-      #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a {
-        transition-delay: 700ms; }
-      #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a,
-      #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a {
-        transition-delay: 800ms; }
-      #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a,
-      #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a {
-        transition-delay: 900ms; }
+      @media (min-width: 992px) {
+        #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a,
+        #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a {
+          transition-delay: 700ms; }
+        #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a,
+        #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a {
+          transition-delay: 800ms; }
+        #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a,
+        #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a {
+          transition-delay: 900ms; } }
 
 body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   visibility: visible;
