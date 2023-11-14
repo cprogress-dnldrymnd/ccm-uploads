@@ -584,7 +584,7 @@ function bike_lists_menu()
 									<?php
 									foreach ($categ['bikes'] as $bike) {
 										$bike_image_url = $bike['bike_image'];
-										$bike_image_id = url_to_postid($bike_image_url);
+										$bike_image_id = attachment_url_to_postid($bike_image_url);
 										$image = wp_get_attachment_image_url($bike_image_id, 'large');
 									?>
 										<div class="col-lg-4 <?= $bike['bike_name'] ?>">
