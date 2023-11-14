@@ -399,7 +399,7 @@ $template = get_page_template_slug();
             </style>
         <?php } else { ?>
             <header id="ccm-motors-header" class="bt-5">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="row column-holder align-items-center">
