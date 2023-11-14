@@ -19,6 +19,7 @@ jQuery(document).ready(function () {
 				jQuery(this).next().removeClass('show-dropdown');
 			});
 			jQuery('body').addClass('overlay');
+			jQuery('body').removeClass('show-minicart');
 			jQuery(this).next().addClass('show-dropdown');
 			e.preventDefault();
 		});
@@ -31,6 +32,7 @@ jQuery(document).ready(function () {
 
 		jQuery(document).on("click", '.close-mini-cart', function (event) {
 			jQuery('body').removeClass('overlay show-minicart');
+			jQuery('.dropdown-menu').removeClass('show-dropdown');
 		});
 
 
