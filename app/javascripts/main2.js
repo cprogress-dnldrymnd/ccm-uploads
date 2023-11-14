@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
 			function () {
 				jQuery('body').addClass('overlay');
 			}, function () {
-				if (jQuery('.show-dropdown').length > 0) {
+				if (jQuery('.show-dropdown').length == 0) {
 					jQuery('body').removeClass('overlay');
 					jQuery('.dropdown-menu').removeClass('show-dropdown');
 				}
