@@ -7305,6 +7305,8 @@ li.has-dropdown:active:after,
       background-color: #f2f2f3; }
     #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
       text-decoration: none !important; }
+    #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .column-holder {
+      padding: 3vw; }
     #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box {
       position: relative;
       padding: 30%; }
