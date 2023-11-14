@@ -7444,7 +7444,8 @@ li.has-dropdown:active:after,
   max-width: 525px;
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: var(--white-color); }
+  background-color: var(--white-color);
+  top: 70px; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content.show-minicart {
     visibility: visible;
     opacity: 1; }
