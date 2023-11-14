@@ -570,6 +570,7 @@ li.has-dropdown:active:after,
 					@media (max-width: 991px) {
 						color: var(--black-color);
 						width: 100%;
+						padding: 20px 15px;
 					}
 					@include on-event {
 						background-color: #4a4b51;

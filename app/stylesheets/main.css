@@ -7461,7 +7461,8 @@ li.has-dropdown:active:after,
       #ccm-motors-header .nav-box ul li.menu-item > a,
       #mobile-header-canvas .nav-box ul li.menu-item > a {
         color: var(--black-color);
-        width: 100%; } }
+        width: 100%;
+        padding: 20px 15px; } }
     #ccm-motors-header .nav-box ul li.menu-item > a:hover, #ccm-motors-header .nav-box ul li.menu-item > a:active, #ccm-motors-header .nav-box ul li.menu-item > a:focus,
     #mobile-header-canvas .nav-box ul li.menu-item > a:hover,
     #mobile-header-canvas .nav-box ul li.menu-item > a:active,
