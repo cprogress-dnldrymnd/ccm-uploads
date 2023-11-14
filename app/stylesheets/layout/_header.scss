@@ -448,6 +448,8 @@ li.has-dropdown:active:after,
 						padding: 3vw;
 						display: block;
 						transition: 500ms;
+						opacity: 0;
+						transform: translateY(100px);
 						@include on-event {
 							background-color: rgba(0, 0, 0, 0.05);
 							h4 {
@@ -517,6 +519,19 @@ li.has-dropdown:active:after,
 						padding: 0;
 						border: none;
 						box-shadow: none;
+
+						section.bike-lists-menu {
+							.bike-lists-holder {
+								> .row {
+									> [class*="col-"] {
+										a {
+											transform: translateY(0);
+											opacity: 1;
+										}
+									}
+								}
+							}
+						}
 						li.menu-item {
 							> a {
 								color: var(--black-color);
