@@ -613,6 +613,13 @@ li.has-dropdown:active:after,
 		.name-price-quantity {
 			display: flex;
 			justify-content: space-between;
+			text-transform: uppercase;
+		}
+		.qty {
+			font-weight: 300;
+			span {
+				font-weight: 400;
+			}
 		}
 		a {
 			font-size: 16px;
