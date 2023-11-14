@@ -7311,7 +7311,7 @@ li.has-dropdown:active:after,
   #ccm-motors-header .nav-box ul li.dropdown {
     position: static; }
     #ccm-motors-header .nav-box ul li.dropdown.open .dropdown-menu {
-      display: block !important; }
+      display: flex !important; }
     #ccm-motors-header .nav-box ul li.dropdown .dropdown-menu {
       left: 0px;
       right: 0px;

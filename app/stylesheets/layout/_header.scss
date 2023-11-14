@@ -422,7 +422,7 @@ li.has-dropdown:active:after,
 					position: static;
 					&.open {
 						.dropdown-menu {
-							display: block !important;
+							display: flex !important;
 						}
 					}
 					.dropdown-menu {
