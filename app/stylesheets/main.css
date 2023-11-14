@@ -7312,10 +7312,6 @@ li.has-dropdown:active:after,
         #ccm-motors-header .mobile-header .row .logo-box {
           padding-top: 18px;
           padding-bottom: 18px; } }
-    #ccm-motors-header .mobile-header .col-side-toggle {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
     #ccm-motors-header .mobile-header .mobile-menu-toggle {
       display: inline-block;
       height: 16px;

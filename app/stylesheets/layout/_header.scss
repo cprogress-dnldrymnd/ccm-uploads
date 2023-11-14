@@ -407,6 +407,11 @@ li.has-dropdown:active:after,
 		@media (max-width: 991px) {
 			display: block;
 			.row {
+				> div {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
 				.col-side {
 					flex: 0 0 57px;
 				}
@@ -416,11 +421,7 @@ li.has-dropdown:active:after,
 				}
 			}
 		}
-		.col-side-toggle {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
+
 		.mobile-menu-toggle {
 			display: inline-block;
 			height: 16px;
