@@ -396,8 +396,8 @@ li.has-dropdown:active:after,
 	background-color: var(--black-color);
 	position: fixed;
 	left: 0;
-    right: 0;
-    top: 0;
+	right: 0;
+	top: 0;
 
 	section.bike-lists {
 		padding-top: 0;
@@ -434,7 +434,11 @@ li.has-dropdown:active:after,
 						bottom: auto;
 						overflow: hidden;
 						padding: 0;
-						
+						li {
+							a {
+								color: var(--black-color);
+							}
+						}
 					}
 				}
 			}
