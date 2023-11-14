@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
 	}
 
 	if (window.innerWidth > 991) {
-		
+
 		jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
 
 		jQuery(".overlay").hover(
@@ -38,7 +38,7 @@ jQuery(document).ready(function () {
 			e.preventDefault();
 		});
 
-		jQuery('.mini-cart a').click(function (e) {
+		jQuery('.mini-cart a, .col-side').click(function (e) {
 			jQuery('body').addClass('show-minicart');
 			jQuery('.overlay').addClass('show-overlay');
 			e.preventDefault();

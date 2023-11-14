@@ -447,7 +447,7 @@ $template = get_page_template_slug();
                 <div class="mobile-header">
                     <div class="container-fluid g-0">
                         <div class="row g-0 justify-content-between">
-                            <div class="col-auto col-side">
+                            <div class="col-auto col-side col-side-minicart">
                                 <div class="mini-cart-mobile">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="23.112" height="18.85" viewBox="0 0 23.112 18.85">
                                         <g id="cart" transform="translate(0.85 0.85)">
