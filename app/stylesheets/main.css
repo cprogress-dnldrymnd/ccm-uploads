@@ -6619,9 +6619,8 @@ button.close {
   .bt-5 .gy-xxl-5 {
     --bs-gutter-y: 3rem; } }
 
-body:before {
-  content: '';
-  position: absolute;
+body .overlay {
+  position: fixed;
   background: #0009;
   top: 0;
   left: 0;
@@ -6631,10 +6630,10 @@ body:before {
   z-index: -1;
   transition: all 0.2s ease-in-out;
   opacity: 0; }
-body.overlay:before {
-  opacity: 1;
-  z-index: 2;
-  display: block; }
+  body .overlay.show-overlay {
+    opacity: 1;
+    z-index: 2;
+    display: block; }
 
 main.overlay {
   position: fixed;
@@ -6662,9 +6661,10 @@ a {
     color: #222;
     text-decoration: underline; }
 
-.btn, a {
-  transition: all .2s ease-in-out;
-  -webkit-transition: all .2s ease-in-out; }
+.btn,
+a {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out; }
 
 /**
  * Basic styles for input fields

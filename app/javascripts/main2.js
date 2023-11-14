@@ -7,11 +7,11 @@ jQuery(document).ready(function () {
 	if (window.innerWidth > 991) {
 		jQuery("#ccm-motors-header .dropdown-menu").hover(
 			function () {
-				jQuery('.overlay').addClass('overlay');
+				jQuery('.overlay').addClass('show-overlay');
 			}, function () {
 				setTimeout(function () {
 					if (jQuery('.show-dropdown').length == 0) {
-						jQuery('.overlay').removeClass('overlay');
+						jQuery('.overlay').removeClass('show-overlay');
 						jQuery('.dropdown-menu').removeClass('show-dropdown');
 					}
 				}, 300);
@@ -26,18 +26,18 @@ jQuery(document).ready(function () {
 			});
 			jQuery('.overlay').removeClass('show-minicart');
 			jQuery(this).next().addClass('show-dropdown');
-			jQuery('.overlay').addClass('overlay');
+			jQuery('.overlay').addClass('show-overlay');
 			e.preventDefault();
 		});
 
 		jQuery('.mini-cart a').click(function (e) {
-			jQuery('.overlay').addClass('overlay show-minicart');
+			jQuery('.overlay').addClass('show-overlay show-minicart');
 			e.preventDefault();
 		});
 
 
 		jQuery(document).on("click", '.close-mini-cart', function (event) {
-			jQuery('body').removeClass('overlay show-minicart');
+			jQuery('body').removeClass('show-overlay show-minicart');
 			jQuery('.dropdown-menu').removeClass('show-dropdown');
 		});
 
