@@ -7387,6 +7387,9 @@ li.has-dropdown:active:after,
       display: flex !important;
       visibility: hidden;
       opacity: 0; }
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown {
+        visibility: visible;
+        opacity: 1; }
       #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
         transform: translateY(0);
         opacity: 1; }
