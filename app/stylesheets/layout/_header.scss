@@ -610,6 +610,10 @@ li.has-dropdown:active:after,
 		font-weight: 500;
 	}
 	.woocommerce-mini-cart {
+		.name-price-quantity {
+			display: flex;
+			justify-content: space-between;
+		}
 		a {
 			font-size: 16px;
 			font-weight: 400;

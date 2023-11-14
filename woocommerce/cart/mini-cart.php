@@ -73,7 +73,7 @@ do_action('woocommerce_before_mini_cart'); ?>
 									<span> <?= $product_price ?> </span>
 								</div>
 								<div class="qty">
-									<?= sprintf('%s &times; %s', $cart_item['quantity'], $product_price) ?>
+									Quantity: <span><?= $cart_item['quantity'] ?></span>
 								</div>
 							</div>
 						</a>
