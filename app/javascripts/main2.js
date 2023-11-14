@@ -10,9 +10,7 @@ jQuery(document).ready(function () {
 		e.preventDefault();
 	});
 
-	
 
-	mini-cart-mobile
 	jQuery(document).on("click", '.close-mini-cart', function (event) {
 		jQuery('body').removeClass('show-minicart');
 		jQuery('.overlay').removeClass('show-overlay');
