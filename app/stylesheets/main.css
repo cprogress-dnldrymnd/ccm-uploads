@@ -7312,7 +7312,8 @@ li.has-dropdown:active:after,
           font-size: 15px;
           font-weight: 500;
           transition: 500ms;
-          transform: translateX(100%); }
+          transform: translateX(100%);
+          display: inline-block; }
         #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a {
           transition-delay: 700ms; }
         #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a {
