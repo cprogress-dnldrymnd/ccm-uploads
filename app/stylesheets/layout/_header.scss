@@ -444,8 +444,26 @@ li.has-dropdown:active:after,
 						transition: 500ms;
 						opacity: 0;
 						transform: translateY(100px);
-						@include on-event {
+						position: relative;
+						> div {
+							position: relative;
+							z-index: 1;
+						}
+						&:before {
+							content: "";
+							position: absolute;
+							left: 0;
+							top: 0;
+							right: 0;
+							bottom: 0;
 							background-color: rgba(0, 0, 0, 0.05);
+							opacity: 0;
+							transition: 300ms;
+						}
+						@include on-event {
+							&:before {
+								opacity: 1;
+							}
 							h4 {
 								color: #e22228;
 							}
