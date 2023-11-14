@@ -15,6 +15,9 @@ jQuery(document).ready(function () {
 	}
 
 	if (window.innerWidth > 991) {
+		
+		jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
+
 		jQuery(".overlay").hover(
 			function () {
 				jQuery('.overlay').removeClass('show-overlay');
@@ -142,7 +145,6 @@ jQuery(document).ready(function () {
 	owl_carousels();
 	page_components();
 	matchheight();
-	wooccommerce_mini_cart();
 	shopmenu();
 	show_cat();
 	aos();
@@ -971,9 +973,7 @@ function matchheight() {
 	jQuery('.mh').matchHeight();
 }
 
-function wooccommerce_mini_cart() {
-	jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
-}
+
 
 
 

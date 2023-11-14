@@ -473,12 +473,13 @@ $template = get_page_template_slug();
                         </div>
                     </div>
                 </div>
-                <div class="widget_shopping_cart_content display-none">
-                    <?php woocommerce_mini_cart(); ?>
-                </div>
+
             </header>
             <div class="mobile-header-canvas" id="mobile-header-canvas">
-                
+
+            </div>
+            <div class="widget_shopping_cart_content display-none">
+                <?php woocommerce_mini_cart(); ?>
             </div>
         <?php } ?>
     <?php } ?>
