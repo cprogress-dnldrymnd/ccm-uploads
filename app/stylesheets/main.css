@@ -6619,6 +6619,9 @@ button.close {
   .bt-5 .gy-xxl-5 {
     --bs-gutter-y: 3rem; } }
 
+html.overlay {
+  overflow: hidden; }
+
 body:before {
   content: '';
   position: absolute;
