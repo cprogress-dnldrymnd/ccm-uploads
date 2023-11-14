@@ -7352,6 +7352,9 @@ li.has-dropdown:active:after,
     text-transform: uppercase;
     font-size: 15px;
     padding: 25px 15px; }
+    @media (max-width: 1199px) {
+      #ccm-motors-header .nav-box ul li.menu-item > a {
+        padding: 25px 10px; } }
     #ccm-motors-header .nav-box ul li.menu-item > a:hover, #ccm-motors-header .nav-box ul li.menu-item > a:active, #ccm-motors-header .nav-box ul li.menu-item > a:focus {
       background-color: #4a4b51;
       color: var(--white-color) !important; }
