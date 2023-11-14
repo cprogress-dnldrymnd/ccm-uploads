@@ -25,6 +25,16 @@ jQuery(document).ready(function () {
 			jQuery(this).next().addClass('show-minicart');
 			e.preventDefault();
 		});
+
+		
+		jQuery('.close-mini-cart').click(function (e) { 
+			jQuery('body').removeClass('overlay');
+			jQuery('.widget_shopping_cart_content ').removeClass('show-minicart');
+			e.preventDefault();
+		});
+
+
+		
 	}
 
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
