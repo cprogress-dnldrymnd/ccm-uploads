@@ -7303,7 +7303,7 @@ li.has-dropdown:active:after,
     text-transform: uppercase;
     font-size: 15px;
     padding: 25px 15px; }
-    #ccm-motors-header .nav-box ul li a:hover {
+    #ccm-motors-header .nav-box ul li a:hover, #ccm-motors-header .nav-box ul li a:active, #ccm-motors-header .nav-box ul li a:focus {
       background-color: #4a4b51;
       color: var(--white-color); }
   #ccm-motors-header .nav-box ul li:after {
