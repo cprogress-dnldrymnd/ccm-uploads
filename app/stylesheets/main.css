@@ -7367,7 +7367,6 @@ li.has-dropdown:active:after,
       #mobile-header-canvas section.bike-lists-menu .col-lg-3 .menu-right li a {
         color: var(--black-color);
         font-size: 15px;
-        font-weight: 500;
         transition: 1000ms;
         display: inline-block; }
         @media (min-width: 992px) {
@@ -7375,13 +7374,15 @@ li.has-dropdown:active:after,
           #mobile-header-canvas section.bike-lists-menu .col-lg-3 .menu-right li a {
             opacity: 0;
             transform: translateX(100%);
-            transition: 1000ms; } }
+            transition: 1000ms;
+            font-weight: 500; } }
         @media (max-width: 991px) {
           #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li a,
           #mobile-header-canvas section.bike-lists-menu .col-lg-3 .menu-right li a {
             border-bottom: 1px solid #e2e2e2;
             padding: 20px 15px;
-            width: 100%; } }
+            width: 100%;
+            text-decoration: none; } }
       @media (min-width: 992px) {
         #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li:not(:last-child),
         #mobile-header-canvas section.bike-lists-menu .col-lg-3 .menu-right li:not(:last-child) {
@@ -7517,12 +7518,13 @@ li.has-dropdown:active:after,
         color: var(--black-color);
         width: 100%;
         padding: 20px 15px; } }
-    #ccm-motors-header .nav-box ul li.menu-item > a:hover, #ccm-motors-header .nav-box ul li.menu-item > a:active, #ccm-motors-header .nav-box ul li.menu-item > a:focus,
-    #mobile-header-canvas .nav-box ul li.menu-item > a:hover,
-    #mobile-header-canvas .nav-box ul li.menu-item > a:active,
-    #mobile-header-canvas .nav-box ul li.menu-item > a:focus {
-      background-color: #4a4b51;
-      color: var(--white-color) !important; }
+    @media (min-width: 992px) {
+      #ccm-motors-header .nav-box ul li.menu-item > a:hover, #ccm-motors-header .nav-box ul li.menu-item > a:active, #ccm-motors-header .nav-box ul li.menu-item > a:focus,
+      #mobile-header-canvas .nav-box ul li.menu-item > a:hover,
+      #mobile-header-canvas .nav-box ul li.menu-item > a:active,
+      #mobile-header-canvas .nav-box ul li.menu-item > a:focus {
+        background-color: #4a4b51;
+        color: var(--white-color) !important; } }
     @media (max-width: 991px) {
       #ccm-motors-header .nav-box ul li.menu-item > a.dropdown-toggle,
       #mobile-header-canvas .nav-box ul li.menu-item > a.dropdown-toggle {
