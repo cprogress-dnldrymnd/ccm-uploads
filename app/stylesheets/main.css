@@ -7431,6 +7431,10 @@ li.has-dropdown:active:after,
     #ccm-motors-header .nav-box .mini-cart > a,
     #mobile-header-canvas .nav-box .mini-cart > a {
       padding: 23px 15px !important; }
+    @media (max-width: 991px) {
+      #ccm-motors-header .nav-box .mini-cart,
+      #mobile-header-canvas .nav-box .mini-cart {
+        display: none; } }
   #ccm-motors-header .nav-box .navbar-nav,
   #mobile-header-canvas .nav-box .navbar-nav {
     display: flex;
