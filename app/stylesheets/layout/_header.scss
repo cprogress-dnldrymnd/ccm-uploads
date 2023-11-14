@@ -624,6 +624,9 @@ li.has-dropdown:active:after,
 		text-transform: uppercase;
 		font-weight: 500;
 		font-size: 15px;
+		.woocommerce-Price-amount {
+			font-size: 500;
+		}
 		strong {
 			font-weight: 500;
 		}
