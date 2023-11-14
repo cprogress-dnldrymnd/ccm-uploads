@@ -398,6 +398,8 @@ li.has-dropdown:active:after,
 	right: 0;
 	top: 0;
 	.desktop-header {
+		padding-top: 18px;
+		padding-bottom: 18px;
 		@media (max-width: 991px) {
 			display: none;
 		}

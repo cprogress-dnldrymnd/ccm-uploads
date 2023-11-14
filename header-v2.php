@@ -361,7 +361,7 @@ $template = get_page_template_slug();
 
 <body <?php body_class($cat_class . $product_cat_class); ?> ownership="
     <?php _e($ownership) ?>" <?= $product_term ?>>
-        <div class="overlay"></div>
+    <div class="overlay"></div>
 
     <!--[if lt IE 9]>
         <div id="browser-notification" class="alert alert-danger">
@@ -445,7 +445,7 @@ $template = get_page_template_slug();
                     </div>
                 </div>
                 <div class="mobile-header">
-                    <div class="row">
+                    <div class="row justify-content-between">
                         <div class="col-auto">
                             <div class="mini-cart">
 
