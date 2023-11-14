@@ -7,6 +7,7 @@ jQuery(document).ready(function () {
 	if (window.innerWidth > 991) {
 		jQuery("#ccm-motors-header .dropdown-menu").hover(
 			function () {
+				jQuery('body').addClass('overlay');
 			}, function () {
 				jQuery('body').removeClass('overlay');
 				jQuery('.dropdown-menu').removeClass('show-dropdown');
