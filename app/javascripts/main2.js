@@ -7,11 +7,18 @@ jQuery(document).ready(function () {
 	if (window.innerWidth > 991) {
 		jQuery("#ccm-motors-header a.dropdown-toggle, .dropdown-menu").hover(
 			function () {
-				jQuery('body').addClass('overlay');
 			}, function () {
 				jQuery('body').removeClass('overlay');
+				jQuery('.dropdown-menu').removeClass('.show-dropdown');
 			}
 		);
+
+
+		jQuery('.dropdown-toggle').click(function (e) { 
+			jQuery('body').addClass('overlay');
+			jQuery(this).next('show-dropdown');
+			e.preventDefault();
+		});
 	}
 
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
