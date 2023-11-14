@@ -999,6 +999,7 @@ body {
 
 	@media (max-width: 991px) {
 		@include offcanvas-style;
+		height: auto;
 	}
 }
 
