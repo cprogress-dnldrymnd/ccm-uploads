@@ -7435,6 +7435,8 @@ li.has-dropdown:active:after,
     margin: 0;
     text-transform: uppercase;
     font-weight: 500; }
+    .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__total strong {
+      font-weight: 500; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__buttons {
     position: absolute;
     bottom: 0;
