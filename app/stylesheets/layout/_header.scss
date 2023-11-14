@@ -500,7 +500,7 @@ li.has-dropdown:active:after,
 	.nav-box {
 		.mini-cart {
 			position: static;
-			a {
+			> a {
 				padding: 23px 15px !important;
 			}
 		}
