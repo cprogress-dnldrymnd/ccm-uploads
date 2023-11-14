@@ -699,18 +699,7 @@ body {
 		}
 	}
 }
-@mixin offcanvas-style {
-	display: block;
-	position: fixed;
-	top: 57px;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: var(--white-color);
-	z-index: 9999;
-	transition: 500ms;
-	transform: translateX(-100%);
-}
+
 .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
 	max-width: 525px;
 	width: 100%;
