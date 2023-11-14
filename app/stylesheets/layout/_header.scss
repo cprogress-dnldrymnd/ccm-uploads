@@ -479,7 +479,7 @@ li.has-dropdown:active:after,
 					padding: 25px 15px;
 					@include on-event {
 						background-color: #4a4b51;
-						color: var(--white-color);
+						color: var(--white-color) !important;
 					}
 				}
 				&:after {
