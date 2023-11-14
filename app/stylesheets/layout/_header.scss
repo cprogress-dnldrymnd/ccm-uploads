@@ -874,7 +874,7 @@ body {
 	width: 100%;
 	height: calc(100vh - 70px);
 	background-color: var(--white-color);
-
+	font-family: $font-fira;
 	@media (max-width: 991px) {
 		display: block !important;
 	}
@@ -999,7 +999,6 @@ body {
 
 	@media (max-width: 991px) {
 		@include offcanvas-style;
-		height: auto;
 	}
 }
 
