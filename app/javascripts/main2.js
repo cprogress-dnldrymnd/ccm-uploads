@@ -19,9 +19,9 @@ jQuery(document).ready(function () {
 			jQuery('.dropdown-toggle').not(this).each(function () {
 				jQuery(this).next().removeClass('show-dropdown');
 			});
-			jQuery('body').addClass('overlay');
 			jQuery('body').removeClass('show-minicart');
 			jQuery(this).next().addClass('show-dropdown');
+			jQuery('body').addClass('overlay');
 			e.preventDefault();
 		});
 
