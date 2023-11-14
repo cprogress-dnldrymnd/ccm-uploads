@@ -24,15 +24,13 @@ jQuery(document).ready(function () {
 		});
 
 		jQuery('.mini-cart a').click(function (e) {
-			jQuery('body').addClass('overlay');
-			jQuery(this).next().addClass('show-minicart');
+			jQuery('body').addClass('overlay show-minicart');
 			e.preventDefault();
 		});
 
 
 		jQuery('.close-mini-cart').click(function (e) {
-			jQuery('body').removeClass('overlay');
-			jQuery('.widget_shopping_cart_content').removeClass('show-minicart');
+			jQuery('body').removeClass('overlay show-minicart');
 			e.preventDefault();
 		});
 

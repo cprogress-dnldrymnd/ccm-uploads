@@ -637,16 +637,19 @@ li.has-dropdown:active:after,
 		}
 	}
 }
-
+body {
+	&.show-minicart {
+		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
 .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
 	max-width: 525px;
 	width: 100%;
 	height: calc(100vh - 70px);
 	background-color: var(--white-color);
-	&.show-minicart {
-		visibility: visible;
-		opacity: 1;
-	}
 	.min-cart-header {
 		padding: 20px;
 		border-top: 1px solid #e2e2e2;
