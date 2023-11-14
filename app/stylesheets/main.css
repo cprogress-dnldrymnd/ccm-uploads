@@ -6980,6 +6980,9 @@ body {
   position: absolute;
   width: 1px; }
 
+.container-fluid.container-fluid-wide {
+  max-width: 1870px; }
+
 @media screen and (max-width: 991px) {
   #navbar {
     overflow-x: hidden !important; } }
@@ -7293,8 +7296,6 @@ li.has-dropdown:active:after,
   left: 0;
   right: 0;
   top: 0; }
-  #ccm-motors-header .container-fluid {
-    max-width: 1870px; }
   #ccm-motors-header section.bike-lists {
     padding-top: 0; }
   #ccm-motors-header .nav-box ul li a {

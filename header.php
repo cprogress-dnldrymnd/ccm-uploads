@@ -515,7 +515,7 @@ if ($post_type == 'product') {
             </style>
         <?php } else { ?>
             <header id="ccm-motors-header" class="bt-5">
-                <div class="container-fluid">
+                <div class="container-fluid container-fluid-wide">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="row column-holder align-items-center">
