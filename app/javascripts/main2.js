@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
 			e.preventDefault();
 		});
 
-		jQuery('.mini-cart').click(function (e) { 
+		jQuery('.mini-cart a').click(function (e) { 
 			jQuery('body').addClass('overlay');
 			jQuery(this).next().addClass('show-minicart');
 			e.preventDefault();
