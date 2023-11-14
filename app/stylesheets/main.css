@@ -7330,12 +7330,14 @@ li.has-dropdown:active:after,
     #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu {
       left: 0px;
       right: 0px;
-      height: calc(100vh - 100px);
+      max-height: calc(100vh - 100px);
       float: none;
       top: auto;
       bottom: auto;
       overflow: hidden;
-      padding: 0; }
+      padding: 0;
+      border: none;
+      box-shadow: none; }
       #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu li.menu-item > a {
         color: var(--black-color); }
 
