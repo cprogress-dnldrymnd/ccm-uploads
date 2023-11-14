@@ -29,7 +29,7 @@ jQuery(document).ready(function () {
 		
 		jQuery('.close-mini-cart').click(function (e) { 
 			jQuery('body').removeClass('overlay');
-			jQuery('.widget_shopping_cart_content ').removeClass('show-minicart');
+			jQuery('.widget_shopping_cart_content').removeClass('show-minicart');
 			e.preventDefault();
 		});
 
