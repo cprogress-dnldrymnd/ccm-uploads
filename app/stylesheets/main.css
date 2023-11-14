@@ -7345,6 +7345,8 @@ li.has-dropdown:active:after,
       font-weight: 400 !important;
       font-style: normal !important;
       margin-top: 0 !important; }
+  #ccm-motors-header .nav-box .mini-cart {
+    position: static; }
   #ccm-motors-header .nav-box ul li.menu-item > a {
     color: var(--white-color);
     text-transform: uppercase;
@@ -7403,6 +7405,12 @@ li.has-dropdown:active:after,
           transition-delay: 800ms; }
         #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a {
           transition-delay: 900ms; }
+
+.widget_shopping_cart_content.widget_shopping_cart_content {
+  max-width: 525px;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-color: var(--white-color); }
 
 footer {
   position: relative;

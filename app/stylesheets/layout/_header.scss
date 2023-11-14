@@ -470,6 +470,9 @@ li.has-dropdown:active:after,
 		}
 	}
 	.nav-box {
+		.mini-cart {
+			position: static;
+		}
 		ul {
 			li.menu-item {
 				> a {
@@ -586,4 +589,11 @@ li.has-dropdown:active:after,
 			}
 		}
 	}
+}
+
+.widget_shopping_cart_content.widget_shopping_cart_content{
+	max-width: 525px;
+    width: 100%;
+    height: calc(100vh - 70px);
+	background-color: var(--white-color);
 }
