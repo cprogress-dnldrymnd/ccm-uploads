@@ -786,3 +786,14 @@ body {
 		}
 	}
 }
+
+.mobile-header-canvas {
+	display: none;
+	@media(max-width: 991px) {
+		display: block;
+		position: fixed;
+		top: 57px;
+		left: 0;
+		width: 100%;
+	}
+}

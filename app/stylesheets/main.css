@@ -7555,6 +7555,16 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
           background-color: var(--black-color) !important;
           border: 1px solid var(--black-color); }
 
+.mobile-header-canvas {
+  display: none; }
+  @media (max-width: 991px) {
+    .mobile-header-canvas {
+      display: block;
+      position: fixed;
+      top: 57px;
+      left: 0;
+      width: 100%; } }
+
 footer {
   position: relative;
   background: #fff;
