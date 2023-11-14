@@ -10,9 +10,7 @@ jQuery(document).ready(function () {
 		jQuery('.col-side-toggle').click(function (e) { 
 			jQuery('body').toggleClass('mobile-header-active');
 			e.preventDefault();
-			
 		});
-
 		jQuery('.widget_shopping_cart_content').insertAfter('#mobile-header-canvas');
 	}
 
