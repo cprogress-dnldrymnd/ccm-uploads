@@ -7309,6 +7309,8 @@ li.has-dropdown:active:after,
       display: block; }
       #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:hover, #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:active, #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:focus {
         background-color: rgba(0, 0, 0, 0.5); }
+        #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:hover h4, #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:active h4, #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:focus h4 {
+          color: #E22228; }
     #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box {
       position: relative;
       padding: 30%; }

@@ -414,6 +414,9 @@ li.has-dropdown:active:after,
 						display: block;
 						@include on-event {
 							background-color: rgba(0, 0, 0, 0.5);
+							h4 {
+								color: #E22228;
+							}
 						}
 					}
 
