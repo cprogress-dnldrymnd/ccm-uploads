@@ -7445,6 +7445,9 @@ li.has-dropdown:active:after,
   width: 100%;
   height: calc(100vh - 70px);
   background-color: var(--white-color); }
+  .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content.show-minicart {
+    visibility: visible;
+    opacity: 1; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content:before {
     content: "YOUR CART";
     padding: 20px;
