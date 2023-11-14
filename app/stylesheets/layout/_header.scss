@@ -390,7 +390,8 @@ li.has-dropdown:active:after,
 	margin-left: -42% !important;
 	margin-top: 18px !important;
 }
-#ccm-motors-header, #mobile-header-canvas {
+#ccm-motors-header,
+#mobile-header-canvas {
 	font-family: $font-fira;
 	background-color: var(--black-color);
 	position: fixed;
@@ -544,9 +545,18 @@ li.has-dropdown:active:after,
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
+			@media (max-width: 991px) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
 		}
 		ul {
 			li.menu-item {
+				@media (max-width: 991px) {
+					width: 100%;
+					border-bottom: 1px solid #E2E2E2;
+				}
+
 				> a {
 					color: var(--white-color);
 					text-transform: uppercase;
@@ -554,6 +564,10 @@ li.has-dropdown:active:after,
 					padding: 25px 15px;
 					@media (max-width: 1199px) {
 						padding: 25px 10px;
+					}
+					@media (max-width: 991px) {
+						color: var(--black-color);
+						width: 100%;
 					}
 					@include on-event {
 						background-color: #4a4b51;
@@ -789,7 +803,7 @@ body {
 
 #mobile-header-canvas {
 	display: none;
-	@media(max-width: 991px) {
+	@media (max-width: 991px) {
 		display: block;
 		position: fixed;
 		top: 57px;
