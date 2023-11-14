@@ -610,6 +610,11 @@ li.has-dropdown:active:after,
 		font-weight: 500;
 	}
 	.woocommerce-mini-cart {
+		a {
+			font-size: 16px;
+			font-weight: 400;
+			color: var(--black-color);
+		}
 	}
 	.woocommerce-mini-cart__total {
 		position: absolute;
