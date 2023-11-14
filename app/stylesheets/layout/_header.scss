@@ -401,10 +401,13 @@ li.has-dropdown:active:after,
 	
 	section.bike-lists-menu {
 		padding-top: 0;
+		.col-lg-3 {
+			background-color: #F2F2F3;
+		}
 		.bikes {
 			> .row {
 				> [class*="col-"] {
-					
+
 				}
 			}
 		}
