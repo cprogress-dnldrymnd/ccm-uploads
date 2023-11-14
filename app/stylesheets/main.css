@@ -7428,6 +7428,8 @@ li.has-dropdown:active:after,
     justify-content: space-between;
     text-transform: uppercase;
     font-size: 16px; }
+    .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart .name-price-quantity .name-price span:last-child {
+      padding-left: 20px; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart .qty {
     font-weight: 300;
     font-size: 15px; }
