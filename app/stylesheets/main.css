@@ -7507,7 +7507,8 @@ li.has-dropdown:active:after,
       #ccm-motors-header .nav-box ul li.menu-item > a.dropdown-toggle,
       #mobile-header-canvas .nav-box ul li.menu-item > a.dropdown-toggle {
         display: flex;
-        justify-content: space-between; }
+        justify-content: space-between;
+        align-items: center; }
         #ccm-motors-header .nav-box ul li.menu-item > a.dropdown-toggle:after,
         #mobile-header-canvas .nav-box ul li.menu-item > a.dropdown-toggle:after {
           content: '';
