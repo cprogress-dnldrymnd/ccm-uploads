@@ -7369,6 +7369,9 @@ li.has-dropdown:active:after,
       margin-top: 0 !important; }
   #ccm-motors-header .nav-box .mini-cart {
     position: static; }
+    #ccm-motors-header .nav-box .mini-cart:hover + .widget_shopping_cart_content, #ccm-motors-header .nav-box .mini-cart:active + .widget_shopping_cart_content, #ccm-motors-header .nav-box .mini-cart:focus + .widget_shopping_cart_content {
+      visibility: hidden;
+      opacity: 0; }
     #ccm-motors-header .nav-box .mini-cart a {
       padding: 23px 15px !important; }
   #ccm-motors-header .nav-box .navbar-nav {

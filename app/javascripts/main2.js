@@ -19,6 +19,12 @@ jQuery(document).ready(function () {
 			jQuery(this).next().addClass('show-dropdown');
 			e.preventDefault();
 		});
+
+		jQuery('.mini-cart').click(function (e) { 
+			jQuery('body').addClass('overlay');
+			jQuery(this).next().addClass('show-minicart');
+			e.preventDefault();
+		});
 	}
 
 	$("#wpcf7-f5677-o1 form").submit(function (e) {

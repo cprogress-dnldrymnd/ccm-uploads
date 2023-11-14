@@ -500,6 +500,12 @@ li.has-dropdown:active:after,
 	.nav-box {
 		.mini-cart {
 			position: static;
+			@include on-event {
+				& + .widget_shopping_cart_content {
+					visibility: hidden;
+					opacity: 0;
+				}
+			}
 			a {
 				padding: 23px 15px !important;
 			}
@@ -635,6 +641,10 @@ li.has-dropdown:active:after,
 	width: 100%;
 	height: calc(100vh - 70px);
 	background-color: var(--white-color);
+	&.show-minicart {
+		visibility: visible;
+		opacity: 1;
+	}
 	&:before {
 		content: "YOUR CART";
 		padding: 20px;
