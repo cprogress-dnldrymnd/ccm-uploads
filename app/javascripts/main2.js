@@ -7,9 +7,9 @@ jQuery(document).ready(function () {
 	if (window.innerWidth > 991) {
 		jQuery("#ccm-motors-header .dropdown-menu").hover(
 			function () {
-				jQuery('body, html').addClass('overlay');
+				jQuery('body').addClass('overlay');
 			}, function () {
-				jQuery('body, html').removeClass('overlay');
+				jQuery('body').removeClass('overlay');
 				jQuery('.dropdown-menu').removeClass('show-dropdown');
 			}
 		);
@@ -19,20 +19,20 @@ jQuery(document).ready(function () {
 			jQuery('.dropdown-toggle').not(this).each(function () {
 				jQuery(this).next().removeClass('show-dropdown');
 			});
-			jQuery('body, html').removeClass('show-minicart');
+			jQuery('body').removeClass('show-minicart');
 			jQuery(this).next().addClass('show-dropdown');
-			jQuery('body, html').addClass('overlay');
+			jQuery('body').addClass('overlay');
 			e.preventDefault();
 		});
 
 		jQuery('.mini-cart a').click(function (e) {
-			jQuery('body, html').addClass('overlay show-minicart');
+			jQuery('body').addClass('overlay show-minicart');
 			e.preventDefault();
 		});
 
 
 		jQuery(document).on("click", '.close-mini-cart', function (event) {
-			jQuery('body, html').removeClass('overlay show-minicart');
+			jQuery('body').removeClass('overlay show-minicart');
 			jQuery('.dropdown-menu').removeClass('show-dropdown');
 		});
 
@@ -100,7 +100,7 @@ jQuery(document).ready(function () {
 
 
 
-	if (!sessionStorage.getItem('register_click') && !jQuery('body, html').hasClass('logged-in')) {
+	if (!sessionStorage.getItem('register_click') && !jQuery('body').hasClass('logged-in')) {
 		jQuery('.acf-field-5d10995760714 .acf-image-uploader').removeClass('has-value');
 		jQuery('.acf-field-5d10995760714 .acf-image-uploader img[data-name="image"]').attr('src', '')
 		jQuery('.acf-field-5ced50e8d2411 tbody .acf-row:not(:last-child)').remove();
@@ -195,7 +195,7 @@ function bike_bullets() {
 	});
 }
 function aos() {
-	if (jQuery('body, html').hasClass('body-page-components')) {
+	if (jQuery('body').hasClass('body-page-components')) {
 		AOS.init({
 			once: true
 		});
@@ -254,7 +254,7 @@ function owl_carousels() {
 }
 
 function swiper_slider() {
-	if (jQuery('body, html').hasClass('body-page-components')) {
+	if (jQuery('body').hasClass('body-page-components')) {
 
 		var swiperHome = new Swiper(".mySwiper-Home", {
 			slidesPerView: 2,
@@ -442,7 +442,7 @@ function ajax() {
 	});
 }
 function wishlist_discount() {
-	$ownership = jQuery('body, html').attr('ownership');
+	$ownership = jQuery('body').attr('ownership');
 	$wishlist_item = jQuery('.tinvwl-theme-style .tinvwl-table-manage-list .wishlist_item');
 	setTimeout(function () {
 		if ($ownership == 'owner') {
