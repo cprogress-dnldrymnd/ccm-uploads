@@ -5,13 +5,13 @@ jQuery(document).ready(function () {
 	utm_parameters();
 
 	if (window.innerWidth > 991) {
-		jQuery("#ccm-motors-header a.dropdown-toggle").hover(
+		jQuery("#ccm-motors-header .dropdown").hover(
 			function () {
 				jQuery('body').addClass('overlay');
-				jQuery(this).next().addClass('show-dropdown');
+				jQuery(this).find('.dropdown-menu').addClass('show-dropdown');
 			}, function () {
 				jQuery('body').removeClass('overlay');
-				jQuery(this).next().removeClass('show-dropdown');
+				jQuery(this).find('.dropdown-menu').removeClass('show-dropdown');
 			}
 		);
 	}
