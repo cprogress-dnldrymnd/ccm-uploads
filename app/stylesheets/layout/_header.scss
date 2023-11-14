@@ -535,7 +535,7 @@ li.has-dropdown:active:after,
 						display: flex !important;
 						visibility: hidden;
 						opacity: 0;
-						.dropdown-menu {
+						&.show-dropdown {
 							visibility: visible;
 							opacity: 1;
 						}
