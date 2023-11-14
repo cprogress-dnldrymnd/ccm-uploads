@@ -7369,7 +7369,7 @@ li.has-dropdown:active:after,
       margin-top: 0 !important; }
   #ccm-motors-header .nav-box .mini-cart {
     position: static; }
-    #ccm-motors-header .nav-box .mini-cart a {
+    #ccm-motors-header .nav-box .mini-cart > a {
       padding: 23px 15px !important; }
   #ccm-motors-header .nav-box .navbar-nav {
     display: flex;
