@@ -7553,6 +7553,9 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
   width: 100%;
   height: calc(100vh - 70px);
   background-color: var(--white-color); }
+  @media (max-width: 991px) {
+    .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
+      display: block !important; } }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .min-cart-header {
     font-family: "Fira Sans Condensed", sans-serif;
     padding: 20px;
