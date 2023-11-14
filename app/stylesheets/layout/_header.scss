@@ -521,6 +521,7 @@ li.has-dropdown:active:after,
 							border-bottom: 1px solid #e2e2e2;
 							padding: 20px 15px;
 							width: 100%;
+							font-size: 16px;
 							text-decoration: none;
 						}
 					}
@@ -629,6 +630,7 @@ li.has-dropdown:active:after,
 							@media (max-width: 991px) {
 								margin-bottom: 0;
 								margin-left: 25px;
+								font-size: 16px;
 							}
 						}
 					}
@@ -683,6 +685,7 @@ li.has-dropdown:active:after,
 						color: var(--black-color);
 						width: 100%;
 						padding: 20px 15px;
+						font-size: 16px;
 					}
 
 					@media(min-width: 992px) {
