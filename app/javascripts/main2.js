@@ -12,6 +12,8 @@ jQuery(document).ready(function () {
 			e.preventDefault();
 			
 		});
+
+		jQuery('.widget_shopping_cart_content').insertAfter('#mobile-header-canvas');
 	}
 
 	if (window.innerWidth > 991) {
