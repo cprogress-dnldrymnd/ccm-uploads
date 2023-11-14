@@ -564,7 +564,11 @@ if ($post_type == 'product') {
                     </div>
                 </div>
 
-                <div class="widget_shopping_cart_content display-none"><?php woocommerce_mini_cart(); ?></div>
+                <div class="mini-cart">
+                    <div class="widget_shopping_cart_content display-none">
+                        <?php woocommerce_mini_cart(); ?>
+                    </div>
+                </div>
             </header>
         <?php } ?>
     <?php } ?>
