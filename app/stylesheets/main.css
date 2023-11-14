@@ -7636,7 +7636,7 @@ body.mobile-header-active .mobile-menu-toggle span:first-child {
   top: 5px;
   transform: rotate(45deg); }
 body.mobile-header-active .mobile-menu-toggle span:last-child {
-  top: 10px;
+  top: 5px;
   transform: rotate(-45deg); }
 
 #mobile-header-canvas {
