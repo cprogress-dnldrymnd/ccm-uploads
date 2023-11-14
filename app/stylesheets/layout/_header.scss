@@ -596,6 +596,13 @@ li.has-dropdown:active:after,
 	width: 100%;
 	height: calc(100vh - 70px);
 	background-color: var(--white-color);
+	&:before {
+		content: 'YOUR CART';
+		padding: 20px;
+		border-top: 1px solid #E2E2E2;
+		border-bottom: 1px solid #E2E2E2;
+
+	}
 	.woocommerce-mini-cart__total {
 		position: absolute;
 		left: 0;

@@ -7411,6 +7411,11 @@ li.has-dropdown:active:after,
   width: 100%;
   height: calc(100vh - 70px);
   background-color: var(--white-color); }
+  .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content:before {
+    content: 'YOUR CART';
+    padding: 20px;
+    border-top: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__total {
     position: absolute;
     left: 0;
