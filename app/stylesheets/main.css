@@ -7633,10 +7633,10 @@ body.mobile-header-active #mobile-header-canvas {
 body.mobile-header-active .mobile-menu-toggle span:nth-child(2) {
   opacity: 0; }
 body.mobile-header-active .mobile-menu-toggle span:first-child {
-  top: 0;
+  top: 10px;
   transform: rotate(45deg); }
 body.mobile-header-active .mobile-menu-toggle span:last-child {
-  top: 0;
+  top: 10px;
   transform: rotate(-45deg); }
 
 #mobile-header-canvas {
