@@ -7425,7 +7425,8 @@ li.has-dropdown:active:after,
     font-weight: 500; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart a {
     font-size: 16px;
-    font-weight: 400; }
+    font-weight: 400;
+    color: var(--black-color); }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__total {
     position: absolute;
     left: 0;
