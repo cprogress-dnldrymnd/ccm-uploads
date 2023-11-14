@@ -5,7 +5,7 @@ jQuery(document).ready(function () {
 	utm_parameters();
 
 	if (window.innerWidth < 992) {
-		jQuery('.nav-box').appendTo('.mobile-header-canvas');
+		jQuery('.nav-box').removeClass('col-auto').appendTo('.mobile-header-canvas');
 
 		jQuery('.col-side-toggle').click(function (e) { 
 			jQuery('.mobile-header-canvas').toggleClass('mobile-header-active');
