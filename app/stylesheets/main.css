@@ -7426,7 +7426,8 @@ li.has-dropdown:active:after,
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart a {
     font-size: 16px;
     font-weight: 400;
-    color: var(--black-color); }
+    color: var(--black-color);
+    text-decoration: none; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__total {
     position: absolute;
     left: 0;
