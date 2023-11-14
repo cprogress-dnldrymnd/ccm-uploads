@@ -831,6 +831,11 @@ body {
 			}
 		}
 	}
+	&.show-minicart {
+		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
+			transform: translateX(0);
+		}
+	}
 }
 
 #mobile-header-canvas {
