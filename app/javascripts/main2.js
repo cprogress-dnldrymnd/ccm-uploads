@@ -4,7 +4,7 @@ jQuery(window).on('resize', function () {
 jQuery(document).ready(function () {
 	utm_parameters();
 
-	if (window.innerWidth > 992) {
+	if (window.innerWidth < 992) {
 		jQuery('.nav-box > ul').appendTo('.mobile-header-canvas');
 	}
 
