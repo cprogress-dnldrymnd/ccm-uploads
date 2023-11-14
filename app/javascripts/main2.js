@@ -1,34 +1,34 @@
-jQuery(window).on('resize', function(){
+jQuery(window).on('resize', function () {
 	shopmenu();
 });
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
 	utm_parameters();
-	
-    if(window.innerWidth>991) {
-    	jQuery( "#ccm-motors-header .dropdown-toggle" ).hover(
-          function() {
-            jQuery('body').addClass('overlay');
-          }, function() {
-            jQuery('body').removeClass('overlay');
-          }
-        );
 
-        
-    }
-   
+	if (window.innerWidth > 991) {
+		jQuery("#ccm-motors-header a.dropdown-toggle").hover(
+			function () {
+				jQuery('body').addClass('overlay');
+				jQuery(this).next().addClass('show-dropdown');
+			}, function () {
+				jQuery('body').removeClass('overlay');
+				jQuery(this).next().removeClass('show-dropdown');
+			}
+		);
+	}
+
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
 		e.preventDefault();
-		jQuery(this).find('.wpcf7-submit').attr('disabled','disabled');
+		jQuery(this).find('.wpcf7-submit').attr('disabled', 'disabled');
 	});
 
-	$('.ct-arrow .the-arrow').click(function(event) {
+	$('.ct-arrow .the-arrow').click(function (event) {
 		$('html,body').animate({
 			scrollTop: $('#news').offset().top - 72
-		},'slow');
+		}, 'slow');
 	});
 
 	$woocommerce_account = $('body.woocommerce-account');
-	if(!$woocommerce_account.hasClass('logged-in')) {
+	if (!$woocommerce_account.hasClass('logged-in')) {
 		$woocommerce_account.addClass('not-log');
 	}
 	$btns = $('<div class="my-account-btn"> <div class="login-ac active" data="the-login"><h2>LOGIN</h2></div> <div class="register-ac" data="the-register"><h2>REGISTER</h2></div> </div>')
@@ -40,14 +40,14 @@ jQuery(document).ready(function() {
 
 	$login_btn = $('.login-ac');
 	$register_btn = $('.register-ac');
-	$login_btn.click(function(event) {
+	$login_btn.click(function (event) {
 		$register_btn.removeClass('active');
 		$login_btn.addClass('active');
 		$login.removeClass('hide-div');
 		$register.addClass('hide-div');
 		sessionStorage.setItem("active", "the-login");
 	});
-	$register_btn.click(function(event) {
+	$register_btn.click(function (event) {
 		$login_btn.removeClass('active');
 		$register_btn.addClass('active');
 		$login.addClass('hide-div');
@@ -55,7 +55,7 @@ jQuery(document).ready(function() {
 		sessionStorage.setItem("active", "the-register");
 	});
 
-	if(sessionStorage.getItem("active") == 'the-register') {
+	if (sessionStorage.getItem("active") == 'the-register') {
 		$login_btn.removeClass('active');
 		$register_btn.addClass('active');
 		$login.addClass('hide-div');
@@ -70,21 +70,21 @@ jQuery(document).ready(function() {
 	}
 
 	$register__submit = jQuery('.woocommerce-form-register__submit');
-	$register__submit.click(function(event) {
+	$register__submit.click(function (event) {
 		sessionStorage.setItem("register_click", "clicked");
 	});
 
 
 
-	if(!sessionStorage.getItem('register_click') && !jQuery('body').hasClass('logged-in')) {
+	if (!sessionStorage.getItem('register_click') && !jQuery('body').hasClass('logged-in')) {
 		jQuery('.acf-field-5d10995760714 .acf-image-uploader').removeClass('has-value');
-		jQuery('.acf-field-5d10995760714 .acf-image-uploader img[data-name="image"]').attr('src','')
+		jQuery('.acf-field-5d10995760714 .acf-image-uploader img[data-name="image"]').attr('src', '')
 		jQuery('.acf-field-5ced50e8d2411 tbody .acf-row:not(:last-child)').remove();
-		jQuery('label.selected').each(function(index, el) {
+		jQuery('label.selected').each(function (index, el) {
 			jQuery(this).removeClass('selected');
 			jQuery(this).find('input').removeAttr('checked');
 		});
-	} 
+	}
 
 	jQuery('.acf-field-5d10995760714').remove();
 	//wishlist_discount();
@@ -124,113 +124,113 @@ function utm_parameters() {
 	$utm_term = getUrlParameter('utm_term');
 	$utm_content = getUrlParameter('utm_content');
 	$gclid = getUrlParameter('gclid');
-	if($utm_campaign) {
-		$url_parameters_arr.push('utm_campaign='+$utm_campaign);
+	if ($utm_campaign) {
+		$url_parameters_arr.push('utm_campaign=' + $utm_campaign);
 	}
-	if($utm_source) {
-		$url_parameters_arr.push('utm_source='+$utm_source);
+	if ($utm_source) {
+		$url_parameters_arr.push('utm_source=' + $utm_source);
 	}
-	if($utm_medium) {
-		$url_parameters_arr.push('utm_medium='+$utm_medium);
+	if ($utm_medium) {
+		$url_parameters_arr.push('utm_medium=' + $utm_medium);
 	}
-	if($utm_term) {
-		$url_parameters_arr.push('utm_term='+$utm_term);
+	if ($utm_term) {
+		$url_parameters_arr.push('utm_term=' + $utm_term);
 	}
-	if($utm_content) {
-		$url_parameters_arr.push('utm_content='+$utm_content);
+	if ($utm_content) {
+		$url_parameters_arr.push('utm_content=' + $utm_content);
 	}
-	if($gclid) {
-		$url_parameters_arr.push('gclid='+$gclid);
+	if ($gclid) {
+		$url_parameters_arr.push('gclid=' + $gclid);
 	}
 
 	var $url_parameters = '';
 	$url_parameters_arr.forEach(function callback(value, index) {
-		if(index == 0) {
+		if (index == 0) {
 			$url_parameters = $url_parameters.concat('?', value);
 		} else {
 			$url_parameters = $url_parameters.concat('&', value);
 		}
-		
+
 	});
 
-	if($url_parameters) {
-		jQuery('a').each(function(index, el) {
+	if ($url_parameters) {
+		jQuery('a').each(function (index, el) {
 			var $href = jQuery(this).attr('href');
-			if(($href) && ($href.startsWith('https://www.ccm-motorcycles.com') || $href.startsWith('/'))&& !$href.startsWith('https://www.ccm-motorcycles.com/wp-content/')) {
+			if (($href) && ($href.startsWith('https://www.ccm-motorcycles.com') || $href.startsWith('/')) && !$href.startsWith('https://www.ccm-motorcycles.com/wp-content/')) {
 				jQuery(this).attr('href', $href.concat($url_parameters));
 			}
 		});
 	}
 	console.log($url_parameters);
-	
+
 }
 function bike_bullets() {
-	jQuery('.drag_element .point_style').each(function(index, el) {
+	jQuery('.drag_element .point_style').each(function (index, el) {
 		$html = jQuery(this).attr('data-html');
-		jQuery('<span class="hover">'+$html+'</span>').appendTo(jQuery(this));
+		jQuery('<span class="hover">' + $html + '</span>').appendTo(jQuery(this));
 	});
 }
 function aos() {
-	if(jQuery('body').hasClass('body-page-components')) {
+	if (jQuery('body').hasClass('body-page-components')) {
 		AOS.init({
 			once: true
 		});
 	}
 }
 function owl_carousels() {
-	if(jQuery('.ex-bike-display-owl').length != 0) {
+	if (jQuery('.ex-bike-display-owl').length != 0) {
 		jQuery('.ex-bike-display-owl').owlCarousel({
-			loop:true,
-			autoplay:false,
-			autoplaySpeed:2000,
-			autoplayHoverPause:false,
-			mouseDrag:true, 
-			nav:true,
-			navText: ['<i class="fas fa-long-arrow-alt-left"></i>','<i class="fas fa-long-arrow-alt-right"></i>'],
-			margin:0,
-			dots:false,
+			loop: true,
+			autoplay: false,
+			autoplaySpeed: 2000,
+			autoplayHoverPause: false,
+			mouseDrag: true,
+			nav: true,
+			navText: ['<i class="fas fa-long-arrow-alt-left"></i>', '<i class="fas fa-long-arrow-alt-right"></i>'],
+			margin: 0,
+			dots: false,
 			items: 1
 		});
 	}
 
 
-	if(jQuery('.hero-carousel').length != 0) {
+	if (jQuery('.hero-carousel').length != 0) {
 
 		var $hero_carousel = jQuery('.hero-carousel');
 
-		$hero_carousel.on('initialized.owl.carousel', function(event) {
+		$hero_carousel.on('initialized.owl.carousel', function (event) {
 			$hero_carousel.find('.owl-item.active .item .right-side').css('margin-left', '-105px');
-			$hero_carousel.find('.fake-owl-navs').click(function(event) {
+			$hero_carousel.find('.fake-owl-navs').click(function (event) {
 				$hero_carousel.find(jQuery(this).attr('target')).click();
 			});
 		});
 
 
-		$hero_carousel.on('translated.owl.carousel', function(event) {
+		$hero_carousel.on('translated.owl.carousel', function (event) {
 			$hero_carousel.find('.owl-item.active .item .right-side').css('margin-left', '-105px');
 			$hero_carousel.find('.owl-item:not(.active) .item .right-side').css('margin-left', 0);
 		});
 
 
 		$hero_carousel.owlCarousel({
-			loop:true,
+			loop: true,
 			stagePadding: 0,
-			margin:0,
-			nav:true,
-			dots:false,
+			margin: 0,
+			nav: true,
+			dots: false,
 			singleItem: true,
 			autoplay: true,
 			autoplayTimeout: 6000,
 			autoplaySpeed: 1200,
 			navSpeed: 1200,
-			items:1
+			items: 1
 		});
 	}
-	
+
 }
 
 function swiper_slider() {
-	if(jQuery('body').hasClass('body-page-components')) {
+	if (jQuery('body').hasClass('body-page-components')) {
 
 		var swiperHome = new Swiper(".mySwiper-Home", {
 			slidesPerView: 2,
@@ -387,30 +387,30 @@ function swiper_slider() {
 }
 
 function ex_display_bikes() {
-	jQuery( "#ex-display-order" ).change(function(e) {
+	jQuery("#ex-display-order").change(function (e) {
 		e.preventDefault();
 		jQuery(this).submit();
 	});
 }
 
 function ajax() {
-	jQuery( "#resource-hub-form" ).change(function(e) {
+	jQuery("#resource-hub-form").change(function (e) {
 		e.preventDefault();
-		var bike_id = jQuery("#bike_id").val(); 
-		var resource_type = jQuery("#resource_type").val(); 
+		var bike_id = jQuery("#bike_id").val();
+		var resource_type = jQuery("#resource_type").val();
 		$loading = jQuery('<div class="loading"> <i class="fas fa-spinner rotating"> </div>');
 		jQuery('#resource-hub-form').addClass('searching');
 
 		jQuery('#results .row').html($loading);
 		jQuery.ajax({
-			type:"POST",
+			type: "POST",
 			url: "/wp-admin/admin-ajax.php",
 			data: {
-				action:'research_hub', 
-				bike_id:bike_id,
-				resource_type:resource_type,
+				action: 'research_hub',
+				bike_id: bike_id,
+				resource_type: resource_type,
 			},
-			success:function(response){
+			success: function (response) {
 				jQuery('#results .row').html(response);
 				jQuery('#resource-hub-form').removeClass('searching');
 			}
@@ -420,9 +420,9 @@ function ajax() {
 function wishlist_discount() {
 	$ownership = jQuery('body').attr('ownership');
 	$wishlist_item = jQuery('.tinvwl-theme-style .tinvwl-table-manage-list .wishlist_item');
-	setTimeout(function() {
-		if($ownership == 'owner') {
-			$wishlist_item.each(function(index, el) {
+	setTimeout(function () {
+		if ($ownership == 'owner') {
+			$wishlist_item.each(function (index, el) {
 				$this = jQuery(this);
 				$price = $this.find('.product-price');
 				var $price_span = $this.find('.product-price .woocommerce-Price-amount').text();
@@ -430,8 +430,8 @@ function wishlist_discount() {
 				var $the_price = $price_span.replace("£", "").replace(',', '');
 				var $the_discounted_price = parseFloat($the_price) * .1;
 
-				$final_dicounted_price = $the_price - $the_discounted_price; 
-				$discounted_price = jQuery('<span class="discounted_price">£'+ $final_dicounted_price.toFixed(2) +'</span>');
+				$final_dicounted_price = $the_price - $the_discounted_price;
+				$discounted_price = jQuery('<span class="discounted_price">£' + $final_dicounted_price.toFixed(2) + '</span>');
 				$discounted_price.insertAfter($this.find('.product-price .woocommerce-Price-amount'));
 			});
 		}
@@ -440,11 +440,11 @@ function wishlist_discount() {
 
 
 function ownership() {
-	setTimeout(function() {
+	setTimeout(function () {
 		var $ownership = jQuery('input[name="ownership"]');
 		$do_you_own = jQuery('.do-you-own ul li label');
 		$do_you_own_selected = jQuery('.do-you-own ul li label.selected input').val();
-		if($do_you_own_selected == "Yes, I'm a CCM owner!") {
+		if ($do_you_own_selected == "Yes, I'm a CCM owner!") {
 			$do_you_own_selected_val = 'yes';
 			jQuery('.bike-list-wrapper').removeClass('acf-hidden');
 		} else {
@@ -452,9 +452,9 @@ function ownership() {
 		}
 
 		$ownership.attr('value', $do_you_own_selected_val);
-		$do_you_own.click(function(event) {
+		$do_you_own.click(function (event) {
 			$val = jQuery(this).find('input').val();
-			if($val == "Yes, I'm a CCM owner!") {
+			if ($val == "Yes, I'm a CCM owner!") {
 				$the_val = 'yes';
 			} else {
 				$the_val = 'no';
@@ -479,7 +479,7 @@ function event_registration_email() {
 	$subject_cf7 = jQuery('input[name="subject-cf7"]');
 	$postcode_cf7 = jQuery('input[name="postcode-cf7"]');
 
-	$event_register.submit(function(event) {
+	$event_register.submit(function (event) {
 		$first_name_val = jQuery('input[name="first_name"]').val();
 		$last_name_val = jQuery('input[name="last_name"]').val();
 		$email_val = jQuery('input[name="email"]').val();
@@ -513,31 +513,31 @@ function wishlist_clone() {
 function services() {
 	$service = jQuery('.service');
 	$service_name = jQuery('.service .services .name');
-	$service.each(function(index, el) {
-		jQuery(this).find('.name').click(function(event) {
+	$service.each(function (index, el) {
+		jQuery(this).find('.name').click(function (event) {
 			$name = jQuery(this);
 			$table = jQuery(this).next();
 			$scrolltop = jQuery(this).parent().offset().top;
-			if($table.hasClass('hide-table')) {
-				setTimeout(function() {
+			if ($table.hasClass('hide-table')) {
+				setTimeout(function () {
 					jQuery('.service .table-con').addClass('hide-table');
 					jQuery('.service .name').removeClass('active');
 				}, 100);
 			}
-			setTimeout(function() {
-				if($table.hasClass('hide-table')) {
+			setTimeout(function () {
+				if ($table.hasClass('hide-table')) {
 					jQuery(window).scrollTop($scrolltop - 72);
-				} 
+				}
 			}, 200);
-			setTimeout(function() {
-				if($table.hasClass('hide-table')) {
+			setTimeout(function () {
+				if ($table.hasClass('hide-table')) {
 					$name.addClass('active');
 					$table.removeClass('hide-table');
 				} else {
 					$table.addClass('hide-table');
 					$name.removeClass('active');
 				}
-				
+
 			}, 500);
 		});
 	});
@@ -547,57 +547,57 @@ function enquire_select() {
 	jQuery('select[name="where-did-you-find-us"] option:first-child').text('Where did you find out about us?*');
 }
 
-function selectChangeValue(){
+function selectChangeValue() {
 	$('.price ').val('‎£139.00');
 	$('.price ').attr('disabled', 'disabled');
-	$('.service_location').on('change', function() {
-		var $value = $('.service_select ').children("option:selected").val(); 
+	$('.service_location').on('change', function () {
+		var $value = $('.service_select ').children("option:selected").val();
 		var $location = $('option:selected', this).attr('value');
 		select_service($value, $location);
 	});
-	$('.service_select').on('change', function() {                          
-		var $location = $('.service_location ').children("option:selected").val();	
+	$('.service_select').on('change', function () {
+		var $location = $('.service_location ').children("option:selected").val();
 		var $value = $('option:selected', this).attr('value');
 		select_service($value, $location);
 	});
 }
 
 function mailSent() {
-	document.addEventListener( 'wpcf7mailsent', function( event ) {
+	document.addEventListener('wpcf7mailsent', function (event) {
 
-		if ( '4098' == event.detail.contactFormId ) {
-			setTimeout(function() {
+		if ('4098' == event.detail.contactFormId) {
+			setTimeout(function () {
 				window.open(jQuery('.service-link').attr('href'), '_blank');
 				return false;
 			}, 500);
-		} else if ( '11559' == event.detail.contactFormId ) {
-			setTimeout(function() {
+		} else if ('11559' == event.detail.contactFormId) {
+			setTimeout(function () {
 				window.open(jQuery('.service-link').attr('href'), '_blank');
 				return false;
 			}, 500);
-		} else if ( '3989' == event.detail.contactFormId ) {
-			setTimeout(function() {
+		} else if ('3989' == event.detail.contactFormId) {
+			setTimeout(function () {
 				window.location.href = 'http://ccm-motorcycles.com/wishlist/thank-you';
 			}, 200);
-		} else if('4135' == event.detail.contactFormId) {
-			if ( window.history.replaceState ) {
-				window.history.replaceState( null, null, window.location.href );
+		} else if ('4135' == event.detail.contactFormId) {
+			if (window.history.replaceState) {
+				window.history.replaceState(null, null, window.location.href);
 			}
 		}
-	}, false );
-}  
+	}, false);
+}
 
 
 function register_function() {
-	jQuery('input#reg_password').keyup(function(event) {
-		setTimeout(function() {
+	jQuery('input#reg_password').keyup(function (event) {
+		setTimeout(function () {
 			jQuery('.woocommerce-form-register__submit').removeAttr('disabled');
 			jQuery('.woocommerce-form-register__submit').removeClass('disabled');
 		}, 100);
 	});
 
-	jQuery('input#reg_confirm_password').keyup(function(event) {
-		setTimeout(function() {
+	jQuery('input#reg_confirm_password').keyup(function (event) {
+		setTimeout(function () {
 			jQuery('.woocommerce-form-register__submit').removeAttr('disabled');
 			jQuery('.woocommerce-form-register__submit').removeClass('disabled');
 		}, 100);
@@ -623,22 +623,22 @@ function my_account() {
 	$user_type_orig_field = jQuery('div[data-name="do_you_own_a_ccm_motorcycle"] label');
 	$user_type_orig = jQuery('input[name="acf[field_5eb16b9ef7297]"]:checked').val();
 	$user_type = jQuery('input[name="user_type"]').val($user_type_orig);
-	$user_type_orig_field.click(function(event) {
+	$user_type_orig_field.click(function (event) {
 		$val = jQuery(this).find('input').val();
 		$user_type = jQuery('input[name="user_type"]').val($val);
 	});
 
-	
+
 	$submit_button = jQuery('button[name="save_account_details"]');
 
-	
+
 	$num = sessionStorage.getItem("num");
 
 	sessionStorage.setItem("num", 1);
-	$submit_button.click(function(event) {
+	$submit_button.click(function (event) {
 		$user_type_val = $user_type.val();
-		if($num == 1) {
-			if($user_type_val == "Yes, I'm a CCM owner!" && $user_type_orig == "No, I'm just an enthusiast!") {
+		if ($num == 1) {
+			if ($user_type_val == "Yes, I'm a CCM owner!" && $user_type_orig == "No, I'm just an enthusiast!") {
 				jQuery("#wpcf7-f4832-p305-o1 form").submit();
 			}
 		}
@@ -649,10 +649,10 @@ function my_account() {
 
 function forum_topic() {
 	$loop_item = jQuery('.bbp-body div[class*="loop-item-"]');
-	$loop_item.each(function(index, el) {
+	$loop_item.each(function (index, el) {
 		$this = jQuery(this);
 		$br = $this.find('br');
-		$br.each(function(index, el) {
+		$br.each(function (index, el) {
 			$this = jQuery(this);
 			$br_clone = $this.clone();
 			$br_clone.insertAfter($this);
@@ -662,7 +662,7 @@ function forum_topic() {
 
 function service_type_buy_now() {
 	$buy_now = jQuery('.buy-now span');
-	$buy_now.click(function(event) {
+	$buy_now.click(function (event) {
 		jQuery(window).scrollTop(465);
 		$book_a_service = jQuery('.nav-pills li a[href="#book-a-service"]');
 		$select_val = jQuery(this).attr('select-val');
@@ -680,7 +680,7 @@ function service_type_buy_now() {
 
 function select_service($value, $location) {
 	if ($value == "CCM Spitfire First Service") {
-		if($location == 'CCM Factory') {
+		if ($location == 'CCM Factory') {
 			$('.service-link').prop('href', "https://www.ccm-motorcycles.com//cart/?add-to-cart=4185");
 			$('.service-link').text($value);
 			$('.price ').val('‎£199.00');
@@ -695,7 +695,7 @@ function select_service($value, $location) {
 		}
 		$('.the-service span ').text($value);
 	} else if ($value == "Annual") {
-		if($location == 'CCM Factory') {
+		if ($location == 'CCM Factory') {
 			$('.service-link').prop('href', "https://www.ccm-motorcycles.com//cart/?add-to-cart=4187");
 			$('.service-link').text($value);
 			$('.price ').val('‎£239.00');
@@ -710,7 +710,7 @@ function select_service($value, $location) {
 		}
 		$('.the-service span ').text($value);
 	} else if ($value == "4000 Mile") {
-		if($location == 'CCM Factory') {
+		if ($location == 'CCM Factory') {
 			$('.service-link').prop('href', "https://www.ccm-motorcycles.com//cart/?add-to-cart=4189");
 			$('.service-link').text($value);
 			$('.price ').val('‎£329.00');
@@ -725,7 +725,7 @@ function select_service($value, $location) {
 		}
 		$('.the-service span ').text($value);
 	} else if ($value == "7500 Mile") {
-		if($location == 'CCM Factory') {
+		if ($location == 'CCM Factory') {
 			$('.service-link').prop('href', "https://www.ccm-motorcycles.com//cart/?add-to-cart=4193");
 			$('.service-link').text($value);
 			$('.price ').val('‎£409.00');
@@ -740,7 +740,7 @@ function select_service($value, $location) {
 		}
 		$('.the-service span ').text($value);
 	} else if ($value == "3 YEARS SERVICE PACK") {
-		if($location == 'CCM Factory') {
+		if ($location == 'CCM Factory') {
 			$('.service-link').prop('href', "https://www.ccm-motorcycles.com//cart/?add-to-cart=4198");
 			$('.service-link').text($value);
 			$('.price ').val('‎£699.00');
@@ -762,7 +762,7 @@ function select_service($value, $location) {
 		$('.the-location span ').text('CCM Factory');
 		$('.the-service span ').text($value);
 	} else if ($value == "CCM Service Pack & 1Yr Extended Warranty Offer*") {
-		if($location == 'CCM Factory') {
+		if ($location == 'CCM Factory') {
 			$('.service-link').prop('href', "https://www.ccm-motorcycles.com//cart/?add-to-cart=4197");
 			$('.service-link').text($value);
 			$('.price ').val('‎£1,078.00');
@@ -777,7 +777,7 @@ function select_service($value, $location) {
 		}
 		$('.the-service span ').text($value);
 	}
-	if($value == "1Yr Extended Factory Supported Warranty") {
+	if ($value == "1Yr Extended Factory Supported Warranty") {
 		$('select[name="service_location"] option:nth-child(2)').css('display', 'none');
 	} else {
 		$('select[name="service_location"] option:nth-child(2)').css('display', 'initial');
@@ -787,9 +787,9 @@ function select_service($value, $location) {
 function cf_form() {
 	$how_did_you = jQuery('#how-did-you');
 	$please_specify = jQuery('#please-specify');
-	$how_did_you.change(function(event) {
+	$how_did_you.change(function (event) {
 		$val = jQuery(this).val();
-		if($val == 'Other') {
+		if ($val == 'Other') {
 			$please_specify.removeClass('dist-none');
 		} else {
 			$please_specify.addClass('dist-none');
@@ -799,60 +799,60 @@ function cf_form() {
 
 
 function page_components() {
-	if(jQuery('#fading-owl').length != 0) {
+	if (jQuery('#fading-owl').length != 0) {
 		jQuery('#fading-owl').owlCarousel({
-			loop:true,
-			autoplay:true,
-			autoplayHoverPause:false,
-			mouseDrag:false, 
+			loop: true,
+			autoplay: true,
+			autoplayHoverPause: false,
+			mouseDrag: false,
 			animateOut: 'fadeOut',
-			nav:false,
-			margin:0,
-			dots:false,
+			nav: false,
+			margin: 0,
+			dots: false,
 			items: 1
 		});
 	}
 
-	if(jQuery('.banner-slider-carousel').length != 0) {
+	if (jQuery('.banner-slider-carousel').length != 0) {
 		jQuery('.banner-slider-carousel').owlCarousel({
-			loop:true,
-			autoplay:true,
-			autoplaySpeed:500,
+			loop: true,
+			autoplay: true,
+			autoplaySpeed: 500,
 			autoplayTimeout: 5000,
-			autoplayHoverPause:false,
-			mouseDrag:false, 
-			nav:true,
-			navText: ['',''],
-			margin:0,
-			dots:false,
+			autoplayHoverPause: false,
+			mouseDrag: false,
+			nav: true,
+			navText: ['', ''],
+			margin: 0,
+			dots: false,
 			items: 1
 		});
 	}
 	$technical_specifications_js = jQuery('.technical-specifications-js');
 
-	$technical_specifications_js.each(function(index, el) {
+	$technical_specifications_js.each(function (index, el) {
 		var $this = jQuery(this);
-		$this.find('.btn-expand .parent').click(function(event) {
+		$this.find('.btn-expand .parent').click(function (event) {
 			console.log('test');
 			$this.find('.specs .the-specs.open').addClass('expand-specs');
 			$this.find('.btn-expand').addClass('dist-none');
 			$this.find('.btn-collapse').removeClass('dist-none');
 		});
-		$this.find('.btn-collapse .parent').click(function(event) {
+		$this.find('.btn-collapse .parent').click(function (event) {
 			$this.find('.specs .the-specs.open').removeClass('expand-specs');
 			$this.find('.btn-expand').removeClass('dist-none');
 			$this.find('.btn-collapse').addClass('dist-none');
 		});
-		$this.find('.toggle span').click(function(event) {
+		$this.find('.toggle span').click(function (event) {
 			var $clicked_span = jQuery(this);
 			var $clicked = jQuery(this).attr('data-target');
 			$this.find('.btn-expand').removeClass('dist-none');
 			$this.find('.btn-collapse').addClass('dist-none');
-			setTimeout(function() {
+			setTimeout(function () {
 				$this.find('.toggle span').removeClass('active')
 				$this.find('.specs .the-specs').removeClass('open expand-specs');
 			}, 100);
-			setTimeout(function() {
+			setTimeout(function () {
 				$clicked_span.addClass('active');
 				jQuery($clicked).addClass('open');
 			}, 300);
@@ -860,25 +860,25 @@ function page_components() {
 	});
 	$technical_specifications = jQuery('.technical-specifications:not(.technical-specifications-js)');
 
-	
 
-	$technical_specifications.find('.expand span').click(function(event) {
+
+	$technical_specifications.find('.expand span').click(function (event) {
 		$technical_specifications.find('.specs .the-specs.open').addClass('expand-specs');
 	});
 
-	$technical_specifications.find('.toggle span').click(function(event) {
+	$technical_specifications.find('.toggle span').click(function (event) {
 		$clicked_span = jQuery(this);
 		$clicked = jQuery(this).attr('data-target');
-		if($clicked != '.engine') {
+		if ($clicked != '.engine') {
 			$technical_specifications.find('.expand').addClass('dist-none');
 		} else {
 			$technical_specifications.find('.expand').removeClass('dist-none');
 		}
-		setTimeout(function() {
+		setTimeout(function () {
 			$technical_specifications.find('.toggle span').removeClass('active')
 			$technical_specifications.find('.specs .the-specs').removeClass('open expand-specs');
 		}, 100);
-		setTimeout(function() {
+		setTimeout(function () {
 			$clicked_span.addClass('active');
 			jQuery($clicked).addClass('open');
 			$technical_specifications.find('.expand span').removeClass('dist-none');
@@ -886,46 +886,46 @@ function page_components() {
 	});
 
 	$anchor_modal = jQuery('.anchor-modal:not(.phone-number)');
-	$anchor_modal.click(function(event) {
+	$anchor_modal.click(function (event) {
 		$data_target = jQuery(this).attr('data-target');
 		jQuery($data_target).addClass('open');
 		jQuery('html').addClass('overflow-hidden');
 	});
 	$exit_modal = jQuery('.exit-modal');
-	$exit_modal.click(function(event) {
+	$exit_modal.click(function (event) {
 		$data_target = jQuery(this).attr('data-target');
 		jQuery($data_target).removeClass('open');
 		jQuery('html').removeClass('overflow-hidden');
 	});
 
 	$pulsing_circle = jQuery('.the-bike .pulsing-circle');
-	$pulsing_circle.click(function(event) {
-		$data_target =  jQuery(this).attr('data-target');
-		setTimeout(function() {
+	$pulsing_circle.click(function (event) {
+		$data_target = jQuery(this).attr('data-target');
+		setTimeout(function () {
 			jQuery('.mobile-text.target span').removeClass('open');
 		}, 100);
-		setTimeout(function() {
+		setTimeout(function () {
 			jQuery($data_target).addClass('open');
 		}, 300);
 	});
 
 	jQuery('input[name="page-submitted"]').val(jQuery('#enquire-now-modal').attr('page'));
 
-	jQuery('#wpcf7-f5845-o1 .btn-box .circle').click(function(event) {
+	jQuery('#wpcf7-f5845-o1 .btn-box .circle').click(function (event) {
 		jQuery('#wpcf7-f5845-o1 .btn-box input[type="submit"]').click();
 	});
 
-	document.addEventListener( 'wpcf7mailsent', function( event ) {
-		if ( '5845' == event.detail.contactFormId ) {
-			setTimeout(function() {
+	document.addEventListener('wpcf7mailsent', function (event) {
+		if ('5845' == event.detail.contactFormId) {
+			setTimeout(function () {
 				jQuery('#enquire-now-modal').removeClass('open');
 				jQuery('html').removeClass('overflow-hidden');
 			}, 3000);
 
 		}
-	}, false );
+	}, false);
 
-	setTimeout(function() {
+	setTimeout(function () {
 		jQuery('.page-template-page-blackout-vip').addClass('opacity-1');
 		jQuery('.page-template-page-blackout').addClass('opacity-1');
 	}, 500);
@@ -946,8 +946,8 @@ function shopmenu() {
 	$cat = jQuery('<span class="show-cat"> Categories </span>');
 	$show_cat = jQuery('.show-cat');
 	$menu = jQuery('body.woocommerce section.sp-banner h2');
-	if($innerWidth < 992) {
-		if($show_cat.length == 0) {
+	if ($innerWidth < 992) {
+		if ($show_cat.length == 0) {
 			$cat.appendTo($menu);
 		}
 	} else {
@@ -958,8 +958,8 @@ function shopmenu() {
 
 function show_cat() {
 	$nav = jQuery('.accessories-banner > .navbar');
-	jQuery('.show-cat').click(function(event) {
-		if($nav.hasClass('open')) {
+	jQuery('.show-cat').click(function (event) {
+		if ($nav.hasClass('open')) {
 			$nav.removeClass('open');
 		} else {
 			$nav.addClass('open');
@@ -969,9 +969,9 @@ function show_cat() {
 
 var getUrlParameter = function getUrlParameter(sParam) {
 	var sPageURL = window.location.search.substring(1),
-	sURLVariables = sPageURL.split('&'),
-	sParameterName,
-	i;
+		sURLVariables = sPageURL.split('&'),
+		sParameterName,
+		i;
 
 	for (i = 0; i < sURLVariables.length; i++) {
 		sParameterName = sURLVariables[i].split('=');
