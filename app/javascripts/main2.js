@@ -14,27 +14,30 @@ jQuery(document).ready(function () {
 		);
 
 
-		jQuery('.dropdown-toggle').click(function (e) { 
+		jQuery('.dropdown-toggle').click(function (e) {
+			jQuery('.dropdown-toggle').not(this).each(function () {
+				jQuery(this).next().removeClass('show-dropdown');
+			});
 			jQuery('body').addClass('overlay');
 			jQuery(this).next().addClass('show-dropdown');
 			e.preventDefault();
 		});
 
-		jQuery('.mini-cart a').click(function (e) { 
+		jQuery('.mini-cart a').click(function (e) {
 			jQuery('body').addClass('overlay');
 			jQuery(this).next().addClass('show-minicart');
 			e.preventDefault();
 		});
 
-		
-		jQuery('.close-mini-cart').click(function (e) { 
+
+		jQuery('.close-mini-cart').click(function (e) {
 			jQuery('body').removeClass('overlay');
 			jQuery('.widget_shopping_cart_content').removeClass('show-minicart');
 			e.preventDefault();
 		});
 
 
-		
+
 	}
 
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
