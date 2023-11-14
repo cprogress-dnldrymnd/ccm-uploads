@@ -16,7 +16,7 @@ jQuery(document).ready(function () {
 
 		jQuery('.dropdown-toggle').click(function (e) { 
 			jQuery('body').addClass('overlay');
-			jQuery(this).next('show-dropdown');
+			jQuery(this).next().addClass('show-dropdown');
 			e.preventDefault();
 		});
 	}
