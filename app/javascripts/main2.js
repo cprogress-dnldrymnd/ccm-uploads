@@ -38,7 +38,7 @@ jQuery(document).ready(function () {
 			e.preventDefault();
 		});
 
-		jQuery('.mini-cart a, .col-side').click(function (e) {
+		jQuery('.mini-cart a, .col-side-minicart').click(function (e) {
 			jQuery('body').addClass('show-minicart');
 			jQuery('.overlay').addClass('show-overlay');
 			e.preventDefault();
