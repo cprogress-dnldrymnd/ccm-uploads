@@ -487,27 +487,37 @@ li.has-dropdown:active:after,
 							position: relative;
 							z-index: 1;
 						}
-						&:before {
-							content: "";
-							position: absolute;
-							left: 0;
-							top: 0;
-							right: 0;
-							bottom: 0;
-							background-color: rgba(0, 0, 0, 0.05);
-							opacity: 0;
-							transition: 300ms;
-						}
-						@include on-event {
+
+						@media (min-width: 992px) {
 							&:before {
-								opacity: 1;
+								content: "";
+								position: absolute;
+								left: 0;
+								top: 0;
+								right: 0;
+								bottom: 0;
+								background-color: rgba(0, 0, 0, 0.05);
+								opacity: 0;
+								transition: 300ms;
 							}
-							h4 {
-								color: #e22228;
+							@include on-event {
+								&:before {
+									opacity: 1;
+								}
+								h4 {
+									color: #e22228;
+								}
+								img {
+									transform: translateY(-5px);
+								}
 							}
-							img {
-								transform: translateY(-5px);
-							}
+						}
+						@media (max-width: 991px) {
+							display: flex;
+							flex-direction: row-reverse;
+							align-items: center;
+							justify-content: flex-end;
+							border-bottom: 1px solid #e2e2e2;
 						}
 					}
 
@@ -522,6 +532,9 @@ li.has-dropdown:active:after,
 							height: 100%;
 							object-fit: cover;
 							transition: 500ms;
+						}
+						@media (max-width: 991px) {
+							padding: 5% 7%;
 						}
 					}
 					.bike-name {
@@ -705,7 +718,7 @@ body {
 	width: 100%;
 	height: calc(100vh - 70px);
 	background-color: var(--white-color);
-	@media(max-width: 991px) {
+	@media (max-width: 991px) {
 		display: block !important;
 	}
 	.min-cart-header {
@@ -810,7 +823,7 @@ body {
 			}
 		}
 	}
-	@media(max-width: 991px) {
+	@media (max-width: 991px) {
 		@include offcanvas-style;
 	}
 }
