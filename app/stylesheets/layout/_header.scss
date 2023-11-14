@@ -449,6 +449,7 @@ li.has-dropdown:active:after,
 					flex: 0 0 57px;
 				}
 				.col-side-toggle {
+					transition: 500ms;
 					@include on-event {
 						background-color: #4A4B51;
 					}
