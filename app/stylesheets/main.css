@@ -7461,9 +7461,10 @@ li.has-dropdown:active:after,
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .min-cart-header svg {
+    .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .min-cart-header .close-mini-cart svg {
       width: 30px;
-      height: 30px; }
+      height: 30px;
+      cursor: pointer; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart .name-price-quantity .name-price {
     display: flex;
     justify-content: space-between;
