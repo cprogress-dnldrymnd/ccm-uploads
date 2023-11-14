@@ -426,6 +426,10 @@ li.has-dropdown:active:after,
 	right: 0;
 	top: 0;
 
+	.logo-box {
+		padding-left: 15px;
+	}
+
 	.desktop-header {
 		@media (max-width: 991px) {
 			display: none;
@@ -506,6 +510,7 @@ li.has-dropdown:active:after,
 						font-weight: 500;
 						transition: 1000ms;
 						display: inline-block;
+
 						@media (min-width: 992px) {
 							opacity: 0;
 							transform: translateX(100%);

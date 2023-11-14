@@ -7300,6 +7300,9 @@ li.has-dropdown:active:after,
   left: 0;
   right: 0;
   top: 0; }
+  #ccm-motors-header .logo-box,
+  #mobile-header-canvas .logo-box {
+    padding-left: 15px; }
   @media (max-width: 991px) {
     #ccm-motors-header .desktop-header,
     #mobile-header-canvas .desktop-header {
@@ -7371,7 +7374,8 @@ li.has-dropdown:active:after,
           #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li a,
           #mobile-header-canvas section.bike-lists-menu .col-lg-3 .menu-right li a {
             opacity: 0;
-            transform: translateX(100%); } }
+            transform: translateX(100%);
+            transition: 1000ms; } }
         @media (max-width: 991px) {
           #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li a,
           #mobile-header-canvas section.bike-lists-menu .col-lg-3 .menu-right li a {
