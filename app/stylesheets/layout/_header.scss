@@ -415,21 +415,7 @@ li.has-dropdown:active:after,
 						transform: translateX(100%);
 						display: inline-block;
 					}
-					&:nth-child(1) {
-						a {
-							transition-delay: 700ms;
-						}
-					}
-					&:nth-child(2) {
-						a {
-							transition-delay: 800ms;
-						}
-					}
-					&:nth-child(3) {
-						a {
-							transition-delay: 900ms;
-						}
-					}
+
 					&:not(:last-child) {
 						margin-bottom: 20px;
 					}
@@ -440,37 +426,6 @@ li.has-dropdown:active:after,
 		.bike-lists-holder {
 			> .row {
 				> [class*="col-"] {
-					&:nth-child(1) {
-						a {
-							transition-delay: 100ms;
-						}
-					}
-					&:nth-child(2) {
-						a {
-							transition-delay: 200ms;
-						}
-					}
-					&:nth-child(3) {
-						a {
-							transition-delay: 300ms;
-						}
-					}
-					&:nth-child(4) {
-						a {
-							transition-delay: 400ms;
-						}
-					}
-					&:nth-child(5) {
-						a {
-							transition-delay: 500ms;
-						}
-					}
-					&:nth-child(6) {
-						a {
-							transition-delay: 500ms;
-						}
-					}
-
 					a {
 						text-decoration: none !important;
 						padding: 3vw;
@@ -564,6 +519,36 @@ li.has-dropdown:active:after,
 												transform: translateY(0);
 												opacity: 1;
 											}
+											&:nth-child(1) {
+												a {
+													transition-delay: 100ms;
+												}
+											}
+											&:nth-child(2) {
+												a {
+													transition-delay: 200ms;
+												}
+											}
+											&:nth-child(3) {
+												a {
+													transition-delay: 300ms;
+												}
+											}
+											&:nth-child(4) {
+												a {
+													transition-delay: 400ms;
+												}
+											}
+											&:nth-child(5) {
+												a {
+													transition-delay: 500ms;
+												}
+											}
+											&:nth-child(6) {
+												a {
+													transition-delay: 500ms;
+												}
+											}
 										}
 									}
 								}
@@ -574,13 +559,27 @@ li.has-dropdown:active:after,
 											a {
 												transform: translateX(0);
 											}
+											&:nth-child(1) {
+												a {
+													transition-delay: 700ms;
+												}
+											}
+											&:nth-child(2) {
+												a {
+													transition-delay: 800ms;
+												}
+											}
+											&:nth-child(3) {
+												a {
+													transition-delay: 900ms;
+												}
+											}
 										}
 									}
 								}
 							}
 						}
 					}
-				
 				}
 			}
 		}

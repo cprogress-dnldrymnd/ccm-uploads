@@ -7314,26 +7314,8 @@ li.has-dropdown:active:after,
           transition: 500ms;
           transform: translateX(100%);
           display: inline-block; }
-        #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a {
-          transition-delay: 700ms; }
-        #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a {
-          transition-delay: 800ms; }
-        #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a {
-          transition-delay: 900ms; }
         #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li:not(:last-child) {
           margin-bottom: 20px; }
-    #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(1) a {
-      transition-delay: 100ms; }
-    #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(2) a {
-      transition-delay: 200ms; }
-    #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(3) a {
-      transition-delay: 300ms; }
-    #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(4) a {
-      transition-delay: 400ms; }
-    #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(5) a {
-      transition-delay: 500ms; }
-    #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(6) a {
-      transition-delay: 500ms; }
     #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
       text-decoration: none !important;
       padding: 3vw;
@@ -7397,10 +7379,28 @@ li.has-dropdown:active:after,
       #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
         transform: translateY(0);
         opacity: 1; }
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(1) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(1) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(1) a {
+        transition-delay: 100ms; }
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(2) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(2) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(2) a {
+        transition-delay: 200ms; }
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(3) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(3) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(3) a {
+        transition-delay: 300ms; }
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(4) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(4) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(4) a {
+        transition-delay: 400ms; }
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(5) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(5) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(5) a {
+        transition-delay: 500ms; }
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(6) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(6) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"]:nth-child(6) a {
+        transition-delay: 500ms; }
       #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .col-lg-3, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .col-lg-3, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .col-lg-3 {
         background-color: #f2f2f3; }
         #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li a {
           transform: translateX(0); }
+        #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(1) a {
+          transition-delay: 700ms; }
+        #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(2) a {
+          transition-delay: 800ms; }
+        #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a {
+          transition-delay: 900ms; }
 
 footer {
   position: relative;
