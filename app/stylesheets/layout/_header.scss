@@ -592,7 +592,9 @@ li.has-dropdown:active:after,
 						}
 
 						@media (max-width: 991px) {
-							padding: 5% 7%;
+							height: 75px;
+							width: 120px;
+							padding: 0;
 						}
 					}
 
@@ -601,6 +603,11 @@ li.has-dropdown:active:after,
 							font-weight: 400 !important;
 							font-style: normal !important;
 							margin-top: 0 !important;
+
+							@media (max-width: 991px) {
+								margin-bottom: 0;
+								margin-left: 25px;
+							}
 						}
 					}
 				}

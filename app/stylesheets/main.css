@@ -7442,12 +7442,19 @@ li.has-dropdown:active:after,
       @media (max-width: 991px) {
         #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box,
         #mobile-header-canvas section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box {
-          padding: 5% 7%; } }
+          height: 75px;
+          width: 120px;
+          padding: 0; } }
     #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4,
     #mobile-header-canvas section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4 {
       font-weight: 400 !important;
       font-style: normal !important;
       margin-top: 0 !important; }
+      @media (max-width: 991px) {
+        #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4,
+        #mobile-header-canvas section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4 {
+          margin-bottom: 0;
+          margin-left: 20px; } }
   #ccm-motors-header .nav-box .mini-cart,
   #mobile-header-canvas .nav-box .mini-cart {
     position: static; }
