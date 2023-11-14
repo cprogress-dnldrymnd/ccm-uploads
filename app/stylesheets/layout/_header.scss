@@ -1,21 +1,4 @@
 #navbar {
-	.col-md-4:first-child {
-		.navbar-nav {
-			li:first-child {
-				a {
-				}
-			}
-		}
-	}
-	.col-md-4:last-child {
-		.navbar-nav {
-			li:last-child {
-				a {
-				}
-			}
-		}
-	}
-
 	@include respond-to(screen-sm-xs) {
 		overflow-x: hidden !important;
 	}
@@ -26,41 +9,51 @@ header {
 	background-color: $white2;
 	transition: all ease 0.5s;
 	z-index: 3;
+
 	nav {
 		margin-bottom: 0 !important;
+
 		.navbar {
 			margin-bottom: 0 !important;
 		}
+
 		.navbar-nav {
 			margin: 0 auto !important;
 			display: inline-block;
+
 			li {
 				display: inline;
 				text-align: center;
+
 				a {
 					font-family: $barlow-medium;
 					color: $black;
 					text-transform: uppercase;
 					font-size: 16px;
+
 					@include on-event {
 						color: #dc3524;
 					}
 				}
+
 				@include respond-to(screen-sm-xs) {
 					text-align: left;
 				}
 			}
+
 			@include respond-to(screen-sm-xs) {
 				text-align: left;
 				margin: 0 !important;
 				display: block;
 			}
 		}
+
 		.navbar-brand {
 			float: none !important;
 			display: inline-block;
 			position: relative;
 			padding: 0 !important;
+
 			img {
 				height: 100%;
 				width: auto;
@@ -69,8 +62,10 @@ header {
 				padding: 10px 0;
 			}
 		}
-		.nav > li > a {
+
+		.nav>li>a {
 			padding: 15px 22px;
+
 			@include respond-to(screen-md) {
 				padding: 15px !important;
 			}
@@ -89,12 +84,13 @@ header {
 	z-index: 999999999999;
 }
 
-.sticky + main {
+.sticky+main {
 	padding-top: 53px;
 }
 
 button.navbar-toggle {
 	border-color: #000;
+
 	span {
 		background: #000;
 	}
@@ -104,35 +100,44 @@ button.navbar-toggle {
 	.navbar-header {
 		float: none;
 	}
+
 	.navbar-left,
 	.navbar-right {
 		float: none !important;
 	}
+
 	.navbar-toggle {
 		display: block;
 	}
+
 	.navbar-collapse {
 		border-top: 1px solid transparent;
 		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
 		&.collapse {
 			display: none !important;
 		}
 	}
+
 	.navbar-fixed-top {
 		top: 0;
 		border-width: 0 0 1px;
 	}
+
 	.navbar-nav {
 		float: none !important;
 		margin-top: 7.5px;
 	}
-	.navbar-nav > li {
+
+	.navbar-nav>li {
 		float: none;
 	}
-	.navbar-nav > li > a {
+
+	.navbar-nav>li>a {
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
+
 	.collapse.in {
 		display: block !important;
 	}
@@ -142,6 +147,7 @@ button.navbar-toggle {
 ********************************/
 .mega-menu-col {
 	position: initial !important;
+
 	.navbar-nav li {
 		text-align: center;
 		position: initial;
@@ -149,6 +155,7 @@ button.navbar-toggle {
 		@include respond-to(screen-sm-xs) {
 			text-align: left;
 		}
+
 		.mega-menu {
 			height: auto !important;
 			position: absolute;
@@ -173,6 +180,7 @@ button.navbar-toggle {
 				background: #f7f7f7;
 				padding: 20px 0;
 				text-align: left !important;
+
 				p,
 				a {
 					padding-bottom: 0;
@@ -188,28 +196,35 @@ button.navbar-toggle {
 					border-bottom: solid 1px #d6d6d6;
 				}
 			}
+
 			h2 {
 				text-align: left;
 				font-size: 24px;
 				font-family: $barlow-extrabold-italic;
 				text-transform: uppercase;
+
 				@include respond-to(screen-sm-xs) {
 					font-size: 17px;
 				}
 			}
+
 			.separator {
 				border-top: 3px solid #000;
 				position: absolute;
 				width: 100%;
 				height: 5px;
+
 				@include respond-to(screen-sm-xs) {
 					border-top: 2px solid #000;
 				}
 			}
+
 			.bike-previews {
 				margin-top: 20px !important;
+
 				a {
 					font-family: $barlow-bold;
+
 					&:after {
 						content: "\f054";
 						font-family: FontAwesome;
@@ -217,15 +232,18 @@ button.navbar-toggle {
 						margin-left: 7px;
 						color: red;
 					}
+
 					@include on-event {
 						text-decoration: none !important;
 					}
 				}
 			}
+
 			a.red-btn {
 				display: inline-block;
 				margin: 60px 0 5px;
 				color: #fff !important;
+
 				@include on-event {
 					text-decoration: none !important;
 				}
@@ -254,6 +272,7 @@ button.navbar-toggle {
 
 					.container {
 						overflow-x: scroll;
+
 						.row {
 							width: 850px;
 						}
@@ -270,6 +289,7 @@ button.navbar-toggle {
 		margin-top: -2px;
 		margin-left: 10px;
 		display: none;
+
 		@include respond-to(screen-sm-xs) {
 			display: inline-block;
 		}
@@ -280,41 +300,45 @@ button.navbar-toggle {
 ********************************/
 
 /* Dropdown Toggle on style */
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-	background: inherit; /* Set to inherit when using mouse hover to open dropdown */
+.navbar .nav li.dropdown.open>.dropdown-toggle,
+.navbar .nav li.dropdown.active>.dropdown-toggle,
+.navbar .nav li.dropdown.open.active>.dropdown-toggle {
+	background: inherit;
+	/* Set to inherit when using mouse hover to open dropdown */
 	color: inherit;
 }
+
 /* Toggle off style */
-.navbar .nav li.dropdown.open.active > .dropdown-toggle,
-.navbar .nav > li.dropdown > a:focus {
+.navbar .nav li.dropdown.open.active>.dropdown-toggle,
+.navbar .nav>li.dropdown>a:focus {
 	background: inherit;
 	color: inherit;
 }
+
 /* Toggle hover */
-.navbar .nav li.dropdown > .dropdown-toggle:hover,
-.navbar .nav li.dropdown.open > .dropdown-toggle:hover {
+.navbar .nav li.dropdown>.dropdown-toggle:hover,
+.navbar .nav li.dropdown.open>.dropdown-toggle:hover {
 	background-color: #dddddd;
 }
 
 /* Toggle caret hover */
-.navbar .nav li.dropdown > a:hover .caret,
-.navbar .nav li.dropdown > a:focus .caret {
+.navbar .nav li.dropdown>a:hover .caret,
+.navbar .nav li.dropdown>a:focus .caret {
 	border-bottom-color: #333;
 	border-top-color: #333;
 }
+
 /* Toggle caret active */
-.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+.navbar .nav li.dropdown.open>.dropdown-toggle .caret,
+.navbar .nav li.dropdown.active>.dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active>.dropdown-toggle .caret {
 	border-bottom-color: #333;
 	border-top-color: #333;
 }
 
 /* Hover style
 ********************************/
-.navbar .nav > li > a,
+.navbar .nav>li>a,
 .mega-menu a {
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -323,12 +347,14 @@ button.navbar-toggle {
 	transition: all 200ms ease;
 
 	/* -webkit-transform: translate3d(0, 0, 0); Webkit Hardware Acceleration*/
-	-webkit-backface-visibility: hidden; /* Safari Flicker Fix #2 */
+	-webkit-backface-visibility: hidden;
+	/* Safari Flicker Fix #2 */
 	-webkit-transform: translateZ(0);
 }
 
-header nav .nav > li > a {
+header nav .nav>li>a {
 	padding: 17px 22px !important;
+
 	@include respond-to(screen-md) {
 		padding: 17px 20px !important;
 	}
@@ -390,6 +416,7 @@ li.has-dropdown:active:after,
 	margin-left: -42% !important;
 	margin-top: 18px !important;
 }
+
 #ccm-motors-header,
 #mobile-header-canvas {
 	font-family: $font-fira;
@@ -398,24 +425,30 @@ li.has-dropdown:active:after,
 	left: 0;
 	right: 0;
 	top: 0;
+
 	.desktop-header {
 		@media (max-width: 991px) {
 			display: none;
 		}
 	}
+
 	.mobile-header {
 		display: none;
+
 		@media (max-width: 991px) {
 			display: block;
+
 			.row {
-				> div {
+				>div {
 					display: flex;
 					align-items: center;
 					justify-content: center;
 				}
+
 				.col-side {
 					flex: 0 0 57px;
 				}
+
 				.logo-box {
 					padding-top: 18px;
 					padding-bottom: 18px;
@@ -428,6 +461,7 @@ li.has-dropdown:active:after,
 			height: 16px;
 			width: 24px;
 			position: relative;
+
 			span {
 				display: block;
 				height: 2px;
@@ -436,22 +470,27 @@ li.has-dropdown:active:after,
 				left: 0;
 				right: 0;
 				transition: 500ms;
+
 				&:nth-child(2) {
 					top: 50%;
 					transform: translateY(-50%);
 				}
+
 				&:last-child {
 					bottom: 0;
 				}
 			}
 		}
 	}
+
 	section.bike-lists-menu {
 		padding-top: 0;
+
 		.col-lg-3 {
 			.menu-right {
 				list-style: none;
 				padding: 0;
+
 				li {
 					a {
 						color: var(--black-color);
@@ -468,6 +507,7 @@ li.has-dropdown:active:after,
 					}
 				}
 			}
+
 			@media (min-width: 992px) {
 				background-color: #f2f2f3;
 				padding: 2vw;
@@ -475,8 +515,8 @@ li.has-dropdown:active:after,
 		}
 
 		.bike-lists-holder {
-			> .row {
-				> [class*="col-"] {
+			>.row {
+				>[class*="col-"] {
 					a {
 						text-decoration: none !important;
 						padding: 3vw;
@@ -485,7 +525,8 @@ li.has-dropdown:active:after,
 						opacity: 0;
 						transform: translateY(100px);
 						position: relative;
-						> div {
+
+						>div {
 							position: relative;
 							z-index: 1;
 						}
@@ -502,18 +543,22 @@ li.has-dropdown:active:after,
 								opacity: 0;
 								transition: 300ms;
 							}
+
 							@include on-event {
 								&:before {
 									opacity: 1;
 								}
+
 								h4 {
 									color: #e22228;
 								}
+
 								img {
 									transform: translateY(-5px);
 								}
 							}
 						}
+
 						@media (max-width: 991px) {
 							display: flex;
 							flex-direction: row-reverse;
@@ -527,6 +572,7 @@ li.has-dropdown:active:after,
 					.image-box {
 						position: relative;
 						padding: 30%;
+
 						img {
 							position: absolute;
 							left: 0;
@@ -536,10 +582,12 @@ li.has-dropdown:active:after,
 							object-fit: cover;
 							transition: 500ms;
 						}
+
 						@media (max-width: 991px) {
 							padding: 5% 7%;
 						}
 					}
+
 					.bike-name {
 						h4 {
 							font-weight: 400 !important;
@@ -551,26 +599,32 @@ li.has-dropdown:active:after,
 			}
 		}
 	}
+
 	.nav-box {
 		.mini-cart {
 			position: static;
-			> a {
+
+			>a {
 				padding: 23px 15px !important;
 			}
+
 			@media (max-width: 991px) {
 				display: none;
 			}
 		}
+
 		.navbar-nav {
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
+
 			@media (max-width: 991px) {
 				flex-direction: column;
 				align-items: flex-start;
 				margin: 0;
 			}
 		}
+
 		ul {
 			li.menu-item {
 				@media (max-width: 991px) {
@@ -578,29 +632,39 @@ li.has-dropdown:active:after,
 					border-bottom: 1px solid #e2e2e2;
 				}
 
-				> a {
+				>a {
 					color: var(--white-color);
 					text-transform: uppercase;
 					font-size: 15px;
 					padding: 25px 15px;
+
 					@media (max-width: 1199px) {
 						padding: 25px 10px;
 					}
+
 					@media (max-width: 991px) {
 						color: var(--black-color);
 						width: 100%;
 						padding: 20px 15px;
 					}
+
 					@include on-event {
 						background-color: #4a4b51;
 						color: var(--white-color) !important;
 					}
+
+					&.dropdown-toggle {
+						@media(max-width: 991px) {}
+					}
 				}
+
 				&:after {
 					content: none !important;
 				}
+
 				&.dropdown {
 					position: static;
+
 					.dropdown-menu {
 						left: 0px;
 						right: 0px;
@@ -616,60 +680,73 @@ li.has-dropdown:active:after,
 						visibility: hidden;
 						opacity: 0;
 						border-radius: 0 !important;
+
 						li.menu-item {
-							> a {
+							>a {
 								color: var(--black-color);
 							}
 						}
+
 						@media(max-width: 991px) {
 							flex-direction: column;
 						}
 					}
+
 					.dropdown-menu {
 						&.show-dropdown {
 							visibility: visible;
 							opacity: 1;
+
 							section.bike-lists-menu {
 								.bike-lists-holder {
-									> .row {
-										> [class*="col-"] {
+									>.row {
+										>[class*="col-"] {
 											a {
 												transform: translateY(0);
 												opacity: 1;
 											}
-											&:nth-child(1) {
-												a {
-													transition-delay: 100ms;
+
+											@media (min-width: 992px) {
+												&:nth-child(1) {
+													a {
+														transition-delay: 100ms;
+													}
 												}
-											}
-											&:nth-child(2) {
-												a {
-													transition-delay: 200ms;
+
+												&:nth-child(2) {
+													a {
+														transition-delay: 200ms;
+													}
 												}
-											}
-											&:nth-child(3) {
-												a {
-													transition-delay: 300ms;
+
+												&:nth-child(3) {
+													a {
+														transition-delay: 300ms;
+													}
 												}
-											}
-											&:nth-child(4) {
-												a {
-													transition-delay: 400ms;
+
+												&:nth-child(4) {
+													a {
+														transition-delay: 400ms;
+													}
 												}
-											}
-											&:nth-child(5) {
-												a {
-													transition-delay: 500ms;
+
+												&:nth-child(5) {
+													a {
+														transition-delay: 500ms;
+													}
 												}
-											}
-											&:nth-child(6) {
-												a {
-													transition-delay: 500ms;
+
+												&:nth-child(6) {
+													a {
+														transition-delay: 500ms;
+													}
 												}
 											}
 										}
 									}
 								}
+
 								.col-lg-3 {
 									.menu-right {
 										li {
@@ -677,19 +754,24 @@ li.has-dropdown:active:after,
 												transform: translateX(0);
 												opacity: 1;
 											}
-											&:nth-child(1) {
-												a {
-													transition-delay: 700ms;
+
+											@media (min-width: 992px) {
+												&:nth-child(1) {
+													a {
+														transition-delay: 700ms;
+													}
 												}
-											}
-											&:nth-child(2) {
-												a {
-													transition-delay: 800ms;
+
+												&:nth-child(2) {
+													a {
+														transition-delay: 800ms;
+													}
 												}
-											}
-											&:nth-child(3) {
-												a {
-													transition-delay: 900ms;
+
+												&:nth-child(3) {
+													a {
+														transition-delay: 900ms;
+													}
 												}
 											}
 										}
@@ -703,6 +785,7 @@ li.has-dropdown:active:after,
 		}
 	}
 }
+
 body {
 	&.show-minicart {
 		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
@@ -710,6 +793,7 @@ body {
 			opacity: 1;
 		}
 	}
+
 	&:not(.show-minicart) {
 		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
 			visibility: hidden;
@@ -723,9 +807,11 @@ body {
 	width: 100%;
 	height: calc(100vh - 70px);
 	background-color: var(--white-color);
+
 	@media (max-width: 991px) {
 		display: block !important;
 	}
+
 	.min-cart-header {
 		font-family: $font-fira;
 		padding: 20px;
@@ -741,6 +827,7 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		.close-mini-cart {
 			svg {
 				width: 30px;
@@ -749,6 +836,7 @@ body {
 			}
 		}
 	}
+
 	.woocommerce-mini-cart {
 		.name-price-quantity {
 			.name-price {
@@ -756,18 +844,22 @@ body {
 				justify-content: space-between;
 				text-transform: uppercase;
 				font-size: 16px;
+
 				span:last-child {
 					padding-left: 20px;
 				}
 			}
 		}
+
 		.qty {
 			font-weight: 300;
 			font-size: 15px;
+
 			span {
 				font-weight: 400;
 			}
 		}
+
 		a {
 			font-size: 16px;
 			font-weight: 400;
@@ -775,6 +867,7 @@ body {
 			text-decoration: none;
 		}
 	}
+
 	.woocommerce-mini-cart__total {
 		position: absolute;
 		left: 0;
@@ -788,13 +881,16 @@ body {
 		text-transform: uppercase;
 		font-weight: 500;
 		font-size: 15px;
+
 		.woocommerce-Price-amount {
 			font-weight: 500;
 		}
+
 		strong {
 			font-weight: 500;
 		}
 	}
+
 	.woocommerce-mini-cart__buttons {
 		position: absolute;
 		bottom: 0;
@@ -802,6 +898,7 @@ body {
 		right: 0;
 		padding: 20px;
 		background-color: #f2f2f3;
+
 		.button {
 			font-size: 16px;
 			text-transform: uppercase;
@@ -810,17 +907,21 @@ body {
 			font-weight: 400;
 			padding: 15px;
 			line-height: 1;
+
 			&:first-child {
 				background-color: transparent;
 				color: var(--black-color);
 				border: 1px solid;
+
 				@include on-event {
 					background-color: var(--black-color) !important;
 					color: var(--white-color);
 				}
 			}
+
 			&.checkout {
 				border: 1px solid #e22228;
+
 				@include on-event {
 					background-color: var(--black-color) !important;
 					border: 1px solid var(--black-color);
@@ -828,24 +929,29 @@ body {
 			}
 		}
 	}
+
 	@media (max-width: 991px) {
 		@include offcanvas-style;
 	}
 }
+
 body {
 	&.mobile-header-active {
 		#mobile-header-canvas {
 			transform: translateX(0);
 		}
+
 		.mobile-menu-toggle {
 			span {
 				&:nth-child(2) {
 					opacity: 0;
 				}
+
 				&:first-child {
 					top: 5px;
 					transform: rotate(45deg);
 				}
+
 				&:last-child {
 					top: 5px;
 					transform: rotate(-45deg);
@@ -853,6 +959,7 @@ body {
 			}
 		}
 	}
+
 	&.show-minicart {
 		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
 			transform: translateX(0);
@@ -862,6 +969,7 @@ body {
 
 #mobile-header-canvas {
 	display: none;
+
 	@media (max-width: 991px) {
 		@include offcanvas-style;
 	}
