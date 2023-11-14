@@ -7414,7 +7414,8 @@ li.has-dropdown:active:after,
           display: flex;
           flex-direction: row-reverse;
           align-items: center;
-          justify-content: flex-end; } }
+          justify-content: flex-end;
+          border-bottom: 1px solid #e2e2e2; } }
     #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box,
     #mobile-header-canvas section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box {
       position: relative;
