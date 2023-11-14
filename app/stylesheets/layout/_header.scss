@@ -435,7 +435,7 @@ li.has-dropdown:active:after,
 				position: absolute;
 				left: 0;
 				right: 0;
-				transform: 500ms;
+				transition: 500ms;
 				&:nth-child(2) {
 					top: 50%;
 					transform: translateY(-50%);
@@ -813,11 +813,12 @@ body {
 					opacity: 0;
 				}
 				&:first-child {
-					transform: rotate(45deg);
+					top: 50%;
+					transform: rotate(45deg) translateY(-50%);
 				}
 				&:last-child {
-					transform: rotate(-45deg);
-					top: 0;
+					top: 50%;
+					transform: rotate(-45deg) translateY(-50%);
 				}
 			}
 		}

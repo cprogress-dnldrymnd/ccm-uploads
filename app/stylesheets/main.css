@@ -7337,7 +7337,7 @@ li.has-dropdown:active:after,
         position: absolute;
         left: 0;
         right: 0;
-        transform: 500ms; }
+        transition: 500ms; }
         #ccm-motors-header .mobile-header .mobile-menu-toggle span:nth-child(2),
         #mobile-header-canvas .mobile-header .mobile-menu-toggle span:nth-child(2) {
           top: 50%;
@@ -7633,9 +7633,9 @@ body.mobile-header-active #mobile-header-canvas {
 body.mobile-header-active .mobile-menu-toggle span:nth-child(2) {
   opacity: 0; }
 body.mobile-header-active .mobile-menu-toggle span:first-child {
-  transform: rotate(45deg); }
+  transform: rotate(45deg) translateY(-50%); }
 body.mobile-header-active .mobile-menu-toggle span:last-child {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translateY(-50%);
   top: 0; }
 
 #mobile-header-canvas {
