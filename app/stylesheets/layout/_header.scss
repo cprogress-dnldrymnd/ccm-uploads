@@ -420,6 +420,11 @@ li.has-dropdown:active:after,
 				}
 				&.dropdown {
 					position: static;
+					&.open {
+						.dropdown-menu {
+							display: block;
+						}
+					}
 					.dropdown-menu {
 						left: 0px;
 						right: 0px;
