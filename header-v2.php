@@ -446,7 +446,16 @@ $template = get_page_template_slug();
                 </div>
                 <div class="mobile-header">
                     <div class="row">
-
+                        <div class="col-auto">
+                            <div class="mini-cart">
+                                
+                            </div>
+                        </div>
+                        <div class="col logo-box">
+                            <a href="<?= get_site_url() ?>">
+                                <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="CCM-Logo">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="widget_shopping_cart_content display-none">

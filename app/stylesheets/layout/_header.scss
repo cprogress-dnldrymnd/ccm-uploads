@@ -482,8 +482,14 @@ li.has-dropdown:active:after,
 	.nav-box {
 		.mini-cart {
 			position: static;
+			a {
+				padding: 20px 15px;
+			}
 		}
 		ul {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
 			li.menu-item {
 				> a {
 					color: var(--white-color);
