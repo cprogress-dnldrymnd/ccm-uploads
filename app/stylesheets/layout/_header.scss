@@ -413,6 +413,7 @@ li.has-dropdown:active:after,
 						font-weight: 500;
 						transition: 500ms;
 						transform: translateX(100%);
+						display: inline-block;
 					}
 					&:nth-child(1) {
 						a {
