@@ -8,7 +8,7 @@ jQuery(document).ready(function () {
 		jQuery('.nav-box').removeClass('col-auto').appendTo('.mobile-header-canvas');
 
 		jQuery('.col-side-toggle').click(function (e) { 
-			jQuery('.mobile-header-canvas').toggleClass('mobile-header-active');
+			jQuery('body').toggleClass('mobile-header-active');
 			e.preventDefault();
 			
 		});
