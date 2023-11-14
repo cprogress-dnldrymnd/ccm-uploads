@@ -7437,7 +7437,7 @@ li.has-dropdown:active:after,
     font-weight: 500;
     font-size: 15px; }
     .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__total .woocommerce-Price-amount {
-      font-size: 500; }
+      font-weight: 500; }
     .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__total strong {
       font-weight: 500; }
   .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__buttons {
