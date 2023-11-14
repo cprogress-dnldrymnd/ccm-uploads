@@ -414,6 +414,7 @@ li.has-dropdown:active:after,
 						transition: 500ms;
 						transform: translateX(100%);
 						display: inline-block;
+						opacity: 0;
 					}
 
 					&:not(:last-child) {
