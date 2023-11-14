@@ -7422,7 +7422,8 @@ li.has-dropdown:active:after,
   .woocommerce-mini-cart__buttons .button {
     font-size: 16px;
     text-transform: uppercase;
-    text-align: center; }
+    text-align: center;
+    text-decoration: none; }
     .woocommerce-mini-cart__buttons .button:first-child {
       background-color: transparent;
       color: var(--black-color);
@@ -7433,7 +7434,8 @@ li.has-dropdown:active:after,
     .woocommerce-mini-cart__buttons .button.checkout {
       border: 1px solid #e22228; }
       .woocommerce-mini-cart__buttons .button.checkout:hover, .woocommerce-mini-cart__buttons .button.checkout:active, .woocommerce-mini-cart__buttons .button.checkout:focus {
-        background-color: var(--black-color) !important; }
+        background-color: var(--black-color) !important;
+        border: 1px solid var(--black-color); }
 
 footer {
   position: relative;
