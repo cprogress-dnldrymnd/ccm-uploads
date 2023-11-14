@@ -501,7 +501,7 @@ li.has-dropdown:active:after,
 		.mini-cart {
 			position: static;
 			@include on-event {
-				& + .widget_shopping_cart_content {
+				.widget_shopping_cart_content {
 					visibility: hidden;
 					opacity: 0;
 				}
