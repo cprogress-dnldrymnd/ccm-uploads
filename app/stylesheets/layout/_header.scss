@@ -398,9 +398,16 @@ li.has-dropdown:active:after,
 	left: 0;
 	right: 0;
 	top: 0;
-
-	section.bike-lists {
+	
+	section.bike-lists-menu {
 		padding-top: 0;
+		.bikes {
+			> .row {
+				> [class*="col-"] {
+					
+				}
+			}
+		}
 	}
 	.nav-box {
 		ul {

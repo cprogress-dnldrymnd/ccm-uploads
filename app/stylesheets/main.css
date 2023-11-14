@@ -7299,7 +7299,7 @@ li.has-dropdown:active:after,
   left: 0;
   right: 0;
   top: 0; }
-  #ccm-motors-header section.bike-lists {
+  #ccm-motors-header section.bike-lists-menu {
     padding-top: 0; }
   #ccm-motors-header .nav-box ul li a {
     color: var(--white-color);
