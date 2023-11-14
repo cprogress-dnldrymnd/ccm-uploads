@@ -572,8 +572,8 @@ function bike_lists_menu()
 {
 	ob_start();
 	$bikes_categ = carbon_get_post_meta(14442, 'motorcycles');
-	?>
-	<section class="bike-lists bt-5">
+?>
+	<section class="bike-lists bike-lists-menu bt-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9">
@@ -587,25 +587,17 @@ function bike_lists_menu()
 									<?php
 									foreach ($categ['bikes'] as $bike) {
 									?>
-										<div class="col-lg-3 <?= $bike['bike_name'] ?>">
+										<div class="col-lg-4 <?= $bike['bike_name'] ?>">
 											<div class="column-holder">
-												<div class="row flex-row">
-													<div class="col-lg-12 col-half-mobile">
-														<div class="image-box">
-															<img src="<?= $bike['bike_image'] ?>" alt="<?= $bike['bike_name'] ?>">
-														</div>
+
+												<a href="<?= $bike['configure_link'] ? $bike['configure_link'] : '#'  ?>">
+													<div class="bike-name">
+														<h4><?= $bike['bike_name'] ?></h4>
 													</div>
-													<div class="col-lg-12 col-half-mobile">
-														<div class="bike-name-price d-flex ">
-															<div class="bike-name">
-																<h4><?= $bike['bike_name'] ?></h4>
-															</div>
-															<div class="bike-price">
-																<span><?= $bike['bike_price'] ?></span>
-															</div>
-														</div>
+													<div class="image-box">
+														<img src="<?= $bike['bike_image'] ?>" alt="<?= $bike['bike_name'] ?>">
 													</div>
-												</div>
+												</a>
 											</div>
 										</div>
 									<?php } ?>
