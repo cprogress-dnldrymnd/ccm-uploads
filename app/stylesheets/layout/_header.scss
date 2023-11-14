@@ -669,7 +669,19 @@ li.has-dropdown:active:after,
 					}
 
 					&.dropdown-toggle {
-						@media(max-width: 991px) {}
+						@media(max-width: 991px) {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							&:after {
+								content: '';
+								display: inline-block;
+								width: 12px;
+								height: 12px;
+								border: 2px solid var(--black-color);
+								transform: rotate(45deg);
+							}
+						}
 					}
 				}
 
@@ -988,7 +1000,7 @@ body {
 
 #mobile-header-canvas {
 	display: none;
-
+	overflow: auto;
 	@media (max-width: 991px) {
 		@include offcanvas-style;
 	}

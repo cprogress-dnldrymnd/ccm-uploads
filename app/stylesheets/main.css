@@ -7503,6 +7503,19 @@ li.has-dropdown:active:after,
     #mobile-header-canvas .nav-box ul li.menu-item > a:focus {
       background-color: #4a4b51;
       color: var(--white-color) !important; }
+    @media (max-width: 991px) {
+      #ccm-motors-header .nav-box ul li.menu-item > a.dropdown-toggle,
+      #mobile-header-canvas .nav-box ul li.menu-item > a.dropdown-toggle {
+        display: flex;
+        justify-content: space-between; }
+        #ccm-motors-header .nav-box ul li.menu-item > a.dropdown-toggle:after,
+        #mobile-header-canvas .nav-box ul li.menu-item > a.dropdown-toggle:after {
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border: 2px solid var(--black-color);
+          transform: rotate(45deg); } }
   #ccm-motors-header .nav-box ul li.menu-item:after,
   #mobile-header-canvas .nav-box ul li.menu-item:after {
     content: none !important; }
@@ -7698,7 +7711,8 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
   transform: translateX(0); }
 
 #mobile-header-canvas {
-  display: none; }
+  display: none;
+  overflow: auto; }
   @media (max-width: 991px) {
     #mobile-header-canvas {
       display: block;
