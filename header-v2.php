@@ -446,15 +446,24 @@ $template = get_page_template_slug();
                 </div>
                 <div class="mobile-header">
                     <div class="row justify-content-between">
-                        <div class="col-auto">
-                            <div class="mini-cart">
-
+                        <div class="col-auto col-side">
+                            <div class="mini-cart-mobile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23.112" height="18.85" viewBox="0 0 23.112 18.85">
+                                    <g id="cart" transform="translate(0.85 0.85)">
+                                        <path id="Path_1" data-name="Path 1" d="M2.832,4.387h.6A2.275,2.275,0,0,1,5.61,5.722l3.573,9.624a2.275,2.275,0,0,0,2.182,1.335h8.121a2.3,2.3,0,0,0,2.148-1.252l2.378-5.49c.8-1.848-.852-3.8-3.222-3.8H11.962" transform="translate(-2.832 -4.387)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="round" stroke-width="1.7" />
+                                        <circle id="Ellipse_1" data-name="Ellipse 1" cx="1.712" cy="1.712" r="1.712" transform="translate(6.847 14.576)" fill="#fff" />
+                                        <circle id="Ellipse_2" data-name="Ellipse 2" cx="1.712" cy="1.712" r="1.712" transform="translate(14.836 14.576)" fill="#fff" />
+                                    </g>
+                                </svg>
                             </div>
                         </div>
                         <div class="col logo-box">
                             <a href="<?= get_site_url() ?>">
                                 <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="CCM-Logo">
                             </a>
+                        </div>
+                        <div class="col-auto col-side">
+
                         </div>
                     </div>
                 </div>

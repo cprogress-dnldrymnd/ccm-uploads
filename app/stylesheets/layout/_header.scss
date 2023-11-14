@@ -408,6 +408,11 @@ li.has-dropdown:active:after,
 			display: block;
 			padding-top: 18px;
 			padding-bottom: 18px;
+			.row {
+				.col-side {
+					flex: 0 0 57px;
+				}
+			}
 		}
 	}
 	section.bike-lists-menu {
