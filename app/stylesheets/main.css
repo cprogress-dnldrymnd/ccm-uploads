@@ -7634,7 +7634,8 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
   max-width: 525px;
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: var(--white-color); }
+  background-color: var(--white-color);
+  font-family: "Fira Sans Condensed", sans-serif; }
   @media (max-width: 991px) {
     .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
       display: block !important; } }
@@ -7730,7 +7731,6 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
       z-index: 9999;
       transition: 500ms;
       transform: translateX(-100%);
-      height: auto;
       height: auto; } }
 
 body.mobile-header-active #mobile-header-canvas {
