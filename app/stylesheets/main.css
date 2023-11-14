@@ -7457,6 +7457,7 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
     margin-top: -15px;
     margin-left: -15px;
     margin-right: -15px;
+    margin-bottom: 20px;
     font-size: 16px;
     font-weight: 500;
     display: flex;
@@ -7511,7 +7512,9 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
       font-size: 16px;
       text-transform: uppercase;
       text-align: center;
-      text-decoration: none; }
+      text-decoration: none;
+      font-weight: 400;
+      padding: 15px; }
       .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content .woocommerce-mini-cart__buttons .button:first-child {
         background-color: transparent;
         color: var(--black-color);
