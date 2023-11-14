@@ -9,8 +9,10 @@ jQuery(document).ready(function () {
 			function () {
 				jQuery('body').addClass('overlay');
 			}, function () {
-				jQuery('body').removeClass('overlay');
-				jQuery('.dropdown-menu').removeClass('show-dropdown');
+				if (jQuery('.show-dropdown').length > 0) {
+					jQuery('body').removeClass('overlay');
+					jQuery('.dropdown-menu').removeClass('show-dropdown');
+				}
 			}
 		);
 
