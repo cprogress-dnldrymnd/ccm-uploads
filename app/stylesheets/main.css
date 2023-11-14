@@ -7321,6 +7321,8 @@ li.has-dropdown:active:after,
       bottom: auto;
       overflow: hidden;
       padding: 0; }
+      #ccm-motors-header .nav-box ul li.dropdown .dropdown-menu li a {
+        color: var(--black-color); }
 
 footer {
   position: relative;
