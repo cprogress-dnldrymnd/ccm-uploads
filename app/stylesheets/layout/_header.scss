@@ -621,6 +621,9 @@ li.has-dropdown:active:after,
 								color: var(--black-color);
 							}
 						}
+						@media(max-width: 991px) {
+							flex-direction: column;
+						}
 					}
 					.dropdown-menu {
 						&.show-dropdown {

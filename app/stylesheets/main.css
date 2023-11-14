@@ -7513,6 +7513,10 @@ li.has-dropdown:active:after,
       #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu li.menu-item > a,
       #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu li.menu-item > a {
         color: var(--black-color); }
+      @media (max-width: 991px) {
+        #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu,
+        #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu {
+          flex-direction: column; } }
     #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown,
     #mobile-header-canvas .nav-box ul li.menu-item.dropdown .dropdown-menu.show-dropdown {
       visibility: visible;
