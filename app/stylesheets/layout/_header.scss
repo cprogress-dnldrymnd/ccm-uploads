@@ -541,6 +541,9 @@ li.has-dropdown:active:after,
 			> a {
 				padding: 23px 15px !important;
 			}
+			@media(max-width: 991px) {
+				display: none;
+			}
 		}
 		.navbar-nav {
 			display: flex;
