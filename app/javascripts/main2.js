@@ -17,11 +17,11 @@ jQuery(document).ready(function () {
 
 		jQuery('.dropdown-toggle').click(function (e) {
 			jQuery('.dropdown-toggle').not(this).each(function () {
-				jQuery(this).next().removeClass('show-dropdown');
+				jQuery(this).next().toggleClass('show-dropdown');
 			});
-			jQuery('.overlay').removeClass('show-minicart');
-			jQuery(this).next().addClass('show-dropdown');
-			jQuery('.overlay').addClass('show-overlay');
+			jQuery('.overlay').toggleClass('show-minicart');
+			jQuery(this).next().toggleClass('show-dropdown');
+			jQuery('.overlay').toggleClass('show-overlay');
 			e.preventDefault();
 		});
 
