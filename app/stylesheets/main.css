@@ -7677,6 +7677,8 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
 
 body.mobile-header-active #mobile-header-canvas {
   transform: translateX(0); }
+body.mobile-header-active .col-side-toggle {
+  background-color: #4A4B51; }
 body.mobile-header-active .mobile-menu-toggle span:nth-child(2) {
   opacity: 0; }
 body.mobile-header-active .mobile-menu-toggle span:first-child {

@@ -448,12 +448,15 @@ li.has-dropdown:active:after,
 				.col-side {
 					flex: 0 0 57px;
 				}
+
 				.col-side-toggle {
 					transition: 500ms;
+
 					@include on-event {
 						background-color: #4A4B51;
 					}
 				}
+
 				.logo-box {
 					padding-top: 18px;
 					padding-bottom: 18px;
@@ -944,6 +947,10 @@ body {
 	&.mobile-header-active {
 		#mobile-header-canvas {
 			transform: translateX(0);
+		}
+
+		.col-side-toggle {
+			background-color: #4A4B51;
 		}
 
 		.mobile-menu-toggle {
