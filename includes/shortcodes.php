@@ -576,34 +576,29 @@ function bike_lists_menu()
 	<section class="bike-lists-menu bt-5">
 		<div class="container-fluid g-0">
 			<div class="row">
-				<div class="col-lg-9">
-					<div class="bike-lists-holder">
-						<div class="bikes">
-							<div class="row">
-								<?php foreach ($bikes_categ as $categ) { ?>
-									<?php
-									foreach ($categ['bikes'] as $bike) {
-										$bike_image_url = $bike['bike_image'];
-										$bike_image_id = attachment_url_to_postid($bike_image_url);
-										$image = wp_get_attachment_image_url($bike_image_id, 'large');
-									?>
-										<div class="col-lg-4 <?= $bike['bike_name'] ?>">
-											<div class="column-holder text-center">
-												<a href="<?= $bike['configure_link'] ? $bike['configure_link'] : '#'  ?>">
-													<div class="bike-name">
-														<h4><?= $bike['bike_name'] ?></h4>
-													</div>
-													<div class="image-box">
-														<img src="<?= $image ?>" alt="<?= $bike['bike_name'] ?>">
-													</div>
-												</a>
+				<div class="col-lg-9 bike-lists-holder">
+					<div class="row bikes">
+						<?php foreach ($bikes_categ as $categ) { ?>
+							<?php
+							foreach ($categ['bikes'] as $bike) {
+								$bike_image_url = $bike['bike_image'];
+								$bike_image_id = attachment_url_to_postid($bike_image_url);
+								$image = wp_get_attachment_image_url($bike_image_id, 'large');
+							?>
+								<div class="col-lg-4 <?= $bike['bike_name'] ?>">
+									<div class="column-holder text-center">
+										<a href="<?= $bike['configure_link'] ? $bike['configure_link'] : '#'  ?>">
+											<div class="bike-name">
+												<h4><?= $bike['bike_name'] ?></h4>
 											</div>
-										</div>
-									<?php } ?>
-								<?php } ?>
-
-							</div>
-						</div>
+											<div class="image-box">
+												<img src="<?= $image ?>" alt="<?= $bike['bike_name'] ?>">
+											</div>
+										</a>
+									</div>
+								</div>
+							<?php } ?>
+						<?php } ?>
 					</div>
 				</div>
 				<div class="col-lg-3">

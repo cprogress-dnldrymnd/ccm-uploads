@@ -404,8 +404,11 @@ li.has-dropdown:active:after,
 		.col-lg-3 {
 			background-color: #f2f2f3;
 		}
-		.bikes {
+
+		.bike-lists-holder {
 			> .row {
+				--bs-gutter-x: 4rem;
+				--bs-gutter-y: 4rem;
 				> [class*="col-"] {
 					a {
 						text-decoration: none !important;
