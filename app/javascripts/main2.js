@@ -5,10 +5,14 @@ jQuery(document).ready(function () {
 	utm_parameters();
 
 	jQuery('.mini-cart a, .col-side-minicart').click(function (e) {
-		jQuery('body').addClass('show-minicart');
-		jQuery('.overlay').addClass('show-overlay');
+		jQuery('body').toggleClass('show-minicart');
+		jQuery('.overlay').toggleClass('show-overlay');
 		e.preventDefault();
 	});
+
+	
+
+	mini-cart-mobile
 	jQuery(document).on("click", '.close-mini-cart', function (event) {
 		jQuery('body').removeClass('show-minicart');
 		jQuery('.overlay').removeClass('show-overlay');
