@@ -7302,22 +7302,22 @@ li.has-dropdown:active:after,
   #ccm-motors-header section.bike-lists-menu {
     padding-top: 0; }
     #ccm-motors-header section.bike-lists-menu .col-lg-3 {
-      background-color: #F2F2F3; }
-  #ccm-motors-header .nav-box ul li a.menu-item {
+      background-color: #f2f2f3; }
+  #ccm-motors-header .nav-box ul li.menu-item > a {
     color: var(--white-color);
     text-transform: uppercase;
     font-size: 15px;
     padding: 25px 15px; }
-    #ccm-motors-header .nav-box ul li a.menu-item:hover, #ccm-motors-header .nav-box ul li a.menu-item:active, #ccm-motors-header .nav-box ul li a.menu-item:focus {
+    #ccm-motors-header .nav-box ul li.menu-item > a:hover, #ccm-motors-header .nav-box ul li.menu-item > a:active, #ccm-motors-header .nav-box ul li.menu-item > a:focus {
       background-color: #4a4b51;
       color: var(--white-color); }
-  #ccm-motors-header .nav-box ul li:after {
+  #ccm-motors-header .nav-box ul li.menu-item:after {
     content: none !important; }
-  #ccm-motors-header .nav-box ul li.dropdown {
+  #ccm-motors-header .nav-box ul li.menu-item.dropdown {
     position: static; }
-    #ccm-motors-header .nav-box ul li.dropdown.open .dropdown-menu {
+    #ccm-motors-header .nav-box ul li.menu-item.dropdown.open .dropdown-menu {
       display: flex !important; }
-    #ccm-motors-header .nav-box ul li.dropdown .dropdown-menu {
+    #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu {
       left: 0px;
       right: 0px;
       height: calc(100vh - 100px);
@@ -7326,7 +7326,7 @@ li.has-dropdown:active:after,
       bottom: auto;
       overflow: hidden;
       padding: 0; }
-      #ccm-motors-header .nav-box ul li.dropdown .dropdown-menu li a {
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu li.menu-item > a {
         color: var(--black-color); }
 
 footer {
