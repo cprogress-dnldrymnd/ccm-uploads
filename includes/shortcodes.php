@@ -594,7 +594,7 @@ function bike_lists_menu()
 														<h4><?= $bike['bike_name'] ?></h4>
 													</div>
 													<div class="image-box">
-														<img src="<?=  ?>" alt="<?= $bike['bike_name'] ?>">
+														<img src="<?= $bike_image_id ?>" alt="<?= $bike['bike_name'] ?>">
 													</div>
 												</a>
 											</div>
