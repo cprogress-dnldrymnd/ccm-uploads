@@ -707,6 +707,14 @@ li.has-dropdown:active:after,
 								border-bottom: 2px solid var(--black-color);
 								transform: rotate(-45deg);
 							}
+
+							&[aria-expanded="true"] {
+								flex-direction: row-reverse;
+
+								&::after {
+									transform: rotate(45deg);
+								}
+							}
 						}
 					}
 				}

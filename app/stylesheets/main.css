@@ -7539,7 +7539,13 @@ li.has-dropdown:active:after,
           height: 12px;
           border-left: 2px solid var(--black-color);
           border-bottom: 2px solid var(--black-color);
-          transform: rotate(-45deg); } }
+          transform: rotate(-45deg); }
+        #ccm-motors-header .nav-box ul li.menu-item > a.dropdown-toggle[aria-expanded="true"],
+        #mobile-header-canvas .nav-box ul li.menu-item > a.dropdown-toggle[aria-expanded="true"] {
+          flex-direction: row-reverse; }
+          #ccm-motors-header .nav-box ul li.menu-item > a.dropdown-toggle[aria-expanded="true"]::after,
+          #mobile-header-canvas .nav-box ul li.menu-item > a.dropdown-toggle[aria-expanded="true"]::after {
+            transform: rotate(-45deg); } }
   #ccm-motors-header .nav-box ul li.menu-item:after,
   #mobile-header-canvas .nav-box ul li.menu-item:after {
     content: none !important; }
