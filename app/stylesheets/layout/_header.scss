@@ -412,6 +412,7 @@ li.has-dropdown:active:after,
 						font-size: 15px;
 						font-weight: 500;
 						transition: 500ms;
+						transform: translateX(100%);
 					}
 					&:nth-child(1) {
 						a {
@@ -553,6 +554,16 @@ li.has-dropdown:active:after,
 										a {
 											transform: translateY(0);
 											opacity: 1;
+										}
+									}
+								}
+							}
+							.col-lg-3 {
+								background-color: #f2f2f3;
+								.menu-right {
+									li {
+										a {
+											transform: translateX(0);
 										}
 									}
 								}
