@@ -657,6 +657,14 @@ li.has-dropdown:active:after,
 		margin-right: -15px;
 		font-size: 16px;
 		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		svg {
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+		}
 	}
 	.woocommerce-mini-cart {
 		.name-price-quantity {
