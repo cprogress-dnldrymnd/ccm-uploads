@@ -611,12 +611,16 @@ li.has-dropdown:active:after,
 	}
 	.woocommerce-mini-cart {
 		.name-price-quantity {
-			display: flex;
-			justify-content: space-between;
-			text-transform: uppercase;
+			.name-price {
+				display: flex;
+				justify-content: space-between;
+				text-transform: uppercase;
+				font-size: 16px;
+			}
 		}
 		.qty {
 			font-weight: 300;
+			font-size: 15px;
 			span {
 				font-weight: 400;
 			}
