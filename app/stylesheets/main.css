@@ -7319,7 +7319,8 @@ li.has-dropdown:active:after,
         object-fit: cover; }
     #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4 {
       font-weight: 300 !important;
-      font-style: normal !important; }
+      font-style: normal !important;
+      margin-top: 0 !important; }
   #ccm-motors-header .nav-box ul li.menu-item > a {
     color: var(--white-color);
     text-transform: uppercase;
