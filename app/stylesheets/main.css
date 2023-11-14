@@ -7406,11 +7406,34 @@ li.has-dropdown:active:after,
         #ccm-motors-header .nav-box ul li.menu-item.dropdown:hover .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:active .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a, #ccm-motors-header .nav-box ul li.menu-item.dropdown:focus .dropdown-menu section.bike-lists-menu .col-lg-3 .menu-right li:nth-child(3) a {
           transition-delay: 900ms; }
 
-.widget_shopping_cart_content.widget_shopping_cart_content {
+.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   max-width: 525px;
   width: 100%;
   height: calc(100vh - 70px);
   background-color: var(--white-color); }
+
+.woocommerce-mini-cart__buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #f2f2f3; }
+  .woocommerce-mini-cart__buttons .button {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center; }
+    .woocommerce-mini-cart__buttons .button.wc-forward {
+      background-color: transparent;
+      color: var(--black-color);
+      border: 1px solid; }
+      .woocommerce-mini-cart__buttons .button.wc-forward:hover, .woocommerce-mini-cart__buttons .button.wc-forward:active, .woocommerce-mini-cart__buttons .button.wc-forward:focus {
+        background-color: var(--black-color) !important;
+        color: var(--white-color); }
+    .woocommerce-mini-cart__buttons .button.checkout {
+      border: 1px solid #e22228; }
+      .woocommerce-mini-cart__buttons .button.checkout:hover, .woocommerce-mini-cart__buttons .button.checkout:active, .woocommerce-mini-cart__buttons .button.checkout:focus {
+        background-color: var(--black-color) !important; }
 
 footer {
   position: relative;
