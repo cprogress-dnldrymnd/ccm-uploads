@@ -7564,7 +7564,8 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
       top: 57px;
       left: 0;
       bottom: 0;
-      width: 100%; } }
+      width: 100%;
+      background-color: var(--white-color); } }
 
 footer {
   position: relative;
