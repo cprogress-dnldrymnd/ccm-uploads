@@ -463,7 +463,7 @@ $template = get_page_template_slug();
                                     <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="CCM-Logo">
                                 </a>
                             </div>
-                            <div class="col-auto col-side">
+                            <div class="col-auto col-side col-side-toggle">
                                 <div class="mobile-menu-toggle">
                                     <span></span>
                                     <span></span>

@@ -416,6 +416,11 @@ li.has-dropdown:active:after,
 				}
 			}
 		}
+		.col-side-toggle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 		.mobile-menu-toggle {
 			display: inline-block;
 			height: 16px;
