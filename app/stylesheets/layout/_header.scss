@@ -531,9 +531,13 @@ li.has-dropdown:active:after,
 				}
 				&.dropdown {
 					position: static;
-					&.open {
+					&.dropdown-menu {
+						display: flex !important;
+						visibility: hidden;
+						opacity: 0;
 						.dropdown-menu {
-							display: flex !important;
+							visibility: visible;
+							opacity: 1;
 						}
 					}
 					.dropdown-menu {

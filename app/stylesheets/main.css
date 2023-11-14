@@ -7373,8 +7373,13 @@ li.has-dropdown:active:after,
     content: none !important; }
   #ccm-motors-header .nav-box ul li.menu-item.dropdown {
     position: static; }
-    #ccm-motors-header .nav-box ul li.menu-item.dropdown.open .dropdown-menu {
-      display: flex !important; }
+    #ccm-motors-header .nav-box ul li.menu-item.dropdown.dropdown-menu {
+      display: flex !important;
+      visibility: hidden;
+      opacity: 0; }
+      #ccm-motors-header .nav-box ul li.menu-item.dropdown.dropdown-menu .dropdown-menu {
+        visibility: visible;
+        opacity: 1; }
     #ccm-motors-header .nav-box ul li.menu-item.dropdown .dropdown-menu {
       left: 0px;
       right: 0px;
