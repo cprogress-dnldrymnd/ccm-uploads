@@ -29,9 +29,8 @@ jQuery(document).ready(function () {
 		});
 
 
-		jQuery('.close-mini-cart').click(function (e) {
+		jQuery(document).on("click", '.close-mini-cart', function (event) {
 			jQuery('body').removeClass('overlay show-minicart');
-			e.preventDefault();
 		});
 
 
