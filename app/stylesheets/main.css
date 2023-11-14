@@ -7454,7 +7454,7 @@ li.has-dropdown:active:after,
         #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4,
         #mobile-header-canvas section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4 {
           margin-bottom: 0;
-          margin-left: 20px; } }
+          margin-left: 25px; } }
   #ccm-motors-header .nav-box .mini-cart,
   #mobile-header-canvas .nav-box .mini-cart {
     position: static; }
