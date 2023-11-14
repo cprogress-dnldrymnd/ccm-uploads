@@ -9,6 +9,7 @@ jQuery(document).ready(function () {
 			function () {
 				jQuery('.overlay').removeClass('show-overlay');
 				jQuery('.dropdown-menu').removeClass('show-dropdown');
+				jQuery('body').removeClass('show-minicart');
 			}, function () {
 			}
 		);
