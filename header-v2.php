@@ -442,6 +442,10 @@ $template = get_page_template_slug();
                         </div>
                     </div>
                 </div>
+                <div class="widget_shopping_cart_content display-none">
+                    <div class="heading">YOUR CART</div>
+                    <?php woocommerce_mini_cart(); ?>
+                </div>
             </header>
         <?php } ?>
     <?php } ?>
