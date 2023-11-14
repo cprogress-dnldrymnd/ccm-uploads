@@ -531,11 +531,8 @@ li.has-dropdown:active:after,
 				}
 				&.dropdown {
 					position: static;
-					&.dropdown-menu {
-						display: flex !important;
-						visibility: hidden;
-						opacity: 0;
-						&.show-dropdown {
+					&.show-dropdown {
+						&.dropdown-menu {
 							visibility: visible;
 							opacity: 1;
 						}
@@ -551,7 +548,9 @@ li.has-dropdown:active:after,
 						padding: 0;
 						border: none;
 						box-shadow: none;
-
+						display: flex !important;
+						visibility: hidden;
+						opacity: 0;
 						section.bike-lists-menu {
 							.bike-lists-holder {
 								> .row {
