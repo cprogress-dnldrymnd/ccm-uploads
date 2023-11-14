@@ -7313,7 +7313,8 @@ li.has-dropdown:active:after,
           font-weight: 500;
           transition: 500ms;
           transform: translateX(100%);
-          display: inline-block; }
+          display: inline-block;
+          opacity: 0; }
         #ccm-motors-header section.bike-lists-menu .col-lg-3 .menu-right li:not(:last-child) {
           margin-bottom: 20px; }
     #ccm-motors-header section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
