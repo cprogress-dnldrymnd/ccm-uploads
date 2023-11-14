@@ -3161,7 +3161,101 @@ i {
 
 .mini-cart {
 	position: relative;
+	.widget_shopping_cart_content {
+		position: absolute;
+		right: 0;
+		background-color: #efefef;
+		padding: 15px;
+		width: 330px;
+		opacity: 0;
+		-webkit-transition: 300ms;
+		-moz-transition: 300ms;
+		-ms-transition: 300ms;
+		-o-transition: 300ms;
+		transition: 300ms;
+		visibility: hidden;
+		ul.woocommerce-mini-cart {
+			padding-left: 0;
+			li  {
+				a {
+					font-family: "Fira Sans Condensed", sans-serif !important;
+					display: block;
+					text-align: left;
+					font-size: 14px;
+					font-weight: bold;
+					img {
+						float: left !important;
+						width: 50px !important;
+						margin-right: 10px;
+						margin-left: 0 !important;
+						height: auto;
+						max-height: 60px;
+					}
+				}
+				.quantity {
+					text-align: left;
+					display: block;
+					font-size: 14px;
+					font-weight: 600;
+					font-family: "Fira Sans Condensed", sans-serif !important;
 
+					.woocommerce-Price-amount  {
+						&.amount {
+							font-size: 14px !important;
+						}
+					}
+				}
+				.remove_from_cart_button {
+					float: right;
+					font-weight: 700;
+					text-align: center;
+					font-size: 24px;
+					margin-left: 10px;
+					height: 1em;
+					width: 1em;
+					line-height: 1;
+					border-radius: 100%;
+					border: 0;
+					text-decoration: none;
+					&:hover {
+						color: #fff!important;
+						background: red;
+					}
+				}
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+				&:after {
+					content: ' ';
+					display: block;
+					height: 10px;
+				}
+			}
+		}
+		.woocommerce-mini-cart__total {
+			margin-top: 10px;
+			background-color: #ffff;
+			padding: 10px;
+			font-weight: bold;
+		}
+		.woocommerce-mini-cart__buttons  {
+			margin-bottom: 0;
+			display: flex;
+			a {
+				padding: 10px;
+				width: 50%;
+				&:first-child {
+					margin-right: 5px;
+				}
+				&:last-child {
+					margin-left: 5px;
+				}
+			}
+		}
+		@media screen and (max-width: 991px) {
+			display: none !important;
+		}
+	}
 	&:hover {
 		.widget_shopping_cart_content {
 			opacity: 1;
