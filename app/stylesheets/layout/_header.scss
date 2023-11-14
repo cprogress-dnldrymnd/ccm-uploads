@@ -496,7 +496,7 @@ li.has-dropdown:active:after,
 					text-transform: uppercase;
 					font-size: 15px;
 					padding: 25px 15px;
-					@media(max-width: 1199px) {
+					@media (max-width: 1199px) {
 						padding: 25px 10px;
 					}
 					@include on-event {
@@ -530,8 +530,8 @@ li.has-dropdown:active:after,
 							}
 						}
 					}
-					@include on-event {
-						.dropdown-menu {
+					.dropdown-menu {
+						&.show-dropdown {
 							visibility: visible;
 							opacity: 1;
 							section.bike-lists-menu {
