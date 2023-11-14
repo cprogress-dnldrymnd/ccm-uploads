@@ -7565,7 +7565,12 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
       left: 0;
       bottom: 0;
       width: 100%;
-      background-color: var(--white-color); } }
+      background-color: var(--white-color);
+      z-index: 9999;
+      transition: 500ms;
+      transform: translateX(-100%); } }
+  .mobile-header-canvas.mobile-header-active {
+    transform: translateX(0); }
 
 footer {
   position: relative;

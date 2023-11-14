@@ -6,6 +6,12 @@ jQuery(document).ready(function () {
 
 	if (window.innerWidth < 992) {
 		jQuery('.nav-box > ul').appendTo('.mobile-header-canvas');
+
+		jQuery('.col-side-toggle').click(function (e) { 
+			jQuery('.mobile-header-canvas').toggleClass('mobile-header-active');
+			e.preventDefault();
+			
+		});
 	}
 
 	if (window.innerWidth > 991) {
