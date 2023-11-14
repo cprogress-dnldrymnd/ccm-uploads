@@ -7306,16 +7306,15 @@ li.has-dropdown:active:after,
     display: none; }
     @media (max-width: 991px) {
       #ccm-motors-header .mobile-header {
-        display: block;
-        padding-top: 18px;
-        padding-bottom: 18px; }
+        display: block; }
         #ccm-motors-header .mobile-header .row .col-side {
           flex: 0 0 57px; } }
     #ccm-motors-header .mobile-header .mobile-menu-toggle {
       display: inline-block;
-      height: 16px; }
+      height: 16px;
+      width: 24px;
+      position: relative; }
       #ccm-motors-header .mobile-header .mobile-menu-toggle span {
-        width: 24px;
         display: block;
         height: 2px;
         background-color: var(--white-color);
