@@ -464,7 +464,11 @@ $template = get_page_template_slug();
                                 </a>
                             </div>
                             <div class="col-auto col-side">
-
+                                <div class="mobile-menu-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </div>
                         </div>
                     </div>
