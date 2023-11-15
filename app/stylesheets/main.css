@@ -9795,7 +9795,7 @@ footer {
   .main-holder.main-holder h2 {
     font-size: 83px; }
   .main-holder.main-holder p {
-    font-size: 20px;
+    font-size: 20px !important;
     font-weight: 300; }
   .main-holder.main-holder .btn-box a, .main-holder.main-holder .btn-box button {
     border: 1px solid var(--main-color); }
