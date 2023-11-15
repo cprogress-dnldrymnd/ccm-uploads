@@ -9818,7 +9818,7 @@ footer {
     margin-right: 8px; }
 
 section.hero-banner-with-breadcrumbs {
-  min-height: 100vh;
+  min-height: calc(100vh - 65px);
   background-color: var(--black-color);
   position: relative;
   padding-bottom: 50px;
