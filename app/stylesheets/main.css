@@ -5861,6 +5861,8 @@ button.close {
   .bt-5 .container-sm,
   .bt-5 .container {
     max-width: 1320px; } }
+.bt-5 .d-flex {
+  flex: 0 0 auto; }
 .bt-5 .justify-content-between {
   justify-content: space-between !important; }
 .bt-5 .justify-content-center {
