@@ -5866,15 +5866,15 @@ button.close {
 .bt-5 .justify-content-center {
   justify-content: center !important; }
 .bt-5 .justify-content-start {
-  justify-content: flex-start; }
+  justify-content: flex-start !important; }
 .bt-5 .justify-content-end {
-  justify-content: flex-end; }
+  justify-content: flex-end !important; }
 .bt-5 .align-items-center {
-  align-items: center; }
+  align-items: center !important; }
 .bt-5 .align-items-start {
-  align-items: flex-start; }
+  align-items: flex-start !important; }
 .bt-5 .align-items-end {
-  align-items: flex-end; }
+  align-items: flex-end !important; }
 .bt-5 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
