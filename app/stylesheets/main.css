@@ -9775,7 +9775,12 @@ footer {
     .defences .list .title h3 {
       margin-top: 5px !important; }
 
-.bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal {
+.bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal, .bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal-overlay {
   display: none !important; }
+.bikes-template-page-reuseable-blocks #ccm-motors-header {
+  background-color: transparent; }
+
+section.hero-banner-with-breadcrumbs {
+  min-height: 100vh; }
 
 /*# sourceMappingURL=main.css.map */

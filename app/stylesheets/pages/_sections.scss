@@ -2,4 +2,11 @@
     .woo-login-popup-sc-modal, .woo-login-popup-sc-modal-overlay {
         display: none !important;
     }
+    #ccm-motors-header {
+        background-color: transparent;
+    }
+}
+
+section.hero-banner-with-breadcrumbs {
+    min-height: 100vh;
 }
