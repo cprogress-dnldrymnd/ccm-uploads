@@ -133,10 +133,10 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="image-box">
-                            <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-2.png" alt="">
-                        </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="image-box">
+                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-2.png" alt="">
                     </div>
                 </div>
             </div>
