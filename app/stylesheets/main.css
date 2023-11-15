@@ -9849,7 +9849,8 @@ section.hero-banner-with-breadcrumbs {
     font-size: 154px;
     text-transform: uppercase;
     color: var(--white-color);
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    letter-spacing: 3.85px; }
 
 section.bike-navigation {
   padding-top: 10px;
