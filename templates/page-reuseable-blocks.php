@@ -11,14 +11,12 @@
 
 $footer_type = carbon_get_the_post_meta('footer_type');
 ?>
-<?php get_header('v2'); ?>
+<?php get_header(); ?>
 <main id="page-components" class="page-components reusable-blocks <?= $class ?> <?= $main_class ?>">
-
     <section class="hero-banner-with-breadcrumbs">
         <div class="container">
             <?= breadcrumbs() ?>
         </div>
     </section>
-
 </main>
 <?php get_footer($footer_type); ?>
