@@ -129,4 +129,11 @@ section.bike-navigation {
 section.overview {
     padding-top: 70px;
     padding-bottom: 70px;
+    .inner {
+		max-width: 580px;
+		.description-box {
+			max-width: 480px;
+			margin-left: auto;
+		}
+	}
 }
