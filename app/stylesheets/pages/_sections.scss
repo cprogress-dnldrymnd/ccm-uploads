@@ -18,6 +18,11 @@
     h6 {
         font-style: normal;
         border: none;
+        font-weight: 600 !important;
+    }
+
+    h2 {
+        font-size: 83px;
     }
     .btn-box {
         a, button {
@@ -32,6 +37,7 @@
             }
         }
     }
+    
 }
 
 .breadcrumbs {
@@ -89,7 +95,6 @@ section.hero-banner-with-breadcrumbs {
             font-size: 154px;
             text-transform: uppercase;
             color: var(--white-color);
-            font-weight: 600 !important;
             margin-bottom: 0;
         }
     }
@@ -116,4 +121,9 @@ section.bike-navigation {
             margin-right: 8px;
         }
     }
+}
+
+section.overview {
+    padding-top: 70px;
+    padding-bottom: 70px;
 }

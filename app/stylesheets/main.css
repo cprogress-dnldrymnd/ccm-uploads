@@ -9790,7 +9790,10 @@ footer {
   .main-holder h5,
   .main-holder h6 {
     font-style: normal;
-    border: none; }
+    border: none;
+    font-weight: 600 !important; }
+  .main-holder h2 {
+    font-size: 83px; }
   .main-holder .btn-box a, .main-holder .btn-box button {
     border: 1px solid var(--main-color); }
   .main-holder .btn-box.btn-bordered a,
@@ -9840,7 +9843,6 @@ section.hero-banner-with-breadcrumbs {
     font-size: 154px;
     text-transform: uppercase;
     color: var(--white-color);
-    font-weight: 600 !important;
     margin-bottom: 0; }
 
 section.bike-navigation {
@@ -9859,5 +9861,9 @@ section.bike-navigation {
   section.bike-navigation .bike-nav li {
     margin-left: 8px;
     margin-right: 8px; }
+
+section.overview {
+  padding-top: 70px;
+  padding-bottom: 70px; }
 
 /*# sourceMappingURL=main.css.map */

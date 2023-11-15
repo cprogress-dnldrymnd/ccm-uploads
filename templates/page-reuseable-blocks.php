@@ -56,7 +56,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                             <div class="col-auto">
                                 <div class="btn-box btn-bordered">
                                     <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
-                                    CONFIGURE
+                                        CONFIGURE
                                     </a>
                                 </div>
                             </div>
@@ -70,6 +70,19 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overview">
+        <div class="container">
+            <div class="heading-box">
+                <h2>LEAVE THE HERD BEHIND.</h2>
+            </div>
+            <div class="description-box">
+                <p>
+                    The hand-made characteristics shine through, embodying the spirit of our founder, Alan Clews. Since the inception of CCM in 1970, Alan's vision of combining a powerful engine with a lightweight and robust frame remains at the heart of our design philosophy.
+                </p>
             </div>
         </div>
     </section>
