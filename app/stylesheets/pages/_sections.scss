@@ -19,5 +19,9 @@ section.hero-banner-with-breadcrumbs {
         pointer-events: none;
         left: 0;
         right: 0;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
