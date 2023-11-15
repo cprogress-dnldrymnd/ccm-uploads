@@ -9802,7 +9802,8 @@ section.hero-banner-with-breadcrumbs {
   min-height: 100vh;
   background-color: var(--black-color);
   position: relative;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  overflow: hidden; }
   section.hero-banner-with-breadcrumbs .video-holder {
     position: absolute;
     top: -100px;
@@ -9821,5 +9822,9 @@ section.hero-banner-with-breadcrumbs {
     text-transform: uppercase;
     color: var(--white-color);
     font-weight: 600 !important; }
+
+section.bike-navigation {
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 /*# sourceMappingURL=main.css.map */

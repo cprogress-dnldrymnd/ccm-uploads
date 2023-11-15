@@ -29,7 +29,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
     </section>
     <section class="bike-navigation">
         <div class="container-fluid container-fluid-wide">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-4">
                     <div class="bike-title">
                         <span><?php the_title() ?></span>
@@ -37,7 +37,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                 </div>
                 <div class="col-lg-4">
                     <div class="bike-nav">
-                        <ul>
+                        <ul class="list-inline">
                             <li>
                                 <a href="#">OVERVIEW</a>
                             </li>

@@ -40,6 +40,7 @@ section.hero-banner-with-breadcrumbs {
     background-color: var(--black-color);
     position: relative;
     padding-bottom: 50px;
+    overflow: hidden;
     .video-holder {
         position: absolute;
         top: -100px;
@@ -65,4 +66,9 @@ section.hero-banner-with-breadcrumbs {
             font-weight: 600 !important;
         }
     }
+}
+
+section.bike-navigation {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
