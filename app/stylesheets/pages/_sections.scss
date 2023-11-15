@@ -7,7 +7,9 @@
         background-color: transparent;
     }
 }
-
+.main-holder {
+    padding-top: 0 !important;
+}
 .btn-box {
     &.btn-bordered {
         a,
