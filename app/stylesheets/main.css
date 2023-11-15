@@ -9783,11 +9783,13 @@ footer {
 
 .breadcrumbs ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  flex-wrap: nowrap; }
   .breadcrumbs ul li a,
   .breadcrumbs ul li span {
     font-size: 14px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: var(--white-color); }
   .breadcrumbs ul li:not(:last-child):after {
     content: "";
     width: 10px;
