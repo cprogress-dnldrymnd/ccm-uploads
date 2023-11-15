@@ -98,7 +98,9 @@ $footer_type = carbon_get_the_post_meta('footer_type');
     </section>
 
     <section class="features">
+        <div class="container">
 
+        </div>
     </section>
 </main>
 <?php get_footer($footer_type); ?>
