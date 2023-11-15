@@ -9792,7 +9792,7 @@ footer {
     font-style: normal;
     border: none; }
   .main-holder .btn-box a, .main-holder .btn-box button {
-    border: 1px solid v; }
+    border: 1px solid var(--main-color); }
   .main-holder .btn-box.btn-bordered a,
   .main-holder .btn-box.btn-bordered button {
     background-color: transparent !important;
@@ -9856,5 +9856,8 @@ section.bike-navigation {
     font-weight: 500;
     color: var(--black-color);
     text-transform: uppercase; }
+  section.bike-navigation .bike-nav li {
+    margin-left: 8px;
+    margin-right: 8px; }
 
 /*# sourceMappingURL=main.css.map */
