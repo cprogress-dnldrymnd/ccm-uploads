@@ -9781,7 +9781,8 @@ footer {
   background-color: transparent; }
 
 .main-holder {
-  padding-top: 0 !important; }
+  padding-top: 0 !important;
+  font-family: "Fira Sans Condensed", sans-serif; }
 
 .btn-box.btn-bordered a,
 .btn-box.btn-bordered button {
