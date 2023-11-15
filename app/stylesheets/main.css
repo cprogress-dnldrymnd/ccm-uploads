@@ -9878,4 +9878,8 @@ section.overview {
       max-width: 480px;
       margin-left: auto; }
 
+section.features {
+  padding-top: 135px;
+  padding-bottom: 135px; }
+
 /*# sourceMappingURL=main.css.map */
