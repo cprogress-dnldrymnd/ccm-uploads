@@ -9780,7 +9780,8 @@ footer {
 .bikes-template-page-reuseable-blocks #ccm-motors-header {
   background-color: transparent; }
 
-.btn-box.btn-bordered a, .btn-box.btn-bordered button {
+.btn-box.btn-bordered a,
+.btn-box.btn-bordered button {
   background-color: transparent !important;
   border: 1px solid var(--black-color) !important;
   color: var(--black-color) !important; }
@@ -9831,5 +9832,14 @@ section.hero-banner-with-breadcrumbs {
 section.bike-navigation {
   padding-top: 10px;
   padding-bottom: 10px; }
+  section.bike-navigation .bike-title span,
+  section.bike-navigation .bike-title li,
+  section.bike-navigation .bike-title a,
+  section.bike-navigation .bike-nav span,
+  section.bike-navigation .bike-nav li,
+  section.bike-navigation .bike-nav a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black-color); }
 
 /*# sourceMappingURL=main.css.map */
