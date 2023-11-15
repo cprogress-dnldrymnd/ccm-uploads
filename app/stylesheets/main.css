@@ -9778,7 +9778,8 @@ footer {
 .bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal-overlay {
   display: none !important; }
 .bikes-template-page-reuseable-blocks #ccm-motors-header {
-  background-color: transparent; }
+  background-color: transparent;
+  position: absolute; }
 
 .main-holder.main-holder {
   padding-top: 0 !important;
