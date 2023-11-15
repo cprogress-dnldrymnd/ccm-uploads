@@ -5817,6 +5817,14 @@ button.close {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto; }
+  .bt-5 .container:before,
+  .bt-5 .container-fluid:before,
+  .bt-5 .container-xxl:before,
+  .bt-5 .container-xl:before,
+  .bt-5 .container-lg:before,
+  .bt-5 .container-md:before,
+  .bt-5 .container-sm:before {
+    content: none; }
 @media (min-width: 576px) {
   .bt-5 .container-sm,
   .bt-5 .container {
