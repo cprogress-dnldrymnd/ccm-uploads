@@ -9783,15 +9783,21 @@ footer {
 .main-holder {
   padding-top: 0 !important;
   font-family: "Fira Sans Condensed", sans-serif; }
-  .main-holder h1, .main-holder h2, .main-holder h3, .main-holder h4, .main-holder h5, .main-holder h6 {
+  .main-holder h1,
+  .main-holder h2,
+  .main-holder h3,
+  .main-holder h4,
+  .main-holder h5,
+  .main-holder h6 {
     font-style: normal;
     border: none; }
-
-.btn-box.btn-bordered a,
-.btn-box.btn-bordered button {
-  background-color: transparent !important;
-  border: 1px solid var(--black-color) !important;
-  color: var(--black-color) !important; }
+  .main-holder .btn-box a, .main-holder .btn-box button {
+    border: 1px solid v; }
+  .main-holder .btn-box.btn-bordered a,
+  .main-holder .btn-box.btn-bordered button {
+    background-color: transparent !important;
+    border: 1px solid var(--black-color) !important;
+    color: var(--black-color) !important; }
 
 .breadcrumbs ul {
   list-style: none;

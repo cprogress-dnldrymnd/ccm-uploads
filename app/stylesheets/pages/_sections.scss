@@ -10,18 +10,26 @@
 .main-holder {
     padding-top: 0 !important;
     font-family: "Fira Sans Condensed", sans-serif;
-    h1,h2,h3,h4,h5,h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-style: normal;
         border: none;
     }
-}
-.btn-box {
-    &.btn-bordered {
-        a,
-        button {
-            background-color: transparent !important;
-            border: 1px solid var(--black-color) !important;
-            color: var(--black-color) !important;
+    .btn-box {
+        a, button {
+            border: 1px solid var(--main-color);
+        }
+        &.btn-bordered {
+            a,
+            button {
+                background-color: transparent !important;
+                border: 1px solid var(--black-color) !important;
+                color: var(--black-color) !important;
+            }
         }
     }
 }
