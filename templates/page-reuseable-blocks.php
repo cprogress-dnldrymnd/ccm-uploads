@@ -14,6 +14,10 @@ $footer_type = carbon_get_the_post_meta('footer_type');
 <?php get_header(); ?>
 <main id="page-components" class="page-components reusable-blocks <?= $class ?> <?= $main_class ?>">
     <section class="hero-banner-with-breadcrumbs">
+        <div class="iframe-holder">
+            <iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/<?= $embed_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=q6CEBGW4szM">
+            </iframe>
+        </div>
         <div class="container">
             <?= breadcrumbs() ?>
         </div>
