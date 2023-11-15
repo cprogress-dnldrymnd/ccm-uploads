@@ -9,6 +9,26 @@
 }
 
 .breadcrumbs {
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            a,
+            span {
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+            &:not(:last-child) {
+                &:after {
+                    content: "";
+                    width: 10px;
+                    height: 1px;
+                    background-color: var(--white-color);
+                    display: inline-block;
+                }
+            }
+        }
+    }
 }
 
 section.hero-banner-with-breadcrumbs {

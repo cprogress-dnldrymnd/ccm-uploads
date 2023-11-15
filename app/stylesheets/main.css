@@ -9781,6 +9781,20 @@ footer {
 .bikes-template-page-reuseable-blocks #ccm-motors-header {
   background-color: transparent; }
 
+.breadcrumbs ul {
+  list-style: none;
+  padding: 0; }
+  .breadcrumbs ul li a,
+  .breadcrumbs ul li span {
+    font-size: 14px;
+    text-transform: uppercase; }
+  .breadcrumbs ul li:not(:last-child):after {
+    content: "";
+    width: 10px;
+    height: 1px;
+    background-color: var(--white-color);
+    display: inline-block; }
+
 section.hero-banner-with-breadcrumbs {
   min-height: 100vh;
   background-color: var(--black-color);
