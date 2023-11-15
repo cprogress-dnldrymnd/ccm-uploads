@@ -9831,7 +9831,9 @@ section.hero-banner-with-breadcrumbs {
 section.bike-navigation {
   padding-top: 10px;
   padding-bottom: 10px; }
-  section.bike-navigation .bike-title .bike-nav {
+  section.bike-navigation .bike-title .bike-nav span,
+  section.bike-navigation .bike-title .bike-nav li,
+  section.bike-navigation .bike-title .bike-nav a {
     font-size: 15px;
     font-weight: 500; }
 
