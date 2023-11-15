@@ -9780,6 +9780,9 @@ footer {
 .bikes-template-page-reuseable-blocks #ccm-motors-header {
   background-color: transparent; }
 
+.main-holder {
+  padding-top: 0 !important; }
+
 .btn-box.btn-bordered a,
 .btn-box.btn-bordered button {
   background-color: transparent !important;
