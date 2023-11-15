@@ -9797,7 +9797,9 @@ footer {
     width: 10px;
     height: 1px;
     background-color: var(--white-color);
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px; }
 
 section.hero-banner-with-breadcrumbs {
   min-height: 100vh;
