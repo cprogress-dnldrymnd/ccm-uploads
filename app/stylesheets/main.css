@@ -9775,4 +9775,7 @@ footer {
     .defences .list .title h3 {
       margin-top: 5px !important; }
 
+.bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal {
+  display: none !important; }
+
 /*# sourceMappingURL=main.css.map */
