@@ -9792,5 +9792,8 @@ section.hero-banner-with-breadcrumbs {
     pointer-events: none;
     left: 0;
     right: 0; }
+    section.hero-banner-with-breadcrumbs .video-holder iframe {
+      width: 100%;
+      height: 100%; }
 
 /*# sourceMappingURL=main.css.map */
