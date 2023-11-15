@@ -9789,11 +9789,13 @@ footer {
   .main-holder h4,
   .main-holder h5,
   .main-holder h6 {
-    font-style: normal;
+    font-style: normal !important;
     border: none;
     font-weight: 600 !important; }
   .main-holder h2 {
     font-size: 83px; }
+  .main-holder p {
+    font-size: 20px; }
   .main-holder .btn-box a, .main-holder .btn-box button {
     border: 1px solid var(--main-color); }
   .main-holder .btn-box.btn-bordered a,
