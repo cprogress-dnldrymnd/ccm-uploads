@@ -7316,9 +7316,6 @@ li.has-dropdown:active:after,
   left: 0;
   right: 0;
   top: 0; }
-  #ccm-motors-header .logo-box,
-  #mobile-header-canvas .logo-box {
-    padding-left: 15px; }
   @media (max-width: 991px) {
     #ccm-motors-header .desktop-header,
     #mobile-header-canvas .desktop-header {
