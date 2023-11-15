@@ -9780,6 +9780,11 @@ footer {
 .bikes-template-page-reuseable-blocks #ccm-motors-header {
   background-color: transparent; }
 
+.btn-box.btn-bordered {
+  background-color: transparent !important;
+  border: 1px solid var(--black-color) !important;
+  color: var(--black-color) !important; }
+
 .breadcrumbs ul {
   list-style: none;
   padding: 0;

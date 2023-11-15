@@ -52,11 +52,11 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                 </div>
                 <div class="col-lg-4">
                     <div class="bike-buttons">
-                        <div class="row">
+                        <div class="row justify-content-end">
                             <div class="col-auto">
-                                <div class="btn-box">
+                                <div class="btn-box btn-bordered">
                                     <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
-                                        ENQUIRE NOW
+                                    CONFIGURE
                                     </a>
                                 </div>
                             </div>
