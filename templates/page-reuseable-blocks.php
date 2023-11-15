@@ -12,10 +12,6 @@
 $footer_type = carbon_get_the_post_meta('footer_type');
 $header_type = carbon_get_the_post_meta('header_type');
 
-$main_class = $header_type == 'logo-only' ? 'mt-0' : '';
-if (get_post_type() == 'bikes' && $display_sticky_button) {
-    $class = 'sticky-mobile-button-main';
-}
 ?>
 <?php get_header('v2'); ?>
 <main id="page-components" class="page-components reusable-blocks <?= $class ?> <?= $main_class ?>">

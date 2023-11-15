@@ -7630,6 +7630,8 @@ li.has-dropdown:active:after,
 body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   visibility: visible;
   opacity: 1; }
+body.show-minicart .col-side-minicart {
+  background-color: #4A4B51; }
 body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   visibility: hidden;
   opacity: 0; }
