@@ -9780,26 +9780,26 @@ footer {
 .bikes-template-page-reuseable-blocks #ccm-motors-header {
   background-color: transparent; }
 
-.main-holder {
+.main-holder.main-holder {
   padding-top: 0 !important;
   font-family: "Fira Sans Condensed", sans-serif; }
-  .main-holder h1,
-  .main-holder h2,
-  .main-holder h3,
-  .main-holder h4,
-  .main-holder h5,
-  .main-holder h6 {
+  .main-holder.main-holder h1,
+  .main-holder.main-holder h2,
+  .main-holder.main-holder h3,
+  .main-holder.main-holder h4,
+  .main-holder.main-holder h5,
+  .main-holder.main-holder h6 {
     font-style: normal !important;
     border: none;
     font-weight: 600 !important; }
-  .main-holder h2 {
+  .main-holder.main-holder h2 {
     font-size: 83px; }
-  .main-holder p {
+  .main-holder.main-holder p {
     font-size: 20px; }
-  .main-holder .btn-box a, .main-holder .btn-box button {
+  .main-holder.main-holder .btn-box a, .main-holder.main-holder .btn-box button {
     border: 1px solid var(--main-color); }
-  .main-holder .btn-box.btn-bordered a,
-  .main-holder .btn-box.btn-bordered button {
+  .main-holder.main-holder .btn-box.btn-bordered a,
+  .main-holder.main-holder .btn-box.btn-bordered button {
     background-color: transparent !important;
     border: 1px solid var(--black-color) !important;
     color: var(--black-color) !important; }
