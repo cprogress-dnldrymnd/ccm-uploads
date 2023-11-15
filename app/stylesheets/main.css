@@ -9784,7 +9784,8 @@ footer {
   padding-top: 0 !important;
   font-family: "Fira Sans Condensed", sans-serif; }
   .main-holder h1, .main-holder h2, .main-holder h3, .main-holder h4, .main-holder h5, .main-holder h6 {
-    font-size: "Notera", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+    font-style: normal;
+    border: none; }
 
 .btn-box.btn-bordered a,
 .btn-box.btn-bordered button {
@@ -9833,7 +9834,8 @@ section.hero-banner-with-breadcrumbs {
     font-size: 154px;
     text-transform: uppercase;
     color: var(--white-color);
-    font-weight: 600 !important; }
+    font-weight: 600 !important;
+    margin-bottom: 0; }
 
 section.bike-navigation {
   padding-top: 10px;

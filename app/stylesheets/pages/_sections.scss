@@ -12,6 +12,7 @@
     font-family: "Fira Sans Condensed", sans-serif;
     h1,h2,h3,h4,h5,h6 {
         font-style: normal;
+        border: none;
     }
 }
 .btn-box {
@@ -81,6 +82,7 @@ section.hero-banner-with-breadcrumbs {
             text-transform: uppercase;
             color: var(--white-color);
             font-weight: 600 !important;
+            margin-bottom: 0;
         }
     }
 }
