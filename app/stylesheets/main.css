@@ -9804,7 +9804,8 @@ footer {
 section.hero-banner-with-breadcrumbs {
   min-height: 100vh;
   background-color: var(--black-color);
-  position: relative; }
+  position: relative;
+  padding-bottom: 100px; }
   section.hero-banner-with-breadcrumbs .video-holder {
     position: absolute;
     top: -100px;
