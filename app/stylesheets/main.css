@@ -9775,13 +9775,22 @@ footer {
     .defences .list .title h3 {
       margin-top: 5px !important; }
 
-.bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal, .bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal-overlay {
+.bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal,
+.bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal-overlay {
   display: none !important; }
 .bikes-template-page-reuseable-blocks #ccm-motors-header {
   background-color: transparent; }
 
 section.hero-banner-with-breadcrumbs {
   min-height: 100vh;
-  background-color: var(--black-color); }
+  background-color: var(--black-color);
+  position: relative; }
+  section.hero-banner-with-breadcrumbs .video-holder {
+    position: absolute;
+    top: -100px;
+    bottom: -100px;
+    pointer-events: none;
+    left: 0;
+    right: 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,6 @@
 .bikes-template-page-reuseable-blocks {
-    .woo-login-popup-sc-modal, .woo-login-popup-sc-modal-overlay {
+    .woo-login-popup-sc-modal,
+    .woo-login-popup-sc-modal-overlay {
         display: none !important;
     }
     #ccm-motors-header {
@@ -10,4 +11,13 @@
 section.hero-banner-with-breadcrumbs {
     min-height: 100vh;
     background-color: var(--black-color);
+    position: relative;
+    .video-holder {
+        position: absolute;
+        top: -100px;
+        bottom: -100px;
+        pointer-events: none;
+        left: 0;
+        right: 0;
+    }
 }
