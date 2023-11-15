@@ -3180,3 +3180,18 @@ function show_template() {
     global $template;
     echo basename($template);
 }*/
+
+
+function breadcrumbs() {
+	$breadcrumbs = '<div class="breadcrumbs"><ul>'; 
+
+	$breadcrumbs .= '<li><a href="'.get_site_url().'">HOME</a></li>';
+
+	if(get_post_type() == 'bikes') {
+		$breadcrumbs .= '<li><a href="#">HOME</a></li>';
+	}
+	$breadcrumbs .= '<li><span>'.get_the_title().'</span></li>';
+
+	$breadcrumbs .= '</ul></div>';
+	return $breadcrumbs;
+}
