@@ -5087,4 +5087,11 @@ section.wysiwyg {
 	padding-top: 70px;
 	padding-bottom: 70px;
 	font-family: "Fira Sans Condensed";
+	.inner {
+		max-width: 580px;
+		.description-box {
+			max-width: 480px;
+			margin-left: auto;
+		}
+	}
 }
