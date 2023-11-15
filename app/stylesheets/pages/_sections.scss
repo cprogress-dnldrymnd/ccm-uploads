@@ -10,7 +10,8 @@
 
 .btn-box {
     &.btn-bordered {
-        a, button {
+        a,
+        button {
             background-color: transparent !important;
             border: 1px solid var(--black-color) !important;
             color: var(--black-color) !important;
@@ -81,15 +82,14 @@ section.hero-banner-with-breadcrumbs {
 section.bike-navigation {
     padding-top: 10px;
     padding-bottom: 10px;
-    .bike-title {
-        .bike-nav {
-            span,
-            li,
-            a {
-                font-size: 15px;
-                font-weight: 500;
-                color: var(--black-color);
-            }
+    .bike-title,
+    .bike-nav {
+        span,
+        li,
+        a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--black-color);
         }
     }
 }
