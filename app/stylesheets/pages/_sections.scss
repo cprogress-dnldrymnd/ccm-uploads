@@ -39,6 +39,7 @@ section.hero-banner-with-breadcrumbs {
     min-height: 100vh;
     background-color: var(--black-color);
     position: relative;
+    padding-bottom: 100px;
     .video-holder {
         position: absolute;
         top: -100px;
@@ -54,5 +55,14 @@ section.hero-banner-with-breadcrumbs {
     .container {
         position: relative;
         z-index: 1;
+    }
+
+    .heading-box {
+        h1 {
+            font-size: 154px;
+            text-transform: uppercase;
+            color: var(--white-color);
+            font-weight: 600 !important;
+        }
     }
 }

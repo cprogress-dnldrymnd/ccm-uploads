@@ -9818,5 +9818,10 @@ section.hero-banner-with-breadcrumbs {
   section.hero-banner-with-breadcrumbs .container {
     position: relative;
     z-index: 1; }
+  section.hero-banner-with-breadcrumbs .heading-box h1 {
+    font-size: 154px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-weight: 600 !important; }
 
 /*# sourceMappingURL=main.css.map */
