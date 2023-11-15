@@ -27,5 +27,51 @@ $footer_type = carbon_get_the_post_meta('footer_type');
             </div>
         </div>
     </section>
+    <section class="bike-navigation">
+        <div class="container-fluid container-fluid-wide">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="bike-title">
+                        <span><?php the_title() ?></span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bike-nav">
+                        <ul>
+                            <li>
+                                <a href="#">OVERVIEW</a>
+                            </li>
+                            <li>
+                                <a href="#">FEATURES</a>
+                            </li>
+                            <li>
+                                <a href="#">SPECIFICATION</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bike-buttons">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="btn-box">
+                                    <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
+                                        ENQUIRE NOW
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="btn-box">
+                                    <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
+                                        ENQUIRE NOW
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer($footer_type); ?>
