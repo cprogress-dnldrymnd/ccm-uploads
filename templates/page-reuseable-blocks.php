@@ -88,5 +88,13 @@ $footer_type = carbon_get_the_post_meta('footer_type');
             </div>
         </div>
     </section>
+
+    <section class="image-section">
+        <div class="container">
+            <div class="image-box">
+                <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-1.png" alt="">
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer($footer_type); ?>
