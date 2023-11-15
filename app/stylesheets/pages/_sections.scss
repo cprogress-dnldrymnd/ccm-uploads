@@ -79,4 +79,9 @@ section.hero-banner-with-breadcrumbs {
 section.bike-navigation {
     padding-top: 10px;
     padding-bottom: 10px;
+    .bike-title {
+        .bike-nav {
+            font-size: 15px;
+        }
+    }
 }

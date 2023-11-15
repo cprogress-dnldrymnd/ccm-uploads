@@ -37,7 +37,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                 </div>
                 <div class="col-lg-4">
                     <div class="bike-nav">
-                        <ul class="list-inline">
+                        <ul class="list-inline text-center">
                             <li>
                                 <a href="#">OVERVIEW</a>
                             </li>
