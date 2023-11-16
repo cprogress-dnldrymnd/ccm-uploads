@@ -142,5 +142,17 @@ $footer_type = carbon_get_the_post_meta('footer_type');
             </div>
         </div>
     </section>
+
+    <?php $justified_gallery = array(17228, 17229) ?>
+
+    <section class="gallery bike-gallery" id="bike-gallery" data-id="<?= $section_id ?>">
+        <div class="images">
+            <?php foreach ($justified_gallery as $key => $gallery) { ?>
+                <a id="image-<?= $key ?>" href="<?= wp_get_attachment_image_url($gallery, 'full') ?>">
+                    <img src="<?= wp_get_attachment_image_url($gallery, 'full') ?>" / class="no-lazyload">
+                </a>
+            <?php } ?>
+        </div>
+    </section>
 </main>
 <?php get_footer($footer_type); ?>
