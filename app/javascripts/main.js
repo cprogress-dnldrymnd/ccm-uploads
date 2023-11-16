@@ -396,16 +396,16 @@ function bike_scroller() {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
 				jQuery('body').addClass('bike-scroller-active');
-				jQuery("body, html").bind("mousewheel", function () {
-					return false;
-				});
+
 
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
 			}
 		});
-
 	}
+	jQuery("body, html").bind("mousewheel", function () {
+		return false;
+	});
 }
 function bike_specs() {
 	var t = 0; // the height of the highest element (after the function runs)
