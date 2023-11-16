@@ -396,23 +396,16 @@ function bike_scroller() {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
 				jQuery('body').addClass('bike-scroller-active');
+				jQuery("body, html").bind("mousewheel", function () {
+					return false;
+				});
+
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
 			}
 		});
 
-		const scrollContainer = document.querySelector(".bike-scroller .images .row-images");
-
-		scrollContainer.addEventListener("wheel", (evt) => {
-			evt.preventDefault();
-			scrollContainer.scrollLeft += evt.deltaY;
-			if (scrollContainer.scrollLeft == 0) {
-				jQuery('body').removeClass('bike-scroller-active');
-			}
-		});
 	}
-
-
 }
 function bike_specs() {
 	var t = 0; // the height of the highest element (after the function runs)
