@@ -396,8 +396,9 @@ function bike_scroller() {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
 				jQuery('body').addClass('bike-scroller-active');
-
 				jQuery('.bike-scroller .images').css('transform', 'translateX(' + transform + 'px)');
+
+				console.log(transform);
 				transform++;
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
