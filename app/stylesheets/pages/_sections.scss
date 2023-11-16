@@ -227,10 +227,10 @@ section.bike-specification {
                     }
                 }
             }
-        }
-        &:not(:last-child) {
-            .specs-heading {
-                margin-bottom: 60px;
+            &:not(:last-child) {
+                .specs-heading {
+                    margin-bottom: 60px;
+                }
             }
         }
     }
