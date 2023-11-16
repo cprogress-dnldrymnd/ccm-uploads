@@ -160,6 +160,7 @@ footer {
 	span,
 	p {
 		color: inherit !important;
+		font-weight: 300;
 	}
 	p {
 		&:last-child {
@@ -196,6 +197,9 @@ footer {
 		background-color: #171717;
 		padding-top: 40px;
 		padding-bottom: 40px;
+		p, a {
+			font-size: 14px !important;
+		}
 		.menu {
 			display: flex;
 			justify-content: flex-end;
