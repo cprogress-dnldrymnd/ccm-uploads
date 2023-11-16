@@ -333,6 +333,7 @@ section.bike-scroller {
     background-color: var(--black-color);
     .images {
         .row-images {
+            display: flex;
             .image {
                 padding: 25%;
                 position: relative;
