@@ -9,8 +9,34 @@ $template = get_page_template_slug();
 <?php if ($template != 'templates/page-tablet.php') { ?>
 
 	<footer class="bt-5">
-		<div class="container">
-			
+		<div class="footer-top">
+			<div class="container">
+				<div class="col-lg-3">
+					<aside id="nav_menu-2" class="block widget_nav_menu">
+						<h4>MOTORCYCLES</h4>
+						<div class="menu-footer1-container">
+							<ul id="menu-footer1" class="menu">
+								<li class="menu-item">
+									<a href="#">
+										Model Range
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="/shop/">
+										Configure a Bike
+									</a>
+								</li>
+
+								<li class="menu-item">
+									<a href="https://ccm.theprogressteam.com/club-news/">
+										Insurance
+									</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
 		</div>
 	</footer>
 
