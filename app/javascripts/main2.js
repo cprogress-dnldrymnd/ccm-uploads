@@ -18,11 +18,7 @@ function bike_navigation() {
 		});
 	}
 }
-
-jQuery(document).ready(function () {
-	utm_parameters();
-	bike_navigation();
-
+function bike_specs() {
 	var t = 0; // the height of the highest element (after the function runs)
 	var t_elem;  // the highest element (after the function runs)
 	jQuery(".specs-list").each(function () {
@@ -34,13 +30,15 @@ jQuery(document).ready(function () {
 	});
 
 	jQuery('.specs-holder').css('height', t + 'px');
+}
+
+function header() {
 
 	jQuery('.mini-cart a, .col-side-minicart').click(function (e) {
 		jQuery('body').toggleClass('show-minicart');
 		jQuery('.overlay').toggleClass('show-overlay');
 		e.preventDefault();
 	});
-
 
 	jQuery(document).on("click", '.close-mini-cart', function (event) {
 		jQuery('body').removeClass('show-minicart');
@@ -81,6 +79,13 @@ jQuery(document).ready(function () {
 	if (window.innerWidth > 991) {
 		jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
 	}
+
+}
+jQuery(document).ready(function () {
+	utm_parameters();
+	bike_navigation();
+	bike_specs();
+	header();
 
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
 		e.preventDefault();
