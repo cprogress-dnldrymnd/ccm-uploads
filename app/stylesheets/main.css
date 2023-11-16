@@ -10075,6 +10075,9 @@ section.bike-navigation {
     margin-right: 8px; }
   section.bike-navigation.v2 .inner {
     background-color: transparent; }
+    section.bike-navigation.v2 .inner .bike-nav li {
+      margin-left: 8px;
+      margin-right: 8px; }
 
 section.overview {
   padding-top: 70px;
@@ -10110,7 +10113,7 @@ section.overview {
       content: "";
       width: 50%;
       position: absolute;
-      top: 0;
+      top: -66px;
       right: 0;
       bottom: 0;
       background-color: #1e1e21; }
@@ -10118,7 +10121,7 @@ section.overview {
       content: "";
       width: 50%;
       position: absolute;
-      top: 0;
+      top: -66px;
       left: 0;
       bottom: 0;
       background-color: #000;
