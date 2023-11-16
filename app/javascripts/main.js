@@ -393,12 +393,20 @@ function bike_scroller() {
 
 		jQuery('.bike-scroller').css('height', ($width * $length) + 'px');
 		var $transform = 0;
+		var lastScrollTop = 0;
+
 		jQuery(window).scroll(function (e) {
 			var windowTop = jQuery(window).scrollTop();
+
 			if (stickyTop < windowTop) {
 				jQuery('body').addClass('bike-scroller-active');
-				jQuery('.bike-scroller .row-images').css('transform', 'translateX(-' + (100 * $transform) + 'px)');
-				$transform++;
+				jQuery('.bike-scroller .row-images').css('transform', 'translateX(' + (100 * $transform) + 'px)');
+				if (windowTop > lastScrollTop) {
+					$transform++;
+				} else {
+					$transform--;
+				}
+
 				console.log($transform);
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
