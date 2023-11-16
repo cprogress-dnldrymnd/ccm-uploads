@@ -391,10 +391,12 @@ function bike_scroller() {
 		jQuery('.bike-scroller').css('height', $bike_scoller_height + 'px');
 
 		var stickyTop = jQuery('.bike-scroller').offset().top;
-		$width = jQuery('.row-images .images').outerWidth();
-		$length = jQuery('.row-images .images').length;
+		$width = jQuery('.row-images .image').outerWidth();
+		$length = jQuery('.row-images .image').length;
 
 
+		console.log($width);
+		console.log($length);
 		console.log($width * $length);
 
 		jQuery(window).scroll(function (e) {
