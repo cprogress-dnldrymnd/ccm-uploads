@@ -446,6 +446,12 @@ function header() {
 		} else {
 			jQuery('body').removeClass('hide-header');
 		}
+
+		if(st != 0) {
+			jQuery('body').addClass('header-black-bg');
+		} else {
+			jQuery('body').removeClass('header-black-bg');
+		}
 		lastScrollTop = st;
 	});
 
