@@ -10132,25 +10132,27 @@ section.overview {
       content: "";
       width: 50%;
       position: absolute;
-      top: -66px;
+      top: 0;
       right: 0;
       bottom: 0;
       background-color: #1e1e21;
-      z-index: 2; }
+      z-index: 1; }
     section.overview.v2:not(.contact-form-holder):after {
       content: "";
       width: 50%;
       position: absolute;
-      top: -66px;
+      top: 0;
       left: 0;
       bottom: 0;
       background-color: #000;
       opacity: 0.75;
-      z-index: 2; }
+      z-index: 1; }
     section.overview.v2:not(.contact-form-holder):before {
-      background-color: #1e1e21; }
+      background-color: #1e1e21;
+      top: -66px; }
     section.overview.v2:not(.contact-form-holder):after {
       background-color: #000;
+      top: -66px;
       opacity: 0.75; }
   @media (max-width: 480px) {
     section.overview {
@@ -10181,28 +10183,30 @@ section.features {
       content: "";
       width: 50%;
       position: absolute;
-      top: -66px;
+      top: 0;
       right: 0;
       bottom: 0;
       background-color: #1e1e21;
-      z-index: 2; }
+      z-index: 1; }
     section.features.v2:after {
       content: "";
       width: 50%;
       position: absolute;
-      top: -66px;
+      top: 0;
       left: 0;
       bottom: 0;
       background-color: #000;
       opacity: 0.75;
-      z-index: 2; }
+      z-index: 1; }
     section.features.v2 .container {
       position: relative;
-      z-index: 2; }
+      z-index: 3; }
+    section.features.v2 h5, section.features.v2 p {
+      color: var(--white-color); }
     section.features.v2:before {
-      background-color: #1E1E21; }
-    section.features.v2:after {
       background-color: #171717; }
+    section.features.v2:after {
+      background-color: #1e1e21; }
     section.features.v2 .row {
       flex-direction: row-reverse; }
   @media (max-width: 480px) {

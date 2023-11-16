@@ -287,22 +287,22 @@ section.bike-navigation {
         content: "";
         width: 50%;
         position: absolute;
-        top: -66px;
+        top: 0;
         right: 0;
         bottom: 0;
         background-color: #1e1e21;
-        z-index: 2;
+        z-index: 1;
     }
     &:after {
         content: "";
         width: 50%;
         position: absolute;
-        top: -66px;
+        top: 0;
         left: 0;
         bottom: 0;
         background-color: #000;
         opacity: 0.75;
-        z-index: 2;
+        z-index: 1;
     }
 }
 
@@ -364,10 +364,15 @@ section.overview {
         @include half-bg();
         &:before {
             background-color: #1e1e21;
+            top: -66px;
+            z-index: 2;
+
         }
         &:after {
             background-color: #000;
+            top: -66px;
             opacity: 0.75;
+            z-index: 2;
         }
     }
     @media (max-width: 480px) {
@@ -409,9 +414,10 @@ section.features {
         @include half-bg();
         .container {
             position: relative;
-            z-index: 2;
+            z-index: 3;
         }
-        h5, p {
+        h5,
+        p {
             color: var(--white-color);
         }
         &:before {
