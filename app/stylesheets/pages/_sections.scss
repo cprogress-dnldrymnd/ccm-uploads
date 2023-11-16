@@ -199,15 +199,20 @@ section.bike-specification {
             > div {
                 flex: 0 0 auto;
                 width: 50%;
-                h3 {
-                    font-size: 57px;
-                    font-weight: 600;
-                    margin-top: 0;
-                }
+
                 .specs-val {
                     font-size: 15px;
                 }
+                &.specs-heading {
+                    padding-right: 30px;
+                    h3 {
+                        font-size: 57px;
+                        font-weight: 600;
+                        margin-top: 0;
+                    }
+                }
                 &.specs-list {
+                    padding-left: 30px;
                     position: absolute;
                     right: 0;
                     width: 50%;
