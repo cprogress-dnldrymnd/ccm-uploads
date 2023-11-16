@@ -10113,7 +10113,8 @@ section.bike-scroller {
   z-index: 3;
   background-color: var(--black-color); }
   section.bike-scroller .images .row-images {
-    display: flex; }
+    display: flex;
+    overflow: hidden; }
     section.bike-scroller .images .row-images .image {
       padding: 25%;
       position: relative;
