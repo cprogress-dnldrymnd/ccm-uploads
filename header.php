@@ -493,7 +493,7 @@ if ($post_type == 'product') {
     ?>
         <div id="sticky-anchor" style="height: 0px;"></div>
         <header id="ccm-motors-header" class="bt-5">
-            <div class="container-fluid container-fluid-wide desktop-header g-0">
+            <div class="container-fluid container-fluid-wide desktop-header">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
                         <div class="row column-holder align-items-center">
