@@ -10105,7 +10105,7 @@ section.overview {
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      position: fixed;
+      position: absolute;
       top: -66px;
       left: 0;
       right: 0;
