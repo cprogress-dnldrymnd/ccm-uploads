@@ -331,6 +331,8 @@ section.bike-specification {
                         width: 42px;
                         height: 42px;
                         border: 1px solid var(--black-color);
+                        display: inline-block;
+                        position: relative;
                         &:before,
                         &:after {
                             content: "";

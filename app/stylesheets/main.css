@@ -10127,7 +10127,9 @@ section.bike-specification {
     section.bike-specification .specs-holder .specs-box > div.specs-heading .icon {
       width: 42px;
       height: 42px;
-      border: 1px solid var(--black-color); }
+      border: 1px solid var(--black-color);
+      display: inline-block;
+      position: relative; }
       section.bike-specification .specs-holder .specs-box > div.specs-heading .icon:before, section.bike-specification .specs-holder .specs-box > div.specs-heading .icon:after {
         content: "";
         position: absolute;
@@ -10166,7 +10168,7 @@ section.bike-specification {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        cursor: p; } }
+        cursor: pointer; } }
     @media (min-width: 992px) {
       section.bike-specification .specs-holder .specs-box > div.specs-list {
         transform: translateX(100%);
