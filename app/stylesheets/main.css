@@ -9870,7 +9870,8 @@ section.hero-banner-with-breadcrumbs {
     letter-spacing: 3.85px; }
 
 section.bike-navigation {
-  position: relative; }
+  position: relative;
+  z-index: 2; }
   section.bike-navigation .inner {
     padding-top: 10px;
     padding-bottom: 10px;
