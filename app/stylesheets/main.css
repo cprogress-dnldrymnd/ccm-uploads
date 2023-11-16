@@ -7788,6 +7788,9 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
       transform: translateX(-100%);
       height: auto; } }
 
+.bikes-template-templates #ccm-motors-header:hover, .bikes-template-templates #ccm-motors-header:active, .bikes-template-templates #ccm-motors-header:focus {
+  background-color: var(--black-color); }
+
 footer {
   position: relative;
   background: #fff;
@@ -9778,10 +9781,10 @@ footer {
     .defences .list .title h3 {
       margin-top: 5px !important; }
 
-.bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal,
-.bikes-template-page-reuseable-blocks .woo-login-popup-sc-modal-overlay {
+.bikes-template-templates .woo-login-popup-sc-modal,
+.bikes-template-templates .woo-login-popup-sc-modal-overlay {
   display: none !important; }
-.bikes-template-page-reuseable-blocks #ccm-motors-header {
+.bikes-template-templates #ccm-motors-header {
   background-color: transparent;
   position: absolute; }
 

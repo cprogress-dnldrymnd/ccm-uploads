@@ -1044,4 +1044,12 @@ body {
 	@media (max-width: 991px) {
 		@include offcanvas-style;
 	}
+}	
+
+.bikes-template-templates {
+	#ccm-motors-header {
+		@include on-event{ 
+			background-color: var(--black-color);
+		}
+	}
 }
