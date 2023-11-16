@@ -8,9 +8,9 @@ function bike_navigation() {
 		var windowTop = jQuery(window).scrollTop();
 
 		if (stickyTop < windowTop) {
-			jQuery('.bike-navigation').css('position', 'fixed');
+			jQuery('.bike-navigation').addClass('fixed')
 		} else {
-			jQuery('.bike-navigation').css('position', 'relative');
+			jQuery('.bike-navigation').removeClass('fixed')
 		}
 	});
 }
