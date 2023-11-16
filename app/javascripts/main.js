@@ -409,11 +409,10 @@ function bike_scroller() {
 						$transform--;
 					}
 				}
-
-
 				console.log($transform);
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
+				$transform = 0;
 			}
 			lastScrollTop = windowTop;
 		});
