@@ -87,7 +87,7 @@ $version = $_GET['version'];
         </div>
     </section>
 
-    <section class="overview <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="overview" <?= $version == 'v2' ? 'style="background-image: url(https://ccm.theprogressteam.com/wp-content/uploads/2022/02/maverick-image.png)"' : '' ?> >
+    <section class="overview <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="overview" <?= $version == 'v2' ? 'style="background-image: url(https://ccm.theprogressteam.com/wp-content/uploads/2022/02/maverick-image.png)"' : '' ?>>
         <div class="container">
             <div class="inner">
                 <?php if ($version == 'v2') { ?>
@@ -120,14 +120,15 @@ $version = $_GET['version'];
 
         </div>
     </section>
-
-    <section class="image-section">
-        <div class="container">
-            <div class="image-box">
-                <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-1.png" alt="">
+    <?php if ($version != 'v2') { ?>
+        <section class="image-section">
+            <div class="container">
+                <div class="image-box">
+                    <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-1.png" alt="">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php } ?>
 
     <section class="features" id="features">
         <div class="inner">
