@@ -10072,30 +10072,48 @@ section.bike-navigation {
   section.bike-navigation .bike-nav li {
     margin-left: 8px;
     margin-right: 8px; }
+  section.bike-navigation.v2 .inner {
+    background-color: transparent; }
 
 section.overview {
   padding-top: 70px;
   padding-bottom: 70px; }
-  section.overview .inner {
+  section.overview .inner .description-box {
+    font-size: 20px; }
+    section.overview .inner .description-box p {
+      font-size: inherit !important; }
+    @media (max-width: 480px) {
+      section.overview .inner .description-box {
+        font-size: 14px; } }
+  section.overview:not(.v2) .inner {
     max-width: 580px; }
-    section.overview .inner .description-box {
+    section.overview:not(.v2) .inner .description-box {
       max-width: 480px;
-      margin-left: auto;
-      font-size: 20px; }
-      section.overview .inner .description-box p {
-        font-size: inherit !important; }
-      @media (max-width: 480px) {
-        section.overview .inner .description-box {
-          font-size: 14px; } }
-  section.overview.v2 {
-    position: relative; }
-    section.overview.v2:before {
-      content: '';
+      margin-left: auto; }
+  section.overview.v2:not(.contact-form-holder) {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; }
+    section.overview.v2:not(.contact-form-holder) p, section.overview.v2:not(.contact-form-holder) li, section.overview.v2:not(.contact-form-holder) h2 {
+      color: var(--white-color); }
+    section.overview.v2:not(.contact-form-holder):before {
+      content: "";
       width: 50%;
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 0; }
+      bottom: 0;
+      background-color: #1e1e21; }
+    section.overview.v2:not(.contact-form-holder):after {
+      content: "";
+      width: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #000;
+      opacity: 0.75; }
   @media (max-width: 480px) {
     section.overview {
       padding-bottom: 25px; } }
