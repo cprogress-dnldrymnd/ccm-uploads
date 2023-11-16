@@ -333,6 +333,10 @@ section.overview {
             position: relative;
             z-index: 3;
         }
+        .contact-form {
+            padding: 3vw;
+            max-width: 480px;
+        }
         h2, p {
             color: var(--white-color);
         }
