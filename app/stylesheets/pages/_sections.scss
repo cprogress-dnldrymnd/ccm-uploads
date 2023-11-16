@@ -123,11 +123,20 @@ section.hero-banner-with-breadcrumbs {
         }
     }
 }
-
+body {
+    &:not(.hide-header) {
+        section.bike-navigation {
+            .inner {
+                transform: translateY(100%);
+            }
+        }
+    }
+}
 section.bike-navigation {
     position: relative;
     z-index: 2;
     .inner {
+        transition: 500ms;
         padding-top: 10px;
         padding-bottom: 10px;
         background-color: var(--white-color);

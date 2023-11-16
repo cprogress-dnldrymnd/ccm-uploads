@@ -9877,10 +9877,14 @@ section.hero-banner-with-breadcrumbs {
     margin-bottom: 0;
     letter-spacing: 3.85px; }
 
+body:not(.hide-header) section.bike-navigation .inner {
+  transform: translateY(100%); }
+
 section.bike-navigation {
   position: relative;
   z-index: 2; }
   section.bike-navigation .inner {
+    transition: 500ms;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: var(--white-color); }
