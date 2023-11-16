@@ -387,8 +387,8 @@ function bike_navigation() {
 
 function bike_scroller() {
 	if (jQuery('.bike-scroller').length > 0) {
-		$bike_nav_height = jQuery('.bike-scroller .inner').outerHeight();
-		jQuery('.bike-scroller').css('height', $bike_nav_height + 'px');
+		$bike_scoller_height = jQuery('.bike-scroller .inner').outerHeight();
+		jQuery('.bike-scroller').css('height', $bike_scoller_height + 'px');
 
 		var stickyTop = jQuery('.bike-scroller').offset().top;
 
