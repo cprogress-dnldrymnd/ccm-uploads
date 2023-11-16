@@ -11,30 +11,33 @@ $template = get_page_template_slug();
 	<footer class="bt-5">
 		<div class="footer-top">
 			<div class="container">
-				<div class="col-lg-3">
-					<aside id="nav_menu-2" class="block widget_nav_menu">
-						<h4>MOTORCYCLES</h4>
-						<div class="menu-footer1-container">
-							<ul id="menu-footer1" class="menu">
-								<li class="menu-item">
-									<a href="#">
-										Model Range
-									</a>
-								</li>
-								<li class="menu-item">
-									<a href="/shop/">
-										Configure a Bike
-									</a>
-								</li>
-
-								<li class="menu-item">
-									<a href="https://ccm.theprogressteam.com/club-news/">
-										Insurance
-									</a>
-								</li>
-							</ul>
+			<div class="col-lg-3">
+					<?php if (is_active_sidebar('footer_column_1')) { ?>
+						<div class="column-holder  ">
+							<?php dynamic_sidebar('footer_column_1') ?>
 						</div>
-					</aside>
+					<?php } ?>
+				</div>
+				<div class="col-lg-3">
+					<?php if (is_active_sidebar('footer_column_2')) { ?>
+						<div class="column-holder  ">
+							<?php dynamic_sidebar('footer_column_2') ?>
+						</div>
+					<?php } ?>
+				</div>
+				<div class="col-lg-3">
+					<?php if (is_active_sidebar('footer_column_3')) { ?>
+						<div class="column-holder  ">
+							<?php dynamic_sidebar('footer_column_3') ?>
+						</div>
+					<?php } ?>
+				</div>
+				<div class="col-lg-3">
+					<?php if (is_active_sidebar('footer_column_4')) { ?>
+						<div class="column-holder  ">
+							<?php dynamic_sidebar('footer_column_4') ?>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
