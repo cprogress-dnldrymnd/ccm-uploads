@@ -150,10 +150,12 @@ section.hero-banner-with-breadcrumbs {
             }
         }
     }
-    @media (max-width: 767px) {
-        align-items: center !important;
-        justify-content: center !important;
-        padding-top: 10px;
+    &.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs {
+        @media (max-width: 767px) {
+            align-items: center !important;
+            justify-content: center !important;
+            padding-top: 10px;
+        }
     }
 }
 body {
