@@ -284,10 +284,10 @@ section.footer-buttons {
         transition: 500ms;
 
         @include on-event {
-            background-color: #e22228;
+            background-color: #e22228 !important;
             color: var(--white-color);
             span {
-                .icon {
+                &.icon {
                     border-color: #e22228;
                     &:before {
                         background-color: #e22228;
