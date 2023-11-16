@@ -10122,7 +10122,7 @@ section.bike-specification {
       background-color: var(--black-color); }
       section.bike-specification .specs-holder .specs-box.active .specs-heading .icon:before, section.bike-specification .specs-holder .specs-box.active .specs-heading .icon:after {
         background-color: var(--white-color); }
-      section.bike-specification .specs-holder .specs-box.active .specs-heading .icon:before {
+      section.bike-specification .specs-holder .specs-box.active .specs-heading .icon:after {
         content: none; }
     section.bike-specification .specs-holder .specs-box.active .specs-list {
       max-height: 800px; }
