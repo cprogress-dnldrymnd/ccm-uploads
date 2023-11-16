@@ -368,14 +368,16 @@ function bike_navigation() {
 		var stickyTop = jQuery('.bike-navigation').offset().top;
 
 
-		$header_height = jQuery('#ccm-motors-header').outerHeight();
 
-		if (jQuery('body').hasClass('show-header')) {
-			stickyTop = stickyTop + $header_height;
-		}
 
 		jQuery(window).scroll(function () {
+
+			$header_height = jQuery('#ccm-motors-header').outerHeight();
+
 			var windowTop = jQuery(window).scrollTop();
+			if (jQuery('body').hasClass('show-header')) {
+				windowTop = windowTop + $header_height;
+			}
 
 			if (stickyTop < windowTop) {
 				jQuery('.bike-navigation').addClass('fixed')
