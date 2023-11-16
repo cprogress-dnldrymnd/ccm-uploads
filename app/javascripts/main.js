@@ -402,10 +402,10 @@ function bike_scroller() {
 				jQuery('body').addClass('bike-scroller-active');
 				jQuery('.bike-scroller .row-images').css('transform', 'translateX(-' + (1 * $transform) + 'px)');
 
-				if ($transform > 0) {
-					if (windowTop > lastScrollTop) {
-						$transform++;
-					} else {
+				if (windowTop > lastScrollTop) {
+					$transform++;
+				} else {
+					if ($transform > 0) {
 						$transform--;
 					}
 				}
