@@ -1,8 +1,8 @@
 <?php
 
 /**
- *  Template Name: -Template : Page Reusable Blocks
- *  Template Post Type: page, bikes
+ *  Template Name: -Template : Bike Template
+ *  Template Post Type: bikes
  *
  *  This page template has a sidebar built into it, 
  *  and can be used as a home page, in which case the title will not show up.
