@@ -7656,6 +7656,8 @@ body.show-minicart .col-side-minicart {
 body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   visibility: hidden;
   opacity: 0; }
+body.hide-header #ccm-motors-header {
+  transform: translateY(-100%); }
 
 .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   max-width: 525px;
