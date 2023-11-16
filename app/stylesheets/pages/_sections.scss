@@ -309,6 +309,11 @@ section.bike-specification {
             @media (min-width: 992px) {
                 display: flex;
             }
+            &.active {
+                .specs-list {
+                    max-height: 800px;
+                }
+            }
             > div {
                 @media (min-width: 992px) {
                     flex: 0 0 auto;
@@ -351,7 +356,7 @@ section.bike-specification {
                     }
                     @media(max-width: 991px) {
                         max-height: 0;
-                        transform: 500ms;
+                        transition: 500ms;
                         overflow: hidden;
                         position: relative;
                     }
@@ -371,6 +376,9 @@ section.bike-specification {
             &:not(:last-child) {
                 .specs-heading {
                     margin-bottom: 60px;
+                    @media(max-width: 991px) {
+                        margin-bottom: 30px;
+                    }
                 }
             }
         }

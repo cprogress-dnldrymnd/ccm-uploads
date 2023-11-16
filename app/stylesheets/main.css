@@ -10112,6 +10112,8 @@ section.bike-specification {
     @media (min-width: 992px) {
       section.bike-specification .specs-holder .specs-box {
         display: flex; } }
+    section.bike-specification .specs-holder .specs-box.active .specs-list {
+      max-height: 800px; }
     @media (min-width: 992px) {
       section.bike-specification .specs-holder .specs-box > div {
         flex: 0 0 auto;
@@ -10159,6 +10161,9 @@ section.bike-specification {
         visibility: visible; } }
     section.bike-specification .specs-holder .specs-box:not(:last-child) .specs-heading {
       margin-bottom: 60px; }
+      @media (max-width: 991px) {
+        section.bike-specification .specs-holder .specs-box:not(:last-child) .specs-heading {
+          margin-bottom: 30px; } }
 
 section.footer-buttons a {
   display: flex;
