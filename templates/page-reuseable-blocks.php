@@ -271,7 +271,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
             </div>
             <div class="col-6">
                 <a href="" class="light-gray">
-                    <span>CONFIGURE A BIKE</span>
+                    <span>BOOK A TEST RIDE</span>
                     <span class="icon"></span>
                 </a>
             </div>
