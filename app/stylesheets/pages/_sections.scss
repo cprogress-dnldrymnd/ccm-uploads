@@ -126,6 +126,8 @@ section.hero-banner-with-breadcrumbs {
 }
 
 section.bike-navigation {
+    position: relative;
+    z-index: 2;
     .inner {
         padding-top: 10px;
         padding-bottom: 10px;

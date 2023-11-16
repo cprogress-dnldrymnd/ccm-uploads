@@ -9869,28 +9869,30 @@ section.hero-banner-with-breadcrumbs {
     margin-bottom: 0;
     letter-spacing: 3.85px; }
 
-section.bike-navigation .inner {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: var(--white-color); }
-section.bike-navigation.fixed .inner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; }
-section.bike-navigation .bike-title span,
-section.bike-navigation .bike-title li,
-section.bike-navigation .bike-title a,
-section.bike-navigation .bike-nav span,
-section.bike-navigation .bike-nav li,
-section.bike-navigation .bike-nav a {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--black-color);
-  text-transform: uppercase; }
-section.bike-navigation .bike-nav li {
-  margin-left: 8px;
-  margin-right: 8px; }
+section.bike-navigation {
+  position: relative; }
+  section.bike-navigation .inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--white-color); }
+  section.bike-navigation.fixed .inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; }
+  section.bike-navigation .bike-title span,
+  section.bike-navigation .bike-title li,
+  section.bike-navigation .bike-title a,
+  section.bike-navigation .bike-nav span,
+  section.bike-navigation .bike-nav li,
+  section.bike-navigation .bike-nav a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black-color);
+    text-transform: uppercase; }
+  section.bike-navigation .bike-nav li {
+    margin-left: 8px;
+    margin-right: 8px; }
 
 section.overview {
   padding-top: 70px;
