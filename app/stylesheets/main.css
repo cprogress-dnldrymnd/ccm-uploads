@@ -9954,5 +9954,15 @@ section.footer-buttons a span.icon {
   display: inline-block;
   border-top: 3px solid var(--black-color);
   border-right: 3px solid var(--black-color); }
+  section.footer-buttons a span.icon:before {
+    content: "";
+    height: 3px;
+    display: inline-block;
+    background-color: var(--black-color);
+    width: 30px;
+    transform: rotate(-45deg);
+    left: -3px;
+    top: 1px;
+    position: absolute; }
 
 /*# sourceMappingURL=main.css.map */
