@@ -335,6 +335,7 @@ section.bike-scroller {
         .row-images {
             display: flex;
             overflow: hidden;
+            transition: 500ms;
             .image {
                 padding: 25%;
                 position: relative;
