@@ -9872,6 +9872,11 @@ footer.footer {
   padding-top: 0 !important;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 16px; }
+  @media (max-width: 767px) {
+    .main-holder.main-holder .row,
+    footer.footer .row {
+      padding-left: 7.5px;
+      padding-right: 7.5px; } }
   .main-holder.main-holder h1,
   .main-holder.main-holder h2,
   .main-holder.main-holder h3,

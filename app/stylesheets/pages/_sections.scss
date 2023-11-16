@@ -12,6 +12,12 @@ footer.footer {
     padding-top: 0 !important;
     font-family: "Fira Sans Condensed", sans-serif;
     font-size: 16px;
+    .row {
+        @media (max-width: 767px) {
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
+    }
     h1,
     h2,
     h3,
@@ -34,7 +40,7 @@ footer.footer {
         a,
         button {
             border: 1px solid var(--main-color);
-            @media(max-width: 480px) {
+            @media (max-width: 480px) {
                 padding: 10px 20px;
             }
         }
@@ -156,7 +162,7 @@ body {
             &.fixed {
                 .inner {
                     top: 70px;
-                    @media(max-width: 991px) {
+                    @media (max-width: 991px) {
                         top: 57px;
                     }
                 }
@@ -193,11 +199,11 @@ section.bike-navigation {
         }
     }
     .row {
-      .col-bike-nav {
-        @media (max-width: 991px) {
-            display: none;
+        .col-bike-nav {
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
-      }
         @media (max-width: 1199px) {
             justify-content: space-between !important;
         }
@@ -216,6 +222,10 @@ section.overview {
     padding-bottom: 70px;
     .inner {
         max-width: 580px;
+        @media (max-width: 767px) {
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
         .description-box {
             max-width: 480px;
             margin-left: auto;
