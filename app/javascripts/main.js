@@ -431,9 +431,9 @@ function bike_specs() {
 		});
 		jQuery('.specs-holder').css('height', t + 'px');
 	} else {
-		jQuery('.specs-heading').click(function (e) { 
+		jQuery('.specs-heading').click(function (e) {
 			jQuery(this).parent().addClass('active');
-			jQuery('.specs-heading').not(this).each(function(){
+			jQuery('.specs-heading').not(this).each(function () {
 				jQuery(this).parent().removeClass('active');
 			});
 			e.preventDefault();
@@ -511,11 +511,28 @@ function header() {
 
 
 }
+
+function smooth_scroll() {
+	var $root = $('html, body');
+
+	jQuery('a[href^="#"]').click(function () {
+		var href = jQuery.attr(this, 'href');
+
+		$root.animate({
+			scrollTop: jQuery(href).offset().top
+		}, 500, function () {
+			window.location.hash = href;
+		});
+
+		return false;
+	});
+}
 jQuery(document).ready(function () {
 	utm_parameters();
 	bike_navigation();
 	bike_specs();
 	header();
+	smooth_scroll();
 	/*bike_scroller()*/;
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
 		e.preventDefault();
