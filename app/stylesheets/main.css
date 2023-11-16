@@ -10087,6 +10087,15 @@ section.overview {
       @media (max-width: 480px) {
         section.overview .inner .description-box {
           font-size: 14px; } }
+  section.overview.v2 {
+    position: relative; }
+    section.overview.v2:before {
+      content: '';
+      width: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0; }
   @media (max-width: 480px) {
     section.overview {
       padding-bottom: 25px; } }
