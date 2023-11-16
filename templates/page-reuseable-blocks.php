@@ -165,7 +165,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                         </h3>
                     </div>
                     <div class="specs-list">
-                        <div class="row g-4">
+                        <div class="row g-5">
                             <?php for ($x = 0; $x <= 13; $x++) { ?>
                                 <div class="col-lg-6">
                                     <div class="specs-name">
@@ -186,7 +186,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                         </h3>
                     </div>
                     <div class="specs-list">
-                        <div class="row g-4">
+                        <div class="row g-5">
                             <?php for ($x = 0; $x <= 13; $x++) { ?>
                                 <div class="col-lg-6">
                                     <div class="specs-name">
@@ -207,7 +207,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                         </h3>
                     </div>
                     <div class="specs-list">
-                        <div class="row g-4">
+                        <div class="row g-5">
                             <?php for ($x = 0; $x <= 13; $x++) { ?>
                                 <div class="col-lg-6">
                                     <div class="specs-name">
