@@ -212,6 +212,19 @@ section.bike-specification {
                     right: 0;
                     width: 50%;
                     top: 0;
+                    transition: 500ms;
+                    transform: translateX(100%);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            @include on-event {
+                > div {
+                    &.specs-list {
+                        transform: translateX(0);
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 }
             }
         }

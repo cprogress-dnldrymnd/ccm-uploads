@@ -9932,7 +9932,13 @@ section.bike-specification {
         position: absolute;
         right: 0;
         width: 50%;
-        top: 0; }
+        top: 0;
+        transition: 500ms;
+        transform: translateX(100%);
+        opacity: 0; }
+    section.bike-specification .specs-holder .specs-box:hover > div.specs-list, section.bike-specification .specs-holder .specs-box:active > div.specs-list, section.bike-specification .specs-holder .specs-box:focus > div.specs-list {
+      transform: translateX(0);
+      opacity: 1; }
     section.bike-specification .specs-holder:not(:last-child) {
       margin-bottom: 60px; }
 
