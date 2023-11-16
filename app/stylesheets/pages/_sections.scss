@@ -245,10 +245,7 @@ section.overview {
     padding-bottom: 70px;
     .inner {
         max-width: 580px;
-        @media (max-width: 767px) {
-            padding-left: 7.5px;
-            padding-right: 7.5px;
-        }
+      
         .description-box {
             max-width: 480px;
             margin-left: auto;
