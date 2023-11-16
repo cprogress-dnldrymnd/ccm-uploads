@@ -157,11 +157,53 @@ $footer_type = carbon_get_the_post_meta('footer_type');
 
     <section class="bike-specification">
         <div class="container">
-            <div class="row">
+            <div class="specs-holder">
                 <div class="specs-box d-flex">
                     <div class="specs-heading">
                         <h3>
                             ENGINE
+                        </h3>
+                    </div>
+                    <div class="specs-list">
+                        <div class="row g-4">
+                            <?php for ($x = 0; $x <= 13; $x++) { ?>
+                                <div class="col-lg-6">
+                                    <div class="specs-name">
+                                        <strong>DISPLACEMENT</strong>
+                                    </div>
+                                    <div class="specs-val">
+                                        <span>Displacement</span>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-box d-flex">
+                    <div class="specs-heading">
+                        <h3>
+                            CHASSIS, SUSPENSION & BRAKES
+                        </h3>
+                    </div>
+                    <div class="specs-list">
+                        <div class="row g-4">
+                            <?php for ($x = 0; $x <= 13; $x++) { ?>
+                                <div class="col-lg-6">
+                                    <div class="specs-name">
+                                        <strong>DISPLACEMENT</strong>
+                                    </div>
+                                    <div class="specs-val">
+                                        <span>Displacement</span>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-box d-flex">
+                    <div class="specs-heading">
+                        <h3>
+                            STATIC DIMENSIONS
                         </h3>
                     </div>
                     <div class="specs-list">
