@@ -331,7 +331,7 @@ section.overview {
     }
     &.v2.contact-form-holder {
         position: relative;
-        @include half-bg();
+       
         .inner {
             max-width: 580px;
             .description-box {
@@ -347,11 +347,15 @@ section.overview {
             padding: 3vw;
             max-width: calc(480px + 6vw);
         }
-        h2, p {
-            color: var(--white-color);
-        }
-        &:after {
-            background-color: #1E1E21;
+        @media (min-width: 992px) {
+            h2,
+            p {
+                color: var(--white-color);
+            }
+            @include half-bg();
+            &:after {
+                background-color: #1e1e21;
+            }
         }
     }
     &.v2:not(.contact-form-holder) {

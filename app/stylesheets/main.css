@@ -10107,22 +10107,6 @@ section.overview {
       margin-left: auto; }
   section.overview.v2.contact-form-holder {
     position: relative; }
-    section.overview.v2.contact-form-holder:before {
-      content: "";
-      width: 50%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1; }
-    section.overview.v2.contact-form-holder:after {
-      content: "";
-      width: 50%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      z-index: 1; }
     section.overview.v2.contact-form-holder .inner {
       max-width: 580px; }
       section.overview.v2.contact-form-holder .inner .description-box {
@@ -10134,10 +10118,12 @@ section.overview {
     section.overview.v2.contact-form-holder .contact-form {
       padding: 3vw;
       max-width: calc(480px + 6vw); }
-    section.overview.v2.contact-form-holder h2, section.overview.v2.contact-form-holder p {
-      color: var(--white-color); }
-    section.overview.v2.contact-form-holder:after {
-      background-color: #1E1E21; }
+    @media (min-width: 992px) {
+      section.overview.v2.contact-form-holder h2,
+      section.overview.v2.contact-form-holder p {
+        color: var(--white-color); }
+      section.overview.v2.contact-form-holder:after {
+        background-color: #1e1e21; } }
   section.overview.v2:not(.contact-form-holder) {
     position: relative; }
     section.overview.v2:not(.contact-form-holder) .bg-holder {
