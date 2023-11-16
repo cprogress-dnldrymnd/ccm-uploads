@@ -378,16 +378,29 @@ function bike_navigation() {
 			}
 
 			if (stickyTop < windowTop) {
-				jQuery('.bike-navigation').addClass('fixed')
+				jQuery('.bike-navigation').addClass('fixed');
 			} else {
-				jQuery('.bike-navigation').removeClass('fixed')
+				jQuery('.bike-navigation').removeClass('fixed');
 			}
 		});
 	}
 }
 
 function bike_scroller() {
-	
+	if (jQuery('.bike-scroller').length > 0) {
+
+		var stickyTop = jQuery('.bike-scroller').offset().top;
+
+
+		jQuery(window).scroll(function () {
+			var windowTop = jQuery(window).scrollTop();
+			if (stickyTop < windowTop) {
+				jQuery('body').addClass('bike-scroller-active');
+			} else {
+				jQuery('body').removeClass('bike-scroller-active');
+			}
+		});
+	}
 }
 function bike_specs() {
 	var t = 0; // the height of the highest element (after the function runs)
