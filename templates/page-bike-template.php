@@ -175,8 +175,15 @@ $version = $_GET['version'];
                         </div>
                     </div>
                     <div class="col-lg-8">
+                        <?php if ($version == 'v2') {
+                            $image = 'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Heritage-Transparency-new.png';
+                        } else {
+                            $image = 'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-2.png';
+                        }
+
+                        ?>
                         <div class="image-box text-center text-lg-right">
-                            <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-2.png" alt="">
+                            <img src="<?= $image ?>">
                         </div>
                     </div>
                 </div>
