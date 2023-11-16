@@ -9996,7 +9996,7 @@ section.hero-banner-with-breadcrumbs {
       section.hero-banner-with-breadcrumbs .heading-box h1 {
         font-size: 64px; } }
   @media (max-width: 767px) {
-    section.hero-banner-with-breadcrumbs {
+    section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs {
       align-items: center !important;
       justify-content: center !important;
       padding-top: 10px; } }
