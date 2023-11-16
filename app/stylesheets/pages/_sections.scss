@@ -76,6 +76,16 @@ footer.footer {
             max-width: 1620px;
         }
     }
+    .heading-box {
+        h2 {
+            @media (max-width: 480px) {
+                font-size: 33px;
+            }
+        }
+    }
+    img {
+        max-width: 100%;
+    }
 }
 
 .breadcrumbs {
@@ -245,7 +255,13 @@ section.overview {
             p {
                 font-size: inherit !important;
             }
+            @media (max-width: 480px) {
+                font-size: 14px;
+            }
         }
+    }
+    @media (max-width: 480px) {
+        padding-bottom: 25px;
     }
 }
 
@@ -277,6 +293,10 @@ section.features {
                 margin-bottom: 32px;
             }
         }
+    }
+    @media (max-width: 480px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 }
 
