@@ -230,5 +230,36 @@ $footer_type = carbon_get_the_post_meta('footer_type');
             <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-5.png" alt="">
         </div>
     </section>
+
+    <section class="overview contact-form-holder">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="inner">
+                        <div class="heading-box">
+                            <h2>REGISTER YOUR INTEREST</h2>
+                        </div>
+                        <div class="description-box">
+                            <p>
+                                Please fill in your details and one of our team members will contact you within 48 hours.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                region: "eu1",
+                                portalId: "139521183",
+                                formId: "c45f8060-df31-4ff7-bdf3-39a8a20823e1"
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer($footer_type); ?>
