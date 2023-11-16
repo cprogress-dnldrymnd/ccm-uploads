@@ -9951,8 +9951,8 @@ section.hero-banner-with-breadcrumbs {
   overflow: hidden; }
   section.hero-banner-with-breadcrumbs .video-holder {
     position: absolute;
-    top: -120px;
-    bottom: -120px;
+    top: -7vw;
+    bottom: -7vw;
     pointer-events: none;
     left: 0;
     right: 0; }

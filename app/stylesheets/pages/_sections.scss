@@ -99,14 +99,18 @@ section.hero-banner-with-breadcrumbs {
     overflow: hidden;
     .video-holder {
         position: absolute;
-        top: -120px;
-        bottom: -120px;
+        top: -7vw;
+        bottom: -7vw;
         pointer-events: none;
         left: 0;
         right: 0;
         iframe {
             width: 100%;
             height: 100%;
+        }
+        @media(max-width: 1500px) {
+            left: -11vw;
+            right: -11vw;
         }
     }
     .content {
