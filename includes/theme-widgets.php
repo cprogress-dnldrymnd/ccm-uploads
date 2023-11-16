@@ -1,7 +1,6 @@
 <?php
 function action_widgets_init()
 {
-	);
 	register_sidebar(
 		array(
 			'name'          => 'Footer Column 1',
@@ -46,6 +45,5 @@ function action_widgets_init()
 			'after_title'   => '</h5>',
 		)
 	);
-
 }
 add_action('widgets_init', 'action_widgets_init');
