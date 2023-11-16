@@ -363,10 +363,9 @@ jQuery(window).on('resize', function () {
 function bike_navigation() {
 	if (jQuery('.bike-navigation').length > 0) {
 		$bike_nav_height = jQuery('.bike-navigation .inner').outerHeight();
-
 		jQuery('.bike-navigation').css('height', $bike_nav_height + 'px');
-		var stickyTop = jQuery('.bike-navigation').offset().top;
 
+		var stickyTop = jQuery('.bike-navigation').offset().top;
 
 		jQuery(window).scroll(function () {
 
@@ -388,15 +387,17 @@ function bike_navigation() {
 
 function bike_scroller() {
 	if (jQuery('.bike-scroller').length > 0) {
+		$bike_nav_height = jQuery('.bike-scroller .inner').outerHeight();
+		jQuery('.bike-scroller').css('height', $bike_nav_height + 'px');
 
 		var stickyTop = jQuery('.bike-scroller').offset().top;
 
 		jQuery(window).scroll(function (e) {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
-				jQuery('html').addClass('bike-scroller-active');
+				jQuery('body').addClass('bike-scroller-active');
 			} else {
-				jQuery('html').removeClass('bike-scroller-active');
+				jQuery('body').removeClass('bike-scroller-active');
 			}
 		});
 	}
