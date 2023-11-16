@@ -10114,27 +10114,39 @@ section.bike-specification {
       width: 50%; }
       section.bike-specification .specs-holder .specs-box > div .specs-val {
         font-size: 15px; }
-      section.bike-specification .specs-holder .specs-box > div.specs-heading {
-        padding-right: 30px; }
-        section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
-          font-size: 57px;
-          font-weight: 600;
-          margin-top: 0;
-          max-width: 550px; }
-      section.bike-specification .specs-holder .specs-box > div.specs-list {
-        padding-left: 30px;
-        position: absolute;
-        right: 0;
-        width: 50%;
-        top: 0;
-        transition: 500ms;
-        transform: translateX(100%);
-        opacity: 0;
-        visibility: hidden; }
-    section.bike-specification .specs-holder .specs-box:hover > div.specs-list, section.bike-specification .specs-holder .specs-box:active > div.specs-list, section.bike-specification .specs-holder .specs-box:focus > div.specs-list {
-      transform: translateX(0);
-      opacity: 1;
-      visibility: visible; }
+      section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+        font-size: 57px;
+        font-weight: 600;
+        margin-top: 0;
+        max-width: 550px; }
+        @media (max-width: 1199px) {
+          section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+            font-size: 50px; } }
+        @media (max-width: 991px) {
+          section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+            font-size: 40px; } }
+        @media (max-width: 767px) {
+          section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+            font-size: 33px; } }
+      @media (min-width: 992px) {
+        section.bike-specification .specs-holder .specs-box > div.specs-heading {
+          padding-right: 30px; } }
+      @media (min-width: 992px) {
+        section.bike-specification .specs-holder .specs-box > div.specs-list {
+          transform: translateX(100%);
+          opacity: 0;
+          visibility: hidden;
+          width: 50%;
+          padding-left: 30px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: 500ms; } }
+    @media (min-width: 992px) {
+      section.bike-specification .specs-holder .specs-box:hover > div.specs-list, section.bike-specification .specs-holder .specs-box:active > div.specs-list, section.bike-specification .specs-holder .specs-box:focus > div.specs-list {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible; } }
     section.bike-specification .specs-holder .specs-box:not(:last-child) .specs-heading {
       margin-bottom: 60px; }
 

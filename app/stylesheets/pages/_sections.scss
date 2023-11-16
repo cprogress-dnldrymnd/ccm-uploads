@@ -307,39 +307,55 @@ section.bike-specification {
         position: relative;
         .specs-box {
             > div {
-                flex: 0 0 auto;
-                width: 50%;
-
+                @media (min-width: 992px) {
+                    flex: 0 0 auto;
+                    width: 50%;
+                }
                 .specs-val {
                     font-size: 15px;
                 }
                 &.specs-heading {
-                    padding-right: 30px;
                     h3 {
                         font-size: 57px;
                         font-weight: 600;
                         margin-top: 0;
                         max-width: 550px;
+                        @media (max-width: 1199px) {
+                            font-size: 50px;
+                        }
+                        @media (max-width: 991px) {
+                            font-size: 40px;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 33px;
+                        }
+                    }
+                    @media (min-width: 992px) {
+                        padding-right: 30px;
                     }
                 }
                 &.specs-list {
-                    padding-left: 30px;
-                    position: absolute;
-                    right: 0;
-                    width: 50%;
-                    top: 0;
-                    transition: 500ms;
-                    transform: translateX(100%);
-                    opacity: 0;
-                    visibility: hidden;
+                    @media (min-width: 992px) {
+                        transform: translateX(100%);
+                        opacity: 0;
+                        visibility: hidden;
+                        width: 50%;
+                        padding-left: 30px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transition: 500ms;
+                    }
                 }
             }
-            @include on-event {
-                > div {
-                    &.specs-list {
-                        transform: translateX(0);
-                        opacity: 1;
-                        visibility: visible;
+            @media (min-width: 992px) {
+                @include on-event {
+                    > div {
+                        &.specs-list {
+                            transform: translateX(0);
+                            opacity: 1;
+                            visibility: visible;
+                        }
                     }
                 }
             }
