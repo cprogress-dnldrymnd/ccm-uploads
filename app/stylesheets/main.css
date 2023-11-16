@@ -9899,15 +9899,17 @@ section.overview {
 section.features {
   padding-top: 135px;
   padding-bottom: 135px; }
-  section.features .feature-box .feature-item .heading-box h5 {
-    font-size: 16px;
-    margin-top: 0;
-    margin-bottom: 15px; }
-  section.features .feature-box .feature-item .description-box {
-    font-size: 15px; }
-    section.features .feature-box .feature-item .description-box p {
-      font-size: inherit !important; }
-  section.features .feature-box .feature-item:not(:last-child) {
-    margin-bottom: 32px; }
+  section.features .feature-box {
+    max-width: 300px; }
+    section.features .feature-box .feature-item .heading-box h5 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 15px; }
+    section.features .feature-box .feature-item .description-box {
+      font-size: 15px; }
+      section.features .feature-box .feature-item .description-box p {
+        font-size: inherit !important; }
+    section.features .feature-box .feature-item:not(:last-child) {
+      margin-bottom: 32px; }
 
 /*# sourceMappingURL=main.css.map */
