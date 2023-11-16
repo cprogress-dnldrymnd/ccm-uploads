@@ -363,8 +363,14 @@ jQuery(window).on('resize', function () {
 function bike_navigation() {
 	if (jQuery('.bike-navigation').length > 0) {
 		$bike_nav_height = jQuery('.bike-navigation .inner').outerHeight();
+		$header_height = jQuery('#ccm-motors-header').outerHeight();
+
 		jQuery('.bike-navigation').css('height', $bike_nav_height + 'px');
 		var stickyTop = jQuery('.bike-navigation').offset().top;
+		if (jQuery('body').hasClass('show-header')) {
+			stickyTop = stickyTop + $header_height;
+		}
+
 		jQuery(window).scroll(function () {
 			var windowTop = jQuery(window).scrollTop();
 
@@ -391,8 +397,7 @@ function bike_specs() {
 }
 
 function header() {
-	$header_height = jQuery('#ccm-motors-header').outerHeight();
-	jQuery('main').css('--header_height', $header_height + 'px');
+
 	jQuery('.mini-cart a, .col-side-minicart').click(function (e) {
 		jQuery('body').toggleClass('show-minicart');
 		jQuery('.overlay').toggleClass('show-overlay');
@@ -444,7 +449,9 @@ function header() {
 		var st = jQuery(this).scrollTop();
 		if (st > lastScrollTop) {
 			jQuery('body').addClass('hide-header');
+			jQuery('body').removeClass('show-header');
 		} else {
+			jQuery('body').addClass('show-header');
 			jQuery('body').removeClass('hide-header');
 		}
 		if (jQuery('body').hasClass('bikes-template-templates')) {
