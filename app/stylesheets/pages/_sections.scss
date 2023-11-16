@@ -330,6 +330,7 @@ section.footer-buttons {
 section.bike-scroller {
     position: relative;
     z-index: 3;
+    background-color: var(--black-color);
     .images {
         .image {
             padding: 25%;
