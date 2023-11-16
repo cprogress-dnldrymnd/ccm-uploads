@@ -10121,6 +10121,11 @@ section.overview {
       left: 0;
       bottom: 0;
       z-index: 1; }
+    section.overview.v2.contact-form-holder .inner {
+      max-width: 580px; }
+      section.overview.v2.contact-form-holder .inner .description-box {
+        max-width: 480px;
+        margin-left: auto; }
     section.overview.v2.contact-form-holder .container {
       position: relative;
       z-index: 3; }
