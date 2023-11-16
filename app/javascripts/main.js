@@ -404,9 +404,11 @@ function bike_scroller() {
 		const scrollContainer = document.querySelector(".bike-scroller .images .row-images");
 
 		scrollContainer.addEventListener("wheel", (evt) => {
-			evt.preventDefault();
-			scrollContainer.scrollLeft += evt.deltaY;
-			console.log(scrollContainer.scrollLeft);
+			if (scrollContainer.scrollLeft == 0) {
+				evt.preventDefault();
+				scrollContainer.scrollLeft += evt.deltaY;
+				jQuery('body').removeClass('bike-scroller-active');
+			}
 		});
 	}
 
