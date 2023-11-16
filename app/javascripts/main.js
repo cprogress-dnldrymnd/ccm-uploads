@@ -391,7 +391,9 @@ function bike_scroller() {
 		jQuery('.bike-scroller').css('height', $bike_scoller_height + 'px');
 
 		var stickyTop = jQuery('.bike-scroller').offset().top;
-		var transform = 0;
+
+		console.log(jQuery('.row-images').outerHeight());
+		
 		jQuery(window).scroll(function (e) {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
