@@ -3,6 +3,10 @@ jQuery(window).on('resize', function () {
 });
 
 function bike_navigation() {
+	$bike_nav_height = jQuery('.bike-navigation .inner').outerHeight();
+
+	jQuery('.bike-navigation').css('height', $bike_nav_height + 'px');
+
 	var stickyTop = jQuery('.bike-navigation').offset().top;
 	jQuery(window).scroll(function () {
 		var windowTop = jQuery(window).scrollTop();
