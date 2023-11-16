@@ -40,8 +40,13 @@ footer.footer {
         a,
         button {
             border: 1px solid var(--main-color);
-            @media (max-width: 480px) {
+            @media (max-width: 767px) {
                 padding: 10px 20px;
+            }
+            @media (max-width: 480px) {
+                padding: 10px 12px;
+                letter-spacing: 0 !important;
+                font-size: 15px !important;
             }
         }
         &.btn-bordered {
