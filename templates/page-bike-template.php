@@ -100,45 +100,47 @@ $footer_type = carbon_get_the_post_meta('footer_type');
     </section>
 
     <section class="features">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <div class="feature-box">
-                        <div class="feature-item">
-                            <div class="heading-box">
-                                <h5>SINGLE CYLINDER, FOUR-STROKE, 600CC ENGINE</h5>
+        <div class="inner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="feature-box">
+                            <div class="feature-item">
+                                <div class="heading-box">
+                                    <h5>SINGLE CYLINDER, FOUR-STROKE, 600CC ENGINE</h5>
+                                </div>
+                                <div class="description-box">
+                                    <p>
+                                        With its single cylinder, four-stroke, 600cc engine, the Maverick delivers 55bhp and 43 ft lb of torque.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="description-box">
-                                <p>
-                                    With its single cylinder, four-stroke, 600cc engine, the Maverick delivers 55bhp and 43 ft lb of torque.
-                                </p>
+                            <div class="feature-item">
+                                <div class="heading-box">
+                                    <h5>STRAIGHT-THROUGH INLET AND TWIN EXHAUSTS</h5>
+                                </div>
+                                <div class="description-box">
+                                    <p>
+                                        Roaring to life with its straight-through inlet and twin exhausts producing a symphony of sound.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="heading-box">
-                                <h5>STRAIGHT-THROUGH INLET AND TWIN EXHAUSTS</h5>
-                            </div>
-                            <div class="description-box">
-                                <p>
-                                    Roaring to life with its straight-through inlet and twin exhausts producing a symphony of sound.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="heading-box">
-                                <h5>NOIR SABLE HARD POWDER-COAT FRAME FINISH</h5>
-                            </div>
-                            <div class="description-box">
-                                <p>
-                                    Just to make sure your ride is tough enough to match its attitude.
-                                </p>
+                            <div class="feature-item">
+                                <div class="heading-box">
+                                    <h5>NOIR SABLE HARD POWDER-COAT FRAME FINISH</h5>
+                                </div>
+                                <div class="description-box">
+                                    <p>
+                                        Just to make sure your ride is tough enough to match its attitude.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="image-box text-center text-lg-right">
-                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-2.png" alt="">
+                    <div class="col-lg-8">
+                        <div class="image-box text-center text-lg-right">
+                            <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-2.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>

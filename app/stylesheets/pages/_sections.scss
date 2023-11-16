@@ -7,7 +7,8 @@
         background-color: transparent;
     }
 }
-.main-holder.main-holder, footer.footer {
+.main-holder.main-holder,
+footer.footer {
     padding-top: 0 !important;
     font-family: "Fira Sans Condensed", sans-serif;
     font-size: 16px;
@@ -190,6 +191,11 @@ section.overview {
 section.features {
     padding-top: 135px;
     padding-bottom: 135px;
+    .inner {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .feature-box {
         max-width: 300px;
         .feature-item {

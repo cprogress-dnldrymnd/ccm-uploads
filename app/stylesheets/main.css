@@ -9864,7 +9864,8 @@ footer {
 .bikes-template-templates #ccm-motors-header {
   background-color: transparent; }
 
-.main-holder.main-holder, footer.footer {
+.main-holder.main-holder,
+footer.footer {
   padding-top: 0 !important;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 16px; }
@@ -9873,7 +9874,8 @@ footer {
   .main-holder.main-holder h3,
   .main-holder.main-holder h4,
   .main-holder.main-holder h5,
-  .main-holder.main-holder h6, footer.footer h1,
+  .main-holder.main-holder h6,
+  footer.footer h1,
   footer.footer h2,
   footer.footer h3,
   footer.footer h4,
@@ -9883,32 +9885,41 @@ footer {
     border: none;
     font-weight: 600 !important;
     color: var(--black-color); }
-  .main-holder.main-holder h2, footer.footer h2 {
+  .main-holder.main-holder h2,
+  footer.footer h2 {
     font-size: 83px; }
-  .main-holder.main-holder p, footer.footer p {
+  .main-holder.main-holder p,
+  footer.footer p {
     font-weight: 300; }
   .main-holder.main-holder .btn-box a,
-  .main-holder.main-holder .btn-box button, footer.footer .btn-box a,
+  .main-holder.main-holder .btn-box button,
+  footer.footer .btn-box a,
   footer.footer .btn-box button {
     border: 1px solid var(--main-color); }
   .main-holder.main-holder .btn-box.btn-bordered a,
-  .main-holder.main-holder .btn-box.btn-bordered button, footer.footer .btn-box.btn-bordered a,
+  .main-holder.main-holder .btn-box.btn-bordered button,
+  footer.footer .btn-box.btn-bordered a,
   footer.footer .btn-box.btn-bordered button {
     background-color: transparent !important;
     border: 1px solid var(--black-color) !important;
     color: var(--black-color) !important; }
-  .main-holder.main-holder .image-section img, footer.footer .image-section img {
+  .main-holder.main-holder .image-section img,
+  footer.footer .image-section img {
     width: 100%; }
-  .main-holder.main-holder .container, footer.footer .container {
+  .main-holder.main-holder .container,
+  footer.footer .container {
     width: 100% !important; }
     @media (min-width: 1500px) {
-      .main-holder.main-holder .container, footer.footer .container {
+      .main-holder.main-holder .container,
+      footer.footer .container {
         max-width: 1420px; } }
     @media (min-width: 1600px) {
-      .main-holder.main-holder .container, footer.footer .container {
+      .main-holder.main-holder .container,
+      footer.footer .container {
         max-width: 1520px; } }
     @media (min-width: 1700px) {
-      .main-holder.main-holder .container, footer.footer .container {
+      .main-holder.main-holder .container,
+      footer.footer .container {
         max-width: 1620px; } }
 
 .breadcrumbs ul {
@@ -10000,6 +10011,10 @@ section.overview {
 section.features {
   padding-top: 135px;
   padding-bottom: 135px; }
+  section.features .inner {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
   section.features .feature-box {
     max-width: 300px; }
     section.features .feature-box .feature-item .heading-box h5 {
