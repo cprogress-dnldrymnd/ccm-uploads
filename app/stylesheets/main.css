@@ -9947,7 +9947,5 @@ section.bike-specification {
       visibility: visible; }
     section.bike-specification .specs-holder .specs-box:not(:last-child) .specs-heading {
       margin-bottom: 60px; }
-    section.bike-specification .specs-holder:hover .specs-box > div.specs-list, section.bike-specification .specs-holder:active .specs-box > div.specs-list, section.bike-specification .specs-holder:focus .specs-box > div.specs-list {
-      transition-delay: 500ms; }
 
 /*# sourceMappingURL=main.css.map */
