@@ -10117,8 +10117,7 @@ section.bike-scroller {
     overflow: hidden; }
     section.bike-scroller .images .row-images .image {
       padding: 25%;
-      position: relative;
-      width: 50vw; }
+      position: relative; }
       section.bike-scroller .images .row-images .image img {
         position: absolute;
         left: 0;
