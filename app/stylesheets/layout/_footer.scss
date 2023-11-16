@@ -159,7 +159,7 @@ footer {
 	a,
 	li,
 	span {
-		color: var(--white-color);
+		color: var(--white-color) !important;
 	}
 	.menu {
 		padding: 0;
@@ -177,7 +177,7 @@ footer {
 
 	.widget-title {
 		font-size: 15px;
-		font-style: normal;
+		font-style: normal !important;
 	}
 
 	.footer-top {

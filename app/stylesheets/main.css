@@ -7959,7 +7959,7 @@ footer {
   footer a,
   footer li,
   footer span {
-    color: var(--white-color); }
+    color: var(--white-color) !important; }
   footer .menu {
     padding: 0;
     list-style: none; }
@@ -7970,7 +7970,7 @@ footer {
       margin-bottom: 11px; }
   footer .widget-title {
     font-size: 15px;
-    font-style: normal; }
+    font-style: normal !important; }
   footer .footer-top {
     padding-top: 60px;
     padding-bottom: 60px; }
