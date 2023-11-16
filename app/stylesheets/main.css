@@ -7796,6 +7796,8 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
 
 .bikes-template-templates #ccm-motors-header:hover, .bikes-template-templates #ccm-motors-header:active, .bikes-template-templates #ccm-motors-header:focus {
   background-color: var(--black-color); }
+.bikes-template-templates.header-black-bg #ccm-motors-header {
+  background-color: var(--black-color); }
 
 footer {
   position: relative;
