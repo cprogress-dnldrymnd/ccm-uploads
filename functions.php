@@ -859,6 +859,7 @@ function cv_register_custom_fields()
 }
 require_once('includes/shortcodes.php');
 require_once('includes/carbonfields.php');
+require_once('includes/theme-widgets.php');
 add_shortcode('mega_nav', 'mega_nav_menu');
 
 function mega_nav_menu($atts)
