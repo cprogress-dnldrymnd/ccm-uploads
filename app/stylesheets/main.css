@@ -7958,7 +7958,8 @@ footer {
   footer li,
   footer span,
   footer p {
-    color: inherit !important; }
+    color: inherit !important;
+    font-weight: 300; }
   footer p:last-child {
     margin-bottom: 0 !important; }
   footer .menu {
