@@ -10072,7 +10072,8 @@ section.footer-buttons a {
   color: var(--black-color);
   text-decoration: none; }
   section.footer-buttons a:hover, section.footer-buttons a:active, section.footer-buttons a:focus {
-    background-color: #E22228; }
+    background-color: #E22228;
+    color: var(--white-color); }
   section.footer-buttons a.light-blue {
     background-color: #e6eef0; }
   section.footer-buttons a.light-gray {
