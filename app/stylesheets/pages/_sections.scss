@@ -192,13 +192,22 @@ section.features {
 section.bike-specification {
     padding-top: 135px;
     padding-bottom: 135px;
-    .specs-box {
-        > div {
-            flex: 0 0 auto;
-            width: 50%;
-            .specs-val {
-                font-size: 15px;
+    .specs-holder {
+        .specs-box {
+            > div {
+                flex: 0 0 auto;
+                width: 50%;
+                h3 {
+                    font-size: 57px;
+                    font-weight: 600;
+                }
+                .specs-val {
+                    font-size: 15px;
+                }
             }
+        }
+        &:not(:last-child) {
+            margin-bottom: 60px;
         }
     }
 }

@@ -9916,10 +9916,15 @@ section.features {
 section.bike-specification {
   padding-top: 135px;
   padding-bottom: 135px; }
-  section.bike-specification .specs-box > div {
+  section.bike-specification .specs-holder .specs-box > div {
     flex: 0 0 auto;
     width: 50%; }
-    section.bike-specification .specs-box > div .specs-val {
+    section.bike-specification .specs-holder .specs-box > div h3 {
+      font-size: 57px;
+      font-weight: 600; }
+    section.bike-specification .specs-holder .specs-box > div .specs-val {
       font-size: 15px; }
+  section.bike-specification .specs-holder:not(:last-child) {
+    margin-bottom: 60px; }
 
 /*# sourceMappingURL=main.css.map */
