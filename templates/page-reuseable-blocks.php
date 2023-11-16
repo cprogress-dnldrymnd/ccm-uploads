@@ -99,7 +99,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
 
     <section class="features">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-4">
                     <div class="feature-box">
                         <div class="feature-item">
@@ -135,7 +135,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <div class="image-box">
+                    <div class="image-box text-center text-lg-right">
                         <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-2.png" alt="">
                     </div>
                 </div>

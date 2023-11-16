@@ -7002,6 +7002,10 @@ body {
 .w-100 {
   width: 100% !important; }
 
+@media (min-width: 992px) {
+  .text-lg-right {
+    text-align: right !important; } }
+
 @media screen and (max-width: 991px) {
   #navbar {
     overflow-x: hidden !important; } }
