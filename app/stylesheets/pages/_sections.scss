@@ -127,6 +127,15 @@ section.hero-banner-with-breadcrumbs {
             display: none;
         }
     }
+    .next-section {
+        display: inline-block;
+        a {
+            width: 60px;
+            height: 60px;
+            background-color: var(--main-color);
+            color: var(--white-color);
+        }
+    }
     .video-holder {
         position: absolute;
         top: -120px;
