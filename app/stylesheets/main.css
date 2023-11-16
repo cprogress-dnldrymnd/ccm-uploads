@@ -7006,6 +7006,9 @@ body {
   .text-lg-right {
     text-align: right !important; } }
 
+.nowrap {
+  flex-wrap: nowrap !important; }
+
 @media screen and (max-width: 991px) {
   #navbar {
     overflow-x: hidden !important; } }
