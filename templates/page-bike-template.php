@@ -161,6 +161,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                 </div>
             </div>
         </div>
+        <div class="scroll-offset"></div>
     </section>
 
     <section class="bike-specification">

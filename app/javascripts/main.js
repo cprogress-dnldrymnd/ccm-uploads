@@ -394,10 +394,7 @@ function bike_scroller() {
 		$width = jQuery('.row-images .image').outerWidth();
 		$length = jQuery('.row-images .image').length;
 
-
-		console.log($width);
-		console.log($length);
-		console.log($width * $length);
+		jQuery('.bike-scroller .scroll-offset').css('height', ($width * $length) + 'px')
 
 		jQuery(window).scroll(function (e) {
 			var windowTop = jQuery(window).scrollTop();
