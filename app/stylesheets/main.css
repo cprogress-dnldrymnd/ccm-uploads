@@ -10045,6 +10045,10 @@ section.overview {
   padding-bottom: 70px; }
   section.overview .inner {
     max-width: 580px; }
+    @media (max-width: 767px) {
+      section.overview .inner {
+        padding-left: 7.5px;
+        padding-right: 7.5px; } }
     section.overview .inner .description-box {
       max-width: 480px;
       margin-left: auto;
