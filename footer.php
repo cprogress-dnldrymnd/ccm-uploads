@@ -43,6 +43,26 @@ $template = get_page_template_slug();
 				</div>
 			</div>
 		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<?php if (is_active_sidebar('footer_bottom_left')) { ?>
+							<div class="column-holder  ">
+								<?php dynamic_sidebar('footer_bottom_left') ?>
+							</div>
+						<?php } ?>
+					</div>
+					<div class="col-lg-6">
+						<?php if (is_active_sidebar('footer_bottom_right')) { ?>
+							<div class="column-holder  ">
+								<?php dynamic_sidebar('footer_bottom_right') ?>
+							</div>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 
 	<div class="whats-app"> <a href="https://wa.me/7791962112"> <img src="https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/WhatsApp_icon.png"> </a> </div>
