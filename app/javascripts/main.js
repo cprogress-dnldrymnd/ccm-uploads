@@ -516,7 +516,7 @@ jQuery(document).ready(function () {
 	bike_navigation();
 	bike_specs();
 	header();
-	bike_scroller();
+	/*bike_scroller()*/;
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
 		e.preventDefault();
 		jQuery(this).find('.wpcf7-submit').attr('disabled', 'disabled');

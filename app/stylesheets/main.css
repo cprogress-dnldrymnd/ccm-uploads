@@ -10212,6 +10212,9 @@ section.bike-specification {
       padding-top: 100px;
       padding-bottom: 100px; } }
 
+@media (max-width: 767px) {
+  section.footer-buttons {
+    display: none; } }
 section.footer-buttons a {
   display: flex;
   align-items: center;
