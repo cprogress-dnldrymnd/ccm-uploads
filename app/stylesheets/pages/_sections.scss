@@ -288,9 +288,9 @@ section.footer-buttons {
             color: var(--white-color);
             span {
                 &.icon {
-                    border-color: #e22228;
+                    border-color: var(--white-color);
                     &:before {
-                        background-color: #e22228;
+                        background-color: var(--white-color);
                     }
                 }
             }
