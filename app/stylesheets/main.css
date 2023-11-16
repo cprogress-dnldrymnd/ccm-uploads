@@ -7962,6 +7962,8 @@ footer {
     font-weight: 300; }
   footer p:last-child {
     margin-bottom: 0 !important; }
+  footer a:hover {
+    color: var(--white-color) !important; }
   footer .menu {
     padding: 0;
     list-style: none; }
