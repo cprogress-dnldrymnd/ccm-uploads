@@ -331,7 +331,21 @@ section.bike-scroller {
     position: relative;
     z-index: 3;
     background-color: var(--black-color);
- 
+    /*
+    .images {
+        .image {
+            padding: 25%;
+            position: relative;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }*/
 }
 
 body {
