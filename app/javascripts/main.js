@@ -392,10 +392,13 @@ function bike_scroller() {
 		$length = jQuery('.row-images .image').length;
 
 		jQuery('.bike-scroller').css('height', ($width * $length) + 'px');
+		var $transform = 0;
 		jQuery(window).scroll(function (e) {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
 				jQuery('body').addClass('bike-scroller-active');
+				jQuery('.bike-scroller .row-images').css('transform', 'translateX(' + 100 * $transform + ')');
+				$transform++;
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
 			}
