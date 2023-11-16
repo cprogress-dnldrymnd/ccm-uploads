@@ -8,7 +8,7 @@ $template = get_page_template_slug();
 ?>
 <?php if ($template != 'templates/page-tablet.php') { ?>
 
-	<footer class="bt-5">
+	<footer class="bt-5 footer">
 		<div class="footer-top">
 			<div class="container">
 				<div class="row">
