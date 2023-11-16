@@ -261,5 +261,21 @@ $footer_type = carbon_get_the_post_meta('footer_type');
             </div>
         </div>
     </section>
+    <section class="footer-buttons">
+        <div class="row g-0">
+            <div class="col-6">
+                <a href="" class="w-100 text-center">
+                    <span>CONFIGURE A BIKE</span>
+                    <span class="icon"></span>
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="" class="w-100 text-center">
+                    <span>CONFIGURE A BIKE</span>
+                    <span class="icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer($footer_type); ?>
