@@ -10111,22 +10111,17 @@ section.footer-buttons a {
 section.bike-scroller {
   position: relative;
   z-index: 3;
-  background-color: var(--black-color);
-  /*
-  .images {
-      .image {
-          padding: 25%;
-          position: relative;
-          img {
-              position: absolute;
-              left: 0;
-              top: 0;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-          }
-      }
-  }*/ }
+  background-color: var(--black-color); }
+  section.bike-scroller .images .image {
+    padding: 25%;
+    position: relative; }
+    section.bike-scroller .images .image img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
 
 body.bike-scroller-active .bike-scroller .inner {
   position: fixed;

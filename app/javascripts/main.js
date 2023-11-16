@@ -396,9 +396,17 @@ function bike_scroller() {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
 				jQuery('body').addClass('bike-scroller-active');
+				/*
+								jQuery('.bike-scroller .images').css('transform', 'translateX(' + transform + 'px)');
+								transform++;*/
 
-				jQuery('.bike-scroller .images').css('transform', 'translateX(' + transform + 'px)');
-				transform++;
+				const scrollContainer = document.querySelector(".bike-scroller .image");
+
+				scrollContainer.addEventListener("wheel", (evt) => {
+					evt.preventDefault();
+					scrollContainer.scrollLeft += evt.deltaY;
+				});
+
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
 			}
