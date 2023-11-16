@@ -419,17 +419,18 @@ function bike_scroller() {
 	}
 }
 function bike_specs() {
-	var t = 0; // the height of the highest element (after the function runs)
-	var t_elem;  // the highest element (after the function runs)
-	jQuery(".specs-list").each(function () {
-		$this = $(this);
-		if ($this.outerHeight() > t) {
-			t_elem = this;
-			t = $this.outerHeight();
-		}
-	});
-
-	jQuery('.specs-holder').css('height', t + 'px');
+	if (window.innerWidth > 991) {
+		var t = 0; // the height of the highest element (after the function runs)
+		var t_elem;  // the highest element (after the function runs)
+		jQuery(".specs-list").each(function () {
+			$this = $(this);
+			if ($this.outerHeight() > t) {
+				t_elem = this;
+				t = $this.outerHeight();
+			}
+		});
+		jQuery('.specs-holder').css('height', t + 'px');
+	}
 }
 
 function header() {
