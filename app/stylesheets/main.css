@@ -9879,7 +9879,7 @@ section.hero-banner-with-breadcrumbs {
     margin-bottom: 0;
     letter-spacing: 3.85px; }
 
-body:not(.hide-header) section.bike-navigation .inner {
+body:not(.hide-header) section.bike-navigation.fixed .inner {
   transform: translateY(100%); }
 
 section.bike-navigation {

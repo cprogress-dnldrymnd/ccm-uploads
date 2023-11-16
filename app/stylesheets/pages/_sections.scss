@@ -126,8 +126,10 @@ section.hero-banner-with-breadcrumbs {
 body {
     &:not(.hide-header) {
         section.bike-navigation {
-            .inner {
-                transform: translateY(100%);
+            &.fixed {
+                .inner {
+                    transform: translateY(100%);
+                }
             }
         }
     }
