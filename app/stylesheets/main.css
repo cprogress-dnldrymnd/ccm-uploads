@@ -7953,6 +7953,8 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
 }*/
 footer {
   background-color: #1e1e21; }
+  footer h3, footer h4, footer h5 {
+    color: var(--white-color); }
   footer .footer-top {
     padding-top: 60px;
     padding-bottom: 60px; }

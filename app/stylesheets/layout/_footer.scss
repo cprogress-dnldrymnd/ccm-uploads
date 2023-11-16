@@ -153,6 +153,14 @@
 
 footer {
 	background-color: #1e1e21;
+	h3,
+	h4,
+	h5,
+	a,
+	li,
+	span {
+		color: var(--white-color);
+	}
 	.footer-top {
 		padding-top: 60px;
 		padding-bottom: 60px;
