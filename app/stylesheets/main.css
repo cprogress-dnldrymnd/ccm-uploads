@@ -10109,39 +10109,40 @@ section.bike-specification {
   padding-bottom: 135px; }
   section.bike-specification .specs-holder {
     position: relative; }
-    section.bike-specification .specs-holder .specs-box > div {
-      flex: 0 0 auto;
-      width: 50%; }
-      section.bike-specification .specs-holder .specs-box > div .specs-val {
-        font-size: 15px; }
-      section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
-        font-size: 57px;
-        font-weight: 600;
-        margin-top: 0;
-        max-width: 550px; }
-        @media (max-width: 1199px) {
-          section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
-            font-size: 50px; } }
-        @media (max-width: 991px) {
-          section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
-            font-size: 40px; } }
-        @media (max-width: 767px) {
-          section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
-            font-size: 33px; } }
-      @media (min-width: 992px) {
-        section.bike-specification .specs-holder .specs-box > div.specs-heading {
-          padding-right: 30px; } }
-      @media (min-width: 992px) {
-        section.bike-specification .specs-holder .specs-box > div.specs-list {
-          transform: translateX(100%);
-          opacity: 0;
-          visibility: hidden;
-          width: 50%;
-          padding-left: 30px;
-          position: absolute;
-          right: 0;
-          top: 0;
-          transition: 500ms; } }
+    @media (min-width: 992px) {
+      section.bike-specification .specs-holder .specs-box > div {
+        flex: 0 0 auto;
+        width: 50%; } }
+    section.bike-specification .specs-holder .specs-box > div .specs-val {
+      font-size: 15px; }
+    section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+      font-size: 57px;
+      font-weight: 600;
+      margin-top: 0;
+      max-width: 550px; }
+      @media (max-width: 1199px) {
+        section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+          font-size: 50px; } }
+      @media (max-width: 991px) {
+        section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+          font-size: 40px; } }
+      @media (max-width: 767px) {
+        section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+          font-size: 33px; } }
+    @media (min-width: 992px) {
+      section.bike-specification .specs-holder .specs-box > div.specs-heading {
+        padding-right: 30px; } }
+    @media (min-width: 992px) {
+      section.bike-specification .specs-holder .specs-box > div.specs-list {
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        width: 50%;
+        padding-left: 30px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: 500ms; } }
     @media (min-width: 992px) {
       section.bike-specification .specs-holder .specs-box:hover > div.specs-list, section.bike-specification .specs-holder .specs-box:active > div.specs-list, section.bike-specification .specs-holder .specs-box:focus > div.specs-list {
         transform: translateX(0);

@@ -167,7 +167,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
     <section class="bike-specification">
         <div class="container">
             <div class="specs-holder">
-                <div class="specs-box d-flex">
+                <div class="specs-box">
                     <div class="specs-heading">
                         <h3>
                             ENGINE
@@ -176,7 +176,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                     <div class="specs-list">
                         <div class="row g-5">
                             <?php for ($x = 0; $x <= 13; $x++) { ?>
-                                <div class="col-lg-6">
+                                <div class="col-6">
                                     <div class="specs-name">
                                         <strong>DISPLACEMENT</strong>
                                     </div>
@@ -188,7 +188,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                         </div>
                     </div>
                 </div>
-                <div class="specs-box d-flex">
+                <div class="specs-box">
                     <div class="specs-heading">
                         <h3>
                             CHASSIS, SUSPENSION & BRAKES
@@ -197,7 +197,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                     <div class="specs-list">
                         <div class="row g-5">
                             <?php for ($x = 0; $x <= 13; $x++) { ?>
-                                <div class="col-lg-6">
+                                <div class="col-6">
                                     <div class="specs-name">
                                         <strong>DISPLACEMENT</strong>
                                     </div>
@@ -209,7 +209,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                         </div>
                     </div>
                 </div>
-                <div class="specs-box d-flex">
+                <div class="specs-box">
                     <div class="specs-heading">
                         <h3>
                             STATIC DIMENSIONS
@@ -218,7 +218,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                     <div class="specs-list">
                         <div class="row g-5">
                             <?php for ($x = 0; $x <= 13; $x++) { ?>
-                                <div class="col-lg-6">
+                                <div class="col-6">
                                     <div class="specs-name">
                                         <strong>DISPLACEMENT</strong>
                                     </div>

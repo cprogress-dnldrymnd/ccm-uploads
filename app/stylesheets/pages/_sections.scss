@@ -306,6 +306,9 @@ section.bike-specification {
     .specs-holder {
         position: relative;
         .specs-box {
+            @media (min-width: 992px) {
+                display: flex;
+            }
             > div {
                 @media (min-width: 992px) {
                     flex: 0 0 auto;
