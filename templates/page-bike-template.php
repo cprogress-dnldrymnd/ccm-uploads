@@ -99,9 +99,11 @@ $version = $_GET['version'];
 
                         </div>
                         <div class="col-lg-6">
-                            <p>
-                                Any motorcycle that bears our founding father’s signature has to be very special. Using the same gorgeous trellis frame that underpins the striking Spitfire range, this very limited edition machine has been designed using a range of components exclusive to this stunning machine. This machine is unmistakably CCM. It lifts any pre-conceived impressions to a new level. Our most striking bike to date, every component has been carefully considered to create a motorcycle that Alan would have been truly proud of.
-                            </p>
+                            <div class="description-box">
+                                <p>
+                                    Any motorcycle that bears our founding father’s signature has to be very special. Using the same gorgeous trellis frame that underpins the striking Spitfire range, this very limited edition machine has been designed using a range of components exclusive to this stunning machine. This machine is unmistakably CCM. It lifts any pre-conceived impressions to a new level. Our most striking bike to date, every component has been carefully considered to create a motorcycle that Alan would have been truly proud of.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 <?php } else { ?>

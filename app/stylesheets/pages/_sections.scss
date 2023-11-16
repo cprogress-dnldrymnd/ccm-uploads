@@ -290,8 +290,21 @@ section.overview {
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        p, li, h2 {
+        p,
+        li,
+        h2 {
             color: var(--white-color);
+        }
+        .inner {
+            .description-box {
+                @media (min-width: 992px) {
+                    padding: 3vw;
+                }
+            }
+        }
+        .container {
+            position: relative;
+            z-index: 1;
         }
         &:before {
             content: "";

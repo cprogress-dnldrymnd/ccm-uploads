@@ -10095,8 +10095,15 @@ section.overview {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; }
-    section.overview.v2:not(.contact-form-holder) p, section.overview.v2:not(.contact-form-holder) li, section.overview.v2:not(.contact-form-holder) h2 {
+    section.overview.v2:not(.contact-form-holder) p,
+    section.overview.v2:not(.contact-form-holder) li,
+    section.overview.v2:not(.contact-form-holder) h2 {
       color: var(--white-color); }
+    section.overview.v2:not(.contact-form-holder) .inner .description-box {
+      padding: 3vw; }
+    section.overview.v2:not(.contact-form-holder) .container {
+      position: relative;
+      z-index: 1; }
     section.overview.v2:not(.contact-form-holder):before {
       content: "";
       width: 50%;
