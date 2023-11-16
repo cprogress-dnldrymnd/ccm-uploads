@@ -368,7 +368,7 @@ function bike_navigation() {
 		jQuery('.bike-navigation').css('height', $bike_nav_height + 'px');
 		var stickyTop = jQuery('.bike-navigation').offset().top;
 		if (jQuery('body').hasClass('show-header')) {
-			stickyTop = stickyTop - $header_height;
+			stickyTop = stickyTop + $header_height;
 		}
 
 		jQuery(window).scroll(function () {
