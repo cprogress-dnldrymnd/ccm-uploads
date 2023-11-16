@@ -343,3 +343,9 @@ section.bike-scroller {
         }
     }
 }
+
+html {
+    &.bike-scroller-active {
+        overflow: hidden;
+    }
+}
