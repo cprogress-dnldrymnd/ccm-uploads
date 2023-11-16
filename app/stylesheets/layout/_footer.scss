@@ -152,5 +152,16 @@
 }*/
 
 .footer {
-	background-color: #1E1E21;
+	background-color: #1e1e21;
+	.footer-top {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.footer-bottom {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		background-color: #171717;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 }

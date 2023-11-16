@@ -7952,7 +7952,16 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
 	}
 }*/
 .footer {
-  background-color: #1E1E21; }
+  background-color: #1e1e21; }
+  .footer .footer-top {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+  .footer .footer-bottom {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #171717;
+    padding-bottom: 40px;
+    padding-bottom: 40px; }
 
 .red-btn {
   position: relative;
