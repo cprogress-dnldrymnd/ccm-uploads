@@ -392,9 +392,8 @@ function bike_specs() {
 
 function header() {
 
-
 	$header_height = jQuery('#ccm-motors-header').outerHeight();
-	jQuery('#ccm-motors-header').css('height', $header_height + 'px');
+	jQuery('#ccm-motors-header').css('--header-height', $header_height + 'px');
 
 	jQuery('.mini-cart a, .col-side-minicart').click(function (e) {
 		jQuery('body').toggleClass('show-minicart');
