@@ -280,4 +280,4 @@ $footer_type = carbon_get_the_post_meta('footer_type');
         </div>
     </section>
 </main>
-<?php get_footer($footer_type); ?>
+<?php get_footer(); ?>
