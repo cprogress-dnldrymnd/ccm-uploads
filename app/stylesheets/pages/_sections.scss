@@ -239,14 +239,5 @@ section.bike-specification {
                 }
             }
         }
-        @include on-event {
-            .specs-box {
-                > div {
-                    &.specs-list {
-                        transition-delay: 500ms;
-                    }
-                }
-            }
-        }
     }
 }
