@@ -213,7 +213,7 @@ body {
 }
 section.bike-navigation {
     position: relative;
-    z-index: 3;
+    z-index: 99;
     .inner {
         transition: 500ms;
         padding-top: 10px;
