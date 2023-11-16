@@ -150,12 +150,14 @@ $footer_type = carbon_get_the_post_meta('footer_type');
     <?php $images = array(17228, 17229, 17228, 17229) ?>
 
     <section class="bike-scroller">
-        <div class="images d-flex">
-            <?php foreach ($images as $key => $image) { ?>
-                <a id="image-<?= $key ?>" href="<?= wp_get_attachment_image_url($image, 'full') ?>">
-                    <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
-                </a>
-            <?php } ?>
+        <div class="images">
+            <div class="row nowrap">
+                <?php foreach ($images as $key => $image) { ?>
+                    <div class="col-lg-6 image" id="image-<?= $key ?>">
+                        <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
+                    </div>
+                <?php } ?>
+            </div>
         </div>
     </section>
 
