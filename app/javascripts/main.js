@@ -388,7 +388,6 @@ function bike_navigation() {
 function bike_scroller() {
 	jQuery('.horizontal-scroll').horizontalScroll({
 		containerHeight: "100vh",
-		width: "50vw"
 	});
 }
 function bike_specs() {
