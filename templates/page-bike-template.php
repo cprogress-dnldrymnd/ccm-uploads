@@ -87,7 +87,7 @@ $version = $_GET['version'];
         </div>
     </section>
 
-    <section class="overview <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="overview">
+    <section class="overview <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="overview" style="background-image: url(https://ccm.theprogressteam.com/wp-content/uploads/2022/02/maverick-image.png)">
         <div class="container">
             <div class="inner">
                 <?php if ($version == 'v2') { ?>

@@ -287,6 +287,9 @@ section.overview {
     }
     &.v2:not(.contact-form-holder) {
         position: relative;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         &:before {
             content: "";
             width: 50%;
