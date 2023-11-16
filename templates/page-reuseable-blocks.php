@@ -165,7 +165,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                         </h3>
                     </div>
                     <div class="specs-list">
-                        <div class="row">
+                        <div class="row g-4">
                             <?php for ($x = 0; $x <= 13; $x++) { ?>
                                 <div class="col-lg-6">
                                     <div class="specs-name">

@@ -9913,8 +9913,13 @@ section.features {
     section.features .feature-box .feature-item:not(:last-child) {
       margin-bottom: 32px; }
 
-section.bike-specification .specs-box > div {
-  flex: 0 0 auto;
-  width: 50%; }
+section.bike-specification {
+  padding-top: 135px;
+  padding-bottom: 135px; }
+  section.bike-specification .specs-box > div {
+    flex: 0 0 auto;
+    width: 50%; }
+    section.bike-specification .specs-box > div .specs-val {
+      font-size: 15px; }
 
 /*# sourceMappingURL=main.css.map */
