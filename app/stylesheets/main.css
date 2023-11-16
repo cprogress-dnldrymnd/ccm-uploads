@@ -10078,11 +10078,13 @@ section.bike-navigation {
     section.bike-navigation.v2 .inner .btn-bordered a {
       border-color: var(--white-color) !important;
       color: var(--white-color) !important; }
-    section.bike-navigation.v2 .inner .bike-nav li {
-      margin-left: 8px;
-      margin-right: 8px; }
-      section.bike-navigation.v2 .inner .bike-nav li a {
-        color: var(--white-color); }
+    section.bike-navigation.v2 .inner .bike-title span,
+    section.bike-navigation.v2 .inner .bike-title li,
+    section.bike-navigation.v2 .inner .bike-title a,
+    section.bike-navigation.v2 .inner .bike-nav span,
+    section.bike-navigation.v2 .inner .bike-nav li,
+    section.bike-navigation.v2 .inner .bike-nav a {
+      color: var(--white-color); }
 
 section.overview {
   padding-top: 70px;
