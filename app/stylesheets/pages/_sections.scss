@@ -266,17 +266,22 @@ section.overview {
     padding-top: 70px;
     padding-bottom: 70px;
     .inner {
-        max-width: 580px;
-
         .description-box {
-            max-width: 480px;
-            margin-left: auto;
             font-size: 20px;
             p {
                 font-size: inherit !important;
             }
             @media (max-width: 480px) {
                 font-size: 14px;
+            }
+        }
+    }
+    &:not(.v2) {
+        .inner {
+            max-width: 580px;
+            .description-box {
+                max-width: 480px;
+                margin-left: auto;
             }
         }
     }
