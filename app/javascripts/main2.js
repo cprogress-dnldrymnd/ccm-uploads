@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
 		}
 	});
 
-	jQuery('.specs-holder').css('height', $t + 'px');
+	jQuery('.specs-holder').css('height', t + 'px');
 
 	jQuery('.mini-cart a, .col-side-minicart').click(function (e) {
 		jQuery('body').toggleClass('show-minicart');
