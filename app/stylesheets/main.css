@@ -10108,21 +10108,25 @@ section.footer-buttons a {
       top: 1px;
       position: absolute; }
 
-section.bike-scroller .images .image {
-  padding: 25%;
-  position: relative; }
-  section.bike-scroller .images .image img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+section.bike-scroller {
+  position: relative;
+  z-index: 3; }
+  section.bike-scroller .images .image {
+    padding: 25%;
+    position: relative; }
+    section.bike-scroller .images .image img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
 
-body.bike-scroller-active .inner {
+body.bike-scroller-active .bike-scroller .inner {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  z-index: 2; }
 
 /*# sourceMappingURL=main.css.map */

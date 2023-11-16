@@ -328,6 +328,8 @@ section.footer-buttons {
 }
 
 section.bike-scroller {
+    position: relative;
+    z-index: 3;
     .images {
         .image {
             padding: 25%;
@@ -346,11 +348,14 @@ section.bike-scroller {
 
 body {
     &.bike-scroller-active {
-        .inner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+        .bike-scroller {
+            .inner {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 2;
+            }
         }
     }
 }
