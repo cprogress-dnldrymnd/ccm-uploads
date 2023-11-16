@@ -136,7 +136,7 @@ $version = $_GET['version'];
         </section>
     <?php } ?>
 
-    <section class="features" id="features">
+    <section class="features <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="features">
         <div class="inner">
             <div class="container">
                 <div class="row align-items-center gy-3">

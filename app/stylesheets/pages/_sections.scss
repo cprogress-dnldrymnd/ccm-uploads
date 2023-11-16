@@ -282,6 +282,30 @@ section.bike-navigation {
     }
 }
 
+@mixin half-bg() {
+    &:before {
+        content: "";
+        width: 50%;
+        position: absolute;
+        top: -66px;
+        right: 0;
+        bottom: 0;
+        background-color: #1e1e21;
+        z-index: 2;
+    }
+    &:after {
+        content: "";
+        width: 50%;
+        position: absolute;
+        top: -66px;
+        left: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: 0.75;
+        z-index: 2;
+    }
+}
+
 section.overview {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -337,26 +361,13 @@ section.overview {
             position: relative;
             z-index: 3;
         }
+        @include half-bg();
         &:before {
-            content: "";
-            width: 50%;
-            position: absolute;
-            top: -66px;
-            right: 0;
-            bottom: 0;
             background-color: #1e1e21;
-            z-index: 2;
         }
         &:after {
-            content: "";
-            width: 50%;
-            position: absolute;
-            top: -66px;
-            left: 0;
-            bottom: 0;
             background-color: #000;
             opacity: 0.75;
-            z-index: 2;
         }
     }
     @media (max-width: 480px) {
@@ -391,6 +402,23 @@ section.features {
             &:not(:last-child) {
                 margin-bottom: 32px;
             }
+        }
+    }
+    &.v2 {
+        position: relative;
+        @include half-bg();
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+        &:before {
+            background-color: #171717;
+        }
+        &:after {
+            background-color: #1e1e21;
+        }
+        .row {
+            flex-direction: row-reverse;
         }
     }
     @media (max-width: 480px) {

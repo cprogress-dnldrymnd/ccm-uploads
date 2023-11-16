@@ -10147,6 +10147,11 @@ section.overview {
       background-color: #000;
       opacity: 0.75;
       z-index: 2; }
+    section.overview.v2:not(.contact-form-holder):before {
+      background-color: #1e1e21; }
+    section.overview.v2:not(.contact-form-holder):after {
+      background-color: #000;
+      opacity: 0.75; }
   @media (max-width: 480px) {
     section.overview {
       padding-bottom: 25px; } }
@@ -10170,6 +10175,36 @@ section.features {
         font-size: inherit !important; }
     section.features .feature-box .feature-item:not(:last-child) {
       margin-bottom: 32px; }
+  section.features.v2 {
+    position: relative; }
+    section.features.v2:before {
+      content: "";
+      width: 50%;
+      position: absolute;
+      top: -66px;
+      right: 0;
+      bottom: 0;
+      background-color: #1e1e21;
+      z-index: 2; }
+    section.features.v2:after {
+      content: "";
+      width: 50%;
+      position: absolute;
+      top: -66px;
+      left: 0;
+      bottom: 0;
+      background-color: #000;
+      opacity: 0.75;
+      z-index: 2; }
+    section.features.v2 .container {
+      position: relative;
+      z-index: 2; }
+    section.features.v2:before {
+      background-color: #1E1E21; }
+    section.features.v2:after {
+      background-color: #171717; }
+    section.features.v2 .row {
+      flex-direction: row-reverse; }
   @media (max-width: 480px) {
     section.features {
       padding-top: 100px;
