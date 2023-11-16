@@ -140,7 +140,7 @@ section.hero-banner-with-breadcrumbs {
                 height: 30px;
             }
         }
-        @media(max-width: 991px) {
+        @media (max-width: 991px) {
             display: none;
         }
     }
@@ -255,6 +255,11 @@ section.bike-navigation {
             margin-right: 8px;
         }
     }
+    &.v2 {
+        .inner {
+            background-color: transparent;
+        }
+    }
 }
 
 section.overview {
@@ -262,7 +267,7 @@ section.overview {
     padding-bottom: 70px;
     .inner {
         max-width: 580px;
-      
+
         .description-box {
             max-width: 480px;
             margin-left: auto;
@@ -278,12 +283,13 @@ section.overview {
     &.v2 {
         position: relative;
         &:before {
-            content: '';
+            content: "";
             width: 50%;
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
+            background-color: #1e1e21;
         }
     }
     @media (max-width: 480px) {
@@ -473,7 +479,7 @@ section.bike-specification {
 }
 
 section.footer-buttons {
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
         display: none;
     }
     a {

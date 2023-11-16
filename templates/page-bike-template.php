@@ -38,7 +38,7 @@ $version = $_GET['version'];
         </div>
 
     </section>
-    <section class="bike-navigation">
+    <section class="bike-navigation <?= $version == 'v2' ? 'v2' : 'v1' ?>">
         <div class="inner">
             <div class="container-fluid container-fluid-wide">
                 <div class="row align-items-center">
