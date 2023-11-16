@@ -411,6 +411,9 @@ section.features {
             position: relative;
             z-index: 2;
         }
+        h5, p {
+            color: var(--white-color);
+        }
         &:before {
             background-color: #171717;
         }
