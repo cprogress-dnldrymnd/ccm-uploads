@@ -7772,7 +7772,7 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
   transform: translateX(0); }
 
 #ccm-motors-header.hide-header {
-  transform: tran; }
+  transform: translateY(-100%); }
 
 #mobile-header-canvas {
   display: none;
