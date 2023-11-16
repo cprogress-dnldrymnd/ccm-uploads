@@ -7956,7 +7956,8 @@ footer {
   color: #bebebe; }
   footer a,
   footer li,
-  footer span {
+  footer span,
+  footer p {
     color: inherit !important; }
   footer .menu {
     padding: 0;
@@ -7979,6 +7980,14 @@ footer {
     background-color: #171717;
     padding-top: 40px;
     padding-bottom: 40px; }
+    footer .footer-bottom .menu {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0; }
+      footer .footer-bottom .menu li {
+        margin-bottom: 0; }
+        footer .footer-bottom .menu li:not(:last-child) {
+          margin-right: 2vw; }
 
 .red-btn {
   position: relative;

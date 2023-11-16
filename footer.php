@@ -45,15 +45,15 @@ $template = get_page_template_slug();
 		</div>
 		<div class="footer-bottom">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-auto">
 						<?php if (is_active_sidebar('footer_bottom_left')) { ?>
 							<div class="column-holder  ">
 								<?php dynamic_sidebar('footer_bottom_left') ?>
 							</div>
 						<?php } ?>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-auto">
 						<?php if (is_active_sidebar('footer_bottom_right')) { ?>
 							<div class="column-holder  ">
 								<?php dynamic_sidebar('footer_bottom_right') ?>

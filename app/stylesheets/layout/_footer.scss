@@ -157,7 +157,8 @@ footer {
 
 	a,
 	li,
-	span {
+	span,
+	p {
 		color: inherit !important;
 	}
 	.menu {
@@ -190,5 +191,16 @@ footer {
 		background-color: #171717;
 		padding-top: 40px;
 		padding-bottom: 40px;
+		.menu {
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 0;
+			li {
+				margin-bottom: 0;
+				&:not(:last-child) {
+					margin-right: 2vw;
+				}
+			}
+		}
 	}
 }
