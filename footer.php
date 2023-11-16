@@ -11,33 +11,35 @@ $template = get_page_template_slug();
 	<footer class="bt-5">
 		<div class="footer-top">
 			<div class="container">
-			<div class="col-lg-3">
-					<?php if (is_active_sidebar('footer_column_1')) { ?>
-						<div class="column-holder  ">
-							<?php dynamic_sidebar('footer_column_1') ?>
-						</div>
-					<?php } ?>
-				</div>
-				<div class="col-lg-3">
-					<?php if (is_active_sidebar('footer_column_2')) { ?>
-						<div class="column-holder  ">
-							<?php dynamic_sidebar('footer_column_2') ?>
-						</div>
-					<?php } ?>
-				</div>
-				<div class="col-lg-3">
-					<?php if (is_active_sidebar('footer_column_3')) { ?>
-						<div class="column-holder  ">
-							<?php dynamic_sidebar('footer_column_3') ?>
-						</div>
-					<?php } ?>
-				</div>
-				<div class="col-lg-3">
-					<?php if (is_active_sidebar('footer_column_4')) { ?>
-						<div class="column-holder  ">
-							<?php dynamic_sidebar('footer_column_4') ?>
-						</div>
-					<?php } ?>
+				<div class="row">
+					<div class="col-lg-3">
+						<?php if (is_active_sidebar('footer_column_1')) { ?>
+							<div class="column-holder  ">
+								<?php dynamic_sidebar('footer_column_1') ?>
+							</div>
+						<?php } ?>
+					</div>
+					<div class="col-lg-3">
+						<?php if (is_active_sidebar('footer_column_2')) { ?>
+							<div class="column-holder  ">
+								<?php dynamic_sidebar('footer_column_2') ?>
+							</div>
+						<?php } ?>
+					</div>
+					<div class="col-lg-3">
+						<?php if (is_active_sidebar('footer_column_3')) { ?>
+							<div class="column-holder  ">
+								<?php dynamic_sidebar('footer_column_3') ?>
+							</div>
+						<?php } ?>
+					</div>
+					<div class="col-lg-3">
+						<?php if (is_active_sidebar('footer_column_4')) { ?>
+							<div class="column-holder  ">
+								<?php dynamic_sidebar('footer_column_4') ?>
+							</div>
+						<?php } ?>
+					</div>
 				</div>
 			</div>
 		</div>
