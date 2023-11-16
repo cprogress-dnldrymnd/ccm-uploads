@@ -10137,7 +10137,8 @@ section.bike-specification {
       height: 42px;
       border: 1px solid var(--black-color);
       display: inline-block;
-      position: relative; }
+      position: relative;
+      flex: 0 0 42px; }
       section.bike-specification .specs-holder .specs-box > div.specs-heading .icon:before, section.bike-specification .specs-holder .specs-box > div.specs-heading .icon:after {
         content: "";
         position: absolute;
