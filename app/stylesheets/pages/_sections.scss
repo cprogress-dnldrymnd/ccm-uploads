@@ -296,6 +296,16 @@ section.overview {
             bottom: 0;
             background-color: #1e1e21;
         }
+        &:after {
+            content: "";
+            width: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: 0.75;
+        }
     }
     @media (max-width: 480px) {
         padding-bottom: 25px;
