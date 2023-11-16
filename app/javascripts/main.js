@@ -406,7 +406,7 @@ function bike_scroller() {
 		scrollContainer.addEventListener("wheel", (evt) => {
 			evt.preventDefault();
 			scrollContainer.scrollLeft += evt.deltaY;
-			console.log(evt.deltaY);
+			console.log(scrollContainer.scrollLeft);
 		});
 	}
 
