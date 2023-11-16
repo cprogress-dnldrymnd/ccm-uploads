@@ -9875,8 +9875,8 @@ footer.footer {
   @media (max-width: 767px) {
     .main-holder.main-holder .container,
     footer.footer .container {
-      padding-left: 7.5px;
-      padding-right: 7.5px; } }
+      padding-left: 15px;
+      padding-right: 15px; } }
   .main-holder.main-holder h1,
   .main-holder.main-holder h2,
   .main-holder.main-holder h3,
