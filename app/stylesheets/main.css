@@ -10149,11 +10149,13 @@ section.overview {
       z-index: 1; }
     section.overview.v2:not(.contact-form-holder):before {
       background-color: #1e1e21;
-      top: -66px; }
+      top: -66px;
+      z-index: 2; }
     section.overview.v2:not(.contact-form-holder):after {
       background-color: #000;
       top: -66px;
-      opacity: 0.75; }
+      opacity: 0.75;
+      z-index: 2; }
   @media (max-width: 480px) {
     section.overview {
       padding-bottom: 25px; } }
@@ -10201,7 +10203,8 @@ section.features {
     section.features.v2 .container {
       position: relative;
       z-index: 3; }
-    section.features.v2 h5, section.features.v2 p {
+    section.features.v2 h5,
+    section.features.v2 p {
       color: var(--white-color); }
     section.features.v2:before {
       background-color: #171717; }
