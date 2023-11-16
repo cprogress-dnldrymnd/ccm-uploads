@@ -385,7 +385,11 @@ function bike_navigation() {
 	}
 }
 
-
+function bike_scroller() {
+	jQuery('.horizontal-scroll').horizontalScroll({
+		containerHeight: "300vh"
+	});
+}
 function bike_specs() {
 	var t = 0; // the height of the highest element (after the function runs)
 	var t_elem;  // the highest element (after the function runs)
