@@ -10112,10 +10112,11 @@ section.bike-scroller {
   position: relative;
   z-index: 3;
   background-color: var(--black-color); }
-  section.bike-scroller .images .image {
+  section.bike-scroller .images .row-images .image {
     padding: 25%;
-    position: relative; }
-    section.bike-scroller .images .image img {
+    position: relative;
+    width: 50vw; }
+    section.bike-scroller .images .row-images .image img {
       position: absolute;
       left: 0;
       top: 0;
