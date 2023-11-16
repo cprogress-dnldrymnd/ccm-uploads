@@ -9948,4 +9948,11 @@ section.bike-specification {
     section.bike-specification .specs-holder .specs-box:not(:last-child) .specs-heading {
       margin-bottom: 60px; }
 
+section.footer-buttons a span.icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border-top: 3px solid var(--black-color);
+  border-right: 3px solid var(--black-color); }
+
 /*# sourceMappingURL=main.css.map */
