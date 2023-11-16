@@ -399,6 +399,7 @@ function bike_scroller() {
 				jQuery('body').addClass('bike-scroller-active');
 				jQuery('.bike-scroller .row-images').css('transform', 'translateX(' + 100 * $transform + ')');
 				$transform++;
+				console.log($transform);
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
 			}
