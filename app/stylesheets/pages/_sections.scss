@@ -26,11 +26,11 @@
         font-size: 83px;
     }
     p {
-        font-size: 20px !important;
         font-weight: 300;
     }
     .btn-box {
-        a, button {
+        a,
+        button {
             border: 1px solid var(--main-color);
         }
         &.btn-bordered {
@@ -48,7 +48,6 @@
             width: 100%;
         }
     }
-    
 }
 
 .breadcrumbs {
@@ -139,15 +138,31 @@ section.overview {
     padding-top: 70px;
     padding-bottom: 70px;
     .inner {
-		max-width: 580px;
-		.description-box {
-			max-width: 480px;
-			margin-left: auto;
-		}
-	}
+        max-width: 580px;
+        .description-box {
+            max-width: 480px;
+            margin-left: auto;
+            font-size: 20px;
+        }
+    }
 }
 
 section.features {
     padding-top: 135px;
     padding-bottom: 135px;
+    .feature-box {
+        .feature-item {
+            .heading-box {
+                h5 {
+                    font-size: 16px;
+                }
+            }
+            .description-box {
+                font-size: 15px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
+    }
 }
