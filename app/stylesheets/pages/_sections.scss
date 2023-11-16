@@ -281,9 +281,19 @@ section.footer-buttons {
         padding: 55px 15px;
         color: var(--black-color);
         text-decoration: none;
+        transition: 500ms;
+
         @include on-event {
-            background-color: #E22228;
+            background-color: #e22228;
             color: var(--white-color);
+            span {
+                .icon {
+                    border-color: #e22228;
+                    &:before {
+                        background-color: #e22228;
+                    }
+                }
+            }
         }
         &.light-blue {
             background-color: #e6eef0;
@@ -292,6 +302,7 @@ section.footer-buttons {
             background-color: #f5f5f5;
         }
         span.icon {
+            transition: 500ms;
             width: 18px;
             height: 18px;
             display: inline-block;
@@ -302,6 +313,7 @@ section.footer-buttons {
             margin-left: 25px;
             &:before {
                 content: "";
+                transition: 500ms;
                 height: 3px;
                 display: inline-block;
                 background-color: var(--black-color);
