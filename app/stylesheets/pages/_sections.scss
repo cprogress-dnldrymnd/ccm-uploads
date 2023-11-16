@@ -244,6 +244,10 @@ section.bike-specification {
 
 section.footer-buttons {
     a {
+        display: flex;
+        align-items: center;
+        font-size: 31px;
+        font-weight: 500;
         span.icon {
             width: 18px;
             height: 18px;
@@ -252,6 +256,7 @@ section.footer-buttons {
             border-right: 3px solid var(--black-color);
             overflow: hidden;
             position: relative;
+            margin-left: 25px;
             &:before {
                 content: "";
                 height: 3px;
