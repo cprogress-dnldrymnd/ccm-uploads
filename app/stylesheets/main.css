@@ -9871,7 +9871,8 @@ section.hero-banner-with-breadcrumbs {
 
 section.bike-navigation .inner {
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  background-color: var(--white-color); }
 section.bike-navigation.fixed .inner {
   position: fixed;
   top: 0;
