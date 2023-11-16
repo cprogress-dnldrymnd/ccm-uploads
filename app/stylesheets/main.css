@@ -9935,11 +9935,13 @@ section.bike-specification {
         top: 0;
         transition: 500ms;
         transform: translateX(100%);
-        opacity: 0; }
+        opacity: 0;
+        visibility: hidden; }
     section.bike-specification .specs-holder .specs-box:hover > div.specs-list, section.bike-specification .specs-holder .specs-box:active > div.specs-list, section.bike-specification .specs-holder .specs-box:focus > div.specs-list {
       transform: translateX(0);
-      opacity: 1; }
-    section.bike-specification .specs-holder:not(:last-child) {
+      opacity: 1;
+      visibility: visible; }
+    section.bike-specification .specs-holder:not(:last-child) .specs-heading {
       margin-bottom: 60px; }
 
 /*# sourceMappingURL=main.css.map */
