@@ -10178,7 +10178,8 @@ section.bike-specification {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        cursor: pointer; } }
+        cursor: pointer;
+        margin-bottom: 30px; } }
     @media (min-width: 992px) {
       section.bike-specification .specs-holder .specs-box > div.specs-list {
         transform: translateX(100%);

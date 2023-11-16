@@ -348,7 +348,7 @@ section.bike-specification {
                         border: 1px solid var(--black-color);
                         display: inline-block;
                         position: relative;
-                        flex:  0 0 42px;
+                        flex: 0 0 42px;
                         margin-left: 15px;
                         &:before,
                         &:after {
@@ -395,6 +395,7 @@ section.bike-specification {
                         justify-content: space-between;
                         align-items: center;
                         cursor: pointer;
+                        margin-bottom: 30px;
                     }
                 }
                 &.specs-list {
