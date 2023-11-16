@@ -290,6 +290,9 @@ section.overview {
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+        p, li, h2 {
+            color: var(--white-color);
+        }
         &:before {
             content: "";
             width: 50%;
