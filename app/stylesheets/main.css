@@ -9947,7 +9947,7 @@ footer.footer {
   @media (max-width: 480px) {
     .main-holder.main-holder .heading-box h2,
     footer.footer .heading-box h2 {
-      font-size: 33px; } }
+      font-size: 33px !important; } }
   .main-holder.main-holder img,
   footer.footer img {
     max-width: 100%; }

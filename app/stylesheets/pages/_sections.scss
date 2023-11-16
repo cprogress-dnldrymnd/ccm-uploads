@@ -80,7 +80,7 @@ footer.footer {
     .heading-box {
         h2 {
             @media (max-width: 480px) {
-                font-size: 33px;
+                font-size: 33px !important;
             }
         }
     }
@@ -446,6 +446,9 @@ section.bike-specification {
 }
 
 section.footer-buttons {
+    @media(max-width: 767px) {
+        display: none;
+    }
     a {
         display: flex;
         align-items: center;
