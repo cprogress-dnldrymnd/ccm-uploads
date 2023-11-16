@@ -186,6 +186,16 @@ section.bike-navigation {
             text-transform: uppercase;
         }
     }
+    .row {
+        .col-lg-4 {
+            @media (max-width: 1199px) {
+                width: auto;
+            }
+        }
+        @media (max-width: 1199px) {
+            justify-content: space-between !important;
+        }
+    }
 
     .bike-nav {
         li {
