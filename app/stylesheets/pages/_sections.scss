@@ -303,9 +303,17 @@ section.overview {
     }
     &.v2:not(.contact-form-holder) {
         position: relative;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+
+        .bg-holder {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: fixed;
+            top: -66px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
         p,
         li,
         h2 {

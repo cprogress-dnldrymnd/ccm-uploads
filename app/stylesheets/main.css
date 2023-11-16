@@ -10100,10 +10100,16 @@ section.overview {
       max-width: 480px;
       margin-left: auto; }
   section.overview.v2:not(.contact-form-holder) {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; }
+    position: relative; }
+    section.overview.v2:not(.contact-form-holder) .bg-holder {
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
     section.overview.v2:not(.contact-form-holder) p,
     section.overview.v2:not(.contact-form-holder) li,
     section.overview.v2:not(.contact-form-holder) h2 {
