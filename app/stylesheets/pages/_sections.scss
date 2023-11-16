@@ -335,7 +335,7 @@ section.overview {
         }
         .contact-form {
             padding: 3vw;
-            max-width: 480px;
+            max-width: calc(480px + 6vw);
         }
         h2, p {
             color: var(--white-color);
