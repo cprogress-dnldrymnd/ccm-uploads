@@ -169,6 +169,9 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                                     <div class="specs-name">
                                         <strong>DISPLACEMENT</strong>
                                     </div>
+                                    <div class="specs-val">
+                                        <span>Displacement</span>
+                                    </div>
                                 </div>
                             <?php } ?>
                         </div>
