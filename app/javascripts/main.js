@@ -387,15 +387,11 @@ function bike_navigation() {
 
 function bike_scroller() {
 	if (jQuery('.bike-scroller').length > 0) {
-		$bike_scoller_height = jQuery('.bike-scroller .inner').outerHeight();
-		jQuery('.bike-scroller').css('height', $bike_scoller_height + 'px');
-
 		var stickyTop = jQuery('.bike-scroller').offset().top;
 		$width = jQuery('.row-images .image').outerWidth();
 		$length = jQuery('.row-images .image').length;
 
-		jQuery('.bike-scroller .scroll-offset').css('height', ($width * $length) + 'px')
-
+		jQuery('.bike-scroller').css('height', ($width * $length) + 'px');
 		jQuery(window).scroll(function (e) {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
