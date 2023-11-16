@@ -9871,7 +9871,8 @@ footer {
 footer.footer {
   padding-top: 0 !important;
   font-family: "Fira Sans Condensed", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: var(--black-color); }
   @media (max-width: 767px) {
     .main-holder.main-holder .container,
     footer.footer .container {
