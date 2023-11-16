@@ -9872,6 +9872,11 @@ section.hero-banner-with-breadcrumbs {
 section.bike-navigation {
   padding-top: 10px;
   padding-bottom: 10px; }
+  section.bike-navigation.fixed .inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; }
   section.bike-navigation .bike-title span,
   section.bike-navigation .bike-title li,
   section.bike-navigation .bike-title a,

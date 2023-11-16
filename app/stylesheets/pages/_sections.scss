@@ -128,6 +128,14 @@ section.hero-banner-with-breadcrumbs {
 section.bike-navigation {
     padding-top: 10px;
     padding-bottom: 10px;
+    &.fixed {
+        .inner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    }
     .bike-title,
     .bike-nav {
         span,

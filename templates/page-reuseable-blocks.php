@@ -28,43 +28,45 @@ $footer_type = carbon_get_the_post_meta('footer_type');
         </div>
     </section>
     <section class="bike-navigation">
-        <div class="container-fluid container-fluid-wide">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <div class="bike-title">
-                        <span><?php the_title() ?></span>
+        <div class="inner">
+            <div class="container-fluid container-fluid-wide">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="bike-title">
+                            <span><?php the_title() ?></span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="bike-nav">
-                        <ul class="list-inline text-center">
-                            <li>
-                                <a href="#">OVERVIEW</a>
-                            </li>
-                            <li>
-                                <a href="#">FEATURES</a>
-                            </li>
-                            <li>
-                                <a href="#">SPECIFICATION</a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-4">
+                        <div class="bike-nav">
+                            <ul class="list-inline text-center">
+                                <li>
+                                    <a href="#">OVERVIEW</a>
+                                </li>
+                                <li>
+                                    <a href="#">FEATURES</a>
+                                </li>
+                                <li>
+                                    <a href="#">SPECIFICATION</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="bike-buttons">
-                        <div class="row justify-content-end">
-                            <div class="col-auto">
-                                <div class="btn-box btn-bordered">
-                                    <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
-                                        CONFIGURE
-                                    </a>
+                    <div class="col-lg-4">
+                        <div class="bike-buttons">
+                            <div class="row justify-content-end">
+                                <div class="col-auto">
+                                    <div class="btn-box btn-bordered">
+                                        <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
+                                            CONFIGURE
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-auto">
-                                <div class="btn-box">
-                                    <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
-                                        ENQUIRE NOW
-                                    </a>
+                                <div class="col-auto">
+                                    <div class="btn-box">
+                                        <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
+                                            ENQUIRE NOW
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

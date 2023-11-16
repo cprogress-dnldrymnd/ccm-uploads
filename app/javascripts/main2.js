@@ -2,20 +2,22 @@ jQuery(window).on('resize', function () {
 	shopmenu();
 });
 
-jQuery(window).scroll(function (e) {
-	var $el = jQuery('.bike-navigation');
-	var isPositionFixed = ($el.css('position') == 'fixed');
-	if (jQuery(this).scrollTop() > 200 && !isPositionFixed) {
-		$el.css({ 'position': 'fixed', 'top': '0px' });
-	}
-	if (jQuery(this).scrollTop() < 200 && isPositionFixed) {
-		$el.css({ 'position': 'static', 'top': '0px' });
-	}
-});
+function bike_navigation() {
+	var stickyTop = jQuery('.bike-navigation').offset().top;
+	jQuery(window).scroll(function () {
+		var windowTop = jQuery(window).scrollTop();
+
+		if (stickyTop < windowTop) {
+			jQuery('.bike-navigation').css('position', 'fixed');
+		} else {
+			jQuery('.bike-navigation').css('position', 'relative');
+		}
+	});
+}
+
 jQuery(document).ready(function () {
 	utm_parameters();
-
-
+	bike_navigation();
 
 	var t = 0; // the height of the highest element (after the function runs)
 	var t_elem;  // the highest element (after the function runs)
