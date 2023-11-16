@@ -10114,7 +10114,8 @@ section.bike-scroller {
   background-color: var(--black-color); }
   section.bike-scroller .images .row-images {
     display: flex;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: 500ms; }
     section.bike-scroller .images .row-images .image {
       padding: 25%;
       position: relative; }
