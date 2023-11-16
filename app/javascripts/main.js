@@ -400,15 +400,17 @@ function bike_scroller() {
 				jQuery('body').removeClass('bike-scroller-active');
 			}
 		});
+
+		const scrollContainer = document.querySelector(".bike-scroller-active .bike-scroller .images .row-images");
+
+		scrollContainer.addEventListener("wheel", (evt) => {
+			evt.preventDefault();
+			scrollContainer.scrollLeft += evt.deltaY;
+			console.log(evt.deltaY);
+		});
 	}
 
-	const scrollContainer = document.querySelector(".bike-scroller-active .bike-scroller .images .row-images");
 
-	scrollContainer.addEventListener("wheel", (evt) => {
-		evt.preventDefault();
-		scrollContainer.scrollLeft += evt.deltaY;
-		console.log(evt.deltaY);
-	});
 }
 function bike_specs() {
 	var t = 0; // the height of the highest element (after the function runs)
