@@ -12,7 +12,7 @@
 $footer_type = carbon_get_the_post_meta('footer_type');
 ?>
 <?php get_header(); ?>
-<main id="page-components" class="main-holder reusable-blocks bt-5">
+<main id="page-components" class="main-holder reusable-blocks bt-5 <?= $class ?> <?= $main_class ?>">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end">
         <div class="video-holder">
             <iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/<?= $embed_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=q6CEBGW4szM">
@@ -147,13 +147,13 @@ $footer_type = carbon_get_the_post_meta('footer_type');
         </div>
     </section>
 
-    <?php $images = array(17228, 17229, 17228, 17229, 17228, 17229, 17228, 17229, 17228, 17229, 17228, 17229) ?>
+    <?php $images = array(17228, 17229, 17228, 17229) ?>
 
-    <section class="bike-scroller ">
-        <div class="inner">
-            <div class="horizontal-scroll">
+    <section class="bike-scroller">
+        <div class="images">
+            <div class="row g-0 nowrap">
                 <?php foreach ($images as $key => $image) { ?>
-                    <div class="image" id="image-<?= $key ?>">
+                    <div class="col-lg-6 image" id="image-<?= $key ?>">
                         <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
                     </div>
                 <?php } ?>
@@ -283,4 +283,5 @@ $footer_type = carbon_get_the_post_meta('footer_type');
             </div>
         </div>
     </section>
+</main>
 <?php get_footer(); ?>
