@@ -264,13 +264,13 @@ $footer_type = carbon_get_the_post_meta('footer_type');
     <section class="footer-buttons">
         <div class="row g-0">
             <div class="col-6">
-                <a href="" class="w-100 text-center">
+                <a href="" class="light-blue">
                     <span>CONFIGURE A BIKE</span>
                     <span class="icon"></span>
                 </a>
             </div>
             <div class="col-6">
-                <a href="" class="w-100 text-center">
+                <a href="" class="light-gray">
                     <span>CONFIGURE A BIKE</span>
                     <span class="icon"></span>
                 </a>

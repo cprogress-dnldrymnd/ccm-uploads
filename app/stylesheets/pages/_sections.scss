@@ -95,7 +95,7 @@ section.hero-banner-with-breadcrumbs {
     min-height: calc(100vh - 65px);
     background-color: var(--black-color);
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     overflow: hidden;
     .video-holder {
         position: absolute;
@@ -248,6 +248,15 @@ section.footer-buttons {
         align-items: center;
         font-size: 31px;
         font-weight: 500;
+        justify-content: center;
+        padding: 55px 15px;
+        color: var(--black-color);
+        &.light-blue {
+            background-color: #e6eef0;
+        }
+        &.light-gray {
+            background-color: #f5f5f5;
+        }
         span.icon {
             width: 18px;
             height: 18px;
