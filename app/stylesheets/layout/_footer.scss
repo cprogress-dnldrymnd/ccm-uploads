@@ -153,13 +153,12 @@
 
 footer {
 	background-color: #1e1e21;
-	h3,
-	h4,
-	h5,
+	color: #bebebe;
+
 	a,
 	li,
 	span {
-		color: var(--white-color) !important;
+		color: inherit !important;
 	}
 	.menu {
 		padding: 0;
@@ -178,6 +177,7 @@ footer {
 	.widget-title {
 		font-size: 15px;
 		font-style: normal !important;
+		color: var(--white-color) !important;
 	}
 
 	.footer-top {

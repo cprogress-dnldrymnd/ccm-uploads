@@ -7952,14 +7952,12 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
 	}
 }*/
 footer {
-  background-color: #1e1e21; }
-  footer h3,
-  footer h4,
-  footer h5,
+  background-color: #1e1e21;
+  color: #bebebe; }
   footer a,
   footer li,
   footer span {
-    color: var(--white-color) !important; }
+    color: inherit !important; }
   footer .menu {
     padding: 0;
     list-style: none; }
@@ -7970,7 +7968,8 @@ footer {
       margin-bottom: 11px; }
   footer .widget-title {
     font-size: 15px;
-    font-style: normal !important; }
+    font-style: normal !important;
+    color: var(--white-color); }
   footer .footer-top {
     padding-top: 60px;
     padding-bottom: 60px; }
