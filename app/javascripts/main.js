@@ -396,19 +396,18 @@ function bike_scroller() {
 			var windowTop = jQuery(window).scrollTop();
 			if (stickyTop < windowTop) {
 				jQuery('body').addClass('bike-scroller-active');
-				const scrollContainer = document.querySelector(".bike-scroller .images .row-images");
-
-				scrollContainer.addEventListener("wheel", (evt) => {
-					evt.preventDefault();
-					scrollContainer.scrollLeft += evt.deltaY;
-					console.log(evt.deltaY);
-				});
 			} else {
 				jQuery('body').removeClass('bike-scroller-active');
 			}
 		});
 
+		const scrollContainer = document.querySelector(".bike-scroller .images .row-images");
 
+		scrollContainer.addEventListener("wheel", (evt) => {
+			evt.preventDefault();
+			scrollContainer.scrollLeft += evt.deltaY;
+			console.log(evt.deltaY);
+		});
 	}
 
 
