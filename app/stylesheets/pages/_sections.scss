@@ -326,6 +326,16 @@ section.overview {
             }
         }
     }
+    &.v2.contact-form-holder {
+        position: relative;
+        @include half-bg();
+        h2, p {
+            color: var(--white-color);
+        }
+        &:after {
+            background-color: #1E1E21;
+        }
+    }
     &.v2:not(.contact-form-holder) {
         position: relative;
 
@@ -363,7 +373,6 @@ section.overview {
             background-color: #1e1e21;
             top: -66px;
             z-index: 2;
-
         }
         &:after {
             background-color: #000;
