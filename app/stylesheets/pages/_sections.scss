@@ -346,9 +346,11 @@ section.bike-scroller {
 
 body {
     &.bike-scroller-active {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        .inner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
     }
 }

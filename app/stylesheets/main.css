@@ -10119,9 +10119,10 @@ section.bike-scroller .images .image {
     height: 100%;
     object-fit: cover; }
 
-body.bike-scroller-active {
+body.bike-scroller-active .inner {
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  right: 0; }
 
 /*# sourceMappingURL=main.css.map */
