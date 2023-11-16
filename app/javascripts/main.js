@@ -376,7 +376,6 @@ function bike_navigation() {
 				stickyTop = stickyTop + $header_height;
 			}
 
-
 			if (stickyTop < windowTop) {
 				jQuery('.bike-navigation').addClass('fixed')
 			} else {
