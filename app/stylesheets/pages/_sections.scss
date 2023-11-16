@@ -239,5 +239,17 @@ section.bike-specification {
                 }
             }
         }
+        @include on-event {
+            .specs-holder {
+                position: relative;
+                .specs-box {
+                    > div {
+                        &.specs-list {
+                            transition-delay: 500ms;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
