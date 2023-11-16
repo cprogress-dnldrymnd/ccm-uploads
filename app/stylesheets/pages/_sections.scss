@@ -313,6 +313,8 @@ section.overview {
             left: 0;
             right: 0;
             bottom: 0;
+            z-index: 1;
+
         }
         p,
         li,
@@ -330,7 +332,7 @@ section.overview {
         }
         .container {
             position: relative;
-            z-index: 1;
+            z-index: 3;
         }
         &:before {
             content: "";
@@ -340,6 +342,7 @@ section.overview {
             right: 0;
             bottom: 0;
             background-color: #1e1e21;
+            z-index: 2;
         }
         &:after {
             content: "";
@@ -350,6 +353,7 @@ section.overview {
             bottom: 0;
             background-color: #000;
             opacity: 0.75;
+            z-index: 2;
         }
     }
     @media (max-width: 480px) {
