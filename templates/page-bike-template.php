@@ -31,12 +31,12 @@ $footer_type = carbon_get_the_post_meta('footer_type');
         <div class="inner">
             <div class="container-fluid container-fluid-wide">
                 <div class="row align-items-center">
-                    <div class="col-lg-4">
+                    <div class="col-auto col-xl-4">
                         <div class="bike-title">
                             <span><?php the_title() ?></span>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-auto col-bike-nav col-xl-4">
                         <div class="bike-nav">
                             <ul class="list-inline text-center">
                                 <li>
@@ -51,7 +51,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-auto col-xl-4">
                         <div class="bike-buttons">
                             <div class="row justify-content-end">
                                 <div class="col-auto">

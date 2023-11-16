@@ -10016,9 +10016,9 @@ section.bike-navigation {
     font-weight: 500;
     color: var(--black-color);
     text-transform: uppercase; }
-  @media (max-width: 1199px) {
-    section.bike-navigation .row .col-lg-4 {
-      width: auto; } }
+  @media (max-width: 767px) {
+    section.bike-navigation .row .col-bike-nav {
+      display: none; } }
   @media (max-width: 1199px) {
     section.bike-navigation .row {
       justify-content: space-between !important; } }

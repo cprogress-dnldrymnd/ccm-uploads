@@ -187,11 +187,11 @@ section.bike-navigation {
         }
     }
     .row {
-        .col-lg-4 {
-            @media (max-width: 1199px) {
-                width: auto;
-            }
+      .col-bike-nav {
+        @media (max-width: 991px) {
+            display: none;
         }
+      }
         @media (max-width: 1199px) {
             justify-content: space-between !important;
         }
