@@ -10126,7 +10126,7 @@ section.overview {
       z-index: 3; }
     section.overview.v2.contact-form-holder .contact-form {
       padding: 3vw;
-      max-width: 480px; }
+      max-width: calc(480px + 6vw); }
     section.overview.v2.contact-form-holder h2, section.overview.v2.contact-form-holder p {
       color: var(--white-color); }
     section.overview.v2.contact-form-holder:after {
