@@ -170,7 +170,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                 <div class="specs-box">
                     <div class="specs-heading">
                         <h3>
-                            ENGINE
+                            ENGINE <span class="icon"></span>
                         </h3>
                     </div>
                     <div class="specs-list">
@@ -191,7 +191,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                 <div class="specs-box">
                     <div class="specs-heading">
                         <h3>
-                            CHASSIS, SUSPENSION & BRAKES
+                            CHASSIS, SUSPENSION & BRAKES <span class="icon"></span>
                         </h3>
                     </div>
                     <div class="specs-list">
@@ -212,7 +212,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
                 <div class="specs-box">
                     <div class="specs-heading">
                         <h3>
-                            STATIC DIMENSIONS
+                            STATIC DIMENSIONS <span class="icon"></span>
                         </h3>
                     </div>
                     <div class="specs-list">

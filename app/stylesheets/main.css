@@ -10124,6 +10124,26 @@ section.bike-specification {
         width: 50%; } }
     section.bike-specification .specs-holder .specs-box > div .specs-val {
       font-size: 15px; }
+    section.bike-specification .specs-holder .specs-box > div.specs-heading .icon {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--black-color); }
+      section.bike-specification .specs-holder .specs-box > div.specs-heading .icon:before, section.bike-specification .specs-holder .specs-box > div.specs-heading .icon:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--black-color); }
+      section.bike-specification .specs-holder .specs-box > div.specs-heading .icon:before {
+        width: 16px;
+        height: 2px; }
+      section.bike-specification .specs-holder .specs-box > div.specs-heading .icon:after {
+        width: 2px;
+        height: 2px; }
+      @media (min-width: 992px) {
+        section.bike-specification .specs-holder .specs-box > div.specs-heading .icon {
+          display: none; } }
     section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
       font-size: 57px;
       font-weight: 600;
@@ -10141,6 +10161,11 @@ section.bike-specification {
     @media (min-width: 992px) {
       section.bike-specification .specs-holder .specs-box > div.specs-heading {
         padding-right: 30px; } }
+    @media (max-width: 991px) {
+      section.bike-specification .specs-holder .specs-box > div.specs-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; } }
     @media (min-width: 992px) {
       section.bike-specification .specs-holder .specs-box > div.specs-list {
         transform: translateX(100%);
