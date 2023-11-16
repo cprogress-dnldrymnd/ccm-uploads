@@ -400,7 +400,7 @@ function bike_scroller() {
 
 			if (stickyTop < windowTop) {
 				jQuery('body').addClass('bike-scroller-active');
-				jQuery('.bike-scroller .row-images').css('transform', 'translateX(' + (100 * $transform) + 'px)');
+				jQuery('.bike-scroller .row-images').css('transform', 'translateX(-' + (100 * $transform) + 'px)');
 				if (windowTop > lastScrollTop) {
 					$transform++;
 				} else {
