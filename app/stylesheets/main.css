@@ -9991,7 +9991,10 @@ section.hero-banner-with-breadcrumbs {
       padding-top: 10px; } }
 
 body:not(.hide-header) section.bike-navigation.fixed .inner {
-  top: var(--header-height, 70px); }
+  top: 70px; }
+  @media (max-width: 991px) {
+    body:not(.hide-header) section.bike-navigation.fixed .inner {
+      top: 57px; } }
 
 section.bike-navigation {
   position: relative;
@@ -10016,7 +10019,7 @@ section.bike-navigation {
     font-weight: 500;
     color: var(--black-color);
     text-transform: uppercase; }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     section.bike-navigation .row .col-bike-nav {
       display: none; } }
   @media (max-width: 1199px) {
