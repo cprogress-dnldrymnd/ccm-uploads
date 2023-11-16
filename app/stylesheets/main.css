@@ -9872,7 +9872,8 @@ footer.footer {
   padding-top: 0 !important;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 16px;
-  color: var(--black-color); }
+  color: var(--black-color);
+  line-height: 1.5; }
   @media (max-width: 767px) {
     .main-holder.main-holder .container,
     footer.footer .container {
@@ -10099,8 +10100,9 @@ section.overview {
     section.overview.v2:not(.contact-form-holder) li,
     section.overview.v2:not(.contact-form-holder) h2 {
       color: var(--white-color); }
-    section.overview.v2:not(.contact-form-holder) .inner .description-box {
-      padding: 3vw; }
+    @media (min-width: 992px) {
+      section.overview.v2:not(.contact-form-holder) .inner .description-box {
+        padding: 3vw; } }
     section.overview.v2:not(.contact-form-holder) .container {
       position: relative;
       z-index: 1; }
