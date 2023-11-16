@@ -7962,14 +7962,14 @@ footer {
     padding: 0;
     list-style: none; }
     footer .menu li a {
-      color: #bebebe;
+      color: #bebebe !important;
       font-size: 15px; }
     footer .menu li:not(:last-child) {
       margin-bottom: 11px; }
   footer .widget-title {
     font-size: 15px;
     font-style: normal !important;
-    color: var(--white-color); }
+    color: var(--white-color) !important; }
   footer .footer-top {
     padding-top: 60px;
     padding-bottom: 60px; }
