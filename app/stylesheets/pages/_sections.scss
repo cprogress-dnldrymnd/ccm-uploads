@@ -129,11 +129,19 @@ section.hero-banner-with-breadcrumbs {
     }
     .next-section {
         display: inline-block;
+        margin-bottom: 30px;
         a {
             width: 60px;
             height: 60px;
             background-color: var(--main-color);
             color: var(--white-color);
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        @media(max-width: 991px) {
+            display: none;
         }
     }
     .video-holder {
