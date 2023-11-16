@@ -128,7 +128,7 @@ body {
         section.bike-navigation {
             &.fixed {
                 .inner {
-                    top: var(--header-height, 0);
+                    top: var(--header-height, 70);
                 }
             }
         }

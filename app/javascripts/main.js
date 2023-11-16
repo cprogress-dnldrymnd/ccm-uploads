@@ -391,7 +391,6 @@ function bike_specs() {
 }
 
 function header() {
-
 	$header_height = jQuery('#ccm-motors-header').outerHeight();
 	jQuery('body').css('--header-height', $header_height + 'px');
 
@@ -611,7 +610,6 @@ function utm_parameters() {
 			}
 		});
 	}
-	console.log($url_parameters);
 
 }
 function bike_bullets() {
