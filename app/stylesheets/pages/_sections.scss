@@ -21,6 +21,7 @@
         font-style: normal !important;
         border: none;
         font-weight: 600 !important;
+        color: var(--black-color);
     }
 
     h2 {
@@ -193,6 +194,7 @@ section.bike-specification {
     padding-top: 135px;
     padding-bottom: 135px;
     .specs-holder {
+        position: relative;
         .specs-box {
             > div {
                 flex: 0 0 auto;
@@ -200,9 +202,16 @@ section.bike-specification {
                 h3 {
                     font-size: 57px;
                     font-weight: 600;
+                    margin-top: 0;
                 }
                 .specs-val {
                     font-size: 15px;
+                }
+                &.specs-list {
+                    position: absolute;
+                    right: 0;
+                    width: 50%;
+                    top: 0;
                 }
             }
         }

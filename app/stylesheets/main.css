@@ -9797,7 +9797,8 @@ footer {
   .main-holder.main-holder h6 {
     font-style: normal !important;
     border: none;
-    font-weight: 600 !important; }
+    font-weight: 600 !important;
+    color: var(--black-color); }
   .main-holder.main-holder h2 {
     font-size: 83px; }
   .main-holder.main-holder p {
@@ -9916,15 +9917,23 @@ section.features {
 section.bike-specification {
   padding-top: 135px;
   padding-bottom: 135px; }
-  section.bike-specification .specs-holder .specs-box > div {
-    flex: 0 0 auto;
-    width: 50%; }
-    section.bike-specification .specs-holder .specs-box > div h3 {
-      font-size: 57px;
-      font-weight: 600; }
-    section.bike-specification .specs-holder .specs-box > div .specs-val {
-      font-size: 15px; }
-  section.bike-specification .specs-holder:not(:last-child) {
-    margin-bottom: 60px; }
+  section.bike-specification .specs-holder {
+    position: relative; }
+    section.bike-specification .specs-holder .specs-box > div {
+      flex: 0 0 auto;
+      width: 50%; }
+      section.bike-specification .specs-holder .specs-box > div h3 {
+        font-size: 57px;
+        font-weight: 600;
+        margin-top: 0; }
+      section.bike-specification .specs-holder .specs-box > div .specs-val {
+        font-size: 15px; }
+      section.bike-specification .specs-holder .specs-box > div.specs-list {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        top: 0; }
+    section.bike-specification .specs-holder:not(:last-child) {
+      margin-bottom: 60px; }
 
 /*# sourceMappingURL=main.css.map */
