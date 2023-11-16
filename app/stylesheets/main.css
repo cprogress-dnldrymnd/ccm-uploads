@@ -10075,6 +10075,9 @@ section.bike-navigation {
     margin-right: 8px; }
   section.bike-navigation.v2 .inner {
     background-color: transparent; }
+    section.bike-navigation.v2 .inner .btn-bordered a {
+      border-color: var(--white-color) !important;
+      color: var(--white-color) !important; }
     section.bike-navigation.v2 .inner .bike-nav li {
       margin-left: 8px;
       margin-right: 8px; }
