@@ -10043,7 +10043,7 @@ body:not(.hide-header) section.bike-navigation.fixed .inner {
 
 section.bike-navigation {
   position: relative;
-  z-index: 2; }
+  z-index: 3; }
   section.bike-navigation .inner {
     transition: 500ms;
     padding-top: 10px;
