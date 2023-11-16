@@ -7960,6 +7960,17 @@ footer {
   footer li,
   footer span {
     color: var(--white-color); }
+  footer .menu {
+    padding: 0;
+    list-style: none; }
+    footer .menu li a {
+      color: #bebebe;
+      font-size: 15px; }
+    footer .menu li:not(:last-child) {
+      margin-bottom: 11px; }
+  footer .widget-title {
+    font-size: 15px;
+    font-style: normal; }
   footer .footer-top {
     padding-top: 60px;
     padding-bottom: 60px; }

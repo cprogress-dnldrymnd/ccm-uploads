@@ -161,6 +161,25 @@ footer {
 	span {
 		color: var(--white-color);
 	}
+	.menu {
+		padding: 0;
+		list-style: none;
+		li {
+			a {
+				color: #bebebe;
+				font-size: 15px;
+			}
+			&:not(:last-child) {
+				margin-bottom: 11px;
+			}
+		}
+	}
+
+	.widget-title {
+		font-size: 15px;
+		font-style: normal;
+	}
+
 	.footer-top {
 		padding-top: 60px;
 		padding-bottom: 60px;
