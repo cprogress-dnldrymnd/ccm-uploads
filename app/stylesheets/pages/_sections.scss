@@ -349,6 +349,12 @@ section.bike-specification {
                         top: 0;
                         transition: 500ms;
                     }
+                    @media(max-width: 991px) {
+                        max-height: 0;
+                        transform: 500ms;
+                        overflow: hidden;
+                        position: relative;
+                    }
                 }
             }
             @media (min-width: 992px) {

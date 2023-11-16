@@ -430,6 +430,8 @@ function bike_specs() {
 			}
 		});
 		jQuery('.specs-holder').css('height', t + 'px');
+	} else {
+		
 	}
 }
 
