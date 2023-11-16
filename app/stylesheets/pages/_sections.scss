@@ -314,6 +314,21 @@ section.bike-specification {
                 margin-bottom: 40px;
             }
             &.active {
+                .specs-heading {
+                    h3 {
+                        color: var(--main-color);
+                    }
+                    .icon {
+                        background-color: var(--black-color);
+                        &:before,
+                        &:after {
+                            background-color: var(--white-color);
+                        }
+                        &:before {
+                            content: none;
+                        }
+                    }
+                }
                 .specs-list {
                     max-height: 800px;
                 }

@@ -10116,6 +10116,12 @@ section.bike-specification {
     @media (max-width: 991px) {
       section.bike-specification .specs-holder .specs-box {
         margin-bottom: 40px; } }
+    section.bike-specification .specs-holder .specs-box.active .specs-heading h3 {
+      color: var(--main-color); }
+    section.bike-specification .specs-holder .specs-box.active .specs-heading .icon {
+      background-color: var(--black-color); }
+      section.bike-specification .specs-holder .specs-box.active .specs-heading .icon:before, section.bike-specification .specs-holder .specs-box.active .specs-heading .icon:after {
+        background-color: var(--white-color); }
     section.bike-specification .specs-holder .specs-box.active .specs-list {
       max-height: 800px; }
     @media (min-width: 992px) {
