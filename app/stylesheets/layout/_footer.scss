@@ -167,6 +167,11 @@ footer {
 			margin-bottom: 0 !important;
 		}
 	}
+	a {
+		&:hover {
+			color: var(--white-color) !important;
+		}
+	}
 	.menu {
 		padding: 0;
 		list-style: none;
