@@ -9787,7 +9787,8 @@ footer {
 
 .main-holder.main-holder {
   padding-top: 0 !important;
-  font-family: "Fira Sans Condensed", sans-serif; }
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 16px; }
   .main-holder.main-holder h1,
   .main-holder.main-holder h2,
   .main-holder.main-holder h3,
