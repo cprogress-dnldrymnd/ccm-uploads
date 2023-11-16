@@ -9807,6 +9807,18 @@ footer {
     color: var(--black-color) !important; }
   .main-holder.main-holder .image-section img {
     width: 100%; }
+  @media (min-width: 1500px) {
+    .main-holder.main-holder .container {
+      max-width: 1420px; } }
+  @media (min-width: 1600px) {
+    .main-holder.main-holder .container {
+      max-width: 1520px; } }
+  @media (min-width: 1700px) {
+    .main-holder.main-holder .container {
+      max-width: 1620px; } }
+  @media (min-width: 1700px) {
+    .main-holder.main-holder .container {
+      max-width: 1620px; } }
 
 .breadcrumbs ul {
   list-style: none;
