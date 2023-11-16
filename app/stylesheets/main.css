@@ -7959,6 +7959,8 @@ footer {
   footer span,
   footer p {
     color: inherit !important; }
+  footer p:last-child {
+    margin-bottom: 0 !important; }
   footer .menu {
     padding: 0;
     list-style: none; }
