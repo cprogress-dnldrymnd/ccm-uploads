@@ -9949,6 +9949,9 @@ section.hero-banner-with-breadcrumbs {
   position: relative;
   padding-bottom: 10px;
   overflow: hidden; }
+  @media (max-width: 767px) {
+    section.hero-banner-with-breadcrumbs .breadcrumbs {
+      display: none; } }
   section.hero-banner-with-breadcrumbs .video-holder {
     position: absolute;
     top: -7vw;
@@ -9974,13 +9977,18 @@ section.hero-banner-with-breadcrumbs {
     letter-spacing: 3.85px; }
     @media (max-width: 1199px) {
       section.hero-banner-with-breadcrumbs .heading-box h1 {
-        font-size: 100px; } }
+        font-size: 120px; } }
     @media (max-width: 991px) {
       section.hero-banner-with-breadcrumbs .heading-box h1 {
         font-size: 100px; } }
     @media (max-width: 767px) {
       section.hero-banner-with-breadcrumbs .heading-box h1 {
         font-size: 64px; } }
+  @media (max-width: 767px) {
+    section.hero-banner-with-breadcrumbs {
+      align-items: center !important;
+      justify-content: center !important;
+      padding-top: 10px; } }
 
 body:not(.hide-header) section.bike-navigation.fixed .inner {
   top: var(--header-height, 70px); }

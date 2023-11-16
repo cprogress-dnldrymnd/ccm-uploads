@@ -97,6 +97,11 @@ section.hero-banner-with-breadcrumbs {
     position: relative;
     padding-bottom: 10px;
     overflow: hidden;
+    .breadcrumbs {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
     .video-holder {
         position: absolute;
         top: -7vw;
@@ -135,6 +140,11 @@ section.hero-banner-with-breadcrumbs {
                 font-size: 64px;
             }
         }
+    }
+    @media (max-width: 767px) {
+        align-items: center !important;
+        justify-content: center !important;
+        padding-top: 10px;
     }
 }
 body {
