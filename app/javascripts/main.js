@@ -400,7 +400,7 @@ function bike_scroller() {
 								jQuery('.bike-scroller .images').css('transform', 'translateX(' + transform + 'px)');
 								transform++;*/
 
-				const scrollContainer = document.querySelector(".bike-scroller .image");
+				const scrollContainer = document.querySelector(".bike-scroller .images .row");
 
 				scrollContainer.addEventListener("wheel", (evt) => {
 					evt.preventDefault();
