@@ -89,22 +89,22 @@ $version = $_GET['version'];
 
     <section class="overview <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="overview">
         <div class="container">
-            <?php if ($version == 'v2') { ?>
-                <div class="heading-box">
-                    A PASSION TO WIN.
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
+            <div class="inner">
+                <?php if ($version == 'v2') { ?>
+                    <div class="heading-box text-center">
+                        <h2>A PASSION TO WIN.</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
 
+                        </div>
+                        <div class="col-lg-6">
+                            <p>
+                                Any motorcycle that bears our founding father’s signature has to be very special. Using the same gorgeous trellis frame that underpins the striking Spitfire range, this very limited edition machine has been designed using a range of components exclusive to this stunning machine. This machine is unmistakably CCM. It lifts any pre-conceived impressions to a new level. Our most striking bike to date, every component has been carefully considered to create a motorcycle that Alan would have been truly proud of.
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <p>
-                            Any motorcycle that bears our founding father’s signature has to be very special. Using the same gorgeous trellis frame that underpins the striking Spitfire range, this very limited edition machine has been designed using a range of components exclusive to this stunning machine. This machine is unmistakably CCM. It lifts any pre-conceived impressions to a new level. Our most striking bike to date, every component has been carefully considered to create a motorcycle that Alan would have been truly proud of.
-                        </p>
-                    </div>
-                </div>
-            <?php } else { ?>
-                <div class="inner">
+                <?php } else { ?>
                     <div class="heading-box">
                         <h2>LEAVE THE HERD BEHIND.</h2>
                     </div>
@@ -113,8 +113,9 @@ $version = $_GET['version'];
                             The hand-made characteristics shine through, embodying the spirit of our founder, Alan Clews. Since the inception of CCM in 1970, Alan's vision of combining a powerful engine with a lightweight and robust frame remains at the heart of our design philosophy.
                         </p>
                     </div>
-                </div>
-            <?php } ?>
+                <?php } ?>
+            </div>
+
         </div>
     </section>
 

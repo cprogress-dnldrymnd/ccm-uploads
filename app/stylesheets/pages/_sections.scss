@@ -280,7 +280,7 @@ section.overview {
             }
         }
     }
-    &.v2 {
+    &.v2:not(.contact-form-holder) {
         position: relative;
         &:before {
             content: "";
