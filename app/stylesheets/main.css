@@ -9941,7 +9941,7 @@ section.bike-specification {
       transform: translateX(0);
       opacity: 1;
       visibility: visible; }
-    section.bike-specification .specs-holder:not(:last-child) .specs-heading {
+    section.bike-specification .specs-holder .specs-box:not(:last-child) .specs-heading {
       margin-bottom: 60px; }
 
 /*# sourceMappingURL=main.css.map */
