@@ -402,12 +402,12 @@ function bike_scroller() {
 		});
 	}
 
-	const scrollContainer = document.querySelector(".bike-scroller .images .row-images");
+	const scrollContainer = document.querySelector(".bike-scroller-active .bike-scroller .images .row-images.active-scroll");
 
 	scrollContainer.addEventListener("wheel", (evt) => {
 		evt.preventDefault();
 		scrollContainer.scrollLeft += evt.deltaY;
-		console.log(deltaY);
+		console.log(evt.deltaY);
 	});
 }
 function bike_specs() {
