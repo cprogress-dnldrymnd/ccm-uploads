@@ -4,6 +4,18 @@ jQuery(window).on('resize', function () {
 jQuery(document).ready(function () {
 	utm_parameters();
 
+	var t = 0; // the height of the highest element (after the function runs)
+	var t_elem;  // the highest element (after the function runs)
+	jQuery(".specs-list", elem).each(function () {
+		$this = $(this);
+		if ($this.outerHeight() > t) {
+			t_elem = this;
+			t = $this.outerHeight();
+		}
+	});
+
+	jQuery('.specs-holder').css('height', $t_elem + 'px');
+
 	jQuery('.mini-cart a, .col-side-minicart').click(function (e) {
 		jQuery('body').toggleClass('show-minicart');
 		jQuery('.overlay').toggleClass('show-overlay');
