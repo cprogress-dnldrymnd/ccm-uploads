@@ -281,6 +281,10 @@ section.footer-buttons {
         padding: 55px 15px;
         color: var(--black-color);
         text-decoration: none;
+        @include on-event {
+            background-color: #E22228;
+            color: var(--white-color);
+        }
         &.light-blue {
             background-color: #e6eef0;
         }
