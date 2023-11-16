@@ -10121,6 +10121,9 @@ section.overview {
       left: 0;
       bottom: 0;
       z-index: 1; }
+    section.overview.v2.contact-form-holder .container {
+      position: relative;
+      z-index: 3; }
     section.overview.v2.contact-form-holder h2, section.overview.v2.contact-form-holder p {
       color: var(--white-color); }
     section.overview.v2.contact-form-holder:after {

@@ -287,7 +287,7 @@ $version = $_GET['version'];
         </div>
     </section>
 
-    <section class="overview contact-form-holder">
+    <section class="overview contact-form-holder <?= $version == 'v2' ? 'v2' : 'v1' ?>">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">

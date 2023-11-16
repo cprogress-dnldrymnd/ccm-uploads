@@ -329,6 +329,10 @@ section.overview {
     &.v2.contact-form-holder {
         position: relative;
         @include half-bg();
+        .container {
+            position: relative;
+            z-index: 3;
+        }
         h2, p {
             color: var(--white-color);
         }
