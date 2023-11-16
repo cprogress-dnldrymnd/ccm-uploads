@@ -154,5 +154,28 @@ $footer_type = carbon_get_the_post_meta('footer_type');
             <?php } ?>
         </div>
     </section>
+
+    <section class="bike-specification">
+        <div class="container">
+            <div class="row">
+                <div class="specs-box">
+                    <h3>
+                        ENGINE
+                    </h3>
+                    <div class="specs-list">
+                        <div class="row">
+                            <?php for ($x = 0; $x <= 10; $x++) { ?>
+                                <div class="col-lg-6">
+                                    <div class="specs-name">
+                                        <strong>DISPLACEMENT</strong>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer($footer_type); ?>
