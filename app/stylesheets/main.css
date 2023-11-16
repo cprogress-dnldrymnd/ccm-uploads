@@ -10073,7 +10073,7 @@ section.footer-buttons a {
   text-decoration: none;
   transition: 500ms; }
   section.footer-buttons a:hover, section.footer-buttons a:active, section.footer-buttons a:focus {
-    background-color: #e22228 !important;
+    background-color: var(--main-color) !important;
     color: var(--white-color); }
     section.footer-buttons a:hover span.icon, section.footer-buttons a:active span.icon, section.footer-buttons a:focus span.icon {
       border-color: var(--white-color); }
