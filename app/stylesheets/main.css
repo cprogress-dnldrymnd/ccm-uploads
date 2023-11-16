@@ -10135,7 +10135,6 @@ section.overview {
       top: 0;
       right: 0;
       bottom: 0;
-      background-color: #1e1e21;
       z-index: 1; }
     section.overview.v2:not(.contact-form-holder):after {
       content: "";
@@ -10144,7 +10143,6 @@ section.overview {
       top: 0;
       left: 0;
       bottom: 0;
-      background-color: #000;
       z-index: 1; }
     section.overview.v2:not(.contact-form-holder):before {
       background-color: #1e1e21;
@@ -10187,7 +10185,6 @@ section.features {
       top: 0;
       right: 0;
       bottom: 0;
-      background-color: #1e1e21;
       z-index: 1; }
     section.features.v2:after {
       content: "";
@@ -10196,7 +10193,6 @@ section.features {
       top: 0;
       left: 0;
       bottom: 0;
-      background-color: #000;
       z-index: 1; }
     section.features.v2 .container {
       position: relative;
