@@ -10153,7 +10153,8 @@ section.bike-specification {
         max-height: 0;
         transition: 500ms;
         overflow: hidden;
-        position: relative; } }
+        position: relative;
+        margin-bottom: 40px; } }
     @media (min-width: 992px) {
       section.bike-specification .specs-holder .specs-box:hover > div.specs-list, section.bike-specification .specs-holder .specs-box:active > div.specs-list, section.bike-specification .specs-holder .specs-box:focus > div.specs-list {
         transform: translateX(0);
