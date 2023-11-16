@@ -9878,14 +9878,20 @@ section.overview {
       max-width: 480px;
       margin-left: auto;
       font-size: 20px; }
+      section.overview .inner .description-box p {
+        font-size: inherit !important; }
 
 section.features {
   padding-top: 135px;
   padding-bottom: 135px; }
   section.features .feature-box .feature-item .heading-box h5 {
-    font-size: 16px; }
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px; }
   section.features .feature-box .feature-item .description-box {
     font-size: 15px; }
+    section.features .feature-box .feature-item .description-box p {
+      font-size: inherit !important; }
   section.features .feature-box .feature-item:not(:last-child) {
     margin-bottom: 32px; }
 

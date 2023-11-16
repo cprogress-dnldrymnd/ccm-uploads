@@ -143,6 +143,9 @@ section.overview {
             max-width: 480px;
             margin-left: auto;
             font-size: 20px;
+            p {
+                font-size: inherit !important;
+            }
         }
     }
 }
@@ -155,10 +158,15 @@ section.features {
             .heading-box {
                 h5 {
                     font-size: 16px;
+                    margin-top: 0;
+                    margin-bottom: 15px;
                 }
             }
             .description-box {
                 font-size: 15px;
+                p {
+                    font-size: inherit !important;
+                }
             }
             &:not(:last-child) {
                 margin-bottom: 32px;
