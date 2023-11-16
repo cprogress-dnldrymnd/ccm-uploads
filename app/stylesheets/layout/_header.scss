@@ -1036,7 +1036,11 @@ body {
 		}
 	}
 }
-
+#ccm-motors-header {
+	&.hide-header {
+		transform: translateY(-100%);
+	}
+}
 #mobile-header-canvas {
 	display: none;
 	overflow: auto;

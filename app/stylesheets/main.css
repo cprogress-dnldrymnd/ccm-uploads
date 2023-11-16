@@ -7771,6 +7771,9 @@ body.mobile-header-active .mobile-menu-toggle span:last-child {
 body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   transform: translateX(0); }
 
+#ccm-motors-header.hide-header {
+  transform: tran; }
+
 #mobile-header-canvas {
   display: none;
   overflow: auto; }

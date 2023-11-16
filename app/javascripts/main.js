@@ -438,6 +438,18 @@ function header() {
 		jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
 	}
 
+	var lastScrollTop = 0;
+	jQuery(window).scroll(function (event) {
+		var st = jQuery(this).scrollTop();
+		if (st > lastScrollTop) {
+			jQuery('#ccm-motors-header').addClass('hide-header');
+		} else {
+			jQuery('#ccm-motors-header').removeClass('hide-header');
+		}
+		lastScrollTop = st;
+	});
+
+
 }
 jQuery(document).ready(function () {
 	utm_parameters();
