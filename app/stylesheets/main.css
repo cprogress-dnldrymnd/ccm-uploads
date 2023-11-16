@@ -9912,4 +9912,8 @@ section.features {
     section.features .feature-box .feature-item:not(:last-child) {
       margin-bottom: 32px; }
 
+section.bike-specification .specs-box > div {
+  flex: 0 0 auto;
+  width: 50%; }
+
 /*# sourceMappingURL=main.css.map */

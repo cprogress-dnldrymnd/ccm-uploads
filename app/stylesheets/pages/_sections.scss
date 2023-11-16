@@ -187,3 +187,12 @@ section.features {
         }
     }
 }
+
+section.bike-specification {
+    .specs-box {
+        > div {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+}

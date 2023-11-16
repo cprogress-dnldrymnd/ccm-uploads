@@ -158,10 +158,12 @@ $footer_type = carbon_get_the_post_meta('footer_type');
     <section class="bike-specification">
         <div class="container">
             <div class="row">
-                <div class="specs-box">
-                    <h3>
-                        ENGINE
-                    </h3>
+                <div class="specs-box d-flex">
+                    <div class="specs-heading">
+                        <h3>
+                            ENGINE
+                        </h3>
+                    </div>
                     <div class="specs-list">
                         <div class="row">
                             <?php for ($x = 0; $x <= 13; $x++) { ?>
