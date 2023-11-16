@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
 
 	var t = 0; // the height of the highest element (after the function runs)
 	var t_elem;  // the highest element (after the function runs)
-	jQuery(".specs-list", elem).each(function () {
+	jQuery(".specs-list").each(function () {
 		$this = $(this);
 		if ($this.outerHeight() > t) {
 			t_elem = this;
