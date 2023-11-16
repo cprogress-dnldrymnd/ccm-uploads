@@ -9899,6 +9899,12 @@ footer.footer {
   footer.footer .btn-box a,
   footer.footer .btn-box button {
     border: 1px solid var(--main-color); }
+    @media (max-width: 480px) {
+      .main-holder.main-holder .btn-box a,
+      .main-holder.main-holder .btn-box button,
+      footer.footer .btn-box a,
+      footer.footer .btn-box button {
+        padding: 10px 20px; } }
   .main-holder.main-holder .btn-box.btn-bordered a,
   .main-holder.main-holder .btn-box.btn-bordered button,
   footer.footer .btn-box.btn-bordered a,

@@ -34,6 +34,9 @@ footer.footer {
         a,
         button {
             border: 1px solid var(--main-color);
+            @media(max-width: 480px) {
+                padding: 10px 20px;
+            }
         }
         &.btn-bordered {
             a,
