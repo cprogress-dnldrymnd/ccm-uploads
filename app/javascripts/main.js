@@ -442,9 +442,9 @@ function header() {
 	jQuery(window).scroll(function (event) {
 		var st = jQuery(this).scrollTop();
 		if (st > lastScrollTop) {
-			jQuery('#ccm-motors-header').addClass('hide-header');
+			jQuery('body').addClass('hide-header');
 		} else {
-			jQuery('#ccm-motors-header').removeClass('hide-header');
+			jQuery('body').removeClass('hide-header');
 		}
 		lastScrollTop = st;
 	});

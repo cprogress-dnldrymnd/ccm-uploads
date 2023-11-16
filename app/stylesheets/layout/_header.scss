@@ -63,7 +63,7 @@ header {
 			}
 		}
 
-		.nav>li>a {
+		.nav > li > a {
 			padding: 15px 22px;
 
 			@include respond-to(screen-md) {
@@ -84,7 +84,7 @@ header {
 	z-index: 999999999999;
 }
 
-.sticky+main {
+.sticky + main {
 	padding-top: 53px;
 }
 
@@ -129,11 +129,11 @@ button.navbar-toggle {
 		margin-top: 7.5px;
 	}
 
-	.navbar-nav>li {
+	.navbar-nav > li {
 		float: none;
 	}
 
-	.navbar-nav>li>a {
+	.navbar-nav > li > a {
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
@@ -300,45 +300,45 @@ button.navbar-toggle {
 ********************************/
 
 /* Dropdown Toggle on style */
-.navbar .nav li.dropdown.open>.dropdown-toggle,
-.navbar .nav li.dropdown.active>.dropdown-toggle,
-.navbar .nav li.dropdown.open.active>.dropdown-toggle {
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
 	background: inherit;
 	/* Set to inherit when using mouse hover to open dropdown */
 	color: inherit;
 }
 
 /* Toggle off style */
-.navbar .nav li.dropdown.open.active>.dropdown-toggle,
-.navbar .nav>li.dropdown>a:focus {
+.navbar .nav li.dropdown.open.active > .dropdown-toggle,
+.navbar .nav > li.dropdown > a:focus {
 	background: inherit;
 	color: inherit;
 }
 
 /* Toggle hover */
-.navbar .nav li.dropdown>.dropdown-toggle:hover,
-.navbar .nav li.dropdown.open>.dropdown-toggle:hover {
+.navbar .nav li.dropdown > .dropdown-toggle:hover,
+.navbar .nav li.dropdown.open > .dropdown-toggle:hover {
 	background-color: #dddddd;
 }
 
 /* Toggle caret hover */
-.navbar .nav li.dropdown>a:hover .caret,
-.navbar .nav li.dropdown>a:focus .caret {
+.navbar .nav li.dropdown > a:hover .caret,
+.navbar .nav li.dropdown > a:focus .caret {
 	border-bottom-color: #333;
 	border-top-color: #333;
 }
 
 /* Toggle caret active */
-.navbar .nav li.dropdown.open>.dropdown-toggle .caret,
-.navbar .nav li.dropdown.active>.dropdown-toggle .caret,
-.navbar .nav li.dropdown.open.active>.dropdown-toggle .caret {
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
 	border-bottom-color: #333;
 	border-top-color: #333;
 }
 
 /* Hover style
 ********************************/
-.navbar .nav>li>a,
+.navbar .nav > li > a,
 .mega-menu a {
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -352,7 +352,7 @@ button.navbar-toggle {
 	-webkit-transform: translateZ(0);
 }
 
-header nav .nav>li>a {
+header nav .nav > li > a {
 	padding: 17px 22px !important;
 
 	@include respond-to(screen-md) {
@@ -439,7 +439,7 @@ li.has-dropdown:active:after,
 			display: block;
 
 			.row {
-				>div {
+				> div {
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -449,11 +449,12 @@ li.has-dropdown:active:after,
 					flex: 0 0 57px;
 				}
 
-				.col-side-toggle, .col-side-minicart {
+				.col-side-toggle,
+				.col-side-minicart {
 					transition: 500ms;
 
 					@include on-event {
-						background-color: #4A4B51;
+						background-color: #4a4b51;
 					}
 				}
 
@@ -541,8 +542,8 @@ li.has-dropdown:active:after,
 		}
 
 		.bike-lists-holder {
-			>.row {
-				>[class*="col-"] {
+			> .row {
+				> [class*="col-"] {
 					a {
 						text-decoration: none !important;
 						padding: 3vw;
@@ -550,7 +551,7 @@ li.has-dropdown:active:after,
 						transition: 500ms;
 						position: relative;
 
-						>div {
+						> div {
 							position: relative;
 							z-index: 1;
 						}
@@ -639,7 +640,7 @@ li.has-dropdown:active:after,
 		.mini-cart {
 			position: static;
 
-			>a {
+			> a {
 				padding: 23px 15px !important;
 			}
 
@@ -667,7 +668,7 @@ li.has-dropdown:active:after,
 					border-bottom: 1px solid #e2e2e2;
 				}
 
-				>a {
+				> a {
 					color: var(--white-color);
 					text-transform: uppercase;
 					font-size: 15px;
@@ -684,7 +685,7 @@ li.has-dropdown:active:after,
 						font-size: 16px;
 					}
 
-					@media(min-width: 992px) {
+					@media (min-width: 992px) {
 						@include on-event {
 							background-color: #4a4b51;
 							color: var(--white-color) !important;
@@ -692,13 +693,13 @@ li.has-dropdown:active:after,
 					}
 
 					&.dropdown-toggle {
-						@media(max-width: 991px) {
+						@media (max-width: 991px) {
 							display: flex;
 							justify-content: space-between;
 							align-items: center;
 
 							&:after {
-								content: '';
+								content: "";
 								display: inline-block;
 								width: 12px;
 								height: 12px;
@@ -741,16 +742,16 @@ li.has-dropdown:active:after,
 						border-radius: 0 !important;
 
 						li.menu-item {
-							>a {
+							> a {
 								color: var(--black-color);
 							}
 						}
 
-						@media(max-width: 991px) {
+						@media (max-width: 991px) {
 							flex-direction: column;
 						}
 
-						@media(min-width: 992px) {
+						@media (min-width: 992px) {
 							max-height: calc(100vh - 100px);
 						}
 					}
@@ -762,8 +763,8 @@ li.has-dropdown:active:after,
 
 							section.bike-lists-menu {
 								.bike-lists-holder {
-									>.row {
-										>[class*="col-"] {
+									> .row {
+										> [class*="col-"] {
 											a {
 												transform: translateY(0);
 												opacity: 1;
@@ -856,7 +857,7 @@ body {
 			opacity: 1;
 		}
 		.col-side-minicart {
-			background-color: #4A4B51;
+			background-color: #4a4b51;
 		}
 	}
 
@@ -864,6 +865,11 @@ body {
 		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
 			visibility: hidden;
 			opacity: 0;
+		}
+	}
+	&.hide-header {
+		#ccm-motors-header {
+			transform: translateY(-100%);
 		}
 	}
 }
@@ -1008,7 +1014,7 @@ body {
 		}
 
 		.col-side-toggle {
-			background-color: #4A4B51;
+			background-color: #4a4b51;
 		}
 
 		.mobile-menu-toggle {
@@ -1036,11 +1042,7 @@ body {
 		}
 	}
 }
-#ccm-motors-header {
-	&.hide-header {
-		transform: translateY(-100%);
-	}
-}
+
 #mobile-header-canvas {
 	display: none;
 	overflow: auto;
@@ -1048,11 +1050,11 @@ body {
 	@media (max-width: 991px) {
 		@include offcanvas-style;
 	}
-}	
+}
 
 .bikes-template-templates {
 	#ccm-motors-header {
-		@include on-event{ 
+		@include on-event {
 			background-color: var(--black-color);
 		}
 	}

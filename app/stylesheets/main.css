@@ -7339,18 +7339,22 @@ li.has-dropdown:active:after,
         #ccm-motors-header .mobile-header .row .col-side,
         #mobile-header-canvas .mobile-header .row .col-side {
           flex: 0 0 57px; }
-        #ccm-motors-header .mobile-header .row .col-side-toggle, #ccm-motors-header .mobile-header .row .col-side-minicart,
+        #ccm-motors-header .mobile-header .row .col-side-toggle,
+        #ccm-motors-header .mobile-header .row .col-side-minicart,
         #mobile-header-canvas .mobile-header .row .col-side-toggle,
         #mobile-header-canvas .mobile-header .row .col-side-minicart {
           transition: 500ms; }
-          #ccm-motors-header .mobile-header .row .col-side-toggle:hover, #ccm-motors-header .mobile-header .row .col-side-toggle:active, #ccm-motors-header .mobile-header .row .col-side-toggle:focus, #ccm-motors-header .mobile-header .row .col-side-minicart:hover, #ccm-motors-header .mobile-header .row .col-side-minicart:active, #ccm-motors-header .mobile-header .row .col-side-minicart:focus,
+          #ccm-motors-header .mobile-header .row .col-side-toggle:hover, #ccm-motors-header .mobile-header .row .col-side-toggle:active, #ccm-motors-header .mobile-header .row .col-side-toggle:focus,
+          #ccm-motors-header .mobile-header .row .col-side-minicart:hover,
+          #ccm-motors-header .mobile-header .row .col-side-minicart:active,
+          #ccm-motors-header .mobile-header .row .col-side-minicart:focus,
           #mobile-header-canvas .mobile-header .row .col-side-toggle:hover,
           #mobile-header-canvas .mobile-header .row .col-side-toggle:active,
           #mobile-header-canvas .mobile-header .row .col-side-toggle:focus,
           #mobile-header-canvas .mobile-header .row .col-side-minicart:hover,
           #mobile-header-canvas .mobile-header .row .col-side-minicart:active,
           #mobile-header-canvas .mobile-header .row .col-side-minicart:focus {
-            background-color: #4A4B51; }
+            background-color: #4a4b51; }
         #ccm-motors-header .mobile-header .row .logo-box,
         #mobile-header-canvas .mobile-header .row .logo-box {
           padding-top: 18px;
@@ -7557,7 +7561,7 @@ li.has-dropdown:active:after,
         align-items: center; }
         #ccm-motors-header .nav-box ul li.menu-item > a.dropdown-toggle:after,
         #mobile-header-canvas .nav-box ul li.menu-item > a.dropdown-toggle:after {
-          content: '';
+          content: "";
           display: inline-block;
           width: 12px;
           height: 12px;
@@ -7648,7 +7652,7 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
   visibility: visible;
   opacity: 1; }
 body.show-minicart .col-side-minicart {
-  background-color: #4A4B51; }
+  background-color: #4a4b51; }
 body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   visibility: hidden;
   opacity: 0; }
@@ -7759,7 +7763,7 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
 body.mobile-header-active #mobile-header-canvas {
   transform: translateX(0); }
 body.mobile-header-active .col-side-toggle {
-  background-color: #4A4B51; }
+  background-color: #4a4b51; }
 body.mobile-header-active .mobile-menu-toggle span:nth-child(2) {
   opacity: 0; }
 body.mobile-header-active .mobile-menu-toggle span:first-child {
@@ -7770,9 +7774,6 @@ body.mobile-header-active .mobile-menu-toggle span:last-child {
   transform: rotate(-45deg); }
 body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   transform: translateX(0); }
-
-#ccm-motors-header.hide-header {
-  transform: translateY(-100%); }
 
 #mobile-header-canvas {
   display: none;
