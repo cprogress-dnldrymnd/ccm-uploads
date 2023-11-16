@@ -10108,4 +10108,8 @@ section.footer-buttons a {
       top: 1px;
       position: absolute; }
 
+section.bike-scroller .images .image {
+  padding: 50%;
+  position: relative; }
+
 /*# sourceMappingURL=main.css.map */

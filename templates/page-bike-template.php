@@ -151,7 +151,7 @@ $footer_type = carbon_get_the_post_meta('footer_type');
 
     <section class="bike-scroller">
         <div class="images">
-            <div class="row nowrap">
+            <div class="row g-0 nowrap">
                 <?php foreach ($images as $key => $image) { ?>
                     <div class="col-lg-6 image" id="image-<?= $key ?>">
                         <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
