@@ -3,20 +3,20 @@ jQuery(window).on('resize', function () {
 });
 
 function bike_navigation() {
-	$bike_nav_height = jQuery('.bike-navigation .inner').outerHeight();
+	if (jQuery('.bike-navigation').length > 0) {
+		$bike_nav_height = jQuery('.bike-navigation .inner').outerHeight();
+		jQuery('.bike-navigation').css('height', $bike_nav_height + 'px');
+		var stickyTop = jQuery('.bike-navigation').offset().top;
+		jQuery(window).scroll(function () {
+			var windowTop = jQuery(window).scrollTop();
 
-	jQuery('.bike-navigation').css('height', $bike_nav_height + 'px');
-
-	var stickyTop = jQuery('.bike-navigation').offset().top;
-	jQuery(window).scroll(function () {
-		var windowTop = jQuery(window).scrollTop();
-
-		if (stickyTop < windowTop) {
-			jQuery('.bike-navigation').addClass('fixed')
-		} else {
-			jQuery('.bike-navigation').removeClass('fixed')
-		}
-	});
+			if (stickyTop < windowTop) {
+				jQuery('.bike-navigation').addClass('fixed')
+			} else {
+				jQuery('.bike-navigation').removeClass('fixed')
+			}
+		});
+	}
 }
 
 jQuery(document).ready(function () {
