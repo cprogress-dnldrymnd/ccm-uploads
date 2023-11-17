@@ -10001,6 +10001,19 @@ footer.footer {
     background-color: transparent !important;
     border: 1px solid var(--black-color) !important;
     color: var(--black-color) !important; }
+    .main-holder.main-holder .btn-box.btn-bordered a:hover, .main-holder.main-holder .btn-box.btn-bordered a:active, .main-holder.main-holder .btn-box.btn-bordered a:focus,
+    .main-holder.main-holder .btn-box.btn-bordered button:hover,
+    .main-holder.main-holder .btn-box.btn-bordered button:active,
+    .main-holder.main-holder .btn-box.btn-bordered button:focus,
+    footer.footer .btn-box.btn-bordered a:hover,
+    footer.footer .btn-box.btn-bordered a:active,
+    footer.footer .btn-box.btn-bordered a:focus,
+    footer.footer .btn-box.btn-bordered button:hover,
+    footer.footer .btn-box.btn-bordered button:active,
+    footer.footer .btn-box.btn-bordered button:focus {
+      border-color: var(--black-color) !important;
+      background-color: var(--black-color) !important;
+      color: var(--white-color) !important; }
   .main-holder.main-holder .image-section img,
   footer.footer .image-section img {
     width: 100%; }

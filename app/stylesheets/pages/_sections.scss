@@ -60,7 +60,8 @@ footer.footer {
                 letter-spacing: 0 !important;
                 font-size: 15px !important;
             }
-            @include on-event  {
+
+            @include on-event {
                 border-color: var(--black-color);
             }
         }
@@ -72,6 +73,12 @@ footer.footer {
                 background-color: transparent !important;
                 border: 1px solid var(--black-color) !important;
                 color: var(--black-color) !important;
+
+                @include on-event {
+                    border-color: var(--black-color) !important;
+                    background-color: var(--black-color) !important;
+                    color: var(--white-color) !important;
+                }
             }
         }
     }
@@ -537,6 +544,7 @@ section.features {
         position: relative;
         background-color: #1e1e21;
         @include half-bg();
+
         .container {
             position: relative;
             z-index: 3;
