@@ -2224,6 +2224,7 @@ Container::make('post_meta', 'Bike Details')
 	->add_tab(
 		'Bike Options',
 		array(
+			Field::make('text', 'configure_url', __('Configure')),
 			Field::make('select', 'template_style', __('Template Style'))
 				->add_options(
 					array(
