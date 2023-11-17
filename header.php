@@ -477,6 +477,7 @@ if ($post_type == 'product') {
 ?>
 
 <body <?php body_class($cat_class . $product_cat_class); ?> ownership="<?php _e($ownership) ?>" <?= $product_term ?>>
+    <div class="overlay"></div>
 
 
     <!--[if lt IE 9]>
