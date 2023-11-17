@@ -472,16 +472,12 @@ function header() {
 		jQuery('.dropdown-menu').removeClass('show-dropdown');
 	});
 
-
-	jQuery(".overlay").hover(
-		function () {
-			jQuery('.overlay').removeClass('show-overlay');
-			jQuery('.dropdown-menu').removeClass('show-dropdown');
-			jQuery('body').removeClass('show-minicart');
-		}, function () {
-		}
-	);
-
+	jQuery(".overlay").click(function (e) {
+		jQuery('.overlay').removeClass('show-overlay');
+		jQuery('.dropdown-menu').removeClass('show-dropdown');
+		jQuery('body').removeClass('show-minicart');
+		e.preventDefault();
+	});
 
 	jQuery('.dropdown-toggle').click(function (e) {
 		jQuery('.dropdown-toggle').not(this).each(function () {
