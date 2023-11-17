@@ -233,12 +233,17 @@ $version = carbon_get_the_post_meta('template_style');
             </div>
         </div>
     </section>
-
-    <section class="image-section">
-        <div class="image-box">
-            <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-5.png" alt="">
-        </div>
-    </section>
+    <?php
+    $fullwidth_image = carbon_get_the_post_meta('fullwidth_image');
+    $fullwidth_image_url = wp_get_attachment_image_url($fullwidth_image, 'full');
+    ?>
+    <?php if ($fullwidth_image_url) { ?>
+        <section class="image-section">
+            <div class="image-box">
+                <img src="<?= $fullwidth_image_url ?>">
+            </div>
+        </section>
+    <?php } ?>
 
     <section class="overview contact-form-holder <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="enquire-now">
         <div class="container">
