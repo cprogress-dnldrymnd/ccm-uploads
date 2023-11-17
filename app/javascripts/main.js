@@ -427,10 +427,10 @@ function footer() {
 		});
 
 		jQuery('.footer-accordion .widget-title').click(function (e) {
-			jQuery(this).parent().addClass('active');
 			jQuery('.footer-accordion .widget-title').not(this).each(function () {
 				jQuery(this).parent().removeClass('active');
 			});
+			jQuery(this).parent().addClass('active');
 			e.preventDefault();
 		});
 	}
@@ -449,10 +449,10 @@ function bike_specs() {
 		jQuery('.specs-holder').css('height', t + 'px');
 	} else {
 		jQuery('.specs-heading').click(function (e) {
-			jQuery(this).parent().addClass('active');
 			jQuery('.specs-heading').not(this).each(function () {
 				jQuery(this).parent().removeClass('active');
 			});
+			jQuery(this).parent().addClass('active');
 			e.preventDefault();
 		});
 	}
