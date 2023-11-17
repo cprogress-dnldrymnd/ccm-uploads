@@ -10003,7 +10003,7 @@ section.hero-banner-with-breadcrumbs {
     pointer-events: none;
     left: 0;
     right: 0; }
-    section.hero-banner-with-breadcrumbs .video-holder iframe {
+    section.hero-banner-with-breadcrumbs .video-holder iframe, section.hero-banner-with-breadcrumbs .video-holder video, section.hero-banner-with-breadcrumbs .video-holder img {
       width: 100%;
       height: 100%; }
     @media (max-width: 767px) {
