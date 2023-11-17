@@ -1,5 +1,12 @@
 ﻿@charset 'UTF-8';
-
+// Others
+@import 
+'others/new',
+'others/single-bike',
+'others/error404',
+'others/custom-style',
+'others/page-components'
+;
 // 1. Configuration and helpers
 @import
 'utils/variables',
