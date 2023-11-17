@@ -2221,7 +2221,8 @@ Container::make('post_meta', 'Motorcycles')
 
 Container::make('post_meta', 'Bike Details')
 	->where('post_template', '=', 'templates/page-bike-template.php')
-	->add_fields(
+	->add_tab(
+		'Bike Options',
 		array(
 			Field::make('select', 'template_style', __('Template Style'))
 				->add_options(
@@ -2230,6 +2231,65 @@ Container::make('post_meta', 'Bike Details')
 						'v2'       => 'V2',
 					)
 				)
+		)
+	)
+	->add_tab(
+		'Overview',
+		array(
+			Field::make('text', 'overview_heading', __('Heading')),
+			Field::make('rich_text', 'overview_description', __('Description')),
+			Field::make('image', 'overview_image', __('Image')),
+		)
+	)
+	->add_tab(
+		'Features',
+		array(
+			Field::make('complex', 'features', '')
+				->set_layout('tabbed-horizontal')
+				->add_fields(
+					array(
+						Field::make('text', 'heading', 'Heading'),
+						Field::make('textarea', 'description', 'Description')
+					)
+				)
+		)
+	)
+	->add_tab(
+		'Gallery',
+		array(
+			Field::make('media_gallery', 'gallery', '')
+				->set_type(array('image')),
+		)
+	)
+		->add_tab(
+		'Specifications',
+		array(
+			Field::make('complex', 'specifications', '')
+				->add_fields(
+					array(
+						Field::make('text', 'navigation', 'Navigation')
+							->set_required(true),
+						Field::make('complex', 'specification', 'Specifications')
+							->add_fields(
+								array(
+									Field::make('text', 'specs_label', 'Specs Label')
+										->set_width(50)
+										->set_required(true),
+									Field::make('text', 'specs_value', 'Specs Value')
+										->set_width(50)
 
+								)
+							)
+							->set_header_template('<%- specs_label %>')
+							->set_layout('tabbed-vertical')
+					)
+				)
+				->set_header_template('<%- navigation %>')
+				->set_layout('tabbed-horizontal')
+				->set_default_value($technical_specs_default)
+				->set_required(true)
 		)
 	);
+
+
+	
