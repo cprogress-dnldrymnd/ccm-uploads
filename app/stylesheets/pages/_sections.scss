@@ -617,6 +617,9 @@ section.bike-specification {
                 }
 
                 &.specs-heading {
+                    h3 {
+                        text-transform: uppercase;
+                    }
                     .icon {
                         width: 42px;
                         height: 42px;
@@ -708,6 +711,11 @@ section.bike-specification {
             @media (min-width: 992px) {
                 @include on-event {
                     >div {
+                        &.specs-heading {
+                            h3 {
+                                color: var(--main-color);
+                            }
+                        }
                         &.specs-list {
                             transform: translateX(0);
                             opacity: 1;
