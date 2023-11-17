@@ -2224,6 +2224,7 @@ Container::make('post_meta', 'Bike Details')
 	->add_tab(
 		'Bike Options',
 		array(
+			Field::make('text', 'hero_youtube_video_id', __('Hero Youtube Video ID')),
 			Field::make('select', 'template_style', __('Template Style'))
 				->add_options(
 					array(
