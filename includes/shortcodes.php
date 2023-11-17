@@ -533,76 +533,64 @@ function page_submitted()
 
 add_shortcode('page_submitted', 'page_submitted');
 
-function bike_lists()
-{
+
+function bike_lists() {
 	ob_start();
 	$bikes_categ = carbon_get_post_meta(14442, 'motorcycles');
 	?>
-	<section class="bike-lists bt-5">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9">
-					<?php foreach ($bikes_categ as $categ) { ?>
-						<div class="bike-lists-holder">
-							<div class="bike-category d-flex">
-								<?= $categ['category_name'] ?>
-							</div>
-							<div class="bikes">
-								<div class="row">
-									<?php
-									foreach ($categ['bikes'] as $bike) {
-										?>
-										<div class="col-lg-3 <?= $bike['bike_name'] ?>">
-											<div class="column-holder">
-												<div class="row flex-row">
-													<div class="col-lg-12 col-half-mobile">
-														<div class="image-box">
-															<img src="<?= $bike['bike_image'] ?>" alt="<?= $bike['bike_name'] ?>">
-														</div>
+		<section class="bike-lists">
+		<div class="container wide witdh1700">
+			<?php foreach ($bikes_categ as $categ) { ?>
+				<div class="bike-lists-holder">
+					<div class="bike-category d-flex">
+						<?= $categ['category_name'] ?>
+					</div>
+					<div class="bikes">
+						<div class="row flex-row">
+							<?php
+							foreach ($categ['bikes'] as $bike) {
+								?>
+								<div class="col-lg-3 <?= $bike['bike_name'] ?>">
+									<div class="column-holder">
+										<div class="row flex-row">
+											<div class="col-lg-12 col-half-mobile">
+												<div class="image-box">
+													<img src="<?= $bike['bike_image'] ?>" alt="<?= $bike['bike_name'] ?>">
+												</div>
+											</div>
+											<div class="col-lg-12 col-half-mobile">
+												<div class="bike-name-price d-flex ">
+													<div class="bike-name">
+														<h4><?= $bike['bike_name'] ?></h4>
 													</div>
-													<div class="col-lg-12 col-half-mobile">
-														<div class="bike-name-price d-flex ">
-															<div class="bike-name">
-																<h4><?= $bike['bike_name'] ?></h4>
-															</div>
-															<div class="bike-price">
-																<span><?= $bike['bike_price'] ?></span>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-12">
-														<div class="btn-box d-flex">
-															<?php if ($bike['discover_link']) { ?>
-																<a class="pc-btn" href="<?= $bike['discover_link'] ?>">
-																	DISCOVER
-																</a>
-															<?php } ?>
-															<?php if ($bike['configure_link']) { ?>
-																<a class="pc-btn" href="<?= $bike['configure_link'] ?>">
-																	CONFIGURE
-																</a>
-															<?php } ?>
-														</div>
+													<div class="bike-price">
+														<span><?= $bike['bike_price'] ?></span>
 													</div>
 												</div>
 											</div>
+											<div class="col-lg-12">
+												<div class="btn-box d-flex">
+													<?php if ($bike['discover_link']) { ?>
+														<a class="pc-btn" href="<?= $bike['discover_link'] ?>">
+															DISCOVER
+														</a>
+													<?php } ?>
+													<?php if ($bike['configure_link']) { ?>
+														<a class="pc-btn" href="<?= $bike['configure_link'] ?>">
+															CONFIGURE
+														</a>
+													<?php } ?>
+
+												</div>
+											</div>
 										</div>
-									<?php } ?>
+									</div>
 								</div>
-							</div>
+							<?php } ?>
 						</div>
-					<?php } ?>
-				</div>
-				<div class="col-lg-3">
-					<div class="column-holder">
-						<ul>
-							<li><a href="#">VIEW ALL BIKES</a></li>
-							<li><a href="#">CONFIGURE A BIKE</a></li>
-							<li><a href="#">ENQUIRE</a></li>
-						</ul>
 					</div>
 				</div>
-			</div>
+			<?php } ?>
 		</div>
 	</section>
 	<?php
@@ -610,8 +598,6 @@ function bike_lists()
 }
 
 add_shortcode('bike_lists', 'bike_lists');
-
-
 
 
 function bike_lists_menu()
