@@ -6,22 +6,27 @@ add_shortcode('mega_nav_bike_models', 'mega_nav_bike_models');
 function mega_nav_bike_models($atts)
 {
 
-	extract(shortcode_atts(array(
-		'nav_name' => '',
-	), $atts));
+	extract(
+		shortcode_atts(
+			array(
+				'nav_name' => '',
+			),
+			$atts
+		)
+	);
 	$locations = get_registered_nav_menus();
 	$menus = wp_get_nav_menus();
 	$menu_locations = get_nav_menu_locations();
 
 	$location_id = $atts['nav_name'];
 	$args_new_model = array(
-		'post_type' => 'bikes',
+		'post_type'     => 'bikes',
 		'post_per_page' => -1,
-		'tax_query' => array(
+		'tax_query'     => array(
 			array(
 				'taxonomy' => 'bike-type',
-				'field' => 'term_id',
-				'terms' => 257
+				'field'    => 'term_id',
+				'terms'    => 257
 			)
 		)
 	);
@@ -41,9 +46,12 @@ function mega_nav_bike_models($atts)
 					$mega_menu[$item->post_title]['url'] = $item->url;
 
 
-					$terms = get_terms($taxonomy_name, array(
-						'hide_empty' => false,
-					));
+					$terms = get_terms(
+						$taxonomy_name,
+						array(
+							'hide_empty' => false,
+						)
+					);
 
 					if (count($terms) && $taxonomy_name != '') {
 						foreach ($terms as $key => $val) {
@@ -51,13 +59,13 @@ function mega_nav_bike_models($atts)
 							$category_id = $val->term_id;
 
 							$args = array(
-								'post_type' => $cpt_name,
+								'post_type'     => $cpt_name,
 								'post_per_page' => -1,
-								'tax_query' => array(
+								'tax_query'     => array(
 									array(
 										'taxonomy' => $taxonomy_name,
-										'field' => 'term_id',
-										'terms' => $category_id
+										'field'    => 'term_id',
+										'terms'    => $category_id
 									)
 								)
 							);
@@ -65,7 +73,8 @@ function mega_nav_bike_models($atts)
 							$query = new WP_Query($args);
 							if (count($query->posts) != 0) {
 								$mega_menu[$item->post_title][$val->name] = $query->posts;
-							} else {
+							}
+							else {
 								if ($mega_menu[$item->post_title])
 									$mega_menu[$item->post_title][$val->name] = array();
 							}
@@ -75,31 +84,34 @@ function mega_nav_bike_models($atts)
 			}
 		} ?>
 		<ul class="nav navbar-nav nav-menu-handler bike_menus">
-			<?php foreach ($mega_menu as $parent_key => $parent_value) : ?>
-				<?php if (count($parent_value) > 3) : ?>
+			<?php foreach ($mega_menu as $parent_key => $parent_value): ?>
+				<?php if (count($parent_value) > 3): ?>
 					<li class="has-dropdown">
-						<a href="javascript:void(0)" class="menu-parent menu-parent-new"><?= $parent_key ?> <img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
+						<a href="javascript:void(0)" class="menu-parent menu-parent-new"><?= $parent_key ?> <img
+								src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
 						<ul class="dropdown-menu mega-menu bike_menu" style="display: none;">
 							<li class="mega-menu-column">
 								<div class="megamenu-breadcrumb megamenu-breadcrumb-new">
 									<div class="container wide witdh1700">
 										<div class="inner">
-											<?php foreach (array_reverse($parent_value) as $k => $v) :
-												if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url') :
+											<?php foreach (array_reverse($parent_value) as $k => $v):
+												if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url'):
 													$class_tax_button = preg_replace('/\s+/', '', $k); ?>
 													<?php if ($class_tax_button != 'Featured' && $class_tax_button != 'BikeCompatibility') { ?>
 
-														<a href="javascript:void(0)" class="taxonomy-button" data-menu-name="<?= $class_tax_button ?>"><?= $k ?><img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
+														<a href="javascript:void(0)" class="taxonomy-button"
+															data-menu-name="<?= $class_tax_button ?>"><?= $k ?><img
+																src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
 													<?php } ?>
-											<?php endif;
+												<?php endif;
 											endforeach ?>
 										</div>
 									</div>
 								</div>
 
-								<?php foreach ($parent_value as $k => $v) :
+								<?php foreach ($parent_value as $k => $v):
 									echo $parent_value['bike-type'];
-									if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url') :
+									if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url'):
 										$class_tax_dropdown = preg_replace('/\s+/', '', $k); ?>
 										<div class="mega-dropdown-menu mega-dropdown-menu-new <?= $class_tax_dropdown ?>" style="display: none;">
 											<div class="container wide witdh1700">
@@ -108,7 +120,7 @@ function mega_nav_bike_models($atts)
 													<div class="col-md-12 ">
 														<h2><?= $k ?></h2>
 														<div class="row overflow">
-															<?php foreach ($v as $postkey => $postvalue) : ?>
+															<?php foreach ($v as $postkey => $postvalue): ?>
 																<?php
 																$image_id = carbon_get_post_meta($postvalue->ID, 'bike_menu_image');
 
@@ -125,18 +137,18 @@ function mega_nav_bike_models($atts)
 																		</a>
 																	</div>
 																</div>
-															<?php endforeach;  ?>
+															<?php endforeach; ?>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-								<?php endif;
+									<?php endif;
 								endforeach ?>
 							</li>
 						</ul>
 					</li>
-				<?php else : ?>
+				<?php else: ?>
 					<li><a href="<?= $parent_value['menu_url'] ?>" target="_blank"><?= $parent_key ?> </a></li>
 				<?php endif ?>
 			<?php endforeach; ?>
@@ -178,9 +190,9 @@ function bike_models()
 	echo '<option value="">What make of motorcycle do you ride?</option>';
 	foreach ($car_make_array_unique as $key => $car_make) {
 
-	?>
+		?>
 		<option value="<?= $car_make ?>"><?= $car_make ?></option>
-	<?php
+		<?php
 	}
 
 
@@ -188,33 +200,33 @@ function bike_models()
 	echo '</span>';
 	foreach ($car_make_array_unique as $key => $car_make) {
 		$style = 'style="display: none"';
-	?>
+		?>
 		<span class="wpcf7-form-control-wrap wpcf7-select select_car_model_div">
 			<select <?= $style ?> class="car_model" car_make="<?= $car_make ?>">
 				<option value="">Which Model?</option>
 				<?php
 				foreach ($car_model_array as $key => $car_model) {
-				?>
+					?>
 					<?php
 					if ($car_model['class'] == $car_make) {
-					?>
+						?>
 						<option car_make="<?= $car_model['class'] ?>" value="<?= $car_model['value'] ?>"><?= $car_model['value'] ?></option>
-				<?php
+						<?php
 					}
 				}
 				?>
 			</select>
 		</span>
-	<?php
+		<?php
 	}
 
 	?>
 	<script>
-		jQuery(document).ready(function($) {
+		jQuery(document).ready(function ($) {
 			jQuery('.select_car_make_div').appendTo('#car_make_div');
 			jQuery('.select_car_model_div').appendTo('#car_model_div');
 		});
-		jQuery('#select_car_make').change(function(event) {
+		jQuery('#select_car_make').change(function (event) {
 			$val = jQuery(this).val();
 			jQuery('select.car_model[car_make="' + $val + '"]').css('display', 'block');
 			jQuery('select.car_model[car_make!="' + $val + '"]').css('display', 'none');
@@ -222,7 +234,7 @@ function bike_models()
 			jQuery('input[name="car_make_val"]').val($val);
 			jQuery('input[name="model"]').val('');
 		});
-		jQuery('select.car_model').change(function(event) {
+		jQuery('select.car_model').change(function (event) {
 			$val = jQuery(this).val();
 			jQuery('input[name="model"]').val($val);
 
@@ -241,22 +253,27 @@ add_shortcode('mega_nav_bike_models_slider', 'mega_nav_bike_models_slider');
 function mega_nav_bike_models_slider($atts)
 {
 
-	extract(shortcode_atts(array(
-		'nav_name' => '',
-	), $atts));
+	extract(
+		shortcode_atts(
+			array(
+				'nav_name' => '',
+			),
+			$atts
+		)
+	);
 	$locations = get_registered_nav_menus();
 	$menus = wp_get_nav_menus();
 	$menu_locations = get_nav_menu_locations();
 
 	$location_id = $atts['nav_name'];
 	$args_new_model = array(
-		'post_type' => 'bikes',
+		'post_type'     => 'bikes',
 		'post_per_page' => -1,
-		'tax_query' => array(
+		'tax_query'     => array(
 			array(
 				'taxonomy' => 'bike-type',
-				'field' => 'term_id',
-				'terms' => 257
+				'field'    => 'term_id',
+				'terms'    => 257
 			)
 		)
 	);
@@ -276,9 +293,12 @@ function mega_nav_bike_models_slider($atts)
 					$mega_menu[$item->post_title]['url'] = $item->url;
 
 
-					$terms = get_terms($taxonomy_name, array(
-						'hide_empty' => false,
-					));
+					$terms = get_terms(
+						$taxonomy_name,
+						array(
+							'hide_empty' => false,
+						)
+					);
 
 					if (count($terms) && $taxonomy_name != '') {
 						foreach ($terms as $key => $val) {
@@ -286,13 +306,13 @@ function mega_nav_bike_models_slider($atts)
 							$category_id = $val->term_id;
 
 							$args = array(
-								'post_type' => $cpt_name,
+								'post_type'     => $cpt_name,
 								'post_per_page' => -1,
-								'tax_query' => array(
+								'tax_query'     => array(
 									array(
 										'taxonomy' => $taxonomy_name,
-										'field' => 'term_id',
-										'terms' => $category_id
+										'field'    => 'term_id',
+										'terms'    => $category_id
 									)
 								)
 							);
@@ -300,7 +320,8 @@ function mega_nav_bike_models_slider($atts)
 							$query = new WP_Query($args);
 							if (count($query->posts) != 0) {
 								$mega_menu[$item->post_title][$val->name] = $query->posts;
-							} else {
+							}
+							else {
 								if ($mega_menu[$item->post_title])
 									$mega_menu[$item->post_title][$val->name] = array();
 							}
@@ -310,41 +331,48 @@ function mega_nav_bike_models_slider($atts)
 			}
 		} ?>
 		<ul class="nav navbar-nav nav-menu-handler bike_menus">
-			<?php foreach ($mega_menu as $parent_key => $parent_value) : ?>
-				<?php if (count($parent_value) > 3) : ?>
+			<?php foreach ($mega_menu as $parent_key => $parent_value): ?>
+				<?php if (count($parent_value) > 3): ?>
 					<li class="has-dropdown">
-						<a href="javascript:void(0)" class="menu-parent menu-parent-new"><?= $parent_key ?> <img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
+						<a href="javascript:void(0)" class="menu-parent menu-parent-new"><?= $parent_key ?> <img
+								src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
 						<ul class="dropdown-menu mega-menu bike_menu" style="display: none;">
 							<li class="mega-menu-column">
 								<div class="megamenu-breadcrumb megamenu-breadcrumb-new">
 									<div class="container wide witdh1700">
 										<div class="inner">
-											<?php foreach (array_reverse($parent_value) as $k => $v) :
-												if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url') :
+											<?php foreach (array_reverse($parent_value) as $k => $v):
+												if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url'):
 													$class_tax_button = preg_replace('/\s+/', '', $k); ?>
 													<?php if ($class_tax_button != 'Featured' && $class_tax_button != 'BikeCompatibility') { ?>
-														<a href="javascript:void(0)" class="taxonomy-button" data-menu-name="<?= $class_tax_button ?>"><?= $k ?><img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
+														<a href="javascript:void(0)" class="taxonomy-button"
+															data-menu-name="<?= $class_tax_button ?>"><?= $k ?><img
+																src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
 													<?php } ?>
-											<?php endif;
+												<?php endif;
 											endforeach ?>
 										</div>
 									</div>
 								</div>
 
-								<?php foreach ($parent_value as $k => $v) :
+								<?php foreach ($parent_value as $k => $v):
 									echo $parent_value['bike-type'];
-									if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url') :
+									if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url'):
 										$class_tax_dropdown = preg_replace('/\s+/', '', $k); ?>
-										<div class="mega-dropdown-menu mega-dropdown-menu-new mega-menu-slider <?= $class_tax_dropdown ?>" style="display: none;">
+										<div class="mega-dropdown-menu mega-dropdown-menu-new mega-menu-slider <?= $class_tax_dropdown ?>"
+											style="display: none;">
 											<div class="container width-100">
 												<div class="row">
 													<div class="col-md-12 ">
 														<!-- <h2><?= $k ?></h2> -->
-														<div class="swiper-slider-holder swiper-slider-holder-thumbnail swiper-slider-style-one-holder swiper-slider-style-header-holder" data-aos="fade-up" data-aos-duration="500">
+														<div
+															class="swiper-slider-holder swiper-slider-holder-thumbnail swiper-slider-style-one-holder swiper-slider-style-header-holder"
+															data-aos="fade-up" data-aos-duration="500">
 															<!-- Swiper -->
-															<div class="swiper-container mySwiper-Header-<?= $k ?> swiper-slider-style-one swiper-slider-style-header">
+															<div
+																class="swiper-container mySwiper-Header-<?= $k ?> swiper-slider-style-one swiper-slider-style-header">
 																<div class="swiper-wrapper">
-																	<?php foreach ($v as $postkey => $postvalue) : ?>
+																	<?php foreach ($v as $postkey => $postvalue): ?>
 																		<?php
 																		$bike_slider_background = carbon_get_post_meta($postvalue->ID, 'bike_slider_background');
 																		$bike_slider_image = carbon_get_post_meta($postvalue->ID, 'bike_slider_image');
@@ -352,18 +380,21 @@ function mega_nav_bike_models_slider($atts)
 
 																		if ($bike_slider_background) {
 																			$bike_slider_background_id = $bike_slider_background;
-																		} else {
+																		}
+																		else {
 																			$bike_slider_background_id = $b_img;
 																		}
 																		if ($bike_slider_image) {
 																			$image_id = $bike_slider_image;
-																		} else {
+																		}
+																		else {
 																			$image_id = $b_img;
 																		}
 																		?>
 																		<div class="swiper-slide bike-id-<?= $postvalue->ID ?>">
 																			<div class="item">
-																				<div class="background-box background-box-small" style="background-image: url(<?= wp_get_attachment_image_url($bike_slider_background_id, 'large'); ?>)">
+																				<div class="background-box background-box-small"
+																					style="background-image: url(<?= wp_get_attachment_image_url($bike_slider_background_id, 'large'); ?>)">
 																					<div class="content-holder">
 																						<div class="inner">
 																							<div class="heading-box">
@@ -371,16 +402,18 @@ function mega_nav_bike_models_slider($atts)
 																									<?= $postvalue->post_title ?>
 																								</h3>
 																							</div>
-																							<a class="pc-btn white anchor-modal" href="<?= get_permalink($postvalue->ID) ?>">DISCOVER</a>
+																							<a class="pc-btn white anchor-modal"
+																								href="<?= get_permalink($postvalue->ID) ?>">DISCOVER</a>
 																						</div>
 																					</div>
 																				</div>
 																				<div class="image-box image-box-small" data-swiper-parallax="-50%">
-																					<img class="no-lazyload" src="<?= wp_get_attachment_image_url($image_id, 'large'); ?>" alt="<?= $postvalue->post_title ?>">
+																					<img class="no-lazyload" src="<?= wp_get_attachment_image_url($image_id, 'large'); ?>"
+																						alt="<?= $postvalue->post_title ?>">
 																				</div>
 																			</div>
 																		</div>
-																	<?php endforeach;  ?>
+																	<?php endforeach; ?>
 
 																</div>
 																<div class="swiper-pagination" style="display: none;"></div>
@@ -390,7 +423,7 @@ function mega_nav_bike_models_slider($atts)
 															<div class="thumb-wrapper">
 																<div thumbsSlider="" class="swiper mySwiper mySwiperThumbs mySwiperThumbs-<?= $k ?>">
 																	<div class="swiper-wrapper">
-																		<?php foreach ($v as $postkey => $postvalue) : ?>
+																		<?php foreach ($v as $postkey => $postvalue): ?>
 																			<?php
 																			$postkey++;
 																			$bike_slider_background = carbon_get_post_meta($postvalue->ID, 'bike_slider_background');
@@ -399,16 +432,18 @@ function mega_nav_bike_models_slider($atts)
 
 																			if ($bike_slider_image) {
 																				$image_id = $bike_slider_image;
-																			} else {
+																			}
+																			else {
 																				$image_id = $b_img;
 																			}
 																			?>
 																			<div class="swiper-slide">
 																				<div class="image-box">
-																					<img class="bike-thumbnail no-lazyload" data-target="Go to slide <?= $postkey ?>" src="<?= wp_get_attachment_image_url($image_id, 'medium'); ?>" />
+																					<img class="bike-thumbnail no-lazyload" data-target="Go to slide <?= $postkey ?>"
+																						src="<?= wp_get_attachment_image_url($image_id, 'medium'); ?>" />
 																				</div>
 																			</div>
-																		<?php endforeach;  ?>
+																		<?php endforeach; ?>
 																	</div>
 																</div>
 															</div>
@@ -418,12 +453,12 @@ function mega_nav_bike_models_slider($atts)
 												</div>
 											</div>
 										</div>
-								<?php endif;
+									<?php endif;
 								endforeach ?>
 							</li>
 						</ul>
 					</li>
-				<?php else : ?>
+				<?php else: ?>
 					<li><a href="<?= $parent_value['menu_url'] ?>" target="_blank"><?= $parent_key ?> </a></li>
 				<?php endif ?>
 			<?php endforeach; ?>
@@ -435,9 +470,14 @@ function mega_nav_bike_models_slider($atts)
 
 function get_param($atts)
 {
-	extract(shortcode_atts(array(
-		'value' => '',
-	), $atts));
+	extract(
+		shortcode_atts(
+			array(
+				'value' => '',
+			),
+			$atts
+		)
+	);
 
 	return $_GET[$value];
 }
@@ -455,11 +495,16 @@ add_shortcode('phone_svg', 'phone_svg');
 function phone_number($atts)
 {
 
-	extract(shortcode_atts(array(
-		'class' => 'white',
-		'text' => '01204 544930',
-		'dynamic' => false
-	), $atts));
+	extract(
+		shortcode_atts(
+			array(
+				'class'   => 'white',
+				'text'    => '01204 544930',
+				'dynamic' => false
+			),
+			$atts
+		)
+	);
 
 	$text_val = '[phone_svg] ' . $text;
 	if ($dynamic) {
@@ -472,7 +517,8 @@ function phone_number($atts)
 				return get_button($text_val, 'tel:01204544930', true, 'pc-btn ' . $class . ' bordered with-icon phone-number', false, false);
 			}
 		}
-	} else {
+	}
+	else {
 		return get_button($text_val, 'tel:01204544930', true, 'pc-btn ' . $class . ' bordered with-icon phone-number', false, false);
 	}
 }
@@ -505,7 +551,7 @@ function bike_lists()
 								<div class="row">
 									<?php
 									foreach ($categ['bikes'] as $bike) {
-									?>
+										?>
 										<div class="col-lg-3 <?= $bike['bike_name'] ?>">
 											<div class="column-holder">
 												<div class="row flex-row">
@@ -559,7 +605,7 @@ function bike_lists()
 			</div>
 		</div>
 	</section>
-<?php
+	<?php
 	return ob_get_clean();
 }
 
@@ -571,33 +617,30 @@ add_shortcode('bike_lists', 'bike_lists');
 function bike_lists_menu()
 {
 	ob_start();
-	$bikes_categ = carbon_get_post_meta(14442, 'motorcycles');
-?>
+	$bikes = carbon_get_theme_option('motorcycle_mega_menu');
+	?>
 	<section class="bike-lists-menu bt-5">
 		<div class="container-fluid g-0">
 			<div class="row g-0">
 				<div class="col-lg-9 bike-lists-holder">
 					<div class="row g-0 bikes">
-						<?php foreach ($bikes_categ as $categ) { ?>
-							<?php
-							foreach ($categ['bikes'] as $bike) {
-								$bike_image_url = $bike['bike_image'];
-								$bike_image_id = attachment_url_to_postid($bike_image_url);
-								$image = wp_get_attachment_image_url($bike_image_id, 'large');
+						<?php
+						foreach ($bikes as $bike) {
+							$bike_menu_image = carbon_get_post_meta($bike['ID'], 'bike_menu_image');
+							$image = wp_get_attachment_image_url($bike_menu_image, 'large');
 							?>
-								<div class="col-lg-4 <?= $bike['bike_name'] ?>">
-									<div class="column-holder text-center">
-										<a href="<?= $bike['configure_link'] ? $bike['configure_link'] : '#'  ?>">
-											<div class="bike-name">
-												<h4><?= $bike['bike_name'] ?></h4>
-											</div>
-											<div class="image-box">
-												<img src="<?= $image ?>" alt="<?= $bike['bike_name'] ?>">
-											</div>
-										</a>
-									</div>
+							<div class="col-lg-4">
+								<div class="column-holder text-center">
+									<a href="<?= $bike['configure_link'] ? $bike['configure_link'] : '#' ?>">
+										<div class="bike-name">
+											<h4><?= get_the_title($bike['ID']) ?></h4>
+										</div>
+										<div class="image-box">
+											<img src="<?= $image ?>" alt="<?= get_the_title($bike['ID']) ?>">
+										</div>
+									</a>
 								</div>
-							<?php } ?>
+							</div>
 						<?php } ?>
 					</div>
 				</div>
@@ -613,7 +656,7 @@ function bike_lists_menu()
 			</div>
 		</div>
 	</section>
-<?php
+	<?php
 	return ob_get_clean();
 }
 
