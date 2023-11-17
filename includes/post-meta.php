@@ -294,12 +294,9 @@ Container::make('post_meta', 'Resource Hub')
 	->where('post_type', '=', 'bikes')
 	->where('post_template', '!=', 'templates/page-tablet.php')
 	->where('post_template', '!=', 'templates/page-configure-bike-v2.php')
-	->add_fields(
+	->add_tab(
+		'Photos',
 		array(
-			Field::make('html', 'html_photos')
-				->set_html('<h2> PHOTOS </h2>')
-				->set_classes('crb-title'),
-
 			Field::make('complex', 'photos', '')
 				->set_layout('tabbed-horizontal')
 				->add_fields(
@@ -310,11 +307,11 @@ Container::make('post_meta', 'Resource Hub')
 					)
 				)
 				->set_header_template('<%- photo_name %>'),
-
-			Field::make('html', 'html_videos')
-				->set_html('<h2>VIDEOS</h2>')
-				->set_classes('crb-title'),
-
+		)
+	)
+	->add_tab(
+		'Videos',
+		array(
 			Field::make('complex', 'videos', '')
 				->set_layout('tabbed-horizontal')
 				->add_fields(
@@ -330,10 +327,11 @@ Container::make('post_meta', 'Resource Hub')
 					)
 				)
 				->set_header_template('<%- video_name %>'),
-
-			Field::make('html', 'html_pdf')
-				->set_html('<h2> PDFs </h2>')
-				->set_classes('crb-title'),
+		)
+	)
+	->add_tab(
+		'PDFS',
+		array(
 
 			Field::make('complex', 'pdfs', '')
 				->set_layout('tabbed-horizontal')
@@ -350,9 +348,10 @@ Container::make('post_meta', 'Resource Hub')
 					)
 				)
 				->set_header_template('<%- pdf_name %>')
-
 		)
 	);
+
+
 
 Container::make('post_meta', 'Bike Data')
 	->where('post_type', '=', 'bikes')
