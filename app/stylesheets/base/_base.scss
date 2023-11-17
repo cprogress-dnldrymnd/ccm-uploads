@@ -5,7 +5,6 @@ body {
     .overlay {
         position: fixed;
         background: var(--black-color);
-        opacity: 0.5;
         top: 0;
         left: 0;
         display: none;
@@ -14,10 +13,11 @@ body {
         z-index: -1;
         transition: all 0.2s ease-in-out;
         opacity: 0;
+
         &.show-overlay {
-            opacity: 1;
             z-index: 2;
             display: block;
+            opacity: 0.5;
         }
     }
 }
@@ -27,6 +27,7 @@ main.overlay {
     width: 100%;
     z-index: 99;
     overflow-y: scroll;
+
     &:before {
         content: "";
         background: rgba(0, 0, 0, 0.7);
@@ -39,6 +40,7 @@ main.overlay {
         z-index: 999;
     }
 }
+
 /**
  * Basic styles for links
  */
@@ -74,12 +76,15 @@ textarea {
 
 .innerpadding {
     padding: 35px 0;
+
     &.large {
         padding: 45px 0;
     }
+
     &.xlarge {
         padding: 60px 0;
     }
+
     &.xxlarge {
         padding: 85px 0;
     }
@@ -89,8 +94,10 @@ textarea {
     position: relative;
     width: 350px;
     margin: 50px auto;
+
     .img-holder {
         position: relative;
+
         img {
             margin: 0 auto;
             height: 22px;
@@ -98,6 +105,7 @@ textarea {
             display: block;
             z-index: 2;
         }
+
         .text {
             padding: 0 15px;
             margin: 0 auto;
@@ -106,6 +114,7 @@ textarea {
             text-align: center;
             z-index: 2;
         }
+
         &:before,
         &:after {
             content: "";
@@ -117,20 +126,24 @@ textarea {
             z-index: -1;
             margin-top: 8px;
         }
+
         &:before {
             left: 0;
         }
+
         &:after {
             right: 0;
             top: 0;
         }
     }
+
     h3 {
         text-align: center;
         font-family: $barlow-bold-italic;
         text-transform: uppercase;
         margin-top: 5px;
     }
+
     &:after {
         content: "";
         border-top: 5px solid #000;
@@ -147,82 +160,103 @@ textarea {
 
 .floating-text {
     position: relative;
+
     span {
         position: absolute;
         font-family: $notera;
         font-size: 32px;
         color: #d3d3d3;
+
         @include respond-to(screen-sm) {
             font-size: 28px;
         }
+
         @include respond-to(screen-xs) {
             display: none;
         }
+
         &.top-left {
             top: 0;
             margin-top: -40px;
             left: 220px;
+
             @include respond-to(screen-md) {
                 left: 150px;
             }
+
             @include respond-to(screen-sm) {
                 margin-top: -35px;
                 left: 120px;
             }
         }
+
         &.mid-left {
             top: 15%;
             text-align: right;
             left: 50px;
+
             @include respond-to(screen-md) {
                 top: 10%;
                 left: 0;
             }
+
             @include respond-to(screen-sm) {
                 top: 7%;
                 left: 0;
             }
         }
+
         &.bot-left {
             left: 220px;
             bottom: 60px;
+
             @include respond-to(screen-md) {
                 left: 150;
             }
+
             @include respond-to(screen-sm) {
                 left: 120px;
                 bottom: 80px;
             }
         }
+
         &.top-right {
             top: 0;
             margin-top: -20px;
             right: 220px;
+
             @include respond-to(screen-md) {
                 right: 130px;
             }
+
             @include respond-to(screen-sm) {
                 right: 120px;
             }
         }
+
         &.mid-right {
             top: 15%;
             right: 50px;
+
             @include respond-to(screen-md) {
                 right: 0;
             }
+
             @include respond-to(screen-sm) {
                 right: 0;
                 top: 10%;
             }
         }
+
         &.bot-right {
             right: 220px;
             bottom: 60px;
+
             @include respond-to(screen-md) {
                 right: 150px;
                 bottom: 80px;
             }
+
             @include respond-to(screen-sm) {
                 right: 120px;
                 bottom: 90px;
