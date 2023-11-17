@@ -7990,6 +7990,8 @@ footer {
         padding-bottom: 25px; }
         footer .footer-top .col-first {
           margin-bottom: 30px; }
+        footer .footer-top .footer-accordion.active .menu {
+          max-height: 500px; }
         footer .footer-top .footer-accordion .widget-title {
           cursor: pointer;
           display: flex;
