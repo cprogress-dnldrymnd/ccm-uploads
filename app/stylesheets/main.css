@@ -7989,14 +7989,17 @@ footer {
         padding-top: 25px;
         padding-bottom: 25px; }
         footer .footer-top .footer-accordion .widget-title {
-          cursor: pointer; }
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
           footer .footer-top .footer-accordion .widget-title .icon {
             width: 12px;
             height: 12px;
             border: 1px solid var(--black-color);
             display: inline-block;
             position: relative;
-            flex: 0 0 42px;
+            flex: 0 0 12px;
             margin-left: 15px; }
             footer .footer-top .footer-accordion .widget-title .icon:before, footer .footer-top .footer-accordion .widget-title .icon:after {
               content: "";
