@@ -419,7 +419,7 @@ li.has-dropdown:active:after,
 
 #ccm-motors-header {
 	&.mega-menu-active {
-		background-color: var(--black-color);
+		background-color: var(--black-color) !important;
 	}
 }
 
