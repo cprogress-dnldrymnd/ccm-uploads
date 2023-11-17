@@ -7992,6 +7992,8 @@ footer {
           margin-bottom: 30px; }
         footer .footer-top .footer-accordion.active .menu {
           max-height: 500px; }
+        footer .footer-top .footer-accordion.active .widget-title .icon:before {
+          content: none; }
         footer .footer-top .footer-accordion .widget-title {
           cursor: pointer;
           display: flex;
