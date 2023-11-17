@@ -1,0 +1,248 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+body {
+    &:before {
+        content: '';
+        position: absolute;
+        background: #0009;
+        top: 0;
+        left: 0;
+        display: none;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+    }
+
+    &.overlay {
+        &:before {
+            opacity: 1;
+            z-index: 2;
+            display: block;
+        }
+    }
+}
+
+main.overlay {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    overflow-y:scroll;
+    &:before {
+        content: "";
+        background: rgba(0,0,0,.7);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+}
+/**
+ * Basic styles for links
+ */
+ a {
+    color: $brand-color;
+    text-decoration: none;
+
+    @include on-event {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+.btn, a {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+/**
+ * Basic styles for input fields
+ */
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-focus-ring-color: none;
+    outline: none;
+}
+
+.innerpadding {
+    padding: 35px 0;
+    &.large {
+        padding: 45px 0;
+    }
+    &.xlarge {
+        padding: 60px 0;
+    }
+    &.xxlarge {
+        padding: 85px 0;
+    }
+}
+
+.title-holder {
+    position: relative;
+    width: 350px;
+    margin: 50px auto;
+    .img-holder {
+        position: relative;
+        img {
+            margin: 0 auto;
+            height: 22px;
+            background: #fff;
+            display: block;
+            z-index: 2;
+        }
+        .text {
+            padding: 0 15px;
+            margin: 0 auto;
+            background: #fff;
+            display: table;
+            text-align: center;
+            z-index: 2;
+        }
+        &:before,
+        &:after {
+            content: "";
+            border-top: 5px solid #000;
+            height: 2px;
+            width: 50%;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            margin-top: 8px;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+            top: 0;
+        }
+    }    
+    h3 {
+        text-align: center;
+        font-family: $barlow-bold-italic;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+    &:after {
+        content: "";
+        border-top: 5px solid #000;
+        height: 2px;
+        width: 100%;
+        display: block;
+        position: absolute;
+    }
+}
+
+.no-padding {
+    padding: 0!important;
+}
+
+.floating-text {
+    position: relative;
+    span {
+        position: absolute;
+        font-family: $notera;
+        font-size: 32px;
+        color: #d3d3d3;
+        @include respond-to(screen-sm) {
+            font-size: 28px;
+        }
+        @include respond-to(screen-xs) {
+            display: none;
+        }
+        &.top-left {
+            top: 0;
+            margin-top: -40px;
+            left: 220px;
+            @include respond-to(screen-md) {
+                left: 150px;
+            }
+            @include respond-to(screen-sm) {
+                margin-top: -35px;
+                left: 120px;
+            }
+        }
+        &.mid-left {
+            top: 15%;
+            text-align:right;
+            left: 50px;
+            @include respond-to(screen-md) {
+                top: 10%;
+                left: 0;
+            }
+            @include respond-to(screen-sm) {
+                top: 7%;
+                left: 0;
+            }
+        }
+        &.bot-left {
+            left: 220px;
+            bottom: 60px;
+            @include respond-to(screen-md) {
+                left: 150;
+            }
+            @include respond-to(screen-sm) {
+                left: 120px;
+                bottom: 80px;
+            }
+        }
+        &.top-right {
+            top: 0;
+            margin-top: -20px;
+            right: 220px;
+            @include respond-to(screen-md) {
+                right: 130px;
+            }
+            @include respond-to(screen-sm) {
+                right: 120px;
+            }
+        }
+        &.mid-right {
+            top: 15%;
+            right: 50px;
+            @include respond-to(screen-md) {
+                right: 0;
+            }
+            @include respond-to(screen-sm) {
+                right: 0;
+                top: 10%;
+            }
+        }
+        &.bot-right {
+            right: 220px;
+            bottom: 60px;
+            @include respond-to(screen-md) {
+                right: 150px;
+                bottom: 80px;
+            }   
+            @include respond-to(screen-sm) {
+                right: 120px;
+                bottom: 90px;
+            }    
+        }
+    }
+}
+
+.bike.fixed {
+    position: fixed!important;
+    width: 100%;
+    top: 55px;
+    z-index: 2;
+}
+
+.product-name.text {
+    font-family: $barlow-bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}

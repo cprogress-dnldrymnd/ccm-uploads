@@ -1,0 +1,336 @@
+.timeline-bottom-sc {
+    background: #2d2d2d;
+    padding: 70px 0;
+}
+
+.timeline-bottom-sc .col-md-1 {
+    border-top: solid 1px #fff;
+}
+
+.timeline-bottom-sc .col-md-5 p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.timeline-bottom-sc .col-md-6 p {
+    font-size: 12px;
+    color: #929292;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.timeline-list {
+    width: 60%!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-list .container {
+    width: 1170px!important;
+    float: left;
+}
+
+.timeline-list p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.timeline-racing {
+    position: relative;
+    padding-top: 300px;
+    padding-bottom: 60px;
+}
+
+.timeline-racing .timeline-dots-wrap {
+    top: 0;
+    background: #2d2d2d;
+    padding: 40px 0;
+    height: 201px;
+}
+
+
+
+.arrow-timeline {
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #2d2d2d;
+    position: absolute;
+    top: 201px;
+    left: 0;
+    right: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-horizontal .timeline-dots {
+    text-align: center;
+    float: left;
+    width: 100%!important;
+    display: inline;
+    left: -18%;
+}
+
+.timeline-list img {
+    width: 100%;
+}
+
+.timeline-dots li.slide-active button {
+    color: #fff;
+    font-size: 75px;
+    line-height: 80px;
+}
+
+.timeline-horizontal .timeline-dots button {
+    font-family: "Barlow Semi Condensed Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: #8e8e8e;
+    font-size: 44px;
+    line-height: 130px;
+}
+
+.timeline-horizontal .timeline-dots li {
+    width: auto!important;
+    text-align: center;
+    padding: 0 40px;
+    display: inline;
+    float: none!important;
+    position: relative;
+}
+
+.timeline-horizontal .timeline-dots li:before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: #fff;
+    bottom: -35px;
+    display: block;
+    left: 48%;
+}
+
+.timeline-horizontal .timeline-dots:before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/timeline-line.png);
+    width: 37%;
+    height: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: -4px;
+}
+
+.box-item {
+    width: 1140px;
+    float: left;
+}
+
+.box-item p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.box-item h2 {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:767px){
+    .timeline-racing .timeline-dots-wrap{
+            height: 130px;
+    }
+
+    .timeline-horizontal .timeline-dots li{
+        padding: 0 10px;
+    }
+
+    .timeline-horizontal .timeline-dots button{
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .timeline-dots li.slide-active button{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .timeline-horizontal .timeline-dots li:before{
+        width: 5px;
+    height: 5px;
+    }
+
+    .timeline-racing{
+            padding-top: 200px;
+    }
+
+    .arrow-timeline{
+            top: 130px;
+    }
+
+    .timeline-list{
+        width: 90%!important;
+    }
+
+    .box-item{
+        max-width:100%;
+        width:100%;
+        opacity:0;
+        height: 0px;
+        transition:all 1s;
+    }
+
+    .timeline-list .slide-active{
+        height:auto;
+        opacity:1;
+    }
+
+    .timeline-list-wrap{
+        float: left;
+        width:100%!important;
+            transform: translate3d(0px, 0px, 0px)!important;
+    }
+
+    .timeline-horizontal .timeline-dots:before{
+            width: 69%;
+                bottom: -23px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .timeline-racing .timeline-dots-wrap{
+            height: 130px;
+    }
+
+    .timeline-horizontal .timeline-dots li{
+        padding: 0 10px;
+    }
+
+    .timeline-horizontal .timeline-dots button{
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .timeline-dots li.slide-active button{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .timeline-horizontal .timeline-dots li:before{
+        width: 5px;
+    height: 5px;
+    }
+
+    .timeline-racing{
+            padding-top: 200px;
+    }
+
+    .arrow-timeline{
+            top: 129px;
+    }
+
+    .timeline-list{
+        width: 90%!important;
+    }
+
+    .box-item{
+        max-width:100%;
+        width:100%;
+        opacity:0;
+        height: 0px;
+        transition:all 1s;
+    }
+
+    .timeline-list .slide-active{
+        height:auto;
+        opacity:1;
+    }
+
+    .timeline-list-wrap{
+        float: left;
+        width:100%!important;
+            transform: translate3d(0px, 0px, 0px)!important;
+    }
+
+    .timeline-horizontal .timeline-dots:before{
+               width: 34%;
+                bottom: -23px;
+    }
+
+    .timeline-bottom-sc img{
+        margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+@media (min-width:992px) and (max-width:1024px){
+    .timeline-racing .timeline-dots-wrap{
+            height: 130px;
+    }
+
+    .timeline-horizontal .timeline-dots li{
+        padding: 0 10px;
+    }
+
+    .timeline-horizontal .timeline-dots button{
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .timeline-dots li.slide-active button{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .timeline-horizontal .timeline-dots li:before{
+        width: 5px;
+    height: 5px;
+    }
+
+    .timeline-racing{
+            padding-top: 200px;
+    }
+
+    .arrow-timeline{
+            top: 129px;
+    }
+
+    .timeline-list{
+        width: 90%!important;
+    }
+
+    .box-item{
+        max-width:100%;
+        width:100%;
+        opacity:0;
+        height: 0px;
+        transition:all 1s;
+    }
+
+    .timeline-list .slide-active{
+        height:auto;
+        opacity:1;
+    }
+
+    .timeline-list-wrap{
+        float: left;
+        width:100%!important;
+            transform: translate3d(0px, 0px, 0px)!important;
+    }
+
+    .timeline-horizontal .timeline-dots:before{
+               width: 34%;
+                bottom: -23px;
+    }
+
+    .timeline-bottom-sc img{
+        margin-left: auto;
+    margin-right: auto;
+    }
+}

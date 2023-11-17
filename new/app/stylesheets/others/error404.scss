@@ -1,0 +1,38 @@
+.four-o-four {
+	margin-top: 70px;
+	background-color: #fff;
+	text-align: center;
+	padding: 150px;
+	height: 570px;
+	display: table;
+	width: 100%;
+	.the-content {
+		display: table-cell;
+		vertical-align: middle;
+		.title-box {
+			h1 {
+				font-size: 120px;
+				@media (max-width: 1439px) {
+					font-size: 100px;
+				}
+				@media (max-width: 1199px) {
+					font-size: 80px;
+				}
+				@media (max-width: 991px) {
+					font-size: 60px;
+				}
+			}
+		}
+		.content-box {
+			p {
+				font-size: 30px;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		margin-top: 53px;
+	}
+	@media (max-width: 767px) {
+		padding: 50px;
+	}
+}

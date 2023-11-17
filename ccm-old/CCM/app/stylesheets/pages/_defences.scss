@@ -1,0 +1,186 @@
+.ds-banner {
+	height: 250px;
+	width: 100%;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	@include respond-to(screen-sm) {
+		height: 200px;
+	}
+	@include respond-to(screen-xs) {
+		height: 200px;
+		background-position: center;
+	}
+	h2 {
+		position: absolute;
+		color: #fff;
+		font-family: $barlow-bold-italic;
+		font-size: 36px;
+		text-transform: uppercase;
+		bottom: 40px;
+		margin-left: 10%;
+		@include respond-to(screen-xs) {
+			margin-left: 15px;
+		}
+		&:after {
+			content: "";
+			border-right: 2px solid #fff;
+			bottom: -50px;
+			position: relative;
+		}
+	}
+}
+
+.defences {
+	.content {
+		.container {
+			width: 67%;
+			margin: 0 auto;
+			position: relative;
+			@include respond-to(screen-md) {
+				width: 75%;
+			}
+			@include respond-to(screen-sm) {
+				width: 75%;
+			}
+			@include respond-to(screen-xs) {
+				width: 90%;
+			}
+			h2 {
+				text-transform: uppercase;
+				font-family: $barlow-bold-italic;
+				font-size: 32px;
+				letter-spacing: 1px;
+				margin-bottom: 60px;
+				@include respond-to(screen-xs) {
+					margin-bottom: 30px;
+				}
+			}
+			.separator {
+				border-top: 2px solid #000;
+				width: 100%;
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 10px;
+				@include respond-to(screen-xs) {
+					margin-bottom: 30px;
+				}
+			}
+			p {
+				font-size: 14px;
+				line-height: 24px;
+				margin-bottom: 25px;
+			}
+		}
+		@include respond-to(screen-xs) {
+			.col-sm-8.col-md-7 {
+				padding: 0!important;
+			}
+		}
+	}
+	.list {
+		position: relative;
+		background-color: #F2F3F3;
+		.holder {
+			position: relative;
+			display: block;
+			.date {
+				-webkit-transform: rotate(-45deg);  
+			     -moz-transform: rotate(-45deg);  
+			      -ms-transform: rotate(-45deg);  
+			       -o-transform: rotate(-45deg);  
+			          transform: rotate(-45deg);
+			    clip: rect(0px, 141.421px, 70.7107px, 0px);
+			    height: 141.421px;
+			    position: absolute;
+			    left: -19px;
+			    top: -20.7107px;
+			    width: 141.421px;
+			    z-index: 1;
+			    .wrapper {
+			    	color: white;
+					-webkit-transform: rotate(-45deg);  
+				     -moz-transform: rotate(-45deg); 
+				      -ms-transform: rotate(-45deg); 
+				       -o-transform: rotate(-45deg); 
+				          transform: rotate(-45deg);
+				    left: 20px;
+				    top: 20px;
+				    background-color: #DA1927;
+				    display: block;
+				    height: 100px;
+				    position: absolute;
+				    width: 100px;
+				    z-index: 2;
+				    span {
+				    	position: relative;
+					    left: 15px;
+					    top: 15px;
+					    font-size: 24px;
+					    display: block;
+					    text-align: center;
+					    color: #fff;
+					    -webkit-transform: rotate(45deg);
+					    -moz-transform: rotate(45deg);
+					    -ms-transform: rotate(45deg);
+					    -o-transform: rotate(45deg);
+					    transform: rotate(45deg);
+					    font-family: "Barlow Semi Condensed extrabold italic", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+				    }
+			    }
+			}
+			.zoom-text-wrapper {
+				-webkit-transform: rotate(45deg);
+			    -moz-transform: rotate(45deg);
+			    -ms-transform: rotate(45deg);
+			    -o-transform: rotate(45deg);
+			    transform: rotate(45deg);
+			    transform: rotate(135deg);
+			    clip: rect(0px, 141.421px, 70.7107px, 0px);
+			    height: 141.421px;
+			    position: absolute;
+			    width: 141.421px;
+			    z-index: 1;
+			    right: -63px;
+			    bottom: -20px;
+			    .zoom-text {
+			    	color: white;
+				    -webkit-transform: rotate(-45deg);
+				    -moz-transform: rotate(-45deg);
+				    -ms-transform: rotate(-45deg);
+				    -o-transform: rotate(-45deg);
+				    transform: rotate(-45deg);
+				    right: 3px;
+				    bottom: 20px;
+				    background-color: #000;
+				    display: block;
+				    height: 65px;
+				    position: absolute;
+				    width: 100px;
+				    z-index: 2;
+				    span {
+				    	position: relative;
+					    right: -30px;
+    					bottom: 0px;
+					    font-size: 24px;
+					    display: block;
+					    text-align: center;
+					    font-family: "Barlow Semi Condensed extrabold italic", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+					    a {
+					    	color: #fff!important;
+					    }
+				    }
+			    }
+			}
+		}
+		.title {
+			position: relative;
+		    background: #fff;
+		    padding: 10px 20px;
+		    h3 {
+		    	margin-top: 5px!important;
+		    }
+		}
+	}
+}

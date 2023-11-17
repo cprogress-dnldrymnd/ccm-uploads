@@ -1,0 +1,58 @@
+.woocommerce {
+	font-size: 16px;
+
+	.woocommerce-MyAccount-navigation {
+		ul {
+			list-style: none;
+			padding: 0;
+			li {
+				a {
+					color: #000;
+					padding: 10px;
+					display: block;
+					background: #efeff0;
+					border-bottom: solid 2px #fff;
+				}
+			}
+		}
+		
+	}
+	.woocommerce-orders-table {
+		font-size: 16px;
+	}
+
+	.woocommerce-info::before {
+		color: #ec171f;
+	}
+	.woocommerce-info {
+		border-top-color: #ec171f;
+	}
+
+	header.woocommerce-Address-title.title  {
+		padding: 10px;
+		margin-bottom: 10px;
+		h3 {
+			margin: 0;
+		}
+	}
+
+	 form .form-row input.input-text {
+		line-height: 0!important;
+		height: 40px;
+		border: solid 1px #000;
+		padding: 0 20px;
+	}
+
+	 #respond input#submit, a.button, button.button, input.button {
+		position: relative;
+		background: #dc3524;
+		color: #fff;
+		font-family: "Barlow Semi Condensed", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+		text-transform: uppercase;
+		text-align: center;
+		border-radius: 0;
+		padding: 10px 35px;
+		font-weight: 600;
+		font-size: 15px;
+	}
+}
