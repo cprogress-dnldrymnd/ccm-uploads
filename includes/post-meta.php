@@ -2218,3 +2218,18 @@ Container::make('post_meta', 'Motorcycles')
 				)->set_default_value($bikes_categ)->set_header_template('<%- category_name %>')
 		)
 	);
+
+Container::make('post_meta', 'Bike Details')
+	->where('post_template', '=', 'templates/page-bike-template.php')
+	->add_fields(
+		array(
+			Field::make('select', 'template_style', __('Template Standard'))
+				->add_options(
+					array(
+						'standard' => 'Standard',
+						'v2'       => 'V2',
+					)
+				)
+
+		)
+	);
