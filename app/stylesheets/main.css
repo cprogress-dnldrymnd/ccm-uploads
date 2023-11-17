@@ -7316,6 +7316,9 @@ li.has-dropdown:active:after,
   margin-left: -42% !important;
   margin-top: 18px !important; }
 
+#ccm-motors-header.mega-menu-active {
+  background-color: var(--black-color); }
+
 #ccm-motors-header,
 #mobile-header-canvas {
   font-family: "Fira Sans Condensed", sans-serif;
@@ -7663,8 +7666,6 @@ body:not(.show-minicart) .widget_shopping_cart_content.widget_shopping_cart_cont
   opacity: 0; }
 body.hide-header #ccm-motors-header {
   transform: translateY(-100%); }
-body.mega-menu-active #ccm-motors-header {
-  background-color: var(--black-color); }
 
 .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
   max-width: 525px;

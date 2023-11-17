@@ -417,6 +417,12 @@ li.has-dropdown:active:after,
 	margin-top: 18px !important;
 }
 
+#ccm-motors-header {
+	&.mega-menu-active {
+		background-color: var(--black-color);
+	}
+}
+
 #ccm-motors-header,
 #mobile-header-canvas {
 	font-family: $font-fira;
@@ -876,11 +882,7 @@ body {
 		}
 	}
 
-	&.mega-menu-active {
-		#ccm-motors-header {
-			background-color: var(--black-color);
-		}
-	}
+
 }
 
 .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
