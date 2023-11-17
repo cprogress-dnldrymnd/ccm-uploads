@@ -244,7 +244,9 @@ $version = carbon_get_the_post_meta('template_style');
             </div>
         </section>
     <?php } ?>
-
+    <?php
+    $contact_form = carbon_get_the_post_meta('contact_form');
+    ?>
     <section class="overview contact-form-holder <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="enquire-now">
         <div class="container">
             <div class="row">
@@ -263,15 +265,7 @@ $version = carbon_get_the_post_meta('template_style');
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-form">
-                        <script charset="utf-8" type="text/javascript"
-                            src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-                        <script>
-                            hbspt.forms.create({
-                                region: "eu1",
-                                portalId: "139521183",
-                                formId: "c45f8060-df31-4ff7-bdf3-39a8a20823e1"
-                            });
-                        </script>
+                        <?= $contact_form ?>
                     </div>
                 </div>
             </div>
