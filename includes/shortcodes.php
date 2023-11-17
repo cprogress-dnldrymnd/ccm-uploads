@@ -631,7 +631,7 @@ function bike_lists_menu()
 							?>
 							<div class="col-lg-4">
 								<div class="column-holder text-center">
-									<a href="<?= $bike['configure_link'] ? $bike['configure_link'] : '#' ?>">
+									<a href="<?= get_permalink($bike['ID']) ?>">
 										<div class="bike-name">
 											<h4><?= get_the_title($bike['ID']) ?></h4>
 										</div>
