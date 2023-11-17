@@ -7991,7 +7991,7 @@ footer {
     padding-bottom: 40px; }
     footer .footer-bottom p, footer .footer-bottom a {
       font-size: 14px !important;
-      color: #bebebe; }
+      color: #bebebe !important; }
     footer .footer-bottom .menu {
       display: flex;
       justify-content: flex-end;

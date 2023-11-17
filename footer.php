@@ -11,7 +11,7 @@ $template = get_page_template_slug();
 	<footer class="footer bt-5">
 		<div class="footer-top">
 			<div class="container">
-				<div class="row">
+				<div class="row g-3">
 					<div class="col-lg-3">
 						<?php if (is_active_sidebar('footer_column_1')) { ?>
 							<div class="column-holder  ">
