@@ -141,23 +141,22 @@ add_action('widgets_init', 'ccm_register_sidebars');
 function cp_bikes()
 {
 	$labels = array(
-		'name'               => _x('Bikes', 'post type general name'),
-		'singular_name'      => _x('Bikes', 'post type singular name'),
+		'name'               => _x('Motorcycles', 'post type general name'),
+		'singular_name'      => _x('Motorcycle', 'post type singular name'),
 		'add_new'            => _x('Add New', 'bike'),
 		'add_new_item'       => __('Add New bike'),
 		'edit_item'          => __('Edit bike'),
-		'new_item'           => __('New bike'),
-		'all_items'          => __('All bikes'),
-		'view_item'          => __('View bike'),
-		'search_items'       => __('Search bikes'),
-		'not_found'          => __('No bike found'),
-		'not_found_in_trash' => __('No bike found in the Trash'),
+		'new_item'           => __('New Motorcycle'),
+		'all_items'          => __('All Motorcycle'),
+		'view_item'          => __('View Motorcycle'),
+		'search_items'       => __('Search Motorcycle'),
+		'not_found'          => __('No Motorcycle found'),
+		'not_found_in_trash' => __('No Motorcycle found in the Trash'),
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Bikes'
+		'menu_name'          => 'Motorcycle'
 	);
 	$args = array(
 		'labels'        => $labels,
-		'description'   => 'Holds our articles and article specific data',
 		'public'        => true,
 		'hierarchical'  => true,
 		'menu_position' => 5,

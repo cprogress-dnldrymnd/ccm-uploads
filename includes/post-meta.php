@@ -2251,7 +2251,7 @@ Container::make('post_meta', 'Bike Details')
 						Field::make('text', 'heading', 'Heading'),
 						Field::make('textarea', 'description', 'Description')
 					)
-					),
+				),
 			Field::make('image', 'feature_image', __('Image')),
 
 		)
@@ -2306,3 +2306,16 @@ Container::make('post_meta', 'Bike Details')
 	);
 
 
+Container::make('theme_options', 'Motorcycle Mega Menu')
+	->add_fields(
+		array(
+			Field::make('association', 'motorcycle_mega_menu', __('Select Bikes'))
+				->set_types(
+					array(
+						array(
+							'type'      => 'post',
+							'post_type' => 'bikes',
+						)
+					))
+		)
+	);
