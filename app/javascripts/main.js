@@ -421,6 +421,11 @@ function bike_scroller() {
 function footer() {
 	if(window.innerWidth < 992) {
 		jQuery('.footer-top .menu').parent().parent().addClass('footer-accordion');
+
+		jQuery('.footer-accordion').each(function (index, element) {
+			jQuery('<span class="icon"></span>').append(jQuery(this).find('.widget-title'));
+			
+		});
 	}
 }
 function bike_specs() {

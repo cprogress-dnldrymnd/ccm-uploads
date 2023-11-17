@@ -206,6 +206,43 @@ footer {
 			padding-bottom: 25px;
 
 			.footer-accordion {
+				.widget-title {
+					cursor: pointer;
+					.icon {
+						width: 12px;
+						height: 12px;
+						border: 1px solid var(--black-color);
+						display: inline-block;
+						position: relative;
+						flex: 0 0 42px;
+						margin-left: 15px;
+
+						&:before,
+						&:after {
+							content: "";
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							background-color: var(--black-color);
+						}
+
+						&:before {
+							width: 16px;
+							height: 2px;
+						}
+
+						&:after {
+							width: 2px;
+							height: 16px;
+						}
+
+						@media (min-width: 992px) {
+							display: none;
+						}
+					}
+				}
+
 				.menu {
 					transition: 500ms;
 					max-height: 0;

@@ -7987,6 +7987,33 @@ footer {
       footer .footer-top {
         padding-top: 25px;
         padding-bottom: 25px; }
+        footer .footer-top .footer-accordion .widget-title {
+          cursor: pointer; }
+          footer .footer-top .footer-accordion .widget-title .icon {
+            width: 12px;
+            height: 12px;
+            border: 1px solid var(--black-color);
+            display: inline-block;
+            position: relative;
+            flex: 0 0 42px;
+            margin-left: 15px; }
+            footer .footer-top .footer-accordion .widget-title .icon:before, footer .footer-top .footer-accordion .widget-title .icon:after {
+              content: "";
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              background-color: var(--black-color); }
+            footer .footer-top .footer-accordion .widget-title .icon:before {
+              width: 16px;
+              height: 2px; }
+            footer .footer-top .footer-accordion .widget-title .icon:after {
+              width: 2px;
+              height: 16px; } }
+      @media (max-width: 991px) and (min-width: 992px) {
+        footer .footer-top .footer-accordion .widget-title .icon {
+          display: none; } }
+    @media (max-width: 991px) {
         footer .footer-top .footer-accordion .menu {
           transition: 500ms;
           max-height: 0;
