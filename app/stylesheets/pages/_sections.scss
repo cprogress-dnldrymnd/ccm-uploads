@@ -144,6 +144,7 @@ section.hero-banner-with-breadcrumbs {
     position: relative;
     padding-bottom: 10px;
     overflow: hidden;
+    margin-bottom: -1px;
 
     .breadcrumbs {
         @media (max-width: 767px) {
@@ -620,6 +621,7 @@ section.bike-specification {
                     h3 {
                         text-transform: uppercase;
                     }
+
                     .icon {
                         width: 42px;
                         height: 42px;
@@ -716,6 +718,7 @@ section.bike-specification {
                                 color: var(--main-color);
                             }
                         }
+
                         &.specs-list {
                             transform: translateX(0);
                             opacity: 1;
