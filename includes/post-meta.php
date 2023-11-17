@@ -2251,7 +2251,9 @@ Container::make('post_meta', 'Bike Details')
 						Field::make('text', 'heading', 'Heading'),
 						Field::make('textarea', 'description', 'Description')
 					)
-				)
+					),
+			Field::make('image', 'feature_image', __('Image')),
+
 		)
 	)
 	->add_tab(
@@ -2267,7 +2269,7 @@ Container::make('post_meta', 'Bike Details')
 			Field::make('complex', 'specifications', '')
 				->add_fields(
 					array(
-						Field::make('text', 'navigation', 'Navigation')
+						Field::make('text', 'navigation', 'Specs Title')
 							->set_required(true),
 						Field::make('complex', 'specification', 'Specifications')
 							->add_fields(
