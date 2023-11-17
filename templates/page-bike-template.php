@@ -12,11 +12,14 @@
 $version = carbon_get_the_post_meta('template_style');
 ?>
 <?php get_header(); ?>
+<?php
+$hero_youtube_video_id = carbon_get_the_post_meta('hero_youtube_video_id');
+?>
 <main id="page-components" class="main-holder reusable-blocks bt-5 <?= $class ?> <?= $main_class ?>">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
         <div class="video-holder">
             <iframe frameborder="0" height="100%" width="100%"
-                src="https://www.youtube.com/embed/<?= $embed_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=q6CEBGW4szM">
+                src="https://www.youtube.com/embed/<?= $hero_youtube_video_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=q6CEBGW4szM">
             </iframe>
         </div>
         <div class="container-fluid container-fluid-wide content">
