@@ -4,7 +4,8 @@
 body {
     .overlay {
         position: fixed;
-        background: #0009;
+        background: var(--black-color);
+        opacity: 0.5;
         top: 0;
         left: 0;
         display: none;
