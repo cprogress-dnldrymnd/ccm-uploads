@@ -7322,7 +7322,8 @@ li.has-dropdown:active:after,
   position: fixed;
   left: 0;
   right: 0;
-  top: 0; }
+  top: 0;
+  z-index: 99; }
   @media (max-width: 991px) {
     #ccm-motors-header .desktop-header,
     #mobile-header-canvas .desktop-header {

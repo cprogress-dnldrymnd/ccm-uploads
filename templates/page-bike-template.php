@@ -280,7 +280,7 @@ $version = carbon_get_the_post_meta('template_style');
                 </a>
             </div>
             <div class="col-6">
-                <a href="" class="light-gray">
+                <a href="/book-ccm-test-ride/" class="light-gray">
                     <span>BOOK A TEST RIDE</span>
                     <span class="icon"></span>
                 </a>
