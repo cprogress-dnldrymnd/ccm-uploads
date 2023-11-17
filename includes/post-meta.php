@@ -2224,12 +2224,34 @@ Container::make('post_meta', 'Bike Details')
 	->add_tab(
 		'Bike Options',
 		array(
-			Field::make('text', 'hero_youtube_video_id', __('Hero Youtube Video ID')),
 			Field::make('select', 'template_style', __('Template Style'))
 				->add_options(
 					array(
 						'standard' => 'Standard',
 						'v2'       => 'V2',
+					)
+				)
+		)
+	)
+	->add_tab(
+		'Hero',
+		array(
+			Field::make('radio', 'background_type', 'Background Type')
+				->add_options(
+					array(
+						''      => 'Self Hosted',
+						'embed' => 'Embed',
+					)
+				),
+			Field::make('file', 'background', 'Background'),
+			Field::make('text', 'embed_id', 'Youtube Video ID')
+				->set_conditional_logic(
+					array(
+						array(
+							'field'   => 'background_type',
+							'value'   => 'embed',
+							'compare' => '=',
+						)
 					)
 				)
 		)
