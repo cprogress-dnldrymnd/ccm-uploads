@@ -1078,7 +1078,7 @@ body {
 
 	&.header-black-bg {
 		#ccm-motors-header {
-			background-color: var(--black-color);
+			background-color: var(--black-color) !important;
 		}
 	}
 }
