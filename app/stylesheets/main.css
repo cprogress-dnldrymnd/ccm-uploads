@@ -10147,7 +10147,7 @@ section.bike-navigation {
     margin-left: 8px;
     margin-right: 8px; }
   section.bike-navigation.v2.fixed .inner {
-    background-color: var(--black-color); }
+    background-color: #171717; }
   section.bike-navigation.v2 .inner {
     background-color: transparent; }
     section.bike-navigation.v2 .inner .btn-bordered a {
