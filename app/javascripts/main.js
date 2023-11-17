@@ -489,7 +489,7 @@ function header() {
 		});
 		jQuery('.overlay').removeClass('show-minicart');
 		jQuery(this).next().toggleClass('show-dropdown');
-		if (!jQuery(this).next().hasClass('.show-dropdown')) {
+		if (!jQuery(this).next().hasClass('show-dropdown')) {
 			jQuery('.overlay').removeClass('show-overlay');
 		} else {
 			jQuery('.overlay').addClass('show-overlay');
