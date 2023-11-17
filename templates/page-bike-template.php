@@ -294,12 +294,15 @@ $configure_url = get_post_mime_type($configure_url);
     </section>
     <section class="footer-buttons">
         <div class="row g-0">
-            <div class="col-6">
-                <a href="" class="light-blue">
-                    <span>CONFIGURE A BIKE</span>
-                    <span class="icon"></span>
-                </a>
-            </div>
+            <?php if ($configure_url) { ?>
+                <div class="col-6">
+                    <a href="<?= $configure_url ?>" class="light-blue">
+                        <span>CONFIGURE A BIKE</span>
+                        <span class="icon"></span>
+                    </a>
+                </div>
+            <?php } ?>
+
             <div class="col-6">
                 <a href="/book-ccm-test-ride/" class="light-gray">
                     <span>BOOK A TEST RIDE</span>
