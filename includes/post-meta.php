@@ -359,6 +359,7 @@ Container::make('post_meta', 'Bike Data')
 	->where('post_template', '!=', 'templates/page-components.php')
 	->where('post_template', '!=', 'templates/page-tablet.php')
 	->where('post_template', '!=', 'templates/page-configure-bike-v2.php')
+	->where('post_template', '!=', 'templates/page-bike-template.php')
 	->add_tab(
 		__('Banner'),
 		array(
