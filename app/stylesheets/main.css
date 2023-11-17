@@ -6645,7 +6645,8 @@ body .overlay {
   width: 100%;
   z-index: -1;
   transition: all 0.2s ease-in-out;
-  opacity: 0; }
+  opacity: 0;
+  cursor: pointer; }
   body .overlay.show-overlay {
     z-index: 2;
     display: block;
