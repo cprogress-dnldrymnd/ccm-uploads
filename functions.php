@@ -153,7 +153,7 @@ function cp_bikes()
 		'not_found'          => __('No Motorcycle found'),
 		'not_found_in_trash' => __('No Motorcycle found in the Trash'),
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Motorcycle'
+		'menu_name'          => 'Motorcycles'
 	);
 	$args = array(
 		'labels'        => $labels,
