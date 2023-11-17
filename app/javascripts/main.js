@@ -553,10 +553,10 @@ function smooth_scroll() {
 jQuery(document).ready(function () {
 	utm_parameters();
 	//bike_navigation();
-	bike_specs();
-	footer();
-	header();
-	smooth_scroll();
+	//bike_specs();
+	//footer();
+	//header();
+	//smooth_scroll();
 	/*bike_scroller()*/;
 	$("#wpcf7-f5677-o1 form").submit(function (e) {
 		e.preventDefault();
