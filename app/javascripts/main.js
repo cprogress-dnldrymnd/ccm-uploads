@@ -419,12 +419,19 @@ function bike_scroller() {
 	}
 }
 function footer() {
-	if(window.innerWidth < 992) {
+	if (window.innerWidth < 992) {
 		jQuery('.footer-top .menu').parent().parent().addClass('footer-accordion');
 
 		jQuery('.footer-accordion').each(function (index, element) {
 			jQuery('<span class="icon"></span>').appendTo(jQuery(this).find('.widget-title'));
-			
+		});
+
+		jQuery('.footer-accordion .widget-title').click(function (e) {
+			jQuery(this).parent().addClass('active');
+			jQuery('.footer-accordion .widget-title').not(this).each(function () {
+				jQuery(this).parent().removeClass('active');
+			});
+			e.preventDefault();
 		});
 	}
 }
