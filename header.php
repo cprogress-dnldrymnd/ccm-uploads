@@ -10,7 +10,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="facebook-domain-verification" content="x7s2nf6ay160td6uq7desxzfv9zz2t" />
 
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,300,400,500,600,700,800,900"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6cae1a8f6.js" crossorigin="anonymous"></script>
     <title>
         <?php bloginfo('name'); // show the blog name, from settings 
@@ -25,12 +26,11 @@
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500,600" rel="stylesheet">
     <meta name="p:domain_verify" content="86cca4d34bdeaa262ef2ab86ce24dee9" />
-
     <!-- Facebook Pixel Code -->
     <script>
-        ! function(f, b, e, v, n, t, s) {
+        ! function (f, b, e, v, n, t, s) {
             if (f.fbq) return;
-            n = f.fbq = function() {
+            n = f.fbq = function () {
                 n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
@@ -52,7 +52,7 @@
     <!-- start webpush tracking code -->
     <script type='text/javascript'>
         var _at = {};
-        window._at.track = window._at.track || function() {
+        window._at.track = window._at.track || function () {
             (window._at.track.q = window._at.track.q || []).push(arguments);
         };
         _at.domain = 'www.ccm-motorcycles.com/';
@@ -60,7 +60,7 @@
         _at.idSite = '25586';
         _at.attributes = {};
         _at.webpushid = 'web.2.aimtell.com';
-        (function() {
+        (function () {
             var u = '//s3.amazonaws.com/cdn.aimtell.com/trackpush/';
             var d = document,
                 g = d.createElement('script'),
@@ -73,12 +73,13 @@
         })();
     </script>
     <!-- end webpush tracking code -->
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=265318043901425&ev=PageView&noscript=1" /></noscript>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=265318043901425&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
     <!-- Google Tag Manager -->
 
     <script>
-        (function(w, d, s, l, i) {
+        (function (w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start':
@@ -304,7 +305,14 @@ s0.parentNode.insertBefore(s1,s0);
         .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb a:active {
             color: #dc3524;
         }
+
+        .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb p,
+        .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb a {
+            padding: 0 20px;
+        }
     </style>
+
+
     <!--[if lte IE 9]>
         <link href="stylesheets/non-responsive.css" rel="stylesheet" />
     <![endif]-->
@@ -314,143 +322,12 @@ s0.parentNode.insertBefore(s1,s0);
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41122759-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-41122759-1');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics NEW -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151976546-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-151976546-1');
-    </script>
-    <!-- Google Tag Manager -->
-
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start':
-
-                    new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-
-        })(window, document, 'script', 'dataLayer', 'GTM-MGZQQRX');
-    </script>
-
-    <!-- End Google Tag Manager -->
     <meta name="p:domain_verify" content="e81daae2849082514801125ab6971650" />
     <!--YouTube AdSense Script-->
-    <script data-ad-client="ca-pub-2753165670517691" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-2753165670517691" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!--End of YouTube AdSense Script-->
 </head>
-
-
-<style type="text/css">
-    .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb p,
-    .mega-menu-col .navbar-nav li .mega-menu .megamenu-breadcrumb a {
-        padding: 0 20px;
-    }
-
-    header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default:before,
-    header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default:after {
-        display: none;
-    }
-
-    header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default {
-        width: 100%;
-        border-radius: 0;
-        padding-left: 3vw;
-        padding-right: 3vw;
-    }
-
-    header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default li {
-        margin-bottom: 0;
-    }
-
-    header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default li a {
-        font-weight: 300;
-    }
-
-
-    @media(min-width: 992px) {
-        header.header-v3 nav .navbar-nav li.dropdown:hover .dropdown-menu {
-            display: block !important;
-        }
-
-        header.header-v3 nav .navbar-nav {
-            height: 100%;
-        }
-
-        header.header-v3 nav .navbar-nav li {
-            margin-bottom: 0;
-            height: 100%;
-        }
-
-        header.header-v3 nav .navbar-nav li a {
-            height: 100%;
-        }
-
-        #ccm-header.header-v3 {
-            transition: none !important;
-        }
-
-        header nav .navbar-nav {
-            height: 100%;
-        }
-
-    }
-
-    section.bike-lists .bikes>.row {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-
-    section.bike-lists .bike-category {
-        margin-bottom: 0;
-    }
-
-    @media(max-width: 991px) {
-        header.header-v3#ccm-header nav .navbar-nav>li>a {
-            padding-top: 14px !important;
-            padding-bottom: 14px !important;
-        }
-
-        header.header-v3 nav .navbar-nav li.dropdown .dropdown-menu.default>li {
-            margin-bottom: 15px;
-        }
-
-        header.header-v3 nav .navbar-nav li.open .dropdown-menu {
-            display: block !important;
-        }
-    }
-</style>
-
 <?php $cat_class = is_product_category() ? 'product-cat-wrap' : ''; ?>
 <?php $cat_class = is_shop() || is_product_category() ? 'product-grid-wrap' : ''; ?>
 <?php $user = wp_get_current_user(); ?>
@@ -475,10 +352,14 @@ if ($post_type == 'product') {
     }
 }
 ?>
+<?php
+$header_buttons = carbon_get_the_post_meta('header_buttons');
+$template = get_page_template_slug();
+?>
 
-<body <?php body_class($cat_class . $product_cat_class); ?> ownership="<?php _e($ownership) ?>" <?= $product_term ?>>
+<body <?php body_class($cat_class . $product_cat_class); ?> ownership="
+    <?php _e($ownership) ?>" <?= $product_term ?>>
     <div class="overlay"></div>
-
 
     <!--[if lt IE 9]>
         <div id="browser-notification" class="alert alert-danger">
@@ -491,8 +372,7 @@ if ($post_type == 'product') {
     <?php
     $logo = carbon_get_theme_option('cv_logo');
     if ($template != 'templates/page-tablet.php') {
-    ?>
-        <div id="sticky-anchor" style="height: 0px;"></div>
+        ?>
         <header id="ccm-motors-header" class="bt-5">
             <div class="container-fluid container-fluid-wide desktop-header">
                 <div class="row align-items-center justify-content-between">
@@ -500,7 +380,8 @@ if ($post_type == 'product') {
                         <div class="row column-holder align-items-center">
                             <div class="col-auto logo-box">
                                 <a href="<?= get_site_url() ?>">
-                                    <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="CCM-Logo">
+                                    <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg"
+                                        alt="CCM-Logo">
                                 </a>
                             </div>
                             <div class="col-auto nav-box">
@@ -544,18 +425,25 @@ if ($post_type == 'product') {
                     <div class="row g-0 justify-content-between">
                         <div class="col-auto col-side col-side-minicart">
                             <div class="mini-cart-mobile">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23.112" height="18.85" viewBox="0 0 23.112 18.85">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23.112" height="18.85"
+                                    viewBox="0 0 23.112 18.85">
                                     <g id="cart" transform="translate(0.85 0.85)">
-                                        <path id="Path_1" data-name="Path 1" d="M2.832,4.387h.6A2.275,2.275,0,0,1,5.61,5.722l3.573,9.624a2.275,2.275,0,0,0,2.182,1.335h8.121a2.3,2.3,0,0,0,2.148-1.252l2.378-5.49c.8-1.848-.852-3.8-3.222-3.8H11.962" transform="translate(-2.832 -4.387)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="round" stroke-width="1.7" />
-                                        <circle id="Ellipse_1" data-name="Ellipse 1" cx="1.712" cy="1.712" r="1.712" transform="translate(6.847 14.576)" fill="#fff" />
-                                        <circle id="Ellipse_2" data-name="Ellipse 2" cx="1.712" cy="1.712" r="1.712" transform="translate(14.836 14.576)" fill="#fff" />
+                                        <path id="Path_1" data-name="Path 1"
+                                            d="M2.832,4.387h.6A2.275,2.275,0,0,1,5.61,5.722l3.573,9.624a2.275,2.275,0,0,0,2.182,1.335h8.121a2.3,2.3,0,0,0,2.148-1.252l2.378-5.49c.8-1.848-.852-3.8-3.222-3.8H11.962"
+                                            transform="translate(-2.832 -4.387)" fill="rgba(0,0,0,0)" stroke="#fff"
+                                            stroke-linecap="round" stroke-width="1.7" />
+                                        <circle id="Ellipse_1" data-name="Ellipse 1" cx="1.712" cy="1.712" r="1.712"
+                                            transform="translate(6.847 14.576)" fill="#fff" />
+                                        <circle id="Ellipse_2" data-name="Ellipse 2" cx="1.712" cy="1.712" r="1.712"
+                                            transform="translate(14.836 14.576)" fill="#fff" />
                                     </g>
                                 </svg>
                             </div>
                         </div>
                         <div class="col logo-box text-center">
                             <a href="<?= get_site_url() ?>">
-                                <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg" alt="CCM-Logo">
+                                <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-new-logo.svg"
+                                    alt="CCM-Logo">
                             </a>
                         </div>
                         <div class="col-auto col-side col-side-toggle">
@@ -586,14 +474,15 @@ if ($post_type == 'product') {
             $banner = $banner_array['url'];
         }
         $banner_src = !empty($banner) ? $banner : get_template_directory_uri() . '/app/assets/images/accessories_banner.png';
-    ?>
+        ?>
         <main class="news careers fourm_header accessories-banner">
             <section class="sp-banner" style="background-image: url('<?php echo $banner_src; ?>')">
                 <div class="container">
                     <h2>
                         <?php if (is_shop()) {
                             echo 'Accessories';
-                        } else {
+                        }
+                        else {
                             the_title();
                         }
                         ?></h2>
@@ -619,7 +508,6 @@ if ($post_type == 'product') {
     <?php
     if (is_bbpress()) {
         $pagename = get_query_var('pagename');
-
         $current_user = wp_get_current_user();
         $username = $current_user->user_firstname;
         $logouturl = wp_logout_url();
@@ -629,38 +517,15 @@ if ($post_type == 'product') {
         if (is_user_logged_in()) {
             $content_user = $user_content;
             $bannerContent = 'bannerContenttext';
-        } else {
+        }
+        else {
             $content_user = '';
             $bannerContent = '';
         }
 
-    ?>
-
-
+        ?>
         <main class="news careers page-template-page-owners club-main">
             <?php include(locate_template('/ccm-club/banner.php')); ?>
-            <?php /*<section class="sp-banner " style="background-image: url('https://www.ccm-motorcycles.com/wp-content/uploads/2019/05/banner.jpg')">
-            <div class="banner-title">
-            <div class="banner_content <?php echo $bannerContent; ?>"><?php echo $content_user; ?></div>
-            </div>
-            </section>
-            <?php if(!is_user_logged_in()) { ?>
-            <div class="bottom_banner"></div>
-            <?php } ?>
-            <?php if(is_user_logged_in()) { ?>
-            <div class="tabing_btn">
-            <div class="container-fluid">
-            <div class="tab row">
-            <button class="tablinks" onclick="location.href='/club-ccm';">Overview</button>
-            <button class="tablinks" onclick="location.href='/events';">Events</button>
-            <button class="tablinks" onclick="location.href='/book-a-service';">Book A Service</button>
-            <button class="tablinks  active" onclick="location.href='/forum';">Forum</button>
-            <button class="tablinks" onclick="location.href='/faq';">faq</button>
-            <!-- <button class=" tablinks" onclick="location.href='/stories';">Stories</button> -->
-            </div>
-            </div>
-            </div>
-            <?php	} */ ?>
         </main>
     <?php } ?>
 
@@ -677,7 +542,8 @@ if ($post_type == 'product') {
                 $user->add_role('ccm_owner');
             }
             $user->remove_role('subscriber');
-        } else {
+        }
+        else {
             if (!current_user_can('subscriber')) {
                 $user->add_role('subscriber');
             }
