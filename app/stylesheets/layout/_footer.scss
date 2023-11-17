@@ -204,6 +204,15 @@ footer {
 		@media(max-width: 991px) {
 			padding-top: 25px;
 			padding-bottom: 25px;
+
+			.footer-accordion {
+				.menu {
+					transition: 500ms;
+					max-height: 0;
+					position: relative;
+					overflow: hidden;
+				}
+			}
 		}
 	}
 

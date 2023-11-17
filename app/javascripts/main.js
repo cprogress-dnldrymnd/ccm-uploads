@@ -536,6 +536,7 @@ jQuery(document).ready(function () {
 	utm_parameters();
 	bike_navigation();
 	bike_specs();
+	footer();
 	header();
 	smooth_scroll();
 	/*bike_scroller()*/;

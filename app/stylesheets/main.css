@@ -7986,7 +7986,12 @@ footer {
     @media (max-width: 991px) {
       footer .footer-top {
         padding-top: 25px;
-        padding-bottom: 25px; } }
+        padding-bottom: 25px; }
+        footer .footer-top .footer-accordion .menu {
+          transition: 500ms;
+          max-height: 0;
+          position: relative;
+          overflow: hidden; } }
   footer .footer-bottom {
     padding-top: 60px;
     padding-bottom: 60px;
