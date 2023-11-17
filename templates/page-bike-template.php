@@ -17,7 +17,7 @@ $background_type = carbon_get_the_post_meta('background_type');
 $background = carbon_get_the_post_meta('background');
 $embed_id = carbon_get_the_post_meta('embed_id');
 $mime_type = get_post_mime_type($background);
-$configure_url = get_post_mime_type($configure_url);
+$configure_url = carbon_get_the_post_meta($configure_url);
 
 ?>
 <main id="page-components" class="main-holder reusable-blocks bt-5 <?= $class ?> <?= $main_class ?>">
