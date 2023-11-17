@@ -339,7 +339,7 @@ function ccm_scripts()
 	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css');
 
 
-	wp_enqueue_script('jquery');
+	wp_enqueue_script('ccm-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
 	wp_enqueue_script('ccm-bootstrap', get_template_directory_uri() . '/app/javascripts/vendors/bootstrap.min.js');
 	wp_enqueue_script('ccm-timeline', get_template_directory_uri() . '/app/javascripts/vendors/timeline.min.js');
 	wp_enqueue_script('ccm-owl-script', get_template_directory_uri() . '/app/javascripts/vendors/owl.carousel.min.js');
