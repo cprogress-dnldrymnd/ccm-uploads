@@ -7996,7 +7996,6 @@ footer {
           footer .footer-top .footer-accordion .widget-title .icon {
             width: 12px;
             height: 12px;
-            border: 1px solid var(--black-color);
             display: inline-block;
             position: relative;
             flex: 0 0 12px;
@@ -8007,7 +8006,7 @@ footer {
               left: 50%;
               top: 50%;
               transform: translate(-50%, -50%);
-              background-color: var(--black-color); }
+              background-color: var(--white-color); }
             footer .footer-top .footer-accordion .widget-title .icon:before {
               width: 16px;
               height: 2px; }
