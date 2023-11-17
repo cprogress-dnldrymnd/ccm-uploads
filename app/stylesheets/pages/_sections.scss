@@ -532,8 +532,8 @@ section.features {
 
     &.v2 {
         position: relative;
+        background-color: #1e1e21;
         @include half-bg();
-
         .container {
             position: relative;
             z-index: 3;
