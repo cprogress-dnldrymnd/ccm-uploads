@@ -10345,6 +10345,8 @@ section.bike-specification {
         width: 50%; } }
     section.bike-specification .specs-holder .specs-box > div .specs-val {
       font-size: 15px; }
+    section.bike-specification .specs-holder .specs-box > div.specs-heading h3 {
+      text-transform: uppercase; }
     section.bike-specification .specs-holder .specs-box > div.specs-heading .icon {
       width: 42px;
       height: 42px;
