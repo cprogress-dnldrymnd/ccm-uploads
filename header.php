@@ -373,6 +373,8 @@ $template = get_page_template_slug();
     $logo = carbon_get_theme_option('cv_logo');
     if ($template != 'templates/page-tablet.php') {
         ?>
+        <div id="sticky-anchor" style="height: 0px;"></div>
+
         <header id="ccm-motors-header" class="bt-5">
             <div class="container-fluid container-fluid-wide desktop-header">
                 <div class="row align-items-center justify-content-between">
