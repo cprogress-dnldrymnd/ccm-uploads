@@ -1058,11 +1058,12 @@ body {
 
 .bikes-template-templates {
 	#ccm-motors-header {
-		@include on-event {
-			background-color: var(--black-color);
-		}
 		@media(max-width: 991px) {
-			background-color: rgba($color: #000000, $alpha: 0.5);
+			background-color: rgba($color: #000000, $alpha: 0.5) !important;
+		}
+
+		@include on-event {
+			background-color: var(--black-color) !important;
 		}
 	}
 
