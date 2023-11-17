@@ -7983,13 +7983,22 @@ footer {
   footer .footer-top {
     padding-top: 60px;
     padding-bottom: 60px; }
+    @media (max-width: 991px) {
+      footer .footer-top {
+        padding-top: 25px;
+        padding-bottom: 25px; } }
   footer .footer-bottom {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #171717;
     padding-top: 40px;
     padding-bottom: 40px; }
-    footer .footer-bottom p, footer .footer-bottom a {
+    @media (max-width: 991px) {
+      footer .footer-bottom .row {
+        flex-direction: column-reverse;
+        text-align: center; } }
+    footer .footer-bottom p,
+    footer .footer-bottom a {
       font-size: 14px !important;
       color: #bebebe !important; }
     footer .footer-bottom .menu {
@@ -8000,6 +8009,10 @@ footer {
         margin-bottom: 0; }
         footer .footer-bottom .menu li:not(:last-child) {
           margin-right: 2vw; }
+    @media (max-width: 991px) {
+      footer .footer-bottom {
+        padding-top: 20px;
+        padding-bottom: 20px; } }
 
 .red-btn {
   position: relative;

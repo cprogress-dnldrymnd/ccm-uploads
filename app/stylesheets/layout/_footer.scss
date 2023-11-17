@@ -162,24 +162,29 @@ footer {
 		color: inherit !important;
 		font-weight: 300;
 	}
+
 	p {
 		&:last-child {
 			margin-bottom: 0 !important;
 		}
 	}
+
 	a {
 		&:hover {
 			color: var(--white-color) !important;
 		}
 	}
+
 	.menu {
 		padding: 0;
 		list-style: none;
+
 		li {
 			a {
 				color: #bebebe !important;
 				font-size: 15px;
 			}
+
 			&:not(:last-child) {
 				margin-bottom: 11px;
 			}
@@ -195,27 +200,50 @@ footer {
 	.footer-top {
 		padding-top: 60px;
 		padding-bottom: 60px;
+
+		@media(max-width: 991px) {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
 	}
+
 	.footer-bottom {
 		padding-top: 60px;
 		padding-bottom: 60px;
 		background-color: #171717;
 		padding-top: 40px;
 		padding-bottom: 40px;
-		p, a {
+
+		.row {
+			@media(max-width: 991px) {
+				flex-direction: column-reverse;
+				text-align: center;
+			}
+		}
+
+		p,
+		a {
 			font-size: 14px !important;
 			color: #bebebe !important;
 		}
+
 		.menu {
 			display: flex;
 			justify-content: flex-end;
 			margin-bottom: 0;
+
 			li {
 				margin-bottom: 0;
+
 				&:not(:last-child) {
 					margin-right: 2vw;
 				}
 			}
+		}
+
+		@media(max-width: 991px) {
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
 	}
 }
