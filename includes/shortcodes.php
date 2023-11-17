@@ -627,7 +627,8 @@ function bike_lists_menu()
 						<?php
 						foreach ($bikes as $bike) {
 							$bike_menu_image = carbon_get_post_meta($bike['id'], 'bike_menu_image');
-							$image = wp_get_attachment_image_url($bike_menu_image, 'large');
+							$bike_image = $bike_menu_image ? $bike_menu_image : get_post_thumbnail_id($bike['id']);
+							$image = wp_get_attachment_image_url($bike_image, 'large');
 							?>
 							<div class="col-lg-4">
 								<div class="column-holder text-center">
