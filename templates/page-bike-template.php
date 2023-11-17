@@ -21,29 +21,19 @@ $mime_type = get_post_mime_type($background);
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
         <div class="video-holder">
             <?php if ($background_type == 'embed') { ?>
-                <div class="iframe-holder">
-                    <iframe frameborder="0" height="100%" width="100%"
-                        src="https://www.youtube.com/embed/<?= $embed_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=<?= $embed_id ?>">
-                    </iframe>
-                </div>
-                <?php if (strpos($mime_type, 'video') !== false) { ?>
-                    <video id="video" autoplay muted loop playsinline preload="metadata" src="<?= wp_get_attachment_url($background) ?>">
-            
-                    </video>
-                <?php }
-                else { ?>
-                    <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded"
-                        src="<?= wp_get_attachment_image_url($background, 'full') ?>">
-                <?php } ?>
+                <iframe frameborder="0" height="100%" width="100%"
+                    src="https://www.youtube.com/embed/<?= $embed_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=<?= $embed_id ?>">
+                </iframe>
             <?php }
             else { ?>
                 <?php if (strpos($mime_type, 'video') !== false) { ?>
-                    <video id="video" autoplay muted loop playsinline preload="metadata" src="<?= wp_get_attachment_url($background) ?>">
+                    <video id="video" autoplay muted loop playsinline preload="metadata"
+                        src="<?= wp_get_attachment_url($background) ?>">
                     </video>
                 <?php }
                 else { ?>
-                    <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded"
-                        src="<?= wp_get_attachment_image_url($background, 'full') ?>">
+                    <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>"
+                        class=" ls-is-cached lazyloaded" src="<?= wp_get_attachment_image_url($background, 'full') ?>">
                 <?php } ?>
             <?php } ?>
         </div>
