@@ -476,6 +476,8 @@ function header() {
 		jQuery('.overlay').removeClass('show-overlay');
 		jQuery('.dropdown-menu').removeClass('show-dropdown');
 		jQuery('body').removeClass('show-minicart');
+		jQuery('#ccm-motors-header').removeClass('mega-menu-active');
+
 		e.preventDefault();
 	});
 
