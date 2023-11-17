@@ -342,6 +342,12 @@ section.bike-navigation {
                 a {
                     border-color: var(--white-color) !important;
                     color: var(--white-color) !important;
+
+                    @include on-event {
+                        border-color: var(--white-color) !important;
+                        background-color: var(--white-color) !important;
+                        color: var(--black-color) !important;
+                    }
                 }
             }
 

@@ -10180,6 +10180,10 @@ section.bike-navigation {
     section.bike-navigation.v2 .inner .btn-bordered a {
       border-color: var(--white-color) !important;
       color: var(--white-color) !important; }
+      section.bike-navigation.v2 .inner .btn-bordered a:hover, section.bike-navigation.v2 .inner .btn-bordered a:active, section.bike-navigation.v2 .inner .btn-bordered a:focus {
+        border-color: var(--white-color) !important;
+        background-color: var(--white-color) !important;
+        color: var(--black-color) !important; }
     section.bike-navigation.v2 .inner .bike-title span,
     section.bike-navigation.v2 .inner .bike-title li,
     section.bike-navigation.v2 .inner .bike-title a,
