@@ -3190,7 +3190,7 @@ function breadcrumbs() {
 	$breadcrumbs .= '<li class="d-flex align-items-center"><a href="'.get_site_url().'">HOME</a></li>';
 
 	if(get_post_type() == 'bikes') {
-		$breadcrumbs .= '<li class="d-flex align-items-center"><a href="#">HOME</a></li>';
+		$breadcrumbs .= '<li class="d-flex align-items-center"><a href="#">MOTORCYCLES</a></li>';
 	}
 	$breadcrumbs .= '<li class="d-flex align-items-center"><span>'.get_the_title().'</span></li>';
 
