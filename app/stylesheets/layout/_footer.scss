@@ -209,6 +209,11 @@ footer {
 				margin-bottom: 30px;
 			}
 			.footer-accordion {
+				&.active {
+					.menu {
+						max-height: 500px;
+					}
+				}
 				.widget-title {
 					cursor: pointer;
 					display: flex;
