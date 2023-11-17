@@ -7957,7 +7957,8 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
 }*/
 footer {
   background-color: #1e1e21;
-  color: #bebebe; }
+  color: #bebebe;
+  padding-bottom: 0 !important; }
   footer a,
   footer li,
   footer span,
