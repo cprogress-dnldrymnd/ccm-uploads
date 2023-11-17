@@ -63,7 +63,7 @@ header {
 			}
 		}
 
-		.nav > li > a {
+		.nav>li>a {
 			padding: 15px 22px;
 
 			@include respond-to(screen-md) {
@@ -84,7 +84,7 @@ header {
 	z-index: 999999999999;
 }
 
-.sticky + main {
+.sticky+main {
 	padding-top: 53px;
 }
 
@@ -129,11 +129,11 @@ button.navbar-toggle {
 		margin-top: 7.5px;
 	}
 
-	.navbar-nav > li {
+	.navbar-nav>li {
 		float: none;
 	}
 
-	.navbar-nav > li > a {
+	.navbar-nav>li>a {
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
@@ -300,45 +300,45 @@ button.navbar-toggle {
 ********************************/
 
 /* Dropdown Toggle on style */
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+.navbar .nav li.dropdown.open>.dropdown-toggle,
+.navbar .nav li.dropdown.active>.dropdown-toggle,
+.navbar .nav li.dropdown.open.active>.dropdown-toggle {
 	background: inherit;
 	/* Set to inherit when using mouse hover to open dropdown */
 	color: inherit;
 }
 
 /* Toggle off style */
-.navbar .nav li.dropdown.open.active > .dropdown-toggle,
-.navbar .nav > li.dropdown > a:focus {
+.navbar .nav li.dropdown.open.active>.dropdown-toggle,
+.navbar .nav>li.dropdown>a:focus {
 	background: inherit;
 	color: inherit;
 }
 
 /* Toggle hover */
-.navbar .nav li.dropdown > .dropdown-toggle:hover,
-.navbar .nav li.dropdown.open > .dropdown-toggle:hover {
+.navbar .nav li.dropdown>.dropdown-toggle:hover,
+.navbar .nav li.dropdown.open>.dropdown-toggle:hover {
 	background-color: #dddddd;
 }
 
 /* Toggle caret hover */
-.navbar .nav li.dropdown > a:hover .caret,
-.navbar .nav li.dropdown > a:focus .caret {
+.navbar .nav li.dropdown>a:hover .caret,
+.navbar .nav li.dropdown>a:focus .caret {
 	border-bottom-color: #333;
 	border-top-color: #333;
 }
 
 /* Toggle caret active */
-.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+.navbar .nav li.dropdown.open>.dropdown-toggle .caret,
+.navbar .nav li.dropdown.active>.dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active>.dropdown-toggle .caret {
 	border-bottom-color: #333;
 	border-top-color: #333;
 }
 
 /* Hover style
 ********************************/
-.navbar .nav > li > a,
+.navbar .nav>li>a,
 .mega-menu a {
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -352,7 +352,7 @@ button.navbar-toggle {
 	-webkit-transform: translateZ(0);
 }
 
-header nav .nav > li > a {
+header nav .nav>li>a {
 	padding: 17px 22px !important;
 
 	@include respond-to(screen-md) {
@@ -425,6 +425,7 @@ li.has-dropdown:active:after,
 	left: 0;
 	right: 0;
 	top: 0;
+	z-index: 99;
 
 	.desktop-header {
 		@media (max-width: 991px) {
@@ -439,7 +440,7 @@ li.has-dropdown:active:after,
 			display: block;
 
 			.row {
-				> div {
+				>div {
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -542,8 +543,8 @@ li.has-dropdown:active:after,
 		}
 
 		.bike-lists-holder {
-			> .row {
-				> [class*="col-"] {
+			>.row {
+				>[class*="col-"] {
 					a {
 						text-decoration: none !important;
 						padding: 3vw;
@@ -551,7 +552,7 @@ li.has-dropdown:active:after,
 						transition: 500ms;
 						position: relative;
 
-						> div {
+						>div {
 							position: relative;
 							z-index: 1;
 						}
@@ -640,7 +641,7 @@ li.has-dropdown:active:after,
 		.mini-cart {
 			position: static;
 
-			> a {
+			>a {
 				padding: 23px 15px !important;
 			}
 
@@ -668,7 +669,7 @@ li.has-dropdown:active:after,
 					border-bottom: 1px solid #e2e2e2;
 				}
 
-				> a {
+				>a {
 					color: var(--white-color);
 					text-transform: uppercase;
 					font-size: 15px;
@@ -742,7 +743,7 @@ li.has-dropdown:active:after,
 						border-radius: 0 !important;
 
 						li.menu-item {
-							> a {
+							>a {
 								color: var(--black-color);
 							}
 						}
@@ -763,8 +764,8 @@ li.has-dropdown:active:after,
 
 							section.bike-lists-menu {
 								.bike-lists-holder {
-									> .row {
-										> [class*="col-"] {
+									>.row {
+										>[class*="col-"] {
 											a {
 												transform: translateY(0);
 												opacity: 1;
@@ -856,6 +857,7 @@ body {
 			visibility: visible;
 			opacity: 1;
 		}
+
 		.col-side-minicart {
 			background-color: #4a4b51;
 		}
@@ -867,6 +869,7 @@ body {
 			opacity: 0;
 		}
 	}
+
 	&.hide-header {
 		#ccm-motors-header {
 			transform: translateY(-100%);
@@ -880,6 +883,7 @@ body {
 	height: calc(100vh - 70px);
 	background-color: var(--white-color);
 	font-family: $font-fira;
+
 	@media (max-width: 991px) {
 		display: block !important;
 	}
@@ -1058,6 +1062,7 @@ body {
 			background-color: var(--black-color);
 		}
 	}
+
 	&.header-black-bg {
 		#ccm-motors-header {
 			background-color: var(--black-color);
