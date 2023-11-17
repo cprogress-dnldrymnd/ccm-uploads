@@ -423,7 +423,7 @@ function footer() {
 		jQuery('.footer-top .menu').parent().parent().addClass('footer-accordion');
 
 		jQuery('.footer-accordion').each(function (index, element) {
-			jQuery('<span class="icon"></span>').append(jQuery(this).find('.widget-title'));
+			jQuery('<span class="icon"></span>').appendTo(jQuery(this).find('.widget-title'));
 			
 		});
 	}
