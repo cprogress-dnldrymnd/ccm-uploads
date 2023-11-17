@@ -334,7 +334,6 @@ function ccm_scripts()
 	wp_enqueue_style('ccm-timeline-theme', get_template_directory_uri() . '/app/stylesheets/vendors/timeline.min.css');
 	wp_enqueue_style('ccm-remodal-theme', get_template_directory_uri() . '/app/stylesheets/vendors/remodal-default-theme.css');
 	wp_enqueue_style('ccm-remodal-style', get_template_directory_uri() . '/app/stylesheets/vendors/remodal.css');
-	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css');
 	wp_enqueue_style('ccm-new-style', get_template_directory_uri() . '/app/new-styles/new.css');
 	wp_enqueue_style('ccm-justified-style', get_template_directory_uri() . '/app/new-styles/justifiedGallery.css');
 	wp_enqueue_style('ccm-single-bike-style', get_template_directory_uri() . '/app/new-styles/single-bike.css');
@@ -342,6 +341,7 @@ function ccm_scripts()
 	wp_enqueue_style('ccm-custom-404', get_template_directory_uri() . '/app/new-styles/error404.css');
 	wp_enqueue_style('ccm-ct-style', get_template_directory_uri() . '/app/new-styles/custom-style.css');
 	wp_enqueue_style('ccm-page-component-style', get_template_directory_uri() . '/app/new-styles/page-components.css');
+	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css');
 	wp_enqueue_style('ccm-fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
 	wp_enqueue_style('ccm-jquery-ui', '//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css');
 
