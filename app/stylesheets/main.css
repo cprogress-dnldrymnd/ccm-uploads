@@ -10163,7 +10163,7 @@ section.overview {
       @media (min-width: 992px) {
         section.overview.v2:not(.contact-form-holder) .inner .description-box {
           padding: 3vw;
-          margin-bottom: 150px; } }
+          margin-bottom: 100px; } }
     section.overview.v2:not(.contact-form-holder) .container {
       position: relative;
       z-index: 3; }

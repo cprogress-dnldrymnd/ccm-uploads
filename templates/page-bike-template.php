@@ -14,6 +14,7 @@ $version = carbon_get_the_post_meta('template_style');
 <?php get_header(); ?>
 <?php
 $background_type = carbon_get_the_post_meta('background_type');
+$background= carbon_get_the_post_meta('background');
 $embed_id = carbon_get_the_post_meta('embed_id');
 $mime_type = get_post_mime_type($background);
 ?>
