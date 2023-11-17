@@ -14,9 +14,11 @@ $version = carbon_get_the_post_meta('template_style');
 <?php get_header(); ?>
 <?php
 $background_type = carbon_get_the_post_meta('background_type');
-$background= carbon_get_the_post_meta('background');
+$background = carbon_get_the_post_meta('background');
 $embed_id = carbon_get_the_post_meta('embed_id');
 $mime_type = get_post_mime_type($background);
+$configure_url = get_post_mime_type($configure_url);
+
 ?>
 <main id="page-components" class="main-holder reusable-blocks bt-5 <?= $class ?> <?= $main_class ?>">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
@@ -85,18 +87,18 @@ $mime_type = get_post_mime_type($background);
                     <div class="col-auto col-xl-4">
                         <div class="bike-buttons">
                             <div class="row justify-content-end">
-                                <div class="col-auto">
-                                    <div class="btn-box btn-bordered">
-                                        <a class="pc-btn" href="#enquire-now" data-target="#enquire-now"
-                                            data-aos="fade-up" data-aos-duration="500">
-                                            CONFIGURE
-                                        </a>
+                                <?php if ($configure_url) { ?>
+                                    <div class="col-auto">
+                                        <div class="btn-box btn-bordered">
+                                            <a class="pc-btn" href="<?= $configure_url ?>" data-target="#enquire-now">
+                                                CONFIGURE
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
+                                <?php } ?>
                                 <div class="col-auto">
                                     <div class="btn-box">
-                                        <a class="pc-btn" href="#enquire-now" data-target="#enquire-now"
-                                            data-aos="fade-up" data-aos-duration="500">
+                                        <a class="pc-btn" href="#enquire-now" data-target="#enquire-now">
                                             ENQUIRE NOW
                                         </a>
                                     </div>
