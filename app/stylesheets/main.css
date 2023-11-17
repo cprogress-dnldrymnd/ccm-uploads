@@ -7800,6 +7800,9 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
 
 .bikes-template-templates #ccm-motors-header:hover, .bikes-template-templates #ccm-motors-header:active, .bikes-template-templates #ccm-motors-header:focus {
   background-color: var(--black-color); }
+@media (max-width: 991px) {
+  .bikes-template-templates #ccm-motors-header {
+    background-color: rgba(0, 0, 0, 0.5); } }
 .bikes-template-templates.header-black-bg #ccm-motors-header {
   background-color: var(--black-color); }
 
