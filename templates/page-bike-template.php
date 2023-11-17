@@ -13,8 +13,8 @@ $version = carbon_get_the_post_meta('template_style');
 ?>
 <?php get_header(); ?>
 <?php
-$background_type = $page_component['background_type'];
-$embed_id = $page_component['embed_id'];
+$background_type = carbon_get_the_post_meta('background_type');
+$embed_id = carbon_get_the_post_meta('embed_id');
 $mime_type = get_post_mime_type($background);
 ?>
 <main id="page-components" class="main-holder reusable-blocks bt-5 <?= $class ?> <?= $main_class ?>">
