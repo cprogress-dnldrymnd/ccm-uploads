@@ -2262,7 +2262,7 @@ Container::make('post_meta', 'Bike Details')
 				->set_type(array('image')),
 		)
 	)
-		->add_tab(
+	->add_tab(
 		'Specifications',
 		array(
 			Field::make('complex', 'specifications', '')
@@ -2290,7 +2290,18 @@ Container::make('post_meta', 'Bike Details')
 				->set_default_value($technical_specs_default)
 				->set_required(true)
 		)
+	)
+	->add_tab(
+		'Fullwidth Image',
+		array(
+			Field::make('image', 'fullwidth_image', '')
+		)
+	)
+	->add_tab(
+		'Contact Form',
+		array(
+			Field::make('textarea', 'contact_form', '')
+		)
 	);
 
 
-	
