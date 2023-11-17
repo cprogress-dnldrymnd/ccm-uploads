@@ -2223,7 +2223,7 @@ Container::make('post_meta', 'Bike Details')
 	->where('post_template', '=', 'templates/page-bike-template.php')
 	->add_fields(
 		array(
-			Field::make('select', 'template_style', __('Template Standard'))
+			Field::make('select', 'template_style', __('Template Style'))
 				->add_options(
 					array(
 						'standard' => 'Standard',
