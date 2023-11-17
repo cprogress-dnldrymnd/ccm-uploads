@@ -2251,8 +2251,7 @@ Container::make('post_meta', 'Bike Details')
 						Field::make('text', 'heading', 'Heading'),
 						Field::make('textarea', 'description', 'Description')
 					)
-						->set_header_template('<%- heading %>')
-				),
+				)->set_header_template('<%- heading %>'),
 			Field::make('image', 'feature_image', __('Image')),
 
 		)
