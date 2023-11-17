@@ -875,6 +875,12 @@ body {
 			transform: translateY(-100%);
 		}
 	}
+
+	&.mega-menu-active {
+		#ccm-motors-header {
+			background-color: var(--black-color);
+		}
+	}
 }
 
 .widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {

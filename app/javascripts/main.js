@@ -487,8 +487,11 @@ function header() {
 		jQuery(this).next().toggleClass('show-dropdown');
 		if (!jQuery(this).next().hasClass('show-dropdown')) {
 			jQuery('.overlay').removeClass('show-overlay');
+			jQuery('body').removeClass('mega-menu-active');
 		} else {
 			jQuery('.overlay').addClass('show-overlay');
+			jQuery('body').addClass('mega-menu-active');
+
 		}
 		e.preventDefault();
 	});
