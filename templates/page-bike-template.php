@@ -13,14 +13,39 @@ $version = carbon_get_the_post_meta('template_style');
 ?>
 <?php get_header(); ?>
 <?php
-$hero_youtube_video_id = carbon_get_the_post_meta('hero_youtube_video_id');
+$background_type = $page_component['background_type'];
+$embed_id = $page_component['embed_id'];
+$mime_type = get_post_mime_type($background);
 ?>
 <main id="page-components" class="main-holder reusable-blocks bt-5 <?= $class ?> <?= $main_class ?>">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
         <div class="video-holder">
-            <iframe frameborder="0" height="100%" width="100%"
-                src="https://www.youtube.com/embed/<?= $hero_youtube_video_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=q6CEBGW4szM">
-            </iframe>
+            <?php if ($background_type == 'embed') { ?>
+                <div class="iframe-holder">
+                    <iframe frameborder="0" height="100%" width="100%"
+                        src="https://www.youtube.com/embed/<?= $embed_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=<?= $embed_id ?>">
+                    </iframe>
+                </div>
+                <?php if (strpos($mime_type, 'video') !== false) { ?>
+                    <video id="video" autoplay muted loop playsinline preload="metadata" src="<?= wp_get_attachment_url($background) ?>">
+            
+                    </video>
+                <?php }
+                else { ?>
+                    <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded"
+                        src="<?= wp_get_attachment_image_url($background, 'full') ?>">
+                <?php } ?>
+            <?php }
+            else { ?>
+                <?php if (strpos($mime_type, 'video') !== false) { ?>
+                    <video id="video" autoplay muted loop playsinline preload="metadata" src="<?= wp_get_attachment_url($background) ?>">
+                    </video>
+                <?php }
+                else { ?>
+                    <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded"
+                        src="<?= wp_get_attachment_image_url($background, 'full') ?>">
+                <?php } ?>
+            <?php } ?>
         </div>
         <div class="container-fluid container-fluid-wide content">
             <?= breadcrumbs() ?>
