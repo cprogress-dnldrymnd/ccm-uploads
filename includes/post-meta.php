@@ -2251,6 +2251,7 @@ Container::make('post_meta', 'Bike Details')
 						Field::make('text', 'heading', 'Heading'),
 						Field::make('textarea', 'description', 'Description')
 					)
+						->set_header_template('<%- heading %>')
 				),
 			Field::make('image', 'feature_image', __('Image')),
 
@@ -2307,6 +2308,7 @@ Container::make('post_meta', 'Bike Details')
 
 
 Container::make('theme_options', 'Motorcycle Mega Menu')
+	->set_page_parent('edit.php?post_type=bikes')
 	->add_fields(
 		array(
 			Field::make('association', 'motorcycle_mega_menu', __('Select Bikes'))
@@ -2316,6 +2318,7 @@ Container::make('theme_options', 'Motorcycle Mega Menu')
 							'type'      => 'post',
 							'post_type' => 'bikes',
 						)
-					))
+					)
+				)
 		)
 	);
