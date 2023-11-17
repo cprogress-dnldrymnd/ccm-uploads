@@ -67,14 +67,14 @@ $version = $_GET['version'];
                             <div class="row justify-content-end">
                                 <div class="col-auto">
                                     <div class="btn-box btn-bordered">
-                                        <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
+                                        <a class="pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
                                             CONFIGURE
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-auto">
                                     <div class="btn-box">
-                                        <a class="anchor-modal pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
+                                        <a class="pc-btn" href="#enquire-now" data-target="#enquire-now" data-aos="fade-up" data-aos-duration="500">
                                             ENQUIRE NOW
                                         </a>
                                     </div>
