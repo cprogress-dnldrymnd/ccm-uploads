@@ -2243,7 +2243,16 @@ Container::make('post_meta', 'Bike Details')
 						'embed' => 'Embed',
 					)
 				),
-			Field::make('file', 'background', 'Background'),
+			Field::make('file', 'background', 'Background')
+				->set_conditional_logic(
+					array(
+						array(
+							'field'   => 'background_type',
+							'value'   => '',
+							'compare' => '=',
+						)
+					)
+				),
 			Field::make('text', 'embed_id', 'Youtube Video ID')
 				->set_conditional_logic(
 					array(
