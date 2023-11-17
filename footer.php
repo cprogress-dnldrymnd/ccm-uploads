@@ -11,31 +11,31 @@ $template = get_page_template_slug();
 	<footer class="footer bt-5">
 		<div class="footer-top">
 			<div class="container">
-				<div class="row g-3">
+				<div class="row g-1">
 					<div class="col-lg-3">
 						<?php if (is_active_sidebar('footer_column_1')) { ?>
-							<div class="column-holder  ">
+							<div class="column-holder col-first">
 								<?php dynamic_sidebar('footer_column_1') ?>
 							</div>
 						<?php } ?>
 					</div>
 					<div class="col-lg-3">
 						<?php if (is_active_sidebar('footer_column_2')) { ?>
-							<div class="column-holder  ">
+							<div class="column-holder">
 								<?php dynamic_sidebar('footer_column_2') ?>
 							</div>
 						<?php } ?>
 					</div>
 					<div class="col-lg-3">
 						<?php if (is_active_sidebar('footer_column_3')) { ?>
-							<div class="column-holder  ">
+							<div class="column-holder">
 								<?php dynamic_sidebar('footer_column_3') ?>
 							</div>
 						<?php } ?>
 					</div>
 					<div class="col-lg-3">
 						<?php if (is_active_sidebar('footer_column_4')) { ?>
-							<div class="column-holder  ">
+							<div class="column-holder">
 								<?php dynamic_sidebar('footer_column_4') ?>
 							</div>
 						<?php } ?>
@@ -48,14 +48,14 @@ $template = get_page_template_slug();
 				<div class="row justify-content-between align-items-center">
 					<div class="col-auto">
 						<?php if (is_active_sidebar('footer_bottom_left')) { ?>
-							<div class="column-holder  ">
+							<div class="column-holder">
 								<?php dynamic_sidebar('footer_bottom_left') ?>
 							</div>
 						<?php } ?>
 					</div>
 					<div class="col-auto">
 						<?php if (is_active_sidebar('footer_bottom_right')) { ?>
-							<div class="column-holder  ">
+							<div class="column-holder">
 								<?php dynamic_sidebar('footer_bottom_right') ?>
 							</div>
 						<?php } ?>
