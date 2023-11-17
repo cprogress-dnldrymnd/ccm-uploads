@@ -10035,7 +10035,8 @@ section.hero-banner-with-breadcrumbs {
   background-color: var(--black-color);
   position: relative;
   padding-bottom: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: -1px; }
   @media (max-width: 767px) {
     section.hero-banner-with-breadcrumbs .breadcrumbs {
       display: none; } }
