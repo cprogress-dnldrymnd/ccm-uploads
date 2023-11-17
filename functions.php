@@ -141,23 +141,22 @@ add_action('widgets_init', 'ccm_register_sidebars');
 function cp_bikes()
 {
 	$labels = array(
-		'name'               => _x('Bikes', 'post type general name'),
-		'singular_name'      => _x('Bikes', 'post type singular name'),
+		'name'               => _x('Motorcycles', 'post type general name'),
+		'singular_name'      => _x('Motorcycle', 'post type singular name'),
 		'add_new'            => _x('Add New', 'bike'),
 		'add_new_item'       => __('Add New bike'),
 		'edit_item'          => __('Edit bike'),
-		'new_item'           => __('New bike'),
-		'all_items'          => __('All bikes'),
-		'view_item'          => __('View bike'),
-		'search_items'       => __('Search bikes'),
-		'not_found'          => __('No bike found'),
-		'not_found_in_trash' => __('No bike found in the Trash'),
+		'new_item'           => __('New Motorcycle'),
+		'all_items'          => __('All Motorcycle'),
+		'view_item'          => __('View Motorcycle'),
+		'search_items'       => __('Search Motorcycle'),
+		'not_found'          => __('No Motorcycle found'),
+		'not_found_in_trash' => __('No Motorcycle found in the Trash'),
 		'parent_item_colon'  => '',
-		'menu_name'          => 'Bikes'
+		'menu_name'          => 'Motorcycles'
 	);
 	$args = array(
 		'labels'        => $labels,
-		'description'   => 'Holds our articles and article specific data',
 		'public'        => true,
 		'hierarchical'  => true,
 		'menu_position' => 5,
@@ -334,16 +333,10 @@ function ccm_scripts()
 	wp_enqueue_style('ccm-timeline-theme', get_template_directory_uri() . '/app/stylesheets/vendors/timeline.min.css');
 	wp_enqueue_style('ccm-remodal-theme', get_template_directory_uri() . '/app/stylesheets/vendors/remodal-default-theme.css');
 	wp_enqueue_style('ccm-remodal-style', get_template_directory_uri() . '/app/stylesheets/vendors/remodal.css');
-	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css');
-	wp_enqueue_style('ccm-new-style', get_template_directory_uri() . '/app/new-styles/new.css');
-	wp_enqueue_style('ccm-justified-style', get_template_directory_uri() . '/app/new-styles/justifiedGallery.css');
-	wp_enqueue_style('ccm-single-bike-style', get_template_directory_uri() . '/app/new-styles/single-bike.css');
-	wp_enqueue_style('ccm-custom-style', get_template_directory_uri() . '/app/new-styles/custom.css');
-	wp_enqueue_style('ccm-custom-404', get_template_directory_uri() . '/app/new-styles/error404.css');
-	wp_enqueue_style('ccm-ct-style', get_template_directory_uri() . '/app/new-styles/custom-style.css');
-	wp_enqueue_style('ccm-page-component-style', get_template_directory_uri() . '/app/new-styles/page-components.css');
+	wp_enqueue_style('ccm-justified-style', get_template_directory_uri() . '/app/stylesheets/vendors/justifiedGallery.css');
 	wp_enqueue_style('ccm-fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
 	wp_enqueue_style('ccm-jquery-ui', '//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css');
+	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css');
 
 
 	wp_enqueue_script('ccm-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
@@ -351,13 +344,14 @@ function ccm_scripts()
 	wp_enqueue_script('ccm-timeline', get_template_directory_uri() . '/app/javascripts/vendors/timeline.min.js');
 	wp_enqueue_script('ccm-owl-script', get_template_directory_uri() . '/app/javascripts/vendors/owl.carousel.min.js');
 	wp_enqueue_script('ccm-remodal', get_template_directory_uri() . '/app/javascripts/vendors/remodal.js');
-	wp_enqueue_script('ccm-justified', get_template_directory_uri() . '/app/new-styles/jquery.justifiedGallery.js');
+	wp_enqueue_script('ccm-justified', get_template_directory_uri() . '/app/javascripts/vendors/jquery.justifiedGallery.js');
 	wp_enqueue_script('ct-match-height', get_template_directory_uri() . '/app/javascripts/vendors/jquery.matchHeight-min.js');
 	wp_enqueue_script('ct-fanct', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js');
 	wp_enqueue_script('ccm-jquery-ui-js', 'https://code.jquery.com/ui/1.13.1/jquery-ui.js');
-	wp_enqueue_script('ccm-script', get_template_directory_uri() . '/app/javascripts/main.js');
-	wp_enqueue_script('ccm-script2', get_template_directory_uri() . '/app/javascripts/main2.js');
+	wp_enqueue_script('ct-horizotal-scroll', get_template_directory_uri() . '/app/javascripts/vendors/jquery-horizontal-scroll.min.js');
 
+	wp_enqueue_script('ccm-script', get_template_directory_uri() . '/app/javascripts/main.js');
+	
 	if (is_page_template('templates/page-components.php')) {
 		wp_enqueue_style('ccm-aos', get_template_directory_uri() . '/app/vendors/aos.css');
 		wp_enqueue_style('ccm-swiper', get_template_directory_uri() . '/app/vendors/swiper-bundle.min.css');
@@ -860,6 +854,7 @@ function cv_register_custom_fields()
 }
 require_once('includes/shortcodes.php');
 require_once('includes/carbonfields.php');
+require_once('includes/theme-widgets.php');
 add_shortcode('mega_nav', 'mega_nav_menu');
 
 function mega_nav_menu($atts)
@@ -3180,3 +3175,18 @@ function show_template() {
     global $template;
     echo basename($template);
 }*/
+
+
+function breadcrumbs() {
+	$breadcrumbs = '<div class="breadcrumbs"><ul class="d-flex align-items-center">'; 
+
+	$breadcrumbs .= '<li class="d-flex align-items-center"><a href="'.get_site_url().'">HOME</a></li>';
+
+	if(get_post_type() == 'bikes') {
+		$breadcrumbs .= '<li class="d-flex align-items-center"><a href="#">MOTORCYCLES</a></li>';
+	}
+	$breadcrumbs .= '<li class="d-flex align-items-center"><span>'.get_the_title().'</span></li>';
+
+	$breadcrumbs .= '</ul></div>';
+	return $breadcrumbs;
+}

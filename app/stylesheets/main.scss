@@ -1,5 +1,13 @@
 ﻿@charset 'UTF-8';
-
+// Others
+@import 
+'others/new',
+'others/single-bike',
+'others/custom',
+'others/error404',
+'others/custom-style',
+'others/page-components'
+;
 // 1. Configuration and helpers
 @import
 'utils/variables',
@@ -8,7 +16,8 @@
 
 // 2. Vendors
 @import
-'vendors/bootstrap';
+'vendors/bootstrap',
+'vendors/bootstrap-5-grid';
 
 // 3. Base stuff
 @import
@@ -37,4 +46,5 @@
 'pages/woocommerce',
 'pages/landing',
 'pages/custexp',
-'pages/defences';
+'pages/defences',
+'pages/sections';

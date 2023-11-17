@@ -1,23 +1,6 @@
 #navbar {
-	.col-md-4:first-child {
-		.navbar-nav {
-			li:first-child {
-				a {
-				}
-			}
-		}
-	}
-	.col-md-4:last-child {
-		.navbar-nav {
-			li:last-child {
-				a {
-				}
-			}
-		}
-	}
-
 	@include respond-to(screen-sm-xs) {
-		overflow-x: hidden!important;
+		overflow-x: hidden !important;
 	}
 }
 
@@ -26,41 +9,51 @@ header {
 	background-color: $white2;
 	transition: all ease 0.5s;
 	z-index: 3;
+
 	nav {
-		margin-bottom: 0!important;
+		margin-bottom: 0 !important;
+
 		.navbar {
-			margin-bottom: 0!important;
+			margin-bottom: 0 !important;
 		}
+
 		.navbar-nav {
-			margin: 0 auto!important;
+			margin: 0 auto !important;
 			display: inline-block;
+
 			li {
 				display: inline;
 				text-align: center;
+
 				a {
 					font-family: $barlow-medium;
 					color: $black;
 					text-transform: uppercase;
 					font-size: 16px;
+
 					@include on-event {
 						color: #dc3524;
 					}
 				}
+
 				@include respond-to(screen-sm-xs) {
 					text-align: left;
 				}
 			}
+
 			@include respond-to(screen-sm-xs) {
 				text-align: left;
-				margin: 0!important;
+				margin: 0 !important;
 				display: block;
-			}	
+			}
 		}
+
 		.navbar-brand {
-			float: none!important;
+			float: none !important;
 			display: inline-block;
 			position: relative;
-			padding: 0!important;
+			padding: 0 !important;
+
 			img {
 				height: 100%;
 				width: auto;
@@ -69,10 +62,12 @@ header {
 				padding: 10px 0;
 			}
 		}
-		.nav > li > a {
-			padding: 15px 22px; 
+
+		.nav>li>a {
+			padding: 15px 22px;
+
 			@include respond-to(screen-md) {
-				padding: 15px!important;
+				padding: 15px !important;
 			}
 		}
 	}
@@ -89,12 +84,13 @@ header {
 	z-index: 999999999999;
 }
 
-.sticky + main {
+.sticky+main {
 	padding-top: 53px;
 }
 
 button.navbar-toggle {
 	border-color: #000;
+
 	span {
 		background: #000;
 	}
@@ -104,43 +100,54 @@ button.navbar-toggle {
 	.navbar-header {
 		float: none;
 	}
-	.navbar-left,.navbar-right {
+
+	.navbar-left,
+	.navbar-right {
 		float: none !important;
 	}
+
 	.navbar-toggle {
 		display: block;
 	}
+
 	.navbar-collapse {
 		border-top: 1px solid transparent;
-		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
 		&.collapse {
-			display: none!important;
+			display: none !important;
 		}
 	}
+
 	.navbar-fixed-top {
 		top: 0;
 		border-width: 0 0 1px;
 	}
+
 	.navbar-nav {
-		float: none!important;
+		float: none !important;
 		margin-top: 7.5px;
 	}
+
 	.navbar-nav>li {
 		float: none;
 	}
+
 	.navbar-nav>li>a {
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	.collapse.in{
-		display:block !important;
+
+	.collapse.in {
+		display: block !important;
 	}
 }
 
 /* MEGA MENU STYLE
 ********************************/
 .mega-menu-col {
-	position: initial!important;
+	position: initial !important;
+
 	.navbar-nav li {
 		text-align: center;
 		position: initial;
@@ -148,16 +155,17 @@ button.navbar-toggle {
 		@include respond-to(screen-sm-xs) {
 			text-align: left;
 		}
+
 		.mega-menu {
-			height: auto!important;
+			height: auto !important;
 			position: absolute;
 			border: 0;
 			border-radius: 0;
 			right: 0;
 			width: 100%;
-			overflow-x: hidden!important;
+			overflow-x: hidden !important;
 			padding-bottom: 0;
-			padding-top: 0!important;
+			padding-top: 0 !important;
 
 			@include respond-to(screen-sm-xs) {
 				position: relative;
@@ -171,14 +179,16 @@ button.navbar-toggle {
 				position: relative;
 				background: #f7f7f7;
 				padding: 20px 0;
-				text-align: left!important;
-				p,a {
+				text-align: left !important;
+
+				p,
+				a {
 					padding-bottom: 0;
 					font-family: $barlow-medium;
 					color: #dc3524;
 					text-transform: uppercase;
 					font-size: 16px;
-					margin: 0!important;
+					margin: 0 !important;
 				}
 
 				@include respond-to(screen-sm-xs) {
@@ -186,28 +196,35 @@ button.navbar-toggle {
 					border-bottom: solid 1px #d6d6d6;
 				}
 			}
+
 			h2 {
 				text-align: left;
 				font-size: 24px;
 				font-family: $barlow-extrabold-italic;
 				text-transform: uppercase;
+
 				@include respond-to(screen-sm-xs) {
 					font-size: 17px;
 				}
 			}
+
 			.separator {
 				border-top: 3px solid #000;
 				position: absolute;
 				width: 100%;
 				height: 5px;
+
 				@include respond-to(screen-sm-xs) {
 					border-top: 2px solid #000;
 				}
 			}
+
 			.bike-previews {
-				margin-top: 20px!important;
+				margin-top: 20px !important;
+
 				a {
 					font-family: $barlow-bold;
+
 					&:after {
 						content: "\f054";
 						font-family: FontAwesome;
@@ -215,17 +232,20 @@ button.navbar-toggle {
 						margin-left: 7px;
 						color: red;
 					}
+
 					@include on-event {
-						text-decoration: none!important;
+						text-decoration: none !important;
 					}
 				}
 			}
+
 			a.red-btn {
 				display: inline-block;
 				margin: 60px 0 5px;
-				color: #fff!important;
+				color: #fff !important;
+
 				@include on-event {
-					text-decoration: none!important;
+					text-decoration: none !important;
 				}
 			}
 
@@ -252,6 +272,7 @@ button.navbar-toggle {
 
 					.container {
 						overflow-x: scroll;
+
 						.row {
 							width: 850px;
 						}
@@ -262,58 +283,62 @@ button.navbar-toggle {
 	}
 
 	img.chevron-down {
-		max-width: 15px!important;
+		max-width: 15px !important;
 		display: inline-block;
 		vertical-align: middle;
 		margin-top: -2px;
 		margin-left: 10px;
 		display: none;
+
 		@include respond-to(screen-sm-xs) {
 			display: inline-block;
 		}
 	}
 }
 
-
 /* Disable Toggle style
 ********************************/
 
 /* Dropdown Toggle on style */
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-	background: inherit; /* Set to inherit when using mouse hover to open dropdown */
+.navbar .nav li.dropdown.open>.dropdown-toggle,
+.navbar .nav li.dropdown.active>.dropdown-toggle,
+.navbar .nav li.dropdown.open.active>.dropdown-toggle {
+	background: inherit;
+	/* Set to inherit when using mouse hover to open dropdown */
 	color: inherit;
 }
+
 /* Toggle off style */
-.navbar .nav li.dropdown.open.active > .dropdown-toggle,
-.navbar .nav > li.dropdown > a:focus {
+.navbar .nav li.dropdown.open.active>.dropdown-toggle,
+.navbar .nav>li.dropdown>a:focus {
 	background: inherit;
 	color: inherit;
 }
+
 /* Toggle hover */
-.navbar .nav li.dropdown > .dropdown-toggle:hover,
-.navbar .nav li.dropdown.open > .dropdown-toggle:hover {
+.navbar .nav li.dropdown>.dropdown-toggle:hover,
+.navbar .nav li.dropdown.open>.dropdown-toggle:hover {
 	background-color: #dddddd;
 }
 
 /* Toggle caret hover */
-.navbar .nav li.dropdown > a:hover .caret,
-.navbar .nav li.dropdown > a:focus .caret {
+.navbar .nav li.dropdown>a:hover .caret,
+.navbar .nav li.dropdown>a:focus .caret {
 	border-bottom-color: #333;
 	border-top-color: #333;
 }
+
 /* Toggle caret active */
-.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+.navbar .nav li.dropdown.open>.dropdown-toggle .caret,
+.navbar .nav li.dropdown.active>.dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active>.dropdown-toggle .caret {
 	border-bottom-color: #333;
 	border-top-color: #333;
 }
 
 /* Hover style
 ********************************/
-.navbar .nav > li > a,
+.navbar .nav>li>a,
 .mega-menu a {
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -322,12 +347,14 @@ button.navbar-toggle {
 	transition: all 200ms ease;
 
 	/* -webkit-transform: translate3d(0, 0, 0); Webkit Hardware Acceleration*/
-	-webkit-backface-visibility: hidden; /* Safari Flicker Fix #2 */
+	-webkit-backface-visibility: hidden;
+	/* Safari Flicker Fix #2 */
 	-webkit-transform: translateZ(0);
 }
 
-header nav .nav > li > a {
-	padding: 17px 22px!important;
+header nav .nav>li>a {
+	padding: 17px 22px !important;
+
 	@include respond-to(screen-md) {
 		padding: 17px 20px !important;
 	}
@@ -339,21 +366,27 @@ header nav .nav > li > a {
 
 li.has-dropdown:after,
 .mega-menu-column .megamenu-breadcrumb a.taxonomy-button:after {
-    content: "\f078";
-    font-family: FontAwesome;
-    color: #DA1927;
-    position: absolute;
-    margin-left: -8px;
-    margin-top: -18px;
-    opacity: 0;
-    -webkit-transition: transform .5s ease-out,opacity .5s linear;
-    -o-transition: transform .5s ease-out,opacity .5s linear;
-    transition: transform .5s ease-out,opacity .5s linear;
-    -webkit-transform: translateY(1px);
-    -moz-transform: translateY(1px);
-    -ms-transform: translateY(1px);
-    -o-transform: translateY(1px);
-    transform: translateY(1px);
+	content: "\f078";
+	font-family: FontAwesome;
+	color: #da1927;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: -18px;
+	opacity: 0;
+	-webkit-transition:
+		transform 0.5s ease-out,
+		opacity 0.5s linear;
+	-o-transition:
+		transform 0.5s ease-out,
+		opacity 0.5s linear;
+	transition:
+		transform 0.5s ease-out,
+		opacity 0.5s linear;
+	-webkit-transform: translateY(1px);
+	-moz-transform: translateY(1px);
+	-ms-transform: translateY(1px);
+	-o-transform: translateY(1px);
+	transform: translateY(1px);
 }
 
 li.has-dropdown:hover:after,
@@ -361,19 +394,691 @@ li.has-dropdown:hover:after,
 li.has-dropdown:focus:after,
 .mega-menu-column .megamenu-breadcrumb a.taxonomy-button:focus:after,
 li.has-dropdown:active:after,
-.mega-menu-column .megamenu-breadcrumb a.taxonomy-button:active:after{
-    opacity: 1;
-    -webkit-transition: transform .5s ease-out,opacity .5s linear;
-    -o-transition: transform .5s ease-out,opacity .5s linear;
-    transition: transform .5s ease-out,opacity .5s linear;
-    -webkit-transform: translateY(-1px);
-    -moz-transform: translateY(-1px);
-    -ms-transform: translateY(-1px);
-    -o-transform: translateY(-1px);
-    transform: translateY(-1px);
+.mega-menu-column .megamenu-breadcrumb a.taxonomy-button:active:after {
+	opacity: 1;
+	-webkit-transition:
+		transform 0.5s ease-out,
+		opacity 0.5s linear;
+	-o-transition:
+		transform 0.5s ease-out,
+		opacity 0.5s linear;
+	transition:
+		transform 0.5s ease-out,
+		opacity 0.5s linear;
+	-webkit-transform: translateY(-1px);
+	-moz-transform: translateY(-1px);
+	-ms-transform: translateY(-1px);
+	-o-transform: translateY(-1px);
+	transform: translateY(-1px);
 }
 
 .mega-menu-column .megamenu-breadcrumb a.taxonomy-button:after {
-    margin-left: -42%!important;
-    margin-top: 18px!important;
+	margin-left: -42% !important;
+	margin-top: 18px !important;
+}
+
+#ccm-motors-header {
+	&.mega-menu-active {
+		background-color: var(--black-color) !important;
+	}
+}
+
+#ccm-motors-header,
+#mobile-header-canvas {
+	font-family: $font-fira;
+	background-color: var(--black-color);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 999;
+
+	.desktop-header {
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	.mobile-header {
+		display: none;
+
+		@media (max-width: 991px) {
+			display: block;
+
+			.row {
+				>div {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				.col-side {
+					flex: 0 0 57px;
+				}
+
+				.col-side-toggle,
+				.col-side-minicart {
+					transition: 500ms;
+
+					@include on-event {
+						background-color: #4a4b51;
+					}
+				}
+
+				.logo-box {
+					padding-top: 18px;
+					padding-bottom: 18px;
+				}
+			}
+		}
+
+		.mobile-menu-toggle {
+			display: inline-block;
+			height: 16px;
+			width: 24px;
+			position: relative;
+
+			span {
+				display: block;
+				height: 2px;
+				background-color: var(--white-color);
+				position: absolute;
+				left: 0;
+				right: 0;
+				transition: 500ms;
+
+				&:nth-child(2) {
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				&:last-child {
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+	section.bike-lists-menu {
+		padding-top: 0;
+
+		.col-lg-3 {
+			.menu-right {
+				list-style: none;
+				padding: 0;
+
+				li {
+					a {
+						color: var(--black-color);
+						font-size: 15px;
+						transition: 1000ms;
+						display: inline-block;
+
+						@media (min-width: 992px) {
+							opacity: 0;
+							transform: translateX(100%);
+							transition: 1000ms;
+							font-weight: 500;
+						}
+
+						@media (max-width: 991px) {
+							border-bottom: 1px solid #e2e2e2;
+							padding: 20px 15px;
+							width: 100%;
+							font-size: 16px;
+							text-decoration: none;
+						}
+					}
+
+					@media (min-width: 992px) {
+						&:not(:last-child) {
+							margin-bottom: 20px;
+						}
+					}
+
+					@media (max-width: 991px) {
+						width: 100%;
+					}
+				}
+			}
+
+			@media (min-width: 992px) {
+				background-color: #f2f2f3;
+				padding: 2vw;
+			}
+		}
+
+		.bike-lists-holder {
+			>.row {
+				>[class*="col-"] {
+					a {
+						text-decoration: none !important;
+						padding: 3vw;
+						display: block;
+						transition: 500ms;
+						position: relative;
+
+						>div {
+							position: relative;
+							z-index: 1;
+						}
+
+						@media (min-width: 992px) {
+							transform: translateY(100px);
+							opacity: 0;
+
+							&:before {
+								content: "";
+								position: absolute;
+								left: 0;
+								top: 0;
+								right: 0;
+								bottom: 0;
+								background-color: rgba(0, 0, 0, 0.05);
+								opacity: 0;
+								transition: 300ms;
+							}
+
+							@include on-event {
+								&:before {
+									opacity: 1;
+								}
+
+								h4 {
+									color: #e22228;
+								}
+
+								img {
+									transform: translateY(-5px);
+								}
+							}
+						}
+
+						@media (max-width: 991px) {
+							display: flex;
+							flex-direction: row-reverse;
+							align-items: center;
+							justify-content: flex-end;
+							border-bottom: 1px solid #e2e2e2;
+							padding: 5px 15px;
+						}
+					}
+
+					.image-box {
+						position: relative;
+						padding: 30%;
+
+						img {
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							transition: 500ms;
+						}
+
+						@media (max-width: 991px) {
+							height: 75px;
+							width: 120px;
+							padding: 0;
+						}
+					}
+
+					.bike-name {
+						h4 {
+							font-weight: 400 !important;
+							font-style: normal !important;
+							margin-top: 0 !important;
+
+							@media (max-width: 991px) {
+								margin-bottom: 0;
+								margin-left: 25px;
+								font-size: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.nav-box {
+		.mini-cart {
+			position: static;
+
+			>a {
+				padding: 23px 15px !important;
+			}
+
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+
+		.navbar-nav {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			@media (max-width: 991px) {
+				flex-direction: column;
+				align-items: flex-start;
+				margin: 0;
+			}
+		}
+
+		ul {
+			li.menu-item {
+				@media (max-width: 991px) {
+					width: 100%;
+					border-bottom: 1px solid #e2e2e2;
+				}
+
+				>a {
+					color: var(--white-color);
+					text-transform: uppercase;
+					font-size: 15px;
+					padding: 25px 15px;
+
+					@media (max-width: 1199px) {
+						padding: 25px 10px;
+					}
+
+					@media (max-width: 991px) {
+						color: var(--black-color);
+						width: 100%;
+						padding: 20px 15px;
+						font-size: 16px;
+					}
+
+					@media (min-width: 992px) {
+						@include on-event {
+							background-color: #4a4b51;
+							color: var(--white-color) !important;
+						}
+					}
+
+					&.dropdown-toggle {
+						@media (max-width: 991px) {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+
+							&:after {
+								content: "";
+								display: inline-block;
+								width: 12px;
+								height: 12px;
+								border-left: 2px solid var(--black-color);
+								border-bottom: 2px solid var(--black-color);
+								transform: rotate(-45deg);
+							}
+
+							&[aria-expanded="true"] {
+								flex-direction: row-reverse;
+
+								&::after {
+									transform: rotate(45deg);
+								}
+							}
+						}
+					}
+				}
+
+				&:after {
+					content: none !important;
+				}
+
+				&.dropdown {
+					position: static;
+
+					.dropdown-menu {
+						left: 0px;
+						right: 0px;
+						float: none;
+						top: auto;
+						bottom: auto;
+						overflow: hidden;
+						padding: 0;
+						border: none;
+						box-shadow: none;
+						display: flex !important;
+						visibility: hidden;
+						opacity: 0;
+						border-radius: 0 !important;
+
+						li.menu-item {
+							>a {
+								color: var(--black-color);
+							}
+						}
+
+						@media (max-width: 991px) {
+							flex-direction: column;
+						}
+
+						@media (min-width: 992px) {
+							max-height: calc(100vh - 100px);
+						}
+					}
+
+					.dropdown-menu {
+						&.show-dropdown {
+							visibility: visible;
+							opacity: 1;
+
+							section.bike-lists-menu {
+								.bike-lists-holder {
+									>.row {
+										>[class*="col-"] {
+											a {
+												transform: translateY(0);
+												opacity: 1;
+											}
+
+											@media (min-width: 992px) {
+												&:nth-child(1) {
+													a {
+														transition-delay: 100ms;
+													}
+												}
+
+												&:nth-child(2) {
+													a {
+														transition-delay: 200ms;
+													}
+												}
+
+												&:nth-child(3) {
+													a {
+														transition-delay: 300ms;
+													}
+												}
+
+												&:nth-child(4) {
+													a {
+														transition-delay: 400ms;
+													}
+												}
+
+												&:nth-child(5) {
+													a {
+														transition-delay: 500ms;
+													}
+												}
+
+												&:nth-child(6) {
+													a {
+														transition-delay: 500ms;
+													}
+												}
+											}
+										}
+									}
+								}
+
+								.col-lg-3 {
+									.menu-right {
+										li {
+											a {
+												transform: translateX(0);
+												opacity: 1;
+											}
+
+											@media (min-width: 992px) {
+												&:nth-child(1) {
+													a {
+														transition-delay: 700ms;
+													}
+												}
+
+												&:nth-child(2) {
+													a {
+														transition-delay: 800ms;
+													}
+												}
+
+												&:nth-child(3) {
+													a {
+														transition-delay: 900ms;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body {
+	&.show-minicart {
+		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.col-side-minicart {
+			background-color: #4a4b51;
+		}
+	}
+
+	&:not(.show-minicart) {
+		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+
+	&.hide-header {
+		#ccm-motors-header {
+			transform: translateY(-100%);
+		}
+	}
+
+
+}
+
+.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
+	max-width: 525px;
+	width: 100%;
+	height: calc(100vh - 70px);
+	background-color: var(--white-color);
+	font-family: $font-fira;
+
+	@media (max-width: 991px) {
+		display: block !important;
+	}
+
+	.min-cart-header {
+		font-family: $font-fira;
+		padding: 20px;
+		border-top: 1px solid #e2e2e2;
+		border-bottom: 1px solid #e2e2e2;
+		display: block;
+		margin-top: -15px;
+		margin-left: -15px;
+		margin-right: -15px;
+		margin-bottom: 20px;
+		font-size: 16px;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.close-mini-cart {
+			svg {
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.woocommerce-mini-cart {
+		.name-price-quantity {
+			.name-price {
+				display: flex;
+				justify-content: space-between;
+				text-transform: uppercase;
+				font-size: 16px;
+
+				span:last-child {
+					padding-left: 20px;
+				}
+			}
+		}
+
+		.qty {
+			font-weight: 300;
+			font-size: 15px;
+
+			span {
+				font-weight: 400;
+			}
+		}
+
+		a {
+			font-size: 16px;
+			font-weight: 400;
+			color: var(--black-color);
+			text-decoration: none;
+		}
+	}
+
+	.woocommerce-mini-cart__total {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 88px;
+		display: flex;
+		justify-content: space-between;
+		padding: 20px;
+		border-top: 1px solid #e2e2e2;
+		margin: 0;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 15px;
+
+		.woocommerce-Price-amount {
+			font-weight: 500;
+		}
+
+		strong {
+			font-weight: 500;
+		}
+	}
+
+	.woocommerce-mini-cart__buttons {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 20px;
+		background-color: #f2f2f3;
+
+		.button {
+			font-size: 16px;
+			text-transform: uppercase;
+			text-align: center;
+			text-decoration: none;
+			font-weight: 400;
+			padding: 15px;
+			line-height: 1;
+
+			&:first-child {
+				background-color: transparent;
+				color: var(--black-color);
+				border: 1px solid;
+
+				@include on-event {
+					background-color: var(--black-color) !important;
+					color: var(--white-color);
+				}
+			}
+
+			&.checkout {
+				border: 1px solid #e22228;
+
+				@include on-event {
+					background-color: var(--black-color) !important;
+					border: 1px solid var(--black-color);
+				}
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		@include offcanvas-style;
+	}
+}
+
+body {
+	&.mobile-header-active {
+		#mobile-header-canvas {
+			transform: translateX(0);
+		}
+
+		.col-side-toggle {
+			background-color: #4a4b51;
+		}
+
+		.mobile-menu-toggle {
+			span {
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:first-child {
+					top: 5px;
+					transform: rotate(45deg);
+				}
+
+				&:last-child {
+					top: 5px;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&.show-minicart {
+		.widget_shopping_cart_content.widget_shopping_cart_content.widget_shopping_cart_content {
+			transform: translateX(0);
+		}
+	}
+}
+
+#mobile-header-canvas {
+	display: none;
+	overflow: auto;
+
+	@media (max-width: 991px) {
+		@include offcanvas-style;
+	}
+}
+
+.bikes-template-templates {
+
+	#ccm-motors-header {
+		@media(max-width: 991px) {
+			background-color: rgba($color: #000000, $alpha: 0.5) !important;
+		}
+
+		@include on-event {
+			background-color: var(--black-color) !important;
+		}
+	}
+
+	&.header-black-bg {
+		#ccm-motors-header {
+			background-color: var(--black-color) !important;
+		}
+	}
 }
