@@ -418,6 +418,11 @@ function bike_scroller() {
 		});
 	}
 }
+function footer() {
+	if(window.innerWidth < 992) {
+		jQuery('.footer-top .menu').parent().parent().addClass('footer-accordion');
+	}
+}
 function bike_specs() {
 	if (window.innerWidth > 991) {
 		var t = 0; // the height of the highest element (after the function runs)
