@@ -18071,9 +18071,11 @@ section.hero-banner-with-breadcrumbs {
     @media (max-width: 991px) {
       section.hero-banner-with-breadcrumbs .video-holder .desktop-only {
         display: none; } }
-    @media (max-width: 991px) {
-      section.hero-banner-with-breadcrumbs .video-holder .mobile-only {
-        display: block; } }
+    section.hero-banner-with-breadcrumbs .video-holder .mobile-only {
+      display: none; }
+      @media (max-width: 991px) {
+        section.hero-banner-with-breadcrumbs .video-holder .mobile-only {
+          display: block !important; } }
     section.hero-banner-with-breadcrumbs .video-holder video,
     section.hero-banner-with-breadcrumbs .video-holder img {
       position: absolute;
