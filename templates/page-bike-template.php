@@ -321,6 +321,8 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         player = new YT.Player('player', {
             height: '390',
             width: '640',
+            autoplay: true,
+            mute: true,
             videoId: '<?= $embed_id ?>',
             events: {
                 'onReady': onPlayerReady,
