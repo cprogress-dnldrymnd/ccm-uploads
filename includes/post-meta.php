@@ -77,7 +77,6 @@ function product_in_bikes()
 			echo '<a target="_blank" class="button button-primary"  href="' . get_the_permalink($page->ID) . '"> View </a>';
 			echo ' <a target="_blank" class="button button-accent" href="' . get_edit_post_link($page->ID) . '" > Edit </a> </li>';
 		}
-
 	}
 	echo '</ul>';
 
@@ -2044,8 +2043,7 @@ Container::make('post_meta', 'Configurator')
 	->add_tab('Sandbox Tracker Ultimate', bike_individual_product_details('sandbox_tracker_ultimate', 'Sandbox Tracker Ultimate'))
 	->add_tab('Street Moto', bike_individual_product_details('street_moto', 'Street Moto'))
 	->add_tab('RAF 100', bike_individual_product_details('raf_100', 'RAF 100'))
-	->add_tab('Heritage 71', bike_individual_product_details('heritage_71', 'Heritage 71'))
-;
+	->add_tab('Heritage 71', bike_individual_product_details('heritage_71', 'Heritage 71'));
 
 Container::make('post_meta', 'Configurator')
 	->where('post_template', '=', 'templates/page-configure-bike-v2.php')
@@ -2245,16 +2243,9 @@ Container::make('post_meta', 'Bike Details')
 					)
 				),
 			Field::make('file', 'background', 'Background')
-				->set_conditional_logic(
-					array(
-						array(
-							'field'   => 'background_type',
-							'value'   => '',
-							'compare' => '=',
-						)
-					)
-				),
+				->set_help_text('Will be played on mobile'),
 			Field::make('text', 'embed_id', 'Youtube Video ID')
+				->set_help_text('Youtube video will only be played on desktop')
 				->set_conditional_logic(
 					array(
 						array(
