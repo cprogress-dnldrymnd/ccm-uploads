@@ -18068,6 +18068,12 @@ section.hero-banner-with-breadcrumbs {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+    @media (max-width: 991px) {
+      section.hero-banner-with-breadcrumbs .video-holder .desktop-only {
+        display: none; } }
+    @media (max-width: 991px) {
+      section.hero-banner-with-breadcrumbs .video-holder .mobile-only {
+        display: block; } }
     section.hero-banner-with-breadcrumbs .video-holder video,
     section.hero-banner-with-breadcrumbs .video-holder img {
       position: absolute;

@@ -1,5 +1,4 @@
 .bikes-template-templates {
-
     .woo-login-popup-sc-modal,
     .woo-login-popup-sc-modal-overlay {
         display: none !important;
@@ -47,7 +46,6 @@ footer.footer {
     }
 
     .btn-box {
-
         a,
         button {
             border: 1px solid var(--main-color);
@@ -68,7 +66,6 @@ footer.footer {
         }
 
         &.btn-bordered {
-
             a,
             button {
                 background-color: transparent !important;
@@ -126,7 +123,6 @@ footer.footer {
         flex-wrap: nowrap;
 
         li {
-
             a,
             span {
                 font-size: 14px;
@@ -199,6 +195,18 @@ section.hero-banner-with-breadcrumbs {
             object-fit: cover;
         }
 
+        .desktop-only {
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+        .mobile-only {
+            display: none;
+            @media (max-width: 991px) {
+                display: block;
+            }
+        }
+
         video,
         img {
             position: absolute;
@@ -209,7 +217,8 @@ section.hero-banner-with-breadcrumbs {
             transform: translateY(-50%);
         }
 
-        @media (max-width: 1500px) {}
+        @media (max-width: 1500px) {
+        }
 
         @media (max-width: 767px) {
             transform: scale(2.5);
@@ -299,7 +308,6 @@ section.bike-navigation {
 
     .bike-title,
     .bike-nav {
-
         span,
         li,
         a {
@@ -354,7 +362,6 @@ section.bike-navigation {
 
             .bike-title,
             .bike-nav {
-
                 span,
                 li,
                 a {
@@ -439,7 +446,6 @@ section.overview {
         }
 
         @media (min-width: 992px) {
-
             h2,
             p {
                 color: var(--white-color);
@@ -624,7 +630,7 @@ section.bike-specification {
                 }
             }
 
-            >div {
+            > div {
                 @media (min-width: 992px) {
                     flex: 0 0 auto;
                     width: 50%;
@@ -729,7 +735,7 @@ section.bike-specification {
 
             @media (min-width: 992px) {
                 @include on-event {
-                    >div {
+                    > div {
                         &.specs-heading {
                             h3 {
                                 color: var(--main-color);
