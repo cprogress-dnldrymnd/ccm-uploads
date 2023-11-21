@@ -514,7 +514,7 @@ function header() {
 	var lastScrollTop = 0;
 	jQuery(window).scroll(function (event) {
 		var st = jQuery(this).scrollTop();
-		if (st > lastScrollTop) {
+		if (st > lastScrollTop && st > 100 ) {
 			jQuery('body').addClass('hide-header');
 			jQuery('body').removeClass('show-header');
 		} else {
