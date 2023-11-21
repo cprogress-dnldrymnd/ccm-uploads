@@ -203,7 +203,7 @@ section.hero-banner-with-breadcrumbs {
         .mobile-only {
             display: none;
             @media (max-width: 991px) {
-                display: block;
+                display: block !important;
             }
         }
 
