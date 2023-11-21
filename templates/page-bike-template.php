@@ -24,19 +24,14 @@ $configure_url = carbon_get_the_post_meta('configure_url');
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
         <div class="video-holder">
             <?php if ($background_type == 'embed') { ?>
-                <iframe frameborder="0" height="100%" width="100%"
-                    src="https://www.youtube.com/embed/<?= $embed_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=<?= $embed_id ?>">
-                </iframe>
-            <?php }
-            else { ?>
+                <!-- 1. The <iframe> (video player) will replace this <div> tag. -->
+                <div id="player"></div>
+            <?php } else { ?>
                 <?php if (strpos($mime_type, 'video') !== false) { ?>
-                    <video id="video" autoplay muted loop playsinline preload="metadata"
-                        src="<?= wp_get_attachment_url($background) ?>">
+                    <video id="video" autoplay muted loop playsinline preload="metadata" src="<?= wp_get_attachment_url($background) ?>">
                     </video>
-                <?php }
-                else { ?>
-                    <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>"
-                        class=" ls-is-cached lazyloaded" src="<?= wp_get_attachment_image_url($background, 'full') ?>">
+                <?php } else { ?>
+                    <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded" src="<?= wp_get_attachment_image_url($background, 'full') ?>">
                 <?php } ?>
             <?php } ?>
         </div>
@@ -50,10 +45,8 @@ $configure_url = carbon_get_the_post_meta('configure_url');
                 </div>
                 <div class="next-section">
                     <a href="#overview" class="d-flex align-items-center justify-content-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
                         </svg>
                     </a>
                 </div>
@@ -141,8 +134,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
                             </div>
                         </div>
                     <?php } ?>
-                <?php }
-                else { ?>
+                <?php } else { ?>
                     <?php if ($overview_heading) { ?>
                         <div class="heading-box text-center">
                             <h2><?= $overview_heading ?></h2>
@@ -311,5 +303,51 @@ $configure_url = carbon_get_the_post_meta('configure_url');
             </div>
         </div>
     </section>
+
 </main>
+<script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: '<?= $embed_id ?>',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+
+    function stopVideo() {
+        player.stopVideo();
+    }
+</script>
 <?php get_footer(); ?>
