@@ -186,7 +186,7 @@ section.hero-banner-with-breadcrumbs {
         pointer-events: none;
         left: 0;
         right: 0;
-
+        pointer-events: none !important;
         iframe,
         video,
         img {

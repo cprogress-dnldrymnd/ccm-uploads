@@ -2243,7 +2243,7 @@ Container::make('post_meta', 'Bike Details')
 					)
 				),
 			Field::make('file', 'background', 'Background')
-				->set_help_text('Will be played on mobile'),
+				->set_help_text('Will be played only on mobile if has embed video'),
 			Field::make('text', 'embed_id', 'Youtube Video ID')
 				->set_help_text('Youtube video will only be played on desktop')
 				->set_conditional_logic(

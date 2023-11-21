@@ -634,8 +634,6 @@ function bike_lists_menu()
 				<div class="col-lg-3">
 					<div class="column-holder">
 						<ul class="menu-right">
-							<li><a href="/motorcycles">VIEW ALL BIKES</a></li>
-							<li><a href="/motorcycles/">CONFIGURE A BIKE</a></li>
 							<li><a href="/contact-us/">ENQUIRE</a></li>
 						</ul>
 					</div>

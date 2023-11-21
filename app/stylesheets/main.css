@@ -18064,7 +18064,8 @@ section.hero-banner-with-breadcrumbs {
     bottom: -120px;
     pointer-events: none;
     left: 0;
-    right: 0; }
+    right: 0;
+    pointer-events: none !important; }
     section.hero-banner-with-breadcrumbs .video-holder iframe,
     section.hero-banner-with-breadcrumbs .video-holder video,
     section.hero-banner-with-breadcrumbs .video-holder img {
