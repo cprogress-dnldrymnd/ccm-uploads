@@ -14624,6 +14624,9 @@ body .overlay {
     z-index: 999;
     display: block;
     opacity: 0.5; }
+  @media (max-width: 991px) {
+    body .overlay {
+      display: none !important; } }
 
 main.overlay {
   position: fixed;
