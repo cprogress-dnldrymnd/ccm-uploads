@@ -18139,7 +18139,7 @@ section.hero-banner-with-breadcrumbs {
         font-size: 64px; } }
   section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs-small {
     min-height: 440px; }
-    section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs-small:before {
+    section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs-small .video-holder:before {
       content: "";
       position: relative;
       background-color: rgba(0, 0, 0, 0.5);

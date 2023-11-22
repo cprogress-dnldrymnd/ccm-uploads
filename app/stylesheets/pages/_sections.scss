@@ -274,15 +274,17 @@ section.hero-banner-with-breadcrumbs {
     }
     &.hero-banner-with-breadcrumbs-small {
         min-height: 440px;
-        &:before {
-            content: "";
-            position: relative;
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
+        .video-holder {
+            &:before {
+                content: "";
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
         }
         .container {
             position: relative;
