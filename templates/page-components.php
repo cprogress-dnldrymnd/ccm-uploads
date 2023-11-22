@@ -3,9 +3,6 @@
  *  Template Name: -Template : Page Components
  *  Template Post Type: page, bikes
  *
- *  This page template has a sidebar built into it, 
- *  and can be used as a home page, in which case the title will not show up.
- *
 */
 
 $footer_type = carbon_get_the_post_meta('footer_type');
@@ -80,7 +77,6 @@ if(get_post_type() == 'bikes' && $display_sticky_button) {
             }
         });
     }
-
 
 </script>
 

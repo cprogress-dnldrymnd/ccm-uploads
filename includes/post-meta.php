@@ -2345,3 +2345,49 @@ Container::make('theme_options', 'Motorcycle Mega Menu')
 				)
 		)
 	);
+
+
+/**page components v2 */
+Container::make('post_meta', 'Page Components V2')
+	->where('post_template', '=', 'templates/page-components-v2.php')
+	->or_where('post_type', '=', 'templates')
+	->add_fields(
+		array(
+			Field::make('complex', 'page_components', '')
+				->add_fields(
+					'template',
+					array(
+						Field::make('select', 'template', 'Template')
+							->add_options(get_templates()),
+						Field::make('checkbox', 'hide_heading', 'Hide Heading'),
+					)
+				)
+				->set_header_template('Template : <%- template %>')
+				->add_fields(
+					__('banner_slider'),
+					array(
+						Field::make('text', 'title', 'Title'),
+						Field::make('complex', 'banner_slider', '')
+							->set_layout('tabbed-horizontal')
+							->add_fields(
+								array(
+									Field::make('image', 'background_image', 'Background Image'),
+									Field::make('rich_text', 'top_text', 'Top Text')
+										->set_width(50),
+									Field::make('text', 'heading', 'Heading')
+										->set_width(50),
+									Field::make('text', 'tagline', 'Tagline')
+										->set_width(50),
+									Field::make('text', 'button_text', 'Button Text')
+										->set_help_text('Leave blank if no button')
+										->set_width(50),
+									Field::make('text', 'button_link', 'Button Link')
+										->set_width(50),
+								)
+							)
+							->set_header_template('<%- heading %>')
+					)
+				)
+				->set_header_template('Banner Slider : <%- title %>')
+		),
+	);
