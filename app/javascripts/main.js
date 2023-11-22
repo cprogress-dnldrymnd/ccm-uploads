@@ -441,7 +441,7 @@ function custom_accordion() {
 		jQuery('.accordion-heading').not(this).each(function () {
 			jQuery(this).parent().removeClass('active');
 		});
-		jQuery(this).parent().addClass('active');
+		jQuery(this).parent().toggleClass('active');
 		e.preventDefault();
 	});
 }
