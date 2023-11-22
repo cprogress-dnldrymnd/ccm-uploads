@@ -18717,7 +18717,7 @@ section.accordion-section {
         max-width: 550px;
         font-size: 33px; }
     section.accordion-section .accordion-holder .accordion-item > div.accordion-content {
-      max-height: 0;
+      height: 0;
       transition: 500ms;
       overflow: hidden;
       position: relative; }

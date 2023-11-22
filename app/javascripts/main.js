@@ -437,11 +437,18 @@ function footer() {
 }
 
 function custom_accordion() {
+	jQuery('.accordion-content').each(function (index, element) {
+		$height = jQuery(this).find('inner').outerHeight();
+
+		jQuery(this).find('inner').css('height', $height + 'px');
+
+	});
 	jQuery('.accordion-heading').click(function (e) {
 		jQuery('.accordion-heading').not(this).each(function () {
 			jQuery(this).parent().removeClass('active');
 		});
 		jQuery(this).parent().toggleClass('active');
+
 		e.preventDefault();
 	});
 }
