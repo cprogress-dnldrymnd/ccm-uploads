@@ -35,6 +35,23 @@ $alt_title = carbon_get_the_post_meta('alt_title');
             </div>
         </div>
     </section>
+    <section class="wysiwyg">
+        <div class="container">
+            <div class="inner text-center">
+                <h2>
+                    NOT YOUR TYPICAL MOTORCYCLE INSURANCE
+                </h2>
+                <p>
+                    CCM Motorcycles have teamed up with two of the greatest names in motorcycling to bring you the very best solutions to insure your CCM! We ensure that they understand your CCM model meaning no more long pauses as you explain what a Spitfire is!
+                </p>
+                <div class="btn-box">
+                    <a class="pc-btn" href="<?= $configure_url ?>" data-target="#enquire-now">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <?php
     page_components_v2();
     ?>
