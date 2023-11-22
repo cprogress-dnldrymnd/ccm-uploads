@@ -18553,8 +18553,8 @@ section.wysiwyg-v2 {
     padding-top: 0; }
 
 section.two-columns-8-4 {
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-top: 100px;
+  padding-bottom: 100px; }
   section.two-columns-8-4 .inner {
     max-width: 1200px;
     margin-left: auto;
@@ -18562,6 +18562,8 @@ section.two-columns-8-4 {
   @media (min-width: 992px) {
     section.two-columns-8-4 h2 {
       font-size: 40px; } }
+  section.two-columns-8-4 + .two-columns-8-4 {
+    padding-top: 0; }
 
 section.background-section {
   background-position: center;

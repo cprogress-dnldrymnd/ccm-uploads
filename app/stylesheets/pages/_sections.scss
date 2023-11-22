@@ -916,8 +916,8 @@ section.wysiwyg-v2 {
 }
 
 section.two-columns-8-4 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     .inner {
         max-width: 1200px;
         margin-left: auto;
@@ -927,6 +927,9 @@ section.two-columns-8-4 {
         @media (min-width: 992px) {
             font-size: 40px;
         }
+    }
+    & + .two-columns-8-4 {
+        padding-top: 0;
     }
 }
 
