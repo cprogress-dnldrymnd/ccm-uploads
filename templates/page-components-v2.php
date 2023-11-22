@@ -12,7 +12,7 @@
 $background = carbon_get_the_post_meta('background');
 $alt_title = carbon_get_the_post_meta('alt_title');
 ?>
-<main id="page-components" class="main-holder  bt-5">
+<main id="page-components" class="main-holder main-holder-v2  bt-5">
     <section class="hero-banner-with-breadcrumbs hero-banner-with-breadcrumbs-small d-flex align-items-end ">
         <div class="video-holder">
             <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded" src="<?= wp_get_attachment_image_url($background, 'full') ?>">
