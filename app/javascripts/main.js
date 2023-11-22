@@ -438,9 +438,9 @@ function footer() {
 
 function custom_accordion() {
 	jQuery('.accordion-content').each(function (index, element) {
-		$height = jQuery(this).find('inner').outerHeight();
+		$height = jQuery(this).find('.inner').outerHeight();
 		console.log($height);
-		jQuery(this).find('inner').css('height', $height + 'px');
+		jQuery(this).find('.inner').css('height', $height + 'px');
 
 	});
 	jQuery('.accordion-heading').click(function (e) {
