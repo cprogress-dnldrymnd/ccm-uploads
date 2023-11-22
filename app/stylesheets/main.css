@@ -18088,6 +18088,8 @@ section.hero-banner-with-breadcrumbs {
       right: 0;
       object-fit: contain;
       transform: translateY(-50%); }
+    section.hero-banner-with-breadcrumbs .video-holder img {
+      object-fit: cover; }
     @media (max-width: 767px) {
       section.hero-banner-with-breadcrumbs .video-holder {
         transform: scale(2.5); } }
