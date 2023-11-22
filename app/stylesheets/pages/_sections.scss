@@ -15,6 +15,9 @@
         }
     }
 }
+.row-reverse {
+    flex-direction: row-reverse;
+}
 .main-holder.main-holder,
 footer.footer {
     padding-top: 0 !important;
