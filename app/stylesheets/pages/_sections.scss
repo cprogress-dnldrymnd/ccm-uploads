@@ -1082,6 +1082,12 @@ section.accordion-section {
                 }
             }
 
+            &:not(.active) {
+                .accordion-content {
+                    height: 0 !important;
+                }
+            }
+
             > div {
                 &.accordion-heading {
                     display: flex;
@@ -1131,7 +1137,6 @@ section.accordion-section {
                 }
 
                 &.accordion-content {
-                    height: 0 !important;
                     transition: 500ms;
                     overflow: hidden;
                     position: relative;
