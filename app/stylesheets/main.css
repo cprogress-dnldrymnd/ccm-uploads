@@ -18650,7 +18650,8 @@ section.two-column-carousel {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--main-color); }
+        background-color: var(--main-color);
+        color: var(--white-color); }
         section.two-column-carousel .inner .navigation-holder > div.swiper-button-disabled {
           background-color: #F2F2F3; }
 
