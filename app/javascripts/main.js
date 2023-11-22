@@ -521,7 +521,7 @@ function header() {
 			jQuery('body').addClass('show-header');
 			jQuery('body').removeClass('hide-header');
 		}
-		if (jQuery('body').hasClass('bikes-template-templates')) {
+		if (jQuery('body').hasClass('bikes-template-templates') || jQuery('body').hasClass('page-template-page-components-v2')) {
 			if (st != 0) {
 				jQuery('body').addClass('header-black-bg');
 			} else {
