@@ -18651,8 +18651,11 @@ section.two-column-carousel {
         align-items: center;
         justify-content: center;
         background-color: var(--main-color);
-        color: var(--white-color); }
+        color: var(--white-color);
+        transition: 400ms; }
         section.two-column-carousel .inner .navigation-holder > div.swiper-button-disabled {
-          background-color: #F2F2F3; }
+          background-color: #f2f2f3; }
+  section.two-column-carousel + section.wysiwyg-v2 {
+    padding-top: 0; }
 
 /*# sourceMappingURL=main.css.map */

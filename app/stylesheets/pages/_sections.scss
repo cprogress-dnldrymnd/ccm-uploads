@@ -1030,9 +1030,12 @@ section.two-column-carousel {
                 color: var(--white-color);
                 transition: 400ms;
                 &.swiper-button-disabled {
-                    background-color: #F2F2F3;
+                    background-color: #f2f2f3;
                 }
             }
         }
+    }
+    & + section.wysiwyg-v2 {
+        padding-top: 0;
     }
 }
