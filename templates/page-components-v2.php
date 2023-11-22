@@ -30,7 +30,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
     </section>
     <section class="wysiwyg-v2">
         <div class="container">
-            <div class="inner text-center">
+            <div class="inner text-center content-margin">
                 <h2>
                     NOT YOUR TYPICAL MOTORCYCLE INSURANCE
                 </h2>
