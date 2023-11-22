@@ -18676,8 +18676,6 @@ section.accordion-section {
     @media (max-width: 991px) {
       section.accordion-section .accordion-holder .accordion-item:not(:last-child) {
         margin-bottom: 40px; } }
-    section.accordion-section .accordion-holder .accordion-item.active .accordion-heading h3 {
-      color: var(--main-color); }
     section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon {
       background-color: var(--black-color); }
       section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon:before, section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon:after {
@@ -18726,7 +18724,7 @@ section.accordion-section {
       transition: 500ms;
       overflow: hidden;
       position: relative; }
-    section.accordion-section .accordion-holder .accordion-item:not(:last-child) .accordion-heading {
+    section.accordion-section .accordion-holder .accordion-item:not(:last-child) {
       margin-bottom: 60px; }
   @media (max-width: 991px) {
     section.accordion-section {
