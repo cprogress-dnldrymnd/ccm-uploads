@@ -65,7 +65,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                         </p>
                     </div>
                     <div class="btn-box btn-bordered">
-                        <a href="#">CALL TO ACTION</a>
+                        <a href="#" class="pc-btn">CALL TO ACTION</a>
                     </div>
                 </div>
             </div>
