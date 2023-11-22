@@ -18641,6 +18641,7 @@ section.two-column-carousel {
     section.two-column-carousel .inner .navigation-holder {
       position: absolute;
       left: calc(58.33333333% + 7.5px);
-      bottom: 0; }
+      bottom: 0;
+      display: flex; }
 
 /*# sourceMappingURL=main.css.map */

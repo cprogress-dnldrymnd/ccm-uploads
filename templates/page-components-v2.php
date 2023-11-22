@@ -195,7 +195,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
 <script>
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
-        loop: true,
+        loop: false,
         navigation: {
             nextEl: '.swiper-button-next-custom',
             prevEl: '.swiper-button-prev-custom',

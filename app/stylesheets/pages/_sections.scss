@@ -1017,6 +1017,9 @@ section.two-column-carousel {
             position: absolute;
             left: calc(58.33333333% + 7.5px);
             bottom: 0;
+            display: flex;
+            > div {
+            }
         }
     }
 }
