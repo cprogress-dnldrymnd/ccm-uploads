@@ -48,7 +48,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
     <section class="two-columns-8-4">
         <div class="container">
             <div class="inner">
-                <div class="row">
+                <div class="row g-5">
                     <div class="col-lg-8">
                         <div class="image-box">
                             <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-insurance.png" alt="">

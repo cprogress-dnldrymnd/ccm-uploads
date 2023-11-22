@@ -17906,6 +17906,9 @@ footer {
 .bikes-template-templates #ccm-motors-header {
   background-color: transparent; }
 
+.content-margin > *:not(:last-child) {
+  margin-bottom: 1.5rem; }
+
 .main-holder.main-holder,
 footer.footer {
   padding-top: 0 !important;
