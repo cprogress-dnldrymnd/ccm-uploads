@@ -207,7 +207,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
         </section>
         <section class="wysiwyg-v2">
             <div class="container">
-                <div class="inner text-center content-margin">
+                <div class="inner content-margin">
                     <h2>
                         WYSIWYG SECTION H2
                     </h2>
