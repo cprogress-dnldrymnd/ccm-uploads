@@ -1018,6 +1018,8 @@ section.two-column-carousel {
             left: calc(58.33333333% + 7.5px);
             bottom: 0;
             display: flex;
+            z-index: 1;
+
             > div {
                 width: 60px;
                 height: 60px;
@@ -1025,6 +1027,9 @@ section.two-column-carousel {
                 align-items: center;
                 justify-content: center;
                 background-color: var(--main-color);
+                &.swiper-button-disabled {
+                    background-color: #F2F2F3;
+                }
             }
         }
     }

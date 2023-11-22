@@ -18642,7 +18642,8 @@ section.two-column-carousel {
       position: absolute;
       left: calc(58.33333333% + 7.5px);
       bottom: 0;
-      display: flex; }
+      display: flex;
+      z-index: 1; }
       section.two-column-carousel .inner .navigation-holder > div {
         width: 60px;
         height: 60px;
