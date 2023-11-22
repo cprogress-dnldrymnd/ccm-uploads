@@ -216,6 +216,9 @@ section.hero-banner-with-breadcrumbs {
             object-fit: contain;
             transform: translateY(-50%);
         }
+        img {
+            object-fit: cover;
+        }
 
         @media (max-width: 767px) {
             transform: scale(2.5);
