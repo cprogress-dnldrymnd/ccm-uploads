@@ -896,6 +896,14 @@ section.wysiwyg-v2 {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        > * {
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
     h2 {
         font-size: 57px !important;
