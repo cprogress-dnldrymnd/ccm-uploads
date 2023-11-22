@@ -217,7 +217,6 @@ section.hero-banner-with-breadcrumbs {
             transform: translateY(-50%);
         }
 
-
         @media (max-width: 767px) {
             transform: scale(2.5);
         }
@@ -884,8 +883,15 @@ section.wysiwyg-v2 {
         margin-right: auto;
     }
     h2 {
-        @media(max-width: 992px) {
-            font-size: 57px;
+        font-size: 57px;
+        @media (max-width: 991px) {
+            font-size: 50px;
+        }
+        @media (max-width: 767px) {
+            font-size: 45px;
+        }
+        @media (max-width: 480px) {
+            font-size: 33px;
         }
     }
 }

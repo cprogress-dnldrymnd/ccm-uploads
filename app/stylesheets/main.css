@@ -18527,8 +18527,16 @@ section.wysiwyg-v2 {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto; }
-  @media (max-width: 992px) {
-    section.wysiwyg-v2 h2 {
-      font-size: 57px; } }
+  section.wysiwyg-v2 h2 {
+    font-size: 57px; }
+    @media (max-width: 991px) {
+      section.wysiwyg-v2 h2 {
+        font-size: 50px; } }
+    @media (max-width: 767px) {
+      section.wysiwyg-v2 h2 {
+        font-size: 45px; } }
+    @media (max-width: 480px) {
+      section.wysiwyg-v2 h2 {
+        font-size: 45px; } }
 
 /*# sourceMappingURL=main.css.map */
