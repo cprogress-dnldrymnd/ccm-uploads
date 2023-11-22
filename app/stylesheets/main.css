@@ -18688,8 +18688,7 @@ section.accordion-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      cursor: pointer;
-      margin-bottom: 30px; }
+      cursor: pointer; }
       section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
         text-transform: uppercase; }
       section.accordion-section .accordion-holder .accordion-item > div.accordion-heading .icon {
