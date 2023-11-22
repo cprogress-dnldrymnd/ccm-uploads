@@ -10,6 +10,7 @@
 <?php get_header(); ?>
 <?php
 $background = carbon_get_the_post_meta('background');
+$alt_title = carbon_get_the_post_meta('alt_title');
 ?>
 <main id="page-components" class="main-holder  bt-5">
     <section class="hero-banner-with-breadcrumbs hero-banner-with-breadcrumbs-small d-flex align-items-end ">
@@ -21,7 +22,7 @@ $background = carbon_get_the_post_meta('background');
             <div class="inner d-flex justify-content-between align-items-end">
                 <div class="heading-box">
                     <h1>
-                        <?php the_title() ?>
+                        <?= $alt_title ? $alt_title : get_the_title() ?>
                     </h1>
                 </div>
                 <div class="next-section">
