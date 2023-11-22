@@ -18682,8 +18682,6 @@ section.accordion-section {
         background-color: var(--white-color); }
       section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon:after {
         content: none; }
-    section.accordion-section .accordion-holder .accordion-item.active .accordion-content {
-      max-height: 800px; }
     section.accordion-section .accordion-holder .accordion-item > div.accordion-heading {
       display: flex;
       justify-content: space-between;
