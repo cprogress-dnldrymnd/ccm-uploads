@@ -18648,6 +18648,7 @@ section.two-column-carousel {
         height: 60px;
         display: flex;
         align-items: center;
-        justify-content: center; }
+        justify-content: center;
+        background-color: var(--main-color); }
 
 /*# sourceMappingURL=main.css.map */
