@@ -18540,6 +18540,8 @@ section.wysiwyg-v2 {
     margin-right: auto; }
     section.wysiwyg-v2 .inner > *:first-child {
       margin-top: 0; }
+    section.wysiwyg-v2 .inner > *:last-child {
+      margin-bottom: 0; }
   section.wysiwyg-v2 h2 {
     font-size: 57px !important; }
     @media (max-width: 991px) {
