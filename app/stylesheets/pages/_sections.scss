@@ -1136,18 +1136,8 @@ section.accordion-section {
                         font-weight: 600;
                         margin-top: 0;
                         max-width: 550px;
+                        font-size: 33px;
 
-                        @media (max-width: 1199px) {
-                            font-size: 50px;
-                        }
-
-                        @media (max-width: 991px) {
-                            font-size: 40px;
-                        }
-
-                        @media (max-width: 767px) {
-                            font-size: 33px;
-                        }
                     }
                 }
 

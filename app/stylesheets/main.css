@@ -18719,16 +18719,8 @@ section.accordion-section {
         font-size: 57px;
         font-weight: 600;
         margin-top: 0;
-        max-width: 550px; }
-        @media (max-width: 1199px) {
-          section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
-            font-size: 50px; } }
-        @media (max-width: 991px) {
-          section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
-            font-size: 40px; } }
-        @media (max-width: 767px) {
-          section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
-            font-size: 33px; } }
+        max-width: 550px;
+        font-size: 33px; }
     section.accordion-section .accordion-holder .accordion-item > div.accordion-content {
       max-height: 0;
       transition: 500ms;
