@@ -15779,11 +15779,11 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
       height: auto; } }
 
 @media (max-width: 991px) {
-  .bikes-template-templates #ccm-motors-header {
+  .bikes-template-template #ccm-motors-header, .page-template-page-components-v2s #ccm-motors-header {
     background-color: rgba(0, 0, 0, 0.5) !important; } }
-.bikes-template-templates #ccm-motors-header:hover, .bikes-template-templates #ccm-motors-header:active, .bikes-template-templates #ccm-motors-header:focus {
+.bikes-template-template #ccm-motors-header:hover, .bikes-template-template #ccm-motors-header:active, .bikes-template-template #ccm-motors-header:focus, .page-template-page-components-v2s #ccm-motors-header:hover, .page-template-page-components-v2s #ccm-motors-header:active, .page-template-page-components-v2s #ccm-motors-header:focus {
   background-color: var(--black-color) !important; }
-.bikes-template-templates.header-black-bg #ccm-motors-header {
+.bikes-template-template.header-black-bg #ccm-motors-header, .page-template-page-components-v2s.header-black-bg #ccm-motors-header {
   background-color: var(--black-color) !important; }
 
 /*footer {
