@@ -18147,7 +18147,8 @@ section.hero-banner-with-breadcrumbs {
       left: 0;
       top: 0;
       right: 0;
-      bottom: 0; }
+      bottom: 0;
+      z-index: 1; }
     section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs-small .container {
       position: relative;
       z-index: 1; }
