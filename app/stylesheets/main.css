@@ -17907,7 +17907,7 @@ footer {
   background-color: transparent; }
 
 .content-margin > *:not(:last-child) {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 30px; }
 
 .main-holder.main-holder,
 footer.footer {

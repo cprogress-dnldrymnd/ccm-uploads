@@ -11,7 +11,7 @@
 .content-margin {
     > * {
         &:not(:last-child) {
-            margin-bottom: 1.5rem;
+            margin-bottom: 30px;
         }
     }
 }
@@ -906,7 +906,7 @@ section.wysiwyg-v2 {
 
     & + .two-columns-8-4 {
         padding-top: 0;
-    } 
+    }
 }
 
 section.two-columns-8-4 {
