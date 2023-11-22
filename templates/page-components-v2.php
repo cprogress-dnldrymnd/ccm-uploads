@@ -236,16 +236,10 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                             <div class="heading-box">
                                 <h2>FREQUENTLY ASKED QUESTIONS</h2>
                             </div>
-                            <div class="description-box">
-                                <p>
-                                    Please fill in your details and one of our team members will contact you within 48
-                                    hours.
-                                </p>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        
+
                     </div>
                 </div>
             </div>
@@ -268,7 +262,14 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                     </div>
                     <div class="col-lg-6">
                         <div class="contact-form">
-                            <?= $contact_form ?>
+                            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                            <script>
+                                hbspt.forms.create({
+                                    region: "eu1",
+                                    portalId: "139521183",
+                                    formId: "c45f8060-df31-4ff7-bdf3-39a8a20823e1"
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
