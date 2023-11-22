@@ -130,7 +130,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                     <!-- Swiper -->
                     <div class="swiper-container mySwiper">
                         <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                            <div class="swiper-slide">
                                 <div class="row">
                                     <div class="col-lg-7">
                                         <div class="image-box">
@@ -202,6 +202,29 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+        <section class="wysiwyg-v2">
+            <div class="container">
+                <div class="inner text-center content-margin">
+                    <h2>
+                        WYSIWYG SECTION H2
+                    </h2>
+                    <p>
+                        The hand-made characteristics shine through, embodying the spirit of our founder, Alan Clews. Since the inception of CCM in 1970, Alan's vision of combining a <a href="">powerful engine</a> with a lightweight and robust frame remains at the heart of our design philosophy.
+                    </p>
+                    <h3>
+                        WYSIWYG SECTION H3
+                    </h3>
+                    <p>
+                    The hand-made characteristics shine through, embodying the spirit of our founder, Alan Clews. Since the inception of CCM in 1970, Alan's vision of combining a powerful engine with a lightweight and robust frame remains at the heart of our design philosophy.
+                    </p>
+                    <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                    </ul>
                 </div>
             </div>
         </section>
