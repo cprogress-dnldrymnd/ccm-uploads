@@ -1005,4 +1005,17 @@ section.background-section {
 section.two-column-carousel {
     padding-top: 140px;
     padding-bottom: 140px;
+    .inner {
+        position: absolute;
+        .row {
+            .col-lg-5 {
+                padding-bottom: 100px;
+            }
+        }
+        .navigation-holder {
+            position: absolute;
+            left: 58.33333333%;
+            bottom: 0;
+        }
+    }
 }
