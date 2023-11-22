@@ -101,7 +101,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
             </div>
         </div>
     </section>
-    <section class="background-section">
+    <section class="background-section" style="background-image: url(https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-1.png)">
         <div class="container">
             <div class="inner content-margin">
                 <div class="heading-box">

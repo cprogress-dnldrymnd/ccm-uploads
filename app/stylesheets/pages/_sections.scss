@@ -921,13 +921,15 @@ section.two-columns-8-4 {
         margin-right: auto;
     }
     h2 {
-        @media(min-width: 992px) {
+        @media (min-width: 992px) {
             font-size: 40px;
         }
     }
 }
 
 section.background-section {
+    background-position: center;
+    background-size: cover;
     .inner {
         max-width: 700px;
         margin-left: auto;
