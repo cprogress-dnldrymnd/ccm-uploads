@@ -18722,8 +18722,9 @@ section.accordion-section {
       max-height: 0;
       transition: 500ms;
       overflow: hidden;
-      position: relative;
-      padding-top: 30px; }
+      position: relative; }
+      section.accordion-section .accordion-holder .accordion-item > div.accordion-content .inner {
+        padding-top: 30px; }
     section.accordion-section .accordion-holder .accordion-item:not(:last-child) {
       margin-bottom: 60px; }
   @media (max-width: 991px) {
