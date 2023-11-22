@@ -2355,13 +2355,6 @@ Container::make('post_meta', 'Page Components V2')
 	->add_tab(
 		'Hero',
 		array(
-			Field::make('radio', 'background_type', 'Background Type')
-				->add_options(
-					array(
-						''      => 'Self Hosted',
-						'embed' => 'Embed',
-					)
-				),
 			Field::make('file', 'background', 'Background Image')
 		)
 	)
