@@ -18639,7 +18639,7 @@ section.two-column-carousel {
       padding-bottom: 100px; }
     section.two-column-carousel .inner .navigation-holder {
       position: absolute;
-      left: calc(58.33333333% + 10px);
+      left: calc(58.33333333% + 7.5px);
       bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */

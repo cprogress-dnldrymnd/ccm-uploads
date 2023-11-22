@@ -1007,6 +1007,7 @@ section.two-column-carousel {
     padding-bottom: 140px;
     .inner {
         position: relative;
+        overflow: hidden;
         .row {
             .col-lg-5 {
                 padding-bottom: 100px;
