@@ -126,8 +126,12 @@ $alt_title = carbon_get_the_post_meta('alt_title');
     <?php } else { ?>
         <section class="two-column-carousel">
             <div class="container">
-                <div class="row">
-                    
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
