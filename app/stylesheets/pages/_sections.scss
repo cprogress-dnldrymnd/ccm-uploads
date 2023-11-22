@@ -883,4 +883,9 @@ section.wysiwyg-v2 {
         margin-left: auto;
         margin-right: auto;
     }
+    h2 {
+        @media(max-width: 992px) {
+            font-size: 57px;
+        }
+    }
 }

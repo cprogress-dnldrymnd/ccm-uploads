@@ -18527,5 +18527,8 @@ section.wysiwyg-v2 {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto; }
+  @media (max-width: 992px) {
+    section.wysiwyg-v2 h2 {
+      font-size: 57px; } }
 
 /*# sourceMappingURL=main.css.map */
