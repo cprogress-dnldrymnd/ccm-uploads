@@ -18682,7 +18682,7 @@ section.accordion-section {
         background-color: var(--white-color); }
       section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon:after {
         content: none; }
-    section.accordion-section .accordion-holder .accordion-item:not(.active):not(.active) {
+    section.accordion-section .accordion-holder .accordion-item:not(.active) .accordion-content {
       height: 0 !important; }
     section.accordion-section .accordion-holder .accordion-item > div.accordion-heading {
       display: flex;
