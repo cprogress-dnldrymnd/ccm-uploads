@@ -15786,6 +15786,14 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
 .bikes-template-templates.header-black-bg #ccm-motors-header {
   background-color: var(--black-color) !important; }
 
+@media (max-width: 991px) {
+  .page-template-page-components-v2 #ccm-motors-header {
+    background-color: rgba(0, 0, 0, 0.5) !important; } }
+.page-template-page-components-v2 #ccm-motors-header:hover, .page-template-page-components-v2 #ccm-motors-header:active, .page-template-page-components-v2 #ccm-motors-header:focus {
+  background-color: var(--black-color) !important; }
+.page-template-page-components-v2.header-black-bg #ccm-motors-header {
+  background-color: var(--black-color) !important; }
+
 /*footer {
 	position: relative;
 	background: $white;
