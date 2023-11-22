@@ -54,7 +54,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                             <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-insurance.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 content-margin">
                         <div class="heading-box">
                             <h3>
                                 HEADING THREE
