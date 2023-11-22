@@ -130,6 +130,44 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                     <!-- Swiper -->
                     <div class="swiper-container mySwiper">
                         <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <div class="image-box">
+                                            <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-service.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="heading-box">
+                                            <h2>SERVICE CAROUSEL</h2>
+                                        </div>
+                                        <div class="description-box">
+                                            <p>
+                                                The hand-made characteristics shine through, embodying the spirit of our founder, Alan Clews. Since the inception of CCM in 1970, Alan's vision of combining a powerful engine with a lightweight and robust frame remains at the heart of our design philosophy.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <div class="image-box">
+                                            <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-service.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="heading-box">
+                                            <h2>SERVICE CAROUSEL</h2>
+                                        </div>
+                                        <div class="description-box">
+                                            <p>
+                                                The hand-made characteristics shine through, embodying the spirit of our founder, Alan Clews. Since the inception of CCM in 1970, Alan's vision of combining a powerful engine with a lightweight and robust frame remains at the heart of our design philosophy.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="swiper-slide">
                                 <div class="row">
                                     <div class="col-lg-7">
