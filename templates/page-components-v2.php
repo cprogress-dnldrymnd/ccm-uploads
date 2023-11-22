@@ -284,7 +284,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                 </div>
             </div>
         </section>
-        <section class="overview contact-form-holder <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="enquire-now">
+        <section class="overview contact-form-holder v2" id="enquire-now">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
