@@ -18596,7 +18596,7 @@ section.two-columns-8-4 {
     section.two-columns-8-4 h2 {
       font-size: 40px; } }
   section.two-columns-8-4 + .two-columns-8-4 {
-    padding-top: 0; }
+    padding-top: 0 !important; }
 
 section.background-section {
   background-position: center;
@@ -18644,7 +18644,6 @@ section.two-column-carousel {
       padding-bottom: 100px; }
     section.two-column-carousel .inner .navigation-holder {
       position: absolute;
-      left: calc(58.33333333% + 7.5px);
       bottom: 0;
       display: flex;
       z-index: 1; }
@@ -18662,13 +18661,15 @@ section.two-column-carousel {
           height: 30px; }
         section.two-column-carousel .inner .navigation-holder > div.swiper-button-disabled {
           background-color: #f2f2f3; }
+      @media (min-width: 991px) {
+        section.two-column-carousel .inner .navigation-holder {
+          left: calc(58.33333333% + 7.5px); } }
   section.two-column-carousel + section.wysiwyg-v2 {
-    padding-top: 0; }
-
-section.accordion-section {
-  background-color: #f2f2f3;
-  padding-top: 140px;
-  padding-bottom: 140px; }
+    padding-top: 0 !important; }
+  @media (max-width: 991px) {
+    section.two-column-carousel {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
 
 section.accordion-section {
   background-color: #f2f2f3;
@@ -18729,6 +18730,9 @@ section.accordion-section {
         padding-top: 30px; }
     section.accordion-section .accordion-holder .accordion-item:not(:last-child) {
       margin-bottom: 40px; }
+      @media (max-width: 991px) {
+        section.accordion-section .accordion-holder .accordion-item:not(:last-child) {
+          margin-bottom: 30px; } }
   @media (max-width: 991px) {
     section.accordion-section {
       padding-top: 100px;

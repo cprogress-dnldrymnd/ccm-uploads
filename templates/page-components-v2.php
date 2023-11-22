@@ -131,7 +131,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                     <div class="swiper-container mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="row">
+                                <div class="row gy-4">
                                     <div class="col-lg-7">
                                         <div class="image-box">
                                             <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-service.png" alt="">
@@ -150,7 +150,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="row">
+                                <div class="row gy-4">
                                     <div class="col-lg-7">
                                         <div class="image-box">
                                             <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-service.png" alt="">
@@ -169,7 +169,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="row">
+                                <div class="row gy-4">
                                     <div class="col-lg-7">
                                         <div class="image-box">
                                             <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-service.png" alt="">
@@ -230,7 +230,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
         </section>
         <section class="accordion-section">
             <div class="container">
-                <div class="row">
+                <div class="row gy-4">
                     <div class="col-lg-6">
                         <div class="inner">
                             <div class="heading-box">
@@ -292,7 +292,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
         </section>
         <section class="overview contact-form-holder v2">
             <div class="container">
-                <div class="row">
+                <div class="row gy-4">
                     <div class="col-lg-6">
                         <div class="inner">
                             <div class="heading-box">
