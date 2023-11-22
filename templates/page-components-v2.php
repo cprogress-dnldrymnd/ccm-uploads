@@ -105,8 +105,8 @@ $alt_title = carbon_get_the_post_meta('alt_title');
         <div class="container">
             <div class="inner content-margin">
                 <div class="heading-box">
-                    <h2>
-                        Lorem ipsum dolor is
+                    <h2 class="mt-0">
+                        LOREM IPSUM DOLOR SIT
                     </h2>
                 </div>
                 <div class="description-box">

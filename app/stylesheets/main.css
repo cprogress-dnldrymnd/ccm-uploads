@@ -18562,7 +18562,9 @@ section.two-columns-8-4 {
 
 section.background-section {
   background-position: center;
-  background-position: center; }
+  background-size: cover;
+  padding-top: 30%;
+  padding-bottom: 30%; }
   section.background-section .inner {
     max-width: 700px;
     margin-left: auto;
