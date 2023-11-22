@@ -17909,6 +17909,9 @@ footer {
 .content-margin > *:not(:last-child) {
   margin-bottom: 30px; }
 
+.row-reverse {
+  flex-direction: row-reverse; }
+
 .main-holder.main-holder,
 footer.footer {
   padding-top: 0 !important;
