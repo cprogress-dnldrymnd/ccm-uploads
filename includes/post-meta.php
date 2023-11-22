@@ -2351,7 +2351,33 @@ Container::make('theme_options', 'Motorcycle Mega Menu')
 Container::make('post_meta', 'Page Components V2')
 	->where('post_template', '=', 'templates/page-components-v2.php')
 	->or_where('post_type', '=', 'templates')
-	->add_fields(
+	->add_tab(
+		'Hero',
+		array(
+			Field::make('radio', 'background_type', 'Background Type')
+				->add_options(
+					array(
+						''      => 'Self Hosted',
+						'embed' => 'Embed',
+					)
+				),
+			Field::make('file', 'background', 'Background')
+				->set_help_text('Will be played only on mobile if has embed video'),
+			Field::make('text', 'embed_id', 'Youtube Video ID')
+				->set_help_text('Youtube video will only be played on desktop')
+				->set_conditional_logic(
+					array(
+						array(
+							'field'   => 'background_type',
+							'value'   => 'embed',
+							'compare' => '=',
+						)
+					)
+				)
+		)
+	)
+	->add_tab(
+		'Sections',
 		array(
 			Field::make('complex', 'page_components', '')
 				->add_fields(

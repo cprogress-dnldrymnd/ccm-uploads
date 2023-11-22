@@ -20,7 +20,7 @@ $mime_type = get_post_mime_type($background);
 $configure_url = carbon_get_the_post_meta('configure_url');
 
 ?>
-<main id="page-components" class="main-holder reusable-blocks bt-5 <?= $class ?> <?= $main_class ?>">
+<main id="page-components" class="main-holder bt-5">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
         <div class="video-holder">
             <?php if ($background_type == 'embed') { ?>

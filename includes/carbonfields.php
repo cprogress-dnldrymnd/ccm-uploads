@@ -253,15 +253,5 @@ function page_components_v2($hide_heading = 0) {
 		}
 
 	}
-	if($two_buttons != true) {
-		foreach($page_components as $key => $page_component) {
-			$section_type = $page_component['_type'];
-			if($section_type == 'contact_form_slider') {
-				$slider = false;
-				include(locate_template('/templates/page-components/_contact_form_slider.php'));
-			} 
-		}
-	}
-
 	return;
 }
