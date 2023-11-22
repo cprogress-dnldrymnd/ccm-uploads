@@ -47,14 +47,12 @@ $alt_title = carbon_get_the_post_meta('alt_title');
     </section>
     <section class="footer-buttons">
         <div class="row g-0">
-            <?php if ($configure_url) { ?>
-                <div class="col-6">
-                    <a href="<?= $configure_url ?>" class="light-blue">
-                        <span>CONFIGURE A BIKE</span>
-                        <span class="icon"></span>
-                    </a>
-                </div>
-            <?php } ?>
+            <div class="col-6">
+                <a href="#" class="light-blue">
+                    <span>CONFIGURE A BIKE</span>
+                    <span class="icon"></span>
+                </a>
+            </div>
 
             <div class="col-6">
                 <a href="/book-ccm-test-ride/" class="light-gray">
