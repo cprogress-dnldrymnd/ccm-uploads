@@ -17901,9 +17901,10 @@ footer {
       margin-top: 5px !important; }
 
 .bikes-template-templates .woo-login-popup-sc-modal,
-.bikes-template-templates .woo-login-popup-sc-modal-overlay {
+.bikes-template-templates .woo-login-popup-sc-modal-overlay, .page-template-page-components-v2 .woo-login-popup-sc-modal,
+.page-template-page-components-v2 .woo-login-popup-sc-modal-overlay {
   display: none !important; }
-.bikes-template-templates #ccm-motors-header {
+.bikes-template-templates #ccm-motors-header, .page-template-page-components-v2 #ccm-motors-header {
   background-color: transparent; }
 
 .content-margin > *:not(:last-child) {
