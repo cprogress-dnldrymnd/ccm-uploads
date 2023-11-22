@@ -25,17 +25,10 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                         <?= $alt_title ? $alt_title : get_the_title() ?>
                     </h1>
                 </div>
-                <div class="next-section">
-                    <a href="#overview" class="d-flex align-items-center justify-content-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
-                        </svg>
-                    </a>
-                </div>
             </div>
         </div>
     </section>
-    <section class="wysiwyg">
+    <section class="wysiwyg-v2">
         <div class="container">
             <div class="inner text-center">
                 <h2>
@@ -49,6 +42,25 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                         GET A QUOTE
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-buttons">
+        <div class="row g-0">
+            <?php if ($configure_url) { ?>
+                <div class="col-6">
+                    <a href="<?= $configure_url ?>" class="light-blue">
+                        <span>CONFIGURE A BIKE</span>
+                        <span class="icon"></span>
+                    </a>
+                </div>
+            <?php } ?>
+
+            <div class="col-6">
+                <a href="/book-ccm-test-ride/" class="light-gray">
+                    <span>BOOK A TEST RIDE</span>
+                    <span class="icon"></span>
+                </a>
             </div>
         </div>
     </section>

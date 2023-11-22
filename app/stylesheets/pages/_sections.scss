@@ -254,7 +254,7 @@ section.hero-banner-with-breadcrumbs {
         }
     }
     &.hero-banner-with-breadcrumbs-small {
-        
+        min-height: 440px;
     }
     &.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs {
         @media (max-width: 767px) {
@@ -872,5 +872,13 @@ body {
                 z-index: 2;
             }
         }
+    }
+}
+
+section.wysiwyg-v2 {
+    .inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
