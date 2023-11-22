@@ -18037,6 +18037,9 @@ footer.footer {
   footer.footer img {
     max-width: 100%; }
 
+.main-holder-v2 h2 {
+  font-size: 57px; }
+
 .breadcrumbs ul {
   list-style: none;
   padding: 0;
