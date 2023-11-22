@@ -18655,7 +18655,8 @@ section.two-column-carousel {
         justify-content: center;
         background-color: var(--main-color);
         color: var(--white-color);
-        transition: 400ms; }
+        transition: 400ms;
+        border: none; }
         section.two-column-carousel .inner .navigation-holder > div svg {
           width: 30px;
           height: 30px; }
