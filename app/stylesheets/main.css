@@ -18520,9 +18520,12 @@ body.bike-scroller-active .bike-scroller .inner {
   right: 0;
   z-index: 2; }
 
-section.wysiwyg-v2 .inner {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto; }
+section.wysiwyg-v2 {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  section.wysiwyg-v2 .inner {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; }
 
 /*# sourceMappingURL=main.css.map */
