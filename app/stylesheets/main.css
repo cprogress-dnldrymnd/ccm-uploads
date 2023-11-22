@@ -18651,5 +18651,7 @@ section.two-column-carousel {
         align-items: center;
         justify-content: center;
         background-color: var(--main-color); }
+        section.two-column-carousel .inner .navigation-holder > div.swiper-button-disabled {
+          background-color: #F2F2F3; }
 
 /*# sourceMappingURL=main.css.map */
