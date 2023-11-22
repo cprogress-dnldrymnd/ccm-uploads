@@ -906,4 +906,9 @@ section.wysiwyg-v2 {
 section.two-columns-8-4 {
     padding-top: 50px;
     padding-bottom: 50px;
+    .inner {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

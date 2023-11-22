@@ -18546,5 +18546,9 @@ section.wysiwyg-v2 {
 section.two-columns-8-4 {
   padding-top: 50px;
   padding-bottom: 50px; }
+  section.two-columns-8-4 .inner {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
 
 /*# sourceMappingURL=main.css.map */
