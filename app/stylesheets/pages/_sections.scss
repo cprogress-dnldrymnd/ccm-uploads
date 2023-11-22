@@ -1,4 +1,5 @@
-.bikes-template-templates, .page-template-page-components-v2 {
+.bikes-template-templates,
+.page-template-page-components-v2 {
     .woo-login-popup-sc-modal,
     .woo-login-popup-sc-modal-overlay {
         display: none !important;
@@ -922,15 +923,18 @@ section.wysiwyg-v2 {
         padding-top: 0;
     }
 }
-
+section.two-column-carousel,
 section.two-columns-8-4 {
-    padding-top: 100px;
-    padding-bottom: 100px;
     .inner {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
     }
+}
+section.two-columns-8-4 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
     h2 {
         @media (min-width: 992px) {
             font-size: 40px;

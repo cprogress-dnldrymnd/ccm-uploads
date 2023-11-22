@@ -18565,16 +18565,20 @@ section.wysiwyg-v2 {
   section.wysiwyg-v2 + .two-columns-8-4 {
     padding-top: 0; }
 
+section.two-column-carousel,
 section.two-columns-8-4 {
   padding-top: 100px;
   padding-bottom: 100px; }
+  section.two-column-carousel .inner,
   section.two-columns-8-4 .inner {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
   @media (min-width: 992px) {
+    section.two-column-carousel h2,
     section.two-columns-8-4 h2 {
       font-size: 40px; } }
+  section.two-column-carousel + .two-columns-8-4,
   section.two-columns-8-4 + .two-columns-8-4 {
     padding-top: 0; }
 
