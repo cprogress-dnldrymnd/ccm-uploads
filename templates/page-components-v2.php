@@ -8,29 +8,13 @@
  */
 ?>
 <?php get_header(); ?>
+<?php
+$background = carbon_get_the_post_meta('background');
+?>
 <main id="page-components" class="main-holder  bt-5">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
         <div class="video-holder">
-            <?php if ($background_type == 'embed') { ?>
-                <iframe class="<?= $background ? 'desktop-only' : '' ?>" frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/<?= $embed_id ?>?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1&loop=1&rel=0&playlist=<?= $embed_id ?>">
-                </iframe>
-                <?php if ($background) { ?>
-                    <?php if (strpos($mime_type, 'video') !== false) { ?>
-                        <video id="video" autoplay muted loop playsinline class="mobile-only" preload="metadata" src="<?= wp_get_attachment_url($background) ?>">
-                        </video>
-                    <?php } else { ?>
-                        <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded" src="<?= wp_get_attachment_image_url($background, 'full') ?>">
-                    <?php } ?>
-                <?php } ?>
-            <?php } else { ?>
-                <?php if (strpos($mime_type, 'video') !== false) { ?>
-                    <video id="video" autoplay muted loop playsinline preload="metadata" src="<?= wp_get_attachment_url($background) ?>">
-                    </video>
-                <?php } else { ?>
-                    <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded" src="<?= wp_get_attachment_image_url($background, 'full') ?>">
-                <?php } ?>
-            <?php } ?>
-
+            <img alt="banner" data-src="<?= wp_get_attachment_image_url($background, 'full') ?>" class=" ls-is-cached lazyloaded" src="<?= wp_get_attachment_image_url($background, 'full') ?>">
         </div>
         <div class="container-fluid container-fluid-wide content">
             <?= breadcrumbs() ?>
