@@ -18657,6 +18657,9 @@ section.two-column-carousel {
         background-color: var(--main-color);
         color: var(--white-color);
         transition: 400ms; }
+        section.two-column-carousel .inner .navigation-holder > div svg {
+          width: 30px;
+          height: 30px; }
         section.two-column-carousel .inner .navigation-holder > div.swiper-button-disabled {
           background-color: #f2f2f3; }
   section.two-column-carousel + section.wysiwyg-v2 {
