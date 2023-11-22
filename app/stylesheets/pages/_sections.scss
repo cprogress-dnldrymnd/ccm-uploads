@@ -253,7 +253,9 @@ section.hero-banner-with-breadcrumbs {
             }
         }
     }
-
+    &.hero-banner-with-breadcrumbs-small {
+        
+    }
     &.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs {
         @media (max-width: 767px) {
             align-items: center !important;
