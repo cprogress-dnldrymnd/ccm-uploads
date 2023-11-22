@@ -18661,4 +18661,7 @@ section.two-column-carousel {
   section.two-column-carousel + section.wysiwyg-v2 {
     padding-top: 0; }
 
+section.accordion-section {
+  background-color: #F2F2F3; }
+
 /*# sourceMappingURL=main.css.map */
