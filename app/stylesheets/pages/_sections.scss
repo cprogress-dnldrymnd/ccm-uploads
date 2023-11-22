@@ -1019,6 +1019,12 @@ section.two-column-carousel {
             bottom: 0;
             display: flex;
             > div {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--main-color);
             }
         }
     }
