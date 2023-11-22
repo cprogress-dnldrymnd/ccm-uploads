@@ -897,4 +897,13 @@ section.wysiwyg-v2 {
             font-size: 33px !important;
         }
     }
+
+    & + .two-columns-8-4 {
+        padding-top: 0;
+    } 
+}
+
+section.two-columns-8-4 {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }

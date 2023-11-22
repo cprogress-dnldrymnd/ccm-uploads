@@ -18540,5 +18540,11 @@ section.wysiwyg-v2 {
     @media (max-width: 480px) {
       section.wysiwyg-v2 h2 {
         font-size: 33px !important; } }
+  section.wysiwyg-v2 + .two-columns-8-4 {
+    padding-top: 0; }
+
+section.two-columns-8-4 {
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 /*# sourceMappingURL=main.css.map */
