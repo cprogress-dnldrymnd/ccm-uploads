@@ -18634,12 +18634,12 @@ section.two-column-carousel {
   padding-top: 140px;
   padding-bottom: 140px; }
   section.two-column-carousel .inner {
-    position: absolute; }
+    position: relative; }
     section.two-column-carousel .inner .row .col-lg-5 {
       padding-bottom: 100px; }
     section.two-column-carousel .inner .navigation-holder {
       position: absolute;
-      left: 58.33333333%;
+      left: calc(58.33333333% + 10px);
       bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1014,7 +1014,7 @@ section.two-column-carousel {
         }
         .navigation-holder {
             position: absolute;
-            left: 58.33333333%;
+            left: calc(58.33333333% + 7.5px);
             bottom: 0;
         }
     }
