@@ -2364,30 +2364,14 @@ Container::make('post_meta', 'Page Components V2')
 				)
 				->set_header_template('Template : <%- template %>')
 				->add_fields(
-					__('banner_slider'),
+					__('wysiwyg'),
 					array(
 						Field::make('text', 'title', 'Title'),
-						Field::make('complex', 'banner_slider', '')
-							->set_layout('tabbed-horizontal')
-							->add_fields(
-								array(
-									Field::make('image', 'background_image', 'Background Image'),
-									Field::make('rich_text', 'top_text', 'Top Text')
-										->set_width(50),
-									Field::make('text', 'heading', 'Heading')
-										->set_width(50),
-									Field::make('text', 'tagline', 'Tagline')
-										->set_width(50),
-									Field::make('text', 'button_text', 'Button Text')
-										->set_help_text('Leave blank if no button')
-										->set_width(50),
-									Field::make('text', 'button_link', 'Button Link')
-										->set_width(50),
-								)
-							)
-							->set_header_template('<%- heading %>')
+						Field::make('rich_text', 'wysiwyg', 'Wysiwyg'),
+						Field::make('text', 'button_text', 'Button Text'),
+						Field::make('text', 'button_link', 'Button Link')
 					)
 				)
-				->set_header_template('Banner Slider : <%- title %>')
+				->set_header_template('Wysiwyg : <%- title %>')
 		),
 	);
