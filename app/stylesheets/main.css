@@ -18630,4 +18630,8 @@ section.background-section {
       section.background-section .heading-box h2 {
         font-size: 33px !important; } }
 
+section.two-column-carousel {
+  padding-top: 140px;
+  padding-bottom: 140px; }
+
 /*# sourceMappingURL=main.css.map */

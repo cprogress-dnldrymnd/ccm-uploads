@@ -133,6 +133,92 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                                 <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-service.png" alt="">
                             </div>
                         </div>
+                        <div class="col-lg-5">
+                            <!-- Swiper -->
+                            <div class="swiper-container mySwiper swiper-slider-style-one">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="background-box" style="background-image: url(https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/Backgrounds.png)">
+                                                <div class="content-holder">
+                                                    <div class="inner">
+                                                        <div class="heading-box">
+                                                            <h3>
+                                                                Spitfire <br> Six
+                                                            </h3>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="image-box" data-swiper-parallax="-50%">
+                                                <img class="no-lazyload" src="https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/six-shadow-2-e1637575702218.png" alt="Spirfire Six">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="background-box" style="background-image: url(https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/mav2.jpg)">
+                                                <div class="content-holder">
+                                                    <div class="inner">
+                                                        <div class="heading-box">
+                                                            <h3>
+                                                                Spitfire <br> Maverick
+                                                            </h3>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="image-box" data-swiper-parallax="-50%">
+                                                <img class="no-lazyload" src="https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/maverick-Cutout.png" alt="Spirtfire Maverick">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="background-box" style="background-image: url(https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/moto-bg.jpg)">
+                                                <div class="content-holder">
+                                                    <div class="inner">
+                                                        <div class="heading-box">
+                                                            <h3>
+                                                                Street <br> Moto
+                                                            </h3>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="image-box" data-swiper-parallax="-50%">
+                                                <img class="no-lazyload" src="https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/Moto-New.png" alt="Street Moto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="background-box" style="background-image: url(https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/tracker-bg.jpg)">
+                                                <div class="content-holder">
+                                                    <div class="inner">
+                                                        <div class="heading-box">
+                                                            <h3>
+                                                                Street <br> Tracker
+                                                            </h3>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="image-box" data-swiper-parallax="-50%">
+                                                <img class="no-lazyload" src="https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/Tracker-New2.png" alt="Street Tracker">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
