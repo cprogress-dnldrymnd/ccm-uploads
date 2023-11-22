@@ -18136,6 +18136,18 @@ section.hero-banner-with-breadcrumbs {
         font-size: 64px; } }
   section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs-small {
     min-height: 440px; }
+    section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs-small:before {
+      content: "";
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
+    section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs-small .container {
+      position: relative;
+      z-index: 1; }
   @media (max-width: 767px) {
     section.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs.hero-banner-with-breadcrumbs {
       align-items: center !important;
