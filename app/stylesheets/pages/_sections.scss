@@ -927,6 +927,11 @@ section.wysiwyg-v2 {
             }
         }
     }
+    h3 {
+        @media (min-width: 992px) {
+            font-size: 33px;
+        }
+    }
     h2 {
         font-size: 57px !important;
         @media (max-width: 991px) {
@@ -1050,14 +1055,13 @@ section.two-column-carousel {
         }
     }
     & + section.wysiwyg-v2 {
-        padding-top: 0!important;
+        padding-top: 0 !important;
     }
-    @media(max-width: 991px) {
+    @media (max-width: 991px) {
         padding-top: 100px;
         padding-bottom: 100px;
     }
 }
-
 
 section.accordion-section {
     background-color: #f2f2f3;
