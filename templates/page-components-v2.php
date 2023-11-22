@@ -103,7 +103,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
     </section>
     <section class="background-section" style="background-image: url(https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-1.png)">
         <div class="container">
-            <div class="inner content-margin">
+            <div class="inner text-center content-margin">
                 <div class="heading-box">
                     <h2 class="mt-0">
                         LOREM IPSUM DOLOR SIT

@@ -18568,6 +18568,18 @@ section.background-section {
   section.background-section .inner {
     max-width: 700px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    color: var(--white-color); }
+  section.background-section .heading-box h2 {
+    font-size: 57px !important; }
+    @media (max-width: 991px) {
+      section.background-section .heading-box h2 {
+        font-size: 50px !important; } }
+    @media (max-width: 767px) {
+      section.background-section .heading-box h2 {
+        font-size: 45px !important; } }
+    @media (max-width: 480px) {
+      section.background-section .heading-box h2 {
+        font-size: 33px !important; } }
 
 /*# sourceMappingURL=main.css.map */

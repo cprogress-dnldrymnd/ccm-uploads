@@ -936,5 +936,21 @@ section.background-section {
         max-width: 700px;
         margin-left: auto;
         margin-right: auto;
+        color: var(--white-color);
+    }
+    .heading-box {
+        h2 {
+            font-size: 57px !important;
+            color: var(--white-color);
+            @media (max-width: 991px) {
+                font-size: 50px !important;
+            }
+            @media (max-width: 767px) {
+                font-size: 45px !important;
+            }
+            @media (max-width: 480px) {
+                font-size: 33px !important;
+            }
+        }
     }
 }
