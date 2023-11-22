@@ -18560,4 +18560,9 @@ section.two-columns-8-4 {
     section.two-columns-8-4 h2 {
       font-size: 40px; } }
 
+section.background-section .inner {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto; }
+
 /*# sourceMappingURL=main.css.map */
