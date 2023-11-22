@@ -2355,7 +2355,8 @@ Container::make('post_meta', 'Page Components V2')
 	->add_tab(
 		'Hero',
 		array(
-			Field::make('file', 'background', 'Background Image')
+			Field::make('text', 'alt_title', 'Alt Title'),
+			Field::make('file', 'background', 'Background Image'),
 		)
 	)
 	->add_tab(
