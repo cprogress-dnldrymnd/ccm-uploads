@@ -18728,7 +18728,7 @@ section.accordion-section {
       section.accordion-section .accordion-holder .accordion-item > div.accordion-content .inner {
         padding-top: 30px; }
     section.accordion-section .accordion-holder .accordion-item:not(:last-child) {
-      margin-bottom: 60px; }
+      margin-bottom: 40px; }
   @media (max-width: 991px) {
     section.accordion-section {
       padding-top: 100px;
