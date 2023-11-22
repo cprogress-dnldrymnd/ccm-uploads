@@ -524,6 +524,7 @@ Container::make('post_meta', 'Subpage Data')
 	->where('post_template', '!=', 'page-customer-exp.php')
 	->where('post_template', '!=', 'page-blog.php')
 	->where('post_template', '!=', 'templates/page-components.php')
+	->where('post_template', '!=', 'templates/page-components-v2.php')
 	->where('post_template', '!=', 'templates/page-tablet.php')
 	->where('post_type', '!=', '3d-flip-book')
 	->add_tab(
