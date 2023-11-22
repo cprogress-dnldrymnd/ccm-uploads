@@ -18563,15 +18563,29 @@ section.two-columns-8-4 {
 section.background-section {
   background-position: center;
   background-size: cover;
-  padding-top: 30%;
-  padding-bottom: 30%; }
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+  position: relative; }
+  section.background-section:before {
+    content: "";
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
+  section.background-section .container {
+    position: relative;
+    z-index: 1; }
   section.background-section .inner {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     color: var(--white-color); }
   section.background-section .heading-box h2 {
-    font-size: 57px !important; }
+    font-size: 57px !important;
+    color: var(--white-color); }
     @media (max-width: 991px) {
       section.background-section .heading-box h2 {
         font-size: 50px !important; } }
