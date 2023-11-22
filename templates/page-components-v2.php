@@ -248,9 +248,11 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                                     <span class="icon"></span>
                                 </div>
                                 <div class="accordion-content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis commodo diam, a aliquam ex posuere ac. Donec posuere tincidunt hendrerit. Aenean euismod, sapien in vestibulum posuere, metus massa viverra urna, id aliquam turpis magna at lorem. Nullam pharetra neque eu diam ornare ornare.
-                                    </p>
+                                    <div class="inner">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis commodo diam, a aliquam ex posuere ac. Donec posuere tincidunt hendrerit. Aenean euismod, sapien in vestibulum posuere, metus massa viverra urna, id aliquam turpis magna at lorem. Nullam pharetra neque eu diam ornare ornare.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
@@ -276,9 +278,11 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                                     <span class="icon"></span>
                                 </div>
                                 <div class="accordion-content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis commodo diam, a aliquam ex posuere ac. Donec posuere tincidunt hendrerit. Aenean euismod, sapien in vestibulum posuere, metus massa viverra urna, id aliquam turpis magna at lorem. Nullam pharetra neque eu diam ornare ornare.
-                                    </p>
+                                    <div class="inner">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis commodo diam, a aliquam ex posuere ac. Donec posuere tincidunt hendrerit. Aenean euismod, sapien in vestibulum posuere, metus massa viverra urna, id aliquam turpis magna at lorem. Nullam pharetra neque eu diam ornare ornare.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
