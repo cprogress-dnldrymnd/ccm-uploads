@@ -290,7 +290,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                     <div class="col-lg-6">
                         <div class="inner">
                             <div class="heading-box">
-                                <h2>REGISTER YOUR INTEREST</h2>
+                                <h2>BOOK A SERVICE</h2>
                             </div>
                             <div class="description-box">
                                 <p>
