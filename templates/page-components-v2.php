@@ -218,13 +218,37 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                         WYSIWYG SECTION H3
                     </h3>
                     <p>
-                    The hand-made characteristics shine through, embodying the spirit of our founder, Alan Clews. Since the inception of CCM in 1970, Alan's vision of combining a powerful engine with a lightweight and robust frame remains at the heart of our design philosophy.
+                        The hand-made characteristics shine through, embodying the spirit of our founder, Alan Clews. Since the inception of CCM in 1970, Alan's vision of combining a powerful engine with a lightweight and robust frame remains at the heart of our design philosophy.
                     </p>
                     <ul>
                         <li>List item one</li>
                         <li>List item two</li>
                         <li>List item three</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+        <section class="overview contact-form-holder <?= $version == 'v2' ? 'v2' : 'v1' ?>" id="enquire-now">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="inner">
+                            <div class="heading-box">
+                                <h2>REGISTER YOUR INTEREST</h2>
+                            </div>
+                            <div class="description-box">
+                                <p>
+                                    Please fill in your details and one of our team members will contact you within 48
+                                    hours.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-form">
+                            <?= $contact_form ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
