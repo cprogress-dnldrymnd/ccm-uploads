@@ -563,6 +563,7 @@ function smooth_scroll() {
 jQuery(document).ready(function () {
 	utm_parameters();
 	bike_navigation();
+	custom_accordion();
 	bike_specs();
 	footer();
 	header();
