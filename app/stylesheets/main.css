@@ -18662,6 +18662,8 @@ section.two-column-carousel {
     padding-top: 0; }
 
 section.accordion-section {
-  background-color: #F2F2F3; }
+  background-color: #F2F2F3;
+  padding-top: 140px;
+  padding-bottom: 140px; }
 
 /*# sourceMappingURL=main.css.map */
