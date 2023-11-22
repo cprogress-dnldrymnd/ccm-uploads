@@ -18556,5 +18556,8 @@ section.two-columns-8-4 {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
+  @media (min-width: 992px) {
+    section.two-columns-8-4 h2 {
+      font-size: 40px; } }
 
 /*# sourceMappingURL=main.css.map */
