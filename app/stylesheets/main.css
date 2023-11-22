@@ -18663,8 +18663,82 @@ section.two-column-carousel {
     padding-top: 0; }
 
 section.accordion-section {
-  background-color: #F2F2F3;
+  background-color: #f2f2f3;
   padding-top: 140px;
   padding-bottom: 140px; }
+
+section.accordion-section {
+  background-color: #f2f2f3;
+  padding-top: 140px;
+  padding-bottom: 140px; }
+  section.accordion-section .accordion-holder {
+    position: relative; }
+    @media (max-width: 991px) {
+      section.accordion-section .accordion-holder .accordion-item:not(:last-child) {
+        margin-bottom: 40px; } }
+    section.accordion-section .accordion-holder .accordion-item.active .accordion-heading h3 {
+      color: var(--main-color); }
+    section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon {
+      background-color: var(--black-color); }
+      section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon:before, section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon:after {
+        background-color: var(--white-color); }
+      section.accordion-section .accordion-holder .accordion-item.active .accordion-heading .icon:after {
+        content: none; }
+    section.accordion-section .accordion-holder .accordion-item.active .accordion-content {
+      max-height: 800px; }
+    section.accordion-section .accordion-holder .accordion-item > div.accordion-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 30px; }
+      section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
+        text-transform: uppercase; }
+      section.accordion-section .accordion-holder .accordion-item > div.accordion-heading .icon {
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--black-color);
+        display: inline-block;
+        position: relative;
+        flex: 0 0 42px;
+        margin-left: 15px; }
+        section.accordion-section .accordion-holder .accordion-item > div.accordion-heading .icon:before, section.accordion-section .accordion-holder .accordion-item > div.accordion-heading .icon:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: var(--black-color); }
+        section.accordion-section .accordion-holder .accordion-item > div.accordion-heading .icon:before {
+          width: 16px;
+          height: 2px; }
+        section.accordion-section .accordion-holder .accordion-item > div.accordion-heading .icon:after {
+          width: 2px;
+          height: 16px; }
+      section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
+        font-size: 57px;
+        font-weight: 600;
+        margin-top: 0;
+        max-width: 550px; }
+        @media (max-width: 1199px) {
+          section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
+            font-size: 50px; } }
+        @media (max-width: 991px) {
+          section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
+            font-size: 40px; } }
+        @media (max-width: 767px) {
+          section.accordion-section .accordion-holder .accordion-item > div.accordion-heading h3 {
+            font-size: 33px; } }
+    section.accordion-section .accordion-holder .accordion-item > div.accordion-content {
+      max-height: 0;
+      transition: 500ms;
+      overflow: hidden;
+      position: relative; }
+    section.accordion-section .accordion-holder .accordion-item:not(:last-child) .accordion-heading {
+      margin-bottom: 60px; }
+  @media (max-width: 991px) {
+    section.accordion-section {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -435,6 +435,16 @@ function footer() {
 		});
 	}
 }
+
+function custom_accordion() {
+	jQuery('.accordion-heading').click(function (e) {
+		jQuery('.accordion-heading').not(this).each(function () {
+			jQuery(this).parent().removeClass('active');
+		});
+		jQuery(this).parent().addClass('active');
+		e.preventDefault();
+	});
+}
 function bike_specs() {
 	if (window.innerWidth > 991) {
 		var t = 0; // the height of the highest element (after the function runs)
@@ -514,7 +524,7 @@ function header() {
 	var lastScrollTop = 0;
 	jQuery(window).scroll(function (event) {
 		var st = jQuery(this).scrollTop();
-		if (st > lastScrollTop && st > 100 ) {
+		if (st > lastScrollTop && st > 100) {
 			jQuery('body').addClass('hide-header');
 			jQuery('body').removeClass('show-header');
 		} else {

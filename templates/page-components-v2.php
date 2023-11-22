@@ -239,7 +239,24 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                         </div>
                     </div>
                     <div class="col-lg-6">
-
+                        <div class="accordion-holder">
+                            <?php foreach ($specifications as $specs) { ?>
+                                <?php $specification = $specs['specification']; ?>
+                                <div class="accordion-item">
+                                    <div class="accordion-heading">
+                                        <h3>
+                                            FREQUENTLY ASKED QUESTION
+                                        </h3>
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis commodo diam, a aliquam ex posuere ac. Donec posuere tincidunt hendrerit. Aenean euismod, sapien in vestibulum posuere, metus massa viverra urna, id aliquam turpis magna at lorem. Nullam pharetra neque eu diam ornare ornare.
+                                        </p>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>
