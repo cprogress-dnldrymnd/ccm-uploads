@@ -18680,13 +18680,9 @@ section.accordion-section {
   padding-top: 140px;
   padding-bottom: 140px; }
   section.accordion-section .inner {
-    max-width: 800px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
-    section.accordion-section .inner > *:first-child {
-      margin-top: 0; }
-    section.accordion-section .inner > *:last-child {
-      margin-bottom: 0; }
   section.accordion-section .accordion-holder {
     position: relative; }
     @media (max-width: 991px) {
