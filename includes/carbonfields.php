@@ -193,6 +193,9 @@ function page_components_v2()
 			case 'buttons':
 				include(locate_template('/templates/page-components-v2/_buttons.php'));
 				break;
+			case 'two_column_carousel':
+				include(locate_template('/templates/page-components-v2/_two_column_carousel.php'));
+				break;
 		}
 	}
 	return;

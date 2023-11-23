@@ -7,7 +7,7 @@ $button_link = $page_component['button_link'];
 
 <section class="wysiwyg-v2" id="<?= $section_id ?>">
     <div class="container">
-        <div class="inner text-center content-margin">
+        <div class="inner content-margin">
             <?= wpautop($wysiwyg) ?>
             <?php if ($button_text) { ?>
                 <div class="btn-box">

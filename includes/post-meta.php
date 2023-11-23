@@ -2440,7 +2440,7 @@ Container::make('post_meta', 'Page Components V2')
 						Field::make('text', 'title', 'Title'),
 						Field::make('text', 'heading', 'Heading'),
 						Field::make('rich_text', 'description', 'Description'),
-						Field::make('textarea', 'contact_form', '')
+						Field::make('textarea', 'contact_form', 'Contact Form')
 
 					)
 				)
