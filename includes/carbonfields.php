@@ -190,6 +190,9 @@ function page_components_v2()
 			case 'background_image_section':
 				include(locate_template('/templates/page-components-v2/_background_image_section.php'));
 				break;
+			case 'buttons':
+				include(locate_template('/templates/page-components-v2/_buttons.php'));
+				break;
 		}
 	}
 	return;
