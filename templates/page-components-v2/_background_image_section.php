@@ -5,8 +5,6 @@ $description = $page_component['description'];
 $button_text = $page_component['button_text'];
 $button_link = $page_component['button_link'];
 ?>
-
-
 <section class="background-section" id="<?= $section_id ?>" style="background-image: url(<?= wp_get_attachment_image_url($image, 'full') ?>)">
     <div class="container">
         <div class="inner text-center content-margin">
