@@ -2411,7 +2411,7 @@ Container::make('post_meta', 'Page Components V2')
 
 								)
 							)
-							->set_header_template('<%- specs_label %>')
+							->set_header_template('<%- heading %>')
 							->set_layout('tabbed-vertical')
 					)
 				)
