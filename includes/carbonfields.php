@@ -181,7 +181,6 @@ function page_components_v2()
 		$section_type = $page_component['_type'];
 		$section_id = 'section-' . get_the_ID() . '-' . $section_type . '_' . $key;
 		switch ($section_type) {
-
 			case 'template':
 				include(locate_template('/templates/page-components/_template.php'));
 				break;

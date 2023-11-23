@@ -2465,7 +2465,7 @@ Container::make('post_meta', 'Page Components V2')
 									Field::make('text', 'button_link', 'Button Link'),
 								)
 							)
-							->set_header_template('<%- accordion_title %>')
+							->set_header_template('<%- button_text %>')
 							->set_layout('tabbed-vertical')
 							->set_max(2)
 					)
