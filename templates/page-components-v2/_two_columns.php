@@ -1,6 +1,10 @@
 <?php
 $wysiwyg = $page_component['wysiwyg'];
 $image = $page_component['image'];
+$heading = $page_component['heading'];
+$description = $page_component['description'];
+$button_text = $page_component['button_text'];
+$button_link = $page_component['button_link'];
 $button_link = $page_component['button_link'];
 ?>
 
@@ -11,23 +15,28 @@ $button_link = $page_component['button_link'];
             <div class="row g-5">
                 <div class="col-lg-8">
                     <div class="image-box">
-                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/ccm-insurance.png" alt="">
+                        <img src="<?= wp_get_attachment_image_url($image, 'full') ?>">
                     </div>
                 </div>
                 <div class="col-lg-4 content-margin">
-                    <div class="heading-box">
-                        <h3>
-                            HEADING THREE
-                        </h3>
-                    </div>
-                    <div class="description-box">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam magna lorem, ultricies eget pretium et, suscipit tincidunt libero.
-                        </p>
-                    </div>
-                    <div class="btn-box btn-bordered">
-                        <a href="#" class="pc-btn">CALL TO ACTION</a>
-                    </div>
+                    <?php if ($heading) { ?>
+                        <div class="heading-box">
+                            <h3>
+                                <?= $heading ?>
+                            </h3>
+                        </div>
+                    <?php } ?>
+                    <?php if ($heading) { ?>
+                        <div class="description-box">
+                            <?= wpautop($description) ?>
+                        </div>
+                    <?php } ?>
+                    <?php if ($button_text) { ?>
+                        <div class="btn-box btn-bordered">
+                            <a href="<?= $button_link ?>" class="pc-btn"><?= $button_text ?></a>
+                        </div>
+                    <?php } ?>
+
                 </div>
             </div>
         </div>
