@@ -271,10 +271,6 @@ $alt_title = carbon_get_the_post_meta('alt_title');
             </div>
         </div>
     </section>
-
-    <?php
-    page_components_v2();
-    ?>
 </main>
 <?php get_footer(); ?>
 
