@@ -2431,7 +2431,7 @@ Container::make('post_meta', 'Page Components V2')
 						Field::make('complex', 'item', 'Items')
 							->add_fields(
 								array(
-									Field::make('text', 'accordion_title', 'Accordion Title')
+									Field::make('text', 'accordion_title', 'Accordion Title'),
 									Field::make('rich_text', 'accordion_description', 'accordion_description')
 
 								)
@@ -2446,7 +2446,7 @@ Container::make('post_meta', 'Page Components V2')
 					array(
 						Field::make('text', 'title', 'Title'),
 						Field::make('text', 'heading', 'Heading'),
-						Field::make('rich_text', 'description', 'Description')
+						Field::make('rich_text', 'description', 'Description'),
 						Field::make('textarea', 'contact_form', '')
 
 					)
