@@ -2,7 +2,6 @@
 $items = $page_component['item'];
 ?>
 
-
 <section class="two-column-carousel">
     <div class="container">
         <div class="inner">
