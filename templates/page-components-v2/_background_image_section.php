@@ -7,7 +7,7 @@ $button_link = $page_component['button_link'];
 ?>
 
 
-<section class="background-section" style="background-image: url(<?= wp_get_attachment_image_url($image, 'full') ?>)" id="<?= $section_id ?>">
+<section class="background-section" id="<?= $section_id ?>" style="background-image: url(<?= wp_get_attachment_image_url($image, 'full') ?>)">
     <div class="container">
         <div class="inner text-center content-margin">
             <?php if ($heading) { ?>
