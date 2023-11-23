@@ -2453,5 +2453,7 @@ Container::make('post_meta', 'Page Components V2')
 					)
 				)
 				->set_header_template('Contact Form : <%- title %>')
+				->set_layout('tabbed-vertical')
+
 		),
 	);
