@@ -2457,7 +2457,7 @@ Container::make('post_meta', 'Page Components V2')
 				->add_fields(
 					__('buttons'),
 					array(
-				->set_header_template('Buttons : <%- title %>')
+						Field::make('text', 'title', 'Title'),
 						Field::make('complex', 'buttons', 'Buttons')
 							->add_fields(
 								array(
@@ -2465,7 +2465,7 @@ Container::make('post_meta', 'Page Components V2')
 									Field::make('text', 'button_link', 'Button Link'),
 								)
 							)
-							->set_header_template('<%- button_text %>')
+							->set_header_template('<%- accordion_title %>')
 							->set_layout('tabbed-vertical')
 							->set_max(2)
 					)
