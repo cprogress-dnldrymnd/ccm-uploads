@@ -2394,5 +2394,63 @@ Container::make('post_meta', 'Page Components V2')
 					)
 				)
 				->set_header_template('Two Columns : <%- title %>')
+				->add_fields(
+					__('background_image_section'),
+					array(
+						Field::make('text', 'title', 'Title'),
+						Field::make('text', 'text', 'Heading'),
+						Field::make('rich_text', 'description', 'Description'),
+						Field::make('text', 'button_text', 'Button Text'),
+						Field::make('text', 'button_link', 'Button Link'),
+					)
+				)
+				->set_header_template('Background Image Section : <%- title %>')
+				->add_fields(
+					__('two_column_carousel'),
+					array(
+						Field::make('text', 'title', 'Title'),
+						Field::make('complex', 'item', 'Items')
+							->add_fields(
+								array(
+									Field::make('text', 'image', 'Image'),
+									Field::make('text', 'heading', 'Heading')
+									Field::make('rich_text', 'description', 'Description')
+
+								)
+							)
+							->set_header_template('<%- specs_label %>')
+							->set_layout('tabbed-vertical')
+					)
+				)
+				->set_header_template('Two Column Carousel : <%- title %>')
+				->add_fields(
+					__('accordion'),
+					array(
+						Field::make('text', 'title', 'Title'),
+						Field::make('text', 'heading', 'Heading'),
+						Field::make('complex', 'item', 'Items')
+							->add_fields(
+								array(
+									Field::make('text', 'accordion_title', 'Accordion Title')
+									Field::make('rich_text', 'accordion_description', 'accordion_description')
+
+								)
+							)
+							->set_header_template('<%- accordion_title %>')
+							->set_layout('tabbed-vertical')
+					)
+				)
+				->set_header_template('Two Column Carousel : <%- title %>')
+				->add_fields(
+					__('contact_form'),
+					array(
+						Field::make('text', 'title', 'Title'),
+						Field::make('text', 'heading', 'Heading'),
+						Field::make('rich_text', 'description', 'Description')
+						Field::make('textarea', 'contact_form', '')
+
+					)
+				)
+				->set_header_template('Contact Form : <%- title %>')
 		),
 	);
