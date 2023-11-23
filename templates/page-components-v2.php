@@ -28,8 +28,10 @@ $alt_title = carbon_get_the_post_meta('alt_title');
             </div>
         </div>
     </section>
-    <?php
-    page_components_v2();
+    <?php while (have_posts()) {
+        the_post();
+        page_components_v2();
+    }
     ?>
     <?php if (is_page(17267)) { ?>
         <section class="background-section" style="background-image: url(https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-1.png)">
