@@ -187,6 +187,9 @@ function page_components_v2()
 			case 'wysiwyg':
 				include(locate_template('/templates/page-components-v2/_wysiwyg.php'));
 				break;
+			case 'two_columns':
+				include(locate_template('/templates/page-components-v2/_two_columns.php'));
+				break;
 		}
 	}
 	return;

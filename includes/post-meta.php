@@ -2387,7 +2387,7 @@ Container::make('post_meta', 'Page Components V2')
 					array(
 						Field::make('text', 'title', 'Title'),
 						Field::make('image', 'image', 'Image'),
-						Field::make('text', 'text', 'Heading'),
+						Field::make('text', 'heading', 'Heading'),
 						Field::make('rich_text', 'description', 'Description'),
 						Field::make('text', 'button_text', 'Button Text'),
 						Field::make('text', 'button_link', 'Button Link'),
@@ -2400,7 +2400,7 @@ Container::make('post_meta', 'Page Components V2')
 					array(
 						Field::make('text', 'title', 'Title'),
 						Field::make('image', 'image', 'Image'),
-						Field::make('text', 'text', 'Heading'),
+						Field::make('text', 'heading', 'Heading'),
 						Field::make('rich_text', 'description', 'Description'),
 						Field::make('text', 'button_text', 'Button Text'),
 						Field::make('text', 'button_link', 'Button Link'),
