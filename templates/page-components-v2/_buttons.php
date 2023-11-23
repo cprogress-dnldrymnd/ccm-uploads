@@ -3,7 +3,7 @@ $buttons = $page_component['buttons'];
 ?>
 
 
-<section class="footer-buttons">
+<section class="footer-buttons" id="<?= $section_id ?>">
     <div class="row g-0">
         <?php foreach ($buttons as $key => $button) { ?>
           
