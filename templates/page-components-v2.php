@@ -33,11 +33,6 @@ $alt_title = carbon_get_the_post_meta('alt_title');
         page_components_v2();
     }
     ?>
-    <?php if (is_page(17267)) { ?>
-     
-    <?php } else { ?>
-  
-    <?php } ?>
    
 </main>
 <?php get_footer(); ?>
