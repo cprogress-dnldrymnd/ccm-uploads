@@ -196,6 +196,9 @@ function page_components_v2()
 			case 'two_column_carousel':
 				include(locate_template('/templates/page-components-v2/_two_column_carousel.php'));
 				break;
+			case 'contact_form':
+				include(locate_template('/templates/page-components-v2/_contact_form.php'));
+				break;
 		}
 	}
 	return;
