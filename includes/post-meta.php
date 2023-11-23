@@ -2364,15 +2364,6 @@ Container::make('post_meta', 'Page Components V2')
 		array(
 			Field::make('complex', 'page_components', '')
 				->add_fields(
-					'template',
-					array(
-						Field::make('select', 'template', 'Template')
-							->add_options(get_templates()),
-						Field::make('checkbox', 'hide_heading', 'Hide Heading'),
-					)
-				)
-				->set_header_template('Template : <%- template %>')
-				->add_fields(
 					__('wysiwyg'),
 					array(
 						Field::make('text', 'title', 'Title'),
