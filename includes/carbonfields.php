@@ -176,7 +176,7 @@ function page_components($hide_heading = 0)
 
 function page_components_v2()
 {
-	$page_components = carbon_get_the_post_meta('page_components');
+	$page_components = carbon_get_the_post_meta('page_components_v2');
 	foreach ($page_components as $key => $page_component) {
 		$section_type = $page_component['_type'];
 		$section_id = 'section-' . get_the_ID() . '-' . $section_type . '_' . $key;
