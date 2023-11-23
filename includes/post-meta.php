@@ -2413,7 +2413,7 @@ Container::make('post_meta', 'Page Components V2')
 							->add_fields(
 								array(
 									Field::make('text', 'image', 'Image'),
-									Field::make('text', 'heading', 'Heading')
+									Field::make('text', 'heading', 'Heading'),
 									Field::make('rich_text', 'description', 'Description')
 
 								)
