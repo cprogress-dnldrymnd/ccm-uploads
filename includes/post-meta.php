@@ -2440,7 +2440,7 @@ Container::make('post_meta', 'Page Components V2')
 							->set_layout('tabbed-vertical')
 					)
 				)
-				->set_header_template('Two Column Carousel : <%- title %>')
+				->set_header_template('Accordion : <%- title %>')
 				->add_fields(
 					__('contact_form'),
 					array(
