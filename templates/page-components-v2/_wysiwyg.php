@@ -4,7 +4,7 @@ $button_text = $page_component['button_text'];
 $button_link = $page_component['button_link'];
 ?>
 
-<section class="wysiwyg-v2" <?= $section_id ?>>
+<section class="wysiwyg-v2" id="<?= $section_id ?>">
     <div class="container">
         <div class="inner text-center content-margin">
             <?= wpautop($wysiwyg) ?>

@@ -10,7 +10,7 @@ $reverse_row = $page_component['reverse_row'];
 ?>
 
 
-<section class="two-columns-8-4" <?= $section_id ?>>
+<section class="two-columns-8-4" id="<?= $section_id ?>">
     <div class="container">
         <div class="inner">
             <div class="row g-5 <?= $reverse_row ? 'row-reverse': '' ?>">
