@@ -8,13 +8,11 @@ $button_link = $page_component['button_link'];
     <div class="container">
         <div class="inner text-center content-margin">
             <?= wpautop($wysiwyg) ?>
-            <?php if ($button_text) { ?>
                 <div class="btn-box">
                     <a class="pc-btn" href="<?= $button_link ?>">
                         <?= $button_text ?>
                     </a>
                 </div>
-            <?php } ?>
         </div>
     </div>
 </section>
