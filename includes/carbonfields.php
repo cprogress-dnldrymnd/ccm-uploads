@@ -187,6 +187,9 @@ function page_components_v2()
 			case 'two_columns':
 				include(locate_template('/templates/page-components-v2/_two_columns.php'));
 				break;
+			case 'background_image_section':
+				include(locate_template('/templates/page-components-v2/_background_image_section.php'));
+				break;
 		}
 	}
 	return;

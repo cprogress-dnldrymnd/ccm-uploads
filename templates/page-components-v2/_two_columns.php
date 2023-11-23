@@ -5,7 +5,6 @@ $heading = $page_component['heading'];
 $description = $page_component['description'];
 $button_text = $page_component['button_text'];
 $button_link = $page_component['button_link'];
-$button_link = $page_component['button_link'];
 $reverse_row = $page_component['reverse_row'];
 ?>
 
