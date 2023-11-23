@@ -34,29 +34,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
     }
     ?>
     <?php if (is_page(17267)) { ?>
-    
-       
-        <section class="background-section" style="background-image: url(https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-1.png)">
-            <div class="container">
-                <div class="inner text-center content-margin">
-                    <div class="heading-box">
-                        <h2 class="mt-0">
-                            LOREM IPSUM DOLOR SIT
-                        </h2>
-                    </div>
-                    <div class="description-box">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam magna lorem, ultricies eget pretium et, suscipit tincidunt libero. Quisque vehicula volutpat diam. Morbi magna sem, viverra non euismod at, elementum in nisl.
-                        </p>
-                    </div>
-                    <div class="btn-box">
-                        <a class="pc-btn" href="<?= $configure_url ?>" data-target="#enquire-now">
-                            GET A QUOTE
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+     
     <?php } else { ?>
         <section class="two-column-carousel">
             <div class="container">
