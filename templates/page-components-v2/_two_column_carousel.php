@@ -2,7 +2,7 @@
 $items = $page_component['item'];
 ?>
 
-<section class="two-column-carousel">
+<section class="two-column-carousel" id="<?= $section_id ?>">
     <div class="container">
         <div class="inner">
             <!-- Swiper -->

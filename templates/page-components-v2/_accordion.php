@@ -4,7 +4,7 @@ $items = $page_component['item'];
 ?>
 
 
-<section class="accordion-section">
+<section class="accordion-section" id="<?= $section_id ?>">
     <div class="container">
         <div class="inner">
             <div class="row gy-4">
