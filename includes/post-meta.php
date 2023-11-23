@@ -2362,7 +2362,7 @@ Container::make('post_meta', 'Page Components V2')
 	->add_tab(
 		'Sections',
 		array(
-			Field::make('complex', 'page_components', '')
+			Field::make('complex', 'page_components_v2', '')
 				->add_fields(
 					__('wysiwyg'),
 					array(
