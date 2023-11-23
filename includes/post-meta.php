@@ -2386,6 +2386,7 @@ Container::make('post_meta', 'Page Components V2')
 					__('two_columns'),
 					array(
 						Field::make('text', 'title', 'Title'),
+						Field::make('text', 'image', 'Image'),
 						Field::make('text', 'text', 'Heading'),
 						Field::make('rich_text', 'description', 'Description'),
 						Field::make('text', 'button_text', 'Button Text'),
