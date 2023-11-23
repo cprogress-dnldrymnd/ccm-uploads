@@ -6,13 +6,14 @@ $description = $page_component['description'];
 $button_text = $page_component['button_text'];
 $button_link = $page_component['button_link'];
 $button_link = $page_component['button_link'];
+$reverse_row = $page_component['reverse_row'];
 ?>
 
 
-<section class="two-columns-8-4">
+<section class="two-columns-8-4" <?= $section_id ?>>
     <div class="container">
         <div class="inner">
-            <div class="row g-5">
+            <div class="row g-5 <?= $reverse_row ? 'row-reverse': '' ?>">
                 <div class="col-lg-8">
                     <div class="image-box">
                         <img src="<?= wp_get_attachment_image_url($image, 'full') ?>">
