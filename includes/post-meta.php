@@ -2454,6 +2454,22 @@ Container::make('post_meta', 'Page Components V2')
 					)
 				)
 				->set_header_template('Contact Form : <%- title %>')
+				->add_fields(
+					__('buttons'),
+					array(
+						Field::make('complex', 'buttons', 'Buttons')
+							->add_fields(
+								array(
+									Field::make('text', 'button_text', 'Button Text'),
+									Field::make('text', 'button_link', 'Button Link'),
+								)
+							)
+							->set_header_template('<%- accordion_title %>')
+							->set_layout('tabbed-vertical')
+							->set_max(2)
+					)
+				)
+				->set_header_template('Buttons : <%- title %>')
 				->set_layout('tabbed-vertical')
 
 		),
