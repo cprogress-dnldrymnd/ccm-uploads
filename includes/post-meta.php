@@ -2457,6 +2457,7 @@ Container::make('post_meta', 'Page Components V2')
 				->add_fields(
 					__('buttons'),
 					array(
+				->set_header_template('Buttons : <%- title %>')
 						Field::make('complex', 'buttons', 'Buttons')
 							->add_fields(
 								array(
