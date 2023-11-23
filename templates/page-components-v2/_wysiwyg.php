@@ -1,5 +1,6 @@
 <?php
 $wysiwyg = $page_component['wysiwyg'];
+$heading = $page_component['heading'];
 $button_text = $page_component['button_text'];
 $button_link = $page_component['button_link'];
 ?>
