@@ -2382,5 +2382,17 @@ Container::make('post_meta', 'Page Components V2')
 					)
 				)
 				->set_header_template('Wysiwyg : <%- title %>')
+				->add_fields(
+					__('two_columns'),
+					array(
+						Field::make('text', 'title', 'Title'),
+						Field::make('text', 'text', 'Heading'),
+						Field::make('rich_text', 'description', 'Description'),
+						Field::make('text', 'button_text', 'Button Text'),
+						Field::make('text', 'button_link', 'Button Link'),
+						Field::make('checkbox', 'reverse_row', 'Reverse Row'),
+					)
+				)
+				->set_header_template('Two Columns : <%- title %>')
 		),
 	);
