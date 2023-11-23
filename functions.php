@@ -6,7 +6,7 @@
 
 // Define the version so we can easily replace it throughout the theme
 define('ccm_VERSION', 1.0);
-
+define('style_version', 3.2);
 /*-----------------------------------------------------------------------------------*/
 /*  Set the maximum allowed width for any content in the theme
 /*-----------------------------------------------------------------------------------*/
@@ -336,7 +336,7 @@ function ccm_scripts()
 	wp_enqueue_style('ccm-justified-style', get_template_directory_uri() . '/app/stylesheets/vendors/justifiedGallery.css');
 	wp_enqueue_style('ccm-fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
 	wp_enqueue_style('ccm-jquery-ui', '//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css');
-	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css');
+	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css', '', style_version);
 
 
 	wp_enqueue_script('ccm-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
@@ -349,7 +349,7 @@ function ccm_scripts()
 	wp_enqueue_script('ct-fanct', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js');
 	wp_enqueue_script('ccm-jquery-ui-js', 'https://code.jquery.com/ui/1.13.1/jquery-ui.js');
 	//wp_enqueue_script('ct-horizotal-scroll', get_template_directory_uri() . '/app/javascripts/vendors/jquery-horizontal-scroll.min.js');
-	wp_enqueue_script('ccm-script', get_template_directory_uri() . '/app/javascripts/main.js');
+	wp_enqueue_script('ccm-script', get_template_directory_uri() . '/app/javascripts/main.js', '', style_version);
 	
 	if (is_page_template('templates/page-components.php') || is_page_template('templates/page-components-v2.php')) {
 		wp_enqueue_style('ccm-aos', get_template_directory_uri() . '/app/vendors/aos.css');
