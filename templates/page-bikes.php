@@ -24,6 +24,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                     $bike_slider_image_bike_page = carbon_get_post_meta($bike['id'], 'bike_slider_image_bike_page');
                     $bike_slider_image = carbon_get_post_meta($bike['id'], 'bike_slider_image');
                     $tagline = carbon_get_post_meta($bike['id'], 'tagline');
+                    $configure_url = carbon_get_post_meta($bike['id'], 'configure_url');
                     $bike_image = $bike_slider_image_bike_page ? $bike_slider_image_bike_page : $bike_slider_image;
                     $bike_image_url = wp_get_attachment_image_url($bike_image, 'large');
                     ?>
@@ -45,10 +46,19 @@ $bikes = carbon_get_the_post_meta('bikes');
                                     </p>
                                 </div>
                             <?php } ?>
-                            <div class="btn-box">
-                                <a href="<?= $link ?>" class="pc-btn">
-                                    DISCOVER
-                                </a>
+                            <div class="button-group-box">
+                                <?php if ($configure_url) { ?>
+                                    <div class="btn-box">
+                                        <a href="<?= $link ?>" class="pc-btn">
+                                            CCONFIGURE
+                                        </a>
+                                    </div>
+                                <?php } ?>
+                                <div class="btn-box">
+                                    <a href="<?= $link ?>" class="pc-btn">
+                                        DISCOVER
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -70,7 +80,7 @@ $bikes = carbon_get_the_post_meta('bikes');
         pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
-            formatFractionCurrent: function(number) {
+            formatFractionCurrent: function (number) {
                 return '0' + number;
             }
         },
