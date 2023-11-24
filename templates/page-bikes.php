@@ -61,7 +61,45 @@ $alt_title = carbon_get_the_post_meta('alt_title');
 
 <script>
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        loop: false,
+        slidesPerView: 2,
+        loop: true,
+        centeredSlides: true,
+        parallax: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            type: 'bullets',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+
+            481: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+
+            768: {
+                spaceBetween: 30,
+            },
+
+
+            992: {
+                spaceBetween: 40,
+            },
+
+            1024: {
+                spaceBetween: 50,
+            },
+
+
+        }
     });
 </script>
