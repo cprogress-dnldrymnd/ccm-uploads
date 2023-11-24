@@ -16,7 +16,7 @@ $bikes = carbon_get_the_post_meta('bikes');
         <h1 class="slider-title"><?php the_title() ?></h1>
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
-                <?php foreach ($bikes as $bikes) { ?>
+                <?php foreach ($bikes as $bike) { ?>
                     <div class="swiper-slide">
                         <div class="image-box">
                             <img class="no-lazyload" src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
