@@ -18769,9 +18769,11 @@ section.slider-hero {
     @media (min-width: 768px) {
       section.slider-hero .swiper-pagination {
         display: none !important; } }
-  section.slider-hero .row-nav svg {
-    width: 57px;
-    height: 50px; }
+  section.slider-hero .row-nav {
+    margin-top: 20px; }
+    section.slider-hero .row-nav svg {
+      width: 57px;
+      height: 50px; }
   section.slider-hero .swiper-slide .image-box {
     padding: 22%;
     position: relative; }
