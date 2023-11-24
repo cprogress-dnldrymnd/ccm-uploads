@@ -2488,7 +2488,6 @@ Bikes		==========================================================
 
 Container::make('theme_options', 'Bikes')
 	->set_page_parent('edit.php?post_type=bikes')
-	->where('post_template', '=', 'templates/page-bikes.php')
 	->add_fields(
 		array(
 			Field::make('association', 'bikes', __('Select Bikes'))
