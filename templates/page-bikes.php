@@ -20,32 +20,25 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                     <div class="image-box">
                         <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="image-box">
-                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
+                    <div class="content-holder text-center">
+                        <div class="heading-box">
+                            <h2>
+                                MAVERICK
+                            </h2>
+                        </div>
+                        <div class="description-box">
+                            <p>
+                                Motorcycle tag line.
+                            </p>
+                        </div>
+                        <div class="btn-box">
+                            <a href="#" class="pc-btn">
+                                DISCOVER
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="image-box">
-                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="image-box">
-                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="image-box">
-                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="image-box">
-                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>

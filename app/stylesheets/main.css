@@ -18746,16 +18746,18 @@ section.accordion-section {
       padding-top: 100px;
       padding-bottom: 100px; } }
 
-section.slider-hero .image-box {
-  padding: 30%;
-  position: relative; }
-  section.slider-hero .image-box img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    object-position: center; }
+section.slider-hero {
+  padding-top: 200px; }
+  section.slider-hero .image-box {
+    padding: 22%;
+    position: relative; }
+    section.slider-hero .image-box img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center; }
 
 /*# sourceMappingURL=main.css.map */
