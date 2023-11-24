@@ -45,19 +45,10 @@ $bikes = carbon_get_the_post_meta('bikes');
                                     </p>
                                 </div>
                             <?php } ?>
-                            <div class="button-group-box row justify-content-center align-items-center">
-                                <?php if ($configure_url) { ?>
-                                    <div class="btn-box col-auto">
-                                        <a href="<?= $link ?>" class="pc-btn">
-                                            CCONFIGURE
-                                        </a>
-                                    </div>
-                                <?php } ?>
-                                <div class="btn-box col-auto">
-                                    <a href="<?= $link ?>" class="pc-btn">
-                                        DISCOVER
-                                    </a>
-                                </div>
+                            <div class="btn-box col-auto">
+                                <a href="<?= $link ?>" class="pc-btn">
+                                    Personalise Your Ride
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -66,10 +57,11 @@ $bikes = carbon_get_the_post_meta('bikes');
 
             </div>
             <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
-    <section class="bike-lists-menu bike-lists-menu-page">
+    <section class="bike-lists-menu bike-lists-menu-page d-none">
         <div class="container bike-lists-holder">
             <div class="row g-0 bikes">
                 <?php foreach ($bikes as $key => $bike) { ?>
