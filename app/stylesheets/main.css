@@ -15770,6 +15770,9 @@ section.bike-lists-menu.bike-lists-menu.bike-lists-menu {
   section.bike-lists-menu.bike-lists-menu.bike-lists-menu.bike-lists-menu-page {
     padding-top: 50px;
     padding-bottom: 50px; }
+    @media (max-width: 767px) {
+      section.bike-lists-menu.bike-lists-menu.bike-lists-menu.bike-lists-menu-page .bike-lists-holder > .row > [class*="col-"]:first-child a {
+        border-top: 1px solid #e2e2e2; } }
     section.bike-lists-menu.bike-lists-menu.bike-lists-menu.bike-lists-menu-page .bike-lists-holder > .row > [class*="col-"] a {
       opacity: 1;
       transform: none !important; }
@@ -18777,7 +18780,8 @@ section.slider-hero {
       object-fit: contain;
       object-position: center; }
   section.slider-hero .swiper-slide .heading-box h2 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 10px; }
   @media (max-width: 767px) {
     section.slider-hero .swiper-slide .heading-box {
       padding-top: 30px; } }
