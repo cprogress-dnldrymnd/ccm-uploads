@@ -18737,6 +18737,7 @@ section.accordion-section {
 
 section.slider-hero {
   padding-top: 200px;
+  padding-bottom: 70px;
   position: relative; }
   @media (max-width: 575px) {
     section.slider-hero {
