@@ -1189,6 +1189,15 @@ section.slider-hero {
         right: 0;
         text-align: center;
         text-transform: uppercase;
+        @media (max-width: 991px) {
+            font-size: 200px;
+        }
+        @media (max-width: 767px) {
+            font-size: 150px;
+        }
+        @media (max-width: 575px) {
+            font-size: 105px;
+        }
     }
     .swiper-slide {
         .image-box {

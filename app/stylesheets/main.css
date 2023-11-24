@@ -18745,6 +18745,15 @@ section.slider-hero {
     right: 0;
     text-align: center;
     text-transform: uppercase; }
+    @media (max-width: 991px) {
+      section.slider-hero .slider-title {
+        font-size: 200px; } }
+    @media (max-width: 767px) {
+      section.slider-hero .slider-title {
+        font-size: 150px; } }
+    @media (max-width: 575px) {
+      section.slider-hero .slider-title {
+        font-size: 150px; } }
   section.slider-hero .swiper-slide .image-box {
     padding: 22%;
     position: relative; }
