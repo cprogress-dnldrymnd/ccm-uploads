@@ -807,11 +807,11 @@ function swiper_slider() {
 				},
 
 				481: {
-					slidesPerView: 2,
 					spaceBetween: 20,
 				},
 
 				768: {
+					slidesPerView: 2,
 					spaceBetween: 30,
 				},
 
