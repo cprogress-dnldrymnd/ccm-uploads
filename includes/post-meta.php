@@ -2466,3 +2466,22 @@ Container::make('post_meta', 'Page Components V2')
 
 		),
 	);
+
+
+/* 
+Bikes		==========================================================
+*/
+
+Container::make('post_meta', 'Data')
+	->where('post_template', '=', 'templates/page-bikes.php')
+	->add_fields(
+		Field::make('association', 'bikes', __('Select Bikes'))
+			->set_types(
+				array(
+					array(
+						'type'      => 'post',
+						'post_type' => 'bikes',
+					)
+				)
+			)
+	);
