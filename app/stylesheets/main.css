@@ -15769,6 +15769,8 @@ section.bike-lists-menu.bike-lists-menu.bike-lists-menu {
         font-size: 16px; } }
   section.bike-lists-menu.bike-lists-menu.bike-lists-menu.bike-lists-menu-page .bike-lists-holder > .row > [class*="col-"] a {
     opacity: 1; }
+    section.bike-lists-menu.bike-lists-menu.bike-lists-menu.bike-lists-menu-page .bike-lists-holder > .row > [class*="col-"] a .bike-name {
+      text-transform: uppercase; }
 
 /*footer {
 	position: relative;
