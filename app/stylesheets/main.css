@@ -18778,5 +18778,8 @@ section.slider-hero {
       object-position: center; }
   section.slider-hero .swiper-slide .heading-box h2 {
     text-transform: uppercase; }
+  @media (max-width: 767px) {
+    section.slider-hero .swiper-slide .heading-box {
+      padding-top: 30px; } }
 
 /*# sourceMappingURL=main.css.map */
