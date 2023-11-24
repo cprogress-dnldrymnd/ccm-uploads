@@ -1097,8 +1097,17 @@ section.bike-lists-menu.bike-lists-menu.bike-lists-menu {
 		}
 	}
 	&.bike-lists-menu-page {
-		.bike-lists-holder > .row > [class*="col-"] a {
-			opacity: 1;
+		.bike-lists-holder {
+			> .row {
+				> [class*="col-"] {
+					a {
+						opacity: 1;
+						.bike-name {
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
 		}
 	}
 }
