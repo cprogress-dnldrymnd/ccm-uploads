@@ -18757,7 +18757,8 @@ section.slider-hero {
     top: 69px;
     left: 0;
     right: 0;
-    text-align: center; }
+    text-align: center;
+    text-transform: uppercase; }
   section.slider-hero .image-box {
     padding: 22%;
     position: relative; }
