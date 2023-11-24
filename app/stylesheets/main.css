@@ -15775,6 +15775,10 @@ section.bike-lists-menu.bike-lists-menu.bike-lists-menu {
       transform: none !important; }
       section.bike-lists-menu.bike-lists-menu.bike-lists-menu.bike-lists-menu-page .bike-lists-holder > .row > [class*="col-"] a .bike-name {
         text-transform: uppercase; }
+      section.bike-lists-menu.bike-lists-menu.bike-lists-menu.bike-lists-menu-page .bike-lists-holder > .row > [class*="col-"] a .image-box {
+        padding: 25%; }
+        section.bike-lists-menu.bike-lists-menu.bike-lists-menu.bike-lists-menu-page .bike-lists-holder > .row > [class*="col-"] a .image-box img {
+          object-fit: contain; }
 
 /*footer {
 	position: relative;

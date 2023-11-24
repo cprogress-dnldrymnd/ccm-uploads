@@ -1108,6 +1108,12 @@ section.bike-lists-menu.bike-lists-menu.bike-lists-menu {
 						.bike-name {
 							text-transform: uppercase;
 						}
+						.image-box {
+							padding: 25%;
+							img {
+								object-fit: contain;
+							}
+						}
 					}
 				}
 			}
