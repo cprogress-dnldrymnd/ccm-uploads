@@ -28,7 +28,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                     $bike_image_url = wp_get_attachment_image_url($bike_image, 'large');
                     ?>
                     <div class="swiper-slide">
-                        <div class="image-box" data-swiper-parallax="-50%">
+                        <div class="image-box" data-swiper-parallax="-20%">
                             <img class="no-lazyload" src="<?= $bike_image_url ?>" alt="<?= $title ?>">
                         </div>
                         <div class="content-holder text-center">
