@@ -440,7 +440,6 @@ function custom_accordion() {
 	jQuery('.accordion-content').each(function (index, element) {
 		$height = jQuery(this).find('.inner').outerHeight();
 		jQuery(this).css('height', $height + 'px');
-
 	});
 	jQuery('.accordion-heading').click(function (e) {
 		jQuery('.accordion-heading').not(this).each(function () {
