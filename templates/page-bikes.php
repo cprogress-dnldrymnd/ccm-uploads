@@ -57,7 +57,14 @@ $bikes = carbon_get_the_post_meta('bikes');
 
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-pagination"></div>
+            <div class="row">
+                <div class="col-auto">
+                    <div class="swiper-button-next-custom"></div>
+                </div>
+                <div class="col-auto">
+                    <div class="swiper-button-prev-custom"></div>
+                </div>
+            </div>
         </div>
     </section>
 
