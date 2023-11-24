@@ -18755,6 +18755,7 @@ section.slider-hero .image-box {
     top: 0;
     height: 100%;
     width: 100%;
-    object-fit: contain; }
+    object-fit: contain;
+    object-position: center; }
 
 /*# sourceMappingURL=main.css.map */
