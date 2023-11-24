@@ -56,6 +56,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                 <?php } ?>
 
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -102,6 +103,10 @@ $bikes = carbon_get_the_post_meta('bikes');
         loop: true,
         centeredSlides: true,
         parallax: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
         breakpoints: {
 
             0: {
