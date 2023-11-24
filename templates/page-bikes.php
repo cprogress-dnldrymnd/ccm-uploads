@@ -18,15 +18,18 @@ $bikes = carbon_get_the_post_meta('bikes');
             <div class="swiper-wrapper">
                 <?php foreach ($bikes as $bike) { ?>
                     <?php
+                    $title = get_the_title($bike['id']);
+                    $link = get_permalink($bike['id']);
                     $bike_tagline = carbon_get_post_meta($bike['id'], 'bike_tagline');
                     $bike_slider_image_bike_page = carbon_get_post_meta($bike['id'], 'bike_slider_image_bike_page');
+                    $bike_slider_image = carbon_get_post_meta($bike['id'], 'bike_slider_image');
                     $tagline = carbon_get_post_meta($bike['id'], 'tagline');
-
-
+                    $bike_image = $bike_slider_image_bike_page ? $bike_slider_image_bike_page : $bike_slider_image;
+                    $bike_image_url = wp_get_attachment_image_url($bike_image, 'large');
                     ?>
                     <div class="swiper-slide">
                         <div class="image-box">
-                            <img class="no-lazyload" src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
+                            <img class="no-lazyload" src="<?= $bike_image_url ?>" alt="<?= $title ?>">
                         </div>
                         <div class="content-holder text-center">
                             <div class="heading-box">
@@ -43,7 +46,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                                 </div>
                             <?php } ?>
                             <div class="btn-box">
-                                <a href="<?= get_permalink($bike['ID']) ?>" class="pc-btn">
+                                <a href="<?= $link ?>" class="pc-btn">
                                     DISCOVER
                                 </a>
                             </div>
