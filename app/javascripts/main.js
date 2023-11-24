@@ -673,8 +673,6 @@ jQuery(document).ready(function () {
 });
 
 function utm_parameters() {
-	//?utm_campaign=utm_campaign_val&utm_source=utm_source_val&utm_medium=utm_medium_val&utm_term=utm_term_val&utm_content=utm_content_val&gclid=gclid_val
-
 	var $url_parameters_arr = [];
 	$utm_campaign = getUrlParameter('utm_campaign');
 	$utm_source = getUrlParameter('utm_source');
@@ -719,7 +717,6 @@ function utm_parameters() {
 			}
 		});
 	}
-
 }
 function bike_bullets() {
 	jQuery('.drag_element .point_style').each(function (index, el) {
