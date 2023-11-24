@@ -16,28 +16,31 @@ $bikes = carbon_get_the_post_meta('bikes');
         <h1 class="slider-title"><?php the_title() ?></h1>
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="image-box">
-                        <img class="no-lazyload" src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
+                <?php foreach ($bikes as $bikes) { ?>
+                    <div class="swiper-slide">
+                        <div class="image-box">
+                            <img class="no-lazyload" src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
+                        </div>
+                        <div class="content-holder text-center">
+                            <div class="heading-box">
+                                <h2>
+                                    <?= get_the_title($bike['ID']) ?>
+                                </h2>
+                            </div>
+                            <div class="description-box">
+                                <p>
+                                    Motorcycle tag line.
+                                </p>
+                            </div>
+                            <div class="btn-box">
+                                <a href="#" class="pc-btn">
+                                    DISCOVER
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content-holder text-center">
-                        <div class="heading-box">
-                            <h2>
-                                MAVERICK
-                            </h2>
-                        </div>
-                        <div class="description-box">
-                            <p>
-                                Motorcycle tag line.
-                            </p>
-                        </div>
-                        <div class="btn-box">
-                            <a href="#" class="pc-btn">
-                                DISCOVER
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
+                <?php } ?>
 
             </div>
         </div>
