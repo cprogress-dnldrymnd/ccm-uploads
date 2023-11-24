@@ -18736,7 +18736,7 @@ section.slider-hero {
   padding-top: 200px; }
   @media (max-width: 575px) {
     section.slider-hero {
-      font-size: 105px; } }
+      padding-top: 150px; } }
   section.slider-hero .slider-title {
     font-size: 282px;
     font-weight: bold !important;
