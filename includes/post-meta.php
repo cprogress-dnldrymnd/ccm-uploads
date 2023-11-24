@@ -1900,9 +1900,9 @@ Container::make('post_meta', 'Bike Settings')
 			Field::make('textarea', 'bike_tagline', 'Bike Tagline')
 				->set_width(50),
 			/*
-			Field::make('checkbox', 'display_sticky_button', 'Display Mobile Sticky Button'),
-			Field::make('text', 'stickty_button_text', 'Sticky Mobile Button Text'),
-			Field::make('text', 'sticky_button_link', 'Sticky Mobile Button Link')*/
+				 Field::make('checkbox', 'display_sticky_button', 'Display Mobile Sticky Button'),
+				 Field::make('text', 'stickty_button_text', 'Sticky Mobile Button Text'),
+				 Field::make('text', 'sticky_button_link', 'Sticky Mobile Button Link')*/
 		)
 	);
 
@@ -2349,7 +2349,15 @@ Container::make('theme_options', 'Motorcycle Mega Menu')
 							'post_type' => 'bikes',
 						)
 					)
+				),
+			Field::make('complex', 'side_links', 'Side Links')
+				->add_fields(
+					array(
+						Field::make('text', 'link_text', 'Link Text'),
+						Field::make('text', 'link_url', 'Link URL'),
+					)
 				)
+				->set_header_template('<%- link_text %>')
 		)
 	);
 
@@ -2478,7 +2486,8 @@ Container::make('post_meta', 'Page Components V2')
 Bikes		==========================================================
 */
 
-Container::make('post_meta', 'Bikes')
+Container::make('theme_options', 'Bikes')
+	->set_page_parent('edit.php?post_type=bikes')
 	->where('post_template', '=', 'templates/page-bikes.php')
 	->add_fields(
 		array(
