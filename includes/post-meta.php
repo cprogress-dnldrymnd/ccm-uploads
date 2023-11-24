@@ -1891,7 +1891,9 @@ Container::make('post_meta', 'Bike Settings')
 		array(
 			Field::make('image', 'bike_slider_background', 'Bike Slider Background')
 				->set_width(50),
-			Field::make('image', 'bike_slider_image', 'Bike Slider Image(PNG)')
+			Field::make('image', 'bike_slider_image', 'Bike Slider Home Image(PNG)')
+				->set_width(50),
+			Field::make('image', 'bike_slider_image_bike_page', 'Bike Slider Bike Page Image(PNG)')
 				->set_width(50),
 			Field::make('image', 'bike_menu_image', 'Bike Menu Image')
 				->set_width(50),
