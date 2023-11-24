@@ -18757,6 +18757,9 @@ section.slider-hero {
     @media (max-width: 575px) {
       section.slider-hero .slider-title {
         font-size: 105px; } }
+  @media (min-width: 768px) {
+    section.slider-hero .swiper-pagination {
+      display: none !important; } }
   section.slider-hero .swiper-slide .image-box {
     padding: 22%;
     position: relative; }

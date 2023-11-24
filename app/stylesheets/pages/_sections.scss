@@ -1202,6 +1202,11 @@ section.slider-hero {
             font-size: 105px;
         }
     }
+    .swiper-pagination {
+        @media (min-width: 768px) {
+            display: none !important;
+        }
+    }
     .swiper-slide {
         .image-box {
             padding: 22%;
