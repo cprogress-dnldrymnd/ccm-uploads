@@ -27,7 +27,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                     $bike_image = $bike_slider_image_bike_page ? $bike_slider_image_bike_page : $bike_slider_image;
                     $bike_image_url = wp_get_attachment_image_url($bike_image, 'large');
                     ?>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide bike-<?= $key ?>">
                         <div class="image-box">
                             <img class="no-lazyload" src="<?= $bike_image_url ?>" alt="<?= $title ?>">
                         </div>
@@ -62,7 +62,7 @@ $bikes = carbon_get_the_post_meta('bikes');
     <section class="bike-lists-menu bike-lists-menu-page">
         <div class="container bike-lists-holder">
             <div class="row g-0 bikes">
-                <?php foreach ($bikes as $bike) { ?>
+                <?php foreach ($bikes as $key => $bike) { ?>
                     <?php
                     $title = get_the_title($bike['id']);
                     $link = get_permalink($bike['id']);
@@ -74,7 +74,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                     $bike_image_url = wp_get_attachment_image_url($bike_image, 'large');
                     ?>
                     <div class="col-lg-4">
-                        <div class="column-holder">
+                        <div class="column-holder bike-<?= $key ?>">
                             <div class="bike-name">
                                 <h4><?= $title ?></h4>
                             </div>
