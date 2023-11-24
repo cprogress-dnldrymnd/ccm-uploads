@@ -74,7 +74,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                     $bike_image_url = wp_get_attachment_image_url($bike_image, 'large');
                     ?>
                     <div class="col-lg-4">
-                        <div class="column-holder bike-<?= $key ?>">
+                        <div class="column-holder text-center bike-<?= $key ?>">
                             <a href="">
                                 <div class="bike-name">
                                     <h4><?= $title ?></h4>
