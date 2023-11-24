@@ -18750,6 +18750,11 @@ section.slider-hero .image-box {
   padding: 30%;
   position: relative; }
   section.slider-hero .image-box img {
-    position: absolute; }
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain; }
 
 /*# sourceMappingURL=main.css.map */
