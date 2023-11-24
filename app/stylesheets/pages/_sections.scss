@@ -1178,6 +1178,15 @@ section.accordion-section {
 
 section.slider-hero {
     .image-box {
-        
+        padding: 30%;
+        position: relative;
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
     }
 }
