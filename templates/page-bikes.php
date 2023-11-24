@@ -75,7 +75,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                     ?>
                     <div class="col-lg-4">
                         <div class="column-holder text-center bike-<?= $key ?>">
-                            <a href="">
+                            <a href="<?= $link ?>">
                                 <div class="bike-name">
                                     <h4><?= $title ?></h4>
                                 </div>
