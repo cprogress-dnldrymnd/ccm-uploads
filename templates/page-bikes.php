@@ -129,7 +129,7 @@ $alt_title = carbon_get_the_post_meta('alt_title');
                 </div>
                 <div class="swiper-slide">
                     <div class="image-box">
-                        <img src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
+                        <img class="no-lazyload" src="https://ccm.theprogressteam.com/wp-content/uploads/2020/11/Maverick_Black_Transparent-_Shadow.png" alt="">
                     </div>
                     <div class="content-holder text-center">
                         <div class="heading-box">
