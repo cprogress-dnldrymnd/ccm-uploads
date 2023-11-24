@@ -2472,7 +2472,7 @@ Container::make('post_meta', 'Page Components V2')
 Bikes		==========================================================
 */
 
-Container::make('post_meta', 'Data')
+Container::make('post_meta', 'Bikes')
 	->where('post_template', '=', 'templates/page-bikes.php')
 	->add_fields(
 		Field::make('association', 'bikes', __('Select Bikes'))
