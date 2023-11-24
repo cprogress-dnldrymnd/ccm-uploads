@@ -440,6 +440,7 @@ function custom_accordion() {
 	jQuery('.accordion-content').each(function (index, element) {
 		$height = jQuery(this).find('.inner').outerHeight();
 		jQuery(this).css('height', $height + 'px');
+
 	});
 	jQuery('.accordion-heading').click(function (e) {
 		jQuery('.accordion-heading').not(this).each(function () {
@@ -786,6 +787,7 @@ function swiper_slider() {
 	if (jQuery('body').hasClass('body-page-components')) {
 
 		var swiperHome = new Swiper(".mySwiper-Home", {
+			slidesPerView: 2,
 			loop: true,
 			centeredSlides: true,
 			parallax: true,
@@ -806,23 +808,20 @@ function swiper_slider() {
 				},
 
 				481: {
-					slidesPerView: 1,
+					slidesPerView: 2,
 					spaceBetween: 20,
 				},
 
 				768: {
-					slidesPerView: 2,
 					spaceBetween: 30,
 				},
 
 
 				992: {
-					slidesPerView: 2,
 					spaceBetween: 40,
 				},
 
 				1024: {
-					slidesPerView: 2,
 					spaceBetween: 50,
 				},
 

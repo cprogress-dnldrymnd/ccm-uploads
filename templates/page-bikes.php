@@ -99,19 +99,9 @@ $bikes = carbon_get_the_post_meta('bikes');
 
 <script>
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2,
         loop: true,
         centeredSlides: true,
         parallax: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            type: 'bullets',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
         breakpoints: {
 
             0: {
@@ -120,23 +110,25 @@ $bikes = carbon_get_the_post_meta('bikes');
             },
 
             481: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 20,
             },
 
             768: {
+                slidesPerView: 2,
                 spaceBetween: 30,
             },
 
 
             992: {
+                slidesPerView: 2,
                 spaceBetween: 40,
             },
 
             1024: {
+                slidesPerView: 2,
                 spaceBetween: 50,
             },
-
 
         }
     });
