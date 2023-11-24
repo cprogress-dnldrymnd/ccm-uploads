@@ -534,11 +534,12 @@ function page_submitted()
 add_shortcode('page_submitted', 'page_submitted');
 
 
-function bike_lists() {
+function bike_lists()
+{
 	ob_start();
 	$bikes_categ = carbon_get_post_meta(14442, 'motorcycles');
 	?>
-		<section class="bike-lists">
+	<section class="bike-lists">
 		<div class="container wide witdh1700">
 			<?php foreach ($bikes_categ as $categ) { ?>
 				<div class="bike-lists-holder">
@@ -604,6 +605,7 @@ function bike_lists_menu()
 {
 	ob_start();
 	$bikes = carbon_get_theme_option('motorcycle_mega_menu');
+	$side_links = carbon_get_theme_option('side_links');
 	?>
 	<section class="bike-lists-menu bt-5">
 		<div class="container-fluid g-0">
@@ -634,8 +636,9 @@ function bike_lists_menu()
 				<div class="col-lg-3">
 					<div class="column-holder">
 						<ul class="menu-right">
-							<li><a href="/contact-us/">ENQUIRE</a></li>
-							<li><a href="/bikes/">VIEW ALL MOTORCYCLES</a></li>
+							<?php foreach ($side_links as $side_link) { ?>
+								<li><a href="<?= $side_link['link_url'] ?>"><?= $side_link['link_text'] ?></a></li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>
