@@ -33,7 +33,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                                 </p>
                             </div>
                             <div class="btn-box">
-                                <a href="#" class="pc-btn">
+                                <a href="<?= get_permalink($bike['ID']) ?>" class="pc-btn">
                                     DISCOVER
                                 </a>
                             </div>

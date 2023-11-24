@@ -18759,10 +18759,10 @@ section.slider-hero {
     right: 0;
     text-align: center;
     text-transform: uppercase; }
-  section.slider-hero .image-box {
+  section.slider-hero .swiper-slide .image-box {
     padding: 22%;
     position: relative; }
-    section.slider-hero .image-box img {
+    section.slider-hero .swiper-slide .image-box img {
       position: absolute;
       left: 0;
       top: 0;
@@ -18770,5 +18770,7 @@ section.slider-hero {
       width: 100%;
       object-fit: contain;
       object-position: center; }
+  section.slider-hero .swiper-slide .heading-box h2 {
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
