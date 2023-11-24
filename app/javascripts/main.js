@@ -786,7 +786,6 @@ function swiper_slider() {
 	if (jQuery('body').hasClass('body-page-components')) {
 
 		var swiperHome = new Swiper(".mySwiper-Home", {
-			slidesPerView: 2,
 			loop: true,
 			centeredSlides: true,
 			parallax: true,
