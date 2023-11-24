@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php
-$bikes = carbon_get_the_post_meta('bikes');
+$bikes = carbon_get_theme_option('bikes');
 ?>
 <main id="page-components" class="main-holder main-holder-v2  bt-5">
     <section class="slider-hero">
