@@ -1895,9 +1895,12 @@ Container::make('post_meta', 'Bike Settings')
 				->set_width(50),
 			Field::make('image', 'bike_menu_image', 'Bike Menu Image')
 				->set_width(50),
+			Field::make('textarea', 'bike_tagline', 'Bike Tagline')
+				->set_width(50),
+			/*
 			Field::make('checkbox', 'display_sticky_button', 'Display Mobile Sticky Button'),
 			Field::make('text', 'stickty_button_text', 'Sticky Mobile Button Text'),
-			Field::make('text', 'sticky_button_link', 'Sticky Mobile Button Link')
+			Field::make('text', 'sticky_button_link', 'Sticky Mobile Button Link')*/
 		)
 	);
 
