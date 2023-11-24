@@ -69,9 +69,9 @@ $bikes = carbon_get_the_post_meta('bikes');
                     $link = get_permalink($bike['id']);
                     $bike_tagline = carbon_get_post_meta($bike['id'], 'bike_tagline');
                     $bike_slider_image_bike_page = carbon_get_post_meta($bike['id'], 'bike_slider_image_bike_page');
-                    $bike_menu_image = carbon_get_post_meta($bike['id'], 'bike_menu_image');
+                    $bike_slider_image = carbon_get_post_meta($bike['id'], 'bike_slider_image');
                     $tagline = carbon_get_post_meta($bike['id'], 'tagline');
-                    $bike_image = $bike_menu_image ? $bike_menu_image : $bike_slider_image_bike_page;
+                    $bike_image = $bike_slider_image_bike_page ? $bike_slider_image_bike_page : $bike_slider_image;
                     $bike_image_url = wp_get_attachment_image_url($bike_image, 'large');
                     ?>
                     <div class="col-lg-4">

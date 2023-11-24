@@ -18779,6 +18779,8 @@ section.slider-hero {
       width: 100%;
       object-fit: contain;
       object-position: center; }
+  section.slider-hero .swiper-slide .description-box {
+    margin-bottom: 20px; }
   section.slider-hero .swiper-slide .heading-box h2 {
     text-transform: uppercase;
     margin-bottom: 10px; }
