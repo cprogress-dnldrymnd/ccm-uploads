@@ -5,7 +5,7 @@ var_dump($bikes);
 ?>
 <main id="page-components" class="main-holder main-holder-v2  bt-5">
     <section class="slider-hero">
-        <h1 class="slider-title"><?php the_title() ?></h1>
+        <h1 class="slider-title">Bikes</h1>
         <div class="swiper-container mySwiper">
             <div class="swiper-wrapper">
                 <?php foreach ($bikes as $bike) { ?>
