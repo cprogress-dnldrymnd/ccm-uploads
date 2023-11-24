@@ -806,6 +806,7 @@ function swiper_slider() {
 				},
 
 				481: {
+					slidesPerView: 1,
 					spaceBetween: 20,
 				},
 
@@ -816,10 +817,12 @@ function swiper_slider() {
 
 
 				992: {
+					slidesPerView: 2,
 					spaceBetween: 40,
 				},
 
 				1024: {
+					slidesPerView: 2,
 					spaceBetween: 50,
 				},
 
