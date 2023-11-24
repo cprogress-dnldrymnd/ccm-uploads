@@ -15672,53 +15672,53 @@ body.show-minicart .widget_shopping_cart_content.widget_shopping_cart_content.wi
 .page-template-page-components-v2.header-black-bg #ccm-motors-header {
   background-color: var(--black-color) !important; }
 
-section.bike-lists-menu {
+section.bike-lists-menu.bike-lists-menu.bike-lists-menu {
   padding-top: 0; }
-  section.bike-lists-menu .col-lg-3 .menu-right {
+  section.bike-lists-menu.bike-lists-menu.bike-lists-menu .col-lg-3 .menu-right {
     list-style: none;
     padding: 0; }
-    section.bike-lists-menu .col-lg-3 .menu-right li a {
+    section.bike-lists-menu.bike-lists-menu.bike-lists-menu .col-lg-3 .menu-right li a {
       color: var(--black-color);
       font-size: 15px;
       transition: 1000ms;
       display: inline-block; }
       @media (min-width: 992px) {
-        section.bike-lists-menu .col-lg-3 .menu-right li a {
+        section.bike-lists-menu.bike-lists-menu.bike-lists-menu .col-lg-3 .menu-right li a {
           opacity: 0;
           transform: translateX(100%);
           transition: 1000ms;
           font-weight: 500; } }
       @media (max-width: 991px) {
-        section.bike-lists-menu .col-lg-3 .menu-right li a {
+        section.bike-lists-menu.bike-lists-menu.bike-lists-menu .col-lg-3 .menu-right li a {
           border-bottom: 1px solid #e2e2e2;
           padding: 20px 15px;
           width: 100%;
           font-size: 16px;
           text-decoration: none; } }
     @media (min-width: 992px) {
-      section.bike-lists-menu .col-lg-3 .menu-right li:not(:last-child) {
+      section.bike-lists-menu.bike-lists-menu.bike-lists-menu .col-lg-3 .menu-right li:not(:last-child) {
         margin-bottom: 20px; } }
     @media (max-width: 991px) {
-      section.bike-lists-menu .col-lg-3 .menu-right li {
+      section.bike-lists-menu.bike-lists-menu.bike-lists-menu .col-lg-3 .menu-right li {
         width: 100%; } }
   @media (min-width: 992px) {
-    section.bike-lists-menu .col-lg-3 {
+    section.bike-lists-menu.bike-lists-menu.bike-lists-menu .col-lg-3 {
       background-color: #f2f2f3;
       padding: 2vw; } }
-  section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
+  section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
     text-decoration: none !important;
     padding: 3vw;
     display: block;
     transition: 500ms;
     position: relative; }
-    section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a > div {
+    section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a > div {
       position: relative;
       z-index: 1; }
     @media (min-width: 992px) {
-      section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
+      section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
         transform: translateY(100px);
         opacity: 0; }
-        section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:before {
+        section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:before {
           content: "";
           position: absolute;
           left: 0;
@@ -15728,24 +15728,24 @@ section.bike-lists-menu {
           background-color: rgba(0, 0, 0, 0.05);
           opacity: 0;
           transition: 300ms; }
-        section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:hover:before, section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:active:before, section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:focus:before {
+        section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:hover:before, section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:active:before, section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:focus:before {
           opacity: 1; }
-        section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:hover h4, section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:active h4, section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:focus h4 {
+        section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:hover h4, section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:active h4, section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:focus h4 {
           color: #e22228; }
-        section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:hover img, section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:active img, section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:focus img {
+        section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:hover img, section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:active img, section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a:focus img {
           transform: translateY(-5px); } }
     @media (max-width: 991px) {
-      section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
+      section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] a {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: flex-end;
         border-bottom: 1px solid #e2e2e2;
         padding: 5px 15px; } }
-  section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box {
+  section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box {
     position: relative;
     padding: 30%; }
-    section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box img {
+    section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box img {
       position: absolute;
       left: 0;
       top: 0;
@@ -15754,16 +15754,16 @@ section.bike-lists-menu {
       object-fit: cover;
       transition: 500ms; }
     @media (max-width: 991px) {
-      section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box {
+      section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .image-box {
         height: 75px;
         width: 120px;
         padding: 0; } }
-  section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4 {
+  section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4 {
     font-weight: 400 !important;
     font-style: normal !important;
     margin-top: 0 !important; }
     @media (max-width: 991px) {
-      section.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4 {
+      section.bike-lists-menu.bike-lists-menu.bike-lists-menu .bike-lists-holder > .row > [class*="col-"] .bike-name h4 {
         margin-bottom: 0;
         margin-left: 25px;
         font-size: 16px; } }
