@@ -9,8 +9,7 @@
 ?>
 <?php get_header(); ?>
 <?php
-$background = carbon_get_the_post_meta('background');
-$alt_title = carbon_get_the_post_meta('alt_title');
+$bikes = carbon_get_the_post_meta('bikes');
 ?>
 <main id="page-components" class="main-holder main-holder-v2  bt-5">
     <section class="slider-hero">
