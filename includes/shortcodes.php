@@ -635,6 +635,7 @@ function bike_lists_menu()
 					<div class="column-holder">
 						<ul class="menu-right">
 							<li><a href="/contact-us/">ENQUIRE</a></li>
+							<li><a href="/bikes/">VIEW ALL MOTORCYCLES</a></li>
 						</ul>
 					</div>
 				</div>
