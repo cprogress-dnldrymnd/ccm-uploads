@@ -24,7 +24,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                         <div class="content-holder text-center">
                             <div class="heading-box">
                                 <h2>
-                                    <?= get_the_title($bike['ID']) ?>
+                                    <?= get_the_title($bike['id']) ?>
                                 </h2>
                             </div>
                             <div class="description-box">
