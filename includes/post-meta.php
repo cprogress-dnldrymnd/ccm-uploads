@@ -2476,13 +2476,15 @@ Bikes		==========================================================
 Container::make('post_meta', 'Bikes')
 	->where('post_template', '=', 'templates/page-bikes.php')
 	->add_fields(
-		Field::make('association', 'bikes', __('Select Bikes'))
-			->set_types(
-				array(
+		array(
+			Field::make('association', 'bikes', __('Select Bikes'))
+				->set_types(
 					array(
-						'type'      => 'post',
-						'post_type' => 'bikes',
+						array(
+							'type'      => 'post',
+							'post_type' => 'bikes',
+						)
 					)
 				)
-			)
+		)
 	);
