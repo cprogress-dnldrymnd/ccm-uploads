@@ -1178,6 +1178,7 @@ section.accordion-section {
 
 section.slider-hero {
     padding-top: 200px;
+    position: relative;
     @media (max-width: 575px) {
         padding-top: 150px;
     }
@@ -1203,6 +1204,9 @@ section.slider-hero {
         }
     }
     .swiper-pagination {
+        position: absolute;
+        top: 360px;
+        font-weight: bold;
         @media (min-width: 768px) {
             display: none !important;
         }
@@ -1224,6 +1228,9 @@ section.slider-hero {
         .heading-box {
             h2 {
                 text-transform: uppercase;
+            }
+            @media (max-width: 767px) {
+                padding-top: 30px;
             }
         }
     }
