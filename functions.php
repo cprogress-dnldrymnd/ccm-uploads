@@ -350,15 +350,15 @@ function ccm_scripts()
 	wp_enqueue_script('ccm-jquery-ui-js', 'https://code.jquery.com/ui/1.13.1/jquery-ui.js');
 	//wp_enqueue_script('ct-horizotal-scroll', get_template_directory_uri() . '/app/javascripts/vendors/jquery-horizontal-scroll.min.js');
 	wp_enqueue_script('ccm-script', get_template_directory_uri() . '/app/javascripts/main.js', '', style_version);
-	
-	if (is_page_template('templates/page-components.php') || is_page_template('templates/page-components-v2.php') || is_page_template('templates/page-bikes.php')) {
+
+	if (is_post_type_archive('bikes') || is_page_template('templates/page-components.php') || is_page_template('templates/page-components-v2.php') || is_page_template('templates/page-bikes.php')) {
 		wp_enqueue_style('ccm-aos', get_template_directory_uri() . '/app/vendors/aos.css');
 		wp_enqueue_style('ccm-swiper', get_template_directory_uri() . '/app/vendors/swiper-bundle.min.css');
 
 		wp_enqueue_script('ccm-aos-js', get_template_directory_uri() . '/app/vendors/aos.js');
 		wp_enqueue_script('ccm-swiper-js', get_template_directory_uri() . '/app/vendors/swiper-bundle.min.js');
 	}
-	
+
 	if (is_page_template('templates/page-tablet.php')) {
 		wp_enqueue_script('ccm-no-sleep', get_template_directory_uri() . '/app/javascripts/NoSleep.min.js');
 	}
@@ -384,72 +384,72 @@ function wooc_extra_register_fields()
 {
 	?>
 
-			<p class="form-row form-row-first">
-				<label for="reg_billing_first_name"><?php _e('First name', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if (!empty($_POST['billing_first_name']))
-					esc_attr_e($_POST['billing_first_name']); ?>" />
-			</p>
-			<p class="form-row form-row-last">
-				<label for="reg_billing_last_name"><?php _e('Last name', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if (!empty($_POST['billing_last_name']))
-					esc_attr_e($_POST['billing_last_name']); ?>" />
-			</p>
-			<p class="form-row form-row-wide display_name_xx">
-				<label for="reg_nickname"><?php _e('Display name', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="nickname" id="reg_nickname" value="<?php if (!empty($_POST['nickname']))
-					esc_attr_e($_POST['nickname']); ?>" />
-			</p>
-			<p class="form-row form-row-wide">
-				<label for="reg_confirm_password"><?php _e('Confirm Password', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="password" class="input-text" name="confirm_password" id="reg_confirm_password"/>
-			</p>  
-			<p class="form-row form-row-wide heading">
-				<h3>CONTACT INFORMATION</h3>
-			</p>
-			<p class="form-row form-row-wide">
-				<label for="reg_billing_phone"><?php _e('Phone', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php esc_attr_e($_POST['billing_phone']); ?>" />
-			</p>
-			<p class="form-row form-row-wide">
-				<label for="reg_billing_address_1"><?php _e('Street Address', 'woocommerce'); ?> <span class="required">*</span></label>
-			</p>
-			<p class="form-row form-row-first">
-				<label for="reg_billing_address_1"><?php _e('', 'woocommerce'); ?></label>
-				<input type="text" class="input-text" placeholder="House number and street name" name="billing_address_1" id="reg_billing_address_1" value="<?php esc_attr_e($_POST['billing_address_1']); ?>" />
-			</p>
-			<p class="form-row form-row-last">
-				<label for="reg_billing_address_2"><?php _e('', 'woocommerce'); ?></label>
-				<input type="text" class="input-text" placeholder="Apartment, suite, unit, etc.(optional)" name="billing_address_2" id="reg_billing_address_2" value="<?php esc_attr_e($_POST['billing_address_2']); ?>" />
-			</p>
-			<p class="form-row form-row-first">
-				<label for="reg_billing_city"><?php _e('Town/City', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="<?php esc_attr_e($_POST['billing_city']); ?>" />
-			</p>
-			<p class="form-row form-row-last">
-				<label for="reg_billing_postcode"><?php _e('Zip/Postcode', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php esc_attr_e($_POST['billing_postcode']); ?>" />
-			</p>
-			<?php
-			$countries_obj = new WC_Countries();
-			$countries = $countries_obj->__get('countries');
-			?>
-			<p class="form-row form-row-first">
-				<label for="reg_billing_postcode"><?php _e('Country', 'woocommerce'); ?> <span class="required">*</span></label>
-				<select name="billing_country" id="reg_billing_country" class="input-text">
-					<option value=""></option>
-					<?php foreach ($countries as $countries_key => $countries_value): ?>
-								<option value="<?php echo $countries_key; ?>"><?php echo $countries_value; ?></option>
-					<?php endforeach; ?>
-				</select>
-			</p>
-			<div class="ownership ">
-				<!-- <div class="form-row form-row-wide is_owner_xx">
+				<p class="form-row form-row-first">
+					<label for="reg_billing_first_name"><?php _e('First name', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if (!empty($_POST['billing_first_name']))
+						esc_attr_e($_POST['billing_first_name']); ?>" />
+				</p>
+				<p class="form-row form-row-last">
+					<label for="reg_billing_last_name"><?php _e('Last name', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if (!empty($_POST['billing_last_name']))
+						esc_attr_e($_POST['billing_last_name']); ?>" />
+				</p>
+				<p class="form-row form-row-wide display_name_xx">
+					<label for="reg_nickname"><?php _e('Display name', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="nickname" id="reg_nickname" value="<?php if (!empty($_POST['nickname']))
+						esc_attr_e($_POST['nickname']); ?>" />
+				</p>
+				<p class="form-row form-row-wide">
+					<label for="reg_confirm_password"><?php _e('Confirm Password', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="password" class="input-text" name="confirm_password" id="reg_confirm_password"/>
+				</p>  
+				<p class="form-row form-row-wide heading">
+					<h3>CONTACT INFORMATION</h3>
+				</p>
+				<p class="form-row form-row-wide">
+					<label for="reg_billing_phone"><?php _e('Phone', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php esc_attr_e($_POST['billing_phone']); ?>" />
+				</p>
+				<p class="form-row form-row-wide">
+					<label for="reg_billing_address_1"><?php _e('Street Address', 'woocommerce'); ?> <span class="required">*</span></label>
+				</p>
+				<p class="form-row form-row-first">
+					<label for="reg_billing_address_1"><?php _e('', 'woocommerce'); ?></label>
+					<input type="text" class="input-text" placeholder="House number and street name" name="billing_address_1" id="reg_billing_address_1" value="<?php esc_attr_e($_POST['billing_address_1']); ?>" />
+				</p>
+				<p class="form-row form-row-last">
+					<label for="reg_billing_address_2"><?php _e('', 'woocommerce'); ?></label>
+					<input type="text" class="input-text" placeholder="Apartment, suite, unit, etc.(optional)" name="billing_address_2" id="reg_billing_address_2" value="<?php esc_attr_e($_POST['billing_address_2']); ?>" />
+				</p>
+				<p class="form-row form-row-first">
+					<label for="reg_billing_city"><?php _e('Town/City', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="<?php esc_attr_e($_POST['billing_city']); ?>" />
+				</p>
+				<p class="form-row form-row-last">
+					<label for="reg_billing_postcode"><?php _e('Zip/Postcode', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php esc_attr_e($_POST['billing_postcode']); ?>" />
+				</p>
+				<?php
+				$countries_obj = new WC_Countries();
+				$countries = $countries_obj->__get('countries');
+				?>
+				<p class="form-row form-row-first">
+					<label for="reg_billing_postcode"><?php _e('Country', 'woocommerce'); ?> <span class="required">*</span></label>
+					<select name="billing_country" id="reg_billing_country" class="input-text">
+						<option value=""></option>
+						<?php foreach ($countries as $countries_key => $countries_value): ?>
+										<option value="<?php echo $countries_key; ?>"><?php echo $countries_value; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</p>
+				<div class="ownership ">
+					<!-- <div class="form-row form-row-wide is_owner_xx">
 			<h3>DO YOU OWN A CCM MOTORCYCLE? <span class="required">*</span></h3>
 		</div> -->
-				<p class="form-row form-row-wide">
-					<input type="hidden" class="input-text" name="ownership" id="owner" value="<?php esc_attr_e($_POST['ownership']); ?>" />
-				</p>
-		<!--  <div class="form-row form-row-last is_owner_xx">
+					<p class="form-row form-row-wide">
+						<input type="hidden" class="input-text" name="ownership" id="owner" value="<?php esc_attr_e($_POST['ownership']); ?>" />
+					</p>
+			<!--  <div class="form-row form-row-last is_owner_xx">
 			<input type="radio" id="owner" name="ownership" value="yes">
 			<label for="owner">Yes, I'm a CCM owner!</label> 
 		</div>
@@ -460,10 +460,10 @@ function wooc_extra_register_fields()
 	</div>
 -->
 
-		<div class="clear">
+			<div class="clear">
 
-		</div>
-		<?php
+			</div>
+			<?php
 }
 add_action('woocommerce_register_form_start', 'wooc_extra_register_fields');
 
@@ -499,8 +499,8 @@ add_action('woocommerce_register_post', 'wooc_validate_extra_register_fields', 1
 function wooc_save_extra_register_fields($customer_id)
 {
 	/*if ( isset( $_POST['acf']['field_5d10995760714'] ) ) {
-	update_user_meta($customer_id, 'acf[field_5d10995760714]', $_POST['acf']['field_5d10995760714']);
-	}*/
+	 update_user_meta($customer_id, 'acf[field_5d10995760714]', $_POST['acf']['field_5d10995760714']);
+	 }*/
 	if (isset($_POST['billing_phone'])) {
 		// Phone input filed which is used in WooCommerce
 		update_user_meta($customer_id, 'billing_phone', sanitize_text_field($_POST['billing_phone']));
@@ -557,8 +557,8 @@ function wooc_save_extra_register_fields($customer_id)
 			$user->remove_role('customer');
 			$user->add_role('subscriber');
 			/*$new_role = array("subscriber" => 1);
-			$data = serialize( $new_role ); 
-			update_user_meta( $customer_id, 'wp_capabilities', $new_role);*/
+				 $data = serialize( $new_role ); 
+				 update_user_meta( $customer_id, 'wp_capabilities', $new_role);*/
 		}
 	}
 }
@@ -573,80 +573,80 @@ function register_fields_ccm_login()
 {
 	?>
 
-			<p class="form-row form-row-first">
-				<label for="reg_billing_first_name"><?php _e('First name', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if (!empty($_POST['billing_first_name']))
-					esc_attr_e($_POST['billing_first_name']); ?>" />
-			</p>
-			<p class="form-row form-row-last">
-				<label for="reg_billing_last_name"><?php _e('Last name', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if (!empty($_POST['billing_last_name']))
-					esc_attr_e($_POST['billing_last_name']); ?>" />
-			</p>
+				<p class="form-row form-row-first">
+					<label for="reg_billing_first_name"><?php _e('First name', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="<?php if (!empty($_POST['billing_first_name']))
+						esc_attr_e($_POST['billing_first_name']); ?>" />
+				</p>
+				<p class="form-row form-row-last">
+					<label for="reg_billing_last_name"><?php _e('Last name', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="<?php if (!empty($_POST['billing_last_name']))
+						esc_attr_e($_POST['billing_last_name']); ?>" />
+				</p>
 
-			<p class="form-row form-row-wide the-email">
+				<p class="form-row form-row-wide the-email">
 		
-			</p>
-			<p class="form-row form-row-wide the-display-name">
+				</p>
+				<p class="form-row form-row-wide the-display-name">
 		
-			</p>
+				</p>
 
 
-			<p class="form-row form-row-wide">
-				<label for="reg_password"><?php _e('Password', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="password" class="input-text" name="password" id="reg_password" value="<?php esc_attr_e($_POST['password']); ?>"/>
-			</p> 
-			<p class="form-row form-row-wide">
-				<label for="reg_confirm_password"><?php _e('Confirm Password', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="password" class="input-text" name="confirm_password" id="reg_confirm_password" value="<?php esc_attr_e($_POST['confirm_password']); ?>"/>
-			</p>  
-			<p class="form-row form-row-wide heading">
-				<h3>CONTACT INFORMATION</h3>
-			</p>
-			<p class="form-row form-row-wide">
-				<label for="reg_billing_phone"><?php _e('Phone', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php esc_attr_e($_POST['billing_phone']); ?>" />
-			</p>
-			<p class="form-row form-row-wide">
-				<label for="reg_billing_address_1"><?php _e('Street Address', 'woocommerce'); ?> <span class="required">*</span></label>
-			</p>
-			<p class="form-row form-row-first">
-				<label for="reg_billing_address_1"><?php _e('', 'woocommerce'); ?></label>
-				<input type="text" class="input-text" placeholder="House number and street name" name="billing_address_1" id="reg_billing_address_1" value="<?php esc_attr_e($_POST['billing_address_1']); ?>" />
-			</p>
-			<p class="form-row form-row-last">
-				<label for="reg_billing_address_2"><?php _e('', 'woocommerce'); ?></label>
-				<input type="text" class="input-text" placeholder="Apartment, suite, unit, etc.(optional)" name="billing_address_2" id="reg_billing_address_2" value="<?php esc_attr_e($_POST['billing_address_2']); ?>" />
-			</p>
-			<p class="form-row form-row-first">
-				<label for="reg_billing_city"><?php _e('Town/City', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="<?php esc_attr_e($_POST['billing_city']); ?>" />
-			</p>
-			<p class="form-row form-row-last">
-				<label for="reg_billing_postcode"><?php _e('Zip/Postcode', 'woocommerce'); ?> <span class="required">*</span></label>
-				<input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php esc_attr_e($_POST['billing_postcode']); ?>" />
-			</p>
-			<?php
-			$countries_obj = new WC_Countries();
-			$countries = $countries_obj->__get('countries');
-			?>
-			<p class="form-row form-row-first">
-				<label for="reg_billing_postcode"><?php _e('Country', 'woocommerce'); ?> <span class="required">*</span></label>
-				<select name="billing_country" id="reg_billing_country" class="input-text" style="background-color: #eceaea; border: none; border-radius: 0; height: 50px; width: 100%;">
-					<option value=""></option>
-					<?php foreach ($countries as $countries_key => $countries_value): ?>
-								<option value="<?php echo $countries_key; ?>"><?php echo $countries_value; ?></option>
-					<?php endforeach; ?>
-				</select>
-			</p>
-			<div class="ownership hide-div">
-				<!-- <div class="form-row form-row-wide is_owner_xx">
+				<p class="form-row form-row-wide">
+					<label for="reg_password"><?php _e('Password', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="password" class="input-text" name="password" id="reg_password" value="<?php esc_attr_e($_POST['password']); ?>"/>
+				</p> 
+				<p class="form-row form-row-wide">
+					<label for="reg_confirm_password"><?php _e('Confirm Password', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="password" class="input-text" name="confirm_password" id="reg_confirm_password" value="<?php esc_attr_e($_POST['confirm_password']); ?>"/>
+				</p>  
+				<p class="form-row form-row-wide heading">
+					<h3>CONTACT INFORMATION</h3>
+				</p>
+				<p class="form-row form-row-wide">
+					<label for="reg_billing_phone"><?php _e('Phone', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php esc_attr_e($_POST['billing_phone']); ?>" />
+				</p>
+				<p class="form-row form-row-wide">
+					<label for="reg_billing_address_1"><?php _e('Street Address', 'woocommerce'); ?> <span class="required">*</span></label>
+				</p>
+				<p class="form-row form-row-first">
+					<label for="reg_billing_address_1"><?php _e('', 'woocommerce'); ?></label>
+					<input type="text" class="input-text" placeholder="House number and street name" name="billing_address_1" id="reg_billing_address_1" value="<?php esc_attr_e($_POST['billing_address_1']); ?>" />
+				</p>
+				<p class="form-row form-row-last">
+					<label for="reg_billing_address_2"><?php _e('', 'woocommerce'); ?></label>
+					<input type="text" class="input-text" placeholder="Apartment, suite, unit, etc.(optional)" name="billing_address_2" id="reg_billing_address_2" value="<?php esc_attr_e($_POST['billing_address_2']); ?>" />
+				</p>
+				<p class="form-row form-row-first">
+					<label for="reg_billing_city"><?php _e('Town/City', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="<?php esc_attr_e($_POST['billing_city']); ?>" />
+				</p>
+				<p class="form-row form-row-last">
+					<label for="reg_billing_postcode"><?php _e('Zip/Postcode', 'woocommerce'); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php esc_attr_e($_POST['billing_postcode']); ?>" />
+				</p>
+				<?php
+				$countries_obj = new WC_Countries();
+				$countries = $countries_obj->__get('countries');
+				?>
+				<p class="form-row form-row-first">
+					<label for="reg_billing_postcode"><?php _e('Country', 'woocommerce'); ?> <span class="required">*</span></label>
+					<select name="billing_country" id="reg_billing_country" class="input-text" style="background-color: #eceaea; border: none; border-radius: 0; height: 50px; width: 100%;">
+						<option value=""></option>
+						<?php foreach ($countries as $countries_key => $countries_value): ?>
+										<option value="<?php echo $countries_key; ?>"><?php echo $countries_value; ?></option>
+						<?php endforeach; ?>
+					</select>
+				</p>
+				<div class="ownership hide-div">
+					<!-- <div class="form-row form-row-wide is_owner_xx">
 			<h3>DO YOU OWN A CCM MOTORCYCLE? <span class="required">*</span></h3>
 		</div> -->
-				<p class="form-row form-row-wide">
-					<input type="hidden" class="input-text" name="ownership" id="owner" value="<?php esc_attr_e($_POST['ownership']); ?>" />
-				</p>
-		<!-- 		<div class="form-row form-row-last is_owner_xx">
+					<p class="form-row form-row-wide">
+						<input type="hidden" class="input-text" name="ownership" id="owner" value="<?php esc_attr_e($_POST['ownership']); ?>" />
+					</p>
+			<!-- 		<div class="form-row form-row-last is_owner_xx">
 			<input type="radio" id="owner" name="ownership" value="owner">
 			<label for="owner">Yes, I'm a CCM owner!</label> 
 		</div>
@@ -654,13 +654,13 @@ function register_fields_ccm_login()
 			<input type="radio" id="notOwner" name="ownership" value="notOwner" checked="checked">
 			<label for="notOwner">No, I'm just and enthusiast!</label>
 		</div> -->
-			</div>
-			<div class="woocommerce-privacy-policy-text">
-				<p>
-					Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="https://www.ccm-motorcycles.com/privacy-policy/" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
-				</p>
-			</div>
-			<?php
+				</div>
+				<div class="woocommerce-privacy-policy-text">
+					<p>
+						Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="https://www.ccm-motorcycles.com/privacy-policy/" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.
+					</p>
+				</div>
+				<?php
 }
 add_action('register_form', 'register_fields_ccm_login');
 
@@ -764,8 +764,8 @@ function register_user_ccm_login($user_id)
 			$user = new WP_User($user_id);
 			$user->add_role('subscriber');
 			/*$new_role = array("subscriber" => 1);
-			$data = serialize( $new_role ); 
-			update_user_meta( $customer_id, 'wp_capabilities', $new_role);*/
+				 $data = serialize( $new_role ); 
+				 update_user_meta( $customer_id, 'wp_capabilities', $new_role);*/
 		}
 	}
 
@@ -886,9 +886,11 @@ function mega_nav_menu($atts)
 					$mega_menu[$item->post_title]['url'] = $item->url;
 
 
-					$terms = get_terms($taxonomy_name, array(
-						'hide_empty' => false,
-					)
+					$terms = get_terms(
+						$taxonomy_name,
+						array(
+							'hide_empty' => false,
+						)
 					);
 
 					if (count($terms) && $taxonomy_name != '') {
@@ -921,56 +923,56 @@ function mega_nav_menu($atts)
 				}
 			}
 		} ?>
-						<ul class="nav navbar-nav nav-menu-handler bike_menus">
-							<?php foreach ($mega_menu as $parent_key => $parent_value): ?>
-										<?php if (count($parent_value) > 3): ?>
-													<li class="has-dropdown">
-														<a href="javascript:void(0)" class="menu-parent"><?= $parent_key ?> <img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
-														<ul class="dropdown-menu mega-menu bike_menu" style="display: none;">
-															<li class="mega-menu-column">
-																<div class="megamenu-breadcrumb">
-																	<div class="container">
-																		<?php foreach (array_reverse($parent_value) as $k => $v):
-																			if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url'):
-																				$class_tax_button = preg_replace('/\s+/', '', $k); ?>
-																								<a href="javascript:void(0)" class="taxonomy-button" data-menu-name="<?= $class_tax_button ?>"><?= $k ?><img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
-																					<?php endif;
-																		endforeach ?>
-																	</div>
-																</div>
+								<ul class="nav navbar-nav nav-menu-handler bike_menus">
+									<?php foreach ($mega_menu as $parent_key => $parent_value): ?>
+													<?php if (count($parent_value) > 3): ?>
+																	<li class="has-dropdown">
+																		<a href="javascript:void(0)" class="menu-parent"><?= $parent_key ?> <img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
+																		<ul class="dropdown-menu mega-menu bike_menu" style="display: none;">
+																			<li class="mega-menu-column">
+																				<div class="megamenu-breadcrumb">
+																					<div class="container">
+																						<?php foreach (array_reverse($parent_value) as $k => $v):
+																							if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url'):
+																								$class_tax_button = preg_replace('/\s+/', '', $k); ?>
+																														<a href="javascript:void(0)" class="taxonomy-button" data-menu-name="<?= $class_tax_button ?>"><?= $k ?><img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
+																										<?php endif;
+																						endforeach ?>
+																					</div>
+																				</div>
 
-																<?php foreach ($parent_value as $k => $v):
-																	if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url'):
-																		$class_tax_dropdown = preg_replace('/\s+/', '', $k); ?>
-																						<div class="mega-dropdown-menu <?= $class_tax_dropdown ?>" style="display: none;">
-																							<div class="container">
-																								<h2><?= $k ?></h2>
-																								<div class="separator"></div>
-																								<div class="row">
-																									<?php foreach ($v as $postkey => $postvalue): ?>
-																												<div class="col-xs-4">
-																													<div class="bike-previews">
-																														<a href="<?= get_permalink($postvalue->ID) ?>"><div class="image-holder">  
-																															<img class="img-responsive" src="<?= carbon_get_post_meta($postvalue->ID, 'b_img') ?>"/>
-																														</div><?= $postvalue->post_title ?></a>
+																				<?php foreach ($parent_value as $k => $v):
+																					if ($k != 'cpt_name' && $k != 'taxonomy_name' && $k != 'url'):
+																						$class_tax_dropdown = preg_replace('/\s+/', '', $k); ?>
+																												<div class="mega-dropdown-menu <?= $class_tax_dropdown ?>" style="display: none;">
+																													<div class="container">
+																														<h2><?= $k ?></h2>
+																														<div class="separator"></div>
+																														<div class="row">
+																															<?php foreach ($v as $postkey => $postvalue): ?>
+																																			<div class="col-xs-4">
+																																				<div class="bike-previews">
+																																					<a href="<?= get_permalink($postvalue->ID) ?>"><div class="image-holder">  
+																																						<img class="img-responsive" src="<?= carbon_get_post_meta($postvalue->ID, 'b_img') ?>"/>
+																																					</div><?= $postvalue->post_title ?></a>
+																																				</div>
+																																			</div>
+																															<?php endforeach; ?>
+																														</div>
 																													</div>
-																												</div>
-																									<?php endforeach; ?>
-																								</div>
-																							</div>
-																						</div> 
-																			<?php endif;
-																endforeach ?>
+																												</div> 
+																								<?php endif;
+																				endforeach ?>
 
-															</li>
-														</ul>
-													</li>
-										<?php else: ?>
-													<li><a href="<?= $parent_value['menu_url'] ?>" target="_blank"><?= $parent_key ?> </a></li>
-										<?php endif ?>
-							<?php endforeach; ?>
-						</ul>
-			<?php }
+																			</li>
+																		</ul>
+																	</li>
+													<?php else: ?>
+																	<li><a href="<?= $parent_value['menu_url'] ?>" target="_blank"><?= $parent_key ?> </a></li>
+													<?php endif ?>
+									<?php endforeach; ?>
+								</ul>
+				<?php }
 }
 
 add_shortcode('mega_nav_left', 'mega_nav_menus');
@@ -1045,169 +1047,169 @@ function mega_nav_menus($atts)
 
 	}
 	?>
-			<ul class="nav navbar-nav nav-menu-handler explre_menu exploreMenu">
-				<?php
+				<ul class="nav navbar-nav nav-menu-handler explre_menu exploreMenu">
+					<?php
 
-				foreach ($mega_menus as $parent_values) {
-					if ($parent_values['post_title'] == 'Explore') {
-						$has_dropdown = 'has-dropdown explore_menu';
-						$has_link = 'javascript:void(0)';
-					}
-					else {
-						$has_dropdown = '';
-						$has_link = $parent_values['url'];
-					}
-
-
-					?>
-
-							<li class="<?php echo $has_dropdown; ?> ">
-								<?php if ($parent_values['menu_item_parent'] == 0) { ?>
-											<a href="<?php echo $has_link; ?>" class="menu-parents remove_menu"><?php echo $parent_values['post_title']; ?> <img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
-								<?php } ?>
-								<ul class="dropdown-menu mega-menu " style="display: none;">
-									<li class="mega-menu-column">
-										<div class="megamenu-breadcrumb">
-											<div class="container">
-												<?php
-												//print_r($parent_values);
-												foreach ($parent_valueinner as $v) {
-													$explode = explode("__", $v);
-													$title = $explode[0];
-
-
-
-													if ($title == 'Squadron Mag') {
-														$cssclass = 'taxonomy-button activeclass';
-														$title_link = 'javascript:void(0)';
-
-													}
-													else {
-														$cssclass = '';
-														$title_link = $explode[1];
-													}
-													?>
-															<a  href="<?php echo $title_link; ?>" class=" <?php echo $cssclass; ?>"><?= $title ?><img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
-														<?php
-												} ?>
-											</div>
-										</div>
-
-										<?php
-										// print_r($parent_value);
-										foreach ($mega_menus as $parent_value) {
-											if ($parent_value['cpt_name'] == 'squadron_magazine') {
-												?>
-																<div class="mega-dropdown-menus squan_magazi" style="display: none;">
-																	<div class="container">
-																		<h2>LATEST EDITIONS</h2>
-																		<div class="separator"></div>
-																		<div class="row">
-																			<?php foreach ($mainALL as $k => $v_main) { ?>
-																						<div class="bike-previews">
-																							<div class="bike-pre">
-																								<a target="_blank" href="<?php echo $v_main['link']; ?>"><div class="image-holder">  
-																									<img class="img-responsive" src="<?php echo $v_main['img']; ?>"/>
-																								</div>
-																								<!--<div class="month_yr">-->
-																									<?php echo $v_main['month']; ?>
-																									<!--</div>-->
-																								</a>
-																							</div>
-																						</div>
-																			<?php } ?>
-																		</div>
-																	</div>
-																</div> 
-															<?php
-											}
-										} ?>
-
-										</li>
-									</ul>
-								</li>
-					<?php } ?>
-				</ul>
-				<script>
-					jQuery(document).ready(function()
-					{
-						jQuery(".explore_menu").each(function(){
-
-							var parent_div = jQuery(this).find('a.remove_menu').html();
-							console.log(parent_div);
-							if(parent_div)
-							{
-
-							} else 
-							{
-								jQuery(this).remove();
-							}
-						});
-
-						var current = location.pathname;
-						console.log(current);
-						if(current != '/') {
-							$('.exploreMenu li a').each(function(){
-								var $this = $(this);
-					// if the current path is like this link, make it active
-					if($this.attr('href').indexOf(current) !== -1){
-						$this.addClass('active');
-					}
-					else
-					{
-				
-					}
-				});
+					foreach ($mega_menus as $parent_values) {
+						if ($parent_values['post_title'] == 'Explore') {
+							$has_dropdown = 'has-dropdown explore_menu';
+							$has_link = 'javascript:void(0)';
+						}
+						else {
+							$has_dropdown = '';
+							$has_link = $parent_values['url'];
 						}
 
 
+						?>
+
+									<li class="<?php echo $has_dropdown; ?> ">
+										<?php if ($parent_values['menu_item_parent'] == 0) { ?>
+														<a href="<?php echo $has_link; ?>" class="menu-parents remove_menu"><?php echo $parent_values['post_title']; ?> <img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
+										<?php } ?>
+										<ul class="dropdown-menu mega-menu " style="display: none;">
+											<li class="mega-menu-column">
+												<div class="megamenu-breadcrumb">
+													<div class="container">
+														<?php
+														//print_r($parent_values);
+														foreach ($parent_valueinner as $v) {
+															$explode = explode("__", $v);
+															$title = $explode[0];
 
 
-						jQuery('.activeclass').click(function()
+
+															if ($title == 'Squadron Mag') {
+																$cssclass = 'taxonomy-button activeclass';
+																$title_link = 'javascript:void(0)';
+
+															}
+															else {
+																$cssclass = '';
+																$title_link = $explode[1];
+															}
+															?>
+																		<a  href="<?php echo $title_link; ?>" class=" <?php echo $cssclass; ?>"><?= $title ?><img src="/wp-content/uploads/2018/02/down-chevron-1.svg" class="chevron-down"></a>
+																	<?php
+														} ?>
+													</div>
+												</div>
+
+												<?php
+												// print_r($parent_value);
+												foreach ($mega_menus as $parent_value) {
+													if ($parent_value['cpt_name'] == 'squadron_magazine') {
+														?>
+																				<div class="mega-dropdown-menus squan_magazi" style="display: none;">
+																					<div class="container">
+																						<h2>LATEST EDITIONS</h2>
+																						<div class="separator"></div>
+																						<div class="row">
+																							<?php foreach ($mainALL as $k => $v_main) { ?>
+																											<div class="bike-previews">
+																												<div class="bike-pre">
+																													<a target="_blank" href="<?php echo $v_main['link']; ?>"><div class="image-holder">  
+																														<img class="img-responsive" src="<?php echo $v_main['img']; ?>"/>
+																													</div>
+																													<!--<div class="month_yr">-->
+																														<?php echo $v_main['month']; ?>
+																														<!--</div>-->
+																													</a>
+																												</div>
+																											</div>
+																							<?php } ?>
+																						</div>
+																					</div>
+																				</div> 
+																			<?php
+													}
+												} ?>
+
+												</li>
+											</ul>
+										</li>
+						<?php } ?>
+					</ul>
+					<script>
+						jQuery(document).ready(function()
 						{
+							jQuery(".explore_menu").each(function(){
 
-							jQuery(".dropdown-menu.mega-menu .squan_magazi").toggle();
+								var parent_div = jQuery(this).find('a.remove_menu').html();
+								console.log(parent_div);
+								if(parent_div)
+								{
 
-							if (jQuery('.custom_show_arrow .squan_magazi').is(':visible')) {
-								jQuery(this).addClass('activesub');
-							} else{
-								jQuery(this).removeClass('activesub');
-							}
+								} else 
+								{
+									jQuery(this).remove();
+								}
+							});
 
-
-						});
-
-						$('.explore_menu .menu-parents').click(function()
+							var current = location.pathname;
+							console.log(current);
+							if(current != '/') {
+								$('.exploreMenu li a').each(function(){
+									var $this = $(this);
+						// if the current path is like this link, make it active
+						if($this.attr('href').indexOf(current) !== -1){
+							$this.addClass('active');
+						}
+						else
 						{
-							$(".PreviousModels").hide();
-							$(".SpitfireSeries").hide();
-							$(".SpitfireSeries").removeClass('active');
-							$(".PreviousModels").removeClass('active');
-							$(".bike_menus .menu-parent").removeClass('active');
-							$(".bike_menus ul.bike_menu").hide();
-							$(this).parent('.explore_menu').find(".dropdown-menu.mega-menu").toggle();
-							if ($('.explore_menu .dropdown-menu.mega-menu').is(':visible')) {
-								$("body").addClass('overlay');
-								$(this).parent('li.explore_menu').addClass('custom_show_arrow');
-
-							} else {
-								$("body").removeClass('overlay');
-								$(this).parent('li.explore_menu').removeClass('custom_show_arrow');
-
-							}
-
-						});
-
-						jQuery('.menu-parent').click(function()
-						{
-							jQuery(".explore_menu .dropdown-menu.mega-menu").hide();
-							jQuery(".explore_menu").removeClass('custom_show_arrow');
-
-						});
+				
+						}
 					});
-				</script>
+							}
 
-				<?php
+
+
+
+							jQuery('.activeclass').click(function()
+							{
+
+								jQuery(".dropdown-menu.mega-menu .squan_magazi").toggle();
+
+								if (jQuery('.custom_show_arrow .squan_magazi').is(':visible')) {
+									jQuery(this).addClass('activesub');
+								} else{
+									jQuery(this).removeClass('activesub');
+								}
+
+
+							});
+
+							$('.explore_menu .menu-parents').click(function()
+							{
+								$(".PreviousModels").hide();
+								$(".SpitfireSeries").hide();
+								$(".SpitfireSeries").removeClass('active');
+								$(".PreviousModels").removeClass('active');
+								$(".bike_menus .menu-parent").removeClass('active');
+								$(".bike_menus ul.bike_menu").hide();
+								$(this).parent('.explore_menu').find(".dropdown-menu.mega-menu").toggle();
+								if ($('.explore_menu .dropdown-menu.mega-menu').is(':visible')) {
+									$("body").addClass('overlay');
+									$(this).parent('li.explore_menu').addClass('custom_show_arrow');
+
+								} else {
+									$("body").removeClass('overlay');
+									$(this).parent('li.explore_menu').removeClass('custom_show_arrow');
+
+								}
+
+							});
+
+							jQuery('.menu-parent').click(function()
+							{
+								jQuery(".explore_menu .dropdown-menu.mega-menu").hide();
+								jQuery(".explore_menu").removeClass('custom_show_arrow');
+
+							});
+						});
+					</script>
+
+					<?php
 
 }
 
@@ -1223,57 +1225,57 @@ function cs_filters()
 			'posts_per_page' => -1,
 		)
 	); ?>
-				<?php if ($query->have_posts()):
-					echo '<div class="row">';
-					while ($query->have_posts()):
-						$query->the_post(); ?>
-										<?php
-										$date = get_the_date();
-										$title = get_the_title();
-										?>
-										<article class="article-card blog-content">
-											<div class="image_container">
-												<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-												<?php if ($thumb): ?>
-															<a href="<?php the_permalink(); ?>"><span class="blog-image" style="background-image:url('<?php echo $thumb['0']; ?>')"></span></a>
-												<?php endif; ?>
+					<?php if ($query->have_posts()):
+						echo '<div class="row">';
+						while ($query->have_posts()):
+							$query->the_post(); ?>
+													<?php
+													$date = get_the_date();
+													$title = get_the_title();
+													?>
+													<article class="article-card blog-content">
+														<div class="image_container">
+															<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
+															<?php if ($thumb): ?>
+																			<a href="<?php the_permalink(); ?>"><span class="blog-image" style="background-image:url('<?php echo $thumb['0']; ?>')"></span></a>
+															<?php endif; ?>
 
-												<div class="article-content custom-article-content">
-													<div class="row">
-														<div class="col-xs-3">
-															<div class="m-d-y-a-name">
-																<div class="m-d-y">
-																	<h3 class="m-n"><?php echo date('M', strtotime($date)); ?></h3>
-																	<h2 class="d-n"><?php echo date('d', strtotime($date)); ?></h2>
-																	<h3 class="y-n"><?php echo date('Y', strtotime($date)); ?></h3>
+															<div class="article-content custom-article-content">
+																<div class="row">
+																	<div class="col-xs-3">
+																		<div class="m-d-y-a-name">
+																			<div class="m-d-y">
+																				<h3 class="m-n"><?php echo date('M', strtotime($date)); ?></h3>
+																				<h2 class="d-n"><?php echo date('d', strtotime($date)); ?></h2>
+																				<h3 class="y-n"><?php echo date('Y', strtotime($date)); ?></h3>
+																			</div>
+																		</div>
+																		<!--<span class="">Date:<?php echo date('d, M, y', strtotime($date)); ?> - <?php echo date('d, M, y', strtotime($end)); ?> Time: <?php echo date('H:i', strtotime($date)); ?> - <?php echo date('H:i', strtotime($end)); ?></span>-->
+																	</div>
+																	<div class="col-xs-9 pl-0">
+																		<h3><a href="<?php the_permalink(); ?>"><?= $title ?></a></h3>
+																		<!--<h3><a href="<?php the_permalink(); ?>" class="blog-link"><?php echo get_the_title($wp_query->ID); ?></a></h3>          -->
+																	</div>
 																</div>
 															</div>
-															<!--<span class="">Date:<?php echo date('d, M, y', strtotime($date)); ?> - <?php echo date('d, M, y', strtotime($end)); ?> Time: <?php echo date('H:i', strtotime($date)); ?> - <?php echo date('H:i', strtotime($end)); ?></span>-->
 														</div>
-														<div class="col-xs-9 pl-0">
-															<h3><a href="<?php the_permalink(); ?>"><?= $title ?></a></h3>
-															<!--<h3><a href="<?php the_permalink(); ?>" class="blog-link"><?php echo get_the_title($wp_query->ID); ?></a></h3>          -->
-														</div>
-													</div>
-												</div>
-											</div>
-										</article>
-							<?php endwhile;
-					wp_reset_postdata(); ?>
-						</div>
-						<?php echo '<div class="pagination">';
-						$big = 999999999; // need an unlikely integer
-						echo paginate_links(
-							array(
-								'base'    => str_replace($big, '%#%', get_pagenum_link($big)),
-								'format'  => '?paged=%#%',
-								'current' => max(1, get_query_var('paged')),
-								'total'   => $wp_query->max_num_pages
-							)
-						);
-						echo '</div>' ?>
-		<?php endif; // reset the query ?>
-		<?php die();
+													</article>
+									<?php endwhile;
+						wp_reset_postdata(); ?>
+								</div>
+								<?php echo '<div class="pagination">';
+								$big = 999999999; // need an unlikely integer
+								echo paginate_links(
+									array(
+										'base'    => str_replace($big, '%#%', get_pagenum_link($big)),
+										'format'  => '?paged=%#%',
+										'current' => max(1, get_query_var('paged')),
+										'total'   => $wp_query->max_num_pages
+									)
+								);
+								echo '</div>' ?>
+			<?php endif; // reset the query ?>
+			<?php die();
 }
 add_action('wp_ajax_customfilter', 'cs_filters');
 add_action('wp_ajax_nopriv_customfilter', 'cs_filters');
@@ -1395,15 +1397,15 @@ function rohil_login_redirect_based_on_roles($user_login, $user)
 		}
 	}
 	/*
-	if( in_array( 'club_member',$user->roles ) ){
-	exit( wp_redirect('/club-ccm/' ) );
-	}
-	if( in_array( 'customer',$user->roles ) ){
-	exit( wp_redirect('/club-ccm/' ) );
-	}
-	if( in_array( 'administrator',$user->roles ) ){
-	exit( wp_redirect('/wp-admin/' ) );
-	}*/
+	 if( in_array( 'club_member',$user->roles ) ){
+	 exit( wp_redirect('/club-ccm/' ) );
+	 }
+	 if( in_array( 'customer',$user->roles ) ){
+	 exit( wp_redirect('/club-ccm/' ) );
+	 }
+	 if( in_array( 'administrator',$user->roles ) ){
+	 exit( wp_redirect('/wp-admin/' ) );
+	 }*/
 }
 
 add_action('wp_login', 'rohil_login_redirect_based_on_roles', 10, 2);
@@ -1747,11 +1749,11 @@ function getwishlist_download_pdf_fn($wishlist_id = 0, $data = array())
 {
 	//return 'hello';
 	/*$wishlist = tinv_wishlist_get( $wishlist_id );
-	if ( empty( $wishlist ) ) {
-	return false;
-	}
-	$wlp      = new TInvWL_Product( $wishlist );
-	$products = $wlp->get_wishlist( $data );*/
+	 if ( empty( $wishlist ) ) {
+	 return false;
+	 }
+	 $wlp      = new TInvWL_Product( $wishlist );
+	 $products = $wlp->get_wishlist( $data );*/
 
 	$products = tinvwl_get_wishlist_products($wishlist_id = 0, $data = array());
 	if (empty($products)) {
@@ -1799,19 +1801,19 @@ function getwishlist_download_pdf_order_form_fn($wishlist_id = 0, $data = array(
 {
 	//return 'hello';
 	/*if (!session_id()) {
-	session_start();
-	}
-	$wishlist = tinv_wishlist_get( $wishlist_id );
-	if ( empty( $wishlist ) ) {
-	return false;
-	}
-	$wlp      = new TInvWL_Product( $wishlist );
-	$products = $wlp->get_wishlist( $data );*/
+	 session_start();
+	 }
+	 $wishlist = tinv_wishlist_get( $wishlist_id );
+	 if ( empty( $wishlist ) ) {
+	 return false;
+	 }
+	 $wlp      = new TInvWL_Product( $wishlist );
+	 $products = $wlp->get_wishlist( $data );*/
 
 	$products = tinvwl_get_wishlist_products($wishlist_id = 0, $data = array());
 	/*if ( empty( $products ) ) {
-	return false;
-	}*/
+	 return false;
+	 }*/
 	$html = '';
 	$html .= '<div class="main" style="max-width: 1000px;margin: 30px auto;width: 100%; position: relative;">';
 	if (count($_SESSION['your-data'])) {
@@ -1860,8 +1862,8 @@ function order_wishlist()
 {
 	$products = tinvwl_get_wishlist_products($wishlist_id = 0, $data = array());
 	/*if ( empty( $products ) ) {
-	return false;
-	}*/
+	 return false;
+	 }*/
 	$html = '';
 	foreach ($products as $wl_product) {
 		if (empty($wl_product['data'])) {
@@ -2081,14 +2083,14 @@ function ccm_check_orderby_product()
 function cf7_footer_script()
 {
 	?>
-			<script>
-				document.addEventListener( 'wpcf7submit', function( event ) {
-					if ( '3675' == event.detail.contactFormId ) {
-						location = 'http://example.com/thank-you';
-					}
-				}, false );
-			</script>
-		<?php
+				<script>
+					document.addEventListener( 'wpcf7submit', function( event ) {
+						if ( '3675' == event.detail.contactFormId ) {
+							location = 'http://example.com/thank-you';
+						}
+					}, false );
+				</script>
+			<?php
 }
 add_action('wp_footer', 'cf7_footer_script');
 
@@ -2096,14 +2098,14 @@ function my_login_logo()
 {
 	wp_enqueue_script('my-script', get_template_directory_uri() . '/app/javascripts/loginmain.js', null, null, true);
 	?>
-			<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap" rel="stylesheet">
-			<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500,600" rel="stylesheet">
-			<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-			<style type="text/css">
-				<?php
-				include(get_template_directory() . '/app/new-styles/_login.css');
-				?>
-			</style>
+				<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500,600" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+				<style type="text/css">
+					<?php
+					include(get_template_directory() . '/app/new-styles/_login.css');
+					?>
+				</style>
 <?php }
 add_action('login_enqueue_scripts', 'my_login_logo');
 
@@ -2561,7 +2563,7 @@ function ntwb_bbpress_custom_role_names()
 	return array(
 
 		// Keymaster
-		bbp_get_keymaster_role() => array(
+		bbp_get_keymaster_role()   => array(
 			'name'         => 'Staff',
 			'capabilities' => bbp_get_caps_for_role(bbp_get_keymaster_role())
 		),
@@ -2573,13 +2575,13 @@ function ntwb_bbpress_custom_role_names()
 		),
 
 		// Spectator
-		bbp_get_spectator_role() => array(
+		bbp_get_spectator_role()   => array(
 			'name'         => 'Spectator',
 			'capabilities' => bbp_get_caps_for_role(bbp_get_spectator_role())
 		),
 
 		// Blocked
-		bbp_get_blocked_role() => array(
+		bbp_get_blocked_role()     => array(
 			'name'         => 'Blocked',
 			'capabilities' => bbp_get_caps_for_role(bbp_get_blocked_role())
 		)
@@ -2780,8 +2782,8 @@ function admin_post_list_add_export_button($which)
 
 	if ('product' === $typenow && 'top' === $which) {
 		?>
-						<input type="submit" name="export_all_posts" class="button button-primary" value="<?php _e('Export Product'); ?>" />
-						<?php
+								<input type="submit" name="export_all_posts" class="button button-primary" value="<?php _e('Export Product'); ?>" />
+								<?php
 	}
 }
 
@@ -3017,13 +3019,13 @@ function ccm_date_format($date)
 {
 	ob_start();
 	?>
-			<div class="month-day-year">
-				<span class="month"><?php echo date('M', strtotime($date)); ?></span>
-				<span class="day"><?php echo date('d', strtotime($date)); ?></span>
-				<span class="year"><?php echo get_the_date('Y') ?></span>
-			</div>
-			<?php
-			return ob_get_clean();
+				<div class="month-day-year">
+					<span class="month"><?php echo date('M', strtotime($date)); ?></span>
+					<span class="day"><?php echo date('d', strtotime($date)); ?></span>
+					<span class="year"><?php echo get_the_date('Y') ?></span>
+				</div>
+				<?php
+				return ob_get_clean();
 }
 
 // Date format
@@ -3118,29 +3120,29 @@ add_action('admin_enqueue_scripts', 'enqueue_select2_jquery');
 function action_admin_head()
 {
 	?>
-			<script type="text/javascript">
-				jQuery(document).ready(function($) {
-					jQuery('.select-product select').select2();
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						jQuery('.select-product select').select2();
 
-					jQuery('.accesory-type').each(function(index, el) {
-						$this = jQuery(this);
+						jQuery('.accesory-type').each(function(index, el) {
+							$this = jQuery(this);
 
-						$this.find('select').change(function(event) {
-							$this.next().find('select').select2();
+							$this.find('select').change(function(event) {
+								$this.next().find('select').select2();
+							});
 						});
-					});
 			
-				});
-			</script>
-			<style>
-				.select2-container {
-					width: 100% !important;
-				}
-				.wrap_svl {
-					background-color: #000;
-				}
-			</style>
-			<?php
+					});
+				</script>
+				<style>
+					.select2-container {
+						width: 100% !important;
+					}
+					.wrap_svl {
+						background-color: #000;
+					}
+				</style>
+				<?php
 }
 
 add_action('admin_head', 'action_admin_head');
@@ -3171,20 +3173,21 @@ add_action('wp_head', 'custom_css');
 /*
 add_action('wp_head', 'show_template');
 function show_template() {
-    global $template;
-    echo basename($template);
+		global $template;
+		echo basename($template);
 }*/
 
 
-function breadcrumbs() {
-	$breadcrumbs = '<div class="breadcrumbs"><ul class="d-flex align-items-center">'; 
+function breadcrumbs()
+{
+	$breadcrumbs = '<div class="breadcrumbs"><ul class="d-flex align-items-center">';
 
-	$breadcrumbs .= '<li class="d-flex align-items-center"><a href="'.get_site_url().'">HOME</a></li>';
+	$breadcrumbs .= '<li class="d-flex align-items-center"><a href="' . get_site_url() . '">HOME</a></li>';
 
-	if(get_post_type() == 'bikes') {
+	if (get_post_type() == 'bikes') {
 		$breadcrumbs .= '<li class="d-flex align-items-center"><a href="#">MOTORCYCLES</a></li>';
 	}
-	$breadcrumbs .= '<li class="d-flex align-items-center"><span>'.get_the_title().'</span></li>';
+	$breadcrumbs .= '<li class="d-flex align-items-center"><span>' . get_the_title() . '</span></li>';
 
 	$breadcrumbs .= '</ul></div>';
 	return $breadcrumbs;
