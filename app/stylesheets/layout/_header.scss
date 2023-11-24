@@ -1102,6 +1102,7 @@ section.bike-lists-menu.bike-lists-menu.bike-lists-menu {
 				> [class*="col-"] {
 					a {
 						opacity: 1;
+						transform: none !important;
 						.bike-name {
 							text-transform: uppercase;
 						}
