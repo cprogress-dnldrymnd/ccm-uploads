@@ -18,7 +18,11 @@ $bikes = carbon_get_the_post_meta('bikes');
             <div class="swiper-wrapper">
                 <?php foreach ($bikes as $bike) { ?>
                     <?php
+                    $bike_tagline = carbon_get_post_meta($bike['id'], 'bike_tagline');
+                    $bike_slider_image_bike_page = carbon_get_post_meta($bike['id'], 'bike_slider_image_bike_page');
                     $tagline = carbon_get_post_meta($bike['id'], 'tagline');
+
+
                     ?>
                     <div class="swiper-slide">
                         <div class="image-box">
@@ -30,11 +34,14 @@ $bikes = carbon_get_the_post_meta('bikes');
                                     <?= get_the_title($bike['id']) ?>
                                 </h2>
                             </div>
-                            <div class="description-box">
-                                <p>
-                                    Motorcycle tag line.
-                                </p>
-                            </div>
+
+                            <?php if ($bike_tagline) { ?>
+                                <div class="description-box">
+                                    <p>
+                                        <?= $bike_tagline ?>
+                                    </p>
+                                </div>
+                            <?php } ?>
                             <div class="btn-box">
                                 <a href="<?= get_permalink($bike['ID']) ?>" class="pc-btn">
                                     DISCOVER
