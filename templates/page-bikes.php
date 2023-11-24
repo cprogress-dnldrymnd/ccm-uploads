@@ -47,7 +47,7 @@ $bikes = carbon_get_the_post_meta('bikes');
                             <?php } ?>
                             <div class="btn-box col-auto">
                                 <a href="<?= $link ?>" class="pc-btn">
-                                    Personalise Your Ride
+                                    PERSONALISE YOUR RIDE
                                 </a>
                             </div>
                         </div>
