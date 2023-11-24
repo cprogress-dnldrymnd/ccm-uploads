@@ -46,15 +46,15 @@ $bikes = carbon_get_the_post_meta('bikes');
                                     </p>
                                 </div>
                             <?php } ?>
-                            <div class="button-group-box">
+                            <div class="button-group-box row">
                                 <?php if ($configure_url) { ?>
-                                    <div class="btn-box">
+                                    <div class="btn-box col-auto">
                                         <a href="<?= $link ?>" class="pc-btn">
                                             CCONFIGURE
                                         </a>
                                     </div>
                                 <?php } ?>
-                                <div class="btn-box">
+                                <div class="btn-box col-auto">
                                     <a href="<?= $link ?>" class="pc-btn">
                                         DISCOVER
                                     </a>
