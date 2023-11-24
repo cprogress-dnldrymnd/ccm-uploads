@@ -1102,6 +1102,13 @@ section.bike-lists-menu.bike-lists-menu.bike-lists-menu {
 		.bike-lists-holder {
 			> .row {
 				> [class*="col-"] {
+					@media(max-width: 767px) {
+						&:first-child {
+							a {
+								border-top: 1px solid #e2e2e2;
+							}
+						}
+					}
 					a {
 						opacity: 1;
 						transform: none !important;

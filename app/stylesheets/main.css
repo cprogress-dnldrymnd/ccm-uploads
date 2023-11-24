@@ -18760,7 +18760,7 @@ section.slider-hero {
         font-size: 105px; } }
   section.slider-hero .swiper-pagination {
     position: absolute;
-    top: 360px;
+    bottom: 170px;
     font-weight: bold; }
     @media (min-width: 768px) {
       section.slider-hero .swiper-pagination {
