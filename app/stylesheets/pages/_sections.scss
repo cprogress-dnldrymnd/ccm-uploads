@@ -1178,6 +1178,9 @@ section.accordion-section {
 
 section.slider-hero {
     padding-top: 200px;
+    @media (max-width: 575px) {
+        padding-top: 150px;
+    }
     .slider-title {
         font-size: 282px;
         font-weight: bold !important;

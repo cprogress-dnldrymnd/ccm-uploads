@@ -18734,6 +18734,9 @@ section.accordion-section {
 
 section.slider-hero {
   padding-top: 200px; }
+  @media (max-width: 575px) {
+    section.slider-hero {
+      font-size: 105px; } }
   section.slider-hero .slider-title {
     font-size: 282px;
     font-weight: bold !important;
@@ -18753,7 +18756,7 @@ section.slider-hero {
         font-size: 150px; } }
     @media (max-width: 575px) {
       section.slider-hero .slider-title {
-        font-size: 150px; } }
+        font-size: 105px; } }
   section.slider-hero .swiper-slide .image-box {
     padding: 22%;
     position: relative; }
