@@ -1189,19 +1189,25 @@ section.slider-hero {
         right: 0;
         text-align: center;
         text-transform: uppercase;
-    
     }
-    .image-box {
-        padding: 22%;
-        position: relative;
-        img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            object-fit: contain;
-            object-position: center;
+    .swiper-slide {
+        .image-box {
+            padding: 22%;
+            position: relative;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+        .heading-box {
+            h2 {
+                text-transform: uppercase;
+            }
         }
     }
 }
