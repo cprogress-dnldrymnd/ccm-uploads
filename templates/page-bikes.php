@@ -106,6 +106,9 @@ $bikes = carbon_get_the_post_meta('bikes');
         pagination: {
             el: '.swiper-pagination',
             type: 'fraction',
+            formatFractionCurrent: function(number) {
+                return '0' + number;
+            }
         },
         breakpoints: {
 
