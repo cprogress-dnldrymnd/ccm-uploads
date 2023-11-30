@@ -18867,20 +18867,21 @@ section.slider-hero {
     background-color: var(--white-color);
     max-width: 250px;
     padding: 12px; }
-    #store-locator-holder .wpsl-info-window .btn-box strong {
-      width: 100% !important;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      font-size: 0 !important; }
-      #store-locator-holder .wpsl-info-window .btn-box strong:before {
-        content: "MORE INFO";
-        font-size: 15px; }
-    #store-locator-holder .wpsl-info-window .btn-box a {
-      font-size: 15px !important;
-      font-weight: 500 !important;
-      width: 100% !important; }
+    #store-locator-holder .wpsl-info-window .btn-box {
+      position: relative; }
+      #store-locator-holder .wpsl-info-window .btn-box strong {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        font-size: 0 !important; }
+        #store-locator-holder .wpsl-info-window .btn-box strong:before {
+          content: "MORE INFO";
+          font-size: 15px; }
+      #store-locator-holder .wpsl-info-window .btn-box a {
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        width: 100% !important; }
 
 /*# sourceMappingURL=main.css.map */
