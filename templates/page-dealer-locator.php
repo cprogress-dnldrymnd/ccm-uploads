@@ -41,7 +41,7 @@ $background = 17248;
     </section>
     <div id="store-locator-holder">
         <div class="container">
-            <?= do_shortcode('[wpsl template="default" map_type="roadmap" auto_locate="true" start_marker="red" store_marker="blue" category_selection=""]') ?>
+            <?= do_shortcode('[wpsl]') ?>
         </div>
     </div>
 </main>
