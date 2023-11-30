@@ -109,23 +109,30 @@ function mycustom_listing_template()
 
 
 
-dd_filter( 'wpsl_info_window_template', 'custom_info_window_template' );
+dd_filter('wpsl_info_window_template', 'custom_info_window_template');
 
-function custom_info_window_template() {
+function custom_info_window_template()
+{
 
     global $wpsl_settings, $wpsl;
-   
+
     $info_window_template = '<div data-store-id="<%= id %>" class="wpsl-info-window">' . "\r\n";
     $info_window_template .= "\t\t" . '<p>' . "\r\n";
-    $info_window_template .= "\t\t\t" .  wpsl_store_header_template() . "\r\n";  
+    $info_window_template .= "\t\t\t" .  wpsl_store_header_template() . "\r\n";
     $info_window_template .= "\t\t\t" . '<span><%= address %></span>' . "\r\n";
     $info_window_template .= "\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
     $info_window_template .= "\t\t\t" . '<span><%= address2 %></span>' . "\r\n";
     $info_window_template .= "\t\t\t" . '<% } %>' . "\r\n";
     $info_window_template .= "\t\t\t" . '<span>' . wpsl_address_format_placeholders() . '</span>' . "\r\n";
     $info_window_template .= "\t\t" . '</p>' . "\r\n";
+    $info_window_template .= "\t\t" . '<div class="btn-box">' . "\r\n";
+    $info_window_template .= "\t" . '<a>MORE INFO</a>' . "\r\n";
+    $info_window_template .= "\t\t" . '</div>' . "\r\n";
+
+
+
     $info_window_template .= "\t" . '</div>' . "\r\n";
-    
+
     return $info_window_template;
 }
 
