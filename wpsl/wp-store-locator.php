@@ -41,10 +41,10 @@ function mycustom_listing_template()
     $listing_template .= '<div class="wpsl-store-background-image  background-image-section store-background<%= id %>"></div>';
     $listing_template .= "\t\t" . '<div class="wpsl-store-location">' . "\r\n";
     $listing_template .= "\t\t\t" . '<div class="row">' . "\r\n";
-    $listing_template .= "\t\t\t\t" . '<div class="col-lg-4">' . "\r\n";
+    $listing_template .= "\t\t\t\t" . '<div class="col-auto">' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '<%= thumb %>' . "\r\n";
     $listing_template .= "\t\t\t\t" . '</div>';
-    $listing_template .= "\t\t\t\t" . '<div class="col-lg-8">' . "\r\n";
+    $listing_template .= "\t\t\t\t" . '<div class="col">' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '<div class="listing-title">' . wpsl_store_header_template('listing') . '</div>' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '<div class="listing-address">';
     // Check which header format we use
