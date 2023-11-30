@@ -18917,8 +18917,9 @@ section.slider-hero {
 @media (max-width: 991px) {
   #store-locator-holder #wpsl-gmap {
     display: none; } }
-#store-locator-holder #wpsl-stores {
-  height: auto !important; }
+@media (max-width: 991px) {
+  #store-locator-holder #wpsl-stores {
+    height: auto !important; } }
 #store-locator-holder .wpsl-info-window {
   background-color: var(--white-color);
   max-width: 250px;
