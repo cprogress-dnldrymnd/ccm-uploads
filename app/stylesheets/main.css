@@ -18797,12 +18797,22 @@ section.slider-hero {
 #store-locator-holder {
   padding-top: 100px;
   padding-bottom: 100px; }
-  #store-locator-holder #wpsl-gmap, #store-locator-holder #wpsl-result-list {
+  #store-locator-holder #wpsl-gmap,
+  #store-locator-holder #wpsl-result-list {
     width: 100%; }
   #store-locator-holder .wpsl-directions {
     display: none !important; }
-  #store-locator-holder .wpsl-store-location .listing-address > * {
-    display: inline !important; }
+  #store-locator-holder .wpsl-store-location .listing-title a {
+    color: var(--black-color); }
+  #store-locator-holder .wpsl-store-location .listing-address {
+    display: flex;
+    align-items: center; }
+    #store-locator-holder .wpsl-store-location .listing-address svg {
+      margin-right: 10px; }
+    #store-locator-holder .wpsl-store-location .listing-address .listing-address-inner {
+      font-size: 13px; }
+      #store-locator-holder .wpsl-store-location .listing-address .listing-address-inner > * {
+        display: inline !important; }
   #store-locator-holder .wpsl-store-location .wpsl-store-thumb {
     margin: 0;
     float: none; }

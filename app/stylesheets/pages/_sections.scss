@@ -1,6 +1,5 @@
 .bikes-template-templates,
 .page-template-page-components-v2 {
-
     .woo-login-popup-sc-modal,
     .woo-login-popup-sc-modal-overlay {
         display: none !important;
@@ -12,7 +11,7 @@
 }
 
 .content-margin {
-    >* {
+    > * {
         &:not(:last-child) {
             margin-bottom: 30px;
         }
@@ -64,7 +63,6 @@ footer.footer {
     }
 
     .btn-box {
-
         a,
         button {
             border: 1px solid var(--main-color);
@@ -85,7 +83,6 @@ footer.footer {
         }
 
         &.btn-bordered {
-
             a,
             button {
                 background-color: transparent !important;
@@ -149,7 +146,6 @@ footer.footer {
         flex-wrap: nowrap;
 
         li {
-
             a,
             span {
                 font-size: 14px;
@@ -362,7 +358,6 @@ section.bike-navigation {
 
     .bike-title,
     .bike-nav {
-
         span,
         li,
         a {
@@ -417,7 +412,6 @@ section.bike-navigation {
 
             .bike-title,
             .bike-nav {
-
                 span,
                 li,
                 a {
@@ -502,7 +496,6 @@ section.overview {
         }
 
         @media (min-width: 992px) {
-
             h2,
             p {
                 color: var(--white-color);
@@ -687,7 +680,7 @@ section.bike-specification {
                 }
             }
 
-            >div {
+            > div {
                 @media (min-width: 992px) {
                     flex: 0 0 auto;
                     width: 50%;
@@ -792,7 +785,7 @@ section.bike-specification {
 
             @media (min-width: 992px) {
                 @include on-event {
-                    >div {
+                    > div {
                         &.specs-heading {
                             h3 {
                                 color: var(--main-color);
@@ -941,7 +934,7 @@ section.wysiwyg-v2 {
         margin-left: auto;
         margin-right: auto;
 
-        >* {
+        > * {
             &:first-child {
                 margin-top: 0;
             }
@@ -974,7 +967,7 @@ section.wysiwyg-v2 {
         }
     }
 
-    &+.two-columns-8-4 {
+    & + .two-columns-8-4 {
         padding-top: 0;
     }
 }
@@ -998,7 +991,7 @@ section.two-columns-8-4 {
         }
     }
 
-    &+.two-columns-8-4 {
+    & + .two-columns-8-4 {
         padding-top: 0 !important;
     }
 }
@@ -1073,7 +1066,7 @@ section.two-column-carousel {
             display: flex;
             z-index: 1;
 
-            >div {
+            > div {
                 width: 60px;
                 height: 60px;
                 display: flex;
@@ -1100,7 +1093,7 @@ section.two-column-carousel {
         }
     }
 
-    &+section.wysiwyg-v2 {
+    & + section.wysiwyg-v2 {
         padding-top: 0 !important;
     }
 
@@ -1154,7 +1147,7 @@ section.accordion-section {
                 }
             }
 
-            >div {
+            > div {
                 &.accordion-heading {
                     display: flex;
                     justify-content: space-between;
@@ -1319,16 +1312,31 @@ section.slider-hero {
 #store-locator-holder {
     padding-top: 100px;
     padding-bottom: 100px;
-    #wpsl-gmap, #wpsl-result-list {
+    #wpsl-gmap,
+    #wpsl-result-list {
         width: 100%;
     }
     .wpsl-directions {
         display: none !important;
     }
     .wpsl-store-location {
+        .listing-title {
+            a {
+                color: var(--black-color);
+                font-size: 14px;
+            }
+        }
         .listing-address {
-            > * {
-                display: inline !important;
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 10px;
+            }
+            .listing-address-inner {
+                font-size: 13px;
+                > * {
+                    display: inline !important;
+                }
             }
         }
         .wpsl-store-thumb {
