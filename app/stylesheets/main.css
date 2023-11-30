@@ -18807,6 +18807,8 @@ section.slider-hero {
     padding: 0;
     box-shadow: none;
     background-color: transparent; }
+    #store-locator-holder #wpsl-gmap [class*="gm-style"][style*="overflow: scroll"] {
+      overflow: hidden; }
   #store-locator-holder #wpsl-wrap #wpsl-result-list ul li {
     padding: 15px;
     border: none; }
