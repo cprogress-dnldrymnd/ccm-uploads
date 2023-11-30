@@ -47,6 +47,7 @@ function mycustom_listing_template()
     $listing_template .= "\t\t\t\t" . '<div class="col">' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '<div class="listing-title">' . wpsl_store_header_template('listing') . '</div>' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '<div class="listing-address">';
+    $listing_template .= "\t\t\t\t\t" . '<svg xmlns="http://www.w3.org/2000/svg" width="9.36" height="11.748" viewBox="0 0 9.36 11.748"> <g id="location" transform="translate(-4.5 -2.5)"> <path id="Path_30" data-name="Path 30" d="M9.18,13.748c2.09-2.15,4.18-4.074,4.18-6.449A4.241,4.241,0,0,0,9.18,3,4.241,4.241,0,0,0,5,7.3C5,9.674,7.09,11.6,9.18,13.748Z" transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/> <path id="Path_31" data-name="Path 31" d="M10.791,10.583A1.791,1.791,0,1,0,9,8.791,1.791,1.791,0,0,0,10.791,10.583Z" transform="translate(-1.612 -1.612)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/> </g> </svg>';
     // Check which header format we use
     $listing_template .= "\t\t\t\t\t" . '<span class="wpsl-street"><%= address %>,</span>' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
