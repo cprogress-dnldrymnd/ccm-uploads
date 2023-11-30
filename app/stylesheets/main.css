@@ -18867,7 +18867,7 @@ section.slider-hero {
     background-color: var(--white-color);
     max-width: 250px;
     padding: 12px; }
-    #store-locator-holder .wpsl-info-window .btn-box a {
+    #store-locator-holder .wpsl-info-window .btn-box strong {
       width: 100% !important;
       position: absolute;
       left: 0;
@@ -18875,7 +18875,7 @@ section.slider-hero {
       bottom: 0;
       top: 0;
       font-size: 0 !important; }
-      #store-locator-holder .wpsl-info-window .btn-box a:before {
+      #store-locator-holder .wpsl-info-window .btn-box strong:before {
         content: "MORE INFO";
         font-size: 15px; }
     #store-locator-holder .wpsl-info-window .btn-box a {

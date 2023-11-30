@@ -1412,8 +1412,8 @@ section.slider-hero {
         max-width: 250px;
         padding: 12px;
         .btn-box {
+            position: relative;
             strong {
-                width: 100% !important;
                 position: absolute;
                 left: 0;
                 right: 0;
