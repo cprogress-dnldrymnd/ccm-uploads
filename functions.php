@@ -7,7 +7,7 @@
 // Define the version so we can easily replace it throughout the theme
 define('ccm_VERSION', 1.0);
 define('style_version', 3.2);
-define( 'WPSL_MARKER_URI', get_stylesheet_directory(). '/wpsl/wpsl-markers/' );
+define( 'WPSL_MARKER_URI', dirname( get_bloginfo( 'stylesheet_url') ) . '/wpsl/wpsl-markers/' );
 
 /*-----------------------------------------------------------------------------------*/
 /*  Set the maximum allowed width for any content in the theme
