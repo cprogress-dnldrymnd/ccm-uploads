@@ -1419,7 +1419,7 @@ section.slider-hero {
         .btn-box {
             position: relative;
             height: 40px;
-            strong {
+            a {
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -1428,9 +1428,7 @@ section.slider-hero {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                a {
-                    font-size: 0 !important;
-                }
+                font-size: 0 !important;
                 &:before {
                     content: "MORE INFO";
                     font-size: 15px;
