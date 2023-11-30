@@ -18877,6 +18877,7 @@ section.slider-hero {
         content: "MORE INFO";
         font-size: 15px; }
     #store-locator-holder .wpsl-info-window .btn-box a {
+      text-decoration: none !important;
       font-size: 15px !important;
       font-weight: 500 !important;
       width: 100% !important; }
