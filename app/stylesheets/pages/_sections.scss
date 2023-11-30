@@ -1320,6 +1320,12 @@ section.slider-hero {
     .wpsl-info-actions {
         display: none !important;
     }
+    #wpsl-gmap {
+        .gm-style-iw-a {
+            padding: 0;
+            overflow: hidden;
+        }
+    }
     #wpsl-wrap {
         #wpsl-result-list {
             ul {
@@ -1365,7 +1371,7 @@ section.slider-hero {
     }
     .row-location-details {
         font-family: $font-fira !important;
-
+        margin-bottom: 12px;
         .listing-title {
             a {
                 color: var(--black-color);
