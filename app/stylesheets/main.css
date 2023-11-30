@@ -18871,8 +18871,9 @@ section.slider-hero {
       left: 0;
       right: 0;
       bottom: 0;
-      top: 0;
-      font-size: 0 !important; }
+      top: 0; }
+      #store-locator-holder .wpsl-info-window .btn-box strong a {
+        font-size: 0 !important; }
       #store-locator-holder .wpsl-info-window .btn-box strong:before {
         content: "MORE INFO";
         font-size: 15px; }
