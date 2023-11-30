@@ -18832,19 +18832,19 @@ section.slider-hero {
         padding: 14px;
         border-radius: 0;
         border: 1px solid; }
-  #store-locator-holder .wpsl-store-location .listing-title a {
+  #store-locator-holder .row-location-details .listing-title a {
     color: var(--black-color);
     font-size: 14px; }
-  #store-locator-holder .wpsl-store-location .listing-address {
+  #store-locator-holder .row-location-details .listing-address {
     display: flex;
     align-items: center; }
-    #store-locator-holder .wpsl-store-location .listing-address svg {
+    #store-locator-holder .row-location-details .listing-address svg {
       margin-right: 10px; }
-    #store-locator-holder .wpsl-store-location .listing-address .listing-address-inner {
+    #store-locator-holder .row-location-details .listing-address .listing-address-inner {
       font-size: 13px; }
-      #store-locator-holder .wpsl-store-location .listing-address .listing-address-inner > * {
+      #store-locator-holder .row-location-details .listing-address .listing-address-inner > * {
         display: inline !important; }
-  #store-locator-holder .wpsl-store-location .wpsl-store-thumb {
+  #store-locator-holder .row-location-details .wpsl-store-thumb {
     margin: 0;
     float: none; }
 
