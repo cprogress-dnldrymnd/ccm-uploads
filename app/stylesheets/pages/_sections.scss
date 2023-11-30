@@ -1407,6 +1407,9 @@ section.slider-hero {
                 overflow: hidden !important;
             }
         }
+        @media(max-width: 991px) {
+            display: none;
+        }
     }
     .wpsl-info-window {
         background-color: var(--white-color);
