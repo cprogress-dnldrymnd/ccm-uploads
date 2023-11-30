@@ -18803,7 +18803,7 @@ section.slider-hero {
   #store-locator-holder .wpsl-directions,
   #store-locator-holder .wpsl-info-actions {
     display: none !important; }
-  #store-locator-holder #wpsl-gmap [class*='gm-style-iw'] {
+  #store-locator-holder #wpsl-gmap [class*="gm-style"] {
     padding: 0;
     overflow: hidden; }
   #store-locator-holder #wpsl-wrap #wpsl-result-list ul li {

@@ -1324,6 +1324,8 @@ section.slider-hero {
         [class*="gm-style"] {
             padding: 0;
             overflow: hidden;
+            box-shadow: none;
+            background-color: transparent;
         }
     }
     #wpsl-wrap {
