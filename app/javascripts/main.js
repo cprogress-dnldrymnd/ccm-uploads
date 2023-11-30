@@ -386,27 +386,30 @@ function bike_navigation() {
 }
 
 function dealer_location_search() {
-	if (jQuery('.wpsl-search').length > 0) {
-		$bike_nav_height = jQuery('.wpsl-search .wpsl-search-wrap').outerHeight();
-		jQuery('.wpsl-search').css('height', $bike_nav_height + 'px');
+	if (window.innerWidth < 992) {
 
-		var stickyTop = jQuery('.wpsl-search').offset().top;
+		if (jQuery('.wpsl-search').length > 0) {
+			$bike_nav_height = jQuery('.wpsl-search .wpsl-search-wrap').outerHeight();
+			jQuery('.wpsl-search').css('height', $bike_nav_height + 'px');
 
-		jQuery(window).scroll(function () {
+			var stickyTop = jQuery('.wpsl-search').offset().top;
 
-			$header_height = jQuery('#ccm-motors-header').outerHeight();
+			jQuery(window).scroll(function () {
 
-			var windowTop = jQuery(window).scrollTop();
-			if (jQuery('body').hasClass('show-header')) {
-				windowTop = windowTop + $header_height;
-			}
+				$header_height = jQuery('#ccm-motors-header').outerHeight();
 
-			if (stickyTop < windowTop) {
-				jQuery('.wpsl-search').addClass('fixed');
-			} else {
-				jQuery('.wpsl-search').removeClass('fixed');
-			}
-		});
+				var windowTop = jQuery(window).scrollTop();
+				if (jQuery('body').hasClass('show-header')) {
+					windowTop = windowTop + $header_height;
+				}
+
+				if (stickyTop < windowTop) {
+					jQuery('.wpsl-search').addClass('fixed');
+				} else {
+					jQuery('.wpsl-search').removeClass('fixed');
+				}
+			});
+		}
 	}
 }
 
