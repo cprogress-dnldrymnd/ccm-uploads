@@ -1373,6 +1373,13 @@ section.slider-hero {
                     }
                 }
             }
+            @media (max-width: 991px) {
+                &.fixed {
+                    .inner {
+                        top: 57px;
+                    }
+                }
+            }
         }
     }
     .row-location-details {

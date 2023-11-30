@@ -385,6 +385,31 @@ function bike_navigation() {
 	}
 }
 
+function dealer_location_search() {
+	if (jQuery('.wpsl-search').length > 0) {
+		$bike_nav_height = jQuery('.wpsl-search .wpsl-search-wrap').outerHeight();
+		jQuery('.wpsl-search').css('height', $bike_nav_height + 'px');
+
+		var stickyTop = jQuery('.wpsl-search').offset().top;
+
+		jQuery(window).scroll(function () {
+
+			$header_height = jQuery('#ccm-motors-header').outerHeight();
+
+			var windowTop = jQuery(window).scrollTop();
+			if (jQuery('body').hasClass('show-header')) {
+				windowTop = windowTop + $header_height;
+			}
+
+			if (stickyTop < windowTop) {
+				jQuery('.wpsl-search').addClass('fixed');
+			} else {
+				jQuery('.wpsl-search').removeClass('fixed');
+			}
+		});
+	}
+}
+
 function bike_scroller() {
 	if (jQuery('.bike-scroller').length > 0) {
 		var stickyTop = jQuery('.bike-scroller').offset().top;

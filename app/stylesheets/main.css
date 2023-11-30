@@ -18839,7 +18839,11 @@ section.slider-hero {
       border: 1px solid; }
       @media (max-width: 480px) {
         #store-locator-holder #wpsl-wrap .wpsl-search .wpsl-input #wpsl-search-input {
-          font-size: 13px !important; } }
+          font-size: 13px !important;
+          min-height: 50px; } }
+  @media (max-width: 991px) {
+    #store-locator-holder #wpsl-wrap .wpsl-search.fixed .inner {
+      top: 57px; } }
 #store-locator-holder .row-location-details {
   font-family: "Fira Sans Condensed", sans-serif !important;
   margin-bottom: 12px;
