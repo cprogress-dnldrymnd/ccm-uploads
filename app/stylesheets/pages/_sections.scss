@@ -1323,9 +1323,11 @@ section.slider-hero {
     #wpsl-gmap {
         [class*="gm-style"] {
             padding: 0;
-            overflow: hidden;
             box-shadow: none;
             background-color: transparent;
+            &[style*="overflow: scroll"] {
+                overflow: hidden;
+            }
         }
     }
     #wpsl-wrap {
