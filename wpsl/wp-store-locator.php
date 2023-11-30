@@ -36,7 +36,7 @@ function mycustom_listing_template()
 
     global $wpsl, $wpsl_settings;
 
-    $listing_template = '<li data-store-id="<%= id %>">' . get_the_title('<%= id %>') .get_the_post_thumbnail_url('<%= id %>') "\r\n";
+    $listing_template = '<li data-store-id="<%= id %>">' . get_the_title('<%= id %>') .get_the_post_thumbnail_url('<%= id %>'). "\r\n";
     $listing_template .= '<div class="store-holder">' . "\r\n";
     $listing_template .= '<div class="wpsl-store-background-image  background-image-section store-background<%= id %>"></div>';
     $listing_template .= "\t\t" . '<div class="wpsl-store-location">' . "\r\n";
