@@ -18857,7 +18857,9 @@ section.slider-hero {
         top: 0;
         left: 0;
         right: 0;
-        transition: 300ms; } }
+        transition: 300ms;
+        padding-top: 10px;
+        padding-bottom: 10px; } }
 #store-locator-holder .row-location-details {
   font-family: "Fira Sans Condensed", sans-serif !important;
   margin-bottom: 12px;
