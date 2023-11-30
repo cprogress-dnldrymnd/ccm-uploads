@@ -1365,6 +1365,7 @@ section.slider-hero {
     .row-location-details {
         font-family: $font-fira !important;
         margin-bottom: 12px;
+        color: var(--black-color);
         .listing-title {
             a {
                 color: var(--black-color);
@@ -1414,7 +1415,7 @@ section.slider-hero {
         outline: none !important;
         border: none !important;
         font-family: $font-fira !important;
-
+        
         * {
             box-sizing: border-box !important;
         }
