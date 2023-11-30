@@ -18850,9 +18850,9 @@ section.slider-hero {
           min-height: 50px; } }
   @media (max-width: 991px) {
     #store-locator-holder #wpsl-wrap .wpsl-search {
-      background-color: var(--white-color);
       z-index: 0; }
       #store-locator-holder #wpsl-wrap .wpsl-search.fixed #wpsl-search-wrap {
+        background-color: var(--white-color);
         position: fixed;
         top: 0;
         left: 0;

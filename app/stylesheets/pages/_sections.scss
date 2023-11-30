@@ -1391,10 +1391,10 @@ section.slider-hero {
                 }
             }
             @media (max-width: 991px) {
-                background-color: var(--white-color);
-                z-index: 0;
+                z-index: 2;
                 &.fixed {
                     #wpsl-search-wrap {
+                        background-color: var(--white-color);
                         position: fixed;
                         top: 0;
                         left: 0;
