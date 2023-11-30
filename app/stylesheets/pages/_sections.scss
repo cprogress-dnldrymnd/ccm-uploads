@@ -1375,8 +1375,12 @@ section.slider-hero {
             }
             @media (max-width: 991px) {
                 &.fixed {
-                    .inner {
+                    .wpsl-search {
                         top: 57px;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
                     }
                 }
             }
