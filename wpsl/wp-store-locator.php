@@ -42,25 +42,23 @@ function mycustom_listing_template()
     $listing_template .= "\t\t" . '<div class="wpsl-store-location">' . "\r\n";
     $listing_template .= "\t\t\t" . '<div class="row">' . "\r\n";
     $listing_template .= "\t\t\t\t" . '<div class="col-lg-8">' . "\r\n";
-    $listing_template .= "\t\t\t\t" . '<div class="listing-title">' . wpsl_store_header_template('listing') . '</div>' . "\r\n";
-    $listing_template .= "\t\t\t\t" . '<div class="listing-address">';
+    $listing_template .= "\t\t\t\t\t" . '<div class="listing-title">' . wpsl_store_header_template('listing') . '</div>' . "\r\n";
+    $listing_template .= "\t\t\t\t\t" . '<div class="listing-address">';
     // Check which header format we use
-    $listing_template .= "\t\t\t\t" . '<span class="wpsl-street"><%= address %>,</span>' . "\r\n";
-    $listing_template .= "\t\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
-    $listing_template .= "\t\t\t\t" . '<span class="wpsl-street"><%= address2 %>,</span>' . "\r\n";
-    $listing_template .= "\t\t\t\t" . '<% } %>' . "\r\n";
-    $listing_template .= "\t\t\t\t" . '<span><%= zip %></span>' . "\r\n"; // Use the correct address format
+    $listing_template .= "\t\t\t\t\t" . '<span class="wpsl-street"><%= address %>,</span>' . "\r\n";
+    $listing_template .= "\t\t\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
+    $listing_template .= "\t\t\t\t\t" . '<span class="wpsl-street"><%= address2 %>,</span>' . "\r\n";
+    $listing_template .= "\t\t\t\t\t" . '<% } %>' . "\r\n";
+    $listing_template .= "\t\t\t\t\t" . '<span><%= zip %></span>' . "\r\n"; // Use the correct address format
 
     if (!$wpsl_settings['hide_country']) {
-        $listing_template .= "\t\t\t\t" . '<span class="wpsl-country"><%= country %></span>' . "\r\n";
+        $listing_template .= "\t\t\t\t\t" . '<span class="wpsl-country"><%= country %></span>' . "\r\n";
     }
+    $listing_template .= "\t\t\t\t\t" . '</div>';
     $listing_template .= "\t\t\t\t" . '</div>';
-
     $listing_template .= "\t\t\t\t" . '<div class="col-lg-4">' . "\r\n";
-    $listing_template .= "\t\t\t\t\t" . '    <%= thumb %>' . "\r\n";
-
+    $listing_template .= "\t\t\t\t\t" . '<%= thumb %>' . "\r\n";
     $listing_template .= "\t\t\t\t" . '</div>';
-
     $listing_template .= "\t\t\t" . '</div>' . "\r\n";
 
     /**
@@ -107,11 +105,12 @@ function mycustom_listing_template()
 }
 
 
-add_filter( 'wpsl_thumb_size', 'custom_thumb_size' );
+add_filter('wpsl_thumb_size', 'custom_thumb_size');
 
-function custom_thumb_size() {
-    
-    $size = array( 300, 300 );
-    
+function custom_thumb_size()
+{
+
+    $size = array(300, 300);
+
     return $size;
 }
