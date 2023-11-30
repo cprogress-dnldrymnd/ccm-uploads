@@ -18846,6 +18846,8 @@ section.slider-hero {
         display: inline !important; }
   #store-locator-holder .row-location-details .wpsl-store-thumb {
     margin: 0;
-    float: none; }
+    float: none;
+    width: 63px;
+    height: 63px; }
 
 /*# sourceMappingURL=main.css.map */
