@@ -18867,7 +18867,8 @@ section.slider-hero {
   max-width: 250px;
   padding: 12px;
   outline: none !important;
-  border: none !important; }
+  border: none !important;
+  font-family: "Fira Sans Condensed", sans-serif !important; }
   #store-locator-holder .wpsl-info-window * {
     box-sizing: border-box !important; }
   #store-locator-holder .wpsl-info-window .btn-box {
