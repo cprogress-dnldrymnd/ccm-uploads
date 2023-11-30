@@ -856,6 +856,7 @@ function cv_register_custom_fields()
 require_once('includes/shortcodes.php');
 require_once('includes/carbonfields.php');
 require_once('includes/theme-widgets.php');
+require_once('wpsl/wp-store-locator.php');
 add_shortcode('mega_nav', 'mega_nav_menu');
 
 function mega_nav_menu($atts)
@@ -3195,33 +3196,3 @@ function breadcrumbs()
 	return $breadcrumbs;
 }
 
-
-/**Store Locator */
-add_filter( 'wpsl_templates', 'custom_templates' );
-
-function custom_templates( $templates ) {
-
-    /**
-     * The 'id' is for internal use and must be unique ( since 2.0 ).
-     * The 'name' is used in the template dropdown on the settings page.
-     * The 'path' points to the location of the custom template,
-     * in this case the folder of your active theme.
-     */
-    $templates[] = array (
-        'id'   => 'custom',
-        'name' => 'Custom template',
-        'path' => get_stylesheet_directory() .'/wpsl/wpsl-templates/custom.php',
-    );
-
-    return $templates;
-}
-
-
-add_filter( 'wpsl_admin_marker_dir', 'custom_admin_marker_dir' );
-
-function custom_admin_marker_dir() {
-
-    $admin_marker_dir = get_stylesheet_directory() . '/wpsl/wpsl-markers/';
-    
-    return $admin_marker_dir;
-}
