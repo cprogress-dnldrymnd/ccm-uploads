@@ -1321,11 +1321,13 @@ section.slider-hero {
     }
     #wpsl-wrap {
         #wpsl-result-list {
-            li {
-                padding: 15px;
-                border: none;
-                @include on-event {
-                    background-color: #F2F2F3;
+            ul {
+                li {
+                    padding: 15px;
+                    border: none;
+                    @include on-event {
+                        background-color: #f2f2f3;
+                    }
                 }
             }
         }
