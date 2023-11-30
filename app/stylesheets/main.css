@@ -18867,7 +18867,8 @@ section.slider-hero {
   #store-locator-holder .wpsl-info-window * {
     box-sizing: border-box !important; }
   #store-locator-holder .wpsl-info-window .btn-box {
-    position: relative; }
+    position: relative;
+    height: 40px; }
     #store-locator-holder .wpsl-info-window .btn-box strong {
       position: absolute;
       left: 0;
@@ -18882,10 +18883,5 @@ section.slider-hero {
       #store-locator-holder .wpsl-info-window .btn-box strong:before {
         content: "MORE INFO";
         font-size: 15px; }
-    #store-locator-holder .wpsl-info-window .btn-box > a {
-      text-decoration: none !important;
-      font-size: 0 !important;
-      font-weight: 500 !important;
-      width: 100% !important; }
 
 /*# sourceMappingURL=main.css.map */
