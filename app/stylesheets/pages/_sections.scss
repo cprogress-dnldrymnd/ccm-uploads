@@ -1409,6 +1409,9 @@ section.slider-hero {
         background-color: var(--white-color);
         max-width: 250px;
         padding: 12px;
+        * {
+            box-sizing: border-box !important;
+        }
         .btn-box {
             position: relative;
             strong {
@@ -1417,6 +1420,9 @@ section.slider-hero {
                 right: 0;
                 bottom: 0;
                 top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 a {
                     font-size: 0 !important;
                 }
@@ -1425,7 +1431,7 @@ section.slider-hero {
                     font-size: 15px;
                 }
             }
-            a {
+            > a {
                 text-decoration: none !important;
                 font-size: 15px !important;
                 font-weight: 500 !important;
