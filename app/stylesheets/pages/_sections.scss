@@ -1402,4 +1402,13 @@ section.slider-hero {
             object-fit: contain;
         }
     }
+    .wpsl-info-window {
+        background-color: var(--white-color);
+        .btn-box {
+            a {
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
 }
