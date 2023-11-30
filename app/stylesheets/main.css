@@ -18801,5 +18801,7 @@ section.slider-hero {
     width: 100%; }
   #store-locator-holder .wpsl-directions {
     display: none !important; }
+  #store-locator-holder .wpsl-store-location .listing-address > * {
+    display: inline !important; }
 
 /*# sourceMappingURL=main.css.map */
