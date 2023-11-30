@@ -389,7 +389,7 @@ function dealer_location_search() {
 	if (window.innerWidth < 992) {
 
 		if (jQuery('.wpsl-search').length > 0) {
-			$bike_nav_height = jQuery('.wpsl-search .wpsl-search-wrap').outerHeight();
+			$bike_nav_height = jQuery('.wpsl-search #wpsl-search-wrap').outerHeight();
 			jQuery('.wpsl-search').css('height', $bike_nav_height + 'px');
 
 			var stickyTop = jQuery('.wpsl-search').offset().top;
