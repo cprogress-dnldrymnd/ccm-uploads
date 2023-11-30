@@ -13,29 +13,6 @@ $output .= "\t\t\t\t" . '<div><label for="wpsl-search-input">' . esc_html( $wpsl
 $output .= "\t\t\t\t" . '<input id="wpsl-search-input" type="text" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" placeholder="" aria-required="true" />' . "\r\n";
 $output .= "\t\t\t" . '</div>' . "\r\n";
 
-if ( $wpsl_settings['radius_dropdown'] || $wpsl_settings['results_dropdown']  ) {
-    $output .= "\t\t\t" . '<div class="wpsl-select-wrap">' . "\r\n";
-
-    if ( $wpsl_settings['radius_dropdown'] ) {
-        $output .= "\t\t\t\t" . '<div id="wpsl-radius">' . "\r\n";
-        $output .= "\t\t\t\t\t" . '<label for="wpsl-radius-dropdown">' . esc_html( $wpsl->i18n->get_translation( 'radius_label', __( 'Search radius', 'wpsl' ) ) ) . '</label>' . "\r\n";
-        $output .= "\t\t\t\t\t" . '<select id="wpsl-radius-dropdown" class="wpsl-dropdown" name="wpsl-radius">' . "\r\n";
-        $output .= "\t\t\t\t\t\t" . $this->get_dropdown_list( 'search_radius' ) . "\r\n";
-        $output .= "\t\t\t\t\t" . '</select>' . "\r\n";
-        $output .= "\t\t\t\t" . '</div>' . "\r\n";
-    }
-
-    if ( $wpsl_settings['results_dropdown'] ) {
-        $output .= "\t\t\t\t" . '<div id="wpsl-results">' . "\r\n";
-        $output .= "\t\t\t\t\t" . '<label for="wpsl-results-dropdown">' . esc_html( $wpsl->i18n->get_translation( 'results_label', __( 'Results', 'wpsl' ) ) ) . '</label>' . "\r\n";
-        $output .= "\t\t\t\t\t" . '<select id="wpsl-results-dropdown" class="wpsl-dropdown" name="wpsl-results">' . "\r\n";
-        $output .= "\t\t\t\t\t\t" . $this->get_dropdown_list( 'max_results' ) . "\r\n";
-        $output .= "\t\t\t\t\t" . '</select>' . "\r\n";
-        $output .= "\t\t\t\t" . '</div>' . "\r\n";
-    } 
-
-    $output .= "\t\t\t" . '</div>' . "\r\n";
-}
 
 if ( $this->use_category_filter() ) {
     $output .= $this->create_category_filter();
