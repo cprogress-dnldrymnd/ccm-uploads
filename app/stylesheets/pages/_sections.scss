@@ -1316,7 +1316,8 @@ section.slider-hero {
     #wpsl-result-list {
         width: 100%;
     }
-    .wpsl-directions, .wpsl-info-actions {
+    .wpsl-directions,
+    .wpsl-info-actions {
         display: none !important;
     }
     #wpsl-wrap {
@@ -1363,6 +1364,8 @@ section.slider-hero {
         }
     }
     .row-location-details {
+        font-family: $font-fira !important;
+
         .listing-title {
             a {
                 color: var(--black-color);
