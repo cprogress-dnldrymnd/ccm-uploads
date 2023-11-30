@@ -18803,5 +18803,8 @@ section.slider-hero {
     display: none !important; }
   #store-locator-holder .wpsl-store-location .listing-address > * {
     display: inline !important; }
+  #store-locator-holder .wpsl-store-location .wpsl-store-thumb {
+    margin: 0;
+    float: none; }
 
 /*# sourceMappingURL=main.css.map */
