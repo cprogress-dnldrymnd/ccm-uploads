@@ -1326,7 +1326,7 @@ section.slider-hero {
                     padding: 15px;
                     border: none;
                     .btn-box {
-                        @media(min-width: 992px) {
+                        @media (min-width: 992px) {
                             display: none;
                         }
                     }
@@ -1450,5 +1450,17 @@ section.slider-hero {
         * {
             box-sizing: border-box !important;
         }
+    }
+}
+
+.page-template-page-dealer-locator {
+    .wysiwyg-v2 {
+        padding-bottom: 50px;
+        p {
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 991px) {
+        padding-top: 50px;
     }
 }

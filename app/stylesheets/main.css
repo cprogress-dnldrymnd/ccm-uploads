@@ -18898,4 +18898,12 @@ section.slider-hero {
   #store-locator-holder .wpsl-info-window * {
     box-sizing: border-box !important; }
 
+.page-template-page-dealer-locator .wysiwyg-v2 {
+  padding-bottom: 50px; }
+  .page-template-page-dealer-locator .wysiwyg-v2 p {
+    font-size: 20px; }
+@media (max-width: 991px) {
+  .page-template-page-dealer-locator {
+    padding-top: 50px; } }
+
 /*# sourceMappingURL=main.css.map */
