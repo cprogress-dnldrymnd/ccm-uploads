@@ -1339,6 +1339,15 @@ section.slider-hero {
                 margin: 0;
                 #wpsl-search-btn {
                     margin: 0;
+                    background-color: var(--main-color) !important;
+                    border: none;
+                    background-image: none;
+                    color: var(--white-color);
+                    border-radius: 0;
+                    font-size: 15px;
+                    padding: 14px 35px;
+                    text-transform: uppercase !important;
+                    min-height: 54px;
                 }
             }
             .wpsl-input {
