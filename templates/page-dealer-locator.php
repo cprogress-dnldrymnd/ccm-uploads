@@ -28,6 +28,17 @@ $background = 17248;
             </div>
         </div>
     </section>
+    <section class="wysiwyg-v2" id="section-17272-wysiwyg_1">
+        <div class="container">
+            <div class="inner content-margin">
+                <?php while (have_posts()) {
+                    the_post();
+                ?>
+                    <?php the_content() ?>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
     <div id="store-locator-holder">
         <div class="container">
             <?= do_shortcode('[wpsl template="default" map_type="roadmap" auto_locate="true" start_marker="red" store_marker="blue" category_selection=""]') ?>
