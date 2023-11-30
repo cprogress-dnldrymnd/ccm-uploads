@@ -12,8 +12,8 @@ $output .= "\t" . '<div class="col-lg-4">';
 $output .= '<div id="wpsl-wrap">' . "\r\n";
 $output .= "\t" . '<div class="wpsl-search wpsl-clearfix ' . $this->get_css_classes() . '">' . "\r\n";
 $output .= "\t\t" . '<div id="wpsl-search-wrap">' . "\r\n";
-$output .= "\t\t\t" . '<form autocomplete="off">' . "\r\n";
-$output .= "\t\t\t" . '<div class="wpsl-input">' . "\r\n";
+$output .= "\t\t\t" . '<form autocomplete="off" class="row">' . "\r\n";
+$output .= "\t\t\t" . '<div class="wpsl-input col">' . "\r\n";
 $output .= "\t\t\t\t" . '<input id="wpsl-search-input" placeholder="ENTER LOCATION OR POSTCODE" type="text" value="' . apply_filters('wpsl_search_input', '') . '" name="wpsl-search-input" placeholder="" aria-required="true" />' . "\r\n";
 $output .= "\t\t\t" . '</div>' . "\r\n";
 
@@ -22,7 +22,7 @@ if ($this->use_category_filter()) {
     $output .= $this->create_category_filter();
 }
 
-$output .= "\t\t\t\t" . '<div class="wpsl-search-btn-wrap"><input id="wpsl-search-btn" type="submit" value="' . esc_attr($wpsl->i18n->get_translation('search_btn_label', __('Search', 'wpsl'))) . '"></div>' . "\r\n";
+$output .= "\t\t\t\t" . '<div class="wpsl-search-btn-wrap col-auto"><input id="wpsl-search-btn" type="submit" value="' . esc_attr($wpsl->i18n->get_translation('search_btn_label', __('Search', 'wpsl'))) . '"></div>' . "\r\n";
 
 $output .= "\t\t" . '</form>' . "\r\n";
 $output .= "\t\t" . '</div>' . "\r\n";
