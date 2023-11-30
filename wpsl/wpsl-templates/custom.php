@@ -8,11 +8,7 @@ $autoload_class = (!$wpsl_settings['autoload']) ? 'class="wpsl-not-loaded"' : ''
 $output .= '<div class="row">';
 $output .= "\t" . '<div class="col-lg-4">';
 
-$output .= "\t" . '<div id="wpsl-result-list">' . "\r\n";
-
 //start of search
-
-
 $output .= '<div id="wpsl-wrap">' . "\r\n";
 $output .= "\t" . '<div class="wpsl-search wpsl-clearfix ' . $this->get_css_classes() . '">' . "\r\n";
 $output .= "\t\t" . '<div id="wpsl-search-wrap">' . "\r\n";
@@ -31,9 +27,10 @@ $output .= "\t\t\t\t" . '<div class="wpsl-search-btn-wrap"><input id="wpsl-searc
 $output .= "\t\t" . '</form>' . "\r\n";
 $output .= "\t\t" . '</div>' . "\r\n";
 $output .= "\t" . '</div>' . "\r\n";
+//end of search
 
-//end of
 
+$output .= "\t" . '<div id="wpsl-result-list">' . "\r\n";
 $output .= "\t\t" . '<div id="wpsl-stores" ' . $autoload_class . '>' . "\r\n";
 $output .= "\t\t\t" . '<ul></ul>' . "\r\n";
 $output .= "\t\t" . '</div>' . "\r\n";
