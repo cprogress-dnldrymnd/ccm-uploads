@@ -38,7 +38,6 @@ function mycustom_listing_template()
 
     $listing_template = '<li data-store-id="<%= id %>">' . "\r\n";
     $listing_template .= '<div class="store-holder">' . "\r\n";
-    $listing_template .= '<div class="wpsl-store-background-image  background-image-section store-background<%= id %>"></div>';
     $listing_template .= "\t\t" . '<div class="wpsl-store-location">' . "\r\n";
     $listing_template .= "\t\t\t" . '<div class="row row-location-details align-items-center">' . "\r\n";
     $listing_template .= "\t\t\t\t" . '<div class="col-auto">' . "\r\n";
@@ -63,6 +62,8 @@ function mycustom_listing_template()
     $listing_template .= "\t\t\t\t\t" . '</div>';
     $listing_template .= "\t\t\t\t" . '</div>';
     $listing_template .= "\t\t\t" . '</div>' . "\r\n";
+    $listing_template .= "\t\t" . '</div>' . "\r\n";
+    $listing_template .= "\t\t" . '<div class="btn-box btn-bordered">' . wpsl_store_header_template('listing') . "\r\n";
     $listing_template .= "\t\t" . '</div>' . "\r\n";
     $listing_template .= "\t\t" . '</div>' . "\r\n";
     $listing_template .= "\t\t" . '</div>' . "\r\n";
