@@ -56,7 +56,7 @@ function mycustom_listing_template()
     }
     $listing_template .= "\t\t\t\t" . '</div>';
 
-    $listing_template .= "\t\t\t\t" . '<div class="col-lg-8">' . "\r\n";
+    $listing_template .= "\t\t\t\t" . '<div class="col-lg-4">' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '    <%= thumb %>' . "\r\n";
 
     $listing_template .= "\t\t\t\t" . '</div>';
