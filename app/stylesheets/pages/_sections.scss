@@ -1392,6 +1392,7 @@ section.slider-hero {
             }
             @media (max-width: 991px) {
                 z-index: 2;
+                position: relative;
                 &.fixed {
                     #wpsl-search-wrap {
                         background-color: var(--white-color);
