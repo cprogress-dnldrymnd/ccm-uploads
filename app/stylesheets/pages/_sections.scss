@@ -1416,6 +1416,15 @@ section.slider-hero {
                 font-size: 15px !important;
                 font-weight: 500 !important;
                 width: 100% !important;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                &:before {
+                    content: 'MORE INFO';
+                    font-size: 15px;
+                }
             }
         }
     }
