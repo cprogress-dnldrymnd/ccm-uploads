@@ -9,8 +9,7 @@ $output .= "\t" . '<div class="wpsl-search wpsl-clearfix ' . $this->get_css_clas
 $output .= "\t\t" . '<div id="wpsl-search-wrap">' . "\r\n";
 $output .= "\t\t\t" . '<form autocomplete="off">' . "\r\n";
 $output .= "\t\t\t" . '<div class="wpsl-input">' . "\r\n";
-$output .= "\t\t\t\t" . '<div><label for="wpsl-search-input">' . esc_html( $wpsl->i18n->get_translation( 'search_label', __( 'Your location', 'wpsl' ) ) ) . '</label></div>' . "\r\n";
-$output .= "\t\t\t\t" . '<input id="wpsl-search-input" type="text" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" placeholder="" aria-required="true" />' . "\r\n";
+$output .= "\t\t\t\t" . '<input id="wpsl-search-input" placeholder="ENTER LOCATION OR POSTCODE" type="text" value="' . apply_filters( 'wpsl_search_input', '' ) . '" name="wpsl-search-input" placeholder="" aria-required="true" />' . "\r\n";
 $output .= "\t\t\t" . '</div>' . "\r\n";
 
 
