@@ -18869,7 +18869,7 @@ section.slider-hero {
     padding: 12px; }
     #store-locator-holder .wpsl-info-window .btn-box a {
       font-size: 15px !important;
-      font-weight: 500;
-      width: 100%; }
+      font-weight: 500 !important;
+      width: 100% !important; }
 
 /*# sourceMappingURL=main.css.map */
