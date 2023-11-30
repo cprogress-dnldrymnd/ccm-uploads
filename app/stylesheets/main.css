@@ -18836,7 +18836,8 @@ section.slider-hero {
         #store-locator-holder #wpsl-wrap .wpsl-search .wpsl-search-btn-wrap #wpsl-search-btn {
           min-height: 50px; } }
   #store-locator-holder #wpsl-wrap .wpsl-search .wpsl-input {
-    margin: 0; }
+    margin: 0;
+    width: 100% !important; }
     #store-locator-holder #wpsl-wrap .wpsl-search .wpsl-input #wpsl-search-input {
       width: 100% !important;
       display: block;
