@@ -3208,8 +3208,17 @@ function custom_templates( $templates ) {
     $templates[] = array (
         'id'   => 'custom',
         'name' => 'Custom template',
-        'path' => get_stylesheet_directory() . '/' . 'wpsl-templates/custom.php',
+        'path' => get_stylesheet_directory() .'/wpsl/wpsl-templates/custom.php',
     );
 
     return $templates;
+}
+
+add_filter( 'wpsl_admin_marker_dir', 'custom_admin_marker_dir' );
+
+function custom_admin_marker_dir() {
+
+    $admin_marker_dir = get_stylesheet_directory() . '/wpsl/wpsl-markers/';
+    
+    return $admin_marker_dir;
 }
