@@ -1484,8 +1484,9 @@ section.slider-hero {
         p {
             font-size: 20px;
         }
+        @media (max-width: 991px) {
+            padding-top: 50px;
+        }
     }
-    @media (max-width: 991px) {
-        padding-top: 50px;
-    }
+  
 }
