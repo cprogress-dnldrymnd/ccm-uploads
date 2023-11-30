@@ -53,7 +53,7 @@ function mycustom_listing_template()
     $listing_template .= "\t\t\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '<span class="wpsl-street"><%= address2 %>,</span>' . "\r\n";
     $listing_template .= "\t\t\t\t\t" . '<% } %>' . "\r\n";
-    $listing_template .= "\t\t\t\t\t" . '<span><%= zip %></span>' . "\r\n"; // Use the correct address format
+    $listing_template .= "\t\t\t\t\t" . '<span class="zip"><%= zip %></span>' . "\r\n"; // Use the correct address format
 
     if (!$wpsl_settings['hide_country']) {
         $listing_template .= "\t\t\t\t\t" . '<span class="wpsl-country"><%= country %></span>' . "\r\n";
@@ -96,7 +96,7 @@ function custom_info_window_template()
     $info_window_template .= "\t\t\t\t\t" . '<% if ( address2 ) { %>' . "\r\n";
     $info_window_template .= "\t\t\t\t\t" . '<span class="wpsl-street"><%= address2 %>,</span>' . "\r\n";
     $info_window_template .= "\t\t\t\t\t" . '<% } %>' . "\r\n";
-    $info_window_template .= "\t\t\t\t\t" . '<span><%= zip %></span>' . "\r\n"; // Use the correct address format
+    $info_window_template .= "\t\t\t\t\t" . '<span class="zip"><%= zip %></span>' . "\r\n"; // Use the correct address format
 
     if (!$wpsl_settings['hide_country']) {
         $info_window_template .= "\t\t\t\t\t" . '<span class="wpsl-country"><%= country %></span>' . "\r\n";
