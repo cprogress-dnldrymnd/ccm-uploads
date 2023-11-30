@@ -1417,7 +1417,9 @@ section.slider-hero {
                 right: 0;
                 bottom: 0;
                 top: 0;
-                font-size: 0 !important;
+                a {
+                    font-size: 0 !important;
+                }
                 &:before {
                     content: "MORE INFO";
                     font-size: 15px;
