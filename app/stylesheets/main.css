@@ -18155,6 +18155,9 @@ body:not(.hide-header) section.bike-navigation.fixed .inner {
   @media (max-width: 991px) {
     body:not(.hide-header) section.bike-navigation.fixed .inner {
       top: 57px; } }
+@media (max-width: 991px) {
+  body:not(.hide-header) #store-locator-holder #wpsl-wrap .wpsl-search.fixed #wpsl-search-wrap {
+    top: 57px; } }
 
 section.bike-navigation {
   position: relative;

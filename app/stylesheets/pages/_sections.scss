@@ -333,6 +333,17 @@ body {
                 }
             }
         }
+        #store-locator-holder #wpsl-wrap {
+            .wpsl-search {
+                @media (max-width: 991px) {
+                    &.fixed {
+                        #wpsl-search-wrap {
+                            top: 57px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1382,7 +1393,6 @@ section.slider-hero {
             @media (max-width: 991px) {
                 &.fixed {
                     #wpsl-search-wrap {
-                        top: 57px;
                         position: fixed;
                         top: 0;
                         left: 0;
@@ -1488,5 +1498,4 @@ section.slider-hero {
             padding-top: 50px;
         }
     }
-  
 }
