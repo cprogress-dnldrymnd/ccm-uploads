@@ -124,30 +124,6 @@ function custom_info_window_template() {
     $info_window_template .= "\t\t\t" . '<% } %>' . "\r\n";
     $info_window_template .= "\t\t\t" . '<span>' . wpsl_address_format_placeholders() . '</span>' . "\r\n";
     $info_window_template .= "\t\t" . '</p>' . "\r\n";
-    
-    $info_window_template .= "\t\t" . '<% if ( phone ) { %>' . "\r\n";
-    $info_window_template .= "\t\t" . '<span><strong>' . esc_html( $wpsl->i18n->get_translation( 'phone_label', __( 'Phone', 'wpsl' ) ) ) . '</strong>: <%= formatPhoneNumber( phone ) %></span>' . "\r\n";
-    $info_window_template .= "\t\t" . '<% } %>' . "\r\n";
-    $info_window_template .= "\t\t" . '<% if ( fax ) { %>' . "\r\n";
-    $info_window_template .= "\t\t" . '<span><strong>' . esc_html( $wpsl->i18n->get_translation( 'fax_label', __( 'Fax', 'wpsl' ) ) ) . '</strong>: <%= fax %></span>' . "\r\n";
-    $info_window_template .= "\t\t" . '<% } %>' . "\r\n";
-    $info_window_template .= "\t\t" . '<% if ( email ) { %>' . "\r\n";
-    $info_window_template .= "\t\t" . '<span><strong>' . esc_html( $wpsl->i18n->get_translation( 'email_label', __( 'Email', 'wpsl' ) ) ) . '</strong>: <%= formatEmail( email ) %></span>' . "\r\n";
-    $info_window_template .= "\t\t" . '<% } %>' . "\r\n";
-    
-    /**
-     * Include the data from a custom field called 'my_textinput'.
-     * 
-     * Before you can access the 'my_textinput' data in the template, 
-     * you first need to make sure the data is included in the JSON output.
-     * 
-     * You can make the data accessible through the wpsl_frontend_meta_fields filter.
-     */
-    $info_window_template .= "\t\t" . '<% if ( my_textinput ) { %>' . "\r\n";
-    $info_window_template .= "\t\t" . '<p><%= my_textinput %></p>' . "\r\n";
-    $info_window_template .= "\t\t" . '<% } %>' . "\r\n";
-    
-    $info_window_template .= "\t\t" . '<%= createInfoWindowActions( id ) %>' . "\r\n";
     $info_window_template .= "\t" . '</div>' . "\r\n";
     
     return $info_window_template;

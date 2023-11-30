@@ -18800,7 +18800,7 @@ section.slider-hero {
   #store-locator-holder #wpsl-gmap,
   #store-locator-holder #wpsl-result-list {
     width: 100%; }
-  #store-locator-holder .wpsl-directions {
+  #store-locator-holder .wpsl-directions, #store-locator-holder .wpsl-info-actions {
     display: none !important; }
   #store-locator-holder #wpsl-wrap #wpsl-result-list ul li {
     padding: 15px;
