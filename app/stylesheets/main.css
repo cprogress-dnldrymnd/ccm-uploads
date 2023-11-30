@@ -18803,8 +18803,9 @@ section.slider-hero {
   #store-locator-holder .wpsl-directions,
   #store-locator-holder .wpsl-info-actions {
     display: none !important; }
-  #store-locator-holder .d .gm-style-iw-a {
-    padding: 0; }
+  #store-locator-holder #wpsl-gmap [class*='gm-style-iw'] {
+    padding: 0;
+    overflow: hidden; }
   #store-locator-holder #wpsl-wrap #wpsl-result-list ul li {
     padding: 15px;
     border: none; }

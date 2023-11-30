@@ -1321,7 +1321,7 @@ section.slider-hero {
         display: none !important;
     }
     #wpsl-gmap {
-        .gm-style-iw-a {
+        [class*="gm-style"] {
             padding: 0;
             overflow: hidden;
         }
