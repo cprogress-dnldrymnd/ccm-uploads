@@ -18803,12 +18803,6 @@ section.slider-hero {
   #store-locator-holder .wpsl-directions,
   #store-locator-holder .wpsl-info-actions {
     display: none !important; }
-  #store-locator-holder #wpsl-gmap [class*="gm-style"] {
-    padding: 0;
-    box-shadow: none;
-    background-color: transparent; }
-    #store-locator-holder #wpsl-gmap [class*="gm-style"][style*="overflow: scroll"] {
-      overflow: hidden; }
   #store-locator-holder #wpsl-wrap #wpsl-result-list ul li {
     padding: 15px;
     border: none; }
@@ -18861,9 +18855,17 @@ section.slider-hero {
       width: 63px;
       height: 63px;
       object-fit: contain; }
+  #store-locator-holder #wpsl-gmap [class*="gm-style"] {
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 0 !important; }
+    #store-locator-holder #wpsl-gmap [class*="gm-style"][style*="overflow: scroll"] {
+      overflow: hidden; }
   #store-locator-holder .wpsl-info-window {
     background-color: var(--white-color);
-    max-width: 250px; }
+    max-width: 250px;
+    padding: 12px; }
     #store-locator-holder .wpsl-info-window .btn-box a {
       font-size: 15px;
       font-weight: 500; }
