@@ -1331,8 +1331,16 @@ section.slider-hero {
                 }
             }
         }
-        #wpsl-search {
-            
+        .wpsl-search {
+            margin: 0 0 20px 0;
+            padding: 0;
+            background-color: transparent;
+            .wpsl-search-btn-wrap {
+                margin: 0;
+            }
+            .wpsl-input {
+                margin: 0;
+            }
         }
     }
     .wpsl-store-location {
