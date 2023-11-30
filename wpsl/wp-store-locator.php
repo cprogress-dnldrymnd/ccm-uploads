@@ -105,7 +105,7 @@ function custom_info_window_template()
     $info_window_template .= "\t\t\t\t" . '</div>';
     $info_window_template .= "\t\t\t" . '</div>' . "\r\n";
 
-    $info_window_template .= "\t\t" . '<div class="btn-box btn-bordered">' . "\r\n";
+    $info_window_template .= "\t\t" . '<div class="btn-box btn-bordered">' . wpsl_store_header_template('listing') . "\r\n";
     $info_window_template .= "\t" . '<a class="pc-btn">MORE INFO</a>' . "\r\n";
     $info_window_template .= "\t\t" . '</div>' . "\r\n";
 
