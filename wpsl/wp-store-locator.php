@@ -105,3 +105,13 @@ function mycustom_listing_template()
 
     return $listing_template;
 }
+
+
+add_filter( 'wpsl_thumb_size', 'custom_thumb_size' );
+
+function custom_thumb_size() {
+    
+    $size = array( 300, 300 );
+    
+    return $size;
+}
