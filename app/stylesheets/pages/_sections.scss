@@ -1323,6 +1323,7 @@ section.slider-hero {
         #wpsl-result-list {
             li {
                 padding: 15px;
+                border: none;
                 @include on-event {
                     background-color: #F2F2F3;
                 }
