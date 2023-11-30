@@ -1325,6 +1325,11 @@ section.slider-hero {
                 li {
                     padding: 15px;
                     border: none;
+                    .btn-box {
+                        @media(min-width: 992px) {
+                            display: none;
+                        }
+                    }
                     @include on-event {
                         background-color: #f2f2f3;
                     }

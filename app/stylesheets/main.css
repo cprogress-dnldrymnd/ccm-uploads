@@ -18803,6 +18803,9 @@ section.slider-hero {
 #store-locator-holder #wpsl-wrap #wpsl-result-list ul li {
   padding: 15px;
   border: none; }
+  @media (min-width: 992px) {
+    #store-locator-holder #wpsl-wrap #wpsl-result-list ul li .btn-box {
+      display: none; } }
   #store-locator-holder #wpsl-wrap #wpsl-result-list ul li:hover, #store-locator-holder #wpsl-wrap #wpsl-result-list ul li:active, #store-locator-holder #wpsl-wrap #wpsl-result-list ul li:focus {
     background-color: #f2f2f3; }
 #store-locator-holder #wpsl-wrap .wpsl-search {
