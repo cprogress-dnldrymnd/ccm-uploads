@@ -10,6 +10,7 @@
 <?php get_header(); ?>
 <?php
 $background = carbon_get_the_post_meta('background');
+$background = 17248;
 ?>
 <main id="page-components" class="main-holder main-holder-v2  bt-5">
     <section class="hero-banner-with-breadcrumbs hero-banner-with-breadcrumbs-small d-flex align-items-end ">
