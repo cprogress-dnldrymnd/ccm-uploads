@@ -18860,8 +18860,10 @@ section.slider-hero {
       width: 63px;
       height: 63px;
       object-fit: contain; }
-  #store-locator-holder .btn-box a {
-    font-size: 15px;
-    font-weight: 500; }
+  #store-locator-holder .wpsl-info-window {
+    background-color: var(--white-color); }
+    #store-locator-holder .wpsl-info-window .btn-box a {
+      font-size: 15px;
+      font-weight: 500; }
 
 /*# sourceMappingURL=main.css.map */
