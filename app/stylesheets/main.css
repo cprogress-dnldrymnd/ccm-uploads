@@ -18863,6 +18863,11 @@ section.slider-hero {
   border: none !important; }
   #store-locator-holder #wpsl-gmap [class*="gm-style"][style*="overflow: scroll"] {
     overflow: hidden !important; }
+@media (max-width: 991px) {
+  #store-locator-holder #wpsl-gmap {
+    display: none; } }
+#store-locator-holder #wpsl-stores {
+  height: auto !important; }
 #store-locator-holder .wpsl-info-window {
   background-color: var(--white-color);
   max-width: 250px;
