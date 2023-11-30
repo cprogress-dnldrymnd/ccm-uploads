@@ -1319,6 +1319,16 @@ section.slider-hero {
     .wpsl-directions {
         display: none !important;
     }
+    #wpsl-wrap {
+        #wpsl-result-list {
+            li {
+                padding: 15px;
+                @include on-event {
+                    background-color: #F2F2F3;
+                }
+            }
+        }
+    }
     .wpsl-store-location {
         .listing-title {
             a {
