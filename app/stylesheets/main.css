@@ -18794,6 +18794,10 @@ section.slider-hero {
     section.slider-hero .swiper-slide .heading-box {
       padding-top: 30px; } }
 
+@media (max-width: 767px) {
+  #store-locator-holder > .container {
+    padding-left: 0;
+    padding-right: 0; } }
 #store-locator-holder #wpsl-gmap,
 #store-locator-holder #wpsl-result-list {
   width: 100%; }

@@ -1310,6 +1310,12 @@ section.slider-hero {
 }
 
 #store-locator-holder {
+    > .container {
+        @media (max-width: 991px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
     #wpsl-gmap,
     #wpsl-result-list {
         width: 100%;
