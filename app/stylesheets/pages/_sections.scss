@@ -1413,6 +1413,9 @@ section.slider-hero {
         font-family: $font-fira !important;
         margin-bottom: 12px;
         color: var(--black-color);
+        .zip {
+            white-space: nowrap;
+        }
         .listing-title {
             a {
                 color: var(--black-color);

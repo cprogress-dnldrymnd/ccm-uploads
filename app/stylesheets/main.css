@@ -18866,6 +18866,8 @@ section.slider-hero {
   font-family: "Fira Sans Condensed", sans-serif !important;
   margin-bottom: 12px;
   color: var(--black-color); }
+  #store-locator-holder .row-location-details .zip {
+    white-space: nowrap; }
   #store-locator-holder .row-location-details .listing-title a {
     color: var(--black-color);
     font-size: 14px; }
