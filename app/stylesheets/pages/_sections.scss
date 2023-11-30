@@ -1328,7 +1328,7 @@ section.slider-hero {
     .wpsl-store-location {
         .listing-address {
             > * {
-                display: inline;
+                display: inline !important;
             }
         }
     }
