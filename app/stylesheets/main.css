@@ -18873,7 +18873,7 @@ section.slider-hero {
     display: flex;
     align-items: center; }
     #store-locator-holder .row-location-details .listing-address svg {
-      margin-right: 10px;
+      margin-right: 5px;
       flex: 0 0 10px; }
     #store-locator-holder .row-location-details .listing-address .listing-address-inner {
       font-size: 13px; }
