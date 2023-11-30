@@ -18857,13 +18857,17 @@ section.slider-hero {
   padding: 0;
   box-shadow: none;
   background-color: transparent;
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  outline: none !important;
+  border: none !important; }
   #store-locator-holder #wpsl-gmap [class*="gm-style"][style*="overflow: scroll"] {
     overflow: hidden !important; }
 #store-locator-holder .wpsl-info-window {
   background-color: var(--white-color);
   max-width: 250px;
-  padding: 12px; }
+  padding: 12px;
+  outline: none !important;
+  border: none !important; }
   #store-locator-holder .wpsl-info-window * {
     box-sizing: border-box !important; }
   #store-locator-holder .wpsl-info-window .btn-box {
