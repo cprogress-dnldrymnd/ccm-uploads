@@ -1515,7 +1515,9 @@ function page_components() {
 }
 
 function matchheight() {
-	jQuery('.mh').matchHeight();
+	if (jQuery('.mh').length > 0) {
+		jQuery('.mh').matchHeight();
+	}
 }
 
 
