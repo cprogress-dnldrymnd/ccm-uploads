@@ -428,7 +428,9 @@ function remove_scripts_styles_footer() {
 		wp_deregister_script('tinvwl');
 		wp_deregister_script('wc-cart-fragments');
 		wp_deregister_script('gdatt-attachments');
-
+		wp_deregister_script('wpcf7-redirect-script');
+		wp_deregister_script('jquery-woo-login-styler');
+		
 		
 	}
 }
