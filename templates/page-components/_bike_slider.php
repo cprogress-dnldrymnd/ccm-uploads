@@ -68,7 +68,7 @@ $query_new_model = get_posts( $args_new_model );
 								</div>
 							</div>
 							<div class="image-box " data-swiper-parallax="-50%">
-								<img class="no-lazyload" src="<?= wp_get_attachment_image_url( $image_id, 'large' ); ?>" alt="<?=$postvalue->post_title?>">
+								<img  src="<?= wp_get_attachment_image_url( $image_id, 'large' ); ?>" alt="<?=$postvalue->post_title?>">
 							</div>
 						</div>
 					</div>
