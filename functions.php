@@ -390,6 +390,29 @@ function remove_assets() {
 		wp_deregister_script('image_zoooom');
 		wp_deregister_script('image_zoooom-init');
 		wp_deregister_script('foobox-free-min');
+
+		wp_deregister_style('cf7rt-front-style'); 
+		wp_deregister_style('dashicons'); 
+		wp_deregister_style('wp-emoji-styles-inline'); 
+		wp_deregister_style('bbp-default'); 
+		wp_deregister_style('contact-form-7'); 
+		wp_deregister_style('powertip'); 
+		wp_deregister_style('maps-points'); 
+		wp_deregister_style('foobox-free-min'); 
+		wp_deregister_style('mfcf7_zl_button_style'); 
+		wp_deregister_style('woo-advanced-discounts'); 
+		wp_deregister_style('o-tooltip'); 
+		wp_deregister_style('woocommerce-layout'); 
+		wp_deregister_style('woocommerce-smallscreen'); 
+		wp_deregister_style('woocommerce-general'); 
+		wp_deregister_style('wpsl-styles'); 
+		wp_deregister_style('wpcf7-redirect-script-frontend'); 
+		wp_deregister_style('tinvwl-webfont-font'); 
+		wp_deregister_style('tinvwl-webfont'); 
+		wp_deregister_style('tinvwl'); 
+		wp_deregister_style('gdatt-attachments'); 
+		wp_deregister_style('wc_acf_af'); 
+
 	}
 
 }
