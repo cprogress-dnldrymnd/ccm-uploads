@@ -11,7 +11,7 @@
     <meta name="facebook-domain-verification" content="x7s2nf6ay160td6uq7desxzfv9zz2t" />
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:200,300,400,500,600,700,800,900" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d6cae1a8f6.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/d6cae1a8f6.js" crossorigin="anonymous"></script> -->
     <title>
         <?php bloginfo('name'); // show the blog name, from settings 
         ?> |
