@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +18,6 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <meta name="p:domain_verify" content="86cca4d34bdeaa262ef2ab86ce24dee9" />
-    
 
     <?php wp_head(); ?>
     <!--[if lte IE 9]>
@@ -36,7 +34,6 @@
     <script data-ad-client="ca-pub-2753165670517691" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!--End of YouTube AdSense Script-->
 </head>
-
 
 <?php $cat_class = is_product_category() ? 'product-cat-wrap' : ''; ?>
 <?php $cat_class = is_shop() || is_product_category() ? 'product-grid-wrap' : ''; ?>
