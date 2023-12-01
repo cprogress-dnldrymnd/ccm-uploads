@@ -393,8 +393,8 @@ function remove_assets() {
 	}
 
 }
-add_action('wp_enqueue_scripts', 'remove_assets'); 
-add_action('wp_head', 'remove_assets'); 
+add_action('wp_enqueue_scripts', 'remove_assets', 999); 
+add_action('wp_head', 'remove_assets', 999); 
 
 function remove_scripts_styles_footer() {
 	if(is_front_page()) {
@@ -406,8 +406,7 @@ function remove_scripts_styles_footer() {
 		wp_deregister_script('wc-cart-fragments');
 		wp_deregister_script('gdatt-attachments');
 
-		wp_deregister_script('image_zoooom');
-
+		
 	}
 }
 
