@@ -33,7 +33,6 @@ $wp_query = new WP_Query($args_wp);
 					<?php $wp_query->the_post();  ?>
 					<div class="col-sm-4">
 						<a href="<?php the_permalink() ?>" class="column-holder" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
-							<?php the_post_thumbnail( 'large' ); ?>
 							<img src="<?= get_the_post_thumbnail_url(get_the_ID(), 'large') ?>" alt="<?php the_title() ?>">
 							<div class="post-details-box">
 								<div class="post-date inner">
