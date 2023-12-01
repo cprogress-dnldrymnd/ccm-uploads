@@ -1521,9 +1521,6 @@ function matchheight() {
 }
 
 
-
-
-
 function shopmenu() {
 	$innerWidth = window.innerWidth;
 	$cat = jQuery('<span class="show-cat"> Categories </span>');
