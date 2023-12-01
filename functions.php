@@ -323,9 +323,9 @@ function ccm_scripts()
 
 	wp_enqueue_style('ccm-owl-style', get_template_directory_uri() . '/app/stylesheets/vendors/owl.carousel.min.css');
 	wp_enqueue_style('ccm-owl-theme', get_template_directory_uri() . '/app/stylesheets/vendors/owl.theme.default.min.css');
-	wp_enqueue_style('ccm-jquery-ui', 'https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.min.css');
 
 	if(!is_front_page()) {
+	wp_enqueue_style('ccm-jquery-ui', 'https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.min.css');
 		wp_enqueue_style('ccm-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 		wp_enqueue_style('ccm-timeline-theme', get_template_directory_uri() . '/app/stylesheets/vendors/timeline.min.css');
 		wp_enqueue_style('ccm-remodal-theme', get_template_directory_uri() . '/app/stylesheets/vendors/remodal-default-theme.css');
@@ -342,10 +342,10 @@ function ccm_scripts()
 	wp_enqueue_script('ccm-bootstrap', get_template_directory_uri() . '/app/javascripts/vendors/bootstrap.min.js');
 	wp_enqueue_script('ccm-owl-script', get_template_directory_uri() . '/app/javascripts/vendors/owl.carousel.min.js');
 
-	wp_enqueue_script('ccm-jquery-ui-js', 'https://code.jquery.com/ui/1.13.1/jquery-ui.min.js');
 	
 	
 	if(!is_front_page()) {
+		wp_enqueue_script('ccm-jquery-ui-js', 'https://code.jquery.com/ui/1.13.1/jquery-ui.min.js');
 		wp_enqueue_script('ccm-timeline', get_template_directory_uri() . '/app/javascripts/vendors/timeline.min.js');
 		wp_enqueue_script('ccm-remodal', get_template_directory_uri() . '/app/javascripts/vendors/remodal.js');
 		wp_enqueue_script('ccm-justified', get_template_directory_uri() . '/app/javascripts/vendors/jquery.justifiedGallery.js');
