@@ -348,7 +348,7 @@ function ccm_scripts()
 	wp_enqueue_script('ccm-bootstrap', get_template_directory_uri() . '/app/javascripts/vendors/bootstrap.min.js');
 	wp_enqueue_script('ccm-owl-script', get_template_directory_uri() . '/app/javascripts/vendors/owl.carousel.min.js');
 
-	wp_enqueue_script('ccm-jquery-ui-js', 'https://code.jquery.com/ui/1.13.1/jquery-ui.min.js');
+	wp_enqueue_script('ccm-jquery-ui-js', 'https://code.jquery.com/ui/1.13.1/jquery-ui.js');
 	
 	
 	if(!is_front_page()) {
