@@ -41,7 +41,7 @@ $banner_slider_count = count($banner_slider);
 		<?php foreach($banner_slider as $key => $slider) { ?>
 			<div class="item">
 				<div class="hero-banner hero-banner-video hero-banner-carousel">
-					<img class="no-lazyload" src="<?= wp_get_attachment_image_url($slider['background_image'], 'full') ?>" alt="<?= $slider['heading'] ?>">
+					<img src="<?= wp_get_attachment_image_url($slider['background_image'], 'full') ?>" alt="<?= $slider['heading'] ?>">
 					<div class="contents cta-style with-overlay">
 						<div class="container <?= $container_width ?>">
 							<?php if($slider['top_text']) { ?>
