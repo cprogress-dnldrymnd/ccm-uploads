@@ -321,18 +321,12 @@ add_action('wp_enqueue_scripts', 'onetarek_wpmut_admin_styles');
 function ccm_scripts()
 {
 
-	wp_enqueue_style('ccm-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
-
-
-	wp_enqueue_style('ccm-style', get_template_directory_uri() . '/style.css');
-
-	
 	wp_enqueue_style('ccm-owl-style', get_template_directory_uri() . '/app/stylesheets/vendors/owl.carousel.min.css');
 	wp_enqueue_style('ccm-owl-theme', get_template_directory_uri() . '/app/stylesheets/vendors/owl.theme.default.min.css');
 	wp_enqueue_style('ccm-jquery-ui', '//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css');
 
 	if(!is_front_page()) {
+		wp_enqueue_style('ccm-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 		wp_enqueue_style('ccm-timeline-theme', get_template_directory_uri() . '/app/stylesheets/vendors/timeline.min.css');
 		wp_enqueue_style('ccm-remodal-theme', get_template_directory_uri() . '/app/stylesheets/vendors/remodal-default-theme.css');
 		wp_enqueue_style('ccm-remodal-style', get_template_directory_uri() . '/app/stylesheets/vendors/remodal.css');
