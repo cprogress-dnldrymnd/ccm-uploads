@@ -48,7 +48,7 @@ $banner_slider_count = count($banner_slider);
 								<div class="bottom">
 									<div class="inner previous-model">
 										<div class="fake-owl-navs owl-nav-prev" target=".owl-prev">
-											<img class="no-lazyload" src="../wp-content/themes/CCM/app/assets/images/arrow-left.png"/>
+											<img alt="owl-nav" src="../wp-content/themes/CCM/app/assets/images/arrow-left.png"/>
 										</div>
 										<span>
 											<?php
@@ -82,7 +82,7 @@ $banner_slider_count = count($banner_slider);
 					<div class="right-side">
 						<div class="inner previous-model">
 							<div class="fake-owl-navs owl-nav-prev" target=".owl-prev">
-								<img class="no-lazyload" src="../wp-content/themes/CCM/app/assets/images/arrow-left.png"/>
+								<img alt="owl-nav" src="../wp-content/themes/CCM/app/assets/images/arrow-left.png"/>
 							</div>
 							<span>
 								<?php
