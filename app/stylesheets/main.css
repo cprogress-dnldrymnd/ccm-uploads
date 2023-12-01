@@ -6784,7 +6784,7 @@ section.colourways .content-row .container .row [class*="col-"] .top-paragraph {
     position: absolute;
     z-index: 2; }
 .swiper-slider-style-one-holder .swiper-slider-style-one .swiper-slide .item .background-box {
-  background-image: url("./h2-img-2.jpg");
+  /*background-image: url("./h2-img-2.jpg");*/
   height: 460px;
   background-size: cover;
   background-position: center;
