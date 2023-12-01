@@ -49,8 +49,6 @@ register_nav_menus(
 		'footer2'       => __('Footer2 Menu', 'ccm'),
 		'footer3'       => __('Footer3 Menu', 'ccm'),
 		'bottom-footer' => __('Bottom Footer Menu', 'ccm'),
-		// Copy and paste the line above right here if you want to make another menu, 
-		// just change the 'primary' to another name
 	)
 );
 
@@ -326,31 +324,39 @@ function ccm_scripts()
 	wp_enqueue_style('ccm-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
-	// wp_enqueue_style('ccm-style', get_template_directory_uri() . '/style.css');
 
 	wp_enqueue_style('ccm-style', get_template_directory_uri() . '/style.css');
 
+	
 	wp_enqueue_style('ccm-owl-style', get_template_directory_uri() . '/app/stylesheets/vendors/owl.carousel.min.css');
 	wp_enqueue_style('ccm-owl-theme', get_template_directory_uri() . '/app/stylesheets/vendors/owl.theme.default.min.css');
-	wp_enqueue_style('ccm-timeline-theme', get_template_directory_uri() . '/app/stylesheets/vendors/timeline.min.css');
-	wp_enqueue_style('ccm-remodal-theme', get_template_directory_uri() . '/app/stylesheets/vendors/remodal-default-theme.css');
-	wp_enqueue_style('ccm-remodal-style', get_template_directory_uri() . '/app/stylesheets/vendors/remodal.css');
-	wp_enqueue_style('ccm-justified-style', get_template_directory_uri() . '/app/stylesheets/vendors/justifiedGallery.css');
-	wp_enqueue_style('ccm-fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
 	wp_enqueue_style('ccm-jquery-ui', '//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css');
+
+	if(!is_front_page()) {
+		wp_enqueue_style('ccm-timeline-theme', get_template_directory_uri() . '/app/stylesheets/vendors/timeline.min.css');
+		wp_enqueue_style('ccm-remodal-theme', get_template_directory_uri() . '/app/stylesheets/vendors/remodal-default-theme.css');
+		wp_enqueue_style('ccm-remodal-style', get_template_directory_uri() . '/app/stylesheets/vendors/remodal.css');
+		wp_enqueue_style('ccm-justified-style', get_template_directory_uri() . '/app/stylesheets/vendors/justifiedGallery.css');
+		wp_enqueue_style('ccm-fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
+	}
+
+
 	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css', '', style_version);
 
 
 	wp_enqueue_script('ccm-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
 	wp_enqueue_script('ccm-bootstrap', get_template_directory_uri() . '/app/javascripts/vendors/bootstrap.min.js');
-	wp_enqueue_script('ccm-timeline', get_template_directory_uri() . '/app/javascripts/vendors/timeline.min.js');
 	wp_enqueue_script('ccm-owl-script', get_template_directory_uri() . '/app/javascripts/vendors/owl.carousel.min.js');
-	wp_enqueue_script('ccm-remodal', get_template_directory_uri() . '/app/javascripts/vendors/remodal.js');
-	wp_enqueue_script('ccm-justified', get_template_directory_uri() . '/app/javascripts/vendors/jquery.justifiedGallery.js');
-	wp_enqueue_script('ct-match-height', get_template_directory_uri() . '/app/javascripts/vendors/jquery.matchHeight-min.js');
-	wp_enqueue_script('ct-fanct', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js');
+
 	wp_enqueue_script('ccm-jquery-ui-js', 'https://code.jquery.com/ui/1.13.1/jquery-ui.js');
-	//wp_enqueue_script('ct-horizotal-scroll', get_template_directory_uri() . '/app/javascripts/vendors/jquery-horizontal-scroll.min.js');
+	
+	if(!is_front_page()) {
+		wp_enqueue_script('ccm-timeline', get_template_directory_uri() . '/app/javascripts/vendors/timeline.min.js');
+		wp_enqueue_script('ccm-remodal', get_template_directory_uri() . '/app/javascripts/vendors/remodal.js');
+		wp_enqueue_script('ccm-justified', get_template_directory_uri() . '/app/javascripts/vendors/jquery.justifiedGallery.js');
+		wp_enqueue_script('ct-match-height', get_template_directory_uri() . '/app/javascripts/vendors/jquery.matchHeight-min.js');
+		wp_enqueue_script('ct-fanct', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js');
+	}
 	wp_enqueue_script('ccm-script', get_template_directory_uri() . '/app/javascripts/main.js', '', style_version);
 
 	if (is_post_type_archive('bikes') || is_page_template('templates/page-components.php') || is_page_template('templates/page-components-v2.php') || is_page_template('templates/page-bikes.php')) {
@@ -756,7 +762,6 @@ function register_user_ccm_login($user_id)
 
 	if (isset($_POST['ownership'])) {
 		// Phone input filed which is used in WooCommerce
-		/*update_user_meta( $user_id, 'ownership', sanitize_text_field( $_POST['ownership'] ) );*/
 		if ($_POST['ownership'] == "yes") {
 			$user = new WP_User($user_id);
 			$user->remove_role('subscriber');
@@ -765,9 +770,6 @@ function register_user_ccm_login($user_id)
 		else {
 			$user = new WP_User($user_id);
 			$user->add_role('subscriber');
-			/*$new_role = array("subscriber" => 1);
-				 $data = serialize( $new_role ); 
-				 update_user_meta( $customer_id, 'wp_capabilities', $new_role);*/
 		}
 	}
 
@@ -799,53 +801,8 @@ function wpse_19692_registration_redirect()
 
 add_filter('registration_redirect', 'wpse_19692_registration_redirect');
 /*-----------------------------------------------------------------------------------*/
-/* CUSTOM FIELDS IN USER DATA IN ADMIN
-/*-----------------------------------------------------------------------------------*/
-/*function custom_user_profile_fields($user){
-if(is_object($user))
-$ownership = esc_attr( get_the_author_meta( 'ownership', $user->ID ) );
-else
-$ownership = null;
-?>
-<h3>Extra profile information</h3>
-<table class="form-table">
-<tr>
-<th><label for="ownership">CCM Motorcycle Ownership</label></th>
-<td>
-<select name="ownership" id="ownership">
-<?php if($ownership == 'yes') { ?>
-<option value="no">Not Owner</option>
-<option value="yes" selected>Owner</option>
-<?php } else { ?>
-<option value="no" selected>Not Owner</option>
-<option value="yes">Owner</option>
-<?php } ?>
-</select>
-</td>
-</tr>
-</table>
-<?php
-}
-add_action( 'show_user_profile', 'custom_user_profile_fields' );
-add_action( 'edit_user_profile', 'custom_user_profile_fields' );
-add_action( "user_new_form", "custom_user_profile_fields" );
-function save_custom_user_profile_fields($user_id){
-# again do this only if you can
-if(!current_user_can('manage_options'))
-return false;
-# save my custom field
-update_user_meta($user_id, 'ownership', $_POST['ownership']);
-}
-add_action('user_register', 'save_custom_user_profile_fields');
-add_action('profile_update', 'save_custom_user_profile_fields');*/
-/*-----------------------------------------------------------------------------------*/
-/* End of Donald Functions
-/*-----------------------------------------------------------------------------------*/
-
-/*-----------------------------------------------------------------------------------*/
 /* Carbon Fields
 /*-----------------------------------------------------------------------------------*/
-
 
 
 add_action('carbon_fields_register_fields', 'cv_register_custom_fields');
