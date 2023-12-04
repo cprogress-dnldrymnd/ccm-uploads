@@ -2449,64 +2449,6 @@ function filter_woocommerce_form_field_type($field, $key, $args, $value)
 	}
 	return $field;
 }
-;
-
-do_action('edit_user_avatar', $current_user);
-function my_avatar_filter()
-{
-	// Remove from show_user_profile hook
-	remove_action('show_user_profile', array('wp_user_avatar', 'wpua_action_show_user_profile'));
-	remove_action('show_user_profile', array('wp_user_avatar', 'wpua_media_upload_scripts'));
-
-	// Remove from edit_user_profile hook
-	remove_action('edit_user_profile', array('wp_user_avatar', 'wpua_action_show_user_profile'));
-	remove_action('edit_user_profile', array('wp_user_avatar', 'wpua_media_upload_scripts'));
-
-	// Add to edit_user_avatar hook
-	add_action('edit_user_avatar', array('wp_user_avatar', 'wpua_action_show_user_profile'));
-	add_action('edit_user_avatar', array('wp_user_avatar', 'wpua_media_upload_scripts'));
-}
-
-// Loads only outside of administration panel
-if (!is_admin()) {
-	add_action('init', 'my_avatar_filter');
-}
-
-add_filter('ajax_query_attachments_args', 'wpb_show_current_user_attachments');
-
-function wpb_show_current_user_attachments($query)
-{
-	$user_id = get_current_user_id();
-	if ($user_id && current_user_can('ccm_owner') || current_user_can('subscriber') && !current_user_can('activate_plugins')) {
-		$query['author'] = $user_id;
-	}
-	return $query;
-}
-
-//  add tabs to woocoomerce account   => label
-
-/*add_filter( 'woocommerce_account_menu_items', 'add_my_menu_items', 99, 1 );
-function add_my_menu_items( $items ) {
-$my_items = array(
-//  endpoint   => label
-'forum' => __( 'FORUM', 'my_plugin' ),
-);
-$my_items = array_slice( $items, 0, 1, true ) +
-$my_items +
-array_slice( $items, 1, count( $items ), true );
-return $my_items;
-}
-function my_account_forum_endpoints() {
-add_rewrite_endpoint( 'forum', EP_ROOT | EP_PAGES );
-}
-add_action( 'init', 'my_account_forum_endpoints' );*/
-
-function my_account_forum_settings_endpoints()
-{
-	add_rewrite_endpoint('forum-settings', EP_ROOT | EP_PAGES);
-}
-
-add_action('init', 'my_account_forum_settings_endpoints');
 
 /**
  * Add new query var.
@@ -2534,35 +2476,6 @@ function my_custom_flush_rewrite_rules()
 }
 
 add_action('after_switch_theme', 'my_custom_flush_rewrite_rules');
-
-function my_custom_my_account_menu_items($items)
-{
-	// Remove the logout menu item.
-	$logout = $items['customer-logout'];
-	unset($items['customer-logout']);
-
-	// Insert your custom endpoint.
-	$items['forum-settings'] = __('Forum ', 'woocommerce');
-
-	// Insert back the logout item.
-	$items['customer-logout'] = $logout;
-
-	return $items;
-}
-
-add_filter('woocommerce_account_menu_items', 'my_custom_my_account_menu_items');
-
-/**
- * Endpoint HTML content.
- */
-function my_account_forum_settings_endpoints_content()
-{
-	$user = new WP_User(get_current_user_id());
-	$user_login = $user->user_login;
-	echo '<p>' . do_shortcode('[avatar_upload user="' . $user_login . '"]') . '</p>';
-}
-
-add_action('woocommerce_account_forum-settings_endpoint', 'my_account_forum_settings_endpoints_content');
 
 // Rename user role name in bbPress.
 function ntwb_bbpress_custom_role_names()
@@ -2916,27 +2829,6 @@ function page_submitted_sc()
 }
 
 add_shortcode('page_submitted_sc', 'page_submitted_sc');
-
-function my_before_avatar()
-{
-	echo '<div id="my-avatar-ng-mama mo">';
-}
-add_action('wpua_before_avatar', 'my_before_avatar');
-
-function my_after_avatar()
-{
-	echo '</div>';
-}
-add_action('wpua_after_avatar', 'my_after_avatar');
-function get_image_id($image_url)
-{
-	global $wpdb;
-	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url));
-	return $attachment[0];
-}
-
-add_action('init', 'test');
-
 
 
 function custom_gallery_shortcode()
