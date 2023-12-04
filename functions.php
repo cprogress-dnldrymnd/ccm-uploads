@@ -80,7 +80,6 @@ function ccm_register_sidebars()
 			// just change the values of id and name to another word/name
 		)
 	);
-	\
 
 	register_sidebar(
 		array(
