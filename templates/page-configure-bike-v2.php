@@ -158,6 +158,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                                             $pre_selected_item = carbon_get_the_post_meta($bike_code . '_pre_selected');
 
                                                             $bike_price = $bike_price_custom_val != '' ? $bike_price_custom_val : $product->get_price();
+                                                            $bike_price = floatval($bike_price);
                                                             if ($is_std_equipment) {
                                                                 $price = 'Std Equipment';
                                                                 $accessory_price = 0.00;
