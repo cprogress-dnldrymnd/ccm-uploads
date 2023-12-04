@@ -45,7 +45,7 @@ $myAccounturl = get_site_url().'/my-account';
 $user_content = "
 <div class='row user-meta ct-no-gutter'>
 <h1>Club CCM</h1>
-<div class='col-sm-12 welcome'>
+<div class='col-sm-10 w-100 welcome'>
 <span class='name'>Welcome back, ".$username. "<span class='sign_outbanner' style='float:right;'>
 <span class='notYou'>Not you?</span> 
 <a href=" .$logouturl." style='text-decoration: none'>Sign Out</a>
