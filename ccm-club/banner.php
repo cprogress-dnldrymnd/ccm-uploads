@@ -41,13 +41,11 @@ if($user->roles[0] == 'administrator') {
 }*/
 /*$user_content="<h3>Club CCM</h3>
 <div class='user-meta'><div class='icon'><i class='fas fa-user'></i></div><div class='welcome'><span>Welcome back, ".$username. "</span><span class='sign_outbanner' style='float:right;'><span class='notYou'>Not you?</span> <a href=" .$logouturl.">Sign Out</a></span></div></div>";*/
-$avatar = "<i class='fas fa-user'></i>";
 $myAccounturl = get_site_url().'/my-account';
 $user_content = "
 <div class='row user-meta ct-no-gutter'>
 <h1>Club CCM</h1>
-<div class='col-sm-2 icon'>".$avatar."</div>
-<div class='col-sm-10 welcome'>
+<div class='col-sm-12 welcome'>
 <span class='name'>Welcome back, ".$username. "<span class='sign_outbanner' style='float:right;'>
 <span class='notYou'>Not you?</span> 
 <a href=" .$logouturl." style='text-decoration: none'>Sign Out</a>
