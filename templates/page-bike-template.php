@@ -29,7 +29,7 @@ $gallery = carbon_get_the_post_meta('gallery');
     }
 
     .sticky_parent {
-        height: <?= count($gallery) * 50 ?>vw;
+        height: <?= count($gallery) * 50 - 100 ?>vw;
     }
 
     .sticky {
@@ -43,7 +43,7 @@ $gallery = carbon_get_the_post_meta('gallery');
         position: absolute;
         top: 0;
         height: 100%;
-        width: <?= count($gallery) * 50 ?>vw;
+        width: <?= count($gallery) * 50 - 100 ?>vw;
         will-change: transform;
         display: flex;
         justify-content: space-between;
@@ -372,7 +372,6 @@ $contact_form = carbon_get_the_post_meta('contact_form');
 
         const count = '<?= count($gallery) ?>';
         const scroll_width = (count * 50) - 100;
-
         const offsetTop = section.parentElement.offsetTop;
         const scrollSection = section.querySelector('.scroll_section');
         let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
