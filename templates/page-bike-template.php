@@ -231,6 +231,11 @@ $configure_url = carbon_get_the_post_meta('configure_url');
                                 <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
                             </div>
                         <?php } ?>
+                        <?php foreach ($gallery as $key => $image) { ?>
+                            <div class="swiper-slide" id="image-<?= $key ?>">
+                                <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
