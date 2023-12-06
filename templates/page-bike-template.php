@@ -332,7 +332,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 <?php get_footer(); ?>
 <script>
     var swiper = new Swiper(".mySwiperBikeScroller", {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 30,
         mousewheel: true,
         pagination: {
