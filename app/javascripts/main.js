@@ -367,11 +367,11 @@ function bike_navigation() {
 
 		var stickyTop = jQuery('.bike-navigation').offset().top;
 
-		jQuery(window).scroll(function () {
+		jQuery('body').scroll(function () {
 
 			$header_height = jQuery('#ccm-motors-header').outerHeight();
 
-			var windowTop = jQuery(window).scrollTop();
+			var windowTop = jQuery('body').scrollTop();
 			if (jQuery('body').hasClass('show-header')) {
 				windowTop = windowTop + $header_height;
 			}
