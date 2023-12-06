@@ -22044,5 +22044,9 @@ section.slider-hero {
 
 section.bike-scroller-swiper .swiper-wrapper .swiper-slide {
   height: 100vh; }
+  section.bike-scroller-swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 /*# sourceMappingURL=main.css.map */
