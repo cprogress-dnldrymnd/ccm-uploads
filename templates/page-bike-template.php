@@ -35,6 +35,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
     .sticky_parent {
         height: 500vh;
     }
+
     .sticky {
         overflow: hidden;
         position: sticky;
@@ -367,14 +368,12 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 </main>
 <?php get_footer(); ?>
 <script>
-    var swiper = new Swiper(".mySwiperBikeScroller", {
-        slidesPerView: 2,
-        spaceBetween: 0,
-        mousewheel: true,
-        freeMode: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
+    const stickySections = [...document.querySelectorAll('.sticky')];
+
+    let images = [
+        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
+        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
+        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
+        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png'
+    ];
 </script>
