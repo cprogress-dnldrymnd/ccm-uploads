@@ -376,8 +376,9 @@ $gallery = carbon_get_the_post_meta('gallery');
         }
     });
 
-    function transform(section, image_width) {
+    function transform(section) {
 
+        console.log(image_width);
 
         const offsetTop = section.parentElement.offsetTop;
         const scrollSection = section.querySelector('.scroll_section');
