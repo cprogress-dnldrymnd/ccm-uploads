@@ -524,7 +524,7 @@ function header() {
 
 	if (jQuery('body').hasClass('bikes-template-templates')) {
 		var lastScrollTop = 0;
-		jQuery(window).scroll(function (event) {
+		jQuery('body').scroll(function (event) {
 			var st = jQuery(this).scrollTop();
 			if (st > lastScrollTop && st > 100) {
 				jQuery('body').addClass('hide-header');
@@ -542,9 +542,10 @@ function header() {
 			}
 			lastScrollTop = st;
 		});
+
 	} else {
 		var lastScrollTop = 0;
-		jQuery('body').scroll(function (event) {
+		jQuery(window).scroll(function (event) {
 			var st = jQuery(this).scrollTop();
 			if (st > lastScrollTop && st > 100) {
 				jQuery('body').addClass('hide-header');
