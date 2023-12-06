@@ -331,7 +331,7 @@ function ccm_scripts()
 		wp_enqueue_style('ccm-justified-style', get_template_directory_uri() . '/app/stylesheets/vendors/justifiedGallery.css');
 		wp_enqueue_style('ccm-fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
 	}
-	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.min.css', '', style_version);
+	wp_enqueue_style('ccm-main-style', get_template_directory_uri() . '/app/stylesheets/main.css', '', style_version);
 	
 	wp_enqueue_script('ccm-jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
 	if(!is_front_page()) {

@@ -22042,4 +22042,7 @@ section.slider-hero {
     .page-template-page-dealer-locator .wysiwyg-v2 {
       padding-top: 50px; } }
 
+section.bike-scroller-swiper .swiper-wrapper .swiper-slide {
+  height: 100vh; }
+
 /*# sourceMappingURL=main.css.map */
