@@ -31,8 +31,4 @@ function transform(section) {
     let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
     percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
     scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
-    console.log(offsetTop);
-    console.log(percentage);
-    console.log(jQuery('body').scrollTop());
-    console.log(window.innerHeight);
 }
