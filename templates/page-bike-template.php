@@ -21,11 +21,6 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 $gallery = carbon_get_the_post_meta('gallery');
 ?>
 <style>
-    footer,
-    header {
-        display: none;
-    }
-
     html,
     body,
     main {
