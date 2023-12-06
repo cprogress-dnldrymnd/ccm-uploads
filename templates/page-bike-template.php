@@ -57,7 +57,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
     }
 
     .scroll_section img {
-        width: 50vw;
+        width: 400px;
         height: 100%;
         object-fit: cover;
     }
@@ -393,6 +393,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
             const offsetTop = section.parentElement.offsetTop;
             const scrollSection = section.querySelector('.scroll_section');
             let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+            percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
             scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0 0)`;
             console.log(offsetTop);
         }
