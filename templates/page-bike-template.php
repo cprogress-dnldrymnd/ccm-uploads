@@ -336,6 +336,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         spaceBetween: 30,
         mousewheel: true,
         loop: true,
+        freeMode: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
