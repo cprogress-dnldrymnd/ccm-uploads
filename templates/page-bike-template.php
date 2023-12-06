@@ -378,7 +378,7 @@ $gallery = carbon_get_the_post_meta('gallery');
     function transform(section) {
         const offsetTop = section.parentElement.offsetTop;
         const scrollSection = section.querySelector('.scroll_section');
-        let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
+        let percentage = ((jQuery('body').scrollTop() - offsetTop) / jQuery('body').innerHeight) * 100;
         percentage = percentage < 0 ? 0 : percentage > image_width ? image_width : percentage;
         scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
     }
