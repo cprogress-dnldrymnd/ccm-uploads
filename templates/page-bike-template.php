@@ -209,9 +209,25 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         <section class="bike-scroller">
             <div class="inner">
                 <div class="images">
-                    <div class="row-images">
+                    <div class="swiper mySwiper">
                         <?php foreach ($gallery as $key => $image) { ?>
                             <div class="image" id="image-<?= $key ?>">
+                                <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-offset"></div>
+        </section>
+
+
+        <section class="bike-scroller-swiper">
+            <div class="inner">
+                <div class="swiper mySwiperBikeScroller">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($gallery as $key => $image) { ?>
+                            <div class="swiper-slide" id="image-<?= $key ?>">
                                 <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
                             </div>
                         <?php } ?>
@@ -314,3 +330,14 @@ $configure_url = carbon_get_the_post_meta('configure_url');
     </section>
 </main>
 <?php get_footer(); ?>
+<script>
+    var swiper = new Swiper(".mySwiperBikeScroller", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
