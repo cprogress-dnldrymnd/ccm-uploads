@@ -246,21 +246,6 @@ $gallery = carbon_get_the_post_meta('gallery');
     <?php } ?>
 
     <?php if ($gallery) { ?>
-        <section class="bike-scroller">
-            <div class="inner">
-                <div class="images">
-                    <div class="swiper mySwiper">
-                        <?php foreach ($gallery as $key => $image) { ?>
-                            <div class="image" id="image-<?= $key ?>">
-                                <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
-                            </div>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-offset"></div>
-        </section>
-
         <div class="sticky_parent">
             <div class="sticky">
                 <div class="scroll_section">
@@ -268,7 +253,6 @@ $gallery = carbon_get_the_post_meta('gallery');
                 </div>
             </div>
         </div>
-
     <?php } ?>
     <?php
     $specifications = carbon_get_the_post_meta('specifications');
