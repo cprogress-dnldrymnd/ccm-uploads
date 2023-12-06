@@ -14,6 +14,7 @@ images.forEach(img => {
 });
 
 window.addEventListener('scroll', (e) => {
+    console.log('xxxxx');
     for (let i = 0; i < stickySections.length; i++) {
         transform(stickySections[i]);
     }
