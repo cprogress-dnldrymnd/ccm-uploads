@@ -364,12 +364,14 @@ $gallery = carbon_get_the_post_meta('gallery');
 </main>
 <script>
     const stickySections = [...document.querySelectorAll('.sticky')];
-    let images = [
-        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
-        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
-        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
-        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png'
-    ];
+
+    let images = [];
+
+    <?php foreach ($gallery as $image) { ?>
+        images.push("<?= wp_get_attachment_image_url($image, 'large') ?>");
+    <?php } ?>
+
+
     images.forEach(img => {
         stickySections.forEach(section => {
             let image = document.createElement('img');
