@@ -351,7 +351,7 @@ $contact_form = carbon_get_the_post_meta('contact_form');
 
 
     const count = '<?= count($gallery) ?>';
-    const sticky_parent_height = 4 * 50;
+    const sticky_parent_height = count * 50;
 
     jQuery('.sticky_parent').css('height', sticky_parent_height + 'vh');
 
