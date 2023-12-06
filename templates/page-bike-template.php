@@ -43,7 +43,6 @@ $gallery = carbon_get_the_post_meta('gallery');
         position: absolute;
         top: 0;
         height: 100%;
-      
         will-change: transform;
         display: flex;
         justify-content: space-between;
