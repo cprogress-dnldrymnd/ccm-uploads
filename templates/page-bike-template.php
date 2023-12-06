@@ -390,5 +390,6 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 
     function transform(section) {
         const offsetTop = section.parentElement.offsetTop;
+        console.log(offsetTop);
     }
 </script>
