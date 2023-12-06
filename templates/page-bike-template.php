@@ -60,6 +60,10 @@ $gallery = carbon_get_the_post_meta('gallery');
         height: 100%;
         object-fit: cover;
     }
+
+    body {
+        position: relative;
+    }
 </style>
 <main id="page-components" class="main-holder bt-5">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
