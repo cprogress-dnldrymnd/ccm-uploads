@@ -27,4 +27,5 @@ function transform(section) {
     percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
     scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0 0)`;
     console.log(offsetTop);
+    console.log(percentage);
 }
