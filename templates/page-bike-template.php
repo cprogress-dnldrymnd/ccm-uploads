@@ -335,6 +335,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         slidesPerView: 2,
         spaceBetween: 30,
         mousewheel: true,
+        loop: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
