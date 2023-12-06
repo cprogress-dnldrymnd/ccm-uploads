@@ -18,8 +18,13 @@ $background = carbon_get_the_post_meta('background');
 $embed_id = carbon_get_the_post_meta('embed_id');
 $mime_type = get_post_mime_type($background);
 $configure_url = carbon_get_the_post_meta('configure_url');
-
 ?>
+<style>
+    html, body, main {
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <main id="page-components" class="main-holder bt-5">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
         <div class="video-holder">
@@ -221,26 +226,16 @@ $configure_url = carbon_get_the_post_meta('configure_url');
             <div class="scroll-offset"></div>
         </section>
 
+        <div class="sticky-parent">
+            <div class="sticky">
+                <div class="scroll_section">
+                    <div class="inner">
 
-        <section class="bike-scroller-swiper">
-            <div class="inner">
-                <div class="swiper mySwiperBikeScroller">
-                    <div class="swiper-wrapper">
-                        <?php foreach ($gallery as $key => $image) { ?>
-                            <div class="swiper-slide" id="image-<?= $key ?>">
-                                <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
-                            </div>
-                        <?php } ?>
-                        <?php foreach ($gallery as $key => $image) { ?>
-                            <div class="swiper-slide" id="image-<?= $key ?>">
-                                <img src="<?= wp_get_attachment_image_url($image, 'full') ?>" class="no-lazyload">
-                            </div>
-                        <?php } ?>
                     </div>
                 </div>
             </div>
-            <div class="scroll-offset"></div>
-        </section>
+        </div>
+
     <?php } ?>
     <?php
     $specifications = carbon_get_the_post_meta('specifications');
