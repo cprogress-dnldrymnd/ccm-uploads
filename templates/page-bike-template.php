@@ -25,7 +25,10 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         display: none;
     }
 
-  
+
+    body {
+        overflow: hidden;
+    }
 
     .sticky_parent {
         height: 500vh;
