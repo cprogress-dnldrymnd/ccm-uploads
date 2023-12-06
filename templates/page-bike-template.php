@@ -338,7 +338,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 <script>
     var swiper = new Swiper(".mySwiperBikeScroller", {
         slidesPerView: 2,
-        spaceBetween: 30,
+        spaceBetween: 0,
         mousewheel: true,
         loop: true,
         freeMode: true,
