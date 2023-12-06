@@ -28,10 +28,6 @@ $gallery = carbon_get_the_post_meta('gallery');
         height: 100%;
     }
 
-    .sticky_parent {
-        height: <?= (count($gallery) * 50 - 100) ?>vw;
-    }
-
     .sticky {
         overflow: hidden;
         position: sticky;
@@ -350,6 +346,14 @@ $contact_form = carbon_get_the_post_meta('contact_form');
     <?php foreach ($gallery as $image) { ?>
         images.push("<?= wp_get_attachment_image_url($image, 'large') ?>");
     <?php } ?>
+
+
+
+
+    const count = '<?= count($gallery) ?>';
+    const sticky_parent_height = 4 * 50;
+
+    jQuery('.sticky_parent').css('height', $sticky_parent_height + 'px');
 
 
     images.forEach(img => {
