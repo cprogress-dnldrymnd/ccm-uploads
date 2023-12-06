@@ -20,12 +20,26 @@ $mime_type = get_post_mime_type($background);
 $configure_url = carbon_get_the_post_meta('configure_url');
 ?>
 <style>
-    footer, header {
+    footer,
+    header {
         display: none;
     }
-    html, body, main {
+
+    html,
+    body,
+    main {
         width: 100%;
         height: 100%;
+    }
+
+    .sticky_parent {
+        height: 500vh;
+    }
+    .sticky {
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        height: 100vh;
     }
 </style>
 <main id="page-components" class="main-holder bt-5">
@@ -229,7 +243,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
             <div class="scroll-offset"></div>
         </section>
 
-        <div class="sticky-parent">
+        <div class="sticky_parent">
             <div class="sticky">
                 <div class="scroll_section">
                     <div class="inner">
