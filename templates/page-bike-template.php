@@ -49,7 +49,7 @@ $gallery = carbon_get_the_post_meta('gallery');
     }
 
     .scroll_section img {
-        width: 400px;
+        width: 50vw;
         height: 100%;
         object-fit: cover;
         object-position: center;
