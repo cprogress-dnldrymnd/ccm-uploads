@@ -23,11 +23,11 @@ window.addEventListener('scroll', (e) => {
 function transform(section) {
     const offsetTop = section.parentElement.offsetTop;
     const scrollSection = section.querySelector('.scroll_section');
-    let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+    let percentage = ((document.scrollY - offsetTop) / document.innerHeight) * 100;
     percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
     scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
     console.log(offsetTop);
     console.log(percentage);
-    console.log(window.scrollY);
-    console.log(window.innerHeight);
+    console.log(document.scrollY);
+    console.log(document.innerHeight);
 }

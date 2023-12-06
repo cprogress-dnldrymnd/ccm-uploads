@@ -25,7 +25,10 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         display: none;
     }
 
-    html {
+    html,
+    body,
+    main {
+        width: 100%;
         height: 100%;
     }
 
@@ -59,6 +62,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         object-fit: cover;
     }
 </style>
+<main id="page-components" class="main-holder bt-5">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
         <div class="video-holder">
             <?php if ($background_type == 'embed') { ?>
@@ -359,5 +363,6 @@ $configure_url = carbon_get_the_post_meta('configure_url');
             </div>
         </div>
     </section>
+</main>
 <script src="<?= get_stylesheet_directory_uri() . '/app/javascripts/hybrid-scroll.js' ?>"> </script>
 <?php get_footer(); ?>
