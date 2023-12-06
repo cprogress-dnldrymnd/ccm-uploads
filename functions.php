@@ -344,7 +344,7 @@ function ccm_scripts()
 	}
 	wp_enqueue_script('ccm-bootstrap', get_template_directory_uri() . '/app/javascripts/vendors/bootstrap.min.js');
 	wp_enqueue_script('ccm-owl-script', get_template_directory_uri() . '/app/javascripts/vendors/owl.carousel.min.js');
-	wp_enqueue_script('ccm-script', get_template_directory_uri() . '/app/javascripts/main.min.js', '', style_version);
+	wp_enqueue_script('ccm-script', get_template_directory_uri() . '/app/javascripts/main.js', '', style_version);
 
 	if (is_post_type_archive('bikes') || is_page_template('templates/page-components.php') || is_page_template('templates/page-components-v2.php') || is_page_template('templates/page-bikes.php') || is_page_template('templates/page-bike-template.php')) {
 		wp_enqueue_style('ccm-aos', get_template_directory_uri() . '/app/vendors/aos.css');
