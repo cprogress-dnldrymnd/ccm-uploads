@@ -30,6 +30,7 @@ $gallery = carbon_get_the_post_meta('gallery');
 
     .sticky_parent {
         height: <?= (count($gallery) * 50) ?>vh;
+        position: relative;
     }
 
     .sticky {
