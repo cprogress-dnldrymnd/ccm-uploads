@@ -42,7 +42,6 @@ $gallery = carbon_get_the_post_meta('gallery');
         position: sticky;
         top: 0;
         height: 100vh;
-        border: 2px solid red;
     }
 
     .scroll_section {
