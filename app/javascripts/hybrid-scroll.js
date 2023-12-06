@@ -1,3 +1,7 @@
+jQuery('body').scroll(function () { 
+    console.log('dsdsdsdsds');
+});
+
 const stickySections = [...document.querySelectorAll('.sticky')];
 let images = [
     'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
