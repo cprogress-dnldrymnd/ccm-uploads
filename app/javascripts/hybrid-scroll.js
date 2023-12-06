@@ -1,4 +1,3 @@
-window.addEventListener('scroll', (e) => {
-    console.log('xxxxx');
-   
+jQuery(window).scroll(function () { 
+    console.log('xxxxx')
 });
