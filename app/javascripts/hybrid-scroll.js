@@ -1,3 +1,3 @@
-jQuery(window).scroll(function () { 
+jQuery('body').scroll(function () { 
     console.log('xxxxx')
 });
