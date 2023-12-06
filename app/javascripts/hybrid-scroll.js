@@ -20,6 +20,11 @@ window.addEventListener('scroll', (e) => {
     }
 });
 
+jQuery('body').scroll(function () { 
+    for (let i = 0; i < stickySections.length; i++) {
+        transform(stickySections[i]);
+    }
+});
 function transform(section) {
     const offsetTop = section.parentElement.offsetTop;
     const scrollSection = section.querySelector('.scroll_section');
