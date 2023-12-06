@@ -29,7 +29,6 @@ $gallery = carbon_get_the_post_meta('gallery');
     }
 
     .sticky_parent {
-        height: 500vw;
     }
 
     .sticky {
@@ -43,7 +42,6 @@ $gallery = carbon_get_the_post_meta('gallery');
         position: absolute;
         top: 0;
         height: 100%;
-        width: 500vw;
         will-change: transform;
         display: flex;
         justify-content: space-between;
