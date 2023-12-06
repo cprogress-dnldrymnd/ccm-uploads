@@ -391,6 +391,9 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 
         function transform(section) {
             const offsetTop = section.parentElement.offsetTop;
+            const scrollSection = section.querySelector('.scroll_section');
+            let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+            scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0 0)`;
             console.log(offsetTop);
         }
     });
