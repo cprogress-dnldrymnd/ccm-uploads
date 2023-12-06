@@ -29,7 +29,7 @@ $gallery = carbon_get_the_post_meta('gallery');
     }
 
     .sticky_parent {
-        height: <?= count($gallery) * 50 - 100 ?>vw;
+        height: <?= count($gallery) * 50 ?>vw;
     }
 
     .sticky {
@@ -43,7 +43,7 @@ $gallery = carbon_get_the_post_meta('gallery');
         position: absolute;
         top: 0;
         height: 100%;
-        width: <?= count($gallery) * 50 - 100 ?>vw;
+        width: <?= count($gallery) * 50 ?>vw;
         will-change: transform;
         display: flex;
         justify-content: space-between;
