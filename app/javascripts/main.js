@@ -413,39 +413,6 @@ function dealer_location_search() {
 	}
 }
 
-function bike_scroller() {
-	if (jQuery('.bike-scroller').length > 0) {
-		var stickyTop = jQuery('.bike-scroller').offset().top;
-		$width = jQuery('.row-images .image').outerWidth();
-		$length = jQuery('.row-images .image').length;
-
-		jQuery('.bike-scroller').css('height', ($width * $length) + 'px');
-		var $transform = 0;
-		var lastScrollTop = 0;
-
-		jQuery(window).scroll(function (e) {
-			var windowTop = jQuery(window).scrollTop();
-
-			if (stickyTop < windowTop) {
-				jQuery('body').addClass('bike-scroller-active');
-				jQuery('.bike-scroller .row-images').css('transform', 'translateX(-' + (55 * $transform) + 'px)');
-
-				if (windowTop > lastScrollTop) {
-					$transform++;
-				} else {
-					if ($transform > 0) {
-						$transform--;
-					}
-				}
-				console.log($transform);
-			} else {
-				jQuery('body').removeClass('bike-scroller-active');
-				$transform = 0;
-			}
-			lastScrollTop = windowTop;
-		});
-	}
-}
 function footer() {
 	if (window.innerWidth < 992) {
 		jQuery('.footer-top .menu').parent().parent().addClass('footer-accordion');
@@ -555,25 +522,49 @@ function header() {
 		jQuery('.widget_shopping_cart_content').appendTo('.mini-cart').removeClass('display-none');
 	}
 
-	var lastScrollTop = 0;
-	jQuery(window).scroll(function (event) {
-		var st = jQuery(this).scrollTop();
-		if (st > lastScrollTop && st > 100) {
-			jQuery('body').addClass('hide-header');
-			jQuery('body').removeClass('show-header');
-		} else {
-			jQuery('body').addClass('show-header');
-			jQuery('body').removeClass('hide-header');
-		}
-		if (jQuery('body').hasClass('bikes-template-templates') || jQuery('body').hasClass('page-template-page-components-v2')) {
-			if (st != 0) {
-				jQuery('body').addClass('header-black-bg');
+	if (jQuery('body').hasClass('bikes-template-templates')) {
+		var lastScrollTop = 0;
+		jQuery(window).scroll(function (event) {
+			var st = jQuery(this).scrollTop();
+			if (st > lastScrollTop && st > 100) {
+				jQuery('body').addClass('hide-header');
+				jQuery('body').removeClass('show-header');
 			} else {
-				jQuery('body').removeClass('header-black-bg');
+				jQuery('body').addClass('show-header');
+				jQuery('body').removeClass('hide-header');
 			}
-		}
-		lastScrollTop = st;
-	});
+			if (jQuery('body').hasClass('bikes-template-templates') || jQuery('body').hasClass('page-template-page-components-v2')) {
+				if (st != 0) {
+					jQuery('body').addClass('header-black-bg');
+				} else {
+					jQuery('body').removeClass('header-black-bg');
+				}
+			}
+			lastScrollTop = st;
+		});
+	} else {
+		var lastScrollTop = 0;
+		jQuery('body').scroll(function (event) {
+			var st = jQuery(this).scrollTop();
+			if (st > lastScrollTop && st > 100) {
+				jQuery('body').addClass('hide-header');
+				jQuery('body').removeClass('show-header');
+			} else {
+				jQuery('body').addClass('show-header');
+				jQuery('body').removeClass('hide-header');
+			}
+			if (jQuery('body').hasClass('bikes-template-templates') || jQuery('body').hasClass('page-template-page-components-v2')) {
+				if (st != 0) {
+					jQuery('body').addClass('header-black-bg');
+				} else {
+					jQuery('body').removeClass('header-black-bg');
+				}
+			}
+			lastScrollTop = st;
+		});
+	}
+
+
 
 
 }
