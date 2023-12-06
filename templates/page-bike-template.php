@@ -351,6 +351,8 @@ $gallery = carbon_get_the_post_meta('gallery');
 
     image_width = parseFloat(section_width / 2);
 
+    console.log(image_width);
+
     const stickySections = [...document.querySelectorAll('.sticky')];
 
     let images = [];
