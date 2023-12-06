@@ -384,6 +384,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 
 
     window.addEventListener("scroll", function() {
+        console.log(test);
         for (let i = 0; i < stickySections.length; i++) {
             transform(stickySections[i]);
         }
