@@ -13,13 +13,6 @@ images.forEach(img => {
     });
 });
 
-
-window.addEventListener('scroll', (e) => {
-    for (let i = 0; i < stickySections.length; i++) {
-        transform(stickySections[i]);
-    }
-});
-
 jQuery('body').scroll(function () { 
     for (let i = 0; i < stickySections.length; i++) {
         transform(stickySections[i]);
