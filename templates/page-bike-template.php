@@ -42,6 +42,13 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         height: 100vh;
         border: 2px solid red;
     }
+
+    .scroll_section {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 500vw;
+    }
 </style>
 <main id="page-components" class="main-holder bt-5">
     <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
