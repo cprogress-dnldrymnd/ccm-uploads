@@ -24,9 +24,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
     header {
         display: none;
     }
-
     html,
-    body,
     main {
         width: 100%;
         height: 100%;
