@@ -370,11 +370,13 @@ $contact_form = carbon_get_the_post_meta('contact_form');
 
     function transform(section) {
 
+        const count = '<?= count($gallery) ?>';
+        const scroll_width = (count * 50) - 100;
 
         const offsetTop = section.parentElement.offsetTop;
         const scrollSection = section.querySelector('.scroll_section');
         let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
-        percentage = percentage < 0 ? 0 : percentage > 200 ? 200 : percentage;
+        percentage = percentage < 0 ? 0 : percentage > scroll_width ? scroll_width : percentage;
         scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
         console.log(percentage);
 
