@@ -56,7 +56,7 @@ $gallery = carbon_get_the_post_meta('gallery');
     }
 
     .scroll_section img {
-        width: 400;
+        width: 400px;
         height: 100%;
         object-fit: cover;
     }
