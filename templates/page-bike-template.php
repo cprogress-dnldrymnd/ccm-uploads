@@ -382,13 +382,11 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         });
     });
 
-
-    window.addEventListener("scroll", function() {
-        console.log(test);
+    jQuery(window).scroll(function() {
         for (let i = 0; i < stickySections.length; i++) {
             transform(stickySections[i]);
         }
-    }, false);
+    });
 
     function transform(section) {
         const offsetTop = section.parentElement.offsetTop;
