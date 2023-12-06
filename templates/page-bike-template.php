@@ -20,6 +20,9 @@ $mime_type = get_post_mime_type($background);
 $configure_url = carbon_get_the_post_meta('configure_url');
 ?>
 <style>
+    footer, header {
+        display: none;
+    }
     html, body, main {
         width: 100%;
         height: 100%;
