@@ -366,30 +366,38 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 </main>
 <?php get_footer(); ?>
 <script>
-    const stickySections = [...document.querySelectorAll('.sticky')];
-
-    let images = [
-        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
-        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
-        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
-        'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png'
-    ];
-    images.forEach(img => {
-        stickySections.forEach(section => {
-            let image = document.createElement('img');
-            image.src = img;
-            section.querySelector('.scroll_section').appendChild(image);
+    jQuery(document).ready(function() {
+        const stickySections = [...document.querySelectorAll('.sticky')];
+        console.log('xxxx');
+        let images = [
+            'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
+            'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
+            'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
+            'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png'
+        ];
+        images.forEach(img => {
+            stickySections.forEach(section => {
+                let image = document.createElement('img');
+                image.src = img;
+                section.querySelector('.scroll_section').appendChild(image);
+            });
         });
-    });
 
-    jQuery('.sticky_parent').scroll(function() {
-        for (let i = 0; i < stickySections.length; i++) {
-            transform(stickySections[i]);
+        window.addEventListener('scroll', (e) => {
+            for (let i = 0; i < stickySections.length; i++) {
+                transform(stickySections[i]);
+            }
+        });
+
+        window.addEventListener("scroll", function() {
+            for (let i = 0; i < stickySections.length; i++) {
+                transform(stickySections[i]);
+            }
+        }, false);
+
+        function transform(section) {
+            const offsetTop = section.parentElement.offsetTop;
+            console.log(offsetTop);
         }
     });
-
-    function transform(section) {
-        const offsetTop = section.parentElement.offsetTop;
-        console.log(offsetTop);
-    }
 </script>
