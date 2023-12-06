@@ -351,14 +351,9 @@ $gallery = carbon_get_the_post_meta('gallery');
     </section>
 </main>
 <script>
-    section_width = jQuery('.sticky_parent').width();
-
-    image_width = parseFloat(section_width / 2);
-
-    console.log(image_width);
-
     const stickySections = [...document.querySelectorAll('.sticky')];
-
+    section_width = jQuery('.sticky_parent').width();
+    const image_width = parseFloat(section_width / 2);
     let images = [];
 
     <?php foreach ($gallery as $image) { ?>
@@ -375,12 +370,15 @@ $gallery = carbon_get_the_post_meta('gallery');
     });
 
     jQuery('body').scroll(function() {
+
         for (let i = 0; i < stickySections.length; i++) {
             transform(stickySections[i]);
         }
     });
 
-    function transform(section) {
+    function transform(section, image_width) {
+
+
         const offsetTop = section.parentElement.offsetTop;
         const scrollSection = section.querySelector('.scroll_section');
         let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
