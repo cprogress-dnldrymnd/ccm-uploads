@@ -51,7 +51,7 @@ $gallery = carbon_get_the_post_meta('gallery');
     }
 
     .scroll_section img {
-        width: 50vw;
+        width: 400;
         height: 100%;
         object-fit: cover;
         object-position: center;
@@ -377,7 +377,7 @@ $contact_form = carbon_get_the_post_meta('contact_form');
         const offsetTop = section.parentElement.offsetTop;
         const scrollSection = section.querySelector('.scroll_section');
         let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
-        percentage = percentage < 0 ? 0 : percentage > image_width ? image_width : percentage;
+        percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
         scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
         console.log(percentage);
 
