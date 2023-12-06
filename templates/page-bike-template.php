@@ -364,7 +364,6 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         </div>
     </section>
 </main>
-<?php get_footer(); ?>
 <script>
     jQuery(document).ready(function() {
         const stickySections = [...document.querySelectorAll('.sticky')];
@@ -399,3 +398,4 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         }
     });
 </script>
+<?php get_footer(); ?>
