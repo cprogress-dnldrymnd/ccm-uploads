@@ -28,10 +28,6 @@ $gallery = carbon_get_the_post_meta('gallery');
         height: 100%;
     }
 
-    .sticky_parent {
-        height: <?= count($gallery) * 50 ?>vw;
-    }
-
     .sticky {
         overflow: hidden;
         position: sticky;
@@ -43,7 +39,6 @@ $gallery = carbon_get_the_post_meta('gallery');
         position: absolute;
         top: 0;
         height: 100%;
-        width: <?= count($gallery) * 50 ?>vw;
         will-change: transform;
         display: flex;
         justify-content: space-between;
@@ -353,6 +348,10 @@ $contact_form = carbon_get_the_post_meta('contact_form');
     <?php } ?>
 
 
+
+
+
+
     images.forEach(img => {
         stickySections.forEach(section => {
             let image = document.createElement('img');
@@ -369,7 +368,6 @@ $contact_form = carbon_get_the_post_meta('contact_form');
     });
 
     function transform(section) {
-
         const count = '<?= count($gallery) ?>';
         const scroll_width = (count * 50) - 100;
         const offsetTop = section.parentElement.offsetTop;
