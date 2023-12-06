@@ -266,9 +266,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         <div class="sticky_parent">
             <div class="sticky">
                 <div class="scroll_section">
-                    <div class="inner">
-
-                    </div>
+               
                 </div>
             </div>
         </div>
@@ -376,4 +374,11 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
         'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png'
     ];
+    images.forEach(img => {
+        stickySections.forEach(section => {
+            let image = document.createElement('img');
+            image.src = img;
+            section.querySelector('.scroll_section').appendChild(image);
+        });
+    });
 </script>
