@@ -266,7 +266,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         <div class="sticky_parent">
             <div class="sticky">
                 <div class="scroll_section">
-               
+
                 </div>
             </div>
         </div>
@@ -381,4 +381,14 @@ $configure_url = carbon_get_the_post_meta('configure_url');
             section.querySelector('.scroll_section').appendChild(image);
         });
     });
+
+    window.addEventListener('scroll', (e) => {
+        for (let i = 0; i < stickySections.length; i++) {
+            transform(stickySections[i]);
+        }
+    });
+
+    function transform(section) {
+        const offsetTop = section.parentElement.offsetTop;
+    }
 </script>
