@@ -382,7 +382,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         });
     });
 
-    jQuery(window).scroll(function() {
+    jQuery('.sticky_parent').scroll(function() {
         for (let i = 0; i < stickySections.length; i++) {
             transform(stickySections[i]);
         }
