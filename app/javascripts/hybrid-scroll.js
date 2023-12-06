@@ -14,7 +14,7 @@ images.forEach(img => {
 });
 
 
-jQuery(window).scroll(function () {
+jQuery('body').scroll(function () {
     for (let i = 0; i < stickySections.length; i++) {
         transform(stickySections[i]);
     }
