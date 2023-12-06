@@ -53,6 +53,7 @@ $gallery = carbon_get_the_post_meta('gallery');
         height: 100%;
         object-fit: cover;
         object-position: center;
+        max-width: 50vw;
     }
 
     body {
