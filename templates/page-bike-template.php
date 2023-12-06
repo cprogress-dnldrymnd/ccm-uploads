@@ -386,7 +386,6 @@ $gallery = carbon_get_the_post_meta('gallery');
         percentage = percentage < 0 ? 0 : percentage > image_width ? image_width : percentage;
         scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
 
-        console.log(offsetTop);
     }
 </script>
 <?php get_footer(); ?>
