@@ -48,6 +48,17 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         top: 0;
         height: 100%;
         width: 500vw;
+        will-change: transform;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5vw;
+    }
+
+    .scroll_section img {
+        width: 50vw;
+        height: 100%;
+        object-fit: cover;
     }
 </style>
 <main id="page-components" class="main-holder bt-5">
