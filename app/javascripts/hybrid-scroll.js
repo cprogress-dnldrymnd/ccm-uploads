@@ -1,7 +1,3 @@
-jQuery('body').scroll(function () { 
-    console.log('dsdsdsdsds');
-});
-
 const stickySections = [...document.querySelectorAll('.sticky')];
 let images = [
     'https://ccm.theprogressteam.com/wp-content/uploads/2020/11/maverick-3.png',
@@ -18,6 +14,11 @@ images.forEach(img => {
 });
 
 
+jQuery('body').scroll(function () {
+    for (let i = 0; i < stickySections.length; i++) {
+        transform(stickySections[i]);
+    }
+});
 
 function transform(section) {
     const offsetTop = section.parentElement.offsetTop;
