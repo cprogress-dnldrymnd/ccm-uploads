@@ -18,6 +18,7 @@ $background = carbon_get_the_post_meta('background');
 $embed_id = carbon_get_the_post_meta('embed_id');
 $mime_type = get_post_mime_type($background);
 $configure_url = carbon_get_the_post_meta('configure_url');
+$gallery = carbon_get_the_post_meta('gallery');
 ?>
 <style>
     footer,
@@ -33,7 +34,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
     }
 
     .sticky_parent {
-        height: 500vh;
+        height: <?= count($gallery) * 50 ?>vw;
     }
 
     .sticky {
@@ -48,16 +49,15 @@ $configure_url = carbon_get_the_post_meta('configure_url');
         position: absolute;
         top: 0;
         height: 100%;
-        width: 500vw;
+        width: <?= count($gallery) * 50 ?>vw;
         will-change: transform;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 5vw;
     }
 
     .scroll_section img {
-        width: 400px;
+        width: 50vw;
         height: 100%;
         object-fit: cover;
     }
@@ -244,9 +244,7 @@ $configure_url = carbon_get_the_post_meta('configure_url');
             </div>
         </section>
     <?php } ?>
-    <?php
-    $gallery = carbon_get_the_post_meta('gallery');
-    ?>
+
     <?php if ($gallery) { ?>
         <section class="bike-scroller">
             <div class="inner">
