@@ -363,6 +363,10 @@ $gallery = carbon_get_the_post_meta('gallery');
     </section>
 </main>
 <script>
+    section_width = jQuery('.bike-scroller').width();
+
+    image_width = parseFloat(section_width / 2);
+
     const stickySections = [...document.querySelectorAll('.sticky')];
 
     let images = [];
