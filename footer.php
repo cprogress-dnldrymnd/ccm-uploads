@@ -64,6 +64,12 @@ $template = get_page_template_slug();
 			</div>
 		</div>
 	</footer>
+
+	<?php
+	if (is_page_template('templates/page-bike-template.php')) {
+		echo '</main>';
+	}
+	?>
 	<!---
 	<div class="whats-app"> <a href="https://wa.me/7791962112"> <img src="https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/WhatsApp_icon.png"> </a> </div>
 --->

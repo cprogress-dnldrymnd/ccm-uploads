@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -82,6 +83,13 @@ $template = get_page_template_slug();
     if ($template != 'templates/page-tablet.php') {
     ?>
         <div id="sticky-anchor" style="height: 0px;"></div>
+
+        <?php
+        if (is_page_template('templates/page-bike-template.php')) {
+            echo '<main id="page-components" class="main-holder bt-5">';
+        }
+        ?>
+
 
         <header id="ccm-motors-header" class="bt-5">
             <div class="container-fluid container-fluid-wide desktop-header">
