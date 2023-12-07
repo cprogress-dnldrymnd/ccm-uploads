@@ -2023,7 +2023,7 @@ if (isset($_GET['post']) && is_admin()) {
 	if (get_post_type($postid) == 'product') {
 		$product_cat = get_the_terms($postid, 'product_cat');
 		foreach($product_cat as $cat) {
-			echo $cat->term_id;
+			var_dump($cat);
 		}
 	}
 }
