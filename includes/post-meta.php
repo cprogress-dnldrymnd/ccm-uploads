@@ -2029,15 +2029,7 @@ if (isset($_GET['post']) && is_admin()) {
 		while ($query->have_posts()) {
 			$query->the_post();
 			$product_cat = wp_get_post_terms($postid, 'product_cat');
-			foreach ($product_cat as $key => $cat) {
-				$config->add_tab(
-					'General Settings' . $key,
-					array(
-						Field::make('text', 'configurator_part_code_' . $key, 'Test'),
-
-					)
-				);
-			}
+				echo get_the_title();
 		}
 		wp_reset_postdata();
 	}
