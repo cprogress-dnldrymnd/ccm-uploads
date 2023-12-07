@@ -2019,18 +2019,27 @@ function bike_individual_product_details($bike_code, $bike_name)
 if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
-		$product_cat = wp_get_post_terms($postid, 'product_cat');
 		$config = Container::make('post_meta', 'Configurator 2')
 			->where('post_type', '=', 'product');
-		foreach ($product_cat as $key => $cat) {
-			$config->add_tab(
-				'General Settings' . $key,
-				array(
-					Field::make('text', 'configurator_part_code_' . $key, 'Test'),
+		$args = array(
+			'post_type' => 'product',
+			'p' => $postid
+		);
+		$query = new WP_Query($args);
+		while ($query->have_posts()) {
+			$query->the_post();
+			$product_cat = wp_get_post_terms($postid, 'product_cat');
+			foreach ($product_cat as $key => $cat) {
+				$config->add_tab(
+					'General Settings' . $key,
+					array(
+						Field::make('text', 'configurator_part_code_' . $key, 'Test'),
 
-				)
-			);
+					)
+				);
+			}
 		}
+		wp_reset_postdata();
 	}
 }
 
