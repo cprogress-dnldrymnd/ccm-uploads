@@ -2022,9 +2022,8 @@ if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
 		$product_cat = get_the_terms($postid, 'product_cat');
-
 		foreach($product_cat as $cat) {
-			echo $cat->name;
+			echo $cat->term_id;
 		}
 	}
 }
