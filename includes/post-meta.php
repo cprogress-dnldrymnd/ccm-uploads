@@ -2015,17 +2015,13 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
-function check_if_product_is_configurator()
-{
-	$screen = get_current_screen();
+$screen = get_current_screen();
 	if ($screen->parent_base == 'edit') {
 		if ($screen->post_type == 'product') {
 			echo 'edit screen';
 		}
 	}
 	$product_cat = get_the_terms($post->ID, 'taxonomy');
-}
-check_if_product_is_configurator();
 
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
