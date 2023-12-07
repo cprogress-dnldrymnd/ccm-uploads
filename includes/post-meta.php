@@ -1987,7 +1987,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 {
 	return array(
 		Field::make('checkbox', $bike_code . '_is_std_equipment', 'Is Std Equipment')->set_width(20),
-		Field::make('checkbox', $bike_code . '_disable_auto_select', $bike_name . ' Disable Auto Select')->set_width(20)
+		Field::make('checkbox', $bike_code . '_disable_auto_select', 'Disable Auto Select for ' . $bike_name)->set_width(20)
 			->set_conditional_logic(
 				array(
 					array(
@@ -2015,6 +2015,17 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
+function check_if_product_is_configurator()
+{
+	$screen = get_current_screen();
+	if ($screen->parent_base == 'edit') {
+
+		if ($screen->post_type) {
+		}
+		echo 'edit screen';
+	}
+	$product_cat = get_the_terms($post->ID, 'taxonomy');
+}
 
 
 Container::make('post_meta', 'Configurator')
@@ -2052,6 +2063,8 @@ Container::make('post_meta', 'Configurator')
 	->add_tab('RAF 100', bike_individual_product_details('raf_100', 'RAF 100'))
 	->add_tab('Heritage 71', bike_individual_product_details('heritage_71', 'Heritage 71'));
 
+
+
 Container::make('post_meta', 'Configurator')
 	->where('post_template', '=', 'templates/page-configure-bike-v2.php')
 	->add_fields(
@@ -2069,6 +2082,8 @@ Container::make('post_meta', 'Configurator')
 			Field::make('text', 'bike_initial_price', 'Bike Initial Price')->set_attribute('type', 'number')
 		)
 	);
+
+
 
 Container::make('term_meta', __('Category Properties'))
 	->where('term_taxonomy', '=', 'product_cat')
