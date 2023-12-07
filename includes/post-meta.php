@@ -2017,6 +2017,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 function check_if_product_is_configurator()
 {
+	
 	if (isset($_GET['post']) && is_admin()) {
 		$postid = $_GET['post'];
 		if (get_post_type($postid) == 'product') {
@@ -2037,7 +2038,7 @@ function check_if_product_is_configurator()
 }
 
 
-add_action('admin_init', 'check_if_product_is_configurator');
+add_action('carbon_fields_register_fields', 'check_if_product_is_configurator');
 
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
