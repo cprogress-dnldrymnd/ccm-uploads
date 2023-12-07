@@ -2021,9 +2021,40 @@ function check_if_product_is_configurator()
 if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
-		$product_cat = get_the_terms($postid, 'product_cat');
-		foreach($product_cat as $cat) {
-			var_dump($cat);
+		global $post, $wpdb;
+
+		$taxonomies = $wpdb->get_col("SELECT DISTINCT tt.taxonomy
+FROM {$wpdb->prefix}term_taxonomy as tt
+JOIN {$wpdb->prefix}term_relationships as tr ON tt.term_taxonomy_id = tr.term_taxonomy_id
+WHERE tr.object_id = {$post}");
+
+		// Loop through all taxonomies for this WP_Post object
+		foreach ($taxonomies as $taxonomy) {
+			// Get the WP_Term objects for this taxomnomy and this post ID
+			$terms = wp_get_post_terms($post, $taxonomy);
+			// If this taxonomy has terms for this post ID
+			if (count($terms) > 0) {
+				$term_names = array();
+
+				// Get the taxonomy label name
+				$taxonomy_label_name = get_taxonomy($taxonomy)->labels->name;
+				$taxonomy_label_singular_name = get_taxonomy($taxonomy)->labels->singular_name;
+
+				// Loop through each WP_Term object for this taxomnomy and this post ID
+				foreach ($terms as $term) {
+					$term_id     = $term->term_id; // The term ID
+					$term_slug   = $term->slug;  // The term slug
+					$term_name   = $term->name;  // The term name
+					$term_parent = $term->parent; // The term parent ID
+					$description = $term->description; // The term description
+					$term_link   = get_term_link($term, $taxonomy); // The term link
+
+					// Set the term name in an array (for testing display)
+					$term_names[] = $term_name;
+				}
+				// Output taxonomy label name with the coma separated terms
+				echo '<p><strong>' . $taxonomy_label_name . ':</strong> ' . implode(', ', $term_names) . '</p>';
+			}
 		}
 	}
 }
