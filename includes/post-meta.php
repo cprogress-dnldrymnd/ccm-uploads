@@ -2017,11 +2017,10 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 function check_if_product_is_configurator()
 {
-	
 }
-if (isset($_GET['post'])) {
+if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
-	if(get_post_type($postid)== 'product') {
+	if (get_post_type($postid) == 'product') {
 		echo 'product;';
 	}
 	$product_cat = get_the_terms($post->ID, 'taxonomy');
