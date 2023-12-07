@@ -1,4 +1,8 @@
 <?php
+use Carbon_Fields\Container;
+use Carbon_Fields\Complex_Container;
+use Carbon_Fields\Field;
+
 /*-----------------------------------------------------------------------------------*/
 /* This file will be referenced every time a template/page loads on your Wordpress site
 /* This is the place to define custom fxns and specialty code
