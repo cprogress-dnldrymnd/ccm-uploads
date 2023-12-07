@@ -2022,7 +2022,15 @@ function check_if_product_is_configurator()
 		if (get_post_type($postid) == 'product') {
 			$product_cat = wp_get_post_terms($postid, 'product_cat');
 			foreach ($product_cat as $cat) {
-				echo var_dump($cat);
+				Container::make('post_meta', 'Configurator 2')
+					->where('post_type', '=', 'product')
+					->add_tab(
+						'General Settings',
+						array(
+							Field::make('text', 'configurator_part_code_'.$postid, 'Test'),
+
+						)
+					);
 			}
 		}
 	}
