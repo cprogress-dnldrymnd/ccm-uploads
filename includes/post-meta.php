@@ -2019,10 +2019,9 @@ function check_if_product_is_configurator()
 {
 	$screen = get_current_screen();
 	if ($screen->parent_base == 'edit') {
-
-		if ($screen->post_type) {
+		if ($screen->post_type == 'product') {
+			echo 'edit screen';
 		}
-		echo 'edit screen';
 	}
 	$product_cat = get_the_terms($post->ID, 'taxonomy');
 }
