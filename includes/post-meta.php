@@ -2024,13 +2024,7 @@ if (isset($_GET['post']) && is_admin()) {
 		$product_cat = wp_get_post_terms($postid, 'product_cat');
 		foreach ($product_cat as $cat) {
 			var_dump($cat);
-			$config->add_tab(
-				'General Settings',
-				array(
-					Field::make('text', 'configurator_part_code_' . $postid, 'Test'),
-
-				)
-			);
+		
 		}
 	}
 }
