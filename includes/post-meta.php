@@ -2035,6 +2035,7 @@ function check_if_product_is_configurator()
 			}
 		}
 	}
+	add_action( 'carbon_fields_register_fields', 'check_if_product_is_configurator' );
 }
 
 
