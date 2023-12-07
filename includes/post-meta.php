@@ -2021,9 +2021,12 @@ function check_if_product_is_configurator()
 if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
-		echo 'product;';
+		$product_cat = get_the_terms($postid, 'product_cat');
+
+		foreach($product_cat as $cat) {
+			echo $cat->name;
+		}
 	}
-	$product_cat = get_the_terms($post->ID, 'taxonomy');
 }
 
 Container::make('post_meta', 'Configurator')
