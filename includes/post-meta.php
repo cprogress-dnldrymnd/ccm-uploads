@@ -2015,30 +2015,25 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
-function check_if_product_is_configurator()
-{
 
-	if (isset($_GET['post']) && is_admin()) {
-		$postid = $_GET['post'];
-		if (get_post_type($postid) == 'product') {
-			$product_cat = wp_get_post_terms($postid, 'product_cat');
-			Container::make('post_meta', 'Configurator 2')
-				->where('post_type', '=', 'product');
-			foreach ($product_cat as $cat) {
-				$config->add_tab(
-					'General Settings',
-					array(
-						Field::make('text', 'configurator_part_code_' . $postid, 'Test'),
 
-					)
-				);
-			}
+if (isset($_GET['post']) && is_admin()) {
+	$postid = $_GET['post'];
+	if (get_post_type($postid) == 'product') {
+		$product_cat = wp_get_post_terms($postid, 'product_cat');
+		Container::make('post_meta', 'Configurator 2')
+			->where('post_type', '=', 'product');
+		foreach ($product_cat as $cat) {
+			$config->add_tab(
+				'General Settings',
+				array(
+					Field::make('text', 'configurator_part_code_' . $postid, 'Test'),
+
+				)
+			);
 		}
 	}
 }
-
-
-add_action('carbon_fields_register_fields', 'check_if_product_is_configurator');
 
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
