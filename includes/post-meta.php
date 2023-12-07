@@ -2026,12 +2026,12 @@ if (isset($_GET['post']) && is_admin()) {
 		$taxonomies = $wpdb->get_col("SELECT DISTINCT tt.taxonomy
 FROM {$wpdb->prefix}term_taxonomy as tt
 JOIN {$wpdb->prefix}term_relationships as tr ON tt.term_taxonomy_id = tr.term_taxonomy_id
-WHERE tr.object_id = {$post}");
+WHERE tr.object_id = {$postid}");
 
 		// Loop through all taxonomies for this WP_Post object
 		foreach ($taxonomies as $taxonomy) {
 			// Get the WP_Term objects for this taxomnomy and this post ID
-			$terms = wp_get_post_terms($post, $taxonomy);
+			$terms = wp_get_post_terms($postid, $taxonomy);
 			// If this taxonomy has terms for this post ID
 			if (count($terms) > 0) {
 				$term_names = array();
