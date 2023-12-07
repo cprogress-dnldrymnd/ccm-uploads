@@ -2033,7 +2033,6 @@ if (isset($_GET['post']) && is_admin()) {
 		}
 	}
 }
-a
 
 
 Container::make('post_meta', 'Configurator')
