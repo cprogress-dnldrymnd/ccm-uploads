@@ -2024,11 +2024,11 @@ function check_if_product_is_configurator()
 			$product_cat = wp_get_post_terms($postid, 'product_cat');
 			$config = Container::make('post_meta', 'Configurator 2')
 				->where('post_type', '=', 'product');
-			foreach ($product_cat as $cat) {
+			foreach ($product_cat as $key => $cat) {
 				$config->add_tab(
 					'General Settings',
 					array(
-						Field::make('text', 'configurator_part_code_' . $postid, 'Test'),
+						Field::make('text', 'configurator_part_code_' . $key, 'Test'),
 
 					)
 				);
