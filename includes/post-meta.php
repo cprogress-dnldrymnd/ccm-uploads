@@ -2017,16 +2017,19 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 function check_if_product_is_configurator()
 {
-}
-if (isset($_GET['post']) && is_admin()) {
-	$postid = $_GET['post'];
-	if (get_post_type($postid) == 'product') {
-		$product_cat = wp_get_post_terms($postid, 'product_cat');
-		foreach($product_cat as $cat) {
-			echo var_dump($cat);
+	if (isset($_GET['post']) && is_admin()) {
+		$postid = $_GET['post'];
+		if (get_post_type($postid) == 'product') {
+			$product_cat = wp_get_post_terms($postid, 'product_cat');
+			foreach ($product_cat as $cat) {
+				echo var_dump($cat);
+			}
 		}
 	}
 }
+
+
+add_action('admin_init', 'check_if_product_is_configurator');
 
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
