@@ -851,7 +851,7 @@ add_filter('registration_redirect', 'wpse_19692_registration_redirect');
 /*-----------------------------------------------------------------------------------*/
 
 
-add_action('carbon_fields_register_fields', 'cv_register_custom_fields', 9999);
+add_action('carbon_fields_register_fields', 'cv_register_custom_fields');
 function cv_register_custom_fields()
 {
 	require_once(dirname(__FILE__) . '/includes/post-meta.php');
