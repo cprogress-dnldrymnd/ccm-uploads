@@ -2022,8 +2022,8 @@ if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
 		$product_cat = wp_get_post_terms($postid, 'product_cat');
-
 		foreach ($product_cat as $cat) {
+			var_dump($cat);
 			$config->add_tab(
 				'General Settings',
 				array(
