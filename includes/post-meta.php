@@ -2022,7 +2022,7 @@ function check_if_product_is_configurator()
 		$postid = $_GET['post'];
 		if (get_post_type($postid) == 'product') {
 			$product_cat = wp_get_post_terms($postid, 'product_cat');
-			Container::make('post_meta', 'Configurator 2')
+			$config = Container::make('post_meta', 'Configurator 2')
 				->where('post_type', '=', 'product');
 			foreach ($product_cat as $cat) {
 				$config->add_tab(
