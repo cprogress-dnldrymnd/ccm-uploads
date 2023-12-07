@@ -2025,7 +2025,7 @@ function check_if_product_is_configurator()
 	}
 	$product_cat = get_the_terms($post->ID, 'taxonomy');
 }
-
+check_if_product_is_configurator();
 
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
