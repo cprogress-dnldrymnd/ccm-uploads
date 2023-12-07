@@ -2015,14 +2015,14 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
-
+$config = Container::make('post_meta', 'Configurator 2')
+	->where('post_type', '=', 'product');
 
 if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
 		$product_cat = wp_get_post_terms($postid, 'product_cat');
-		Container::make('post_meta', 'Configurator 2')
-			->where('post_type', '=', 'product');
+
 		foreach ($product_cat as $cat) {
 			$config->add_tab(
 				'General Settings',
