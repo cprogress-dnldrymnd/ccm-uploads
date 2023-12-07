@@ -2026,7 +2026,7 @@ function check_if_product_is_configurator()
 				->where('post_type', '=', 'product');
 			foreach ($product_cat as $key => $cat) {
 				$config->add_tab(
-					'General Settings',
+					'General Settings' . $key,
 					array(
 						Field::make('text', 'configurator_part_code_' . $key, 'Test'),
 
