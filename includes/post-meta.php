@@ -2023,6 +2023,7 @@ if (isset($_GET['post']) && is_admin()) {
 		$product_cat = wp_get_post_terms($postid, 'product_cat');
 		$config = Container::make('post_meta', 'Configurator 2')
 			->where('post_type', '=', 'product');
+			var_dump(get_post_meta($postid));
 		foreach ($product_cat as $key => $cat) {
 			$config->add_tab(
 				'General Settings' . $key,
