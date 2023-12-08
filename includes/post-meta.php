@@ -2016,14 +2016,11 @@ function bike_individual_product_details($bike_code, $bike_name)
 }
 
 $config = Container::make('post_meta', 'Configurator 2')
-->where('post_type', '=', 'product');
-
-if (isset($_GET['post']) && is_admin()) {
-	$postid = $_GET['post'];
-	if (get_post_type($postid) == 'product') {
-		global $wpdb;
-		$product_cat = $wpdb->get_results(
-			"SELECT terms.name,  terms.slug
+	->where('post_type', '=', 'product');
+$postid = $_GET['post'];
+global $wpdb;
+$product_cat = $wpdb->get_results(
+	"SELECT terms.name,  terms.slug
 			FROM wp_term_relationships as term_relationships
 			INNER JOIN wp_term_taxonomy  as term_taxonomy
 			ON term_relationships.term_taxonomy_id =  term_taxonomy.term_taxonomy_id AND 
@@ -2031,22 +2028,18 @@ if (isset($_GET['post']) && is_admin()) {
 			INNER JOIN wp_terms as terms
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
 			WHERE term_relationships.object_id = $postid"
-		);
+);
 
-	
-		foreach ($product_cat as $cat) {
-			$config->add_tab(
-				$cat->slug,
-				array(
-					Field::make('text', 'configurator_part_code_sss' . $cat->slug, 'Test'),
 
-				)
-			);
-		}
-	}
+foreach ($product_cat as $cat) {
+	$config->add_tab(
+		$cat->slug,
+		array(
+			Field::make('text', 'configurator_part_code_sss' . $cat->slug, 'Test'),
+
+		)
+	);
 }
-
-
 
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
