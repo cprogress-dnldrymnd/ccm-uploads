@@ -2044,10 +2044,10 @@ $product_cat = array(
 
 );
 
-foreach ($product_cat_array as $cat) {
-	Container::make('post_meta', 'Configurator ' . $cat['name'])
+foreach ($product_cat_array as $key=> $cat) {
+	Container::make('post_meta', 'Configurator ' . $cat)
 		->where('post_type', '=', 'product')
-		->add_fields(bike_individual_product_details($cat['slug'], $cat['name']));
+		->add_fields(bike_individual_product_details($key, $cat));
 }
 /*
 Container::make('post_meta', 'Configurator')
