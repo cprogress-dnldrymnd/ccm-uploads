@@ -2019,10 +2019,13 @@ function bike_individual_product_details($bike_code, $bike_name)
 function set_post_id()
 {
 	$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
-		$random_file = fopen($dir, "w");
-		$str = $_GET['post'];
-		fwrite($random_file, 1111);
-		fclose($random_file);
+	$random_file = fopen($dir, "w");
+	$str = $_GET['post'];
+	fwrite($random_file, 1111);
+	fclose($random_file);
+
+	echo $file;
+	echo $_GET['post'];
 }
 
 
@@ -2030,7 +2033,7 @@ add_action('admin_init', 'set_post_id');
 
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 $file = file_get_contents($dir);
-echo $file;
+
 global $wpdb;
 $product_cat = $wpdb->get_results(
 	"SELECT terms.name,  terms.slug
