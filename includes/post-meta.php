@@ -2032,13 +2032,7 @@ $product_cat = $wpdb->get_results(
 
 
 foreach ($product_cat as $cat) {
-	$config->add_tab(
-		$cat->name,
-		array(
-			Field::make('text', 'configurator_part_code_sss' . $cat->slug, 'Test'),
-
-		)
-	);
+	$config->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 }
 
 Container::make('post_meta', 'Configurator')
