@@ -2028,8 +2028,7 @@ add_action('init', 'tatwerat_startSession', 1);
 
 
 $product_cat = array();
-session_start();
-echo  $_SESSION['your-post_id'];
+echo  $_SESSION['post_id'];
 
 
 
