@@ -2023,7 +2023,7 @@ if (isset($_GET['post']) && is_admin()) {
 		echo '<pre>';
 
 		global $wpdb;
-		$results = $wpdb->get_results(
+		$product_cat = $wpdb->get_results(
 			"SELECT terms.name,  terms.slug
 			FROM wp_term_relationships as term_relationships
 			INNER JOIN wp_term_taxonomy  as term_taxonomy
@@ -2033,8 +2033,7 @@ if (isset($_GET['post']) && is_admin()) {
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
 			WHERE term_relationships.object_id = $postid"
 		);
-		var_dump($results);
-		echo get_term(405)->name;
+		var_dump($product_cat);
 
 		echo '</pre>';
 
@@ -2047,7 +2046,7 @@ if (isset($_GET['post']) && is_admin()) {
 			->where('post_type', '=', 'product');
 		foreach ($product_cat as $key => $cat) {
 			$config->add_tab(
-				'General Settings' . $key,
+				$cat->slug,
 				array(
 					Field::make('text', 'configurator_part_code_' . $key, 'Test'),
 
