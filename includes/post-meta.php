@@ -2016,9 +2016,27 @@ function bike_individual_product_details($bike_code, $bike_name)
 }
 
 
-$product_cat = get_post_meta(17185, 'product_cat', true);
 
-var_dump($product_cat);
+$postid = $_GET['post'];
+global $wpdb;
+$product_cat = $wpdb->get_results(
+	"SELECT terms.name,  terms.slug
+			FROM wp_term_relationships as term_relationships
+			INNER JOIN wp_term_taxonomy  as term_taxonomy
+			ON term_relationships.term_taxonomy_id =  term_taxonomy.term_taxonomy_id AND 
+			term_taxonomy.parent = 405
+			INNER JOIN wp_terms as terms
+			ON term_taxonomy.term_taxonomy_id = terms.term_id
+			WHERE term_relationships.object_id = $postid"
+);
+
+foreach ($product_cat as $cat) {
+	$product_cat_array[$cat->slug] = $cat->name;
+}
+update_option('product_' . $postid, $product_cat_array, 'yes');
+$product_cat = get_option($option, 'product_' . $postid);
+
+var_dump('product_' . $postid);
 
 foreach ($product_cat as $key => $cat) {
 	Container::make('post_meta', 'Configurator ' . $cat)
