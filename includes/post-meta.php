@@ -2021,7 +2021,6 @@ global $wp_session;
 
 $postid = $_GET['post'];
 $file = file_get_contents(WP_CONTENT_DIR.'/products-configurator/postid.txt');
-echo WP_CONTENT_DIR;
 echo $file;
 global $wpdb;
 $product_cat = $wpdb->get_results(
@@ -2032,7 +2031,7 @@ $product_cat = $wpdb->get_results(
 			term_taxonomy.parent = 405
 			INNER JOIN wp_terms as terms
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
-			WHERE term_relationships.object_id = $postid"
+			WHERE term_relationships.object_id = $file"
 );
 
 foreach ($product_cat as $cat) {
