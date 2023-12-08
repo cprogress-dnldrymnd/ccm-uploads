@@ -2021,7 +2021,7 @@ global $wp_session;
 if (!$wp_session['post_id']) {
 	$wp_session['post_id'] = $_GET['post'];
 }
-$postid = $wp_session['post_id'];
+$postid = 17177;
 
 global $wpdb;
 $product_cat = $wpdb->get_results(
