@@ -2022,7 +2022,7 @@ if (isset($_GET['post']) && is_admin()) {
 
 
 		global $wpdb;
-		$results = $wpdb->get_results("SELECT term_taxonomy_id FROM wp_term_relationships WHERE term object_id = $postid");
+		$results = $wpdb->get_results("SELECT term_taxonomy_id FROM wp_term_relationships");
 
 
 		var_dump($results);
