@@ -2035,7 +2035,7 @@ $product_cat = $wpdb->get_results(
 
 foreach ($product_cat as $cat) {
 	Container::make('post_meta', 'Configurator '.$cat->name)
-	->where('post_type', '=', 'product');
+	->where('post_type', '=', 'product')
 	->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 }
 /*
