@@ -2024,7 +2024,7 @@ if (isset($_GET['post'])) {
 	$postid = $_GET['post'];
 	$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 	$file_dir = fopen($dir, "w");
-	fwrite($file_dir, $postid . 'dsdsds');
+	fwrite($file_dir, $postid);
 	fclose($file_dir);
 
 	$file = file_get_contents($dir);
