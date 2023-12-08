@@ -2037,6 +2037,7 @@ if (isset($_GET['post']) && get_post_type($_GET['post']) == 'product') {
 	foreach ($product_cat as $cat) {
 		$configurator->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 	}
+}
 /*
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
