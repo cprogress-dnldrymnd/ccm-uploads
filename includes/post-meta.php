@@ -2019,11 +2019,24 @@ function bike_individual_product_details($bike_code, $bike_name)
 if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
+
+
 		global $wpdb;
+		$results = $wpdb->get_results("SELECT term_taxonomy_id FROM wp_term_relationships WHERE term object_id = $postid");
+
+
+		var_dump($results);
+
+
+
+
+
+
+
 		$product_cat = wp_get_post_terms($postid, 'product_cat');
 		$config = Container::make('post_meta', 'Configurator 2')
 			->where('post_type', '=', 'product');
-			var_dump(get_post_meta($postid));
+		var_dump(get_post_meta($postid));
 		foreach ($product_cat as $key => $cat) {
 			$config->add_tab(
 				'General Settings' . $key,
@@ -2035,6 +2048,8 @@ if (isset($_GET['post']) && is_admin()) {
 		}
 	}
 }
+
+
 
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
