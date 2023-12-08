@@ -3284,6 +3284,7 @@ function show_template() {
 			$random_file = fopen($dir, "w");
 			fwrite($random_file, $_GET['post']);
 			fclose($random_file);
+			wp_redirect($_SERVER['HTTP_REFERER']);
 		}
 	}
 
