@@ -2020,7 +2020,7 @@ echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 
 $filesize = filesize($dir);
-
+$file = file_get_contents($dir);
 
 global $wpdb;
 $product_cat = $wpdb->get_results(
