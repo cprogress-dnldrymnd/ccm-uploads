@@ -2022,9 +2022,10 @@ echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
 $postid = $_GET['post'];
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
+$file_dir = fopen($dir, "w");
 $str = "random text";
-fwrite($dir, $str);
-fclose($dir);
+fwrite($file_dir, $str);
+fclose($file_dir);
 
 $file = file_get_contents($dir);
 echo $file;
