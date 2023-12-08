@@ -2033,7 +2033,7 @@ $product_cat = $wpdb->get_results(
 
 foreach ($product_cat as $cat) {
 	$config->add_tab(
-		$cat->slug,
+		$cat->name,
 		array(
 			Field::make('text', 'configurator_part_code_sss' . $cat->slug, 'Test'),
 
