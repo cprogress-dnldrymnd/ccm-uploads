@@ -2017,7 +2017,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
-$file = file_get_contents($dir);
+
 $filesize = filesize($dir);
 echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
@@ -2026,7 +2026,7 @@ if ($filesize == 0 && isset($_GET['post'])) {
 	fwrite($random_file, $_GET['post']);
 	fclose($random_file);
 }
-
+$file = file_get_contents($dir);
 
 global $wpdb;
 $product_cat = $wpdb->get_results(
