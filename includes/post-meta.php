@@ -2029,7 +2029,7 @@ $product_cat = $wpdb->get_results(
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
 			WHERE term_relationships.object_id = $postid"
 );
-
+$product_cat_array = array();
 foreach ($product_cat as $cat) {
 	$product_cat_array[$cat->slug] = $cat->name;
 }
