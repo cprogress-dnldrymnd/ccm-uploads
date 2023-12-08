@@ -2032,7 +2032,15 @@ $product_cat = $wpdb->get_results(
 			WHERE term_relationships.object_id = $file"
 );
 $configurator = Container::make('post_meta', 'Configurator')
-	->where('post_type', '=', 'product');
+	->where('post_type', '=', 'product')
+	->add_tab(
+		'General Settings',
+		array(
+			Field::make('text', 'configurator_part_code', 'Configurator part code'),
+			Field::make('text', 'configurator_price', 'Configurator price')->set_attribute('type', 'number'),
+
+		)
+	);
 foreach ($product_cat as $cat) {
 	$configurator->add_tab($cat->name, bike_individual_product_details(str_replace("-", "_", $cat->slug), $cat->name));
 }
