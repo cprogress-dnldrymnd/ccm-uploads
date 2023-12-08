@@ -2022,6 +2022,7 @@ echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
 if (isset($_GET['post'])) {
 	$postid = $_GET['post'];
+	$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 	
 	$file = file_get_contents($dir);
 	echo $file;
