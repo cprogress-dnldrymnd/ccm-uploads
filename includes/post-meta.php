@@ -2020,7 +2020,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 global $post;
 
 $product_cat = get_post_meta($post->ID, 'product_cat', true);
-
+echo $post->ID;
 var_dump($product_cat);
 
 foreach ($product_cat as $key => $cat) {
