@@ -2020,7 +2020,7 @@ function tatwerat_startSession()
 	if (!session_id()) {
 		session_start();
 
-		$_SESSION['post_id'] = $_GET['post_id'];
+		$_SESSION['post_id'] = $_GET['post'];
 	}
 }
 
