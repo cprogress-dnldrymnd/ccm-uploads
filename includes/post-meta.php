@@ -2015,23 +2015,28 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
-echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
 global $wp_session;
-
-
 $wp_session['post_id'] = $_GET['post'];
 
-session_start();
-$product_cat = array();
-echo  $wp_session['post_id'];
+$postid = $wp_session['post_id'];
 
+global $wpdb;
+$product_cat = $wpdb->get_results(
+	"SELECT terms.name,  terms.slug
+			FROM wp_term_relationships as term_relationships
+			INNER JOIN wp_term_taxonomy  as term_taxonomy
+			ON term_relationships.term_taxonomy_id =  term_taxonomy.term_taxonomy_id AND 
+			term_taxonomy.parent = 405
+			INNER JOIN wp_terms as terms
+			ON term_taxonomy.term_taxonomy_id = terms.term_id
+			WHERE term_relationships.object_id = $postid"
+);
 
-
-foreach ($product_cat as $key => $cat) {
-	Container::make('post_meta', 'Configurator ' . $cat)
-		->where('post_type', '=', 'product')
-		->add_fields(bike_individual_product_details(str_replace('-', '_', $key,), $cat));
+foreach ($product_cat as $cat) {
+	Container::make('post_meta', 'Configurator '.$cat->name)
+	->where('post_type', '=', 'product');
+	->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 }
 /*
 Container::make('post_meta', 'Configurator')
