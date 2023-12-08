@@ -3284,6 +3284,8 @@ function show_template() {
 			$random_file = fopen($dir, "w");
 			fwrite($random_file, $_GET['post']);
 			fclose($random_file);
+			$actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+			wp_redirect($actual_link);
 		}
 	}
 
