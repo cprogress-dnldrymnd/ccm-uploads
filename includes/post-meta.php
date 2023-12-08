@@ -2021,7 +2021,7 @@ $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 
 $filesize = filesize($dir);
 
-if ($filesize > 1 && isset($_GET['post'])) {
+if ($filesize < 3 && isset($_GET['post'])) {
 	$random_file = fopen($dir, "w");
 	fwrite($random_file, 111);
 	fclose($random_file);
