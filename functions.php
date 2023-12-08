@@ -2582,24 +2582,24 @@ add_filter( 'bbp_get_dynamic_roles', 'bbpress_forum_custom_roles', 1 );*/
 
 
 						$html_resource .=
-						/****/
-						'<div class="meta">';
+							/****/
+							'<div class="meta">';
 						$html_resource .=
-						/******/
-						'<div class="type">' . $type . '</div>';
+							/******/
+							'<div class="type">' . $type . '</div>';
 						$html_resource .=
-						/******/
-						'<div class="name">' . $resource_name . '</div>';
+							/******/
+							'<div class="name">' . $resource_name . '</div>';
 						$html_resource .=
-						/****/
-						'</div>';
+							/****/
+							'</div>';
 
 						$html_resource .= /**/ '</div>';
 
 						$html_resource .= /**/ '<div class="download">';
 						$html_resource .=
-						/****/
-						'<span href="#" data-href="' . $resource_file . '" download="' . $download . '" onclick="forceDownload(this)">Download</span>';
+							/****/
+							'<span href="#" data-href="' . $resource_file . '" download="' . $download . '" onclick="forceDownload(this)">Download</span>';
 						$html_resource .= /**/ '</div>';
 
 						$html_resource .= '</div></div>';
@@ -3280,6 +3280,7 @@ function show_template() {
 	function set_post_id()
 	{
 		if (isset($_GET['post'])) {
+			$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 			$random_file = fopen($dir, "w");
 			fwrite($random_file, $_GET['post']);
 			fclose($random_file);
