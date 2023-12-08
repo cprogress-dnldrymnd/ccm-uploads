@@ -2038,7 +2038,7 @@ foreach ($product_cat as $cat) {
 update_option('product_' . $postid, $product_cat_array, 'yes');
 $product_cat = get_option($option, 'product_' . $product_cat_array);
 
-var_dump('product_' . $postid);
+var_dump('product_' . $product_cat);
 
 foreach ($product_cat as $key => $cat) {
 	Container::make('post_meta', 'Configurator ' . $cat)
