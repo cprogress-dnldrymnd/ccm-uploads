@@ -2038,7 +2038,7 @@ if (isset($_GET['post']) && is_admin()) {
 			$config->add_tab(
 				$cat->slug,
 				array(
-					Field::make('text', 'configurator_part_code_' . $cat->slug, 'Test'),
+					Field::make('text', 'configurator_part_code_sss' . $cat->slug, 'Test'),
 
 				)
 			);
