@@ -2023,7 +2023,7 @@ echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 $postid = $_GET['post'];
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 $file_dir = fopen($dir, "w");
-fwrite($file_dir, $postid);
+fwrite($file_dir, $postid.'dsdsds');
 
 $file = file_get_contents($dir);
 echo $file;
