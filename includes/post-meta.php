@@ -2024,7 +2024,7 @@ $postid = $_GET['post'];
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 $file_dir = fopen($dir, "w");
 $str = "random text";
-fwrite($file_dir, $str);
+fwrite($file_dir, $postid);
 fclose($file_dir);
 
 $file = file_get_contents($dir);
