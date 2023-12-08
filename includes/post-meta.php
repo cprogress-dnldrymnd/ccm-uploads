@@ -2034,7 +2034,7 @@ $product_cat = $wpdb->get_results(
 $configurator = Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product');
 foreach ($product_cat as $cat) {
-	$configurator->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
+	$configurator->add_tab($cat->name, bike_individual_product_details(str_replace("-", "_", $cat->slug), $cat->name));
 }
 /*
 Container::make('post_meta', 'Configurator')
