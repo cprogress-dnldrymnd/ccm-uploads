@@ -2023,7 +2023,7 @@ if (isset($_GET['post']) && is_admin()) {
 
 		global $wpdb;
 		$results = $wpdb->get_results(
-			"SELECT term_taxonomy_id '
+			"SELECT term_taxonomy_id 
 			FROM wp_term_relationships as term_relationships
 			INNER JOIN wp_term_taxonomy  as term_taxonomy
 			ON term_relationships.term_id =  term_taxonomy.term_id
