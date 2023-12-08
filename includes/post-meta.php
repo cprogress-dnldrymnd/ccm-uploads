@@ -2015,13 +2015,12 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
+$config = Container::make('post_meta', 'Configurator 2')
+->where('post_type', '=', 'product');
 
 if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
-
-		echo '<pre>';
-
 		global $wpdb;
 		$product_cat = $wpdb->get_results(
 			"SELECT terms.name,  terms.slug
@@ -2033,12 +2032,8 @@ if (isset($_GET['post']) && is_admin()) {
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
 			WHERE term_relationships.object_id = $postid"
 		);
-		var_dump($product_cat);
 
-		echo '</pre>';
-
-		$config = Container::make('post_meta', 'Configurator 2')
-			->where('post_type', '=', 'product');
+	
 		foreach ($product_cat as $cat) {
 			$config->add_tab(
 				$cat->slug,
