@@ -2020,7 +2020,9 @@ global $wp_session;
 
 
 $postid = $_GET['post'];
-$file = file_get_contents(WP_CONTENT_DIR.'/products-configurator/postid.txt');
+$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
+file_put_contents($dir, $postid);
+$file = file_get_contents($dir);
 echo $file;
 global $wpdb;
 $product_cat = $wpdb->get_results(
