@@ -2046,7 +2046,7 @@ if (isset($_GET['post']) && is_admin()) {
 			->where('post_type', '=', 'product');
 		foreach ($product_cat as $key => $cat) {
 			$config->add_tab(
-				$cat->slug,
+				$cat['slug'],
 				array(
 					Field::make('text', 'configurator_part_code_' . $key, 'Test'),
 
