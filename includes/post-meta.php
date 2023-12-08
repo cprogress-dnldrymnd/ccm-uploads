@@ -2033,10 +2033,10 @@ $product_cat = get_post_meta($postid, 'product_cat', true);
 
 var_dump($product_cat);
 
-foreach ($product_cat as $cat) {
+foreach ($product_cat as $key => $cat) {
 	Container::make('post_meta', 'Configurator ' . $cat)
 		->where('post_type', '=', 'product')
-		->add_fields(bike_individual_product_details(str_replace('-', '_', $cat['slug'],), $cat));
+		->add_fields(bike_individual_product_details(str_replace('-', '_', $key,), $cat));
 }
 /*
 Container::make('post_meta', 'Configurator')
