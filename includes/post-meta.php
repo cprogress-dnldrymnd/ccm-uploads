@@ -2032,7 +2032,7 @@ if (isset($_GET['post']) && is_admin()) {
 			WHERE term_relationships.object_id = $postid"
 		);
 		var_dump($results);
-		echo get_term( 428 )->name;
+		echo get_term(405)->name;
 
 		echo '</pre>';
 
