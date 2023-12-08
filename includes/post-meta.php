@@ -2020,6 +2020,7 @@ if (isset($_GET['post']) && is_admin()) {
 	$postid = $_GET['post'];
 	if (get_post_type($postid) == 'product') {
 
+		echo '<pre>';
 
 		global $wpdb;
 		$results = $wpdb->get_results(
@@ -2032,6 +2033,7 @@ if (isset($_GET['post']) && is_admin()) {
 		var_dump($results);
 
 
+		echo '</pre>';
 
 
 
