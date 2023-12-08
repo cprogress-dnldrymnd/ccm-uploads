@@ -2024,7 +2024,6 @@ $postid = $_GET['post'];
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 $file_dir = fopen($dir, "w");
 fwrite($file_dir, $postid);
-fclose($file_dir);
 
 $file = file_get_contents($dir);
 echo $file;
@@ -2045,6 +2044,8 @@ foreach ($product_cat as $cat) {
 		->where('post_type', '=', 'product')
 		->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 }
+fclose($file_dir);
+
 /*
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
