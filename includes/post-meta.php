@@ -2017,8 +2017,10 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 
 global $wp_session;
-$wp_session['post_id'] = $_GET['post'];
 
+if (!$wp_session['post_id']) {
+	$wp_session['post_id'] = $_GET['post'];
+}
 $postid = $wp_session['post_id'];
 
 global $wpdb;
@@ -2034,9 +2036,9 @@ $product_cat = $wpdb->get_results(
 );
 
 foreach ($product_cat as $cat) {
-	Container::make('post_meta', 'Configurator '.$cat->name)
-	->where('post_type', '=', 'product')
-	->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
+	Container::make('post_meta', 'Configurator ' . $cat->name)
+		->where('post_type', '=', 'product')
+		->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 }
 /*
 Container::make('post_meta', 'Configurator')
