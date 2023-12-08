@@ -2020,10 +2020,9 @@ global $wp_session;
 
 echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
-if (isset($_GET['post'])) {
 	$postid = $_GET['post'];
 	$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
-	
+
 	$file = file_get_contents($dir);
 	echo $file;
 	global $wpdb;
@@ -2043,7 +2042,6 @@ if (isset($_GET['post'])) {
 			->where('post_type', '=', 'product')
 			->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 	}
-}
 /*
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
