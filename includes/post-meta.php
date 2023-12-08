@@ -2029,15 +2029,8 @@ $product_cat = $wpdb->get_results(
 			WHERE term_relationships.object_id = $postid"
 );
 
-foreach ($product_cat as $cat) {
-	$product_cat_array[$cat->slug] = $cat->name;
-}
+$product_cat = get_post_meta($postid, 'product_cat', true);
 
-update_post_meta($postid, 'product_cat', $product_cat_array);
-
-echo '<pre>';
-var_dump(get_post_meta($postid));
-echo '</pre>';
 $product_cat = array(
 	array(
 		'name' => 'six',
