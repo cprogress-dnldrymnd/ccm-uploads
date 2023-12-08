@@ -2028,7 +2028,10 @@ $product_cat = $wpdb->get_results(
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
 			WHERE term_relationships.object_id = $postid"
 );
-
+$product_cat_array = array();
+foreach ($product_cat as $cat) {
+	$product_cat_array[$cat->slug] = $cat->name;
+}
 $product_cat = array(
 	array(
 		'name' => 'six',
@@ -2041,7 +2044,7 @@ $product_cat = array(
 
 );
 
-foreach ($product_cat as $cat) {
+foreach ($product_cat_array as $cat) {
 	Container::make('post_meta', 'Configurator ' . $cat['name'])
 		->where('post_type', '=', 'product')
 		->add_fields(bike_individual_product_details($cat['slug'], $cat['name']));
