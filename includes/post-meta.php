@@ -2028,7 +2028,7 @@ if (isset($_GET['post']) && is_admin()) {
 			FROM wp_term_relationships as term_relationships
 			INNER JOIN wp_term_taxonomy  as term_taxonomy
 			ON term_relationships.term_taxonomy_id =  term_taxonomy.term_taxonomy_id AND 
-			 .parent = 405
+			term_taxonomy.parent = 405
 			INNER JOIN wp_termmeta as termmeta
 			ON wp_term_taxonomy.term_taxonomy_id = termmeta.term_id
 			WHERE term_relationships.object_id = $postid"
