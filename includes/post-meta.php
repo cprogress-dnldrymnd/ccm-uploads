@@ -2034,7 +2034,7 @@ $product_cat = $wpdb->get_results(
 foreach ($product_cat as $cat) {
 	$config->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 }
-
+/*
 Container::make('post_meta', 'Configurator')
 	->where('post_type', '=', 'product')
 	->add_tab(
@@ -2069,7 +2069,7 @@ Container::make('post_meta', 'Configurator')
 	->add_tab('Street Moto', bike_individual_product_details('street_moto', 'Street Moto'))
 	->add_tab('RAF 100', bike_individual_product_details('raf_100', 'RAF 100'))
 	->add_tab('Heritage 71', bike_individual_product_details('heritage_71', 'Heritage 71'));
-
+*/
 
 
 Container::make('post_meta', 'Configurator')
