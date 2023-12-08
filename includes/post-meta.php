@@ -2031,11 +2031,10 @@ $product_cat = $wpdb->get_results(
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
 			WHERE term_relationships.object_id = $file"
 );
-
+$configurator = Container::make('post_meta', 'Configurator ' . $cat->name)
+	->where('post_type', '=', 'product');
 foreach ($product_cat as $cat) {
-	Container::make('post_meta', 'Configurator ' . $cat->name)
-		->where('post_type', '=', 'product')
-		->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
+	$configurator->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 }
 /*
 Container::make('post_meta', 'Configurator')
