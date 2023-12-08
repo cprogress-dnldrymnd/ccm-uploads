@@ -2018,8 +2018,8 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 function set_post_id()
 {
-	$random_file = fopen($dir, "w");
 	$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
+	$random_file = fopen($dir, "w");
 	fwrite($random_file, $_GET['post']);
 	fclose($random_file);
 }
