@@ -2022,7 +2022,7 @@ function set_post_id()
 		$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 		$random_file = fopen($dir, "w");
 		$str = $_GET['post'];
-		fwrite($random_file, $str);
+		fwrite($random_file, 1111);
 		fclose($random_file);
 	}
 }
