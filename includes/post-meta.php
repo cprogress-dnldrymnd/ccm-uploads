@@ -2021,7 +2021,7 @@ global $wp_session;
 
 $postid = $_GET['post'];
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
-file_put_contents($dir, $postid);
+echo file_put_contents($dir, $postid);
 $file = file_get_contents($dir);
 echo $file;
 global $wpdb;
