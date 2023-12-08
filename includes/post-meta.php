@@ -2026,7 +2026,7 @@ if (isset($_GET['post']) && is_admin()) {
 			"SELECT * 
 			FROM wp_term_relationships as term_relationships
 			INNER JOIN wp_term_taxonomy  as term_taxonomy
-			ON term_relationships.term_id =  term_taxonomy.term_id
+			ON term_relationships.term_taxonomy_id =  term_taxonomy.term_taxonomy_id
 			WHERE term_relationships.object_id = $postid"
 		);
 		var_dump($results);
