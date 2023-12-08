@@ -2015,13 +2015,23 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
+function tatwerat_startSession()
+{
+	if (!session_id()) {
+		session_start();
+
+		$_SESSION['post_id'] = $_GET['post_id'];
+	}
+}
+
+add_action('init', 'tatwerat_startSession', 1);
 
 
-global $post;
+$product_cat = array();
 
-$product_cat = get_post_meta($post->ID, 'product_cat', true);
-echo $post->ID;
-var_dump($product_cat);
+echo  $_SESSION['your-post_id'];
+
+
 
 foreach ($product_cat as $key => $cat) {
 	Container::make('post_meta', 'Configurator ' . $cat)
