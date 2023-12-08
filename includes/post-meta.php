@@ -2031,19 +2031,8 @@ $product_cat = $wpdb->get_results(
 
 $product_cat = get_post_meta($postid, 'product_cat', true);
 
-$product_cat = array(
-	array(
-		'name' => 'six',
-		'slug' => 'six'
-	),
-	array(
-		'name' => 'tracker',
-		'slug' => 'tracker'
-	)
 
-);
-
-foreach ($product_cat as $key=> $cat) {
+foreach ($product_cat as $cat) {
 	Container::make('post_meta', 'Configurator ' . $cat)
 		->where('post_type', '=', 'product')
 		->add_fields(bike_individual_product_details($key, $cat));
