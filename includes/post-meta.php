@@ -2029,10 +2029,22 @@ $product_cat = $wpdb->get_results(
 			WHERE term_relationships.object_id = $postid"
 );
 
+$product_cat = array(
+	array(
+		'name' => 'six',
+		'slug' => 'six'
+	),
+	array(
+		'name' => 'tracker',
+		'slug' => 'tracker'
+	)
+
+);
+
 foreach ($product_cat as $cat) {
-	Container::make('post_meta', 'Configurator ' . $cat->name)
+	Container::make('post_meta', 'Configurator ' . $cat['name'])
 		->where('post_type', '=', 'product')
-		->add_fields(bike_individual_product_details($cat->slug, $cat->name));
+		->add_fields(bike_individual_product_details($cat['slug'], $cat['name']));
 }
 /*
 Container::make('post_meta', 'Configurator')
