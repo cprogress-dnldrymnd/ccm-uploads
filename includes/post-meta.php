@@ -2034,6 +2034,10 @@ foreach ($product_cat as $cat) {
 }
 
 update_post_meta($postid, 'product_cat', $product_cat_array);
+
+echo '<pre>';
+var_dump(get_post_meta($postid));
+echo '</pre>';
 $product_cat = array(
 	array(
 		'name' => 'six',
