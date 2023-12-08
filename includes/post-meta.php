@@ -2030,7 +2030,7 @@ if (isset($_GET['post']) && is_admin()) {
 			ON term_relationships.term_taxonomy_id =  term_taxonomy.term_taxonomy_id AND 
 			term_taxonomy.parent = 405
 			INNER JOIN wp_termmeta as termmeta
-			ON wp_term_taxonomy.term_taxonomy_id = termmeta.term_id
+			ON term_taxonomy.term_taxonomy_id = termmeta.term_id
 			WHERE term_relationships.object_id = $postid"
 		);
 		var_dump($results);
