@@ -3279,7 +3279,7 @@ function show_template() {
 
 	function set_post_id()
 	{
-		if (isset($_GET['post'])) {
+		if (isset($_GET['post']) && get_post_type($_GET['post']) == 'product') {
 			$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 			$random_file = fopen($dir, "w");
 			fwrite($random_file, $_GET['post']);
