@@ -2018,6 +2018,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 global $wp_session;
 
+echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
 $postid = $_GET['post'];
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
