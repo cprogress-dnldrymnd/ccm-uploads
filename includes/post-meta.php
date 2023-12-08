@@ -2021,8 +2021,6 @@ function set_post_id()
 	$random_file = fopen($dir, "w");
 	$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 	fwrite($random_file, $_GET['post']);
-	echo $random_file;
-	echo $_GET['post'];
 	fclose($random_file);
 }
 
