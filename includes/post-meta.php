@@ -2044,9 +2044,9 @@ if (isset($_GET['post']) && is_admin()) {
 		$product_cat = wp_get_post_terms($postid, 'product_cat');
 		$config = Container::make('post_meta', 'Configurator 2')
 			->where('post_type', '=', 'product');
-		foreach ($product_cat as $key => $cat) {
+		foreach ($product_cat as $cat) {
 			$config->add_tab(
-				$cat['slug'],
+				$cat->slug,
 				array(
 					Field::make('text', 'configurator_part_code_' . $key, 'Test'),
 
