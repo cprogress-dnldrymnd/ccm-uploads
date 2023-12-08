@@ -2015,6 +2015,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
+const post_id = $_GET['post'];
 
 global $wp_session;
 
@@ -2032,7 +2033,7 @@ $product_cat = $wpdb->get_results(
 			term_taxonomy.parent = 405
 			INNER JOIN wp_terms as terms
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
-			WHERE term_relationships.object_id = $postid"
+			WHERE term_relationships.object_id = post_id"
 );
 
 foreach ($product_cat as $cat) {
