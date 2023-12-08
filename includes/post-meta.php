@@ -2015,12 +2015,11 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
+
 global $wp_session;
 
-if (!$wp_session['post_id']) {
-	$wp_session['post_id'] = $_GET['post'];
-}
-$postid = 17177;
+
+$postid = $_GET['post'];
 
 global $wpdb;
 $product_cat = $wpdb->get_results(
