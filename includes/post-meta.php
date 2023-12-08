@@ -2034,9 +2034,9 @@ $product_cat = get_post_meta($postid, 'product_cat', true);
 var_dump($product_cat);
 
 foreach ($product_cat as $cat) {
-	Container::make('post_meta', 'Configurator ' . $cat['name'])
+	Container::make('post_meta', 'Configurator ' . $cat)
 		->where('post_type', '=', 'product')
-		->add_fields(bike_individual_product_details(str_replace('-', '_', $cat['slug'],), $cat['name']));
+		->add_fields(bike_individual_product_details(str_replace('-', '_', $cat['slug'],), $cat));
 }
 /*
 Container::make('post_meta', 'Configurator')
