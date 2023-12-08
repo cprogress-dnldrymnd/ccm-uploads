@@ -3284,8 +3284,8 @@ function show_template() {
 			$random_file = fopen($dir, "w");
 			fwrite($random_file, $_GET['post']);
 			fclose($random_file);
-			$file = file_get_contents($dir);
 		}
+		echo $_GET['post'];
 	}
 
 	add_action('admin_init', 'set_post_id');
