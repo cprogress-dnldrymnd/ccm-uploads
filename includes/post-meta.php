@@ -2031,6 +2031,7 @@ $product_cat = $wpdb->get_results(
 
 $product_cat = get_post_meta($postid, 'product_cat', true);
 
+var_dump($product_cat);
 
 foreach ($product_cat as $cat) {
 	Container::make('post_meta', 'Configurator ' . $cat['name'])
