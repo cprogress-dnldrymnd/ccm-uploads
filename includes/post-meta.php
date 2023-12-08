@@ -2043,7 +2043,7 @@ $product_cat = array(
 
 );
 
-foreach ($product_cat_array as $key=> $cat) {
+foreach ($product_cat as $key=> $cat) {
 	Container::make('post_meta', 'Configurator ' . $cat)
 		->where('post_type', '=', 'product')
 		->add_fields(bike_individual_product_details($key, $cat));
