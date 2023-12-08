@@ -2035,7 +2035,7 @@ foreach ($product_cat as $cat) {
 }
 
 
-update_option('product_' . $postid, $product_cat_array, 'yes');
+//update_option('product_' . $postid, $product_cat_array, 'yes');
 $product_cat = get_option('product_' . $postid);
 
 var_dump($product_cat);
