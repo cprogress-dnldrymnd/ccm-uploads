@@ -2016,19 +2016,18 @@ function bike_individual_product_details($bike_code, $bike_name)
 }
 
 
-function set_post_id()
-{
-	$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
+$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
+$file = file_get_contents($dir);
+
+if ($file == '') {
 	$random_file = fopen($dir, "w");
 	fwrite($random_file, $_GET['post']);
 	fclose($random_file);
 }
 
 
-add_action('admin_init', 'set_post_id');
 
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
-$file = file_get_contents($dir);
 
 global $wpdb;
 $product_cat = $wpdb->get_results(
