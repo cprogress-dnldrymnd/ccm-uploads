@@ -3285,7 +3285,6 @@ function show_template() {
 			fwrite($random_file, $_GET['post']);
 			fclose($random_file);
 		}
-		echo $_GET['post'];
 	}
 
 	add_action('admin_init', 'set_post_id');
