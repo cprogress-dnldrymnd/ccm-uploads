@@ -2015,11 +2015,11 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
+echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
 $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 
 $filesize = filesize($dir);
-echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
 if ($filesize == 0 && isset($_GET['post'])) {
 	$random_file = fopen($dir, "w");
