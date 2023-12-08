@@ -2015,7 +2015,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
-define('postid', $_GET['post'];);
+define('postid', $_GET['post']);
 
 global $wp_session;
 
