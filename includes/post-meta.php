@@ -2021,12 +2021,7 @@ $dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
 
 $filesize = filesize($dir);
 
-if (isset($_GET['post'])) {
-	$random_file = fopen($dir, "w");
-	fwrite($random_file, $_GET['post']);
-	fclose($random_file);
-	$file = file_get_contents($dir);
-}
+
 global $wpdb;
 $product_cat = $wpdb->get_results(
 	"SELECT terms.name,  terms.slug
