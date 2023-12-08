@@ -2017,8 +2017,9 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 
 
-$postid = $_GET['post'];
-$product_cat = get_post_meta($postid, 'product_cat', true);
+global $post;
+
+$product_cat = get_post_meta($post->ID, 'product_cat', true);
 
 var_dump($product_cat);
 
