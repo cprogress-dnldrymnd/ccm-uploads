@@ -2017,20 +2017,14 @@ function bike_individual_product_details($bike_code, $bike_name)
 
 echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
-function tatwerat_startSession()
-{
-	if (!session_id()) {
-		session_start();
+global $wp_session;
 
-		$_SESSION['post_id'] = $_GET['post'];
-	}
-}
 
-add_action('init', 'tatwerat_startSession', 1);
+$wp_session['post_id'] = $_GET['post'];
 
 session_start();
 $product_cat = array();
-echo  $_SESSION['post_id'];
+echo  $wp_session['post_id'];
 
 
 
