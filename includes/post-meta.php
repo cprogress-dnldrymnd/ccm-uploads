@@ -2015,14 +2015,15 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
-echo '<style> .woocommerce-layout__header{display: none !important} </style>';
 
-$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
-$file = file_get_contents($dir);
+if (isset($_GET['post']) && get_post_type($_GET['post']) == 'product') {
 
-global $wpdb;
-$product_cat = $wpdb->get_results(
-	"SELECT terms.name,  terms.slug
+	$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
+	$file = file_get_contents($dir);
+
+	global $wpdb;
+	$product_cat = $wpdb->get_results(
+		"SELECT terms.name,  terms.slug
 			FROM wp_term_relationships as term_relationships
 			INNER JOIN wp_term_taxonomy  as term_taxonomy
 			ON term_relationships.term_taxonomy_id =  term_taxonomy.term_taxonomy_id AND 
@@ -2030,11 +2031,12 @@ $product_cat = $wpdb->get_results(
 			INNER JOIN wp_terms as terms
 			ON term_taxonomy.term_taxonomy_id = terms.term_id
 			WHERE term_relationships.object_id = $file"
-);
-$configurator = Container::make('post_meta', 'Configurator ' . $cat->name)
-	->where('post_type', '=', 'product');
-foreach ($product_cat as $cat) {
-	$configurator->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
+	);
+	$configurator = Container::make('post_meta', 'Configurator ' . $cat->name)
+		->where('post_type', '=', 'product');
+	foreach ($product_cat as $cat) {
+		$configurator->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
+	}
 }
 /*
 Container::make('post_meta', 'Configurator')
