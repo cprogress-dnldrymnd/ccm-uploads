@@ -2015,6 +2015,8 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
+echo '<style> .woocommerce-layout__header{display: none !important} </style>';
+
 function tatwerat_startSession()
 {
 	if (!session_id()) {
