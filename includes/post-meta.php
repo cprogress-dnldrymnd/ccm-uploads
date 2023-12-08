@@ -2028,9 +2028,6 @@ if ($filesize == 0) {
 }
 
 
-
-$dir = WP_CONTENT_DIR . '/products-configurator/postid.txt';
-
 global $wpdb;
 $product_cat = $wpdb->get_results(
 	"SELECT terms.name,  terms.slug
