@@ -2015,8 +2015,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 	);
 }
 
-$config = Container::make('post_meta', 'Configurator 2')
-	->where('post_type', '=', 'product');
+
 $postid = $_GET['post'];
 global $wpdb;
 $product_cat = $wpdb->get_results(
@@ -2030,9 +2029,10 @@ $product_cat = $wpdb->get_results(
 			WHERE term_relationships.object_id = $postid"
 );
 
-
 foreach ($product_cat as $cat) {
-	$config->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
+	Container::make('post_meta', 'Configurator '.$cat->name)
+	->where('post_type', '=', 'product')
+	->add_tab($cat->name, bike_individual_product_details($cat->slug, $cat->name));
 }
 /*
 Container::make('post_meta', 'Configurator')
