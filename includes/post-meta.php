@@ -2024,7 +2024,7 @@ function set_post_id()
 	fwrite($random_file, $_GET['post']);
 	fclose($random_file);
 
-	echo $file;
+	echo $random_file;
 	echo $_GET['post'];
 }
 
