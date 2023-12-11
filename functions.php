@@ -1211,7 +1211,7 @@ function register_fields_ccm_login()
 				?>
 				<article class="article-card blog-content">
 					<div class="image_container">
-						<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
+						<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full'); ?>
 						<?php if ($thumb) : ?>
 							<a href="<?php the_permalink(); ?>"><span class="blog-image" style="background-image:url('<?php echo $thumb['0']; ?>')"></span></a>
 						<?php endif; ?>
@@ -1230,7 +1230,7 @@ function register_fields_ccm_login()
 								</div>
 								<div class="col-xs-9 pl-0">
 									<h3><a href="<?php the_permalink(); ?>"><?= $title ?></a></h3>
-									<!--<h3><a href="<?php the_permalink(); ?>" class="blog-link"><?php echo get_the_title($wp_query->ID); ?></a></h3>          -->
+									<!--<h3><a href="<?php the_permalink(); ?>" class="blog-link"><?php echo get_the_title($query->ID); ?></a></h3>          -->
 								</div>
 							</div>
 						</div>
