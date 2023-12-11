@@ -394,13 +394,8 @@ $contact_form = carbon_get_the_post_meta('contact_form');
 
         }
     } else {
-        var swiper = new Swiper(".mySwiperGallery", {
-            loop: true,
-            slidesPerView: 2,
-            autopay: true,
-        });
 
-        var logoSwiper = new Swiper(".mySwiper-logoSwiper", {
+        var logoSwiper = new Swiper(".mySwiperGallery", {
             loop: true,
             freeMode: true,
             centeredSlides: true,
