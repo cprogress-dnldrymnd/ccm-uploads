@@ -21,46 +21,49 @@ $configure_url = carbon_get_the_post_meta('configure_url');
 $gallery = carbon_get_the_post_meta('gallery');
 ?>
 <style>
-    html,
-    body,
-    main {
-        width: 100%;
-        height: 100%;
-    }
+    @media (min-width: 992px) {
 
-    .sticky_parent {
-        height: <?= (count($gallery) * 50) ?>vh;
-        position: relative;
-        z-index: 100;
-    }
+        html,
+        body,
+        main {
+            width: 100%;
+            height: 100%;
+        }
 
-    .sticky {
-        overflow: hidden;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-    }
+        .sticky_parent {
+            height: <?= (count($gallery) * 50) ?>vh;
+            position: relative;
+            z-index: 100;
+        }
 
-    .scroll_section {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        will-change: transform;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        .sticky {
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
 
-    .scroll_section img {
-        width: 50vw;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        max-width: 50vw !important;
-    }
+        .scroll_section {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            will-change: transform;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    body {
-        position: relative;
+        .scroll_section img {
+            width: 50vw;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            max-width: 50vw !important;
+        }
+
+        body {
+            position: relative;
+        }
     }
 </style>
 <section class="hero-banner-with-breadcrumbs d-flex align-items-end ">
