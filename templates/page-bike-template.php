@@ -255,7 +255,7 @@ $feature_image_url = wp_get_attachment_image_url($feature_image, 'full');
     </div>
 
     <section class="gallery-slider">
-        <div class="swiper-container mySwiper">
+        <div class="swiper-container mySwiperGallery">
             <div class="swiper-wrapper">
                 <?php foreach ($gallery as $image) { ?>
                     <div class="swiper-slide">

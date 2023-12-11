@@ -22049,4 +22049,10 @@ section.bike-scroller-swiper .swiper-wrapper .swiper-slide {
     height: 100%;
     object-fit: cover; }
 
+.mySwiperGallery .swiper-slide .image-box {
+  padding: 50%; }
+  .mySwiperGallery .swiper-slide .image-box img {
+    position: absolute;
+    left: 0; }
+
 /*# sourceMappingURL=main.css.map */
