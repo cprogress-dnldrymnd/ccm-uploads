@@ -390,7 +390,6 @@ $contact_form = carbon_get_the_post_meta('contact_form');
             let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
             percentage = percentage < 0 ? 0 : percentage > scroll_width ? scroll_width : percentage;
             scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
-            console.log(percentage);
 
         }
     } else {

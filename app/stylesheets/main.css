@@ -22049,6 +22049,10 @@ section.bike-scroller-swiper .swiper-wrapper .swiper-slide {
     height: 100%;
     object-fit: cover; }
 
+@media (max-width: 991px) {
+  .sticky_parent {
+    display: none; } }
+
 .gallery-slider .mySwiperGallery .swiper-wrapper {
   transition-timing-function: linear; }
 .gallery-slider .mySwiperGallery .swiper-slide .image-box {
