@@ -22049,17 +22049,20 @@ section.bike-scroller-swiper .swiper-wrapper .swiper-slide {
     height: 100%;
     object-fit: cover; }
 
-.mySwiperGallery .swiper-wrapper {
+.gallery-slider .mySwiperGallery .swiper-wrapper {
   transition-timing-function: linear; }
-.mySwiperGallery .swiper-slide .image-box {
+.gallery-slider .mySwiperGallery .swiper-slide .image-box {
   padding: 50%;
   position: relative; }
-  .mySwiperGallery .swiper-slide .image-box img {
+  .gallery-slider .mySwiperGallery .swiper-slide .image-box img {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover; }
+@media (min-width: 992px) {
+  .gallery-slider {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
