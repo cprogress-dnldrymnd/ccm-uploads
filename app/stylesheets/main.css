@@ -22049,6 +22049,8 @@ section.bike-scroller-swiper .swiper-wrapper .swiper-slide {
     height: 100%;
     object-fit: cover; }
 
+.mySwiperGallery .swiper-wrapper {
+  transition-timing-function: linear; }
 .mySwiperGallery .swiper-slide .image-box {
   padding: 50%;
   position: relative; }
