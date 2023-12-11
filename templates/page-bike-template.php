@@ -253,6 +253,20 @@ $feature_image_url = wp_get_attachment_image_url($feature_image, 'full');
             </div>
         </div>
     </div>
+
+    <section class="gallery-slider">
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <?php foreach ($gallery as $image) { ?>
+                    <div class="swiper-slide">
+                        <div class="image-box">
+                            <img src="<?= wp_get_attachment_image_url($image, 'large') ?>">
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
 <?php } ?>
 <?php
 $specifications = carbon_get_the_post_meta('specifications');
@@ -346,39 +360,40 @@ $contact_form = carbon_get_the_post_meta('contact_form');
     </div>
 </section>
 <script>
-    const stickySections = [...document.querySelectorAll('.sticky')];
-    let images = [];
-
-    <?php foreach ($gallery as $image) { ?>
-        images.push("<?= wp_get_attachment_image_url($image, 'large') ?>");
-    <?php } ?>
-
-
-    images.forEach(img => {
-        stickySections.forEach(section => {
-            let image = document.createElement('img');
-            image.src = img;
-            section.querySelector('.scroll_section').appendChild(image);
+    if (window.innerWidth > 991) {
+        const stickySections = [...document.querySelectorAll('.sticky')];
+        let images = [];
+        <?php foreach ($gallery as $image) { ?>
+            images.push("<?= wp_get_attachment_image_url($image, 'large') ?>");
+        <?php } ?>
+        images.forEach(img => {
+            stickySections.forEach(section => {
+                let image = document.createElement('img');
+                image.src = img;
+                section.querySelector('.scroll_section').appendChild(image);
+            });
         });
-    });
 
-    jQuery('body').scroll(function() {
+        jQuery('body').scroll(function() {
 
-        for (let i = 0; i < stickySections.length; i++) {
-            transform(stickySections[i]);
+            for (let i = 0; i < stickySections.length; i++) {
+                transform(stickySections[i]);
+            }
+        });
+
+        function transform(section) {
+
+            const count = '<?= count($gallery) ?>';
+            const scroll_width = (count * 50) - 100;
+            const offsetTop = section.parentElement.offsetTop;
+            const scrollSection = section.querySelector('.scroll_section');
+            let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
+            percentage = percentage < 0 ? 0 : percentage > scroll_width ? scroll_width : percentage;
+            scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
+            console.log(percentage);
+
         }
-    });
-
-    function transform(section) {
-
-        const count = '<?= count($gallery) ?>';
-        const scroll_width = (count * 50) - 100;
-        const offsetTop = section.parentElement.offsetTop;
-        const scrollSection = section.querySelector('.scroll_section');
-        let percentage = ((jQuery('body').scrollTop() - offsetTop) / window.innerHeight) * 100;
-        percentage = percentage < 0 ? 0 : percentage > scroll_width ? scroll_width : percentage;
-        scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
-        console.log(percentage);
+    } else {
 
     }
 </script>
