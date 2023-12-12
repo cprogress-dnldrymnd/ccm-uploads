@@ -260,7 +260,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         <label>
                             First Name <span>*</span>
                             <span class="wpcf7-form-control-wrap" data-name="first-name">
-                                <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="first-name" required />
+                                <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="firstname" required />
                             </span>
                         </label>
                     </p>
@@ -270,7 +270,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         <label>
                             Last Name <span>*</span>
                             <span class="wpcf7-form-control-wrap" data-name="last-name">
-                                <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="last-name" required />
+                                <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="lastname" required />
                             </span>
                         </label>
                     </p>
@@ -280,7 +280,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         <label>
                             Email Address <span>*</span>
                             <span class="wpcf7-form-control-wrap" data-name="email-address">
-                                <input size="40" class="wpcf7-form-control wpcf7-email  wpcf7-text wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" type="email" name="email-address" required />
+                                <input size="40" class="wpcf7-form-control wpcf7-email  wpcf7-text wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" type="email" name="email" required />
                             </span>
                         </label>
                     </p>
@@ -290,7 +290,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         <label>
                             Phone number <span>*</span>
                             <span class="wpcf7-form-control-wrap" data-name="telephone">
-                                <input size="40" class="wpcf7-form-control wpcf7-tel form-control" aria-required="true" aria-invalid="false" type="tel" name="telephone" required />
+                                <input size="40" class="wpcf7-form-control wpcf7-tel form-control" aria-required="true" aria-invalid="false" type="tel" name="phone" required />
                             </span>
                         </label>
                     </p>
