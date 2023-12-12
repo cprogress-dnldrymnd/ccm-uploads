@@ -220,7 +220,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         </div>
     </div>
 
-    <div class="reserve_bike mt-50 cs-section">
+    <div class="reserve_bike mt-50 cs-section" id="config-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
@@ -660,6 +660,13 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         }, 300);
 
     }*/
+    <?php if (isset($_GET['submitted']) && $_GET['submitted'] == 'true') { ?>
+        jQuery(document).ready(function() {
+            jQuery('html, body').animate({
+                scrollTop: jQuery("#reserve_bike").offset().top
+            }, 2000);
+        });
+    <?php } ?>
 </script>
 
 
