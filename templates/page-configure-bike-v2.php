@@ -44,6 +44,9 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         background-color: transparent !important;
         padding: 0 !important;
     }
+    #ccm-motors-header {
+        background-color: var(--black-color) !important;
+    }
 </style>
 <div class="buy-order-bike-page configure-bike-banner">
     <div class="container">
