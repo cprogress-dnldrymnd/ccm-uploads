@@ -263,7 +263,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         <script>
 
                             var $summary_items = jQuery('textarea[name="product_list"]').val();
-
+                            console.log($summary_items);
                             hbspt.forms.create({
                                 region: "eu1",
                                 portalId: "139521183",
