@@ -271,7 +271,8 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                 portalId: "139521183",
                                 formId: "7aa928aa-a966-4357-b74a-1f78c6b1c7c2",
                                 onFormReady: function($form) {
-                                    jQuery('input[name="firstname"]').val('brian').change();
+                                    var $summary_items = jQuery('#config-summary').val();
+                                    jQuery('input[name="firstname"]').val($lead_comments__ole_).change();
                                 }
 
                             });
