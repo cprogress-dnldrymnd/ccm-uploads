@@ -60,8 +60,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                 </div>
                 <?php if (get_the_post_thumbnail_url()) { ?>
                     <div class="main-image-holder">
-                        <img id="main-image" src="<?php the_post_thumbnail_url(); ?>" class="first_image"
-                            source="<?php the_post_thumbnail_url(); ?>" class="first_image">
+                        <img id="main-image" src="<?php the_post_thumbnail_url(); ?>" class="first_image" source="<?php the_post_thumbnail_url(); ?>" class="first_image">
                     </div>
                 <?php } ?>
                 <?php if (get_the_content()) { ?>
@@ -84,8 +83,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                             if ($key != 0) {
                                 $class = 'collapse';
                                 $class_a = 'collapsed';
-                            }
-                            else {
+                            } else {
                                 $class = 'collapse in';
                             }
                             $args = array(
@@ -115,8 +113,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                 <div class="panel <?= $section->slug ?>">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#<?= $section->slug ?>"
-                                                aria-expanded="<?= $area_expanded ?>">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#<?= $section->slug ?>" aria-expanded="<?= $area_expanded ?>">
                                                 <div class="container">
                                                     <span>
                                                         <?= clean_string($section->name) ?>
@@ -125,8 +122,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                             </a>
                                         </h4>
                                     </div>
-                                    <div id="<?= $section->slug ?>" class="panel-collapse <?= $class ?>"
-                                        aria-expanded="<?= $area_expanded ?>">
+                                    <div id="<?= $section->slug ?>" class="panel-collapse <?= $class ?>" aria-expanded="<?= $area_expanded ?>">
                                         <div class="container">
                                             <div class="panel-body px-0 py-5 ">
                                                 <div class="boxes">
@@ -162,8 +158,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                                             if ($is_std_equipment) {
                                                                 $price = 'Std Equipment';
                                                                 $accessory_price = 0.00;
-                                                            }
-                                                            else {
+                                                            } else {
                                                                 $price = '&#163; ' . number_format($bike_price, 2, '.', '');
                                                                 $accessory_price = $bike_price;
                                                             }
@@ -183,25 +178,14 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                                             $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
                                                             ?>
                                                             <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
-                                                                <input
-                                                                    class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> "
-                                                                    type="checkbox" id="<?= $accessory_id ?>"
-                                                                    value="<?= $accessory_price ?>" main_id="<?='box-' . $key ?>"
-                                                                    <?= $related_products_val ?>
-                                                                    sku="<?= clean_string_2($product->get_sku()) ?>">
-                                                                <label for="<?= $accessory_id ?>"
-                                                                    class="acc_box<?= $select_one . $change_image ?> "
-                                                                    main_id="<?='box-' . $key ?>">
+                                                                <input class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>">
+                                                                <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
                                                                     <div class="image-holder">
                                                                         <div class="inner">
                                                                             <?php if ($the_panel['change_image'] || $accesories['change_image']) { ?>
-                                                                                <img src="<?= $the_image ?>"
-                                                                                    big-image="<?= $big_image ?>"
-                                                                                    email-image="<?= $email_image ?>">
-                                                                            <?php }
-                                                                            else { ?>
-                                                                                <img src="<?= $the_image ?>"
-                                                                                    email-image="<?= $email_image ?>">
+                                                                                <img src="<?= $the_image ?>" big-image="<?= $big_image ?>" email-image="<?= $email_image ?>">
+                                                                            <?php } else { ?>
+                                                                                <img src="<?= $the_image ?>" email-image="<?= $email_image ?>">
                                                                             <?php } ?>
                                                                         </div>
                                                                     </div>
@@ -214,8 +198,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                                                     <div class="d-block sku">
                                                                         Part Code: <?= $part_code ?>
                                                                     </div>
-                                                                    <div class="price" original-price-text="<?= $price ?>"
-                                                                        original-price-val="<?= $accessory_price ?>">
+                                                                    <div class="price" original-price-text="<?= $price ?>" original-price-val="<?= $accessory_price ?>">
                                                                         <?= $price ?>
                                                                     </div>
                                                                 </label>
@@ -256,8 +239,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                     <table class="table cs-list" style="width: 500px">
                         <tbody>
                             <tr>
-                                <td colspan="3" class="text-right" style="text-align: right"><span class="count"
-                                        style="color: #ed181f ">TOTAL: </span></span></td>
+                                <td colspan="3" class="text-right" style="text-align: right"><span class="count" style="color: #ed181f ">TOTAL: </span></span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -276,6 +258,19 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         variations as you like to create your dream machine.</p>
                     <div class="border-line"></div>
                     <div class="form-reserve">
+
+                        <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                region: "eu1",
+                                portalId: "139521183",
+                                formId: "c45f8060-df31-4ff7-bdf3-39a8a20823e1",
+                                onFormReady: function($form) {
+                                    jQuery('input[name="firstname"]').val("Brian").change();
+                                }
+                            });
+                        </script>
+
                         <?php echo do_shortcode('[contact-form-7 id="6057" title="Configurator Form V2"]'); ?>
                     </div>
                 </div>
@@ -305,20 +300,20 @@ $bike_name = get_term($product_category, 'product_cat')->name;
 </div>
 <?php get_footer() ?>
 <script type="text/javascript">
-    jQuery(document).ready(function ($) {
+    jQuery(document).ready(function($) {
         scroll();
         getTotal();
         click_acc();
         pre_selected();
         is_package();
-        jQuery(".tot_amount").click(function (event) {
+        jQuery(".tot_amount").click(function(event) {
             getTotal();
         });
 
 
         getTotal(false);
 
-        $("form").submit(function (e) {
+        $("form").submit(function(e) {
             var firstname = $("input[name='first-name']").val();
             var lastname = $("input[name='last-name']").val();
             var emailadd = $("input[name='email-address']").val();
@@ -334,7 +329,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         $("input[name='product_name']").val(proname);
 
 
-        $('.panel-collapse').on('show.bs.collapse', function (e) {
+        $('.panel-collapse').on('show.bs.collapse', function(e) {
 
             var $panel = $(this).closest('.panel');
             var $open = $(this).closest('.panel-group').find('.panel-collapse.in');
@@ -352,21 +347,21 @@ $bike_name = get_term($product_category, 'product_cat')->name;
     });
 
     function mh() {
-        jQuery('.panel-heading').click(function (event) {
+        jQuery('.panel-heading').click(function(event) {
             var $this = jQuery(this).next().find('.');
-            setTimeout(function () {
+            setTimeout(function() {
                 $this.matchHeight();
             }, 300);
         });
 
 
-        setTimeout(function () {
+        setTimeout(function() {
             jQuery('.').matchHeight();
         }, 300);
     }
 
     function scroll() {
-        jQuery(".scroll-down").on('click', function (event) {
+        jQuery(".scroll-down").on('click', function(event) {
 
             if (this.hash !== "") {
                 event.preventDefault();
@@ -375,7 +370,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
 
                 jQuery('html, body').animate({
                     scrollTop: jQuery(hash).offset().top - 70
-                }, 800, function () {
+                }, 800, function() {
 
                     window.location.hash = hash;
                 });
@@ -389,7 +384,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         var total = <?php _e($bike_initial_price) ?>;
         var selector = isInit ? ".tot_amount" : ".tot_amount:checked";
 
-        $(selector).each(function () {
+        $(selector).each(function() {
             tempname = '';
             total += parseFloat($(this).val());
         });
@@ -406,21 +401,21 @@ $bike_name = get_term($product_category, 'product_cat')->name;
     }
 
     function pre_selected() {
-        jQuery('.pre-selected').each(function (index, el) {
+        jQuery('.pre-selected').each(function(index, el) {
             jQuery(this).prop("checked", true).addClass('clicked');
             if (jQuery(this).hasClass('is-package')) {
                 package_function(jQuery(this));
             }
-            setTimeout(function () {
+            setTimeout(function() {
                 update_summary();
             }, 500);
         });
     }
 
     function is_package() {
-        jQuery('.is-package').change(function (index, el) {
+        jQuery('.is-package').change(function(index, el) {
             package_function(jQuery(this));
-            setTimeout(function () {
+            setTimeout(function() {
                 update_summary();
             }, 500);
         });
@@ -429,7 +424,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
     function package_function($this) {
         $products_included = $this.attr('products-included');
 
-        jQuery('.price').each(function (index, el) {
+        jQuery('.price').each(function(index, el) {
             $original_price_text = jQuery(this).attr('original-price-text');
             $original_price_val = jQuery(this).attr('original-price-val');
             jQuery(this).text($original_price_text);
@@ -449,7 +444,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
     }
 
     function click_acc() {
-        jQuery('.acc_box').click(function (event) {
+        jQuery('.acc_box').click(function(event) {
             if (jQuery(this).hasClass('select-one')) {
                 $main_id = jQuery(this).attr('main_id');
                 $input = jQuery(this).prev();
@@ -458,7 +453,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                     $main_id = jQuery('input[main_id="' + $main_id + '"]');
                     $main_id.removeClass('clicked');
                     $input.addClass('clicked');
-                    $main_id.each(function (index, el) {
+                    $main_id.each(function(index, el) {
                         if (!jQuery(this).hasClass('clicked')) {
                             jQuery(this).prop("checked", false);
                         }
@@ -474,7 +469,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                 $realmain = jQuery('#main-image').attr('source');
                 $real_small_image = jQuery('#main-image').attr('source');
                 $real_small_image = jQuery('#footer-image').attr('source');
-                setTimeout(function () {
+                setTimeout(function() {
                     $prop = $this.prev().prop('checked');
                     if ($prop == false) {
                         $main_image.attr('src', $realmain);
@@ -505,29 +500,29 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         var $table_row;
         var $summary_items = jQuery('#summery-items2');
         var $entire_summary = jQuery('#summary_list');
-        setTimeout(function () {
+        setTimeout(function() {
             jQuery('#summery-items2').html('');
             <?php foreach ($bike_section as $panel_key => $section) { ?>
-                                        <?php
-                                        $key = ' summary_items_ ' . $panel_key;
-                                        $class = '.' . strtolower(str_replace(" ", "", $section->slug));
-                                        ?>
-                                        var $selector = jQuery('<?php _e($class) ?>').find('.tot_amount:checked');
-                    $selector_length = $selector.length;
-                    if ($selector_length > 0) {
-                        $summary = '<table class="table cs-list" style="width: 100%; max-width: 800px !important; margin-left: auto; margin-right: auto"><thead><tr><th colspan="3" style="background-color: #000; color: #fff; padding: 5px;"><span class="summary-section-heading"><?php _e(clean_string($section->name)) ?></span></th></tr></thead><tbody>';
-                        $selector.each(function (index, el) {
-                            var $productimg = jQuery(this).siblings("label").find("img").attr('email-image');
-                            var $productname = jQuery(this).siblings("label").find("h4").text();
-                            var $productnum = jQuery(this).siblings("label").find(".d-block").text();
-                            var $productprice = jQuery(this).siblings("label").find(".price").text();
+                <?php
+                $key = ' summary_items_ ' . $panel_key;
+                $class = '.' . strtolower(str_replace(" ", "", $section->slug));
+                ?>
+                var $selector = jQuery('<?php _e($class) ?>').find('.tot_amount:checked');
+                $selector_length = $selector.length;
+                if ($selector_length > 0) {
+                    $summary = '<table class="table cs-list" style="width: 100%; max-width: 800px !important; margin-left: auto; margin-right: auto"><thead><tr><th colspan="3" style="background-color: #000; color: #fff; padding: 5px;"><span class="summary-section-heading"><?php _e(clean_string($section->name)) ?></span></th></tr></thead><tbody>';
+                    $selector.each(function(index, el) {
+                        var $productimg = jQuery(this).siblings("label").find("img").attr('email-image');
+                        var $productname = jQuery(this).siblings("label").find("h4").text();
+                        var $productnum = jQuery(this).siblings("label").find(".d-block").text();
+                        var $productprice = jQuery(this).siblings("label").find(".price").text();
 
-                            $summary += '<tr><td style="width: 150px;"><div class="img-pro" style="width: 150px"><img src="' + $productimg + '" style="width: 150px; height: 150px"></div></td><td class="text-left; padding: 10px !important;"><h4 class="summary-product-name" style="margin: 0; color: #000;">' + $productname + '</h4><p style="margin: 0; color: #000;"><span style="margin: 0; color: #000;">' + $productnum + '</span></p></td><td class="text-right" style="text-align: right; padding: 10px !important;"><span class="count" style="color: #ed181f;">' + $productprice + '</span></td></tr>';
-                        });
-                        $summary += '</tbody></table>';
-                        $summary_items.append($summary);
-                        jQuery('textarea[name="product_list"]').val($entire_summary.html());
-                    }
+                        $summary += '<tr><td style="width: 150px;"><div class="img-pro" style="width: 150px"><img src="' + $productimg + '" style="width: 150px; height: 150px"></div></td><td class="text-left; padding: 10px !important;"><h4 class="summary-product-name" style="margin: 0; color: #000;">' + $productname + '</h4><p style="margin: 0; color: #000;"><span style="margin: 0; color: #000;">' + $productnum + '</span></p></td><td class="text-right" style="text-align: right; padding: 10px !important;"><span class="count" style="color: #ed181f;">' + $productprice + '</span></td></tr>';
+                    });
+                    $summary += '</tbody></table>';
+                    $summary_items.append($summary);
+                    jQuery('textarea[name="product_list"]').val($entire_summary.html());
+                }
             <?php } ?>
         }, 300);
 
