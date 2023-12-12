@@ -560,7 +560,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                 // $key = ' summary_items_ ' . $panel_key;
                 // $class = '.' . strtolower(str_replace(" ", "", $section->slug));
                 ?>
-                var $selector = jQuery('<? php // _e($class) 
+                var $selector = jQuery('<?php // _e($class) 
                                         ?>').find('.tot_amount:checked');
                 $selector_length = $selector.length;
                 if ($selector_length > 0) {
