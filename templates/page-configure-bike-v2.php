@@ -250,15 +250,16 @@ $bike_name = get_term($product_category, 'product_cat')->name;
     </div>
 
     <form action="<?= get_permalink() ?>" method="GET">
-        <textarea id="config-summary" style="width: 100%; height: 500px"> </textarea>
+        <textarea id="config-summary" name="configurator_options" style="width: 100%; height: 500px"> </textarea>
         <input type="hidden" name="submitted" value="true">
+        <input type="hidden" name="configurator_code" value="<?= get_the_title() ?>">
         <div class="row">
             <div class="col-md-6">
                 <p>
                     <label>
                         First Name <span>*</span>
                         <span class="wpcf7-form-control-wrap" data-name="first-name">
-                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" type="text" name="first-name" required />
+                            <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="first-name" required />
                         </span>
                     </label>
                 </p>
@@ -268,7 +269,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                     <label>
                         Last Name <span>*</span>
                         <span class="wpcf7-form-control-wrap" data-name="last-name">
-                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" type="text" name="last-name" required />
+                            <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="last-name" required />
                         </span>
                     </label>
                 </p>
@@ -278,7 +279,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                     <label>
                         Email Address <span>*</span>
                         <span class="wpcf7-form-control-wrap" data-name="email-address">
-                            <input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" type="email" name="email-address" required />
+                            <input size="40" class="wpcf7-form-control wpcf7-email  wpcf7-text wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" type="email" name="email-address" required />
                         </span>
                     </label>
                 </p>
@@ -297,8 +298,8 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                 <p>
                     <label>
                         Postcode <span>*</span>
-                        <span class="wpcf7-form-control-wrap" data-name="postcode">
-                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" type="text" name="postcode" required />
+                        <span class="wpcf7-form-control-wrap" data-name="zip">
+                            <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="zip" required />
                         </span>
                     </label>
                 </p>
@@ -307,7 +308,8 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                 <p>
                     <label>
                         Additional Information
-                        <span class="wpcf7-form-control-wrap" data-name="a-information"><textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" name="a-information"></textarea>
+                        <span class="wpcf7-form-control-wrap" data-name="lead_comments__ole_">
+                            <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" name="lead_comments__ole_"></textarea>
                         </span>
                     </label>
                 </p>
