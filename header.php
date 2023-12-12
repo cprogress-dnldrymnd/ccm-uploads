@@ -85,7 +85,7 @@ $template = get_page_template_slug();
         <div id="sticky-anchor" style="height: 0px;"></div>
 
         <?php
-        if (is_page_template('templates/page-bike-template.php')) {
+        if (is_page_template('templates/page-bike-template.php') || is_page_template('page-configure-bike-v2.php')) {
             echo '<main id="page-components" class="main-holder bt-5">';
         }
         ?>
