@@ -262,6 +262,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
                         <script>
                             hbspt.forms.create({
+                                css: '',
                                 region: "eu1",
                                 portalId: "139521183",
                                 formId: "c45f8060-df31-4ff7-bdf3-39a8a20823e1",
