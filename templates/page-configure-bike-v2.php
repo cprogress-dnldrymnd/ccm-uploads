@@ -258,19 +258,23 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         variations as you like to create your dream machine.</p>
                     <div class="border-line"></div>
                     <div class="form-reserve">
-
                         <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-                        <script>
 
+                        <script>
                             var $summary_items = jQuery('textarea[name="product_list"]').val();
-                            console.log($summary_items);
+
                             hbspt.forms.create({
+
                                 region: "eu1",
+
                                 portalId: "139521183",
-                                formId: "c45f8060-df31-4ff7-bdf3-39a8a20823e1",
+
+                                formId: "7aa928aa-a966-4357-b74a-1f78c6b1c7c2",
+
                                 onFormReady: function($form) {
                                     jQuery('input[name="firstname"]').val($summary_items).change();
                                 }
+
                             });
                         </script>
 
