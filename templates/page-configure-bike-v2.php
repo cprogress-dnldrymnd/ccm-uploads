@@ -513,6 +513,8 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         var $table_row;
         var $summary_items = jQuery('#summery-items2');
         var $entire_summary = jQuery('#summary_list');
+        var $summary_field = '';
+
         setTimeout(function() {
             jQuery('#summery-items2').html('');
             jQuery('#config-summary').html('');
@@ -526,7 +528,6 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                 if ($selector_length > 0) {
                     $summary = '<table class="table cs-list" style="width: 100%; max-width: 800px !important; margin-left: auto; margin-right: auto"><thead><tr><th colspan="3" style="background-color: #000; color: #fff; padding: 5px;"><span class="summary-section-heading"><?php _e(clean_string($section->name)) ?></span></th></tr></thead><tbody>';
 
-                    $summary_field = '';
                     $selector.each(function(index, el) {
                         var $productimg = jQuery(this).siblings("label").find("img").attr('email-image');
                         var $productname = jQuery(this).siblings("label").find("h4").text();
@@ -537,6 +538,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
 
                         $summary_field += $productname + '(' + $productprice + '), ';
                     });
+
                     $summary += '</tbody></table>';
                     $summary_items.append($summary);
                     jQuery('#config-summary').html($summary_field);
