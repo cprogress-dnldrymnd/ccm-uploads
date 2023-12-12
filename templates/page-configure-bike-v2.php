@@ -274,6 +274,8 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                 onFormReady: function($form) {
                                     var $summary_items = 'ttttttt';
                                     jQuery('input[name="lead_comments__ole_"]').val($summary_items).change();
+                                    jQuery('input[name="firstname"]').val($summary_items).change();
+                                    jQuery('input[name="lastname"]').val('xxxxxx').change();
                                 }
                             });
                         </script>
