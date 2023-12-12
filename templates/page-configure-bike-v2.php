@@ -530,9 +530,9 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                     $summary_field += '<?php _e(clean_string($section->name)) ?>\r\n';
                     $selector.each(function(index, el) {
                         var $productimg = jQuery(this).siblings("label").find("img").attr('email-image');
-                        var $productname = jQuery(this).siblings("label").find("h4").text();
+                        var $productname = jQuery.trim(jQuery(this).siblings("label").find("h4").text());
                         var $productnum = jQuery(this).siblings("label").find(".d-block").text();
-                        var $productprice = jQuery(this).siblings("label").find(".price").text();
+                        var $productprice = jQuery.trim(jQuery(this).siblings("label").find(".price").text());
 
                         $summary += '<tr><td style="width: 150px;"><div class="img-pro" style="width: 150px"><img src="' + $productimg + '" style="width: 150px; height: 150px"></div></td><td class="text-left; padding: 10px !important;"><h4 class="summary-product-name" style="margin: 0; color: #000;">' + $productname + '</h4><p style="margin: 0; color: #000;"><span style="margin: 0; color: #000;">' + $productnum + '</span></p></td><td class="text-right" style="text-align: right; padding: 10px !important;"><span class="count" style="color: #ed181f;">' + $productprice + '</span></td></tr>';
 
@@ -543,7 +543,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
 
                     $summary += '</tbody></table>';
                     $summary_items.append($summary);
-                    jQuery('#config-summary').val(jQuery.trim($summary_field));
+                    jQuery('#config-summary').val($summary_field);
                     jQuery('textarea[name="product_list"]').val($entire_summary.html());
                 }
             <?php } ?>
