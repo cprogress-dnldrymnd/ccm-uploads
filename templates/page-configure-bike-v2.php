@@ -249,9 +249,10 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         </div>
     </div>
 
-    <textarea id="config-summary" style="width: 100%; height: 500px">
-
-    </textarea>
+    <form action="">
+        <textarea id="config-summary" style="width: 100%; height: 500px"> </textarea>
+        <button type="submit"> SUBMIT </button>
+    </form>
 
 
     <div class="reserve_bike mt-50" id="reserve_bike">
