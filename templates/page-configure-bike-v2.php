@@ -273,9 +273,9 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                 formId: "7aa928aa-a966-4357-b74a-1f78c6b1c7c2",
                                 onFormReady: function($form) {
                                     var $summary_items = 'ttttttt';
-                                    jQuery('input[name="lead_comments__ole_"]').val($summary_items).change();
-                                    jQuery('input[name="firstname"]').val($summary_items).change();
-                                    jQuery('input[name="lastname"]').val('xxxxxx').change();
+                                    $form.find('input[name="lead_comments__ole_"]').val($summary_items).change();
+                                    $form.find('input[name="firstname"]').val($summary_items).change();
+                                    $form.find('input[name="lastname"]').val('xxxxxx').change();
                                 }
                             });
                         </script>
