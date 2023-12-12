@@ -266,6 +266,8 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                     <div class="form-reserve">
                         <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
                         <script>
+
+                            var $summary_items = jQuery('#config-summary').val();
                             hbspt.forms.create({
                                 css: '',
                                 region: "eu1",
