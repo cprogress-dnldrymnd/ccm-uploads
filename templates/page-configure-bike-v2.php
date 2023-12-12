@@ -267,8 +267,6 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
 
                         <script>
-                            var $summary_items = jQuery('textarea[name="product_list"]').val();
-
                             hbspt.forms.create({
 
                                 region: "eu1",
@@ -278,6 +276,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                 formId: "7aa928aa-a966-4357-b74a-1f78c6b1c7c2",
 
                                 onFormReady: function($form) {
+                                    var $summary_items = jQuery('#config-summary').val();
                                     jQuery('input[name="firstname"]').val($summary_items).change();
                                 }
 
