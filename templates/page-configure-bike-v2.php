@@ -248,6 +248,12 @@ $bike_name = get_term($product_category, 'product_cat')->name;
             </div>
         </div>
     </div>
+
+    <div id="config-summary">
+
+    </div>
+
+
     <div class="reserve_bike mt-50" id="reserve_bike">
         <div class="container">
             <div class="row">
@@ -509,6 +515,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         var $entire_summary = jQuery('#summary_list');
         setTimeout(function() {
             jQuery('#summery-items2').html('');
+            jQuery('#config-summary').html('');
             <?php foreach ($bike_section as $panel_key => $section) { ?>
                 <?php
                 $key = ' summary_items_ ' . $panel_key;
@@ -518,6 +525,47 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                 $selector_length = $selector.length;
                 if ($selector_length > 0) {
                     $summary = '<table class="table cs-list" style="width: 100%; max-width: 800px !important; margin-left: auto; margin-right: auto"><thead><tr><th colspan="3" style="background-color: #000; color: #fff; padding: 5px;"><span class="summary-section-heading"><?php _e(clean_string($section->name)) ?></span></th></tr></thead><tbody>';
+
+                    $summary_field = '';
+                    $selector.each(function(index, el) {
+                        var $productimg = jQuery(this).siblings("label").find("img").attr('email-image');
+                        var $productname = jQuery(this).siblings("label").find("h4").text();
+                        var $productnum = jQuery(this).siblings("label").find(".d-block").text();
+                        var $productprice = jQuery(this).siblings("label").find(".price").text();
+
+                        $summary += '<tr><td style="width: 150px;"><div class="img-pro" style="width: 150px"><img src="' + $productimg + '" style="width: 150px; height: 150px"></div></td><td class="text-left; padding: 10px !important;"><h4 class="summary-product-name" style="margin: 0; color: #000;">' + $productname + '</h4><p style="margin: 0; color: #000;"><span style="margin: 0; color: #000;">' + $productnum + '</span></p></td><td class="text-right" style="text-align: right; padding: 10px !important;"><span class="count" style="color: #ed181f;">' + $productprice + '</span></td></tr>';
+
+                        $summary_field += $productname + '(' + $productprice + '), ';
+                    });
+                    $summary += '</tbody></table>';
+                    $summary_items.append($summary);
+                    jQuery('#config-summary').html($summary_field);
+                    jQuery('textarea[name="product_list"]').val($entire_summary.html());
+                }
+            <?php } ?>
+        }, 300);
+
+    }
+
+    /*
+    function update_summary() {
+        var $table_row;
+        var $summary_items = jQuery('#summery-items2');
+        var $entire_summary = jQuery('#summary_list');
+        setTimeout(function() {
+            jQuery('#summery-items2').html('');
+            <?php //foreach ($bike_section as $panel_key => $section) { 
+            ?>
+                <?php
+                // $key = ' summary_items_ ' . $panel_key;
+                // $class = '.' . strtolower(str_replace(" ", "", $section->slug));
+                ?>
+                var $selector = jQuery('<? php // _e($class) 
+                                        ?>').find('.tot_amount:checked');
+                $selector_length = $selector.length;
+                if ($selector_length > 0) {
+                    $summary = '<table class="table cs-list" style="width: 100%; max-width: 800px !important; margin-left: auto; margin-right: auto"><thead><tr><th colspan="3" style="background-color: #000; color: #fff; padding: 5px;"><span class="summary-section-heading"><?php //_e(clean_string($section->name)) 
+                                                                                                                                                                                                                                                                                    ?></span></th></tr></thead><tbody>';
                     $selector.each(function(index, el) {
                         var $productimg = jQuery(this).siblings("label").find("img").attr('email-image');
                         var $productname = jQuery(this).siblings("label").find("h4").text();
@@ -530,10 +578,11 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                     $summary_items.append($summary);
                     jQuery('textarea[name="product_list"]').val($entire_summary.html());
                 }
-            <?php } ?>
+            <?php //} 
+            ?>
         }, 300);
 
-    }
+    }*/
 </script>
 
 
