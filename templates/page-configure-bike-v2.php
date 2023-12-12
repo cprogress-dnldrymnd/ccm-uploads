@@ -249,9 +249,82 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         </div>
     </div>
 
-    <form action="">
+    <form action="<?= get_permalink() ?>" method="GET">
         <textarea id="config-summary" style="width: 100%; height: 500px"> </textarea>
-        <button type="submit"> SUBMIT </button>
+        <input type="hidden" name="submitted" value="true">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    <label>
+                        First Name <span>*</span>
+                        <span class="wpcf7-form-control-wrap" data-name="first-name">
+                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" type="text" name="first-name" required />
+                        </span>
+                    </label>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <label>
+                        Last Name <span>*</span>
+                        <span class="wpcf7-form-control-wrap" data-name="last-name">
+                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" type="text" name="last-name" required />
+                        </span>
+                    </label>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <label>
+                        Email Address <span>*</span>
+                        <span class="wpcf7-form-control-wrap" data-name="email-address">
+                            <input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" type="email" name="email-address" required />
+                        </span>
+                    </label>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <label>
+                        Phone number <span>*</span>
+                        <span class="wpcf7-form-control-wrap" data-name="telephone">
+                            <input size="40" class="wpcf7-form-control wpcf7-tel form-control" aria-required="true" aria-invalid="false" type="tel" name="telephone" required />
+                        </span>
+                    </label>
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    <label>
+                        Postcode <span>*</span>
+                        <span class="wpcf7-form-control-wrap" data-name="postcode">
+                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" type="text" name="postcode" required />
+                        </span>
+                    </label>
+                </p>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    <label>
+                        Additional Information
+                        <span class="wpcf7-form-control-wrap" data-name="a-information"><textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" name="a-information"></textarea>
+                        </span>
+                    </label>
+                </p>
+            </div>
+
+            <div class="col-md-12">
+                <p style="font-size: 14px; margin-top: 10px;">
+                    CCM Motorcycles needs the contact information you provide to us to contact you about our products and
+                    services. You may unsubscribe from these communications at any time. For information on how to unsubscribe,
+                    as well as our privacy practices and commitment to protecting your privacy, please review our Privacy
+                    Policy.</p>
+                <p>
+                    <input class="wpcf7-form-control wpcf7-submit has-spinner red-btn" type="submit" value="COMPLETE MY CONFIGURATION" /><span class="wpcf7-spinner">
+                    </span>
+                </p>
+            </div>
+        </div>
     </form>
 
 
