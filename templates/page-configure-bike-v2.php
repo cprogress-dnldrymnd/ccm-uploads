@@ -539,9 +539,11 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         $summary_field += $productname + '(' + $productprice + '), ';
                     });
 
+                    $summary_field += '\r\n';
+
                     $summary += '</tbody></table>';
                     $summary_items.append($summary);
-                    jQuery('#config-summary').val($summary_field.replace(/\s*[\r\n]+\s*/g, '\n') .replace(/(<[^\/][^>]*>)\s*/g, '$1') .replace(/\s*(<\/[^>]+>)/g, '$1'));
+                    jQuery('#config-summary').val($summary_field.replace(/\s*[\r\n]+\s*/g, '\n').replace(/(<[^\/][^>]*>)\s*/g, '$1').replace(/\s*(<\/[^>]+>)/g, '$1'));
                     jQuery('textarea[name="product_list"]').val($entire_summary.html());
                 }
             <?php } ?>
