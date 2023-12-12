@@ -543,7 +543,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
 
                     $summary += '</tbody></table>';
                     $summary_items.append($summary);
-                    jQuery('#config-summary').val($summary_field.replace(/\s+/g, ''));
+                    jQuery('#config-summary').val(jQuery.trim($summary_field));
                     jQuery('textarea[name="product_list"]').val($entire_summary.html());
                 }
             <?php } ?>
