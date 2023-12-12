@@ -249,7 +249,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         </div>
     </div>
 
-    <textarea id="config-summary">
+    <textarea id="config-summary" style="width: 100%; height: 500px">
 
     </textarea>
 
