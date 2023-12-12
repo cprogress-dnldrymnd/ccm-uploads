@@ -261,18 +261,22 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                         variations as you like to create your dream machine.</p>
                     <div class="border-line"></div>
                     <div class="form-reserve">
-                        <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-                        <script>
-                            hbspt.forms.create({
-                                css: '',
-                                region: "eu1",
-                                portalId: "139521183",
-                                formId: "7aa928aa-a966-4357-b74a-1f78c6b1c7c2",
-                                onFormReady: function($form) {
-                                    $form.find('input[name="firstname"]').val('<?= get_the_title() ?>').change();
-                                }
-                            });
-                        </script>
+
+                        <?php if (isset($_GET['submitted']) && $_GET['submitted'] == 'true') { ?>
+                            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                            <script>
+                                hbspt.forms.create({
+                                    css: '',
+                                    region: "eu1",
+                                    portalId: "139521183",
+                                    formId: "7aa928aa-a966-4357-b74a-1f78c6b1c7c2",
+                                    onFormReady: function($form) {
+                                        $form.find('input[name="firstname"]').val('<?= get_the_title() ?>').change();
+                                    }
+                                });
+                            </script>
+
+                        <?php } ?>
 
                         <div class="wpcf7">
                             <form class="wpcf7-form" action="<?= get_permalink() ?>" method="GET">
