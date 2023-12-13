@@ -2097,7 +2097,7 @@ Container::make('post_meta', 'Configurator')
 				)
 				->set_max(1),
 			Field::make('text', 'bike_initial_price', 'Bike Initial Price')->set_attribute('type', 'number'),
-			Field::make('text', 'textarea', 'Contact Form')
+			Field::make('textarea', 'contact_form', 'Contact Form')
 		)
 	);
 
