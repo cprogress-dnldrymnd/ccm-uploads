@@ -2801,12 +2801,11 @@ function show_template() {
 
 	function bbloomer_actual_referrer()
 	{
-		if (!wc_get_raw_referer()) return;
 		global $post;
 		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
 			$redirect_url = get_permalink($post->ID);
 		} else {
 			$redirect_url = '/club-news/';
 		}
-		echo '<input type="hidden" name="redirect" value="' . wp_validate_redirect(wc_get_raw_referer(), $redirect_url) . '" />';
+		echo '<input type="hidden" name="redirect" value="' . $redirect_url . '" />';
 	}
