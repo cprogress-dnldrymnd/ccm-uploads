@@ -188,7 +188,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                                                 $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
                                                                 ?>
                                                                 <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
-                                                                    <input name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>"  value="<?= get_the_title() ?>">
+                                                                    <input name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>" value="<?= get_the_title() ?>">
                                                                     <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
                                                                         <div class="image-holder">
                                                                             <div class="inner">
@@ -525,7 +525,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
             $original_price_text = jQuery(this).attr('original-price-text');
             $original_price_val = jQuery(this).attr('original-price-val');
             jQuery(this).text($original_price_text);
-            jQuery(this).parent().prev().val($original_price_val);
+            jQuery(this).parent().prev().attr('accesory_val', $original_price_val);
             jQuery(this).parent().prev().removeClass('disabled-unselect');
             if (!jQuery(this).parent().prev().hasClass('exclude-deselection')) {
                 jQuery(this).parent().prev().prop("checked", false).removeClass('clicked');
@@ -533,7 +533,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         });
 
         jQuery($products_included).next().find('.price').text('Included in package');
-        jQuery($products_included).val(0);
+        jQuery($products_included).attr('accesory_val', 0);
         jQuery($products_included).prop("checked", true).addClass('clicked');
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
