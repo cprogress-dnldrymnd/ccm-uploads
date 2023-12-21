@@ -2792,9 +2792,8 @@ function show_template() {
 	{
 		if (is_singular('configurator')) :
 			global $post;
-			$config_id = get_post_meta($post->ID, 'config_id', true);
-			$url = get_the_permalink($config_id);
-			wp_redirect($url);
+			$config_url = get_post_meta($post->ID, 'config_url', true);
+			wp_redirect($config_url);
 			exit;
 		endif;
 	}
