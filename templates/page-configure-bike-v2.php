@@ -71,7 +71,7 @@ if (isset($_GET['action'])) {
             'post_author'   => get_current_user_id(),
 
         );
-        $post =  wp_insert_post($my_post);
+        $post_id =  wp_insert_post($my_post);
     } else if ($_GET['action'] == 'update-post') {
         $my_post = array(
             'ID' => $_GET['id'],
@@ -82,12 +82,14 @@ if (isset($_GET['action'])) {
 
         );
         wp_update_post($my_post);
+
+        $post_id = $_GET['id'];
     }
 
-    $config_url = get_the_permalink($_GET['config_id']) . '?id=' . $post;
-    carbon_set_post_meta($post, 'config_data', $config_data);
-    carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
-    carbon_set_post_meta($post, 'config_url', $config_url);
+    $config_url = get_the_permalink($_GET['config_id']) . '?id=' . $post_id;
+    carbon_set_post_meta($post_id, 'config_data', $config_data);
+    carbon_set_post_meta($post_id, 'config_id', $_GET['config_id']);
+    carbon_set_post_meta($post_id, 'config_url', $config_url);
     wp_redirect($config_url);
 
     exit;
