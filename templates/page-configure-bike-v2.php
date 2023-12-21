@@ -522,29 +522,33 @@ if (isset($_GET['action'])) {
                             <h3><?= get_the_title() ?></h3>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <p>
-                            <label>
-                                Title <span>*</span>
-                                <span class="wpcf7-form-control-wrap">
-                                    <input value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>" size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" id="title" required>
-                                </span>
-                            </label>
-                        </p>
-                    </div>
-                    <div class="col-md-12">
-                        <p>
-                            <label>
-                                Notes <span>*</span>
-                                <span class="wpcf7-form-control-wrap">
-                                    <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes"><?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?></textarea>
-                                </span>
-                            </label>
-                        </p>
-                    </div>
-                    <div class="col-md-12">
-                        <button id="save-button" class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
-                    </div>
+                    <?php if (is_user_logged_in()) { ?>
+                        <div class="col-md-12">
+                            <p>
+                                <label>
+                                    Title <span>*</span>
+                                    <span class="wpcf7-form-control-wrap">
+                                        <input value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>" size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" id="title" required>
+                                    </span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <p>
+                                <label>
+                                    Notes <span>*</span>
+                                    <span class="wpcf7-form-control-wrap">
+                                        <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes"><?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?></textarea>
+                                    </span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <button id="save-button" class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
+                        </div>
+                    <?php } else { ?>
+                        <?php wp_login_form()  ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>
