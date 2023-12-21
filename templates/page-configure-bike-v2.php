@@ -527,9 +527,7 @@ if (isset($_GET['action'])) {
             <div class="wpcf7-form">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="heading-box">
-                            <h3><?= get_the_title() ?></h3>
-                        </div>
+                       <h2><?= get_the_title() ?></h2>
                     </div>
                     <?php if (is_user_logged_in()) { ?>
                         <div class="col-md-12">
@@ -557,7 +555,6 @@ if (isset($_GET['action'])) {
                         </div>
                     <?php } else { ?>
                         <div class="col-md-12">
-                            xxxx
                             <?= do_shortcode('[woocommerce_my_account]')  ?>
                         </div>
                     <?php } ?>
