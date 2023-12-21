@@ -2791,6 +2791,7 @@ function show_template() {
 	}
 
 
+	/*
 
 	function rohil_login_redirect_based_on_roles($user_login, $user)
 	{
@@ -2811,4 +2812,4 @@ function show_template() {
 		}
 	}
 
-	add_action('wp_login', 'rohil_login_redirect_based_on_roles', 10, 2);
+	add_action('wp_login', 'rohil_login_redirect_based_on_roles', 10, 2);*/
