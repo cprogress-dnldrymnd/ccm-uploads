@@ -457,6 +457,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         padding: 40px;
         max-width: 500px !important;
     }
+    .custom-modal h3 {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
 </style>
 <div class="buy-order-bike-page custom-modal">
     <div class="backdrop"></div>
@@ -466,7 +470,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="heading-box">
-                            <h2>Configure <?= get_the_title() ?></h2>
+                            <h3>Configure <?= get_the_title() ?></h3>
                         </div>
                     </div>
                     <div class="col-md-12">
