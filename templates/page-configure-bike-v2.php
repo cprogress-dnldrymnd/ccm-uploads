@@ -81,7 +81,7 @@ get_header(); // This fxn gets the header.php file and renders it
         overflow: auto;
     }
 
-  
+
     .custom-modal h2 {
         margin-top: 0;
         margin-bottom: 30px;
@@ -92,8 +92,8 @@ get_header(); // This fxn gets the header.php file and renders it
         display: block;
     }
 
-    .custom-modal.modal-active .container{
-       display: block;
+    .custom-modal.modal-active .container {
+        display: block;
     }
 
     .custom-modal.modal-active {
@@ -119,6 +119,10 @@ get_header(); // This fxn gets the header.php file and renders it
     .custom-modal .col-1 h2 {
         font-size: 40px !important;
         margin-top: 0 !important;
+    }
+
+    .buy-order-bike-page .footer-order {
+        z-index: 999999;
     }
 </style>
 <?php
@@ -511,27 +515,7 @@ if (isset($_GET['action'])) {
 
             </div>
         </div>
-        <div class="footer-order">
-            <div class="container" style="max-width: 1400px; width: 100% !important;">
-                <div class="row">
-                    <div class="col-md-2 col-sm-2 hidden-xs">
-                        <img id="footer-image" src="<?php _e($small_image) ?>" source="<?php _e($small_image) ?>">
-                    </div>
-                    <div class="col-md-7 col-sm-7 title-pro">
-                        <h2>
-                            <?php _e($bike_name) ?>
-                        </h2>
-                        <p class="total">TOTAL: &#163;<input type="text" id="total1" readonly></p>
-                    </div>
-                    <div class="col-md-3 col-sm-3 ">
-                        <button class="red-btn" id="popup-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
-                        <?php if (!isset($_GET['id'])) { ?>
-                            <a href="" class="red-btn">Reset Configuration</a>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <div class="buy-order-bike-page custom-modal">
@@ -582,7 +566,29 @@ if (isset($_GET['action'])) {
         </div>
     </div>
 </div>
-
+<div class="buy-order-bike-page">
+    <div class="footer-order">
+        <div class="container" style="max-width: 1400px; width: 100% !important;">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 hidden-xs">
+                    <img id="footer-image" src="<?php _e($small_image) ?>" source="<?php _e($small_image) ?>">
+                </div>
+                <div class="col-md-7 col-sm-7 title-pro">
+                    <h2>
+                        <?php _e($bike_name) ?>
+                    </h2>
+                    <p class="total">TOTAL: &#163;<input type="text" id="total1" readonly></p>
+                </div>
+                <div class="col-md-3 col-sm-3 ">
+                    <button class="red-btn" id="popup-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
+                    <?php if (!isset($_GET['id'])) { ?>
+                        <a href="" class="red-btn">Reset Configuration</a>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <?php get_footer() ?>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
