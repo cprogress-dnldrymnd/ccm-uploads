@@ -52,37 +52,38 @@ if (isset($_GET['action'])) {
     // Create post object
     $config_data = [];
 
-    if ($_GET['action'] == 'create-post') {
+    $my_post = array(
+        'post_type' => 'configurator',
+        'post_title'    => wp_strip_all_tags(isset($_GET['title']) ? $_GET['title'] : get_the_title($_GET['config_id'])),
+        'post_content' => $_GET['notes'],
+        'post_status'   => 'publish',
+        'post_author'   => get_current_user_id(),
 
-        foreach ($_GET as $key => $data) {
-            if ($key != 'action' && $key != 'config_id' && $key != 'title' && $key != 'notes') {
-                $config_data[] = array(
-                    'category' => $key,
-                    'product_lists' => $data
-                );
-            }
+    );
+
+    foreach ($_GET as $key => $data) {
+        if ($key != 'action' && $key != 'config_id' && $key != 'title' && $key != 'notes') {
+            $config_data[] = array(
+                'category' => $key,
+                'product_lists' => $data
+            );
         }
-
-        $my_post = array(
-            'post_type' => 'configurator',
-            'post_title'    => wp_strip_all_tags(isset($_GET['title']) ? $_GET['title'] : get_the_title($_GET['config_id'])),
-            'post_content' => $_GET['notes'],
-            'post_status'   => 'publish',
-            'post_author'   => get_current_user_id(),
-
-        );
-
-        // Insert the post into the database
-        $post =  wp_insert_post($my_post);
-
-        $config_url = get_the_permalink($_GET['config_id']) . '?id=' . $post;
-        carbon_set_post_meta($post, 'config_data', $config_data);
-        carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
-        carbon_set_post_meta($post, 'config_url', $config_url);
-        wp_redirect($config_url);
-        exit;
-    } else if ($_GET['action'] == 'update-post') {
     }
+
+
+    if ($_GET['action'] == 'create-post') {
+        $post =  wp_insert_post($my_post);
+    } else if ($_GET['action'] == 'update-post') {
+        $post =  wp_update_post($my_post);
+    }
+
+    $config_url = get_the_permalink($_GET['config_id']) . '?id=' . $post;
+    carbon_set_post_meta($post, 'config_data', $config_data);
+    carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
+    carbon_set_post_meta($post, 'config_url', $config_url);
+    wp_redirect($config_url);
+    
+    exit;
 }
 
 
