@@ -31,6 +31,7 @@ get_header(); // This fxn gets the header.php file and renders it
         background-color: var(--black-color) !important;
         display: none !important;
     }
+
     .main-image-holder {
         display: none !important;
     }
@@ -556,9 +557,9 @@ if (isset($_GET['action'])) {
         <?php if (isset($_GET['id'])) { ?>
             is_saved_data();
         <?php } else { ?>
-            is_package();
             pre_selected();
         <?php } ?>
+        is_package();
         scroll();
         getTotal();
         click_acc();
@@ -702,7 +703,9 @@ if (isset($_GET['action'])) {
 
     function is_package() {
         jQuery('.is-package').change(function(index, el) {
-            package_function(jQuery(this));
+            if (jQuery('.acc-option').hasClass('saved-data-loaded')) {
+                package_function(jQuery(this));
+            }
             setTimeout(function() {
                 update_summary();
             }, 500);
