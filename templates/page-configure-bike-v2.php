@@ -592,7 +592,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         });
 
         jQuery('.custom-modal-backdrop').click(function(e) {
-            jQuery('.custom-modal, .custom-modal-backdrop').removeClass('modal-active');
+            jQuery('.custom-modal').removeClass('show-modal');
+            setTimeout(function() {
+                jQuery('.custom-modal, .custom-modal-backdrop').removeClass('modal-active');
+            }, 300);
             e.preventDefault();
         });
     }
