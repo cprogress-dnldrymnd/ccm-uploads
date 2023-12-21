@@ -1448,13 +1448,7 @@ function register_fields_ccm_login()
 	}
 	function getwishlist_download_pdf_fn($wishlist_id = 0, $data = array())
 	{
-		//return 'hello';
-		/*$wishlist = tinv_wishlist_get( $wishlist_id );
-	 if ( empty( $wishlist ) ) {
-	 return false;
-	 }
-	 $wlp      = new TInvWL_Product( $wishlist );
-	 $products = $wlp->get_wishlist( $data );*/
+
 
 		$products = tinvwl_get_wishlist_products($wishlist_id = 0, $data = array());
 		if (empty($products)) {

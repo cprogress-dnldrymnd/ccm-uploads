@@ -322,8 +322,8 @@ function cpt_configurator() {
 	$labels = array(
 		'name'                  => _x( 'Configurators', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Configurator', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Post Types', 'text_domain' ),
-		'name_admin_bar'        => __( 'Post Type', 'text_domain' ),
+		'menu_name'             => __( 'Configurator', 'text_domain' ),
+		'name_admin_bar'        => __( 'Configurator', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
