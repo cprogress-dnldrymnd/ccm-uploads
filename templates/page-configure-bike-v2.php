@@ -580,12 +580,12 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             <?php
             $category = $data['category'];
             $term = get_term_by('slug', $category, 'product_cat');
-
+            $select_one = carbon_get_term_meta($term->term_id, 'select_one');
 
             $product_lists = $data['product_lists'];
 
             ?>
-            console.log('<?= $term->name ?>');
+            console.log('<?= $select_one ?>');
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
