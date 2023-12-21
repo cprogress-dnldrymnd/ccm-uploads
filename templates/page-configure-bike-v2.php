@@ -56,7 +56,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 
     foreach ($_GET as $key => $data) {
         if ($key != 'action' && $key != 'config_id') {
-            $config_data[$key] = $data;
+            $config_data[] = array(
+                'category' => $key,
+                'product_lists' => $data
+            );
         }
     }
 
