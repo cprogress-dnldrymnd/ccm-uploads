@@ -181,7 +181,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                                             $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
                                                             ?>
                                                             <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
-                                                                <input class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>">
+                                                                <input name="<?= $section->slug ?>" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>">
                                                                 <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
                                                                     <div class="image-holder">
                                                                         <div class="inner">
@@ -212,7 +212,6 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             <?php } ?>
