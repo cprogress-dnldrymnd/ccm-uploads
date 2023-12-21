@@ -55,7 +55,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     $config_data = [];
 
     foreach ($_GET as $key => $data) {
-        if ($key != 'action' || $config_id != 'config_id') {
+        if ($key != 'action' || $key != 'config_id') {
             $config_data[$key] = $data;
         }
     }
