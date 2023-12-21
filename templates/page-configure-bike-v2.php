@@ -133,7 +133,7 @@ if (isset($_GET['action'])) {
         </div>
     </div>
     <div id="scroll-down"></div>
-    <div class="acc-option">
+    <div class="acc-option <?= isset($_GET['id']) ? 'saved-data-loaded' : '' ?>">
         <div class="container-fluid px-0">
             <form method="GET" id="configurator-form">
                 <input type="hidden" name="action" value="<?= isset($_GET['id']) ? 'update-post' : 'create-post' ?>">
