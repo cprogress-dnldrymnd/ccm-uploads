@@ -25,6 +25,28 @@ function get_product_lists()
 	return $products_arr;
 }
 
+
+function get_bike_list()
+{
+	$args = array(
+		'numberposts' => -1,
+		'post_type'   => 'bikes',
+		'orderby'     => 'title',
+		'order'       => 'ASC',
+		'post_status' => array('publish', 'private'),
+
+	);
+
+	$products = get_posts($args);
+
+	$products_arr = array();
+	foreach ($products as $product_val) {
+		$product = new WC_Product($product_val->ID);
+		$products_arr[$product_val->ID] = $product_val->post_title . ' - ' . $product->get_sku();
+	}
+	return $products_arr;
+}
+
 function get_product_lists_sku()
 {
 	$args = array(
@@ -2545,6 +2567,8 @@ Container::make('post_meta', 'Configurator Data')
 	->where('post_type', '=', 'configurator')
 	->add_fields(array(
 		Field::make('text', 'config_id', 'Config ID'),
+		Field::make('select', 'config_id', 'Products')
+			->add_options(get_bike_list()),
 		Field::make('text', 'config_url', 'Config ID'),
 		Field::make('complex', 'config_data', 'Config Data')
 			->set_layout('tabbed-vertical')
