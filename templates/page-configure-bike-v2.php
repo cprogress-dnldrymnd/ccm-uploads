@@ -44,6 +44,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         background-color: transparent !important;
         padding: 0 !important;
     }
+
     #ccm-motors-header {
         background-color: var(--black-color) !important;
     }
@@ -77,148 +78,151 @@ $bike_name = get_term($product_category, 'product_cat')->name;
     <div id="scroll-down"></div>
     <div class="acc-option">
         <div class="container-fluid px-0">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel-group" id="accordion">
-                        <?php foreach ($bike_section as $key => $section) { ?>
-                            <?php
-                            $area_expanded = $key == 0 ? ' true' : 'false';
-                            if ($key != 0) {
-                                $class = 'collapse';
-                                $class_a = 'collapsed';
-                            } else {
-                                $class = 'collapse in';
-                            }
-                            $args = array(
-                                'post_type'      => 'product',
-                                'posts_per_page' => -1,
-                                'post_status'    => array('private', 'publish'),
-                                'orderby'        => 'meta_value_num',
-                                'meta_key'       => '_' . $bike_code . '_section_order',
-                                'order'          => 'ASC',
-                                'tax_query'      => array(
-                                    'relation' => 'AND',
-                                    array(
-                                        'taxonomy' => 'product_cat',
-                                        'field'    => 'term_id',
-                                        'terms'    => array($product_category),
+            <form method="GET">
+                <button type="SUBMIT"> SUBMIT </button>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel-group" id="accordion">
+                            <?php foreach ($bike_section as $key => $section) { ?>
+                                <?php
+                                $area_expanded = $key == 0 ? ' true' : 'false';
+                                if ($key != 0) {
+                                    $class = 'collapse';
+                                    $class_a = 'collapsed';
+                                } else {
+                                    $class = 'collapse in';
+                                }
+                                $args = array(
+                                    'post_type'      => 'product',
+                                    'posts_per_page' => -1,
+                                    'post_status'    => array('private', 'publish'),
+                                    'orderby'        => 'meta_value_num',
+                                    'meta_key'       => '_' . $bike_code . '_section_order',
+                                    'order'          => 'ASC',
+                                    'tax_query'      => array(
+                                        'relation' => 'AND',
+                                        array(
+                                            'taxonomy' => 'product_cat',
+                                            'field'    => 'term_id',
+                                            'terms'    => array($product_category),
+                                        ),
+                                        array(
+                                            'taxonomy' => 'product_cat',
+                                            'field'    => 'term_id',
+                                            'terms'    => array($section->term_id),
+                                        ),
                                     ),
-                                    array(
-                                        'taxonomy' => 'product_cat',
-                                        'field'    => 'term_id',
-                                        'terms'    => array($section->term_id),
-                                    ),
-                                ),
-                            );
-                            $the_query = new WP_Query($args);
-                            ?>
-                            <?php if ($the_query->have_posts()) { ?>
-                                <div class="panel <?= $section->slug ?>">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#<?= $section->slug ?>" aria-expanded="<?= $area_expanded ?>">
-                                                <div class="container">
-                                                    <span>
-                                                        <?= clean_string($section->name) ?>
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="<?= $section->slug ?>" class="panel-collapse <?= $class ?>" aria-expanded="<?= $area_expanded ?>">
-                                        <div class="container">
-                                            <div class="panel-body px-0 py-5 ">
-                                                <div class="boxes">
-                                                    <div class="row flex-row">
-                                                        <?php while ($the_query->have_posts()) { ?>
-                                                            <?php
-                                                            $the_query->the_post();
-                                                            $product = wc_get_product(get_the_ID());
-                                                            $accessory_description = get_the_content();
-                                                            $the_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : 'https://www.ccm-motorcycles.com/wp-content/uploads/2020/02/no-image-ccm.png';
-                                                            $email_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') : 'https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/no-image-ccm-150x150-1.png';
-                                                            $is_std_equipment = carbon_get_the_post_meta($bike_code . '_is_std_equipment');
-                                                            $bike_price_custom = carbon_get_the_post_meta($bike_code . '_price');
-                                                            $disable_auto_select = carbon_get_the_post_meta($bike_code . '_disable_auto_select');
-                                                            $configurator_price = carbon_get_the_post_meta('configurator_price');
-                                                            $bike_price_custom_val = $bike_price_custom ? $bike_price_custom : $configurator_price;
+                                );
+                                $the_query = new WP_Query($args);
+                                ?>
+                                <?php if ($the_query->have_posts()) { ?>
+                                    <div class="panel <?= $section->slug ?>">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#<?= $section->slug ?>" aria-expanded="<?= $area_expanded ?>">
+                                                    <div class="container">
+                                                        <span>
+                                                            <?= clean_string($section->name) ?>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="<?= $section->slug ?>" class="panel-collapse <?= $class ?>" aria-expanded="<?= $area_expanded ?>">
+                                            <div class="container">
+                                                <div class="panel-body px-0 py-5 ">
+                                                    <div class="boxes">
+                                                        <div class="row flex-row">
+                                                            <?php while ($the_query->have_posts()) { ?>
+                                                                <?php
+                                                                $the_query->the_post();
+                                                                $product = wc_get_product(get_the_ID());
+                                                                $accessory_description = get_the_content();
+                                                                $the_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : 'https://www.ccm-motorcycles.com/wp-content/uploads/2020/02/no-image-ccm.png';
+                                                                $email_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') : 'https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/no-image-ccm-150x150-1.png';
+                                                                $is_std_equipment = carbon_get_the_post_meta($bike_code . '_is_std_equipment');
+                                                                $bike_price_custom = carbon_get_the_post_meta($bike_code . '_price');
+                                                                $disable_auto_select = carbon_get_the_post_meta($bike_code . '_disable_auto_select');
+                                                                $configurator_price = carbon_get_the_post_meta('configurator_price');
+                                                                $bike_price_custom_val = $bike_price_custom ? $bike_price_custom : $configurator_price;
 
-                                                            $related_products = carbon_get_the_post_meta($bike_code . '_related_products');
-                                                            $related_products_val = '';
-                                                            $related_products_arr = array();
-                                                            $is_package = '';
-                                                            if ($related_products) {
-                                                                foreach ($related_products as $product_included) {
-                                                                    $related_products_arr[] = "[sku='" . clean_string_2($product_included) . "']";
+                                                                $related_products = carbon_get_the_post_meta($bike_code . '_related_products');
+                                                                $related_products_val = '';
+                                                                $related_products_arr = array();
+                                                                $is_package = '';
+                                                                if ($related_products) {
+                                                                    foreach ($related_products as $product_included) {
+                                                                        $related_products_arr[] = "[sku='" . clean_string_2($product_included) . "']";
+                                                                    }
+                                                                    $related_products_val = 'products-included="' . implode(", ", $related_products_arr) . '"';
+                                                                    $is_package = ' is-package';
                                                                 }
-                                                                $related_products_val = 'products-included="' . implode(", ", $related_products_arr) . '"';
-                                                                $is_package = ' is-package';
-                                                            }
-                                                            $pre_selected_item = carbon_get_the_post_meta($bike_code . '_pre_selected');
+                                                                $pre_selected_item = carbon_get_the_post_meta($bike_code . '_pre_selected');
 
-                                                            $bike_price = $bike_price_custom_val != '' ? $bike_price_custom_val : $product->get_price();
-                                                            $bike_price = floatval($bike_price);
-                                                            if ($is_std_equipment) {
-                                                                $price = 'Std Equipment';
-                                                                $accessory_price = 0.00;
-                                                            } else {
-                                                                $price = '&#163; ' . number_format($bike_price, 2, '.', '');
-                                                                $accessory_price = $bike_price;
-                                                            }
-                                                            $select_one_panel = carbon_get_term_meta($section->term_id, 'select_one');
-                                                            $required_panel = carbon_get_term_meta($section->term_id, 'select_one');
-                                                            $exclude_from_deselection = carbon_get_term_meta($section->term_id, 'exclude_from_deselection');
-                                                            $exclude_from_deselection_val = $exclude_from_deselection ? ' exclude-deselection' : '';
-                                                            $required = $required_panel ? ' required' : '';
-                                                            $select_one = $select_one_panel ? ' select-one' : '';
-                                                            $pre_selected = ($pre_selected_item || $is_std_equipment) &&  ($disable_auto_select == false) ? ' pre-selected' : '';
-                                                            $accessory_id = 'box-' . $section->slug . '-' . get_the_ID();
-                                                            if ($key != 0) {
-                                                                $class = 'collapse';
-                                                                $class_a = 'collapsed';
-                                                            }
-                                                            $configurator_part_code = carbon_get_the_post_meta('configurator_part_code');
-                                                            $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
-                                                            ?>
-                                                            <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
-                                                                <input name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>">
-                                                                <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
-                                                                    <div class="image-holder">
-                                                                        <div class="inner">
-                                                                            <?php if ($the_panel['change_image'] || $accesories['change_image']) { ?>
-                                                                                <img src="<?= $the_image ?>" big-image="<?= $big_image ?>" email-image="<?= $email_image ?>">
-                                                                            <?php } else { ?>
-                                                                                <img src="<?= $the_image ?>" email-image="<?= $email_image ?>">
-                                                                            <?php } ?>
+                                                                $bike_price = $bike_price_custom_val != '' ? $bike_price_custom_val : $product->get_price();
+                                                                $bike_price = floatval($bike_price);
+                                                                if ($is_std_equipment) {
+                                                                    $price = 'Std Equipment';
+                                                                    $accessory_price = 0.00;
+                                                                } else {
+                                                                    $price = '&#163; ' . number_format($bike_price, 2, '.', '');
+                                                                    $accessory_price = $bike_price;
+                                                                }
+                                                                $select_one_panel = carbon_get_term_meta($section->term_id, 'select_one');
+                                                                $required_panel = carbon_get_term_meta($section->term_id, 'select_one');
+                                                                $exclude_from_deselection = carbon_get_term_meta($section->term_id, 'exclude_from_deselection');
+                                                                $exclude_from_deselection_val = $exclude_from_deselection ? ' exclude-deselection' : '';
+                                                                $required = $required_panel ? ' required' : '';
+                                                                $select_one = $select_one_panel ? ' select-one' : '';
+                                                                $pre_selected = ($pre_selected_item || $is_std_equipment) &&  ($disable_auto_select == false) ? ' pre-selected' : '';
+                                                                $accessory_id = 'box-' . $section->slug . '-' . get_the_ID();
+                                                                if ($key != 0) {
+                                                                    $class = 'collapse';
+                                                                    $class_a = 'collapsed';
+                                                                }
+                                                                $configurator_part_code = carbon_get_the_post_meta('configurator_part_code');
+                                                                $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
+                                                                ?>
+                                                                <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
+                                                                    <input name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>">
+                                                                    <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
+                                                                        <div class="image-holder">
+                                                                            <div class="inner">
+                                                                                <?php if ($the_panel['change_image'] || $accesories['change_image']) { ?>
+                                                                                    <img src="<?= $the_image ?>" big-image="<?= $big_image ?>" email-image="<?= $email_image ?>">
+                                                                                <?php } else { ?>
+                                                                                    <img src="<?= $the_image ?>" email-image="<?= $email_image ?>">
+                                                                                <?php } ?>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <h4>
-                                                                        <?= get_the_title() ?>
-                                                                    </h4>
-                                                                    <div class="description">
-                                                                        <?= wpautop($accessory_description) ?>
-                                                                    </div>
-                                                                    <div class="d-block sku">
-                                                                        Part Code: <?= $part_code ?>
-                                                                    </div>
-                                                                    <div class="price" original-price-text="<?= $price ?>" original-price-val="<?= $accessory_price ?>">
-                                                                        <?= $price ?>
-                                                                    </div>
-                                                                </label>
-                                                            </div>
-                                                        <?php } ?>
-                                                        <?php wp_reset_postdata() ?>
+                                                                        <h4>
+                                                                            <?= get_the_title() ?>
+                                                                        </h4>
+                                                                        <div class="description">
+                                                                            <?= wpautop($accessory_description) ?>
+                                                                        </div>
+                                                                        <div class="d-block sku">
+                                                                            Part Code: <?= $part_code ?>
+                                                                        </div>
+                                                                        <div class="price" original-price-text="<?= $price ?>" original-price-val="<?= $accessory_price ?>">
+                                                                            <?= $price ?>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            <?php } ?>
+                                                            <?php wp_reset_postdata() ?>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                <?php } ?>
                             <?php } ?>
-                        <?php } ?>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
