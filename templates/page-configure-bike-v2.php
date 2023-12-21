@@ -53,9 +53,8 @@ get_header(); // This fxn gets the header.php file and renders it
         transition: 300ms;
         max-width: 500px;
         width: 100%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -70%) !important;
+        left: 0;
+        top: 0;
         visibility: hidden;
         opacity: 0;
         display: none;
@@ -95,9 +94,11 @@ get_header(); // This fxn gets the header.php file and renders it
     }
 
     .custom-modal.show-modal {
-        transform: translate(-50%, -50%) !important;
         opacity: 1;
         visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
     }
 
@@ -523,8 +524,8 @@ if (isset($_GET['action'])) {
         </div>
     </div>
 
-    <div class="custom-modal-backdrop"></div>
     <div class="buy-order-bike-page custom-modal">
+        <div class="custom-modal-backdrop"></div>
         <div class="container">
             <div class="form-reserve">
                 <div class="wpcf7-form">
