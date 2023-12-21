@@ -76,8 +76,10 @@ get_header(); // This fxn gets the header.php file and renders it
         padding: 40px;
         transform: translateY(70%);
         transition: 300ms;
-        max-width: 500px;
+        max-width: 500px !important;
         display: none;
+        max-height: 100vh;
+        overflow: auto;
     }
 
   
