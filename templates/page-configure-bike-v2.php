@@ -76,7 +76,6 @@ get_header(); // This fxn gets the header.php file and renders it
         position: relative;
         z-index: 1;
         padding: 40px;
-        max-width: 500px !important;
     }
 
     .custom-modal h2 {
@@ -99,7 +98,6 @@ get_header(); // This fxn gets the header.php file and renders it
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
 
     .custom-modal .col-1 {
