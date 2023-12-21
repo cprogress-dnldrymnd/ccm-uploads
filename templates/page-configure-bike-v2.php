@@ -585,8 +585,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             $product_lists = $data['product_lists'];
 
             ?>
-            console.log('<?= $select_one ?>');
-            console.log('<?= $term->name ?>');
+            console.log('<?= $term->name ?> - <?= $select_one ?>');
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
