@@ -49,6 +49,10 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         background-color: var(--black-color) !important;
     }
 </style>
+
+<pre>
+<?php var_dump($_GET) ?>
+</pre>
 <div class="buy-order-bike-page configure-bike-banner">
     <div class="container">
         <div class="row">
