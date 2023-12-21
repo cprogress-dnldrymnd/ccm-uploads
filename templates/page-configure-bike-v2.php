@@ -74,7 +74,7 @@ get_header(); // This fxn gets the header.php file and renders it
         position: relative;
         z-index: 1;
         padding: 40px;
-        transform: translateY(100%);
+        transform: translateY(70%);
         transition: 300ms;
         max-width: 500px;
         display: none;
