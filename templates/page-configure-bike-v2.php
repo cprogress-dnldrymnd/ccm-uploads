@@ -37,7 +37,7 @@ get_header(); // This fxn gets the header.php file and renders it
     }
 </style>
 <style>
-    .red-btn:active {
+    .red-btn:focus {
         color: #ed181f !important;
     }
 
