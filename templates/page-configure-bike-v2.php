@@ -124,6 +124,9 @@ get_header(); // This fxn gets the header.php file and renders it
     .buy-order-bike-page .footer-order {
         z-index: 999999;
     }
+    .footer.bt-5 {
+        padding-bottom: 200px;
+    } 
 </style>
 <?php
 $bike_initial_price = carbon_get_the_post_meta('bike_initial_price');
