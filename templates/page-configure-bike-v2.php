@@ -463,15 +463,13 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     <div class="container">
         <div class="form-reserve">
             <div class="wpcf7-form">
-                <input type="hidden" name="submitted" value="true">
-                <input type="hidden" name="configurator_code" value="Configure Maverick">
                 <div class="row">
                     <div class="col-md-12">
                         <p>
                             <label>
                                 Title <span>*</span>
                                 <span class="wpcf7-form-control-wrap">
-                                    <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" id="title" required>
+                                    <input value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>" size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" id="title" required>
                                 </span>
                             </label>
                         </p>
@@ -481,7 +479,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                             <label>
                                 Notes <span>*</span>
                                 <span class="wpcf7-form-control-wrap">
-                                    <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes"></textarea>
+                                    <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes">
+                                    <?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?>
+                                    </textarea>
                                 </span>
                             </label>
                         </p>
@@ -550,8 +550,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 
     function save_form() {
         jQuery('#save-button').click(function(e) {
-            e.preventDefault();
 
+            e.preventDefault();
         });
     }
 
