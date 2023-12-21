@@ -2791,9 +2791,10 @@ function show_template() {
 	function action_redirect_sectors()
 	{
 		if (is_singular('configurator')) :
-			$config_id = 17456;
+			global $post;
+			$config_id = get_post_meta($post->ID, 'config_id', true);
 			$url = get_the_permalink($config_id);
-			wp_redirect('https://ccm.theprogressteam.com/bikes/maverick-configure/');
+			wp_redirect($url);
 			exit;
 		endif;
 	}
