@@ -2878,12 +2878,28 @@ function show_template() {
 		);
 		$configurator = get_posts($args);
 
-		echo '<table>';
+		echo '<table class="table">';
+
+		echo '<tr>';
+
+		echo '<th>';
+		echo 'Title';
+		echo '</th>';
+
+		echo '<th>';
+		echo 'Notes';
+		echo '</th>';
+
+		echo '</tr>';
 		foreach ($configurator as $config) {
 			echo '<tr>';
 
 			echo '<td>';
 			echo $config->post_title;
+			echo '</td>';
+
+			echo '<td>';
+			echo $config->post_content;
 			echo '</td>';
 
 			echo '</tr>';
