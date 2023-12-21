@@ -114,7 +114,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                 <input type="hidden" name="action" value="<?= isset($_GET['id']) ? 'update-post' : 'create-post' ?>">
                 <input type="hidden" name="config_id" value="<?= get_the_ID() ?>">
                 <input type="hidden" name="title" value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>">
-                <input type="hidden" name="notes" value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>">
+                <input type="hidden" name="notes" value="<?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?>">
                 <div class="row">
                     <?php
 
