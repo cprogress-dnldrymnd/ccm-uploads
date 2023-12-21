@@ -2850,9 +2850,16 @@ function show_template() {
 
 	function ccm_add_configurator_link_my_account($items)
 	{
-		unset($item['customer-logout']);
-		$items['configurator'] = 'Configurator';
-
+		$newitems = array(
+			'dashboard'       => __('Dashboard', 'woocommerce'),
+			'edit-address'    => _n('Addresses', 'Address', (int) wc_shipping_enabled(), 'woocommerce'),
+			'edit-account'    => __('Account details', 'woocommerce'),
+			'orders'          => __('Orders', 'woocommerce'),
+			'downloads'       => __('Downloads', 'woocommerce'),
+			'payment-methods' => __('Payment methods', 'woocommerce'),
+			'configurator' => __('Configurator', 'woocommerce'),
+			'customer-logout' => __('Logout', 'woocommerce'),
+		);
 		return $items;
 	}
 
@@ -2867,4 +2874,20 @@ function show_template() {
 	}
 
 	add_action('woocommerce_account_configurator_endpoint', 'ccm_configurator_content');
-// Note: add_action must follow 'woocommerce_account_{your-endpoint-slug}_endpoint' format
+
+
+	add_filter('woocommerce_account_menu_items', 'ccm_add_link_my_account');
+
+	function ccm_add_link_my_account($items)
+	{
+		$newitems = array(
+			'dashboard'       => __('Dashboard', 'woocommerce'),
+			'edit-address'    => _n('Addresses', 'Address', (int) wc_shipping_enabled(), 'woocommerce'),
+			'edit-account'    => __('Account details', 'woocommerce'),
+			'orders'          => __('Orders', 'woocommerce'),
+			'downloads'       => __('Downloads', 'woocommerce'),
+			'payment-methods' => __('Payment methods', 'woocommerce'),
+			'customer-logout' => __('Logout', 'woocommerce'),
+		);
+		return $newitems;
+	}
