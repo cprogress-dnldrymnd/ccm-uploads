@@ -31,6 +31,9 @@ get_header(); // This fxn gets the header.php file and renders it
         background-color: var(--black-color) !important;
         display: none !important;
     }
+    .main-image-holder {
+        display: none !important;
+    }
 </style>
 <?php
 $bike_initial_price = carbon_get_the_post_meta('bike_initial_price');
