@@ -2792,8 +2792,8 @@ function show_template() {
 	{
 		if (is_singular('configurator')) :
 			$config_id = 17456;
-			$url = get_permalink($config_id) . '?id=' . get_the_ID();
-			wp_redirect($url);
+			$url = get_permalink($config_id);
+			wp_redirect($url . '?id=' . get_the_ID());
 			exit;
 		endif;
 	}
