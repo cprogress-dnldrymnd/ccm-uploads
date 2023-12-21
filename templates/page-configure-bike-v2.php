@@ -432,18 +432,21 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 <style>
     .custom-modal {
         position: fixed;
-        top: 0;
         right: 0;
         bottom: 0;
-        left: 0;
         z-index: 99999999;
         padding: 0;
         display: flex;
         align-items: center;
-        transform: translateY(100%);
         transition: 500ms;
+        max-width: 500px;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) !important;
         visibility: hidden;
         opacity: 0;
+        display: none;
     }
 
     .custom-modal-backdrop {
