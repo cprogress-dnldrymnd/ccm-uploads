@@ -430,6 +430,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     </div>
 </div>
 <style>
+    .red-btn:focus, .red-btn:active {
+        color: #ed181f !important;
+    }
     .custom-modal {
         position: fixed;
         right: 0;
