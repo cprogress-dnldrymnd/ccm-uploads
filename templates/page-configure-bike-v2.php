@@ -523,7 +523,7 @@ if (isset($_GET['action'])) {
                         </div>
                     </div>
                     <?php if (is_user_logged_in()) { ?>
-                        xxxxsss
+                        
                         <div class="col-md-12">
                             <p>
                                 <label>
@@ -548,7 +548,7 @@ if (isset($_GET['action'])) {
                             <button id="save-button" class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
                         </div>
                     <?php } else { ?>
-                        <?= wp_login_form()  ?>
+                        <?= do_shortcode('[woocommerce_my_account]')  ?>
                     <?php } ?>
                 </div>
             </div>
