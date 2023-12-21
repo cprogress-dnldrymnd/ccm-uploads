@@ -443,7 +443,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         width: 100%;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%) !important;
+        transform: translate(-50%, -70%) !important;
         visibility: hidden;
         opacity: 0;
         display: none;
@@ -478,9 +478,14 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     }
 
     .custom-modal.modal-active {
-        transform: translateY(0);
-        visibility: visible;
+        display: block;
+    }
+
+    .custom-modal.show-modal {
+        transform: translate(-50%, -50%) !important;
         opacity: 1;
+        visibility: visible;
+
     }
 </style>
 <div class="custom-modal-backdrop"></div>
@@ -580,6 +585,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     function save_form() {
         jQuery('#popup-button').click(function(e) {
             jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
+            setTimeout(function() {
+                jQuery('.custom-modal').addClass('show-modal');
+            }, 300);
             e.preventDefault();
         });
 
