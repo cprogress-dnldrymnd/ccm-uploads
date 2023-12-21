@@ -29,6 +29,7 @@ get_header(); // This fxn gets the header.php file and renders it
 
     #ccm-motors-header {
         background-color: var(--black-color) !important;
+        display: none !important;
     }
 </style>
 <?php
