@@ -113,7 +113,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             <form method="GET" id="configurator-form">
                 <input type="hidden" name="action" value="<?= isset($_GET['id']) ? 'update-post' : 'create-post' ?>">
                 <input type="hidden" name="config_id" value="<?= get_the_ID() ?>">
+                <input type="hidden" name="title" value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>">
+                <input type="hidden" name="notes" value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>">
                 <div class="row">
+                    <?php
+
                     <div class="col-md-12">
                         <div class="panel-group" id="accordion">
                             <?php foreach ($bike_section as $key => $section) { ?>
@@ -469,7 +473,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                             <label>
                                 Title <span>*</span>
                                 <span class="wpcf7-form-control-wrap">
-                                    <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="title" required>
+                                    <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" id="title" required>
                                 </span>
                             </label>
                         </p>
@@ -479,7 +483,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                             <label>
                                 Notes <span>*</span>
                                 <span class="wpcf7-form-control-wrap">
-                                    <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" name="notes"></textarea>
+                                    <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes"></textarea>
                                 </span>
                             </label>
                         </p>
