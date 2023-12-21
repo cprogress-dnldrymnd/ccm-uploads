@@ -52,17 +52,8 @@ if (isset($_GET['action'])) {
     // Create post object
     $config_data = [];
 
-    $my_post = array(
-        'post_type' => 'configurator',
-        'post_title'    => wp_strip_all_tags(isset($_GET['title']) ? $_GET['title'] : get_the_title($_GET['config_id'])),
-        'post_content' => $_GET['notes'],
-        'post_status'   => 'publish',
-        'post_author'   => get_current_user_id(),
-
-    );
-
     foreach ($_GET as $key => $data) {
-        if ($key != 'action' && $key != 'config_id' && $key != 'title' && $key != 'notes') {
+        if ($key != 'action' && $key != 'config_id' && $key != 'title' && $key != 'notes' && $key != 'id') {
             $config_data[] = array(
                 'category' => $key,
                 'product_lists' => $data
@@ -72,9 +63,25 @@ if (isset($_GET['action'])) {
 
 
     if ($_GET['action'] == 'create-post') {
+        $my_post = array(
+            'post_type' => 'configurator',
+            'post_title'    => wp_strip_all_tags(isset($_GET['title']) ? $_GET['title'] : get_the_title($_GET['config_id'])),
+            'post_content' => $_GET['notes'],
+            'post_status'   => 'publish',
+            'post_author'   => get_current_user_id(),
+
+        );
         $post =  wp_insert_post($my_post);
     } else if ($_GET['action'] == 'update-post') {
-        $post =  wp_update_post($my_post);
+        $my_post = array(
+            'ID' => ,
+            'post_title'    => wp_strip_all_tags(isset($_GET['title']) ? $_GET['title'] : get_the_title($_GET['config_id'])),
+            'post_content' => $_GET['notes'],
+            'post_status'   => 'publish',
+            'post_author'   => get_current_user_id(),
+
+        );
+        wp_update_post($my_post);
     }
 
     $config_url = get_the_permalink($_GET['config_id']) . '?id=' . $post;
@@ -82,7 +89,7 @@ if (isset($_GET['action'])) {
     carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
     carbon_set_post_meta($post, 'config_url', $config_url);
     wp_redirect($config_url);
-    
+
     exit;
 }
 
@@ -126,6 +133,7 @@ if (isset($_GET['action'])) {
                 <input type="hidden" name="config_id" value="<?= get_the_ID() ?>">
                 <input type="hidden" name="title" value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>">
                 <input type="hidden" name="notes" value="<?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?>">
+                <input type="hidden" name="id" value="<?= isset($_GET['id']) ? $_GET['id'] : '' ?>">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel-group" id="accordion">
