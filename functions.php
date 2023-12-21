@@ -1145,7 +1145,7 @@ function register_fields_ccm_login()
 		}
 	}
 
-	
+
 
 	add_action('wp_ajax_stories_post', 'stories_post');
 	add_action('wp_ajax_nopriv_stories_post', 'stories_post');
@@ -2785,7 +2785,30 @@ function show_template() {
 		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
 			$redirect_url = get_permalink($post->ID);
 		} else {
-			$redirect_url = '/club-newssss/';
+			$redirect_url = '/club-news/';
 		}
 		echo '<input type="hidden" name="redirect" value="' . $redirect_url . '" />';
 	}
+
+
+
+	function rohil_login_redirect_based_on_roles($user_login, $user)
+	{
+		global $post;
+		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
+			$redirect_url = $_GET['redirect'];
+			if ($redirect_url) {
+				return $redirect_url;
+			} else {
+				if (in_array('ccm_owner', (array) $user->roles)) {
+					exit(wp_redirect('/club-news/'));
+				} else if (in_array('administrator', (array) $user->roles)) {
+					exit(wp_redirect('/wp-admin/'));
+				} else {
+					exit(wp_redirect('/club-news/'));
+				}
+			}
+		}
+	}
+
+	add_action('wp_login', 'rohil_login_redirect_based_on_roles', 10, 2);
