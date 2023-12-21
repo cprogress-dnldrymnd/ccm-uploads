@@ -2902,6 +2902,11 @@ function show_template() {
 			echo $config->post_content;
 			echo '</td>';
 
+			echo '<td>';
+			echo '<a href="' . get_permalink($post->ID) . '">Edit</a>';
+			echo '</td>';
+
+
 			echo '</tr>';
 		}
 		echo '</table>';
