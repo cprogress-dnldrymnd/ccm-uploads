@@ -2534,3 +2534,23 @@ Container::make('theme_options', 'Bikes')
 				)
 		)
 	);
+
+
+
+/* 
+Configurator 		==========================================================
+*/
+
+Container::make('post_meta', 'Configurator Data')
+	->where('post_type', '=', 'configurator')
+	->add_fields(array(
+		Field::make('complex', 'config_data', 'Banner Slider')
+			->set_layout('tabbed-horizontal')
+			->add_fields(
+				array(
+					Field::make('text', 'category', 'Category'),
+					Field::make('multiselect', 'product_lists', 'Products')
+						->add_options(get_product_lists())
+				)
+			)
+	));
