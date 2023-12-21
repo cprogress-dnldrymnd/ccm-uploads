@@ -2894,6 +2894,10 @@ function show_template() {
 		echo 'Notes';
 		echo '</th>';
 
+		echo '<th>';
+		echo 'Action';
+		echo '</th>';
+
 		echo '</tr>';
 		foreach ($configurator as $config) {
 			echo '<tr>';
