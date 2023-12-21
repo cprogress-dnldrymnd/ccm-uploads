@@ -515,7 +515,7 @@ if (isset($_GET['action'])) {
         width: 100% !important;
     }
 
-    .custom-modal-backdrop .col-1 h2 {
+    .custom-modal .col-1 h2 {
         font-size: 40px !important;
         margin-top: 0 !important;
     }
