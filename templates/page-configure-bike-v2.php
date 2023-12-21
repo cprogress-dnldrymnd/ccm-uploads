@@ -428,9 +428,33 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     </div>
 
 </div>
+<style>
+    .custom-modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 
+    .custom-modal .backdrop {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    .custom-modal .inner {
+        position: relative;
+        z-index: 2;
+    }
+</style>
 <div class="custom-modal">
-    <div class="buy-order-bike-page ">
+    <div class="backdrop"></div>
+    <div class="buy-order-bike-page inner">
         <div class="container">
             <div class="form-reserve">
                 <div class="wpcf7-form">
@@ -520,9 +544,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 
 
     function save_form() {
-        jQuery('#save-button').click(function (e) { 
+        jQuery('#save-button').click(function(e) {
             e.preventDefault();
-            
+
         });
     }
 
