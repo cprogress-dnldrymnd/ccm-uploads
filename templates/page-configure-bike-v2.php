@@ -418,7 +418,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                     <p class="total">TOTAL: &#163;<input type="text" id="total1" readonly></p>
                 </div>
                 <div class="col-md-3 col-sm-3 ">
-                    <button class="red-btn pull-right scroll-down start-config" id="<?= isset($_GET['id']) ? 'update-button' : 'save-button' ?>"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
+                    <button class="red-btn pull-right scroll-down start-config" id="popup-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
                     <?php if (!isset($_GET['id'])) { ?>
                         <a href="" class="red-btn pull-right scroll-down start-config">Reset Configuration</a>
                     <?php } ?>
@@ -518,6 +518,14 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         });
 
     });
+
+
+    function save_form() {
+        jQuery('#save-button').click(function (e) { 
+            e.preventDefault();
+            
+        });
+    }
 
     function mh() {
         jQuery('.panel-heading').click(function(event) {
