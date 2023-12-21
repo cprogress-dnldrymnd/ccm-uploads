@@ -2850,7 +2850,7 @@ function show_template() {
 
 	function ccm_add_configurator_link_my_account($items)
 	{
-		$newitems = array(
+		$items = array(
 			'dashboard'       => __('Dashboard', 'woocommerce'),
 			'edit-address'    => _n('Addresses', 'Address', (int) wc_shipping_enabled(), 'woocommerce'),
 			'edit-account'    => __('Account details', 'woocommerce'),
@@ -2860,7 +2860,7 @@ function show_template() {
 			'configurator' => __('Configurator', 'woocommerce'),
 			'customer-logout' => __('Logout', 'woocommerce'),
 		);
-		return $newitems;
+		return $items;
 	}
 
 	add_filter('woocommerce_account_menu_items', 'ccm_add_configurator_link_my_account');
