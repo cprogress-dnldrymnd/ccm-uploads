@@ -438,7 +438,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         padding: 0;
         display: flex;
         align-items: center;
-        transition: 500ms;
+        transition: 300ms;
         max-width: 500px;
         width: 100%;
         left: 50%;
