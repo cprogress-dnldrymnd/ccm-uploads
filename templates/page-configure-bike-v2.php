@@ -435,6 +435,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         right: 0;
         bottom: 0;
         left: 0;
+        z-index: 99999999;
     }
 
     .custom-modal .backdrop {
@@ -452,37 +453,35 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         z-index: 2;
     }
 </style>
-<div class="custom-modal">
+<div class="buy-order-bike-page">
     <div class="backdrop"></div>
-    <div class="buy-order-bike-page inner">
-        <div class="container">
-            <div class="form-reserve">
-                <div class="wpcf7-form">
-                    <input type="hidden" name="submitted" value="true">
-                    <input type="hidden" name="configurator_code" value="Configure Maverick">
-                    <div class="row">
+    <div class="container">
+        <div class="form-reserve">
+            <div class="wpcf7-form">
+                <input type="hidden" name="submitted" value="true">
+                <input type="hidden" name="configurator_code" value="Configure Maverick">
+                <div class="row">
 
-                        <div class="col-md-12">
-                            <p>
-                                <label>
-                                    Postcode <span>*</span>
-                                    <span class="wpcf7-form-control-wrap" data-name="zip">
-                                        <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="zip" required="">
-                                    </span>
-                                </label>
-                            </p>
-                        </div>
-                        <div class="col-md-12">
-                            <p style="font-size: 14px; margin-top: 10px;">
-                                CCM Motorcycles needs the contact information you provide to us to contact you about our products and
-                                services. You may unsubscribe from these communications at any time. For information on how to unsubscribe,
-                                as well as our privacy practices and commitment to protecting your privacy, please review our Privacy
-                                Policy.</p>
-                            <p>
-                                <input class="wpcf7-form-control wpcf7-submit has-spinner red-btn" type="submit" value="COMPLETE MY CONFIGURATION"><span class="wpcf7-spinner"></span><span class="wpcf7-spinner">
+                    <div class="col-md-12">
+                        <p>
+                            <label>
+                                Postcode <span>*</span>
+                                <span class="wpcf7-form-control-wrap" data-name="zip">
+                                    <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="zip" required="">
                                 </span>
-                            </p>
-                        </div>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p style="font-size: 14px; margin-top: 10px;">
+                            CCM Motorcycles needs the contact information you provide to us to contact you about our products and
+                            services. You may unsubscribe from these communications at any time. For information on how to unsubscribe,
+                            as well as our privacy practices and commitment to protecting your privacy, please review our Privacy
+                            Policy.</p>
+                        <p>
+                            <input class="wpcf7-form-control wpcf7-submit has-spinner red-btn" type="submit" value="COMPLETE MY CONFIGURATION"><span class="wpcf7-spinner"></span><span class="wpcf7-spinner">
+                            </span>
+                        </p>
                     </div>
                 </div>
             </div>
