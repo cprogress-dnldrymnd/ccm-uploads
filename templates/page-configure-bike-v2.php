@@ -442,6 +442,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         align-items: center;
         transform: translateY(100%);
         transition: 500ms;
+        visibility: hidden;
+        opacity: 0;
     }
 
     .custom-modal-backdrop {
@@ -468,11 +470,15 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         margin-bottom: 30px;
     }
 
-    .custom-modal-backdrop.active {
+    .custom-modal-backdrop.modal-active {
         display: block;
     }
 
-    .custom-modal.modal-active .container {}
+    .custom-modal.modal-active {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
 </style>
 <div class="custom-modal-backdrop"></div>
 <div class="buy-order-bike-page custom-modal">
