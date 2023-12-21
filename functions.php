@@ -2775,28 +2775,9 @@ function show_template() {
 		endif;
 	}
 
-
 	/*-----------------------------------------------------------------------------------*/
 	/* REDIRECTS
 /*-----------------------------------------------------------------------------------*/
-	function login_ccm_club_redirect()
-	{
-		global $post;
-		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
-			$redirect_url = get_permalink(get_the_ID());
-		} else {
-			$redirect_url = $_GET['redirect'];
-		}
-
-		if ($redirect_url) {
-			return $redirect_url;
-		} else {
-			return home_url('/club-ccm/');
-		}
-	}
-
-	add_filter('login_redirect', 'login_ccm_club_redirect');
-	add_filter('woocommerce_login_redirect', 'login_ccm_club_redirect');
 
 	add_action('user_register', 'register_user_ccm_login');
 
@@ -2806,3 +2787,26 @@ function show_template() {
 	}
 
 	add_filter('registration_redirect', 'wpse_19692_registration_redirect');
+
+
+	/**
+	 * @snippet       Redirect to Referrer @ WooCommerce My Account Login
+	 * @how-to        Get CustomizeWoo.com FREE
+	 * @author        Rodolfo Melogli, BusinessBloomer.com
+	 * @testedwith    WooCommerce 5
+	 * @donate $9     https://businessbloomer.com/bloomer-armada/
+	 */
+
+	add_action('woocommerce_login_form_end', 'bbloomer_actual_referrer');
+
+	function bbloomer_actual_referrer()
+	{
+		if (!wc_get_raw_referer()) return;
+		global $post;
+		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
+			$redirect_url = get_permalink($post->ID);
+		} else {
+			$redirect_url = '/club-news/';
+		}
+		echo '<input type="hidden" name="redirect" value="' . wp_validate_redirect(wc_get_raw_referer(), $redirect_url) . '" />';
+	}
