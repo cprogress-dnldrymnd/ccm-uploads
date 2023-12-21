@@ -116,8 +116,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                 <input type="hidden" name="title" value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>">
                 <input type="hidden" name="notes" value="<?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?>">
                 <div class="row">
-                    <?php
-
                     <div class="col-md-12">
                         <div class="panel-group" id="accordion">
                             <?php foreach ($bike_section as $key => $section) { ?>
