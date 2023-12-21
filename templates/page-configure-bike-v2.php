@@ -549,9 +549,9 @@ if (isset($_GET['action'])) {
         <?php if (isset($_GET['id'])) { ?>
             is_saved_data();
         <?php } else { ?>
+            is_package();
             pre_selected();
         <?php } ?>
-        is_package();
         scroll();
         getTotal();
         click_acc();
@@ -695,9 +695,7 @@ if (isset($_GET['action'])) {
 
     function is_package() {
         jQuery('.is-package').change(function(index, el) {
-            if (jQuery('.acc-option').hasClass('saved-data-loaded')) {
-                package_function(jQuery(this));
-            }
+            package_function(jQuery(this));
             setTimeout(function() {
                 update_summary();
             }, 500);
