@@ -2792,7 +2792,7 @@ function show_template() {
 	{
 		if (is_singular('configurator')) :
 			global $post;
-			$config_url = get_post_meta($post->ID, 'config_url', true);
+			$config_url = get_post_meta($post->ID, '_config_url', true);
 			wp_redirect($config_url);
 			exit;
 		endif;
