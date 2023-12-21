@@ -428,7 +428,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             </div>
         </div>
     </div>
-
 </div>
 <style>
     .custom-modal {
@@ -438,16 +437,22 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         bottom: 0;
         left: 0;
         z-index: 99999999;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        transform: translateY(100%);
+        transition: 500ms;
     }
 
-    .custom-modal .backdrop {
-        position: absolute;
+    .custom-modal-backdrop {
+        position: fixed;
         z-index: 0;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         background-color: rgba(0, 0, 0, .5);
+        display: none;
     }
 
     .custom-modal .container {
@@ -457,13 +462,20 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         padding: 40px;
         max-width: 500px !important;
     }
+
     .custom-modal h3 {
         margin-top: 0;
         margin-bottom: 30px;
     }
+
+    .custom-modal-backdrop.active {
+        display: block;
+    }
+
+    .custom-modal.modal-active .container {}
 </style>
+<div class="custom-modal-backdrop"></div>
 <div class="buy-order-bike-page custom-modal">
-    <div class="backdrop"></div>
     <div class="container">
         <div class="form-reserve">
             <div class="wpcf7-form">
@@ -519,9 +531,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         jQuery(".tot_amount").click(function(event) {
             getTotal();
         });
-
-
         getTotal(false);
+        save_form();
 
         $("form").submit(function(e) {
             var firstname = $("input[name='first-name']").val();
@@ -558,8 +569,13 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 
 
     function save_form() {
-        jQuery('#save-button').click(function(e) {
+        jQuery('#popup-button').click(function(e) {
+            jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
+            e.preventDefault();
+        });
 
+        jQuery('.custom-modal-backdrop').click(function(e) {
+            jQuery('.custom-modal, .custom-modal-backdrop').removeClass('modal-active');
             e.preventDefault();
         });
     }
