@@ -205,6 +205,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
                                                                         <div class="description">
                                                                             <?= wpautop($accessory_description) ?>
                                                                         </div>
+                                                                        
                                                                         <div class="d-block sku">
                                                                             Part Code: <?= $part_code ?>
                                                                         </div>
