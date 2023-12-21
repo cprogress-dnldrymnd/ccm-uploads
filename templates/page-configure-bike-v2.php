@@ -574,7 +574,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         <?php if (isset($_GET['id'])) { ?>
             <?php $config_data = carbon_get_post_meta($_GET['id'], 'config_data') ?>
             <?php foreach ($config_data as $data) { ?>
-                jQuery('input[]')
+                <?php foreach ($data['product_lists'] as $product) { ?>
+                    jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
+                    console.log("<?= $product ?>");
+                <?php } ?>
             <?php } ?>
         <?php } ?>
     }
