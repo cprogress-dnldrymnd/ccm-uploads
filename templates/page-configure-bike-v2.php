@@ -579,7 +579,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         <?php foreach ($config_data as $data) { ?>
             <?php
             $category = $data['category'];
-            $term = get_term_by('name', $news, 'product_cat');
+            $term = get_term_by('slug', $news, 'product_cat');
 
 
             $product_lists = $data['product_lists'];
