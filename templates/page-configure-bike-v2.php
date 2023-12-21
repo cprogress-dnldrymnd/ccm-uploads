@@ -501,7 +501,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="heading-box">
-                            <h3>Configure <?= get_the_title() ?></h3>
+                            <h3><?= get_the_title() ?></h3>
                         </div>
                     </div>
                     <div class="col-md-12">
