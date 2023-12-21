@@ -427,7 +427,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         </div>
     </div>
 
-    <div class="custom-modal">
+</div>
+
+<div class="custom-modal">
+
+    <div class="bike-order-bike-page">
         <div class="inner">
             <div class="form-reserve">
                 <div class="wpcf7-form">
@@ -462,7 +466,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         </div>
     </div>
 </div>
-
 
 <?php get_footer() ?>
 <script type="text/javascript">
