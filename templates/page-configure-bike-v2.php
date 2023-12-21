@@ -589,11 +589,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
-                    package_function(jQuery('input[product_id="<?= $product ?>"]'));
                 <?php } ?>
             <?php } else { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').click();
+                    package_function(jQuery('input[product_id="<?= $product ?>"]'));
                 <?php } ?>
             <?php } ?>
 
