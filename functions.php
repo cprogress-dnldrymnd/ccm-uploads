@@ -2852,7 +2852,6 @@ function show_template() {
 	{
 		unset($item['customer-logout']);
 		$items['configurator'] = 'Configurator';
-		$items['customer-logout'] = 'Logout';
 
 		return $items;
 	}
