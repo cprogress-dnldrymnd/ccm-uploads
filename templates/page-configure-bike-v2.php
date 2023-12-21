@@ -465,6 +465,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             <div class="wpcf7-form">
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="heading-box">
+                            <h2>Configure <?= get_the_title() ?></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
                         <p>
                             <label>
                                 Title <span>*</span>
