@@ -1430,7 +1430,7 @@ function register_fields_ccm_login()
 	}
 
 	add_filter('wpcf7_form_tag', 'ccm_set_vehicle_dropdown', 10, 2);
-	
+
 
 	add_action('wp_logout', 'ccm_redirect_after_logout');
 	function ccm_redirect_after_logout()
@@ -2785,3 +2785,15 @@ function show_template() {
 	}
 
 	add_action('admin_init', 'set_post_id');
+
+
+	add_action('template_redirect', 'action_redirect_sectors');
+	function action_redirect_sectors()
+	{
+		if (is_singular('configurator')) :
+			$config_id = 17456;
+			$url = get_permalink($config_id) . '?id=' . get_the_ID();
+			wp_redirect($url);
+			exit;
+		endif;
+	}
