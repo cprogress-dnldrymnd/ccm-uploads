@@ -558,6 +558,7 @@ if (isset($_GET['action'])) {
                         </div>
                     <?php } else { ?>
                         <div class="col-md-12">
+                            xxxx
                             <?= do_shortcode('[woocommerce_my_account]')  ?>
                         </div>
                     <?php } ?>
