@@ -510,6 +510,15 @@ if (isset($_GET['action'])) {
         visibility: visible;
 
     }
+
+    .custom-modal-backdrop .col-1 {
+        width: 100% !important;
+    }
+
+    .custom-modal-backdrop .col-1 h2 {
+        font-size: 40px;
+        margin-top: 0;
+    }
 </style>
 <div class="custom-modal-backdrop"></div>
 <div class="buy-order-bike-page custom-modal">
@@ -523,7 +532,7 @@ if (isset($_GET['action'])) {
                         </div>
                     </div>
                     <?php if (is_user_logged_in()) { ?>
-                        
+
                         <div class="col-md-12">
                             <p>
                                 <label>
@@ -548,7 +557,9 @@ if (isset($_GET['action'])) {
                             <button id="save-button" class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
                         </div>
                     <?php } else { ?>
-                        <?= do_shortcode('[woocommerce_my_account]')  ?>
+                        <div class="col-md-12">
+                            <?= do_shortcode('[woocommerce_my_account]')  ?>
+                        </div>
                     <?php } ?>
                 </div>
             </div>
