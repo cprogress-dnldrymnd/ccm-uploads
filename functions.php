@@ -2875,19 +2875,3 @@ function show_template() {
 
 	add_action('woocommerce_account_configurator_endpoint', 'ccm_configurator_content');
 
-
-	add_filter('woocommerce_account_menu_items', 'ccm_add_link_my_account');
-
-	function ccm_add_link_my_account($items)
-	{
-		$newitems = array(
-			'dashboard'       => __('Dashboard', 'woocommerce'),
-			'edit-address'    => _n('Addresses', 'Address', (int) wc_shipping_enabled(), 'woocommerce'),
-			'edit-account'    => __('Account details', 'woocommerce'),
-			'orders'          => __('Orders', 'woocommerce'),
-			'downloads'       => __('Downloads', 'woocommerce'),
-			'payment-methods' => __('Payment methods', 'woocommerce'),
-			'customer-logout' => __('Logout', 'woocommerce'),
-		);
-		return $newitems;
-	}
