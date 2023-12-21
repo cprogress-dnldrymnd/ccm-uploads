@@ -41,8 +41,7 @@ function get_bike_list()
 
 	$products_arr = array();
 	foreach ($products as $product_val) {
-		$product = new WC_Product($product_val->ID);
-		$products_arr[$product_val->ID] = $product_val->post_title . ' - ' . $product->get_sku();
+		$products_arr[$product_val->ID] = $product_val->post_title;
 	}
 	return $products_arr;
 }
