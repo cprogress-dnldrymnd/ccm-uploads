@@ -547,7 +547,7 @@ if (isset($_GET['action'])) {
                             <button id="save-button" class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
                         </div>
                     <?php } else { ?>
-                        <?php wp_login_form()  ?>
+                        <?= wp_login_form()  ?>
                     <?php } ?>
                 </div>
             </div>
