@@ -63,7 +63,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 
 
     echo '<pre>';
-    var_dump(get_post_meta(17442, '_config_data', true));
+    var_dump(carbon_get_post_meta(17442, '_config_data'));
     echo '</pre>';
 
 
