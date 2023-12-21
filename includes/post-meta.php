@@ -2565,7 +2565,6 @@ Configurator 		==========================================================
 Container::make('post_meta', 'Configurator Data')
 	->where('post_type', '=', 'configurator')
 	->add_fields(array(
-		Field::make('text', 'config_id', 'Config ID'),
 		Field::make('select', 'config_id', 'Products')
 			->add_options(get_bike_list()),
 		Field::make('text', 'config_url', 'Config ID'),
