@@ -112,7 +112,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         <div class="container-fluid px-0">
             <form method="GET">
                 <button type="SUBMIT"> SUBMIT </button>
-                <input type="hidden" name="action" value="create-post">
+                <input type="hidden" name="action" value="<?= isset($_GET['id']) ? 'update-post' : 'create-post' ?>">
                 <input type="hidden" name="config_id" value="<?= get_the_ID() ?>">
                 <div class="row">
                     <div class="col-md-12">
