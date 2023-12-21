@@ -558,45 +558,38 @@ if (isset($_GET['action'])) {
                     <?php } else { ?>
                         <div class="col-md-12">
                             <div>
-                                <div class="woocommerce">
+                                <h2><?php esc_html_e('Login', 'woocommerce'); ?></h2>
 
-                                    <div class="u-columns col2-set" id="customer_login">
+                                <form class="woocommerce-form woocommerce-form-login login" method="post">
 
-                                        <div class="u-column1 col-1 the-login">
+                                    <?php do_action('woocommerce_login_form_start'); ?>
 
+                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                        <label for="username"><?php esc_html_e('Username or email address', 'woocommerce'); ?>&nbsp;<span class="required">*</span></label>
+                                        <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo (!empty($_POST['username'])) ? esc_attr(wp_unslash($_POST['username'])) : ''; ?>" /><?php // @codingStandardsIgnoreLine 
+                                                                                                                                                                                                                                                                                                ?>
+                                    </p>
+                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                        <label for="password"><?php esc_html_e('Password', 'woocommerce'); ?>&nbsp;<span class="required">*</span></label>
+                                        <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
+                                    </p>
 
-                                            <h2>Login</h2>
+                                    <?php do_action('woocommerce_login_form'); ?>
 
-                                            <form class="woocommerce-form woocommerce-form-login login" method="post" data-hs-cf-bound="true">
+                                    <p class="form-row">
+                                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                                            <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e('Remember me', 'woocommerce'); ?></span>
+                                        </label>
+                                        <?php wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce'); ?>
+                                        <button type="submit" class="woocommerce-button button woocommerce-form-login__submit<?php echo esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : ''); ?>" name="login" value="<?php esc_attr_e('Log in', 'woocommerce'); ?>"><?php esc_html_e('Log in', 'woocommerce'); ?></button>
+                                    </p>
+                                    <p class="woocommerce-LostPassword lost_password">
+                                        <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Lost your password?', 'woocommerce'); ?></a>
+                                    </p>
 
+                                    <?php do_action('woocommerce_login_form_end'); ?>
 
-                                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                    <label for="username">Username or email address&nbsp;<span class="required">*</span></label>
-                                                    <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="">
-                                                </p>
-                                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                                                    <label for="password">Password&nbsp;<span class="required">*</span></label>
-                                                    <span class="password-input"><input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password"><span class="show-password-input"></span></span>
-                                                </p>
-
-
-                                                <p class="form-row">
-                                                    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-                                                        <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever"> <span>Remember me</span>
-                                                    </label>
-                                                    <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="8061503ae7"><input type="hidden" name="_wp_http_referer" value="/bikes/maverick-configure/?test=testss"> <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Log in">Log in</button>
-                                                </p>
-                                                <p class="woocommerce-LostPassword lost_password">
-                                                    <a href="https://ccm.theprogressteam.com/bikes/maverick-configure/lost-password/">Lost your password?</a>
-                                                </p>
-
-
-                                            </form>
-
-                                        </div>
-
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     <?php } ?>
