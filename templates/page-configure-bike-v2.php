@@ -74,7 +74,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     );
 
     // Insert the post into the database
-   // wp_insert_post($my_post);
+    wp_insert_post($my_post);
 }
 ?>
 
