@@ -583,7 +583,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                 <?php } ?>
             <?php } else { ?>
                 <?php foreach ($data['product_lists'] as $product) { ?>
-                    jQuery('input[product_id="<?= $product ?>"]').click();
                 <?php } ?>
             <?php } ?>
 
