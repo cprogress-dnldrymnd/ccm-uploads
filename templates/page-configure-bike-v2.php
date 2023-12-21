@@ -754,7 +754,7 @@ if (isset($_GET['action'])) {
             <?php } else { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').click();
-                   // package_function(jQuery('input[product_id="<?= $product ?>"]'));
+                    package_function(jQuery('input[product_id="<?= $product ?>"]'));
                     
                 <?php } ?>
             <?php } ?>
