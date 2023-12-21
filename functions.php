@@ -2805,7 +2805,7 @@ function show_template() {
 		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
 			$redirect_url = get_permalink($post->ID);
 		} else {
-			$redirect_url = '/club-news/';
+			$redirect_url = '/club-newssss/';
 		}
 		echo '<input type="hidden" name="redirect" value="' . $redirect_url . '" />';
 	}
