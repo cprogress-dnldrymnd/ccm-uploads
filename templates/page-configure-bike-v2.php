@@ -124,6 +124,9 @@ get_header(); // This fxn gets the header.php file and renders it
     .buy-order-bike-page .footer-order {
         z-index: 999999;
     }
+    .bike-footer-order {
+        padding: 0 !important;
+    }
     .footer.bt-5 {
         padding-bottom: 200px;
     } 
@@ -569,7 +572,7 @@ if (isset($_GET['action'])) {
         </div>
     </div>
 </div>
-<div class="buy-order-bike-page">
+<div class="buy-order-bike-page bike-footer-order">
     <div class="footer-order">
         <div class="container" style="max-width: 1400px; width: 100% !important;">
             <div class="row">
