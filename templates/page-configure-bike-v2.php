@@ -516,8 +516,8 @@ if (isset($_GET['action'])) {
     }
 
     .custom-modal-backdrop .col-1 h2 {
-        font-size: 40px;
-        margin-top: 0;
+        font-size: 40px !important;
+        margin-top: 0 !important;
     }
 </style>
 <div class="custom-modal-backdrop"></div>
@@ -532,7 +532,6 @@ if (isset($_GET['action'])) {
                         </div>
                     </div>
                     <?php if (is_user_logged_in()) { ?>
-
                         <div class="col-md-12">
                             <p>
                                 <label>
