@@ -2781,8 +2781,8 @@ function show_template() {
 /*-----------------------------------------------------------------------------------*/
 	function login_ccm_club_redirect()
 	{
-
-		if (get_page_template_slug(get_the_ID()) == 'templates/page-configure-bike-v2.php') {
+		global $post;
+		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
 			$redirect_url = get_permalink(get_the_ID());
 		} else {
 			$redirect_url = $_GET['redirect'];
