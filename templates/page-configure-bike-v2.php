@@ -82,7 +82,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 
     // Insert the post into the database
     $post =  wp_insert_post($my_post);
-    carbon_set_post_meta($post, 'config_data', $config_data);
+   // carbon_set_post_meta($post, 'config_data', $config_data);
 }
 ?>
 
