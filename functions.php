@@ -2795,7 +2795,7 @@ function show_template() {
 	function rohil_login_redirect_based_on_roles($user_login, $user)
 	{
 		global $post;
-		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
+		if (get_page_template_slug($post->ID) != 'templates/page-configure-bike-v2.php') {
 			$redirect_url = $_GET['redirect'];
 			if ($redirect_url) {
 				return $redirect_url;
