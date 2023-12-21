@@ -759,8 +759,9 @@ if (isset($_GET['action'])) {
                     package_function(jQuery('input[product_id="<?= $product ?>"]'));
                 <?php } ?>
             <?php } ?>
-
-            jQuery('.acc-option').addClass('saved-data-loaded');
+            setTimeout(function() {
+                jQuery('.acc-option').addClass('saved-data-loaded');
+            }, 300);
 
         <?php } ?>
     }
