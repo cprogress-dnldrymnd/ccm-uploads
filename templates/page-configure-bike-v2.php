@@ -586,6 +586,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 
             ?>
             console.log('<?= $select_one ?>');
+            console.log('<?= $term->name ?>');
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
