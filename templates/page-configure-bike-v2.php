@@ -599,6 +599,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             e.preventDefault();
         });
     }
+    
 
     function mh() {
         jQuery('.panel-heading').click(function(event) {
