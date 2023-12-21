@@ -455,7 +455,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         position: relative;
         z-index: 1;
         padding: 40px;
-        max-width: 500px;
+        max-width: 500px !important;
     }
 </style>
 <div class="buy-order-bike-page custom-modal">
