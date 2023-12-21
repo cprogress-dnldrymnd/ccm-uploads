@@ -242,15 +242,7 @@ if (isset($_GET['action'])) {
                                                                 <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
                                                                     <input product_id="<?= get_the_ID() ?>" name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>" value="<?= get_the_ID() ?>">
                                                                     <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
-                                                                        <div class="image-holder">
-                                                                            <div class="inner">
-                                                                                <?php if ($the_panel['change_image'] || $accesories['change_image']) { ?>
-                                                                                    <img src="<?= $the_image ?>" big-image="<?= $big_image ?>" email-image="<?= $email_image ?>">
-                                                                                <?php } else { ?>
-                                                                                    <img src="<?= $the_image ?>" email-image="<?= $email_image ?>">
-                                                                                <?php } ?>
-                                                                            </div>
-                                                                        </div>
+                                                                        <!-- IMAGE HOLDER  -->
                                                                         <h4>
                                                                             <?= get_the_title() ?>
                                                                         </h4>
