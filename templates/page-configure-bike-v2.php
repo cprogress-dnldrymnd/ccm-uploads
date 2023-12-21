@@ -69,7 +69,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         'post_status'   => 'publish',
         'post_author'   => get_current_user_id(),
         'meta_input' => array(
-            'config_data' => $config_data,
+            '_config_data' => $config_data,
         )
     );
 
