@@ -351,7 +351,7 @@ function cpt_configurator() {
 	$args = array(
 		'label'                 => __( 'Configurator', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'revisions' ),
+		'supports'              => array( 'title', 'revisions', 'author'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
