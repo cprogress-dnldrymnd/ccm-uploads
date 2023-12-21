@@ -420,9 +420,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                     <p class="total">TOTAL: &#163;<input type="text" id="total1" readonly></p>
                 </div>
                 <div class="col-md-3 col-sm-3 ">
-                    <button class="red-btn pull-right scroll-down start-config" id="popup-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
+                    <button class="red-btn" id="popup-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
                     <?php if (!isset($_GET['id'])) { ?>
-                        <a href="" class="red-btn pull-right scroll-down start-config">Reset Configuration</a>
+                        <a href="" class="red-btn">Reset Configuration</a>
                     <?php } ?>
                 </div>
             </div>
@@ -508,7 +508,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <button class="red-btn pull-right scroll-down start-config" id="save-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
+                        <button class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
                     </div>
                 </div>
             </div>
