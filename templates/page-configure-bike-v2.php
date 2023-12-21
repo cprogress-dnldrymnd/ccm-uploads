@@ -744,19 +744,17 @@ if (isset($_GET['action'])) {
             $category = $data['category'];
             $term = get_term_by('slug', $category, 'product_cat');
             $select_one = carbon_get_term_meta($term->term_id, 'select_one');
-
             $product_lists = $data['product_lists'];
-
             ?>
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
+                    jQuery('input[product_id="<?= $product ?>"]').click();
                 <?php } ?>
             <?php } else { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').click();
                     package_function(jQuery('input[product_id="<?= $product ?>"]'));
-                    
                 <?php } ?>
             <?php } ?>
 
