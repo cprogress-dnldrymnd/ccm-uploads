@@ -78,6 +78,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
     carbon_set_post_meta($post, 'config_url', get_the_permalink($_GET['config_id']) . '?id=' . $post);
 }
+echo get_page_template_slug();
 ?>
 
 
