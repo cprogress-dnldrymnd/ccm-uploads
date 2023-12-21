@@ -532,6 +532,7 @@ if (isset($_GET['action'])) {
                         </div>
                     </div>
                     <?php if (is_user_logged_in()) { ?>
+                        xxxx
                         <div class="col-md-12">
                             <p>
                                 <label>
