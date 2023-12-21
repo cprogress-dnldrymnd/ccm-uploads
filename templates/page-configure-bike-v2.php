@@ -433,6 +433,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         click_acc();
         pre_selected();
         is_package();
+        is_saved_data();
+        <?php if (isset($_GET['id'])) { ?>
+
+        <?php } ?>
         jQuery(".tot_amount").click(function(event) {
             getTotal();
         });
@@ -571,13 +575,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     }
 
     function is_saved_data() {
-        <?php if (isset($_GET['id'])) { ?>
-            <?php $config_data = carbon_get_post_meta($_GET['id'], 'config_data') ?>
-            <?php foreach ($config_data as $data) { ?>
-                <?php foreach ($data['product_lists'] as $product) { ?>
-                    jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
-                    console.log("<?= $product ?>");
-                <?php } ?>
+        <?php $config_data = carbon_get_post_meta($_GET['id'], 'config_data') ?>
+        <?php foreach ($config_data as $data) { ?>
+            <?php foreach ($data['product_lists'] as $product) { ?>
+                jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
+                console.log("<?= $product ?>");
             <?php } ?>
         <?php } ?>
     }
