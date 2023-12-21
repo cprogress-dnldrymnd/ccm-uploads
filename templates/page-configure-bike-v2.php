@@ -577,12 +577,21 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     function is_saved_data() {
         <?php $config_data = carbon_get_post_meta($_GET['id'], 'config_data') ?>
         <?php foreach ($config_data as $data) { ?>
-            <?php if ($data['category'] != 'model') { ?>
-                <?php foreach ($data['product_lists'] as $product) { ?>
+            <?php
+            $category = $data['category'];
+            $term = get_term_by('name', $news, 'product_cat');
+
+
+            $product_lists = $data['product_lists'];
+
+            ?>
+            console.log('<?= $term->name ?>');
+            <?php if ($category != 'model') { ?>
+                <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
                 <?php } ?>
             <?php } else { ?>
-                <?php foreach ($data['product_lists'] as $product) { ?>
+                <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').click();
                 <?php } ?>
             <?php } ?>
