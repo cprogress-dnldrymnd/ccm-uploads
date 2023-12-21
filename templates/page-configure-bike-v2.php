@@ -558,8 +558,9 @@ if (isset($_GET['action'])) {
             is_saved_data();
         <?php } else { ?>
             pre_selected();
+            is_package();
         <?php } ?>
-        is_package();
+    
         scroll();
         getTotal();
         click_acc();
