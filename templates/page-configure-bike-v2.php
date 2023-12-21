@@ -74,9 +74,13 @@ if (isset($_GET['action'])) {
 
         // Insert the post into the database
         $post =  wp_insert_post($my_post);
+
+        $config_url = get_the_permalink($_GET['config_id']) . '?id=' . $post;
         carbon_set_post_meta($post, 'config_data', $config_data);
         carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
-        carbon_set_post_meta($post, 'config_url', get_the_permalink($_GET['config_id']) . '?id=' . $post);
+        carbon_set_post_meta($post, 'config_url', $config_url);
+        wp_redirect($config_url);
+        exit;
     } else if ($_GET['action'] == 'update-post') {
     }
 }
