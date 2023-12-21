@@ -2545,6 +2545,7 @@ Container::make('post_meta', 'Configurator Data')
 	->where('post_type', '=', 'configurator')
 	->add_fields(array(
 		Field::make('text', 'config_id', 'Config ID'),
+		Field::make('text', 'config_url', 'Config ID'),
 		Field::make('complex', 'config_data', 'Config Data')
 			->set_layout('tabbed-vertical')
 			->add_fields(
