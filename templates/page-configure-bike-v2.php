@@ -607,6 +607,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         jQuery('#title').keyup(function(e) {
             jQuery('input[name="title"]').val(jQuery(this).val());
         });
+        jQuery('#notes').keyup(function(e) {
+            jQuery('input[name="notes"]').val(jQuery(this).val());
+        });
     }
 
 
