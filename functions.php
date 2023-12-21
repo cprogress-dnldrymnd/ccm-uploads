@@ -2870,8 +2870,25 @@ function show_template() {
 
 	function ccm_configurator_content()
 	{
-		echo '<h3>Premium WooCommerce Support</h3><p>Welcome to the WooCommerce support area. As a premium customer, you can submit a ticket should you have any WooCommerce issues with your website, snippets or customization. <i>Please contact your theme/plugin developer for theme/plugin-related support.</i></p>';
+		echo '<h3>Configurator</h3>';
+		$args = array(
+			'numberposts' => -1,
+			'post_type'   => 'configurator',
+			'author'        =>  $current_user->ID,
+		);
+		$configurator = get_posts($args);
+
+		echo '<table>';
+		foreach ($configurator as $config) {
+			echo '<tr>';
+
+			echo '<td>';
+			echo $config->post_title;
+			echo '</td>';
+
+			echo '</tr>';
+		}
+		echo '</table>';
 	}
 
 	add_action('woocommerce_account_configurator_endpoint', 'ccm_configurator_content');
-
