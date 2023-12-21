@@ -453,7 +453,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         z-index: 2;
     }
 </style>
-<div class="buy-order-bike-page">
+<div class="buy-order-bike-page custom-modal">
     <div class="backdrop"></div>
     <div class="container">
         <div class="form-reserve">
