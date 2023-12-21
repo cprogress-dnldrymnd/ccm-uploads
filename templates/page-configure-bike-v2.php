@@ -430,9 +430,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 </div>
 
 <div class="custom-modal">
-
-    <div class="bike-order-bike-page">
-        <div class="inner">
+    <div class="buy-order-bike-page ">
+        <div class="container">
             <div class="form-reserve">
                 <div class="wpcf7-form">
                     <input type="hidden" name="submitted" value="true">
