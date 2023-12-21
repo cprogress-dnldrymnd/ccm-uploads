@@ -76,6 +76,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     $post =  wp_insert_post($my_post);
     carbon_set_post_meta($post, 'config_data', $config_data);
     carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
+    carbon_set_post_meta($post, 'config_url', get_the_permalink($_GET['config_id']) . '?id=' . $post);
 }
 ?>
 
