@@ -59,6 +59,14 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             $config_data[$key] = $data;
         }
     }
+
+    
+
+    echo '<pre>';
+    var_dump(get_post_meta(17447));
+    echo '</pre>';
+
+    
     echo '<pre>';
     var_dump($config_data);
     echo '</pre>';
@@ -69,12 +77,12 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         'post_status'   => 'publish',
         'post_author'   => get_current_user_id(),
         'meta_input' => array(
-            '_config_data' => $config_data,
+            'config_data' => $config_data,
         )
     );
 
     // Insert the post into the database
-    wp_insert_post($my_post);
+   // wp_insert_post($my_post);
 }
 ?>
 
