@@ -60,13 +60,13 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         }
     }
 
-    
+
 
     echo '<pre>';
     var_dump(get_post_meta(17447, '_config_data', true));
     echo '</pre>';
 
-    
+
     echo '<pre>';
     var_dump($config_data);
     echo '</pre>';
@@ -76,20 +76,17 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         'post_title'    => wp_strip_all_tags(get_the_title($_GET['config_id'])),
         'post_status'   => 'publish',
         'post_author'   => get_current_user_id(),
-        'meta_input' => array(
-            'config_data' => $config_data,
-        )
+
     );
 
+
     // Insert the post into the database
-   // wp_insert_post($my_post);
+    $post =  wp_insert_post($my_post);
+    carbon_set_post_meta($post, 'config_data', $config_data);
 }
 ?>
 
 
-<pre>
-<?php var_dump($_GET) ?>
-</pre>
 <div class="buy-order-bike-page configure-bike-banner">
     <div class="container">
         <div class="row">
