@@ -431,9 +431,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         <?php if (isset($_GET['id'])) { ?>
             is_saved_data();
         <?php } else { ?>
-            is_package();
             pre_selected();
         <?php } ?>
+        is_package();
         scroll();
         getTotal();
         click_acc();
@@ -545,7 +545,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 
     function is_package() {
         jQuery('.is-package').change(function(index, el) {
-            package_function(jQuery(this));
+            if (jQuery('.acc-option').hasClass('saved-data-loaded')) {
+                package_function(jQuery(this));
+            }
             setTimeout(function() {
                 update_summary();
             }, 500);
@@ -597,6 +599,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                 <?php } ?>
             <?php } ?>
 
+            jQuery('.acc-option').addClass('saved-data-loaded');
 
         <?php } ?>
     }
