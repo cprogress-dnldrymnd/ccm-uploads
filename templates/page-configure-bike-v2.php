@@ -448,9 +448,12 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         background-color: rgba(0, 0, 0, .5);
     }
 
-    .custom-modal .inner {
+    .custom-modal .container {
+        background-color: var(--white-color);
         position: relative;
-        z-index: 2;
+        z-index: 1;
+        padding: 40px;
+        max-width: 500px;
     }
 </style>
 <div class="buy-order-bike-page custom-modal">
@@ -461,27 +464,28 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                 <input type="hidden" name="submitted" value="true">
                 <input type="hidden" name="configurator_code" value="Configure Maverick">
                 <div class="row">
-
                     <div class="col-md-12">
                         <p>
                             <label>
-                                Postcode <span>*</span>
-                                <span class="wpcf7-form-control-wrap" data-name="zip">
-                                    <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="zip" required="">
+                                Title <span>*</span>
+                                <span class="wpcf7-form-control-wrap">
+                                    <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="title" required>
                                 </span>
                             </label>
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <p style="font-size: 14px; margin-top: 10px;">
-                            CCM Motorcycles needs the contact information you provide to us to contact you about our products and
-                            services. You may unsubscribe from these communications at any time. For information on how to unsubscribe,
-                            as well as our privacy practices and commitment to protecting your privacy, please review our Privacy
-                            Policy.</p>
                         <p>
-                            <input class="wpcf7-form-control wpcf7-submit has-spinner red-btn" type="submit" value="COMPLETE MY CONFIGURATION"><span class="wpcf7-spinner"></span><span class="wpcf7-spinner">
-                            </span>
+                            <label>
+                                Notes <span>*</span>
+                                <span class="wpcf7-form-control-wrap">
+                                    <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" name="notes"></textarea>
+                                </span>
+                            </label>
                         </p>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="red-btn pull-right scroll-down start-config" id="save-button">Save Configuration</button>
                     </div>
                 </div>
             </div>
