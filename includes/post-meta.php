@@ -2546,7 +2546,7 @@ Container::make('post_meta', 'Configurator Data')
 	->add_fields(array(
 		Field::make('text', 'config_id', 'Config ID'),
 		Field::make('complex', 'config_data', 'Config Data')
-			->set_layout('tabbed-horizontal')
+			->set_layout('tabbed-vertical')
 			->add_fields(
 				array(
 					Field::make('text', 'category', 'Category'),
@@ -2554,4 +2554,6 @@ Container::make('post_meta', 'Configurator Data')
 						->add_options(get_product_lists())
 				)
 			)
+			->set_header_template('<%- category %>')
+
 	));
