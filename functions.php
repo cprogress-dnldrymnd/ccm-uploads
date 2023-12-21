@@ -2883,6 +2883,10 @@ function show_template() {
 		echo '<tr>';
 
 		echo '<th>';
+		echo 'Bike';
+		echo '</th>';
+
+		echo '<th>';
 		echo 'Title';
 		echo '</th>';
 
@@ -2893,6 +2897,10 @@ function show_template() {
 		echo '</tr>';
 		foreach ($configurator as $config) {
 			echo '<tr>';
+
+			echo '<td>';
+			echo get_the_title(get_post_meta($config->ID, '_config_id', true));
+			echo '</td>';
 
 			echo '<td>';
 			echo $config->post_title;
