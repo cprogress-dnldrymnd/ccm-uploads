@@ -134,167 +134,6 @@ add_action('widgets_init', 'ccm_register_sidebars');
 
 
 /*-----------------------------------------------------------------------------------*/
-/* Custom Post Type
-/*-----------------------------------------------------------------------------------*/
-
-function cp_bikes()
-{
-	$labels = array(
-		'name'               => _x('Motorcycles', 'post type general name'),
-		'singular_name'      => _x('Motorcycle', 'post type singular name'),
-		'add_new'            => _x('Add New', 'bike'),
-		'add_new_item'       => __('Add New bike'),
-		'edit_item'          => __('Edit bike'),
-		'new_item'           => __('New Motorcycle'),
-		'all_items'          => __('All Motorcycle'),
-		'view_item'          => __('View Motorcycle'),
-		'search_items'       => __('Search Motorcycle'),
-		'not_found'          => __('No Motorcycle found'),
-		'not_found_in_trash' => __('No Motorcycle found in the Trash'),
-		'parent_item_colon'  => '',
-		'menu_name'          => 'Motorcycles'
-	);
-	$args = array(
-		'labels'        => $labels,
-		'public'        => true,
-		'hierarchical'  => true,
-		'menu_position' => 5,
-		'supports'      => array('title', 'editor', 'thumbnail', 'excerpt', 'comments', 'page-attributes'),
-		'has_archive'   => true,
-	);
-	register_post_type('bikes', $args);
-}
-add_action('init', 'cp_bikes');
-
-function cp_defences()
-{
-	$labels = array(
-		'name'               => _x('Defence', 'post type general name'),
-		'singular_name'      => _x('Defence', 'post type singular name'),
-		'add_new'            => _x('Add New', 'defence'),
-		'add_new_item'       => __('Add New defence'),
-		'edit_item'          => __('Edit defence'),
-		'new_item'           => __('New defence'),
-		'all_items'          => __('All defence'),
-		'view_item'          => __('View defence'),
-		'search_items'       => __('Search defences'),
-		'not_found'          => __('No defence found'),
-		'not_found_in_trash' => __('No defence found in the Trash'),
-		'parent_item_colon'  => '',
-		'menu_name'          => 'Defences'
-	);
-	$args = array(
-		'labels'        => $labels,
-		'public'        => true,
-		'menu_position' => 6,
-		'supports'      => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
-		'has_archive'   => true,
-	);
-	register_post_type('defences', $args);
-}
-add_action('init', 'cp_defences');
-
-
-// create two taxonomies, genres and writers for the post type "book"
-function create_project_taxonomies()
-{
-	// Add new taxonomy, make it hierarchical (like categories)
-	$labels = array(
-		'name'              => _x('Bike Types', 'taxonomy general name', 'textdomain'),
-		'singular_name'     => _x('Bike Types', 'taxonomy singular name', 'textdomain'),
-		'search_items'      => __('Search Bike Types', 'textdomain'),
-		'all_items'         => __('All Bike Types', 'textdomain'),
-		'parent_item'       => __('Parent Bike Type', 'textdomain'),
-		'parent_item_colon' => __('Parent Bike Type:', 'textdomain'),
-		'edit_item'         => __('Edit Bike Type', 'textdomain'),
-		'update_item'       => __('Update Bike Type', 'textdomain'),
-		'add_new_item'      => __('Add New Bike Type', 'textdomain'),
-		'new_item_name'     => __('New Bike Type Name', 'textdomain'),
-		'menu_name'         => __('Bike Type', 'textdomain'),
-	);
-
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-		'rewrite'           => array('slug' => 'bike-type'),
-	);
-
-	register_taxonomy('bike-type', array('bikes'), $args);
-}
-
-add_action('init', 'create_project_taxonomies', 0);
-
-/*-----------------------------------------------------------------------------------*/
-/* Custom Post Type Event
-/*-----------------------------------------------------------------------------------*/
-
-function cp_events()
-{
-	$labels = array(
-		'name'               => _x('Events', 'post type general name'),
-		'singular_name'      => _x('Events', 'post type singular name'),
-		'add_new'            => _x('Add New', 'Event'),
-		'add_new_item'       => __('Add New Event'),
-		'edit_item'          => __('Edit Event'),
-		'new_item'           => __('New Event'),
-		'all_items'          => __('All Events'),
-		'view_item'          => __('View Event'),
-		'search_items'       => __('Search Events'),
-		'not_found'          => __('No bike found'),
-		'not_found_in_trash' => __('No bike found in the Trash'),
-		'parent_item_colon'  => '',
-		'menu_name'          => 'Events'
-	);
-	$args = array(
-		'labels'        => $labels,
-		'description'   => 'Holds our articles and article specific data',
-		'public'        => true,
-		'menu_position' => 5,
-		'supports'      => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
-		'has_archive'   => true,
-		'menu_icon'     => 'dashicons-calendar-alt',
-		'rewrite'       => array('slug' => 'event'),
-
-	);
-	register_post_type('events', $args);
-}
-add_action('init', 'cp_events');
-
-
-function create_events_taxonomies()
-{
-	// Add new taxonomy, make it hierarchical (like categories)
-	$labels = array(
-		'name'              => _x('Category', 'taxonomy general name', 'textdomain'),
-		'singular_name'     => _x('Category', 'taxonomy singular name', 'textdomain'),
-		'search_items'      => __('Search Category', 'textdomain'),
-		'all_items'         => __('All Category', 'textdomain'),
-		'parent_item'       => __('Parent Category', 'textdomain'),
-		'parent_item_colon' => __('Parent Category:', 'textdomain'),
-		'edit_item'         => __('Edit Category', 'textdomain'),
-		'update_item'       => __('Update Category', 'textdomain'),
-		'add_new_item'      => __('Add New Category', 'textdomain'),
-		'new_item_name'     => __('New Category Name', 'textdomain'),
-		'menu_name'         => __('Categories', 'textdomain'),
-	);
-
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-	);
-
-	register_taxonomy('event-category', array('events'), $args);
-}
-
-add_action('init', 'create_events_taxonomies', 0);
-
-/*-----------------------------------------------------------------------------------*/
 /* Enqueue Styles and Scripts
 /*-----------------------------------------------------------------------------------*/
 
@@ -493,22 +332,9 @@ function wooc_extra_register_fields()
 		</select>
 	</p>
 	<div class="ownership ">
-		<!-- <div class="form-row form-row-wide is_owner_xx">
-			<h3>DO YOU OWN A CCM MOTORCYCLE? <span class="required">*</span></h3>
-		</div> -->
 		<p class="form-row form-row-wide">
 			<input type="hidden" class="input-text" name="ownership" id="owner" value="<?php esc_attr_e($_POST['ownership']); ?>" />
 		</p>
-		<!--  <div class="form-row form-row-last is_owner_xx">
-			<input type="radio" id="owner" name="ownership" value="yes">
-			<label for="owner">Yes, I'm a CCM owner!</label> 
-		</div>
-		<div class="form-row form-row-first is_owner_xx">
-			<input type="radio" id="notOwner" name="ownership" value="no" checked="checked">
-			<label for="notOwner">No, I'm just and enthusiast!</label>
-		</div> 
-	</div>
--->
 
 		<div class="clear">
 
@@ -688,20 +514,9 @@ function register_fields_ccm_login()
 			</select>
 		</p>
 		<div class="ownership hide-div">
-			<!-- <div class="form-row form-row-wide is_owner_xx">
-			<h3>DO YOU OWN A CCM MOTORCYCLE? <span class="required">*</span></h3>
-		</div> -->
 			<p class="form-row form-row-wide">
 				<input type="hidden" class="input-text" name="ownership" id="owner" value="<?php esc_attr_e($_POST['ownership']); ?>" />
 			</p>
-			<!-- 		<div class="form-row form-row-last is_owner_xx">
-			<input type="radio" id="owner" name="ownership" value="owner">
-			<label for="owner">Yes, I'm a CCM owner!</label> 
-		</div>
-		<div class="form-row form-row-first is_owner_xx">
-			<input type="radio" id="notOwner" name="ownership" value="notOwner" checked="checked">
-			<label for="notOwner">No, I'm just and enthusiast!</label>
-		</div> -->
 		</div>
 		<div class="woocommerce-privacy-policy-text">
 			<p>
@@ -845,6 +660,7 @@ function register_fields_ccm_login()
 	{
 		require_once(dirname(__FILE__) . '/includes/post-meta.php');
 	}
+	require_once('includes/post-types.php');
 	require_once('includes/shortcodes.php');
 	require_once('includes/carbonfields.php');
 	require_once('includes/theme-widgets.php');
@@ -1369,60 +1185,10 @@ function register_fields_ccm_login()
 				exit(wp_redirect('/club-news/'));
 			}
 		}
-		/*
-	 if( in_array( 'club_member',$user->roles ) ){
-	 exit( wp_redirect('/club-ccm/' ) );
-	 }
-	 if( in_array( 'customer',$user->roles ) ){
-	 exit( wp_redirect('/club-ccm/' ) );
-	 }
-	 if( in_array( 'administrator',$user->roles ) ){
-	 exit( wp_redirect('/wp-admin/' ) );
-	 }*/
 	}
 
 	add_action('wp_login', 'rohil_login_redirect_based_on_roles', 10, 2);
 
-
-	add_action('init', 'codex_story_init');
-
-	function codex_story_init()
-	{
-		$labels = array(
-			'name'               => _x('Stories', 'post type general name', 'your-plugin-textdomain'),
-			'singular_name'      => _x('Story', 'post type singular name', 'your-plugin-textdomain'),
-			'menu_name'          => _x('Stories', 'admin menu', 'your-plugin-textdomain'),
-			'name_admin_bar'     => _x('Story', 'add new on admin bar', 'your-plugin-textdomain'),
-			'add_new'            => _x('Add New', 'Story', 'your-plugin-textdomain'),
-			'add_new_item'       => __('Add New Story', 'your-plugin-textdomain'),
-			'new_item'           => __('New Story', 'your-plugin-textdomain'),
-			'edit_item'          => __('Edit Story', 'your-plugin-textdomain'),
-			'view_item'          => __('View Story', 'your-plugin-textdomain'),
-			'all_items'          => __('All Stories', 'your-plugin-textdomain'),
-			'search_items'       => __('Search Stories', 'your-plugin-textdomain'),
-			'parent_item_colon'  => __('Parent Stories:', 'your-plugin-textdomain'),
-			'not_found'          => __('No Stories found.', 'your-plugin-textdomain'),
-			'not_found_in_trash' => __('No Stories found in Trash.', 'your-plugin-textdomain')
-		);
-
-		$args = array(
-			'labels'             => $labels,
-			'description'        => __('Description.', 'your-plugin-textdomain'),
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => array('slug' => 'Story'),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => null,
-			'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'comments', 'author')
-		);
-
-		register_post_type('Story', $args);
-	}
 
 	add_action('wp_ajax_stories_post', 'stories_post');
 	add_action('wp_ajax_nopriv_stories_post', 'stories_post');
@@ -1664,30 +1430,7 @@ function register_fields_ccm_login()
 	}
 
 	add_filter('wpcf7_form_tag', 'ccm_set_vehicle_dropdown', 10, 2);
-	// set vehicle dynamic dropdown
-	/*
-function ccm_set_vehicle_dropdown ( $tag, $unused ) {
-	if ( $tag['name'] == 'vehicle' ) {
-		$bike_info = get_field('bike_information','user_'.get_current_user_id());
-		if( !empty( $bike_info) ) {
-			$tag['raw_values'] = '';
-			$tag['labels'] = '';
-			$tag['values'] = '';
-			foreach($bike_info as $info) {
-				$bike_model = $info['bike_model'];
-				$bike_regist = $info['bike_registration'];
-				$tag['raw_values'][] = $bike_model .' - '. $bike_regist;
-				$tag['labels'][]= $bike_model.' - '. $bike_regist;
-			}
-			$pipes = new WPCF7_Pipes( $tag['raw_values'] );
-			$tag['values'] = $pipes->collect_befores();
-			$tag['pipes'] = $pipes;
-
-		}
-	}
-	return $tag;
-}
-add_filter( 'wpcf7_add_form_tag', 'ccm_set_vehicle_dropdown', 10, 2);*/
+	
 
 	add_action('wp_logout', 'ccm_redirect_after_logout');
 	function ccm_redirect_after_logout()
@@ -2064,107 +1807,6 @@ add_action( 'admin_menu', 'hide_alog', 999 );*/
 	add_action('login_enqueue_scripts', 'my_login_logo');
 
 
-	/*function set_role() {
-add_role( 'ccm_owner', 'CCM Owner' );
-}
-set_role(); */
-
-
-	/*-----------------------------------------------------------------------------------*/
-	/* Register Custom Post Type Club News
-/*-----------------------------------------------------------------------------------*/
-	function cpt_club_news()
-	{
-		$labels = array(
-			'name'                  => _x('Club News', 'Post Type General Name', 'text_domain'),
-			'singular_name'         => _x('Club News', 'Post Type Singular Name', 'text_domain'),
-			'menu_name'             => __('Club News', 'text_domain'),
-			'name_admin_bar'        => __('Club News', 'text_domain'),
-			'archives'              => __('Club News Archives', 'text_domain'),
-			'attributes'            => __('Club News Item Attributes', 'text_domain'),
-			'parent_item_colon'     => __('Club News Parent Item:', 'text_domain'),
-			'all_items'             => __('All Items', 'text_domain'),
-			'add_new_item'          => __('Add Club News', 'text_domain'),
-			'add_new'               => __('Add Club News', 'text_domain'),
-			'new_item'              => __('New Club News', 'text_domain'),
-			'edit_item'             => __('Edit Club News', 'text_domain'),
-			'update_item'           => __('Update Club News', 'text_domain'),
-			'view_item'             => __('View Club News', 'text_domain'),
-			'view_items'            => __('View Club News', 'text_domain'),
-			'search_items'          => __('Search Club News', 'text_domain'),
-			'not_found'             => __('Not found', 'text_domain'),
-			'not_found_in_trash'    => __('Not found in Trash', 'text_domain'),
-			'featured_image'        => __('Featured Image', 'text_domain'),
-			'set_featured_image'    => __('Set featured image', 'text_domain'),
-			'remove_featured_image' => __('Remove featured image', 'text_domain'),
-			'use_featured_image'    => __('Use as featured image', 'text_domain'),
-			'insert_into_item'      => __('Insert into Club News', 'text_domain'),
-			'uploaded_to_this_item' => __('Uploaded to this item', 'text_domain'),
-			'items_list'            => __('Club News list', 'text_domain'),
-			'items_list_navigation' => __('Club News list navigation', 'text_domain'),
-			'filter_items_list'     => __('Filter Club News list', 'text_domain'),
-		);
-		$args = array(
-			'label'               => __('Club News', 'text_domain'),
-			'description'         => __('Club News', 'text_domain'),
-			'labels'              => $labels,
-			'supports'            => array('title', 'editor', 'thumbnail', 'revisions'),
-			'hierarchical'        => true,
-			'public'              => true,
-			'rewrite'             => array('slug' => 'clubnews'),
-			'show_ui'             => true,
-			'show_in_menu'        => true,
-			'menu_position'       => 5,
-			'menu_icon'           => 'dashicons-info',
-			'show_in_admin_bar'   => true,
-			'show_in_nav_menus'   => true,
-			'can_export'          => true,
-			'has_archive'         => true,
-			'exclude_from_search' => false,
-			'publicly_queryable'  => true,
-			'capability_type'     => 'post',
-		);
-		register_post_type('club-news', $args);
-	}
-	add_action('init', 'cpt_club_news', 0);
-
-
-	add_action('init', 'gp_register_taxonomy_for_object_type');
-	function gp_register_taxonomy_for_object_type()
-	{
-		register_taxonomy_for_object_type('post_tag', 'club-news');
-	};
-
-	function ct_club_news_tax()
-	{
-		register_taxonomy(
-			'club-news-category',
-			'club-news',
-			array(
-				'label'             => __('Categories'),
-				'has_archive'       => true,
-				'rewrite'           => array('slug' => 'club-news'),
-				'hierarchical'      => true,
-				'show_admin_column' => true,
-			)
-		);
-	}
-	add_action('init', 'ct_club_news_tax');
-
-	/*function club_news_category_permalink($post_link, $post, $leavename, $sample)
-{
-if ( false !== strpos( $post_link, '%club-news-category%' ) ) {
-$club_news_category = get_the_terms( $post->ID, 'club-news-category' );
-if($club_news_category){
-$post_link = str_replace( '%club-news-category%', array_pop( $club_news_category )->slug, $post_link );
-} else {
-$post_link = str_replace( '%club-news-category%', 'default', $post_link );
-}
-}
-return $post_link;
-}
-add_filter('post_type_link', 'club_news_category_permalink', 10, 4);*/
-
 
 	function limit($limit, $the_content)
 	{
@@ -2180,130 +1822,14 @@ add_filter('post_type_link', 'club_news_category_permalink', 10, 4);*/
 		$content = str_replace(']]>', ']]>', $content);
 		return $content;
 	}
-	/*
-function my_acf_load_value( $value, $post_id, $field ) {
-// vars
-$order = array();
-// bail early if no value
-if( empty($value) ) {
-return $value;
-}
-// populate order
-foreach( $value as $i => $row ) {
-$order[ $i ] = $row['offers'];
-}
-// multisort
-array_multisort( $order, SORT_DESC, $value );
-// return	
-return $value;
-}
-add_filter('acf/load_value/name=scores', 'my_acf_load_value', 10, 3);
-*/
+
 	// Changing Sale icon in shop page
 	add_filter('woocommerce_sale_flash', 'wc_custom_replace_sale_text');
 	function wc_custom_replace_sale_text($html)
 	{
 		return str_replace(__('Sale!', 'woocommerce'), __('OFFER', 'woocommerce'), $html);
 	}
-	/*
-function remove_editor() {
-if (isset($_GET['post'])) {
-$id = $_GET['post'];
-$template = get_post_meta($id, '_wp_page_template', true);
-switch ($template) {
-case 'page-book-a-service.php':
-// the below removes 'editor' support for 'pages'
-// if you want to remove for posts or custom post types as well
-// add this line for posts:
-// remove_post_type_support('post', 'editor');
-// add this line for custom post types and replace 
-// custom-post-type-name with the name of post type:
-// remove_post_type_support('custom-post-type-name', 'editor');
-remove_post_type_support('page', 'editor');
-break;
-default :
-// Don't remove any other template.
-break;
-}
-}
-}
-add_action('init', 'remove_editor');*/
 
-	/*
-function show_template_name() {
-global $template;
-print_r($template);
-}
-add_action('wp_head', 'show_template_name');*/
-	/*
-function ccm_set_services_dropdown_value ( $tag, $unused ) {
-if ( $tag['name'] == 'service_types' ) { 
-$bike_info = get_field('bike_information','user_'.get_current_user_id());
-if( !empty( $bike_info) ) {
-$tag['raw_values'] = '';
-$tag['labels'] = '';
-$tag['values'] = '';
-foreach($bike_info as $info) {
-$bike_model = $info['bike_model'];
-$bike_regist = $info['bike_registration'];
-$tag['raw_values'][] = $bike_model .' - '. $bike_regist;
-$tag['labels'][]= $bike_model.' - '. $bike_regist;
-}
-$pipes = new WPCF7_Pipes( $tag['raw_values'] );
-$tag['values'] = $pipes->collect_befores();
-$tag['pipes'] = $pipes;
-}
-}
-return $tag;
-}
-add_filter( 'wpcf7_form_tag', 'ccm_set_vehicle_dropdown', 10, 2);
-*/
-
-	/*remove_role('bike_owners');
-remove_role('wpseo_editor');
-remove_role('wpseo_manager');
-remove_role('club_member');
-remove_role('ap_banned');
-remove_role('ap_participant');
-remove_role('shop_manager');
-remove_role('customer');
-remove_role('contributor');
-remove_role('author');
-remove_role('editor');
-remove_role('author');
-remove_role('ap_moderator');*/
-
-	/*// Allow only one service product on cart
-add_filter( 'woocommerce_add_to_cart_validation', 'allowed_quantity_per_category_in_the_cart', 10, 2 );
-function allowed_quantity_per_category_in_the_cart( $passed, $product_id) {
-$max_num_products = 1;// change the maximum allowed in the cart
-$running_qty = 0;
-$restricted_product_cats = array();
-//Restrict particular category/categories by category slug
-$restricted_product_cats[] = 'services';
-//$restricted_product_cats[] = 'cat-slug-two';
-// Getting the current product category slugs in an array
-$product_cats_object = get_the_terms( $product_id, 'product_cat' );
-foreach($product_cats_object as $obj_prod_cat) $current_product_cats[]=$obj_prod_cat->slug;
-// Iterating through each cart item
-foreach (WC()->cart->get_cart() as $cart_item_key=>$cart_item ){
-// Restrict $max_num_products from each category
-// if( has_term( $current_product_cats, 'product_cat', $cart_item['product_id'] )) {
-// Restrict $max_num_products from restricted product categories
-if( array_intersect($restricted_product_cats, $current_product_cats) && has_term( $restricted_product_cats, 'product_cat', $cart_item['product_id'] )) {
-// count(selected category) quantity
-$running_qty += (int) $cart_item['quantity'];
-// More than allowed products in the cart is not allowed
-if( $running_qty >= $max_num_products ) {
-wc_add_notice( sprintf( 'You can only add one services in the cart at time. If you wish to change your preferred service please remove the service product in your cart.',  $max_num_products ), 'error' );
-$passed = false; // don't add the new product to the cart
-// We stop the loop
-break;
-}
-}
-}
-return $passed;
-}*/
 	// Excluding service product in accessories page
 	add_action('woocommerce_product_query', 'custom_pre_get_posts_query');
 
@@ -2733,36 +2259,7 @@ add_filter( 'bbp_get_dynamic_roles', 'bbpress_forum_custom_roles', 1 );*/
 		return $country_name;
 	}
 	add_shortcode('get_country_by_ip', 'get_country_by_ip');
-	// CPT Templates
-	function cp_templates()
-	{
-		$labels = array(
-			'name'               => _x('Templates', 'post type general name'),
-			'singular_name'      => _x('Template', 'post type singular name'),
-			'add_new'            => _x('Add New', 'bike'),
-			'add_new_item'       => __('Add New bike'),
-			'edit_item'          => __('Edit bike'),
-			'new_item'           => __('New template'),
-			'all_items'          => __('All template'),
-			'view_item'          => __('View template'),
-			'search_items'       => __('Search template'),
-			'not_found'          => __('No template found'),
-			'not_found_in_trash' => __('No template found in the Trash'),
-			'parent_item_colon'  => '',
-			'menu_name'          => 'Templates'
-		);
-		$args = array(
-			'labels'        => $labels,
-			'description'   => 'Holds our articles and article specific data',
-			'public'        => true,
-			'menu_position' => 5,
-			'supports'      => array('title'),
-			'has_archive'   => true,
-		);
-		register_post_type('templates', $args);
-	}
 
-	add_action('init', 'cp_templates');
 
 
 	function page_submitted_sc()
