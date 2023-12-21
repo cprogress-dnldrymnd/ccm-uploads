@@ -83,7 +83,7 @@ get_header(); // This fxn gets the header.php file and renders it
     .custom-modal h2 {
         margin-top: 0;
         margin-bottom: 30px;
-        font-size: 30px;
+        font-size: 30px !important;
     }
 
     .custom-modal-backdrop.modal-active {
@@ -558,8 +558,694 @@ if (isset($_GET['action'])) {
                     <?php } else { ?>
                         <div class="col-md-12">
                             <div>
-                                <div>
-                                    <?= do_shortcode('[woocommerce_my_account]')  ?>
+                                <div class="woocommerce">
+                                    <div class="woocommerce-notices-wrapper">
+                                        <ul class="woocommerce-error" role="alert">
+                                            <li>
+                                                <strong>Error:</strong> Username is required.
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="u-columns col2-set" id="customer_login">
+
+                                        <div class="u-column1 col-1 the-login">
+
+
+                                            <h2>Login</h2>
+
+                                            <form class="woocommerce-form woocommerce-form-login login" method="post" data-hs-cf-bound="true">
+
+
+                                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                    <label for="username">Username or email address&nbsp;<span class="required">*</span></label>
+                                                    <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="">
+                                                </p>
+                                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                                    <label for="password">Password&nbsp;<span class="required">*</span></label>
+                                                    <span class="password-input"><input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password"><span class="show-password-input"></span></span>
+                                                </p>
+
+
+                                                <p class="form-row">
+                                                    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                                                        <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever"> <span>Remember me</span>
+                                                    </label>
+                                                    <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="8061503ae7"><input type="hidden" name="_wp_http_referer" value="/bikes/maverick-configure/?test=testss"> <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Log in">Log in</button>
+                                                </p>
+                                                <p class="woocommerce-LostPassword lost_password">
+                                                    <a href="https://ccm.theprogressteam.com/bikes/maverick-configure/lost-password/">Lost your password?</a>
+                                                </p>
+
+
+                                            </form>
+
+
+                                        </div>
+
+                                        <div class="u-column2 col-2 the-register hide-div">
+
+                                            <h2>Register</h2>
+
+                                            <form method="post" class="woocommerce-form woocommerce-form-register register" data-hs-cf-bound="true">
+
+
+                                                <p class="form-row form-row-first">
+                                                    <label for="reg_billing_first_name">First name <span class="required">*</span></label>
+                                                    <input type="text" class="input-text" name="billing_first_name" id="reg_billing_first_name" value="">
+                                                </p>
+                                                <p class="form-row form-row-last">
+                                                    <label for="reg_billing_last_name">Last name <span class="required">*</span></label>
+                                                    <input type="text" class="input-text" name="billing_last_name" id="reg_billing_last_name" value="">
+                                                </p>
+                                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide email_xx">
+                                                    <label for="reg_email">Email address&nbsp;<span class="required">*</span></label>
+                                                    <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="">
+                                                </p>
+                                                <p class="form-row form-row-wide display_name_xx">
+                                                    <label for="reg_nickname">Display name <span class="required">*</span></label>
+                                                    <input type="text" class="input-text" name="nickname" id="reg_nickname" value="">
+                                                </p>
+                                                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide password_xx">
+                                                    <label for="reg_password">Password&nbsp;<span class="required">*</span></label>
+                                                    <span class="password-input"><input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password"><span class="show-password-input"></span></span>
+                                                </p>
+                                                <p class="form-row form-row-wide">
+                                                    <label for="reg_confirm_password">Confirm Password <span class="required">*</span></label>
+                                                    <input type="password" class="input-text" name="confirm_password" id="reg_confirm_password">
+                                                </p>
+                                                <p class="form-row form-row-wide heading">
+                                                </p>
+                                                <h3>CONTACT INFORMATION</h3>
+                                                <p></p>
+                                                <p class="form-row form-row-wide">
+                                                    <label for="reg_billing_phone">Phone <span class="required">*</span></label>
+                                                    <input type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="">
+                                                </p>
+                                                <p class="form-row form-row-wide">
+                                                    <label for="reg_billing_address_1">Street Address <span class="required">*</span></label>
+                                                </p>
+                                                <p class="form-row form-row-first">
+                                                    <label for="reg_billing_address_1"></label>
+                                                    <input type="text" class="input-text" placeholder="House number and street name" name="billing_address_1" id="reg_billing_address_1" value="">
+                                                </p>
+                                                <p class="form-row form-row-last">
+                                                    <label for="reg_billing_address_2"></label>
+                                                    <input type="text" class="input-text" placeholder="Apartment, suite, unit, etc.(optional)" name="billing_address_2" id="reg_billing_address_2" value="">
+                                                </p>
+                                                <p class="form-row form-row-first">
+                                                    <label for="reg_billing_city">Town/City <span class="required">*</span></label>
+                                                    <input type="text" class="input-text" name="billing_city" id="reg_billing_city" value="">
+                                                </p>
+                                                <p class="form-row form-row-last">
+                                                    <label for="reg_billing_postcode">Zip/Postcode <span class="required">*</span></label>
+                                                    <input type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="">
+                                                </p>
+                                                <p class="form-row form-row-first">
+                                                    <label for="reg_billing_postcode">Country <span class="required">*</span></label>
+                                                    <select name="billing_country" id="reg_billing_country" class="input-text">
+                                                        <option value=""></option>
+                                                        <option value="AF">Afghanistan</option>
+                                                        <option value="AX">Åland Islands</option>
+                                                        <option value="AL">Albania</option>
+                                                        <option value="DZ">Algeria</option>
+                                                        <option value="AS">American Samoa</option>
+                                                        <option value="AD">Andorra</option>
+                                                        <option value="AO">Angola</option>
+                                                        <option value="AI">Anguilla</option>
+                                                        <option value="AQ">Antarctica</option>
+                                                        <option value="AG">Antigua and Barbuda</option>
+                                                        <option value="AR">Argentina</option>
+                                                        <option value="AM">Armenia</option>
+                                                        <option value="AW">Aruba</option>
+                                                        <option value="AU">Australia</option>
+                                                        <option value="AT">Austria</option>
+                                                        <option value="AZ">Azerbaijan</option>
+                                                        <option value="BS">Bahamas</option>
+                                                        <option value="BH">Bahrain</option>
+                                                        <option value="BD">Bangladesh</option>
+                                                        <option value="BB">Barbados</option>
+                                                        <option value="BY">Belarus</option>
+                                                        <option value="PW">Belau</option>
+                                                        <option value="BE">Belgium</option>
+                                                        <option value="BZ">Belize</option>
+                                                        <option value="BJ">Benin</option>
+                                                        <option value="BM">Bermuda</option>
+                                                        <option value="BT">Bhutan</option>
+                                                        <option value="BO">Bolivia</option>
+                                                        <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
+                                                        <option value="BA">Bosnia and Herzegovina</option>
+                                                        <option value="BW">Botswana</option>
+                                                        <option value="BV">Bouvet Island</option>
+                                                        <option value="BR">Brazil</option>
+                                                        <option value="IO">British Indian Ocean Territory</option>
+                                                        <option value="BN">Brunei</option>
+                                                        <option value="BG">Bulgaria</option>
+                                                        <option value="BF">Burkina Faso</option>
+                                                        <option value="BI">Burundi</option>
+                                                        <option value="KH">Cambodia</option>
+                                                        <option value="CM">Cameroon</option>
+                                                        <option value="CA">Canada</option>
+                                                        <option value="CV">Cape Verde</option>
+                                                        <option value="KY">Cayman Islands</option>
+                                                        <option value="CF">Central African Republic</option>
+                                                        <option value="TD">Chad</option>
+                                                        <option value="CL">Chile</option>
+                                                        <option value="CN">China</option>
+                                                        <option value="CX">Christmas Island</option>
+                                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                                        <option value="CO">Colombia</option>
+                                                        <option value="KM">Comoros</option>
+                                                        <option value="CG">Congo (Brazzaville)</option>
+                                                        <option value="CD">Congo (Kinshasa)</option>
+                                                        <option value="CK">Cook Islands</option>
+                                                        <option value="CR">Costa Rica</option>
+                                                        <option value="HR">Croatia</option>
+                                                        <option value="CU">Cuba</option>
+                                                        <option value="CW">Curaçao</option>
+                                                        <option value="CY">Cyprus</option>
+                                                        <option value="CZ">Czech Republic</option>
+                                                        <option value="DK">Denmark</option>
+                                                        <option value="DJ">Djibouti</option>
+                                                        <option value="DM">Dominica</option>
+                                                        <option value="DO">Dominican Republic</option>
+                                                        <option value="EC">Ecuador</option>
+                                                        <option value="EG">Egypt</option>
+                                                        <option value="SV">El Salvador</option>
+                                                        <option value="GQ">Equatorial Guinea</option>
+                                                        <option value="ER">Eritrea</option>
+                                                        <option value="EE">Estonia</option>
+                                                        <option value="SZ">Eswatini</option>
+                                                        <option value="ET">Ethiopia</option>
+                                                        <option value="FK">Falkland Islands</option>
+                                                        <option value="FO">Faroe Islands</option>
+                                                        <option value="FJ">Fiji</option>
+                                                        <option value="FI">Finland</option>
+                                                        <option value="FR">France</option>
+                                                        <option value="GF">French Guiana</option>
+                                                        <option value="PF">French Polynesia</option>
+                                                        <option value="TF">French Southern Territories</option>
+                                                        <option value="GA">Gabon</option>
+                                                        <option value="GM">Gambia</option>
+                                                        <option value="GE">Georgia</option>
+                                                        <option value="DE">Germany</option>
+                                                        <option value="GH">Ghana</option>
+                                                        <option value="GI">Gibraltar</option>
+                                                        <option value="GR">Greece</option>
+                                                        <option value="GL">Greenland</option>
+                                                        <option value="GD">Grenada</option>
+                                                        <option value="GP">Guadeloupe</option>
+                                                        <option value="GU">Guam</option>
+                                                        <option value="GT">Guatemala</option>
+                                                        <option value="GG">Guernsey</option>
+                                                        <option value="GN">Guinea</option>
+                                                        <option value="GW">Guinea-Bissau</option>
+                                                        <option value="GY">Guyana</option>
+                                                        <option value="HT">Haiti</option>
+                                                        <option value="HM">Heard Island and McDonald Islands</option>
+                                                        <option value="HN">Honduras</option>
+                                                        <option value="HK">Hong Kong</option>
+                                                        <option value="HU">Hungary</option>
+                                                        <option value="IS">Iceland</option>
+                                                        <option value="IN">India</option>
+                                                        <option value="ID">Indonesia</option>
+                                                        <option value="IR">Iran</option>
+                                                        <option value="IQ">Iraq</option>
+                                                        <option value="IE">Ireland</option>
+                                                        <option value="IM">Isle of Man</option>
+                                                        <option value="IL">Israel</option>
+                                                        <option value="IT">Italy</option>
+                                                        <option value="CI">Ivory Coast</option>
+                                                        <option value="JM">Jamaica</option>
+                                                        <option value="JP">Japan</option>
+                                                        <option value="JE">Jersey</option>
+                                                        <option value="JO">Jordan</option>
+                                                        <option value="KZ">Kazakhstan</option>
+                                                        <option value="KE">Kenya</option>
+                                                        <option value="KI">Kiribati</option>
+                                                        <option value="KW">Kuwait</option>
+                                                        <option value="KG">Kyrgyzstan</option>
+                                                        <option value="LA">Laos</option>
+                                                        <option value="LV">Latvia</option>
+                                                        <option value="LB">Lebanon</option>
+                                                        <option value="LS">Lesotho</option>
+                                                        <option value="LR">Liberia</option>
+                                                        <option value="LY">Libya</option>
+                                                        <option value="LI">Liechtenstein</option>
+                                                        <option value="LT">Lithuania</option>
+                                                        <option value="LU">Luxembourg</option>
+                                                        <option value="MO">Macao</option>
+                                                        <option value="MG">Madagascar</option>
+                                                        <option value="MW">Malawi</option>
+                                                        <option value="MY">Malaysia</option>
+                                                        <option value="MV">Maldives</option>
+                                                        <option value="ML">Mali</option>
+                                                        <option value="MT">Malta</option>
+                                                        <option value="MH">Marshall Islands</option>
+                                                        <option value="MQ">Martinique</option>
+                                                        <option value="MR">Mauritania</option>
+                                                        <option value="MU">Mauritius</option>
+                                                        <option value="YT">Mayotte</option>
+                                                        <option value="MX">Mexico</option>
+                                                        <option value="FM">Micronesia</option>
+                                                        <option value="MD">Moldova</option>
+                                                        <option value="MC">Monaco</option>
+                                                        <option value="MN">Mongolia</option>
+                                                        <option value="ME">Montenegro</option>
+                                                        <option value="MS">Montserrat</option>
+                                                        <option value="MA">Morocco</option>
+                                                        <option value="MZ">Mozambique</option>
+                                                        <option value="MM">Myanmar</option>
+                                                        <option value="NA">Namibia</option>
+                                                        <option value="NR">Nauru</option>
+                                                        <option value="NP">Nepal</option>
+                                                        <option value="NL">Netherlands</option>
+                                                        <option value="NC">New Caledonia</option>
+                                                        <option value="NZ">New Zealand</option>
+                                                        <option value="NI">Nicaragua</option>
+                                                        <option value="NE">Niger</option>
+                                                        <option value="NG">Nigeria</option>
+                                                        <option value="NU">Niue</option>
+                                                        <option value="NF">Norfolk Island</option>
+                                                        <option value="KP">North Korea</option>
+                                                        <option value="MK">North Macedonia</option>
+                                                        <option value="MP">Northern Mariana Islands</option>
+                                                        <option value="NO">Norway</option>
+                                                        <option value="OM">Oman</option>
+                                                        <option value="PK">Pakistan</option>
+                                                        <option value="PS">Palestinian Territory</option>
+                                                        <option value="PA">Panama</option>
+                                                        <option value="PG">Papua New Guinea</option>
+                                                        <option value="PY">Paraguay</option>
+                                                        <option value="PE">Peru</option>
+                                                        <option value="PH">Philippines</option>
+                                                        <option value="PN">Pitcairn</option>
+                                                        <option value="PL">Poland</option>
+                                                        <option value="PT">Portugal</option>
+                                                        <option value="PR">Puerto Rico</option>
+                                                        <option value="QA">Qatar</option>
+                                                        <option value="RE">Reunion</option>
+                                                        <option value="RO">Romania</option>
+                                                        <option value="RU">Russia</option>
+                                                        <option value="RW">Rwanda</option>
+                                                        <option value="ST">São Tomé and Príncipe</option>
+                                                        <option value="BL">Saint Barthélemy</option>
+                                                        <option value="SH">Saint Helena</option>
+                                                        <option value="KN">Saint Kitts and Nevis</option>
+                                                        <option value="LC">Saint Lucia</option>
+                                                        <option value="SX">Saint Martin (Dutch part)</option>
+                                                        <option value="MF">Saint Martin (French part)</option>
+                                                        <option value="PM">Saint Pierre and Miquelon</option>
+                                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                                        <option value="WS">Samoa</option>
+                                                        <option value="SM">San Marino</option>
+                                                        <option value="SA">Saudi Arabia</option>
+                                                        <option value="SN">Senegal</option>
+                                                        <option value="RS">Serbia</option>
+                                                        <option value="SC">Seychelles</option>
+                                                        <option value="SL">Sierra Leone</option>
+                                                        <option value="SG">Singapore</option>
+                                                        <option value="SK">Slovakia</option>
+                                                        <option value="SI">Slovenia</option>
+                                                        <option value="SB">Solomon Islands</option>
+                                                        <option value="SO">Somalia</option>
+                                                        <option value="ZA">South Africa</option>
+                                                        <option value="GS">South Georgia/Sandwich Islands</option>
+                                                        <option value="KR">South Korea</option>
+                                                        <option value="SS">South Sudan</option>
+                                                        <option value="ES">Spain</option>
+                                                        <option value="LK">Sri Lanka</option>
+                                                        <option value="SD">Sudan</option>
+                                                        <option value="SR">Suriname</option>
+                                                        <option value="SJ">Svalbard and Jan Mayen</option>
+                                                        <option value="SE">Sweden</option>
+                                                        <option value="CH">Switzerland</option>
+                                                        <option value="SY">Syria</option>
+                                                        <option value="TW">Taiwan</option>
+                                                        <option value="TJ">Tajikistan</option>
+                                                        <option value="TZ">Tanzania</option>
+                                                        <option value="TH">Thailand</option>
+                                                        <option value="TL">Timor-Leste</option>
+                                                        <option value="TG">Togo</option>
+                                                        <option value="TK">Tokelau</option>
+                                                        <option value="TO">Tonga</option>
+                                                        <option value="TT">Trinidad and Tobago</option>
+                                                        <option value="TN">Tunisia</option>
+                                                        <option value="TR">Turkey</option>
+                                                        <option value="TM">Turkmenistan</option>
+                                                        <option value="TC">Turks and Caicos Islands</option>
+                                                        <option value="TV">Tuvalu</option>
+                                                        <option value="UG">Uganda</option>
+                                                        <option value="UA">Ukraine</option>
+                                                        <option value="AE">United Arab Emirates</option>
+                                                        <option value="GB">United Kingdom (UK)</option>
+                                                        <option value="US">United States (US)</option>
+                                                        <option value="UM">United States (US) Minor Outlying Islands</option>
+                                                        <option value="UY">Uruguay</option>
+                                                        <option value="UZ">Uzbekistan</option>
+                                                        <option value="VU">Vanuatu</option>
+                                                        <option value="VA">Vatican</option>
+                                                        <option value="VE">Venezuela</option>
+                                                        <option value="VN">Vietnam</option>
+                                                        <option value="VG">Virgin Islands (British)</option>
+                                                        <option value="VI">Virgin Islands (US)</option>
+                                                        <option value="WF">Wallis and Futuna</option>
+                                                        <option value="EH">Western Sahara</option>
+                                                        <option value="YE">Yemen</option>
+                                                        <option value="ZM">Zambia</option>
+                                                        <option value="ZW">Zimbabwe</option>
+                                                    </select>
+                                                </p>
+                                                <div class="ownership ">
+                                                    <p class="form-row form-row-wide">
+                                                        <input type="hidden" class="input-text" name="ownership" id="owner" value="no">
+                                                    </p>
+
+                                                    <div class="clear">
+
+                                                    </div>
+
+
+
+
+
+
+
+
+                                                    <div id="acf-form-data" class="acf-hidden">
+                                                        <input type="hidden" id="_acf_screen" name="_acf_screen" value="acf_form"><input type="hidden" id="_acf_post_id" name="_acf_post_id" value="13923"><input type="hidden" id="_acf_validation" name="_acf_validation" value="1"><input type="hidden" id="_acf_form" name="_acf_form" value="bHBGY3lMR0lCRFZ4NXhUVUErR1dFVG1JRFdVc3NoakFDUk5yUWRtK3E4S3ltNG5IWlBuVm04YjEyUXZTZnBtQzN0Q1Zkc1JKWitWWkQ3Nm4rS0dYZzd1N3kySXJiWTNYYXlwTDYxbmk1RmJ4VWRkTFZBMW5QeHo1SndYeDhZc0FPaCtrcGRtMCtqWEt5VVRJd1RHZGtHK1hscmhXditWazM1TDZXUjFvR2JZcmtFQ3RISExHT0dHZE1hN1ZKTVl3ZE5URzZUWldLNTV6aFovd3dTQXVVU0lzSnRTalIrK1BPR3JuTm00QmpjSUNvTVNaeHd6b0RMQllvdEdvdUgwNHNwTzBmZldxejgwUkFmemVTbEdmVXlrYUw1eUdpcHVUdmpJR2ZiZE1oSjVLeDJ0aDAwMHVBZHJJekpIZWg2aWNjMFpBT0t1cWZIN1dLRkZySjZaTVZvcW1MUVNsZGpWeFRPQmJUREdXS0QycWhkNFl1MFZkdWVPa3EwQm5HZHFST3ZzNFJpbFJXcnk3T2x3dGRtRkVveis0alM0M2pYeG5LQ2JOMlhOekJFUS9iWnRBN1gwbGhpanovWFFkTHZOYklodjYybno3SjdVb2cweGpHOUZkZzFpT2ZoeE1VRm0wUytYVkJOZGs3R2xPT25Yejk1VGdmZVZNSURud3hBc3dLUjNKeG4vM1lYempmb1Jsd2ErV2RXSm9XWTRCYk0zT1RYTDQ2eHVQL0I3VDRlUnRIa1lVWXJmRjNjcVFpMUhUQUFqZUluQ3l6amtQMzB1MVhwU21DL1NhQmxnT2syeE5HYzJJNENlekxGMjAxdS9rWjNRVG5CcmdybzNOT255dytFbUh5bkxjVUpDZGoyRDhMY2N5aHpDZElkRjhoN0tVVWk5bG9PQzUyOXk2K2lLY1cxNU9HdlVGNXkxNCs4cXVlVzNiOGZtMzFYRGMvUENleXRFblVNVnZPYlF6Qy81STFKc1Y0ais1YndTbU8ySFJ0UEN3RkJoTmlscDdaeXZYb2x1WDdMR0s0QUo5RWtCVk53eXBQbGhZVGZxQTV2dHdyTlo0SXVITDJSRlpITkNtejVLT3B2d1hNam4yME9iQ3NoVngrdFRVNXgyd0lrUjNzNEhNaXlJalVyQ0tIM215blhiVncwdWtoZjE4YjNGdjBVdkl6R1AwWDg0ZHdVTXhlZG5GNXd3SngzZlJKWjY3SjMrYUdBOTdDSEVyVHBZUHhRUGx1QjFueGdCeUZzaTU1cGhNY0Q3Y1N4aUNhWlUxdmhyUmwwMGhna0ZRTkI2RVZ4eTVPdz09OjpcWMmkSFHpcSJc/33Kh5UM"><input type="hidden" id="_acf_nonce" name="_acf_nonce" value="4858cfd39d"><input type="hidden" id="_acf_changed" name="_acf_changed" value="0">
+                                                    </div>
+                                                    <div class="acf-fields acf-form-fields -top">
+
+                                                        <div class="acf-field acf-field-radio acf-field-5ec7dea293736 form-row radio-btn radio-btn-3 form-row form-row" data-name="gender" data-type="radio" data-key="field_5ec7dea293736">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5ec7dea293736">Gender</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <input type="hidden" name="acf[field_5ec7dea293736]">
+                                                                <ul class="acf-radio-list acf-bl  input-text" data-allow_null="1" data-other_choice="0">
+                                                                    <li><label><input type="radio" id="acf-field_5ec7dea293736-male" name="acf[field_5ec7dea293736]" value="Male">Male</label></li>
+                                                                    <li><label><input type="radio" id="acf-field_5ec7dea293736-female" name="acf[field_5ec7dea293736]" value="Female">Female</label></li>
+                                                                    <li><label><input type="radio" id="acf-field_5ec7dea293736-prefer-not-to-say" name="acf[field_5ec7dea293736]" value="Prefer not to say">Prefer not to say</label></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-radio acf-field-5eb16b9ef7297 form-row form-row do-you-own form-row radio-btn form-row form-row form-row form-row form-row form-row form-row form-row form-row form-row form-row" data-name="do_you_own_a_ccm_motorcycle" data-type="radio" data-key="field_5eb16b9ef7297">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5eb16b9ef7297">DO YOU OWN A CCM MOTORCYCLE?</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <input type="hidden" name="acf[field_5eb16b9ef7297]">
+                                                                <ul class="acf-radio-list acf-hl  input-text" data-allow_null="1" data-other_choice="0">
+                                                                    <li><label><input type="radio" id="acf-field_5eb16b9ef7297-yes-im-a-ccm-owner" name="acf[field_5eb16b9ef7297]" value="Yes, I'm a CCM owner!">Yes, I'm a CCM owner!</label></li>
+                                                                    <li><label><input type="radio" id="acf-field_5eb16b9ef7297-no-im-just-an-enthusiast" name="acf[field_5eb16b9ef7297]" value="No, I'm just an enthusiast!">No, I'm just an enthusiast!</label></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-repeater acf-field-5ced50e8d2411 form-row acf-hidden form-row bike-list-wrapper form-row" data-name="bike_information" data-type="repeater" data-key="field_5ced50e8d2411" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16b9ef7297&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;Yes, I'm a CCM owner!&quot;}]]">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5ced50e8d2411">TELL US WHICH CCM/S YOU OWN</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <div class="acf-repeater -empty -table" data-min="0" data-max="0">
+                                                                    <input type="hidden" name="acf[field_5ced50e8d2411]" value="" disabled="">
+                                                                    <table class="acf-table">
+
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="acf-row-handle"></th>
+
+                                                                                <th class="acf-th" data-name="bike_model" data-type="select" data-key="field_5ced5159d2412">
+                                                                                    <label>Bike model</label>
+                                                                                </th>
+                                                                                <th class="acf-th" data-name="bike_registration" data-type="text" data-key="field_5ced51ad6511e">
+                                                                                    <label>Bike Registration</label>
+                                                                                </th>
+
+                                                                                <th class="acf-row-handle"></th>
+                                                                            </tr>
+                                                                        </thead>
+
+                                                                        <tbody>
+                                                                            <tr class="acf-row acf-clone" data-id="acfcloneindex">
+
+                                                                                <td class="acf-row-handle order" title="Drag to reorder">
+                                                                                    <span>1</span>
+                                                                                </td>
+
+
+                                                                                <td class="acf-field acf-field-select acf-field-5ced5159d2412 form-row form-row" data-name="bike_model" data-type="select" data-key="field_5ced5159d2412">
+                                                                                    <div class="acf-input">
+                                                                                        <select id="acf-field_5ced50e8d2411-acfcloneindex-field_5ced5159d2412" class="input-text" name="acf[field_5ced50e8d2411][acfcloneindex][field_5ced5159d2412]" data-ui="0" data-ajax="0" data-multiple="0" data-placeholder="Select" data-allow_null="0" disabled="">
+                                                                                            <option value="0">Foggy S Edition Spitfire</option>
+                                                                                            <option value="1">CCM Spitfire Six</option>
+                                                                                            <option value="2">Foggy Edition Spitfire</option>
+                                                                                            <option value="3">RAF Benevolent Fund Spitfire</option>
+                                                                                            <option value="4">GP450 Adventure</option>
+                                                                                            <option value="5">Spitfire Scrambler</option>
+                                                                                            <option value="6">Spitfire Flat Tracker</option>
+                                                                                            <option value="7">Spitfire Café Racer</option>
+                                                                                            <option value="8">Spitfire Bobber</option>
+                                                                                            <option value="9">Spitfire</option>
+                                                                                            <option value="10">Stealth Six</option>
+                                                                                            <option value="11">Stealth Foggy</option>
+                                                                                            <option value="12">Stealth Bobber</option>
+                                                                                            <option value="13">Blackout</option>
+                                                                                            <option value="14">Maverick</option>
+                                                                                            <option value="15">Heritage ‘71</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </td>
+
+                                                                                <td class="acf-field acf-field-text acf-field-5ced51ad6511e form-row form-row" data-name="bike_registration" data-type="text" data-key="field_5ced51ad6511e">
+                                                                                    <div class="acf-input">
+                                                                                        <div class="acf-input-wrap"><input type="text" id="acf-field_5ced50e8d2411-acfcloneindex-field_5ced51ad6511e" class="input-text" name="acf[field_5ced50e8d2411][acfcloneindex][field_5ced51ad6511e]" disabled=""></div>
+                                                                                    </div>
+                                                                                </td>
+
+
+
+                                                                                <td class="acf-row-handle remove">
+                                                                                    <a class="acf-icon -plus small acf-js-tooltip hide-on-shift" href="#" data-event="add-row" title="Add row"></a>
+                                                                                    <a class="acf-icon -duplicate small acf-js-tooltip show-on-shift" href="#" data-event="duplicate-row" title="Duplicate row"></a>
+                                                                                    <a class="acf-icon -minus small acf-js-tooltip" href="#" data-event="remove-row" title="Remove row"></a>
+                                                                                </td>
+
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+
+                                                                    <div class="acf-actions">
+                                                                        <a class="acf-button button button-primary" href="#" data-event="add-row">Add a Bike</a>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-group acf-field-5eb16bc2f7298 form-row group form-row" data-name="first_hear_about_ccm" data-type="group" data-key="field_5eb16bc2f7298">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5eb16bc2f7298">FIRST HEAR ABOUT CCM</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <div class="acf-fields -top -border">
+                                                                    <div class="acf-field acf-field-select acf-field-5eb16c0ff7299 form-row form-row" data-name="where_did_you_first_hear_about_ccm" data-type="select" data-key="field_5eb16c0ff7299">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16bc2f7298-field_5eb16c0ff7299">WHERE DID YOU FIRST HEAR ABOUT CCM?</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <select id="acf-field_5eb16bc2f7298-field_5eb16c0ff7299" class="input-text" name="acf[field_5eb16bc2f7298][field_5eb16c0ff7299]" data-ui="0" data-ajax="0" data-multiple="0" data-placeholder="Select" data-allow_null="0">
+                                                                                <option value="At a bike show">At a bike show</option>
+                                                                                <option value="At an event">At an event</option>
+                                                                                <option value="Social media">Social media</option>
+                                                                                <option value="Magazine">Magazine</option>
+                                                                                <option value="Google Search">Google Search</option>
+                                                                                <option value="Word of mouth">Word of mouth</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="acf-field acf-field-text acf-field-5eb16c2df729a form-row subfield form-row" data-name="please_name" data-type="text" data-key="field_5eb16c2df729a" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16c0ff7299&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;At a bike show&quot;}],[{&quot;field&quot;:&quot;field_5eb16c0ff7299&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;At an event&quot;}]]">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16bc2f7298-field_5eb16c2df729a">Please name</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <div class="acf-input-wrap"><input type="text" id="acf-field_5eb16bc2f7298-field_5eb16c2df729a" class="input-text" name="acf[field_5eb16bc2f7298][field_5eb16c2df729a]"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="acf-field acf-field-select acf-field-5eb16caa0d3d7 subfield form-row acf-hidden" data-name="social_media" data-type="select" data-key="field_5eb16caa0d3d7" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16c0ff7299&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;Social media&quot;}]]" hidden="">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16bc2f7298-field_5eb16caa0d3d7">Social media</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <select id="acf-field_5eb16bc2f7298-field_5eb16caa0d3d7" class="input-text" name="acf[field_5eb16bc2f7298][field_5eb16caa0d3d7]" data-ui="0" data-ajax="0" data-multiple="0" data-placeholder="Select" data-allow_null="0" disabled="">
+                                                                                <option value="Facebook">Facebook</option>
+                                                                                <option value="Instagram">Instagram</option>
+                                                                                <option value="Twitter">Twitter</option>
+                                                                                <option value="Youtube">Youtube</option>
+                                                                                <option value="Pinterest">Pinterest</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="acf-field acf-field-select acf-field-5eb16cefb1a79 subfield  form-row acf-hidden" data-name="magazine" data-type="select" data-key="field_5eb16cefb1a79" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16c0ff7299&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;Magazine&quot;}]]" hidden="">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16bc2f7298-field_5eb16cefb1a79">Magazine</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <select id="acf-field_5eb16bc2f7298-field_5eb16cefb1a79" class="input-text" name="acf[field_5eb16bc2f7298][field_5eb16cefb1a79]" data-ui="0" data-ajax="0" data-multiple="0" data-placeholder="Select" data-allow_null="0" disabled="">
+                                                                                <option value="Bike">Bike</option>
+                                                                                <option value="Ride">Ride</option>
+                                                                                <option value="MCN">MCN</option>
+                                                                                <option value="Built">Built</option>
+                                                                                <option value="Classic Bike">Classic Bike</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="acf-field acf-field-text acf-field-5eb16d0db1a7a subfield   form-row form-row acf-hidden" data-name="please_specify" data-type="text" data-key="field_5eb16d0db1a7a" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16c0ff7299&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;Other&quot;}]]" hidden="">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16bc2f7298-field_5eb16d0db1a7a">Please specify</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <div class="acf-input-wrap"><input type="text" id="acf-field_5eb16bc2f7298-field_5eb16d0db1a7a" class="input-text" name="acf[field_5eb16bc2f7298][field_5eb16d0db1a7a]" disabled=""></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-select acf-field-5eb16d98a2c1a form-row acf-hidden" data-name="how_many_miles_do_you_ride_annually" data-type="select" data-key="field_5eb16d98a2c1a" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16b9ef7297&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;Yes, I'm a CCM owner!&quot;}]]" hidden="">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5eb16d98a2c1a">HOW MANY MILES DO YOU RIDE ANNUALLY?</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <select id="acf-field_5eb16d98a2c1a" class="input-text" name="acf[field_5eb16d98a2c1a]" data-ui="0" data-ajax="0" data-multiple="0" data-placeholder="Select" data-allow_null="0" disabled="">
+                                                                    <option value="500 - 1000">500 - 1000</option>
+                                                                    <option value="1000 - 3000">1000 - 3000</option>
+                                                                    <option value="3000 - 5000">3000 - 5000</option>
+                                                                    <option value="5000+">5000+</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-checkbox acf-field-5eb16dbda2c1b radio-btn form-row form-row" data-name="what_other_bikes_do_you_own" data-type="checkbox" data-key="field_5eb16dbda2c1b">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5eb16dbda2c1b">WHAT OTHER BIKES DO YOU OWN?</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <input type="hidden" name="acf[field_5eb16dbda2c1b]">
+                                                                <ul class="acf-checkbox-list acf-hl  input-text">
+                                                                    <li><label><input type="checkbox" id="acf-field_5eb16dbda2c1b-Sports-bike" name="acf[field_5eb16dbda2c1b][]" value="Sports bike"> Sports bike</label></li>
+                                                                    <li><label><input type="checkbox" id="acf-field_5eb16dbda2c1b-Track-day-bike" name="acf[field_5eb16dbda2c1b][]" value="Track day bike"> Track day bike</label></li>
+                                                                    <li><label><input type="checkbox" id="acf-field_5eb16dbda2c1b-Adventure-bike" name="acf[field_5eb16dbda2c1b][]" value="Adventure bike"> Adventure bike</label></li>
+                                                                    <li><label><input type="checkbox" id="acf-field_5eb16dbda2c1b-Custom/Cruiser" name="acf[field_5eb16dbda2c1b][]" value="Custom/Cruiser"> Custom/Cruiser</label></li>
+                                                                    <li><label><input type="checkbox" id="acf-field_5eb16dbda2c1b-Dirt-bike" name="acf[field_5eb16dbda2c1b][]" value="Dirt bike"> Dirt bike</label></li>
+                                                                    <li><label><input type="checkbox" id="acf-field_5eb16dbda2c1b-Electric" name="acf[field_5eb16dbda2c1b][]" value="Electric"> Electric</label></li>
+                                                                    <li><label><input type="checkbox" id="acf-field_5eb16dbda2c1b-Tourer" name="acf[field_5eb16dbda2c1b][]" value="Tourer"> Tourer</label></li>
+                                                                    <li><label><input type="checkbox" id="acf-field_5eb16dbda2c1b-None" name="acf[field_5eb16dbda2c1b][]" value="None"> None</label></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-select acf-field-5eb16de3a2c1c form-row form-row" data-name="when_do_you_plan_to_buy_your_next_bike" data-type="select" data-key="field_5eb16de3a2c1c">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5eb16de3a2c1c">WHEN DO YOU PLAN TO BUY YOUR NEXT BIKE?</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <select id="acf-field_5eb16de3a2c1c" class="input-text" name="acf[field_5eb16de3a2c1c]" data-ui="0" data-ajax="0" data-multiple="0" data-placeholder="Select" data-allow_null="0">
+                                                                    <option value="Within the next few weeks">Within the next few weeks</option>
+                                                                    <option value="This summer">This summer</option>
+                                                                    <option value="Later this year">Later this year</option>
+                                                                    <option value="Next year">Next year</option>
+                                                                    <option value="No plans">No plans</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-group acf-field-5eb16dfba2c1d group form-row form-row acf-hidden" data-name="consider_another_ccm" data-type="group" data-key="field_5eb16dfba2c1d" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16b9ef7297&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;Yes, I'm a CCM owner!&quot;}]]" hidden="">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5eb16dfba2c1d">CONSIDER ANOTHER CCM</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <div class="acf-fields -top -border">
+                                                                    <div class="acf-field acf-field-radio acf-field-5eb16e17a2c1e radio-btn form-row" data-name="would_you_consider_another_ccm" data-type="radio" data-key="field_5eb16e17a2c1e">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16dfba2c1d-field_5eb16e17a2c1e">WOULD YOU CONSIDER ANOTHER CCM?</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <input type="hidden" name="acf[field_5eb16dfba2c1d][field_5eb16e17a2c1e]" disabled="">
+                                                                            <ul class="acf-radio-list acf-hl  input-text" data-allow_null="0" data-other_choice="0">
+                                                                                <li><label class=""><input type="radio" id="acf-field_5eb16dfba2c1d-field_5eb16e17a2c1e-yes" name="acf[field_5eb16dfba2c1d][field_5eb16e17a2c1e]" value="Yes" disabled="">Yes</label></li>
+                                                                                <li><label><input type="radio" id="acf-field_5eb16dfba2c1d-field_5eb16e17a2c1e-no" name="acf[field_5eb16dfba2c1d][field_5eb16e17a2c1e]" value="No" disabled="">No</label></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="acf-field acf-field-text acf-field-5eb16e3ea2c1f subfield form-row acf-hidden" data-name="why_not" data-type="text" data-key="field_5eb16e3ea2c1f" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16e17a2c1e&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;No&quot;}]]" hidden="">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16dfba2c1d-field_5eb16e3ea2c1f">Why not?</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <div class="acf-input-wrap"><input type="text" id="acf-field_5eb16dfba2c1d-field_5eb16e3ea2c1f" class="input-text" name="acf[field_5eb16dfba2c1d][field_5eb16e3ea2c1f]" disabled=""></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-group acf-field-5eb16e56a2c20 group  form-row form-row" data-name="bike_you_want_ccm_to_make" data-type="group" data-key="field_5eb16e56a2c20">
+                                                            <div class="acf-label">
+                                                                <label for="acf-field_5eb16e56a2c20">BIKE YOU WANT CCM TO MAKE</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <div class="acf-fields -top -border">
+                                                                    <div class="acf-field acf-field-checkbox acf-field-5eb16e71a2c21 radio-btn form-row form-row form-row" data-name="what_sort_of_bike_would_you_like_to_see_ccm_make" data-type="checkbox" data-key="field_5eb16e71a2c21">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16e56a2c20-field_5eb16e71a2c21">WHAT SORT OF BIKE WOULD YOU LIKE TO SEE CCM MAKE?</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <input type="hidden" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21]">
+                                                                            <ul class="acf-checkbox-list acf-hl  input-text">
+                                                                                <li><label><input type="checkbox" id="acf-field_5eb16e56a2c20-field_5eb16e71a2c21-Classic-Adventure-Bike" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21][]" value="Classic Adventure Bike"> Classic Adventure Bike</label></li>
+                                                                                <li><label><input type="checkbox" id="acf-field_5eb16e56a2c20-field_5eb16e71a2c21-Modern-Retro-Naked" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21][]" value="Modern Retro Naked"> Modern Retro Naked</label></li>
+                                                                                <li><label><input type="checkbox" id="acf-field_5eb16e56a2c20-field_5eb16e71a2c21-Modern-Retro-Sports" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21][]" value="Modern Retro Sports"> Modern Retro Sports</label></li>
+                                                                                <li><label><input type="checkbox" id="acf-field_5eb16e56a2c20-field_5eb16e71a2c21-Classic-Track-Racing" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21][]" value="Classic Track Racing"> Classic Track Racing</label></li>
+                                                                                <li><label><input type="checkbox" id="acf-field_5eb16e56a2c20-field_5eb16e71a2c21-Twinshock-Roadster" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21][]" value="Twinshock Roadster"> Twinshock Roadster</label></li>
+                                                                                <li><label><input type="checkbox" id="acf-field_5eb16e56a2c20-field_5eb16e71a2c21-Comfortable-Commuter" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21][]" value="Comfortable Commuter"> Comfortable Commuter</label></li>
+                                                                                <li><label><input type="checkbox" id="acf-field_5eb16e56a2c20-field_5eb16e71a2c21-Cruiser" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21][]" value="Cruiser"> Cruiser</label></li>
+                                                                                <li><label><input type="checkbox" id="acf-field_5eb16e56a2c20-field_5eb16e71a2c21-Other" name="acf[field_5eb16e56a2c20][field_5eb16e71a2c21][]" value="Other"> Other</label></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="acf-field acf-field-text acf-field-5eb16e86a2c22 subfield  form-row acf-hidden" data-name="please_specify" data-type="text" data-key="field_5eb16e86a2c22" data-conditions="[[{&quot;field&quot;:&quot;field_5eb16e71a2c21&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;value&quot;:&quot;Other&quot;}]]" hidden="">
+                                                                        <div class="acf-label">
+                                                                            <label for="acf-field_5eb16e56a2c20-field_5eb16e86a2c22">Please specify</label>
+                                                                        </div>
+                                                                        <div class="acf-input">
+                                                                            <div class="acf-input-wrap"><input type="text" id="acf-field_5eb16e56a2c20-field_5eb16e86a2c22" class="input-text" name="acf[field_5eb16e56a2c20][field_5eb16e86a2c22]" disabled=""></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acf-field acf-field-text acf-field--validate-email form-row" style="display:none !important;" data-name="_validate_email" data-type="text" data-key="_validate_email">
+                                                            <div class="acf-label">
+                                                                <label for="acf-_validate_email">Validate Email</label>
+                                                            </div>
+                                                            <div class="acf-input">
+                                                                <div class="acf-input-wrap"><input type="text" id="acf-_validate_email" class="input-text" name="acf[_validate_email]"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="woocommerce-privacy-policy-text">
+                                                        <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="https://ccm.theprogressteam.com/privacy-policy/" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.</p>
+                                                    </div>
+                                                    <p class="woocommerce-form-row form-row">
+                                                        <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="f6af311a48"><input type="hidden" name="_wp_http_referer" value="/bikes/maverick-configure/?test=testss"> <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="Register">Register</button>
+                                                    </p>
+
+
+
+
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
