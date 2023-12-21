@@ -487,7 +487,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <button class="red-btn pull-right scroll-down start-config" id="save-button">Save Configuration</button>
+                        <button class="red-btn pull-right scroll-down start-config" id="save-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
                     </div>
                 </div>
             </div>
