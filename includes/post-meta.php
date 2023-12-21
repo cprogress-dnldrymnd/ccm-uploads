@@ -2569,7 +2569,7 @@ Container::make('post_meta', 'Configurator Data')
 	->add_fields(array(
 		Field::make('select', 'config_id', 'Bike')
 			->add_options(get_bike_list()),
-		Field::make('text', 'config_url', 'Config ID'),
+		Field::make('text', 'config_url', 'Config URL'),
 		Field::make('complex', 'config_data', 'Config Data')
 			->set_layout('tabbed-vertical')
 			->add_fields(
