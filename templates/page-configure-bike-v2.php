@@ -65,7 +65,8 @@ if (isset($_GET['action'])) {
 
         $my_post = array(
             'post_type' => 'configurator',
-            'post_title'    => wp_strip_all_tags(get_the_title($_GET['config_id'])),
+            'post_title'    => wp_strip_all_tags(isset($_GET['title']) ? $_GET['title'] : get_the_title($_GET['config_id'])),
+            'post_content' => $_GET['notes'],
             'post_status'   => 'publish',
             'post_author'   => get_current_user_id(),
 
