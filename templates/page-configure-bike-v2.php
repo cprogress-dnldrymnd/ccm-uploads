@@ -559,13 +559,6 @@ if (isset($_GET['action'])) {
                         <div class="col-md-12">
                             <div>
                                 <div class="woocommerce">
-                                    <div class="woocommerce-notices-wrapper">
-                                        <ul class="woocommerce-error" role="alert">
-                                            <li>
-                                                <strong>Error:</strong> Username is required.
-                                            </li>
-                                        </ul>
-                                    </div>
 
                                     <div class="u-columns col2-set" id="customer_login">
 
