@@ -10,24 +10,6 @@
  */
 get_header(); // This fxn gets the header.php file and renders it 
 ?>
-<?php
-$bike_initial_price = carbon_get_the_post_meta('bike_initial_price');
-$small_image = wp_get_attachment_image_url(carbon_get_the_post_meta('small_image'), 'medium');
-$custom_scripts = carbon_get_the_post_meta('custom_scripts');
-
-$bike_section = get_terms(
-    array(
-        'taxonomy'   => 'product_cat',
-        'parent'     => 408,
-        'hide_empty' => false,
-    )
-);
-?>
-<?php
-$product_category = carbon_get_the_post_meta('product_category')[0]['id'];
-$bike_code = str_replace('-', '_', get_term($product_category)->slug);
-$bike_name = get_term($product_category, 'product_cat')->name;
-?>
 <style>
     .cs-section .img-pro {
         width: auto;
@@ -49,6 +31,53 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         background-color: var(--black-color) !important;
     }
 </style>
+<?php
+$bike_initial_price = carbon_get_the_post_meta('bike_initial_price');
+$small_image = wp_get_attachment_image_url(carbon_get_the_post_meta('small_image'), 'medium');
+$custom_scripts = carbon_get_the_post_meta('custom_scripts');
+
+$bike_section = get_terms(
+    array(
+        'taxonomy'   => 'product_cat',
+        'parent'     => 408,
+        'hide_empty' => false,
+    )
+);
+
+$product_category = carbon_get_the_post_meta('product_category')[0]['id'];
+$bike_code = str_replace('-', '_', get_term($product_category)->slug);
+$bike_name = get_term($product_category, 'product_cat')->name;
+
+if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
+
+    // Create post object
+
+    $config_data = [];
+
+    foreach ($_GET as $key => $data) {
+        if ($key != 'action' && $config_id != 'config_id') {
+            $config_data[$key] = $data;
+        }
+    }
+    echo '<pre>';
+    var_dump($config_data);
+    echo '</pre>';
+
+    $my_post = array(
+        'post_type' => 'configurator',
+        'post_title'    => wp_strip_all_tags(get_the_title($_GET['config_id'])),
+        'post_status'   => 'publish',
+        'post_author'   => get_current_user_id(),
+        'meta_input' => array(
+            'config_data' => $config_data,
+        )
+    );
+
+    // Insert the post into the database
+   // wp_insert_post($my_post);
+}
+?>
+
 
 <pre>
 <?php var_dump($_GET) ?>
