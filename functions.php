@@ -2850,7 +2850,10 @@ function show_template() {
 
 	function ccm_add_configurator_link_my_account($items)
 	{
+		unset($item['customer-logout']);
 		$items['configurator'] = 'Configurator';
+		$items['customer-logout'] = 'Logout';
+
 		return $items;
 	}
 
