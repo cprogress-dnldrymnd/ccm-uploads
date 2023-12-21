@@ -36,6 +36,80 @@ get_header(); // This fxn gets the header.php file and renders it
         display: none !important;
     }
 </style>
+<style>
+    .red-btn:focus,
+    .red-btn:active {
+        color: #ed181f !important;
+    }
+
+    .custom-modal {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 99999999;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        transition: 300ms;
+        max-width: 500px;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -70%) !important;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    .custom-modal-backdrop {
+        position: fixed;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+        display: none;
+    }
+
+    .custom-modal .container {
+        background-color: var(--white-color);
+        position: relative;
+        z-index: 1;
+        padding: 40px;
+        max-width: 500px !important;
+    }
+
+    .custom-modal h2 {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+
+    .custom-modal-backdrop.modal-active {
+        display: block;
+    }
+
+    .custom-modal.modal-active {
+        display: block;
+    }
+
+    .custom-modal.show-modal {
+        transform: translate(-50%, -50%) !important;
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    .custom-modal .col-1 {
+        width: 100% !important;
+    }
+
+    .custom-modal .col-1 h2 {
+        font-size: 40px !important;
+        margin-top: 0 !important;
+    }
+</style>
 <?php
 $bike_initial_price = carbon_get_the_post_meta('bike_initial_price');
 $small_image = wp_get_attachment_image_url(carbon_get_the_post_meta('small_image'), 'medium');
@@ -447,79 +521,7 @@ if (isset($_GET['action'])) {
         </div>
     </div>
 </div>
-<style>
-    .red-btn:focus,
-    .red-btn:active {
-        color: #ed181f !important;
-    }
 
-    .custom-modal {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        z-index: 99999999;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        transition: 300ms;
-        max-width: 500px;
-        width: 100%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -70%) !important;
-        visibility: hidden;
-        opacity: 0;
-        display: none;
-    }
-
-    .custom-modal-backdrop {
-        position: fixed;
-        z-index: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, .5);
-        display: none;
-    }
-
-    .custom-modal .container {
-        background-color: var(--white-color);
-        position: relative;
-        z-index: 1;
-        padding: 40px;
-        max-width: 500px !important;
-    }
-
-    .custom-modal h3 {
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-
-    .custom-modal-backdrop.modal-active {
-        display: block;
-    }
-
-    .custom-modal.modal-active {
-        display: block;
-    }
-
-    .custom-modal.show-modal {
-        transform: translate(-50%, -50%) !important;
-        opacity: 1;
-        visibility: visible;
-
-    }
-
-    .custom-modal .col-1 {
-        width: 100% !important;
-    }
-
-    .custom-modal .col-1 h2 {
-        font-size: 40px !important;
-        margin-top: 0 !important;
-    }
-</style>
 <div class="custom-modal-backdrop"></div>
 <div class="buy-order-bike-page custom-modal">
     <div class="container">
