@@ -63,17 +63,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         }
     }
 
-
-
-    echo '<pre>';
-    var_dump(carbon_get_post_meta(17442, 'config_data'));
-    echo '</pre>';
-
-
-    echo '<pre>';
-    var_dump($config_data);
-    echo '</pre>';
-
     $my_post = array(
         'post_type' => 'configurator',
         'post_title'    => wp_strip_all_tags(get_the_title($_GET['config_id'])),
