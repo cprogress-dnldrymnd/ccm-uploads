@@ -2787,4 +2787,13 @@ function show_template() {
 	add_action('admin_init', 'set_post_id');
 
 
-	
+	add_action('template_redirect', 'action_redirect_sectors');
+	function action_redirect_sectors()
+	{
+		if (is_singular('configurator')) :
+			$config_id = 17456;
+			$url = get_the_permalink($config_id);
+			wp_redirect($url . '?id=' . get_the_ID());
+			exit;
+		endif;
+	}
