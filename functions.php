@@ -1303,9 +1303,9 @@ function register_fields_ccm_login()
 
 
 
-	add_filter('woocommerce_account_menu_items', 'bbloomer_remove_address_my_account', 999);
+	add_filter('woocommerce_account_menu_items', 'ccm_remove_address_my_account', 999);
 
-	function bbloomer_remove_address_my_account($items)
+	function ccm_remove_address_my_account($items)
 	{
 		unset($items['edit-address']);
 		return $items;
@@ -2777,9 +2777,9 @@ function show_template() {
 	 * @donate $9     https://businessbloomer.com/bloomer-armada/
 	 */
 
-	add_action('woocommerce_login_form_end', 'bbloomer_actual_referrer');
+	add_action('woocommerce_login_form_end', 'ccm_actual_referrer');
 
-	function bbloomer_actual_referrer()
+	function ccm_actual_referrer()
 	{
 		global $post;
 		if (get_page_template_slug($post->ID) == 'templates/page-configure-bike-v2.php') {
@@ -2813,3 +2813,56 @@ function show_template() {
 	}
 
 	add_action('wp_login', 'rohil_login_redirect_based_on_roles', 10, 2);*/
+
+
+	/**
+	 * @snippet       WooCommerce Add New Tab @ My Account
+	 * @how-to        Get CustomizeWoo.com FREE
+	 * @author        Rodolfo Melogli
+	 * @compatible    WooCommerce 5.0
+	 * @donate $9     https://businessbloomer.com/bloomer-armada/
+	 */
+
+	// ------------------
+	// 1. Register new endpoint (URL) for My Account page
+	// Note: Re-save Permalinks or it will give 404 error
+
+	function ccm_add_configurator_endpoint()
+	{
+		add_rewrite_endpoint('configurator', EP_ROOT | EP_PAGES);
+	}
+
+	add_action('init', 'ccm_add_configurator_endpoint');
+
+	// ------------------
+	// 2. Add new query var
+
+	function ccm_configurator_query_vars($vars)
+	{
+		$vars[] = 'configurator';
+		return $vars;
+	}
+
+	add_filter('query_vars', 'ccm_configurator_query_vars', 0);
+
+	// ------------------
+	// 3. Insert the new endpoint into the My Account menu
+
+	function ccm_add_configurator_link_my_account($items)
+	{
+		$items['configurator'] = 'Configurator';
+		return $items;
+	}
+
+	add_filter('woocommerce_account_menu_items', 'ccm_add_configurator_link_my_account');
+
+	// ------------------
+	// 4. Add content to the new tab
+
+	function ccm_configurator_content()
+	{
+		echo '<h3>Premium WooCommerce Support</h3><p>Welcome to the WooCommerce support area. As a premium customer, you can submit a ticket should you have any WooCommerce issues with your website, snippets or customization. <i>Please contact your theme/plugin developer for theme/plugin-related support.</i></p>';
+	}
+
+	add_action('woocommerce_account_configurator_endpoint', 'ccm_configurator_content');
+// Note: add_action must follow 'woocommerce_account_{your-endpoint-slug}_endpoint' format
