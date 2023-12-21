@@ -50,8 +50,6 @@ get_header(); // This fxn gets the header.php file and renders it
         padding: 0;
         display: flex;
         align-items: center;
-        transition: 300ms;
-        max-width: 500px;
         width: 100%;
         left: 0;
         top: 0;
@@ -76,8 +74,13 @@ get_header(); // This fxn gets the header.php file and renders it
         position: relative;
         z-index: 1;
         padding: 40px;
+        transform: translateY(100%);
+        transition: 300ms;
+        max-width: 500px;
+        display: none;
     }
 
+  
     .custom-modal h2 {
         margin-top: 0;
         margin-bottom: 30px;
@@ -86,6 +89,10 @@ get_header(); // This fxn gets the header.php file and renders it
 
     .custom-modal-backdrop.modal-active {
         display: block;
+    }
+
+    .custom-modal.modal-active .container{
+       display: block;
     }
 
     .custom-modal.modal-active {
@@ -98,6 +105,10 @@ get_header(); // This fxn gets the header.php file and renders it
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .custom-modal.show-modal .container {
+        transform: translateY(0);
     }
 
     .custom-modal .col-1 {
