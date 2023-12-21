@@ -428,15 +428,15 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
 <?php get_footer() ?>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-        scroll();
-        getTotal();
-        click_acc();
-        pre_selected();
         <?php if (isset($_GET['id'])) { ?>
             is_saved_data();
         <?php } else { ?>
             is_package();
+            pre_selected();
         <?php } ?>
+        scroll();
+        getTotal();
+        click_acc();
         jQuery(".tot_amount").click(function(event) {
             getTotal();
         });
