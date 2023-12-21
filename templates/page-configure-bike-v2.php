@@ -730,6 +730,7 @@ if (isset($_GET['action'])) {
         jQuery($products_included).next().find('.price').text('Included in package');
         jQuery($products_included).attr('accesory_value', 0);
         jQuery($products_included).prop("checked", true).addClass('clicked');
+        jQuery($products_included).click();
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
 
@@ -749,7 +750,6 @@ if (isset($_GET['action'])) {
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
-                    jQuery('input[product_id="<?= $product ?>"]').click();
                 <?php } ?>
             <?php } else { ?>
                 <?php foreach ($product_lists as $product) { ?>
