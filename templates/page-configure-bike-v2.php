@@ -432,9 +432,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         getTotal();
         click_acc();
         pre_selected();
-        is_package();
         <?php if (isset($_GET['id'])) { ?>
             is_saved_data();
+        <?php } else { ?>
+            is_package();
         <?php } ?>
         jQuery(".tot_amount").click(function(event) {
             getTotal();
