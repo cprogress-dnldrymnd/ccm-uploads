@@ -483,7 +483,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
 
         $(selector).each(function() {
             tempname = '';
-            total += parseFloat($(this).val());
+            total += parseFloat($(this).attr('accesory_value'));
         });
         total = total.toFixed(2);
         if (total == 0) {
@@ -525,7 +525,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
             $original_price_text = jQuery(this).attr('original-price-text');
             $original_price_val = jQuery(this).attr('original-price-val');
             jQuery(this).text($original_price_text);
-            jQuery(this).parent().prev().attr('accesory_val', $original_price_val);
+            jQuery(this).parent().prev().attr('accesory_value', $original_price_val);
             jQuery(this).parent().prev().removeClass('disabled-unselect');
             if (!jQuery(this).parent().prev().hasClass('exclude-deselection')) {
                 jQuery(this).parent().prev().prop("checked", false).removeClass('clicked');
@@ -533,7 +533,7 @@ $bike_name = get_term($product_category, 'product_cat')->name;
         });
 
         jQuery($products_included).next().find('.price').text('Included in package');
-        jQuery($products_included).attr('accesory_val', 0);
+        jQuery($products_included).attr('accesory_value', 0);
         jQuery($products_included).prop("checked", true).addClass('clicked');
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
