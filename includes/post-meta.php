@@ -41,7 +41,9 @@ function get_bike_list()
 
 	$products_arr = array();
 	foreach ($products as $product_val) {
-		$products_arr[$product_val->ID] = $product_val->post_title;
+		if (get_page_template_slug() == 'page-configure-bike-v2') {
+			$products_arr[$product_val->ID] = $product_val->post_title;
+		}
 	}
 	return $products_arr;
 }
