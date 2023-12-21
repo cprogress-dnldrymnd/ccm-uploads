@@ -2903,7 +2903,7 @@ function show_template() {
 			echo '</td>';
 
 			echo '<td>';
-			echo '<a href="' . get_permalink($post->ID) . '">Edit</a>';
+			echo '<a href="' . get_permalink($config->ID) . '">Edit</a>';
 			echo '</td>';
 
 
