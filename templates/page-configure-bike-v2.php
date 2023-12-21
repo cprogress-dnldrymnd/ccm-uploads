@@ -74,7 +74,7 @@ if (isset($_GET['action'])) {
         $post =  wp_insert_post($my_post);
     } else if ($_GET['action'] == 'update-post') {
         $my_post = array(
-            'ID' => ,
+            'ID' => $_GET['id'],
             'post_title'    => wp_strip_all_tags(isset($_GET['title']) ? $_GET['title'] : get_the_title($_GET['config_id'])),
             'post_content' => $_GET['notes'],
             'post_status'   => 'publish',
