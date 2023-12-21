@@ -218,7 +218,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                                                                 $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
                                                                 ?>
                                                                 <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
-                                                                    <input name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>" value="<?= get_the_ID() ?>">
+                                                                    <input product_id="<?= get_the_ID() ?>" name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>" value="<?= get_the_ID() ?>">
                                                                     <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
                                                                         <div class="image-holder">
                                                                             <div class="inner">
@@ -568,6 +568,15 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
 
+    }
+
+    function is_saved_data() {
+        <?php if (isset($_GET['id'])) { ?>
+            <?php $config_data = carbon_get_post_meta($_GET['id'], 'config_data') ?>
+            <?php foreach ($config_data as $data) { ?>
+                jQuery('input[]')
+            <?php } ?>
+        <?php } ?>
     }
 
     function click_acc() {
