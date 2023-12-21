@@ -2860,7 +2860,7 @@ function show_template() {
 			'configurator' => __('Configurator', 'woocommerce'),
 			'customer-logout' => __('Logout', 'woocommerce'),
 		);
-		return $items;
+		return $newitems;
 	}
 
 	add_filter('woocommerce_account_menu_items', 'ccm_add_configurator_link_my_account');
