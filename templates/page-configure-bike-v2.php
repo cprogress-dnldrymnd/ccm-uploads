@@ -430,9 +430,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     </div>
 </div>
 <style>
-    .red-btn:focus, .red-btn:active {
+    .red-btn:focus,
+    .red-btn:active {
         color: #ed181f !important;
     }
+
     .custom-modal {
         position: fixed;
         right: 0;
@@ -601,8 +603,12 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
             }, 300);
             e.preventDefault();
         });
+
+        jQuery('#title').keyup(function(e) {
+            jQuery('input[name="title"]').val(jQuery(this).val());
+        });
     }
-    
+
 
     function mh() {
         jQuery('.panel-heading').click(function(event) {
