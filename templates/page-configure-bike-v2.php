@@ -178,398 +178,401 @@ if (isset($_GET['action'])) {
 
 
 ?>
+<div>
 
 
-<div class="buy-order-bike-page configure-bike-banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="caption">
-                    <h1 class="bike-name">
-                        <?= $bike_name ?>
-                    </h1>
-                    <a href="#scroll-down" class="scroll-down" address="true">
-                        <span>CONFIGURE</span>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
+    <div class="buy-order-bike-page configure-bike-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="caption">
+                        <h1 class="bike-name">
+                            <?= $bike_name ?>
+                        </h1>
+                        <a href="#scroll-down" class="scroll-down" address="true">
+                            <span>CONFIGURE</span>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <?php if (get_the_post_thumbnail_url()) { ?>
+                        <div class="main-image-holder">
+                            <img id="main-image" src="<?php the_post_thumbnail_url(); ?>" class="first_image" source="<?php the_post_thumbnail_url(); ?>" class="first_image">
+                        </div>
+                    <?php } ?>
+                    <?php if (get_the_content()) { ?>
+                        <div class="text-below-image">
+                            <?php the_content() ?>
+                        </div>
+                    <?php } ?>
                 </div>
-                <?php if (get_the_post_thumbnail_url()) { ?>
-                    <div class="main-image-holder">
-                        <img id="main-image" src="<?php the_post_thumbnail_url(); ?>" class="first_image" source="<?php the_post_thumbnail_url(); ?>" class="first_image">
-                    </div>
-                <?php } ?>
-                <?php if (get_the_content()) { ?>
-                    <div class="text-below-image">
-                        <?php the_content() ?>
-                    </div>
-                <?php } ?>
             </div>
         </div>
-    </div>
-    <div id="scroll-down"></div>
-    <div class="acc-option <?= isset($_GET['id']) ? 'saved-data-loaded' : '' ?>">
-        <div class="container-fluid px-0">
-            <form method="GET" id="configurator-form">
-                <input type="hidden" name="action" value="<?= isset($_GET['id']) ? 'update-post' : 'create-post' ?>">
-                <input type="hidden" name="config_id" value="<?= get_the_ID() ?>">
-                <input type="hidden" name="title" value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>">
-                <input type="hidden" name="notes" value="<?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?>">
-                <input type="hidden" name="id" value="<?= isset($_GET['id']) ? $_GET['id'] : '' ?>">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel-group" id="accordion">
-                            <?php foreach ($bike_section as $key => $section) { ?>
-                                <?php
-                                $area_expanded = $key == 0 ? ' true' : 'false';
-                                if ($key != 0) {
-                                    $class = 'collapse';
-                                    $class_a = 'collapsed';
-                                } else {
-                                    $class = 'collapse in';
-                                }
-                                $args = array(
-                                    'post_type'      => 'product',
-                                    'posts_per_page' => -1,
-                                    'post_status'    => array('private', 'publish'),
-                                    'orderby'        => 'meta_value_num',
-                                    'meta_key'       => '_' . $bike_code . '_section_order',
-                                    'order'          => 'ASC',
-                                    'tax_query'      => array(
-                                        'relation' => 'AND',
-                                        array(
-                                            'taxonomy' => 'product_cat',
-                                            'field'    => 'term_id',
-                                            'terms'    => array($product_category),
+        <div id="scroll-down"></div>
+        <div class="acc-option <?= isset($_GET['id']) ? 'saved-data-loaded' : '' ?>">
+            <div class="container-fluid px-0">
+                <form method="GET" id="configurator-form">
+                    <input type="hidden" name="action" value="<?= isset($_GET['id']) ? 'update-post' : 'create-post' ?>">
+                    <input type="hidden" name="config_id" value="<?= get_the_ID() ?>">
+                    <input type="hidden" name="title" value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>">
+                    <input type="hidden" name="notes" value="<?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?>">
+                    <input type="hidden" name="id" value="<?= isset($_GET['id']) ? $_GET['id'] : '' ?>">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-group" id="accordion">
+                                <?php foreach ($bike_section as $key => $section) { ?>
+                                    <?php
+                                    $area_expanded = $key == 0 ? ' true' : 'false';
+                                    if ($key != 0) {
+                                        $class = 'collapse';
+                                        $class_a = 'collapsed';
+                                    } else {
+                                        $class = 'collapse in';
+                                    }
+                                    $args = array(
+                                        'post_type'      => 'product',
+                                        'posts_per_page' => -1,
+                                        'post_status'    => array('private', 'publish'),
+                                        'orderby'        => 'meta_value_num',
+                                        'meta_key'       => '_' . $bike_code . '_section_order',
+                                        'order'          => 'ASC',
+                                        'tax_query'      => array(
+                                            'relation' => 'AND',
+                                            array(
+                                                'taxonomy' => 'product_cat',
+                                                'field'    => 'term_id',
+                                                'terms'    => array($product_category),
+                                            ),
+                                            array(
+                                                'taxonomy' => 'product_cat',
+                                                'field'    => 'term_id',
+                                                'terms'    => array($section->term_id),
+                                            ),
                                         ),
-                                        array(
-                                            'taxonomy' => 'product_cat',
-                                            'field'    => 'term_id',
-                                            'terms'    => array($section->term_id),
-                                        ),
-                                    ),
-                                );
-                                $the_query = new WP_Query($args);
-                                ?>
-                                <?php if ($the_query->have_posts()) { ?>
-                                    <div class="panel <?= $section->slug ?>">
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#<?= $section->slug ?>" aria-expanded="<?= $area_expanded ?>">
-                                                    <div class="container">
-                                                        <span>
-                                                            <?= clean_string($section->name) ?>
-                                                        </span>
-                                                    </div>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="<?= $section->slug ?>" class="panel-collapse <?= $class ?>" aria-expanded="<?= $area_expanded ?>">
-                                            <div class="container">
-                                                <div class="panel-body px-0 py-5 ">
-                                                    <div class="boxes">
-                                                        <div class="row flex-row">
-                                                            <?php while ($the_query->have_posts()) { ?>
-                                                                <?php
-                                                                $the_query->the_post();
-                                                                $product = wc_get_product(get_the_ID());
-                                                                $accessory_description = get_the_content();
-                                                                $the_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : 'https://www.ccm-motorcycles.com/wp-content/uploads/2020/02/no-image-ccm.png';
-                                                                $email_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') : 'https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/no-image-ccm-150x150-1.png';
-                                                                $is_std_equipment = carbon_get_the_post_meta($bike_code . '_is_std_equipment');
-                                                                $bike_price_custom = carbon_get_the_post_meta($bike_code . '_price');
-                                                                $disable_auto_select = carbon_get_the_post_meta($bike_code . '_disable_auto_select');
-                                                                $configurator_price = carbon_get_the_post_meta('configurator_price');
-                                                                $bike_price_custom_val = $bike_price_custom ? $bike_price_custom : $configurator_price;
+                                    );
+                                    $the_query = new WP_Query($args);
+                                    ?>
+                                    <?php if ($the_query->have_posts()) { ?>
+                                        <div class="panel <?= $section->slug ?>">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#<?= $section->slug ?>" aria-expanded="<?= $area_expanded ?>">
+                                                        <div class="container">
+                                                            <span>
+                                                                <?= clean_string($section->name) ?>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="<?= $section->slug ?>" class="panel-collapse <?= $class ?>" aria-expanded="<?= $area_expanded ?>">
+                                                <div class="container">
+                                                    <div class="panel-body px-0 py-5 ">
+                                                        <div class="boxes">
+                                                            <div class="row flex-row">
+                                                                <?php while ($the_query->have_posts()) { ?>
+                                                                    <?php
+                                                                    $the_query->the_post();
+                                                                    $product = wc_get_product(get_the_ID());
+                                                                    $accessory_description = get_the_content();
+                                                                    $the_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : 'https://www.ccm-motorcycles.com/wp-content/uploads/2020/02/no-image-ccm.png';
+                                                                    $email_image = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url(get_the_ID(), 'thumbnail') : 'https://www.ccm-motorcycles.com/wp-content/uploads/2020/11/no-image-ccm-150x150-1.png';
+                                                                    $is_std_equipment = carbon_get_the_post_meta($bike_code . '_is_std_equipment');
+                                                                    $bike_price_custom = carbon_get_the_post_meta($bike_code . '_price');
+                                                                    $disable_auto_select = carbon_get_the_post_meta($bike_code . '_disable_auto_select');
+                                                                    $configurator_price = carbon_get_the_post_meta('configurator_price');
+                                                                    $bike_price_custom_val = $bike_price_custom ? $bike_price_custom : $configurator_price;
 
-                                                                $related_products = carbon_get_the_post_meta($bike_code . '_related_products');
-                                                                $related_products_val = '';
-                                                                $related_products_arr = array();
-                                                                $is_package = '';
-                                                                if ($related_products) {
-                                                                    foreach ($related_products as $product_included) {
-                                                                        $related_products_arr[] = "[sku='" . clean_string_2($product_included) . "']";
+                                                                    $related_products = carbon_get_the_post_meta($bike_code . '_related_products');
+                                                                    $related_products_val = '';
+                                                                    $related_products_arr = array();
+                                                                    $is_package = '';
+                                                                    if ($related_products) {
+                                                                        foreach ($related_products as $product_included) {
+                                                                            $related_products_arr[] = "[sku='" . clean_string_2($product_included) . "']";
+                                                                        }
+                                                                        $related_products_val = 'products-included="' . implode(", ", $related_products_arr) . '"';
+                                                                        $is_package = ' is-package';
                                                                     }
-                                                                    $related_products_val = 'products-included="' . implode(", ", $related_products_arr) . '"';
-                                                                    $is_package = ' is-package';
-                                                                }
-                                                                $pre_selected_item = carbon_get_the_post_meta($bike_code . '_pre_selected');
+                                                                    $pre_selected_item = carbon_get_the_post_meta($bike_code . '_pre_selected');
 
-                                                                $bike_price = $bike_price_custom_val != '' ? $bike_price_custom_val : $product->get_price();
-                                                                $bike_price = floatval($bike_price);
-                                                                if ($is_std_equipment) {
-                                                                    $price = 'Std Equipment';
-                                                                    $accessory_price = 0.00;
-                                                                } else {
-                                                                    $price = '&#163; ' . number_format($bike_price, 2, '.', '');
-                                                                    $accessory_price = $bike_price;
-                                                                }
-                                                                $select_one_panel = carbon_get_term_meta($section->term_id, 'select_one');
-                                                                $required_panel = carbon_get_term_meta($section->term_id, 'select_one');
-                                                                $exclude_from_deselection = carbon_get_term_meta($section->term_id, 'exclude_from_deselection');
-                                                                $exclude_from_deselection_val = $exclude_from_deselection ? ' exclude-deselection' : '';
-                                                                $required = $required_panel ? ' required' : '';
-                                                                $select_one = $select_one_panel ? ' select-one' : '';
-                                                                $pre_selected = ($pre_selected_item || $is_std_equipment) &&  ($disable_auto_select == false) ? ' pre-selected' : '';
-                                                                $accessory_id = 'box-' . $section->slug . '-' . get_the_ID();
-                                                                if ($key != 0) {
-                                                                    $class = 'collapse';
-                                                                    $class_a = 'collapsed';
-                                                                }
-                                                                $configurator_part_code = carbon_get_the_post_meta('configurator_part_code');
-                                                                $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
-                                                                ?>
-                                                                <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
-                                                                    <input product_id="<?= get_the_ID() ?>" name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>" value="<?= get_the_ID() ?>">
-                                                                    <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
-                                                                        <!-- IMAGE HOLDER  -->
-                                                                        <h4>
-                                                                            <?= get_the_title() ?>
-                                                                        </h4>
-                                                                        <div class="description">
-                                                                            <?= wpautop($accessory_description) ?>
-                                                                        </div>
+                                                                    $bike_price = $bike_price_custom_val != '' ? $bike_price_custom_val : $product->get_price();
+                                                                    $bike_price = floatval($bike_price);
+                                                                    if ($is_std_equipment) {
+                                                                        $price = 'Std Equipment';
+                                                                        $accessory_price = 0.00;
+                                                                    } else {
+                                                                        $price = '&#163; ' . number_format($bike_price, 2, '.', '');
+                                                                        $accessory_price = $bike_price;
+                                                                    }
+                                                                    $select_one_panel = carbon_get_term_meta($section->term_id, 'select_one');
+                                                                    $required_panel = carbon_get_term_meta($section->term_id, 'select_one');
+                                                                    $exclude_from_deselection = carbon_get_term_meta($section->term_id, 'exclude_from_deselection');
+                                                                    $exclude_from_deselection_val = $exclude_from_deselection ? ' exclude-deselection' : '';
+                                                                    $required = $required_panel ? ' required' : '';
+                                                                    $select_one = $select_one_panel ? ' select-one' : '';
+                                                                    $pre_selected = ($pre_selected_item || $is_std_equipment) &&  ($disable_auto_select == false) ? ' pre-selected' : '';
+                                                                    $accessory_id = 'box-' . $section->slug . '-' . get_the_ID();
+                                                                    if ($key != 0) {
+                                                                        $class = 'collapse';
+                                                                        $class_a = 'collapsed';
+                                                                    }
+                                                                    $configurator_part_code = carbon_get_the_post_meta('configurator_part_code');
+                                                                    $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
+                                                                    ?>
+                                                                    <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
+                                                                        <input product_id="<?= get_the_ID() ?>" name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>" value="<?= get_the_ID() ?>">
+                                                                        <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
+                                                                            <!-- IMAGE HOLDER  -->
+                                                                            <h4>
+                                                                                <?= get_the_title() ?>
+                                                                            </h4>
+                                                                            <div class="description">
+                                                                                <?= wpautop($accessory_description) ?>
+                                                                            </div>
 
-                                                                        <div class="d-block sku">
-                                                                            Part Code: <?= $part_code ?>
-                                                                        </div>
-                                                                        <div class="price" original-price-text="<?= $price ?>" original-price-val="<?= $accessory_price ?>">
-                                                                            <?= $price ?>
-                                                                        </div>
-                                                                    </label>
-                                                                </div>
-                                                            <?php } ?>
-                                                            <?php wp_reset_postdata() ?>
+                                                                            <div class="d-block sku">
+                                                                                Part Code: <?= $part_code ?>
+                                                                            </div>
+                                                                            <div class="price" original-price-text="<?= $price ?>" original-price-val="<?= $accessory_price ?>">
+                                                                                <?= $price ?>
+                                                                            </div>
+                                                                        </label>
+                                                                    </div>
+                                                                <?php } ?>
+                                                                <?php wp_reset_postdata() ?>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    <?php } ?>
                                 <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="reserve_bike mt-50 cs-section" id="config-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7 ">
+                        <h2>CONFIGURATION SUMMARY</h2>
+                        <div class="border-line"></div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7" id="summary_list">
+                        <style>
+                        </style>
+                        <span id="summery-items2"></span>
+                        <table class="table cs-list" style="width: 500px">
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" class="text-right" style="text-align: right"><span class="count" style="color: #ed181f ">TOTAL: </span></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="reserve_bike mt-50" id="reserve_bike">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7 ">
+                        <h2>CONFIGURE THIS BIKE</h2>
+                        <p>Simply submit this form to save your desired bike configuration. You can configure as many
+                            variations as you like to create your dream machine.</p>
+                        <div class="border-line"></div>
+                        <div class="form-reserve">
+                            <?php if (isset($_GET['submitted']) && $_GET['submitted'] == 'true') { ?>
+                                <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+                                <script>
+                                    hbspt.forms.create({
+                                        css: '',
+                                        region: "eu1",
+                                        portalId: "139521183",
+                                        formId: "7aa928aa-a966-4357-b74a-1f78c6b1c7c2",
+                                        onFormReady: function($form) {
+                                            $form.submit();
+                                        }
+                                    });
+                                </script>
+                            <?php } else { ?>
+                                <div class="wpcf7">
+                                    <form class="wpcf7-form" action="<?= get_permalink() ?>" method="GET">
+                                        <input type="hidden" id="config-summary" name="configurator_options">
+                                        <input type="hidden" name="submitted" value="true">
+                                        <input type="hidden" name="configurator_code" value="<?= get_the_title() ?>">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p>
+                                                    <label>
+                                                        First Name <span>*</span>
+                                                        <span class="wpcf7-form-control-wrap" data-name="first-name">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="firstname" required />
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>
+                                                    <label>
+                                                        Last Name <span>*</span>
+                                                        <span class="wpcf7-form-control-wrap" data-name="last-name">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="lastname" required />
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>
+                                                    <label>
+                                                        Email Address <span>*</span>
+                                                        <span class="wpcf7-form-control-wrap" data-name="email-address">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-email  wpcf7-text wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" type="email" name="email" required />
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>
+                                                    <label>
+                                                        Phone number <span>*</span>
+                                                        <span class="wpcf7-form-control-wrap" data-name="telephone">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-tel form-control" aria-required="true" aria-invalid="false" type="tel" name="phone" required />
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p>
+                                                    <label>
+                                                        Postcode <span>*</span>
+                                                        <span class="wpcf7-form-control-wrap" data-name="zip">
+                                                            <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="zip" required />
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p>
+                                                    <label>
+                                                        Additional Information
+                                                        <span class="wpcf7-form-control-wrap" data-name="lead_comments__ole_">
+                                                            <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" name="lead_comments__ole_"></textarea>
+                                                        </span>
+                                                    </label>
+                                                </p>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <p style="font-size: 14px; margin-top: 10px;">
+                                                    CCM Motorcycles needs the contact information you provide to us to contact you about our products and
+                                                    services. You may unsubscribe from these communications at any time. For information on how to unsubscribe,
+                                                    as well as our privacy practices and commitment to protecting your privacy, please review our Privacy
+                                                    Policy.</p>
+                                                <p>
+                                                    <input class="wpcf7-form-control wpcf7-submit has-spinner red-btn" type="submit" value="COMPLETE MY CONFIGURATION" /><span class="wpcf7-spinner">
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
                             <?php } ?>
                         </div>
                     </div>
+                    <div class="col-md-3"></div>
                 </div>
-            </form>
-        </div>
-    </div>
 
-    <div class="reserve_bike mt-50 cs-section" id="config-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-7 ">
-                    <h2>CONFIGURATION SUMMARY</h2>
-                    <div class="border-line"></div>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-7" id="summary_list">
-                    <style>
-                    </style>
-                    <span id="summery-items2"></span>
-                    <table class="table cs-list" style="width: 500px">
-                        <tbody>
-                            <tr>
-                                <td colspan="3" class="text-right" style="text-align: right"><span class="count" style="color: #ed181f ">TOTAL: </span></span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-md-3"></div>
             </div>
         </div>
-    </div>
-
-
-
-    <div class="reserve_bike mt-50" id="reserve_bike">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-7 ">
-                    <h2>CONFIGURE THIS BIKE</h2>
-                    <p>Simply submit this form to save your desired bike configuration. You can configure as many
-                        variations as you like to create your dream machine.</p>
-                    <div class="border-line"></div>
-                    <div class="form-reserve">
-                        <?php if (isset($_GET['submitted']) && $_GET['submitted'] == 'true') { ?>
-                            <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-                            <script>
-                                hbspt.forms.create({
-                                    css: '',
-                                    region: "eu1",
-                                    portalId: "139521183",
-                                    formId: "7aa928aa-a966-4357-b74a-1f78c6b1c7c2",
-                                    onFormReady: function($form) {
-                                        $form.submit();
-                                    }
-                                });
-                            </script>
-                        <?php } else { ?>
-                            <div class="wpcf7">
-                                <form class="wpcf7-form" action="<?= get_permalink() ?>" method="GET">
-                                    <input type="hidden" id="config-summary" name="configurator_options">
-                                    <input type="hidden" name="submitted" value="true">
-                                    <input type="hidden" name="configurator_code" value="<?= get_the_title() ?>">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p>
-                                                <label>
-                                                    First Name <span>*</span>
-                                                    <span class="wpcf7-form-control-wrap" data-name="first-name">
-                                                        <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="firstname" required />
-                                                    </span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>
-                                                <label>
-                                                    Last Name <span>*</span>
-                                                    <span class="wpcf7-form-control-wrap" data-name="last-name">
-                                                        <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="lastname" required />
-                                                    </span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>
-                                                <label>
-                                                    Email Address <span>*</span>
-                                                    <span class="wpcf7-form-control-wrap" data-name="email-address">
-                                                        <input size="40" class="wpcf7-form-control wpcf7-email  wpcf7-text wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" type="email" name="email" required />
-                                                    </span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>
-                                                <label>
-                                                    Phone number <span>*</span>
-                                                    <span class="wpcf7-form-control-wrap" data-name="telephone">
-                                                        <input size="40" class="wpcf7-form-control wpcf7-tel form-control" aria-required="true" aria-invalid="false" type="tel" name="phone" required />
-                                                    </span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <p>
-                                                <label>
-                                                    Postcode <span>*</span>
-                                                    <span class="wpcf7-form-control-wrap" data-name="zip">
-                                                        <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="zip" required />
-                                                    </span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <p>
-                                                <label>
-                                                    Additional Information
-                                                    <span class="wpcf7-form-control-wrap" data-name="lead_comments__ole_">
-                                                        <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" name="lead_comments__ole_"></textarea>
-                                                    </span>
-                                                </label>
-                                            </p>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <p style="font-size: 14px; margin-top: 10px;">
-                                                CCM Motorcycles needs the contact information you provide to us to contact you about our products and
-                                                services. You may unsubscribe from these communications at any time. For information on how to unsubscribe,
-                                                as well as our privacy practices and commitment to protecting your privacy, please review our Privacy
-                                                Policy.</p>
-                                            <p>
-                                                <input class="wpcf7-form-control wpcf7-submit has-spinner red-btn" type="submit" value="COMPLETE MY CONFIGURATION" /><span class="wpcf7-spinner">
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
+        <div class="footer-order">
+            <div class="container" style="max-width: 1400px; width: 100% !important;">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 hidden-xs">
+                        <img id="footer-image" src="<?php _e($small_image) ?>" source="<?php _e($small_image) ?>">
+                    </div>
+                    <div class="col-md-7 col-sm-7 title-pro">
+                        <h2>
+                            <?php _e($bike_name) ?>
+                        </h2>
+                        <p class="total">TOTAL: &#163;<input type="text" id="total1" readonly></p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 ">
+                        <button class="red-btn" id="popup-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
+                        <?php if (!isset($_GET['id'])) { ?>
+                            <a href="" class="red-btn">Reset Configuration</a>
                         <?php } ?>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
-            </div>
-
-        </div>
-    </div>
-    <div class="footer-order">
-        <div class="container" style="max-width: 1400px; width: 100% !important;">
-            <div class="row">
-                <div class="col-md-2 col-sm-2 hidden-xs">
-                    <img id="footer-image" src="<?php _e($small_image) ?>" source="<?php _e($small_image) ?>">
-                </div>
-                <div class="col-md-7 col-sm-7 title-pro">
-                    <h2>
-                        <?php _e($bike_name) ?>
-                    </h2>
-                    <p class="total">TOTAL: &#163;<input type="text" id="total1" readonly></p>
-                </div>
-                <div class="col-md-3 col-sm-3 ">
-                    <button class="red-btn" id="popup-button"><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
-                    <?php if (!isset($_GET['id'])) { ?>
-                        <a href="" class="red-btn">Reset Configuration</a>
-                    <?php } ?>
-                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="custom-modal-backdrop"></div>
-<div class="buy-order-bike-page custom-modal">
-    <div class="container">
-        <div class="form-reserve">
-            <div class="wpcf7-form">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2><?= get_the_title() ?></h2>
-                    </div>
-                    <?php if (is_user_logged_in()) { ?>
+    <div class="custom-modal-backdrop"></div>
+    <div class="buy-order-bike-page custom-modal">
+        <div class="container">
+            <div class="form-reserve">
+                <div class="wpcf7-form">
+                    <div class="row">
                         <div class="col-md-12">
-                            <p>
-                                <label>
-                                    Title <span>*</span>
-                                    <span class="wpcf7-form-control-wrap">
-                                        <input value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>" size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" id="title" required>
-                                    </span>
-                                </label>
-                            </p>
+                            <h2><?= get_the_title() ?></h2>
                         </div>
-                        <div class="col-md-12">
-                            <p>
-                                <label>
-                                    Notes <span>*</span>
-                                    <span class="wpcf7-form-control-wrap">
-                                        <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes"><?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?></textarea>
-                                    </span>
-                                </label>
-                            </p>
-                        </div>
-                        <div class="col-md-12">
-                            <button id="save-button" class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
-                        </div>
-                    <?php } else { ?>
-                        <div class="col-md-12">
-                            <div>
+                        <?php if (is_user_logged_in()) { ?>
+                            <div class="col-md-12">
+                                <p>
+                                    <label>
+                                        Title <span>*</span>
+                                        <span class="wpcf7-form-control-wrap">
+                                            <input value="<?= isset($_GET['id']) ? get_the_title($_GET['id']) : '' ?>" size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" id="title" required>
+                                        </span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="col-md-12">
+                                <p>
+                                    <label>
+                                        Notes <span>*</span>
+                                        <span class="wpcf7-form-control-wrap">
+                                            <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes"><?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?></textarea>
+                                        </span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="col-md-12">
+                                <button id="save-button" class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
+                            </div>
+                        <?php } else { ?>
+                            <div class="col-md-12">
                                 <div>
-                                    <?= do_shortcode('[woocommerce_my_account]')  ?>
+                                    <div>
+                                        <?= do_shortcode('[woocommerce_my_account]')  ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<?php get_footer() ?>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         <?php if (isset($_GET['id'])) { ?>
