@@ -1145,27 +1145,7 @@ function register_fields_ccm_login()
 		}
 	}
 
-	function rohil_login_redirect_based_on_roles($user_login, $user)
-	{
-
-
-
-		$redirect_url = $_GET['redirect'];
-		if ($redirect_url) {
-			return $redirect_url;
-		} else {
-			if (in_array('ccm_owner', (array) $user->roles)) {
-				exit(wp_redirect('/club-news/'));
-			} else if (in_array('administrator', (array) $user->roles)) {
-				exit(wp_redirect('/wp-admin/'));
-			} else {
-				exit(wp_redirect('/club-news/'));
-			}
-		}
-	}
-
-	add_action('wp_login', 'rohil_login_redirect_based_on_roles', 10, 2);
-
+	
 
 	add_action('wp_ajax_stories_post', 'stories_post');
 	add_action('wp_ajax_nopriv_stories_post', 'stories_post');
