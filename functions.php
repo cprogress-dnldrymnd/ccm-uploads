@@ -626,30 +626,7 @@ function register_fields_ccm_login()
 			}
 		}
 	}
-	/*-----------------------------------------------------------------------------------*/
-	/* REDIRECTS
-/*-----------------------------------------------------------------------------------*/
-	function login_ccm_club_redirect()
-	{
-		$redirect_url = $_GET['redirect'];
-		if ($redirect_url) {
-			return $redirect_url;
-		} else {
-			return home_url('/club-ccm/');
-		}
-	}
 
-	add_filter('login_redirect', 'login_ccm_club_redirect');
-	add_filter('woocommerce_login_redirect', 'login_ccm_club_redirect');
-
-	add_action('user_register', 'register_user_ccm_login');
-
-	function wpse_19692_registration_redirect()
-	{
-		return get_site_url() . '/ccm-login?action=success';
-	}
-
-	add_filter('registration_redirect', 'wpse_19692_registration_redirect');
 	/*-----------------------------------------------------------------------------------*/
 	/* Carbon Fields
 /*-----------------------------------------------------------------------------------*/
@@ -2797,3 +2774,35 @@ function show_template() {
 			exit;
 		endif;
 	}
+
+
+	/*-----------------------------------------------------------------------------------*/
+	/* REDIRECTS
+/*-----------------------------------------------------------------------------------*/
+	function login_ccm_club_redirect()
+	{
+
+		if (get_page_template_slug() == 'templates/page-configure-bike-v2.php') {
+			$redirect_url = get_permalink(get_the_ID());
+		} else {
+			$redirect_url = $_GET['redirect'];
+		}
+
+		if ($redirect_url) {
+			return $redirect_url;
+		} else {
+			return home_url('/club-ccm/');
+		}
+	}
+
+	add_filter('login_redirect', 'login_ccm_club_redirect');
+	add_filter('woocommerce_login_redirect', 'login_ccm_club_redirect');
+
+	add_action('user_register', 'register_user_ccm_login');
+
+	function wpse_19692_registration_redirect()
+	{
+		return get_site_url() . '/ccm-login?action=success';
+	}
+
+	add_filter('registration_redirect', 'wpse_19692_registration_redirect');
