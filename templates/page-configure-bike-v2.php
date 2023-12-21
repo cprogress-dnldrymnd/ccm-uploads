@@ -48,36 +48,41 @@ $product_category = carbon_get_the_post_meta('product_category')[0]['id'];
 $bike_code = str_replace('-', '_', get_term($product_category)->slug);
 $bike_name = get_term($product_category, 'product_cat')->name;
 
-if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
-
+if (isset($_GET['action'])) {
     // Create post object
-
     $config_data = [];
 
-    foreach ($_GET as $key => $data) {
-        if ($key != 'action' && $key != 'config_id') {
-            $config_data[] = array(
-                'category' => $key,
-                'product_lists' => $data
-            );
+    if ($_GET['action'] == 'create-post') {
+
+        foreach ($_GET as $key => $data) {
+            if ($key != 'action' && $key != 'config_id') {
+                $config_data[] = array(
+                    'category' => $key,
+                    'product_lists' => $data
+                );
+            }
         }
+
+        $my_post = array(
+            'post_type' => 'configurator',
+            'post_title'    => wp_strip_all_tags(get_the_title($_GET['config_id'])),
+            'post_status'   => 'publish',
+            'post_author'   => get_current_user_id(),
+
+        );
+
+        // Insert the post into the database
+        $post =  wp_insert_post($my_post);
+        carbon_set_post_meta($post, 'config_data', $config_data);
+        carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
+        carbon_set_post_meta($post, 'config_url', get_the_permalink($_GET['config_id']) . '?id=' . $post);
+    } else if ($_GET['action'] == 'update-post') {
     }
-
-    $my_post = array(
-        'post_type' => 'configurator',
-        'post_title'    => wp_strip_all_tags(get_the_title($_GET['config_id'])),
-        'post_status'   => 'publish',
-        'post_author'   => get_current_user_id(),
-
-    );
-
-
-    // Insert the post into the database
-    $post =  wp_insert_post($my_post);
-    carbon_set_post_meta($post, 'config_data', $config_data);
-    carbon_set_post_meta($post, 'config_id', $_GET['config_id']);
-    carbon_set_post_meta($post, 'config_url', get_the_permalink($_GET['config_id']) . '?id=' . $post);
 }
+
+
+
+
 ?>
 
 
@@ -525,7 +530,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <button class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
+                        <button id="save-button" class="red-btn "><?= isset($_GET['id']) ? 'Update Configuration' : 'Save Configuration' ?></button>
                     </div>
                 </div>
             </div>
@@ -608,6 +613,12 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
         jQuery('#notes').keyup(function(e) {
             jQuery('input[name="notes"]').val(jQuery(this).val());
         });
+
+        jQuery('#save-button').click(function(e) {
+            jQuery("#configurator-form").submit();
+            e.preventDefault();
+        });
+
     }
 
 
