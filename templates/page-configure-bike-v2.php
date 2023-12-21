@@ -519,9 +519,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                             <label>
                                 Notes <span>*</span>
                                 <span class="wpcf7-form-control-wrap">
-                                    <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes">
-                                    <?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?>
-                                    </textarea>
+                                    <textarea cols="110" rows="5" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" id="notes"><?= isset($_GET['id']) ? get_the_content('', false, $_GET['id']) : '' ?></textarea>
                                 </span>
                             </label>
                         </p>
