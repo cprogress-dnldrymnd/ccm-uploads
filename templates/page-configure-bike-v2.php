@@ -110,8 +110,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
     <div id="scroll-down"></div>
     <div class="acc-option">
         <div class="container-fluid px-0">
-            <form method="GET">
-                <button type="SUBMIT"> SUBMIT </button>
+            <form method="GET" id="configurator-form">
                 <input type="hidden" name="action" value="<?= isset($_GET['id']) ? 'update-post' : 'create-post' ?>">
                 <input type="hidden" name="config_id" value="<?= get_the_ID() ?>">
                 <div class="row">
@@ -419,12 +418,47 @@ if (isset($_GET['action']) && $_GET['action'] == 'create-post') {
                     <p class="total">TOTAL: &#163;<input type="text" id="total1" readonly></p>
                 </div>
                 <div class="col-md-3 col-sm-3 ">
+                    <button class="red-btn pull-right scroll-down start-config" id="save-button">Save Configuration</button>
                     <a href="" class="red-btn pull-right scroll-down start-config">Reset Configuration</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="custom-modal">
+    <div class="inner">
+        <div class="wpcf7-form">
+            <input type="hidden" name="submitted" value="true">
+            <input type="hidden" name="configurator_code" value="Configure Maverick">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <p>
+                        <label>
+                            Postcode <span>*</span>
+                            <span class="wpcf7-form-control-wrap" data-name="zip">
+                                <input size="40" class="wpcf7-form-control wpcf7-text  form-control" aria-required="true" aria-invalid="false" type="text" name="zip" required="">
+                            </span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <p style="font-size: 14px; margin-top: 10px;">
+                        CCM Motorcycles needs the contact information you provide to us to contact you about our products and
+                        services. You may unsubscribe from these communications at any time. For information on how to unsubscribe,
+                        as well as our privacy practices and commitment to protecting your privacy, please review our Privacy
+                        Policy.</p>
+                    <p>
+                        <input class="wpcf7-form-control wpcf7-submit has-spinner red-btn" type="submit" value="COMPLETE MY CONFIGURATION"><span class="wpcf7-spinner"></span><span class="wpcf7-spinner">
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php get_footer() ?>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
