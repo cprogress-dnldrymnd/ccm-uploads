@@ -845,6 +845,8 @@ if (isset($_GET['action'])) {
         }
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
+        unrelated_products_function(jQuery($products_included));
+
     }
 
     function is_saved_data() {
@@ -864,7 +866,6 @@ if (isset($_GET['action'])) {
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').click();
                     package_function(jQuery('input[product_id="<?= $product ?>"]'));
-                    unrelated_products_function(jQuery($products_included));
                 <?php } ?>
             <?php } ?>
             setTimeout(function() {
