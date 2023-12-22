@@ -2870,6 +2870,14 @@ function show_template() {
 
 	function ccm_configurator_content()
 	{
+
+
+		if(isset($_GET['delete'])) {
+			wp_delete_post($_GET['delete']);
+			wp_redirect('/my-account/configurator/');
+			exit();
+		}
+
 		echo '<h3>Configurator</h3>';
 		$args = array(
 			'numberposts' => -1,
