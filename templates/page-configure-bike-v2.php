@@ -839,7 +839,7 @@ if (isset($_GET['action'])) {
         if (jQuery('.acc-option').hasClass('saved-data-loaded')) {
             jQuery($products_included).addClass('clicked');
             jQuery($products_included).click();
-            unrelated_products_function(jQuery($products_included));
+
         } 
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
@@ -857,7 +857,6 @@ if (isset($_GET['action'])) {
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
-                    unrelated_products_function(jQuery('input[product_id="<?= $product ?>"]'));
                 <?php } ?>
             <?php } else { ?>
                 <?php foreach ($product_lists as $product) { ?>
