@@ -2878,7 +2878,10 @@ function show_template() {
 		);
 		$configurator = get_posts($args);
 
-		echo '<table class="table">';
+		echo '<style> .action-table td { padding: 5px } .action-table a { padding: 5px; background-color: #E50050; color: #fff; display: inline-block } </style>';
+
+		echo '<table class="table configurator-table">';
+		
 
 		echo '<tr>';
 
@@ -2915,7 +2918,7 @@ function show_template() {
 			echo '</td>';
 
 			echo '<td>';
-			echo '<table>';
+			echo '<table class="action-table">';
 			echo '<tr>';
 			echo '<td>';
 			echo '<a href="' . get_permalink($config->ID) . '">Edit</a>';
