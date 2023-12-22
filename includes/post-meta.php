@@ -52,6 +52,13 @@ function get_product_lists_sku()
 {
 
 
+	$args['numberposts'] = -1;
+	$args['post_type'] = 'product';
+	$args['orderby'] = 'title';
+	$args['order'] = 'ASC';
+	$args['post_status'] = array('publish', 'private');
+
+
 	$products = get_posts($args);
 
 	$products_arr = array();
