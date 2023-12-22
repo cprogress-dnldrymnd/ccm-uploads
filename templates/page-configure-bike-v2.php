@@ -133,17 +133,19 @@ get_header(); // This fxn gets the header.php file and renders it
         padding-bottom: 200px;
     }
 
-    .unrelated-product + label {
+    .unrelated-product+label {
         pointer-events: none !important;
     }
+
     .disallow {
         position: absolute;
-        left: 0;
+        left: calc(var(--bs-gutter-x) * 0.5);
         top: 0;
-        right: 0;
+        right: calc(var(--bs-gutter-x) * 0.5);
         bottom: 0;
         z-index: 999;
         background-color: rgba(0, 0, 0, .5);
+        display: none;
     }
 </style>
 <?php
