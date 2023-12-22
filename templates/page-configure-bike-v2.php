@@ -862,7 +862,8 @@ if (isset($_GET['action'])) {
 
                     if (jQuery('input[product_id="<?= $product ?>"]').next().hasClass('select-one')) {
                         $main_id = jQuery('input[product_id="<?= $product ?>"]').attr('main_id');
-                        $main_id.removeClass('clicked');
+                        $main_ids = jQuery('input[main_id="' + $main_id + '"]');
+                        $main_ids.removeClass('clicked');
                         jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
                     } else {
                         jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
