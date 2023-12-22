@@ -37,7 +37,9 @@ get_header(); // This fxn gets the header.php file and renders it
     }
 </style>
 <style>
-    .red-btn.red-btn:focus, .red-btn.red-btn:hover, .red-btn:active {
+    .red-btn.red-btn:focus,
+    .red-btn.red-btn:hover,
+    .red-btn:active {
         color: #fff !important;
         background-color: #ed181f !important;
 
@@ -837,7 +839,18 @@ if (isset($_GET['action'])) {
         jQuery($products_included).next().find('.price').text('Included in package');
         jQuery($products_included).attr('accesory_value', 0);
         jQuery($products_included).addClass('clicked');
-        jQuery($products_included).click();
+
+
+
+        if (jQuery($products_included).next().hasClass('select-one')) {
+            $main_id = jQuery($products_included).attr('main_id');
+            $main_ids = jQuery('input[main_id="' + $main_id + '"]');
+            $main_ids.removeClass('clicked');
+            jQuery($products_included).click();
+        } else {
+            jQuery($products_included).click();
+        }
+
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
 
