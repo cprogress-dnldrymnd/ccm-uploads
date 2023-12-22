@@ -779,8 +779,7 @@ if (isset($_GET['action'])) {
 
     function unrelated_products_function($this) {
         $products_included = $this.attr('unrelated-products');
-        jQuery($products_included).addClass('disabled')
-        jQuery($products_included).addClass('unrelated-products');
+        jQuery($products_included).addClass('unrelated-product');
         jQuery($products_included).prop("checked", false);
         console.log('ccccc');
     }
