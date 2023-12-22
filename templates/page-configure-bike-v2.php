@@ -37,7 +37,9 @@ get_header(); // This fxn gets the header.php file and renders it
     }
 </style>
 <style>
-    .red-btn.red-btn:focus, .red-btn.red-btn:hover, .red-btn:active {
+    .red-btn.red-btn:focus,
+    .red-btn.red-btn:hover,
+    .red-btn:active {
         color: #fff !important;
         background-color: #ed181f !important;
 
@@ -857,7 +859,14 @@ if (isset($_GET['action'])) {
             ?>
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
-                    jQuery('input[product_id="<?= $product ?>"]').click();
+
+                    if (jQuery('input[product_id="<?= $product ?>"]').next().hasClass('select-one')) {
+                        $main_id = jQuery('input[product_id="<?= $product ?>"]').attr('main_id');
+                        $main_id.removeClass('clicked');
+                        jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
+                    } else {
+                        jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
+                    }
                 <?php } ?>
             <?php } else { ?>
                 <?php foreach ($product_lists as $product) { ?>
