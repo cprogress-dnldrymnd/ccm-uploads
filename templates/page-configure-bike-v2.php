@@ -297,8 +297,11 @@ if (isset($_GET['action'])) {
                                                                     $bike_price_custom_val = $bike_price_custom ? $bike_price_custom : $configurator_price;
 
                                                                     $related_products = carbon_get_the_post_meta($bike_code . '_related_products');
+                                                                    $unrelated_products = carbon_get_the_post_meta($bike_code . '_unrelated_products');
                                                                     $related_products_val = '';
+                                                                    $unrelated_products_val = '';
                                                                     $related_products_arr = array();
+                                                                    $unrelated_products_arr = array();
                                                                     $is_package = '';
                                                                     if ($related_products) {
                                                                         foreach ($related_products as $product_included) {
@@ -307,6 +310,15 @@ if (isset($_GET['action'])) {
                                                                         $related_products_val = 'products-included="' . implode(", ", $related_products_arr) . '"';
                                                                         $is_package = ' is-package';
                                                                     }
+
+
+                                                                    if ($unrelated_products) {
+                                                                        foreach ($unrelated_products as $unrelated_product) {
+                                                                            $unrelated_products_arr[] = "[sku='" . clean_string_2($unrelated_product) . "']";
+                                                                        }
+                                                                        $unrelated_products_val = 'unrelated-products="' . implode(", ", $unrelated_products_arr) . '"';
+                                                                    }
+
                                                                     $pre_selected_item = carbon_get_the_post_meta($bike_code . '_pre_selected');
 
                                                                     $bike_price = $bike_price_custom_val != '' ? $bike_price_custom_val : $product->get_price();
@@ -334,7 +346,7 @@ if (isset($_GET['action'])) {
                                                                     $part_code = $configurator_part_code ? $configurator_part_code : $product->get_sku();
                                                                     ?>
                                                                     <div class="col-md-3 col-sm-6 col-xs-6 mb-30 <?= $accessory_id ?>">
-                                                                        <input product_id="<?= get_the_ID() ?>" name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>" value="<?= get_the_ID() ?>">
+                                                                        <input product_id="<?= get_the_ID() ?>" name="<?= $section->slug ?>[]" class="tot_amount<?= $pre_selected . $required . $is_package . $exclude_from_deselection_val ?> " type="checkbox" id="<?= $accessory_id ?>" accesory_value="<?= $accessory_price ?>" main_id="<?= 'box-' . $key ?>" <?= $related_products_val ?> <?= $unrelated_products_val ?> sku="<?= clean_string_2($product->get_sku()) ?>" value="<?= get_the_ID() ?>">
                                                                         <label for="<?= $accessory_id ?>" class="acc_box<?= $select_one . $change_image ?> " main_id="<?= 'box-' . $key ?>">
                                                                             <!-- IMAGE HOLDER  -->
                                                                             <h4>
