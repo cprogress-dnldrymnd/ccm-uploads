@@ -770,7 +770,6 @@ if (isset($_GET['action'])) {
     function unrelated_products() {
         jQuery('.has-unrelated-products').change(function(index, el) {
             unrelated_products_function(jQuery(this));
-            console.log('xxx');
             setTimeout(function() {
                 update_summary();
             }, 500);
@@ -780,9 +779,10 @@ if (isset($_GET['action'])) {
 
     function unrelated_products_function($this) {
         $products_included = $this.attr('unrelated-products');
-        jQuery($products_included).parent().hide();
+        jQuery($products_included).addClass('disabled')
         jQuery($products_included).addClass('unrelated-products');
         jQuery($products_included).prop("checked", false);
+        console.log('ccccc');
     }
 
 
