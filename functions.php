@@ -2890,7 +2890,9 @@ function show_template() {
 			padding: 5px;
 			background-color: var(--main-color);
 			color: #fff;
-			display: inline-block
+			display: inline-block;
+			border: none;
+			border-radius: 5px;
 		}
 
 		.red-btn:focus {
