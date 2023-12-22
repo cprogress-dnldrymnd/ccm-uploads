@@ -637,7 +637,9 @@ if (isset($_GET['action'])) {
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         <?php if (isset($_GET['id'])) { ?>
-            is_saved_data();
+            setTimeout(function() {
+                is_saved_data();
+            }, 300);
         <?php } else { ?>
             pre_selected();
             is_package();
@@ -859,15 +861,7 @@ if (isset($_GET['action'])) {
             ?>
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
-
-                    if (jQuery('input[product_id="<?= $product ?>"]').next().hasClass('select-one')) {
-                        $main_id = jQuery('input[product_id="<?= $product ?>"]').attr('main_id');
-                        $main_ids = jQuery('input[main_id="' + $main_id + '"]');
-                        $main_ids.removeClass('clicked');
-                        jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
-                    } else {
-                        jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
-                    }
+                    jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
                 <?php } ?>
             <?php } else { ?>
                 <?php foreach ($product_lists as $product) { ?>
@@ -877,7 +871,7 @@ if (isset($_GET['action'])) {
             <?php } ?>
             setTimeout(function() {
                 jQuery('.acc-option').addClass('saved-data-loaded');
-            }, 300);
+            }, 600);
 
         <?php } ?>
     }
