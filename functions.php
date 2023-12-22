@@ -3020,13 +3020,15 @@ function show_template() {
 	</div>
 
 	<script>
+		function openModal($id) {
+			jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
+			setTimeout(function() {
+				jQuery('.custom-modal').addClass('show-modal');
+			}, 300);
+		}
+
 		jQuery(document).ready(function() {
-			function openModal($id) {
-				jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
-				setTimeout(function() {
-					jQuery('.custom-modal').addClass('show-modal');
-				}, 300);
-			}
+
 
 			jQuery('.exit-modal').click(function(e) {
 				jQuery('.custom-modal').removeClass('show-modal');
