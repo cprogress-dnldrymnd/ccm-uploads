@@ -2999,7 +2999,7 @@ function show_template() {
 	</table>
 
 	<div class="buy-order-bike-page custom-modal">
-		<div class="custom-modal-backdrop"></div>
+		<div class="custom-modal-backdrop exit-modal"></div>
 		<div class="container">
 			<div class="form-reserve">
 				<div class="wpcf7-form">
@@ -3030,9 +3030,9 @@ function show_template() {
 
 		jQuery(document).ready(function() {
 
-
 			jQuery('.exit-modal').click(function(e) {
 				jQuery('.custom-modal').removeClass('show-modal');
+			jQuery('#delete-button').attr('href', '#');
 				setTimeout(function() {
 					jQuery('.custom-modal, .custom-modal-backdrop').removeClass('modal-active');
 				}, 300);
