@@ -815,8 +815,6 @@ if (isset($_GET['action'])) {
             } else {
                 jQuery($products_included).addClass('unrelated-product');
             }
-
-
         }
     }
 
@@ -835,7 +833,6 @@ if (isset($_GET['action'])) {
                 jQuery(this).parent().prev().prop("checked", false).removeClass('clicked');
             }
         });
-
         jQuery($products_included).next().find('.price').text('Included in package');
         jQuery($products_included).attr('accesory_value', 0);
 
@@ -845,11 +842,9 @@ if (isset($_GET['action'])) {
         } else {
             unrelated_products_function(jQuery($products_included), true);
         }
-
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
         unrelated_products_function(jQuery($products_included));
-
     }
 
     function is_saved_data() {
@@ -869,6 +864,7 @@ if (isset($_GET['action'])) {
                 <?php foreach ($product_lists as $product) { ?>
                     jQuery('input[product_id="<?= $product ?>"]').click();
                     package_function(jQuery('input[product_id="<?= $product ?>"]'));
+
                 <?php } ?>
             <?php } ?>
             setTimeout(function() {
