@@ -3008,10 +3008,10 @@ function show_template() {
 							<h2>Are you sure you want to delete this?</h2>
 						</div>
 						<div class="col-md-6">
-							<button class="exit-modal" class="red-btn ">NO</button>
+							<button class="exit-modal red-btn">NO</button>
 						</div>
 						<div class="col-md-6">
-							<a class="">YES</a>
+							<a class="red-btn">YES</a>
 						</div>
 					</div>
 				</div>
