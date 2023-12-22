@@ -62,7 +62,11 @@ function get_product_lists_sku()
 	if (is_admin()) {
 		if (isset($_GET['post'])) {
 			if (get_post_type($_GET['post']) == 'product') {
-				
+				$args['tax_query'][] = array(
+					'taxonomy' => 'product_cat',
+					'field' => 'slug',
+					'terms' => 'maverick',
+				);
 			}
 		}
 	}
