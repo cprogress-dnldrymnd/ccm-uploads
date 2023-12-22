@@ -814,7 +814,9 @@ if (isset($_GET['action'])) {
                 jQuery($products_included).addClass('unrelated-product');
             }
         }
-      
+        setTimeout(function() {
+            update_summary();
+        }, 500);
     }
 
 
