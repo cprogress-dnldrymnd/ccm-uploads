@@ -792,6 +792,7 @@ if (isset($_GET['action'])) {
                 package_function(jQuery(this));
             }
             setTimeout(function() {
+                update_summary();
                 getTotal();
             }, 500);
         });
