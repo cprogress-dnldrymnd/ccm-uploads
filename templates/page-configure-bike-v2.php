@@ -770,6 +770,7 @@ if (isset($_GET['action'])) {
     function unrelated_products() {
         jQuery('.has-unrelated-products').change(function(index, el) {
             unrelated_products_function(jQuery(this));
+            console.log('xxx');
             setTimeout(function() {
                 update_summary();
             }, 500);
