@@ -52,26 +52,6 @@ function get_product_lists_sku()
 {
 
 
-	$args['numberposts'] = -1;
-	$args['post_type'] = 'product';
-	$args['orderby'] = 'title';
-	$args['order'] = 'ASC';
-	$args['post_status'] = array('publish', 'private');
-
-
-	if (is_admin()) {
-		if (isset($_GET['post'])) {
-			if (get_post_type($_GET['post']) == 'product') {
-				$args['tax_query'][] = array(
-					'taxonomy' => 'product_cat',
-					'field' => 'slug',
-					'terms' => 'maverick',
-				);
-			}
-		}
-	}
-
-
 	$products = get_posts($args);
 
 	$products_arr = array();
