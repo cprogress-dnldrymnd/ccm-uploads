@@ -135,7 +135,6 @@ get_header(); // This fxn gets the header.php file and renders it
 
     .unrelated-product+label {
         pointer-events: none !important;
-        cursor: not-allowed;
     }
 
     .unrelated-product+label+.disallow {
@@ -153,8 +152,9 @@ get_header(); // This fxn gets the header.php file and renders it
         right: calc(var(--bs-gutter-x) * 0.5);
         bottom: 0;
         z-index: 999;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .2);
         display: none;
+        cursor: not-allowed;
     }
 </style>
 <?php
