@@ -2872,13 +2872,12 @@ function show_template() {
 	{
 
 
-		if(isset($_GET['delete'])) {
+		if (isset($_GET['delete'])) {
 			wp_delete_post($_GET['delete']);
 			wp_redirect('/my-account/configurator/');
 			exit();
 		}
 
-		echo '<h3>Configurator</h3>';
 		$args = array(
 			'numberposts' => -1,
 			'post_type'   => 'configurator',
@@ -2887,7 +2886,6 @@ function show_template() {
 		$configurator = get_posts($args);
 	?>
 
-	<div class="woocommerce-notices-wrapper"></div>
 	<h3>Configurator</h3>
 	<style>
 		.action-table td {
@@ -2904,12 +2902,14 @@ function show_template() {
 			text-decoration: none;
 		}
 
-		.red-btn:focus {
-			color: #ed181f !important;
-		}
-		.red-btn:hover {
+		.red-btn.red-btn:focus,
+		.red-btn.red-btn:hover,
+		.red-btn:active {
 			color: #fff !important;
+			background-color: #ed181f !important;
+
 		}
+
 		.custom-modal {
 			position: fixed;
 			right: 0;
@@ -3043,7 +3043,7 @@ function show_template() {
 
 			jQuery('.exit-modal').click(function(e) {
 				jQuery('.custom-modal').removeClass('show-modal');
-			jQuery('#delete-button').attr('href', '#');
+				jQuery('#delete-button').attr('href', '#');
 				setTimeout(function() {
 					jQuery('.custom-modal, .custom-modal-backdrop').removeClass('modal-active');
 				}, 300);

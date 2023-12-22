@@ -37,8 +37,10 @@ get_header(); // This fxn gets the header.php file and renders it
     }
 </style>
 <style>
-    .red-btn:focus {
-        color: #ed181f !important;
+    .red-btn.red-btn:focus, .red-btn.red-btn:hover, .red-btn:active {
+        color: #fff !important;
+        background-color: #ed181f !important;
+
     }
 
     .custom-modal {
