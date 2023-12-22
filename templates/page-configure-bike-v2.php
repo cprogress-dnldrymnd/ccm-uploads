@@ -870,10 +870,11 @@ if (isset($_GET['action'])) {
 
     function click_acc() {
         jQuery('.acc_box').click(function(event) {
+            unrelated_products_function(jQuery(this).prev());
+
             if (jQuery(this).hasClass('select-one')) {
                 $main_id = jQuery(this).attr('main_id');
                 $input = jQuery(this).prev();
-
                 if (!($input.hasClass('required') && $input.hasClass('clicked'))) {
                     $main_id = jQuery('input[main_id="' + $main_id + '"]');
                     $main_id.removeClass('clicked');
