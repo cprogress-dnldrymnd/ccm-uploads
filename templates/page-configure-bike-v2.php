@@ -807,6 +807,8 @@ if (isset($_GET['action'])) {
             $products_included = $this.attr('unrelated-products');
             jQuery($products_included).addClass('unrelated-product');
             jQuery($products_included).prop("checked", false);
+
+            console.log('ddddddd');
         }
     }
 
