@@ -191,17 +191,10 @@ if (isset($_GET['action'])) {
     carbon_set_post_meta($post_id, 'config_id', $_GET['config_id']);
     carbon_set_post_meta($post_id, 'config_url', $config_url);
     wp_redirect($config_url);
-
     exit;
 }
-
-
-
-
 ?>
 <div>
-
-
     <div class="buy-order-bike-page configure-bike-banner">
         <div class="container">
             <div class="row">
