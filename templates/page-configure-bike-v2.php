@@ -37,9 +37,7 @@ get_header(); // This fxn gets the header.php file and renders it
     }
 </style>
 <style>
-    .red-btn.red-btn:focus,
-    .red-btn.red-btn:hover,
-    .red-btn:active {
+    .red-btn.red-btn:focus, .red-btn.red-btn:hover, .red-btn:active {
         color: #fff !important;
         background-color: #ed181f !important;
 
@@ -637,9 +635,7 @@ if (isset($_GET['action'])) {
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         <?php if (isset($_GET['id'])) { ?>
-            setTimeout(function() {
-                is_saved_data();
-            }, 300);
+            is_saved_data();
         <?php } else { ?>
             pre_selected();
             is_package();
@@ -871,7 +867,7 @@ if (isset($_GET['action'])) {
             <?php } ?>
             setTimeout(function() {
                 jQuery('.acc-option').addClass('saved-data-loaded');
-            }, 600);
+            }, 300);
 
         <?php } ?>
     }
