@@ -2886,87 +2886,87 @@ function show_template() {
 			padding: 5px
 		}
 
-		.action-table .action-btn{
+		.action-table .action-btn {
 			padding: 5px;
 			background-color: #E50050;
 			color: #fff;
 			display: inline-block
 		}
+
 		.red-btn:focus {
-        color: #ed181f !important;
-    }
+			color: #ed181f !important;
+		}
 
-    .custom-modal {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        z-index: 99999999;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        left: 0;
-        top: 0;
-        visibility: hidden;
-        opacity: 0;
-        display: none;
-    }
+		.custom-modal {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			z-index: 99999999;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			left: 0;
+			top: 0;
+			visibility: hidden;
+			opacity: 0;
+			display: none;
+		}
 
-    .custom-modal-backdrop {
-        position: fixed;
-        z-index: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, .5);
-        display: none;
-    }
+		.custom-modal-backdrop {
+			position: fixed;
+			z-index: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, .5);
+			display: none;
+		}
 
-    .custom-modal .container {
-        background-color: var(--white-color);
-        position: relative;
-        z-index: 1;
-        padding: 40px;
-        transform: translateY(70%);
-        transition: 300ms;
-        max-width: 500px !important;
-        display: none;
-        max-height: 100vh;
-        overflow: auto;
-    }
+		.custom-modal .container {
+			background-color: var(--white-color);
+			position: relative;
+			z-index: 1;
+			padding: 40px;
+			transform: translateY(70%);
+			transition: 300ms;
+			max-width: 500px !important;
+			display: none;
+			max-height: 100vh;
+			overflow: auto;
+		}
 
 
-    .custom-modal h2 {
-        margin-top: 0;
-        margin-bottom: 30px;
-        font-size: 30px !important;
-    }
+		.custom-modal h2 {
+			margin-top: 0;
+			margin-bottom: 30px;
+			font-size: 30px !important;
+		}
 
-    .custom-modal-backdrop.modal-active {
-        display: block;
-    }
+		.custom-modal-backdrop.modal-active {
+			display: block;
+		}
 
-    .custom-modal.modal-active .container {
-        display: block;
-    }
+		.custom-modal.modal-active .container {
+			display: block;
+		}
 
-    .custom-modal.modal-active {
-        display: block;
-    }
+		.custom-modal.modal-active {
+			display: block;
+		}
 
-    .custom-modal.show-modal {
-        opacity: 1;
-        visibility: visible;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+		.custom-modal.show-modal {
+			opacity: 1;
+			visibility: visible;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-    .custom-modal.show-modal .container {
-        transform: translateY(0);
-    }
-
+		.custom-modal.show-modal .container {
+			transform: translateY(0);
+		}
 	</style>
 	<table class="table configurator-table">
 		<tbody>
@@ -2986,7 +2986,7 @@ function show_template() {
 							<tbody>
 								<tr>
 									<td><a href="<?= get_permalink($config->ID) ?>" class="action-btn"> Edit</a></td>
-									<td><button id="popup-button" class="action-btn">Delete</a></td>
+									<td><button class="action-btn popup-button" onclick="openModal($config->ID)">Delete</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -3006,10 +3006,10 @@ function show_template() {
 							<h2>Are you sure you want to delete this?</h2>
 						</div>
 						<div class="col-md-6">
-							<button class="red-btn ">NO</button>
+							<button class="exit-modal" class="red-btn ">NO</button>
 						</div>
 						<div class="col-md-6">
-							<button class="red-btn ">YES</button>
+							<a class="">YES</a>
 						</div>
 					</div>
 				</div>
@@ -3018,12 +3018,21 @@ function show_template() {
 	</div>
 
 	<script>
-		jQuery('#popup-button').click(function(e) {
-			jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
-			setTimeout(function() {
-				jQuery('.custom-modal').addClass('show-modal');
-			}, 300);
-			e.preventDefault();
+		jQuery(document).ready(function() {
+			function openModal($id) {
+				jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
+				setTimeout(function() {
+					jQuery('.custom-modal').addClass('show-modal');
+				}, 300);
+			}
+
+			jQuery('.exit-modal').click(function(e) {
+				jQuery('.custom-modal').removeClass('show-modal');
+				setTimeout(function() {
+					jQuery('.custom-modal, .custom-modal-backdrop').removeClass('modal-active');
+				}, 300);
+				e.preventDefault();
+			});
 		});
 	</script>
 <?php

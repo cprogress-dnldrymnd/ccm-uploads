@@ -559,7 +559,7 @@ if (isset($_GET['action'])) {
     </div>
 
     <div class="buy-order-bike-page custom-modal">
-        <div class="custom-modal-backdrop"></div>
+        <div class="custom-modal-backdrop exit-modal"></div>
         <div class="container">
             <div class="form-reserve">
                 <div class="wpcf7-form">
@@ -692,7 +692,7 @@ if (isset($_GET['action'])) {
             e.preventDefault();
         });
 
-        jQuery('.custom-modal-backdrop').click(function(e) {
+        jQuery('.exit-modal').click(function(e) {
             jQuery('.custom-modal').removeClass('show-modal');
             setTimeout(function() {
                 jQuery('.custom-modal, .custom-modal-backdrop').removeClass('modal-active');
