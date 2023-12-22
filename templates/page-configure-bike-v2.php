@@ -617,6 +617,7 @@ if (isset($_GET['action'])) {
         scroll();
         getTotal();
         click_acc();
+        unrelated_products();
         jQuery(".tot_amount").click(function(event) {
             getTotal();
         });
@@ -766,6 +767,27 @@ if (isset($_GET['action'])) {
         });
     }
 
+    function unrelated_products() {
+        jQuery('.has-unrelated-products').change(function(index, el) {
+            if (jQuery('.acc-option').hasClass('saved-data-loaded')) {
+                unrelated_products_function(jQuery(this));
+            }
+            setTimeout(function() {
+                update_summary();
+            }, 500);
+        });
+    }
+
+
+    function unrelated_products_function($this) {
+        $products_included = $this.attr('unrelated-products');
+        jQuery($products_included).parent().hide();
+        jQuery($products_included).addClass('unrelated-products');
+        $this.prop("checked", false);
+    }
+
+
+
     function package_function($this) {
         $products_included = $this.attr('products-included');
 
@@ -788,9 +810,6 @@ if (isset($_GET['action'])) {
         }
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
-
-        console.log($products_included);
-
     }
 
     function is_saved_data() {
