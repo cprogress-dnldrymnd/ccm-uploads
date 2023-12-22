@@ -3011,7 +3011,7 @@ function show_template() {
 							<button class="exit-modal red-btn">NO</button>
 						</div>
 						<div class="col-md-6">
-							<a class="red-btn">YES</a>
+							<a class="red-btn" id="delete-button">YES</a>
 						</div>
 					</div>
 				</div>
@@ -3021,6 +3021,7 @@ function show_template() {
 
 	<script>
 		function openModal($id) {
+			jQuery('#delete-button').attr('href', '/my-account/configurator/?delete=' + $id);
 			jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
 			setTimeout(function() {
 				jQuery('.custom-modal').addClass('show-modal');
