@@ -857,7 +857,7 @@ if (isset($_GET['action'])) {
             ?>
             <?php if ($category != 'model') { ?>
                 <?php foreach ($product_lists as $product) { ?>
-                    jQuery('input[product_id="<?= $product ?>"]').prop("checked", true).addClass('clicked');
+                    jQuery('input[product_id="<?= $product ?>"]').click();
                 <?php } ?>
             <?php } else { ?>
                 <?php foreach ($product_lists as $product) { ?>
