@@ -778,6 +778,7 @@ if (isset($_GET['action'])) {
             jQuery(this).prop("checked", true).addClass('clicked');
             if (jQuery(this).hasClass('is-package')) {
                 package_function(jQuery(this));
+                unrelated_products_function(jQuery(this));
             }
             setTimeout(function() {
                 update_summary();
