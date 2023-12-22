@@ -812,10 +812,10 @@ if (isset($_GET['action'])) {
     function unrelated_products_function($this, $reselect = false) {
         if ($this.hasClass('has-unrelated-products')) {
             $products_included = $this.attr('unrelated-products');
-            jQuery($products_included).prop("checked", false);
             if ($reselect == true) {
                 jQuery($products_included).removeClass('unrelated-product');
             } else {
+                jQuery($products_included).prop("checked", false);
                 jQuery($products_included).addClass('unrelated-product');
             }
         }
