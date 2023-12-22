@@ -793,7 +793,6 @@ if (isset($_GET['action'])) {
             }
             setTimeout(function() {
                 update_summary();
-                getTotal();
             }, 500);
         });
     }
@@ -816,7 +815,7 @@ if (isset($_GET['action'])) {
             }
         }
         setTimeout(function() {
-            update_summary();
+            getTotal();
         }, 500);
     }
 
