@@ -798,7 +798,9 @@ if (isset($_GET['action'])) {
 
     function unrelated_products() {
         jQuery('.has-unrelated-products').change(function(index, el) {
-            unrelated_products_function(jQuery(this));
+            if (jQuery('.acc-option').hasClass('saved-data-loaded')) {
+                unrelated_products_function(jQuery(this));
+            }
             setTimeout(function() {
                 update_summary();
             }, 500);
@@ -839,12 +841,13 @@ if (isset($_GET['action'])) {
         if (jQuery('.acc-option').hasClass('saved-data-loaded')) {
             jQuery($products_included).addClass('clicked');
             jQuery($products_included).click();
-            
+
         } else {
             //unrelated_products_function(jQuery($products_included), true);
         }
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
+
         unrelated_products_function(jQuery($products_included));
 
     }
