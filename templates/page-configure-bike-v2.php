@@ -800,11 +800,6 @@ if (isset($_GET['action'])) {
     function unrelated_products() {
         jQuery('.has-unrelated-products').change(function(index, el) {
             unrelated_products_function(jQuery(this));
-
-            console.log('xxxx');
-            setTimeout(function() {
-                update_summary();
-            }, 500);
         });
     }
 
@@ -819,6 +814,10 @@ if (isset($_GET['action'])) {
                 jQuery($products_included).addClass('unrelated-product');
             }
         }
+
+        setTimeout(function() {
+            update_summary();
+        }, 500);
     }
 
 
