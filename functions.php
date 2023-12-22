@@ -2988,7 +2988,7 @@ function show_template() {
 							<tbody>
 								<tr>
 									<td><a href="<?= get_permalink($config->ID) ?>" class="action-btn"> Edit</a></td>
-									<td><button class="action-btn popup-button" onclick="openModal($config->ID)">Delete</a></td>
+									<td><button class="action-btn popup-button" onclick="openModal(<?= $config->ID ?>)">Delete</a></td>
 								</tr>
 							</tbody>
 						</table>
