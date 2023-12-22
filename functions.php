@@ -2878,7 +2878,7 @@ function show_template() {
 		);
 		$configurator = get_posts($args);
 
-		echo '<style> .action-table td { padding: 5px } .action-table a { padding: 5px; background-color: #E50050; color: #fff; display: inline-block } </style>';
+		echo '<style> .action-table td { padding: 5px } .action-table a { padding: 5px; background-color: var(--main-color); color: #fff; display: inline-block } </style>';
 
 		echo '<table class="table configurator-table">';
 		
