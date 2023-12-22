@@ -816,7 +816,7 @@ if (isset($_GET['action'])) {
         }
         setTimeout(function() {
             update_summary();
-        }, 500);
+        }, 1000);
     }
 
 
