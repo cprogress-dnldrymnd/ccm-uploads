@@ -135,6 +135,7 @@ get_header(); // This fxn gets the header.php file and renders it
 
     .unrelated-product+label {
         pointer-events: none !important;
+        cursor: not-allowed;
     }
 
     .disallow {
