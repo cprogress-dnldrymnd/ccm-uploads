@@ -2049,6 +2049,7 @@ function bike_individual_product_details($bike_code, $bike_name)
 			),
 		Field::make('text', $bike_code . '_section_order', $bike_name . ' Section Order')->set_attribute('type', 'number'),
 		Field::make('multiselect', $bike_code . '_related_products', __('Related Products'))
+		->add_options(get_product_lists_sku()),
 		Field::make('multiselect', $bike_code . '_unrelated_products', __('Unrelated Products'))
 			->add_options(get_product_lists_sku())
 	);
