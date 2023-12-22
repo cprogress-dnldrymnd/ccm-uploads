@@ -132,6 +132,19 @@ get_header(); // This fxn gets the header.php file and renders it
     .footer.bt-5 {
         padding-bottom: 200px;
     }
+
+    .unrelated-product + label {
+        pointer-events: none !important;
+    }
+    .disallow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .5);
+    }
 </style>
 <?php
 $bike_initial_price = carbon_get_the_post_meta('bike_initial_price');
@@ -367,6 +380,7 @@ if (isset($_GET['action'])) {
                                                                                 <?= $price ?>
                                                                             </div>
                                                                         </label>
+                                                                        <div class="disallow"></div>
                                                                     </div>
                                                                 <?php } ?>
                                                                 <?php wp_reset_postdata() ?>
