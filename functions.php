@@ -2888,7 +2888,7 @@ function show_template() {
 
 		.action-table .action-btn {
 			padding: 5px;
-			background-color: #E50050;
+			background-color: var(--main-color);
 			color: #fff;
 			display: inline-block
 		}
