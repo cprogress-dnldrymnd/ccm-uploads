@@ -2901,6 +2901,7 @@ function show_template() {
 			display: inline-block;
 			border: none;
 			border-radius: 5px;
+			text-decoration: none;
 		}
 
 		.red-btn:focus {
