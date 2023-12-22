@@ -66,7 +66,7 @@ function get_product_lists_sku()
 					array(
 					'taxonomy' => 'product_cat',
 					'field' => 'slug',
-					'terms' => 'bob',
+					'terms' => 'maverick',
 					)
 				);
 			}
