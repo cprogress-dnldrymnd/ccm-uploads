@@ -2892,6 +2892,81 @@ function show_template() {
 			color: #fff;
 			display: inline-block
 		}
+		.red-btn:focus {
+        color: #ed181f !important;
+    }
+
+    .custom-modal {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 99999999;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        left: 0;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    .custom-modal-backdrop {
+        position: fixed;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+        display: none;
+    }
+
+    .custom-modal .container {
+        background-color: var(--white-color);
+        position: relative;
+        z-index: 1;
+        padding: 40px;
+        transform: translateY(70%);
+        transition: 300ms;
+        max-width: 500px !important;
+        display: none;
+        max-height: 100vh;
+        overflow: auto;
+    }
+
+
+    .custom-modal h2 {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 30px !important;
+    }
+
+    .custom-modal-backdrop.modal-active {
+        display: block;
+    }
+
+    .custom-modal.modal-active .container {
+        display: block;
+    }
+
+    .custom-modal.modal-active {
+        display: block;
+    }
+
+    .custom-modal.show-modal {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .custom-modal.show-modal .container {
+        transform: translateY(0);
+    }
+
 	</style>
 	<table class="table configurator-table">
 		<tbody>
