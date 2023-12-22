@@ -2718,7 +2718,7 @@ function show_template() {
 				padding: 0 20px;
 			}
 		</style>
-<?php
+	<?php
 		}
 	}
 
@@ -2877,63 +2877,51 @@ function show_template() {
 			'author'        =>  $current_user->ID,
 		);
 		$configurator = get_posts($args);
+	?>
 
-		echo '<style> .action-table td { padding: 5px } .action-table a { padding: 5px; background-color: var(--main-color); color: #fff; display: inline-block; line-height: 1; text-decoration: none; border-radius: 5px } </style>';
-
-		echo '<table class="table configurator-table">';
-		
-
-		echo '<tr>';
-
-		echo '<th>';
-		echo 'Bike';
-		echo '</th>';
-
-		echo '<th>';
-		echo 'Title';
-		echo '</th>';
-
-		echo '<th>';
-		echo 'Notes';
-		echo '</th>';
-
-		echo '<th>';
-		echo 'Action';
-		echo '</th>';
-
-		echo '</tr>';
-		foreach ($configurator as $config) {
-			echo '<tr>';
-
-			echo '<td>';
-			echo get_the_title(get_post_meta($config->ID, '_config_id', true));
-			echo '</td>';
-
-			echo '<td>';
-			echo $config->post_title;
-			echo '</td>';
-
-			echo '<td>';
-			echo $config->post_content;
-			echo '</td>';
-
-			echo '<td>';
-			echo '<table class="action-table">';
-			echo '<tr>';
-			echo '<td>';
-			echo '<a href="' . get_permalink($config->ID) . '">Edit</a>';
-			echo '</td>';
-			echo '<td>';
-			echo '<a href="/my-account/configurator/?delete=' . get_permalink($config->ID) . '">Delete</a>';
-			echo '</td>';
-			echo '</tr>';
-			echo '</table>';
-			echo '</td>';
-
-
-			echo '</tr>';
+	<div class="woocommerce-notices-wrapper"></div>
+	<h3>Configurator</h3>
+	<style>
+		.action-table td {
+			padding: 5px
 		}
-		echo '</table>';
+
+		.action-table a {
+			padding: 5px;
+			background-color: #E50050;
+			color: #fff;
+			display: inline-block
+		}
+	</style>
+	<table class="table configurator-table">
+		<tbody>
+			<tr>
+				<th>Bike</th>
+				<th>Title</th>
+				<th>Notes</th>
+				<th>Action</th>
+			</tr>
+			<?php foreach ($configurator as $config) { ?>
+				<tr>
+					<td><?= get_the_title(get_post_meta($config->ID, '_config_id', true)) ?></td>
+					<td><?= $config->post_title ?></td>
+					<td><?= $config->post_content; ?> </td>
+					<td>
+						<table class="action-table">
+							<tbody>
+								<tr>
+									<td><a href="<?= get_permalink($config->ID) ?>"> Edit</a></td>
+									<td><a href="/my-account/configurator/?delete=https://ccm.theprogressteam.com/configurator/test-2/">Delete</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			<?php } ?>
+		</tbody>
+	</table>
+<?php
+
 	}
 
 	add_action('woocommerce_account_configurator_endpoint', 'ccm_configurator_content');
