@@ -138,6 +138,14 @@ get_header(); // This fxn gets the header.php file and renders it
         cursor: not-allowed;
     }
 
+    .unrelated-product+label+.disallow {
+        display: block;
+    }
+
+    .boxes .col-md-3 {
+        position: relative;
+    }
+
     .disallow {
         position: absolute;
         left: calc(var(--bs-gutter-x) * 0.5);
