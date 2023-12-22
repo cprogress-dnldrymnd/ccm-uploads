@@ -807,8 +807,6 @@ if (isset($_GET['action'])) {
             $products_included = $this.attr('unrelated-products');
             jQuery($products_included).addClass('unrelated-product');
             jQuery($products_included).prop("checked", false);
-
-            console.log('ddddddd');
         }
     }
 
@@ -870,7 +868,6 @@ if (isset($_GET['action'])) {
 
     function click_acc() {
         jQuery('.acc_box').click(function(event) {
-            unrelated_products_function(jQuery(this).prev());
 
             if (jQuery(this).hasClass('select-one')) {
                 $main_id = jQuery(this).attr('main_id');
