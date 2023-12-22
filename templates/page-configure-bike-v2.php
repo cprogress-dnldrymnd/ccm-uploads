@@ -833,6 +833,9 @@ if (isset($_GET['action'])) {
         }
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
+
+        unrelated_products_function($products_included);
+
     }
 
     function is_saved_data() {
