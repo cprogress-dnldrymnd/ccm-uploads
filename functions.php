@@ -2906,7 +2906,7 @@ function show_template() {
 		.red-btn:focus {
 			color: #ed181f !important;
 		}
-		.red-btn:focus {
+		.red-btn:hover {
 			color: #fff !important;
 		}
 		.custom-modal {
