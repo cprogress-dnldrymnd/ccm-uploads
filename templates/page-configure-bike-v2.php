@@ -810,7 +810,6 @@ if (isset($_GET['action'])) {
                 jQuery($products_included).removeClass('unrelated-product');
             } else {
                 jQuery($products_included).addClass('unrelated-product');
-
             }
 
 

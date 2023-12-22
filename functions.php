@@ -2915,7 +2915,16 @@ function show_template() {
 			echo '</td>';
 
 			echo '<td>';
+			echo '<table>';
+			echo '<tr>';
+			echo '<td>';
 			echo '<a href="' . get_permalink($config->ID) . '">Edit</a>';
+			echo '</td>';
+			echo '<td>';
+			echo '<a href="/my-account/configurator/?delete=' . get_permalink($config->ID) . '">Delete</a>';
+			echo '</td>';
+			echo '</tr>';
+			echo '</table>';
 			echo '</td>';
 
 
