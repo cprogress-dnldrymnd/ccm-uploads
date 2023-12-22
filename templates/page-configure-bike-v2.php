@@ -842,13 +842,12 @@ if (isset($_GET['action'])) {
         if (jQuery('.acc-option').hasClass('saved-data-loaded')) {
             jQuery($products_included).addClass('clicked');
             jQuery($products_included).click();
+        } else {
+            unrelated_products_function(jQuery($products_included), true);
         }
 
-        
         jQuery($products_included).addClass('disabled-unselect');
         $this.prop("checked", true).addClass('clicked');
-
-
         unrelated_products_function(jQuery($products_included));
 
     }
