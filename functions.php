@@ -2886,7 +2886,7 @@ function show_template() {
 			padding: 5px
 		}
 
-		.action-table a {
+		.action-table .action-btn{
 			padding: 5px;
 			background-color: #E50050;
 			color: #fff;
@@ -2910,8 +2910,8 @@ function show_template() {
 						<table class="action-table">
 							<tbody>
 								<tr>
-									<td><a href="<?= get_permalink($config->ID) ?>"> Edit</a></td>
-									<td><a href="/my-account/configurator/?delete=https://ccm.theprogressteam.com/configurator/test-2/">Delete</a></td>
+									<td><a href="<?= get_permalink($config->ID) ?>" class="action-btn"> Edit</a></td>
+									<td><button id="popup-button" class="action-btn">Delete</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -2927,22 +2927,30 @@ function show_template() {
 			<div class="form-reserve">
 				<div class="wpcf7-form">
 					<div class="row">
-						<?php if (is_user_logged_in()) { ?>
-							<div class="col-md-12">
-								<h2>Are you sure you want to delete this?</h2>
-							</div>
-							<div class="col-md-6">
-								<button class="red-btn ">NO</button>
-							</div>
-							<div class="col-md-6">
-								<button class="red-btn ">YES</button>
-							</div>
-						
+						<div class="col-md-12">
+							<h2>Are you sure you want to delete this?</h2>
+						</div>
+						<div class="col-md-6">
+							<button class="red-btn ">NO</button>
+						</div>
+						<div class="col-md-6">
+							<button class="red-btn ">YES</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script>
+		jQuery('#popup-button').click(function(e) {
+			jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
+			setTimeout(function() {
+				jQuery('.custom-modal').addClass('show-modal');
+			}, 300);
+			e.preventDefault();
+		});
+	</script>
 <?php
 
 	}
