@@ -50,14 +50,29 @@ function get_bike_list()
 
 function get_product_lists_sku()
 {
-	$args = array(
-		'numberposts' => -1,
-		'post_type'   => 'product',
-		'orderby'     => 'title',
-		'order'       => 'ASC',
-		'post_status' => array('publish', 'private'),
 
-	);
+	
+	$args['numberposts'] = -1;
+	$args['post_type'] = 'product';
+	$args['orderby'] = 'title';
+	$args['order'] = 'ASC';
+	$args['post_status'] = array('publish', 'private');
+
+
+	if(is_admin()) {
+		if(isset($_GET['post'])) {
+			if(get_post_type($_GET['post'])== 'product') {
+				$args['tax_query'] = array(
+					array(
+					'taxonomy' => 'product_cat',
+					'field' => 'slug',
+					'terms' => 'bob',
+					)
+				);
+			}
+		}
+	}
+
 
 	$products = get_posts($args);
 
