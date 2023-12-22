@@ -2920,6 +2920,29 @@ function show_template() {
 			<?php } ?>
 		</tbody>
 	</table>
+
+	<div class="buy-order-bike-page custom-modal">
+		<div class="custom-modal-backdrop"></div>
+		<div class="container">
+			<div class="form-reserve">
+				<div class="wpcf7-form">
+					<div class="row">
+						<?php if (is_user_logged_in()) { ?>
+							<div class="col-md-12">
+								<h2>Are you sure you want to delete this?</h2>
+							</div>
+							<div class="col-md-6">
+								<button class="red-btn ">NO</button>
+							</div>
+							<div class="col-md-6">
+								<button class="red-btn ">YES</button>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <?php
 
 	}
