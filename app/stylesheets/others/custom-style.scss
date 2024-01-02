@@ -1613,6 +1613,7 @@ body.not-log {
 	.acf-checkbox-list, .acf-radio-list {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 		&:before, &:after {
 			display: none;
 		}
