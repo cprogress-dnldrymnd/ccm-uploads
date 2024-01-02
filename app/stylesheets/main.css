@@ -5971,7 +5971,13 @@ body.not-log .woocommerce {
         padding: 0; } }
 body.not-log .acf-checkbox-list {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px; }
+  body.not-log .acf-checkbox-list:before {
+    display: none; }
+  body.not-log .acf-checkbox-list li {
+    padding: 0 15px; }
 
 .news {
   padding: 50px 0; }
