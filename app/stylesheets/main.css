@@ -5976,7 +5976,7 @@ body.not-log .acf-checkbox-list, body.not-log .acf-radio-list {
   body.not-log .acf-checkbox-list:before, body.not-log .acf-checkbox-list:after, body.not-log .acf-radio-list:before, body.not-log .acf-radio-list:after {
     display: none; }
   body.not-log .acf-checkbox-list li, body.not-log .acf-radio-list li {
-    padding: 0 7.5px !important; }
+    padding: 7.5px !important; }
 
 .news {
   padding: 50px 0; }
