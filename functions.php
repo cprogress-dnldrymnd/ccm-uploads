@@ -2827,28 +2827,28 @@ function show_template() {
 	// 1. Register new endpoint (URL) for My Account page
 	// Note: Re-save Permalinks or it will give 404 error
 
-	function ccm_add_configurator_endpoint()
+	function ccm_add_configurations_endpoint()
 	{
-		add_rewrite_endpoint('configurator', EP_ROOT | EP_PAGES);
+		add_rewrite_endpoint('configurations', EP_ROOT | EP_PAGES);
 	}
 
-	add_action('init', 'ccm_add_configurator_endpoint');
+	add_action('init', 'ccm_add_configurations_endpoint');
 
 	// ------------------
 	// 2. Add new query var
 
-	function ccm_configurator_query_vars($vars)
+	function ccm_configurations_query_vars($vars)
 	{
-		$vars[] = 'configurator';
+		$vars[] = 'configurations';
 		return $vars;
 	}
 
-	add_filter('query_vars', 'ccm_configurator_query_vars', 0);
+	add_filter('query_vars', 'ccm_configurations_query_vars', 0);
 
 	// ------------------
 	// 3. Insert the new endpoint into the My Account menu
 
-	function ccm_add_configurator_link_my_account($items)
+	function ccm_add_configurations_link_my_account($items)
 	{
 		$items = array(
 			'dashboard'       => __('Dashboard', 'woocommerce'),
@@ -2857,24 +2857,24 @@ function show_template() {
 			'orders'          => __('Orders', 'woocommerce'),
 			'downloads'       => __('Downloads', 'woocommerce'),
 			'payment-methods' => __('Payment methods', 'woocommerce'),
-			'configurator' => __('Configurator', 'woocommerce'),
+			'configurations' => __('Configurations', 'woocommerce'),
 			'customer-logout' => __('Logout', 'woocommerce'),
 		);
 		return $items;
 	}
 
-	add_filter('woocommerce_account_menu_items', 'ccm_add_configurator_link_my_account');
+	add_filter('woocommerce_account_menu_items', 'ccm_add_configurations_link_my_account');
 
 	// ------------------
 	// 4. Add content to the new tab
 
-	function ccm_configurator_content()
+	function ccm_configurations_content()
 	{
 
 
 		if (isset($_GET['delete'])) {
 			wp_delete_post($_GET['delete']);
-			wp_redirect('/my-account/configurator/');
+			wp_redirect('/my-account/configurations/');
 			exit();
 		}
 
@@ -2886,7 +2886,7 @@ function show_template() {
 		$configurator = get_posts($args);
 	?>
 
-	<h3>Configurator</h3>
+	<h3>configurations</h3>
 	<style>
 		.action-table td {
 			padding: 5px
@@ -3032,7 +3032,7 @@ function show_template() {
 
 	<script>
 		function openModal($id) {
-			jQuery('#delete-button').attr('href', '/my-account/configurator/?delete=' + $id);
+			jQuery('#delete-button').attr('href', '/my-account/configurations/?delete=' + $id);
 			jQuery('.custom-modal, .custom-modal-backdrop').addClass('modal-active');
 			setTimeout(function() {
 				jQuery('.custom-modal').addClass('show-modal');
@@ -3055,4 +3055,4 @@ function show_template() {
 
 	}
 
-	add_action('woocommerce_account_configurator_endpoint', 'ccm_configurator_content');
+	add_action('woocommerce_account_configurations_endpoint', 'ccm_configurations_content');
