@@ -607,16 +607,15 @@ jQuery(document).ready(function () {
 		}, 'slow');
 	});
 
-	$woocommerce_account = $('body.woocommerce-account');
+	$woocommerce_account = $('body.woocommerce-account, body.bikes-template-page-configure-bike-v2');
 	if (!$woocommerce_account.hasClass('logged-in')) {
 		$woocommerce_account.addClass('not-log');
 	}
+	$woocommerce_account.addClass('has-login-register');
 	$btns = $('<div class="my-account-btn"> <div class="login-ac active" data="the-login"><h2>LOGIN</h2></div> <div class="register-ac" data="the-register"><h2>REGISTER</h2></div> </div>')
 	$btns.prependTo('.woocommerce-account .the-content .woocommerce #customer_login');
-	$login = $('.u-column1');
-	$register = $('.u-column2');
-	$login.addClass('the-login');
-	$register.addClass('the-register hide-div');
+	$login = $('.the-login');
+	$register = $('.the-register');
 
 	$login_btn = $('.login-ac');
 	$register_btn = $('.register-ac');
