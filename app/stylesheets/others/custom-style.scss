@@ -1431,7 +1431,8 @@ section.event-register {
 		}
 	}
 }
-.woocommerce-account.not-log {
+
+body.not-log {
 	a[data-event='add-row'] {
 		padding-right: 10px !important;
 	}
@@ -1459,13 +1460,7 @@ section.event-register {
 				margin-right: auto;
 			}
 		}
-		.the-content {
-			
-		}
 	}
-}
-
-body.not-log {
 	.woocommerce {
 		background-color: #fff;
 		max-width: 600px; 

@@ -5803,12 +5803,12 @@ section.event-register {
   .radio-btn.radio-btn-3 .acf-input ul li:nth-child(3) {
     padding-left: 0; }
 
-.woocommerce-account.not-log a[data-event='add-row'] {
+.not-log a[data-event='add-row'] {
   padding-right: 10px !important; }
-.woocommerce-account.not-log input {
+.not-log input {
   font-family: 'Fira Sans Condensed' !important;
   font-size: 16px !important; }
-.woocommerce-account.not-log h1.title {
+.not-log h1.title {
   background-image: url(https://www.ccm-motorcycles.com/wp-content/uploads/2018/02/logo.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -5818,9 +5818,9 @@ section.event-register {
   width: 212px;
   border-bottom: none;
   margin-bottom: 25px; }
-.woocommerce-account.not-log .mid-section {
+.not-log .mid-section {
   background-color: #f1f1f1; }
-  .woocommerce-account.not-log .mid-section article > .title {
+  .not-log .mid-section article > .title {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto; }
