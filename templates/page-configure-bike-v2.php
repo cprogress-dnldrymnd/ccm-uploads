@@ -82,7 +82,7 @@ get_header(); // This fxn gets the header.php file and renders it
         max-width: 600px !important;
         display: none;
         max-height: 100vh;
-        overflow: auto;
+        overflow-x: hidden;
     }
 
 
