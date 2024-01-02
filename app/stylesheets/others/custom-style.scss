@@ -1613,8 +1613,6 @@ body.not-log {
 	.acf-checkbox-list, .acf-radio-list {
 		display: flex;
 		flex-wrap: wrap;
-		margin-left: -15px;
-		margin-right: -15px;
 		&:before, &:after {
 			display: none;
 		}

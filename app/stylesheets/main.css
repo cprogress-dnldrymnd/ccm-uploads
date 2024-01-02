@@ -5969,14 +5969,14 @@ body.not-log .woocommerce {
       body.not-log .woocommerce #customer_login .u-column1,
       body.not-log .woocommerce #customer_login .u-column2 {
         padding: 0; } }
-body.not-log .acf-checkbox-list {
+body.not-log .acf-checkbox-list, body.not-log .acf-radio-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px; }
-  body.not-log .acf-checkbox-list:before {
+  body.not-log .acf-checkbox-list:before, body.not-log .acf-checkbox-list:after, body.not-log .acf-radio-list:before, body.not-log .acf-radio-list:after {
     display: none; }
-  body.not-log .acf-checkbox-list li {
+  body.not-log .acf-checkbox-list li, body.not-log .acf-radio-list li {
     padding: 0 15px; }
 
 .news {
