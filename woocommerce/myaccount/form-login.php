@@ -24,7 +24,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
 
 <?php if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
 
-	<div class="u-columns col2-set the-login" id="customer_login">
+	<div class="u-columns col2-set " id="customer_login">
 		<div class="my-account-btn">
 			<div class="login-ac" data="the-login">
 				<h2>LOGIN</h2>
@@ -33,7 +33,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
 				<h2>REGISTER</h2>
 			</div>
 		</div>
-		<div class="u-column1 col-1">
+		<div class="u-column1 col-1 the-login">
 
 		<?php endif; ?>
 
