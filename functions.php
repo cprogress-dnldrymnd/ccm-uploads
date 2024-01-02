@@ -2886,7 +2886,7 @@ function show_template() {
 		$configurator = get_posts($args);
 	?>
 
-	<h3>configurations</h3>
+	<h3>Configurations</h3>
 	<style>
 		.action-table td {
 			padding: 5px
