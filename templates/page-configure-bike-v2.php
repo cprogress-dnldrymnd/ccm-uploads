@@ -76,7 +76,7 @@ get_header(); // This fxn gets the header.php file and renders it
         background-color: var(--white-color);
         position: relative;
         z-index: 1;
-        padding: 40px 0;
+        padding: 0;
         transform: translateY(70%);
         transition: 300ms;
         max-width: 600px !important;
