@@ -611,9 +611,6 @@ jQuery(document).ready(function () {
 	if (!$woocommerce_account.hasClass('logged-in')) {
 		$woocommerce_account.addClass('not-log');
 	}
-	$woocommerce_account.addClass('has-login-register');
-	$btns = $('<div class="my-account-btn"> <div class="login-ac active" data="the-login"><h2>LOGIN</h2></div> <div class="register-ac" data="the-register"><h2>REGISTER</h2></div> </div>')
-	$btns.prependTo('.woocommerce-account .the-content .woocommerce #customer_login');
 	$login = $('.the-login');
 	$register = $('.the-register');
 
